@@ -1,0 +1,202 @@
+# ─────────────────────────────────────────────────────────────
+#  주식·재무 PWA 설정 파일
+#  - 이 파일만 수정하면 관심종목·스크리닝 유니버스·알림 규칙·배당 후보를 바꿀 수 있습니다.
+#  - 티커 표기: 미국 = AAPL / 한국 코스피 = 005930.KS / 코스닥 = 247540.KQ (Yahoo Finance 기준)
+# ─────────────────────────────────────────────────────────────
+
+timezone: Asia/Seoul
+
+# 1) 관심종목 (알림·5단계 판정 대상)
+watchlist:
+  - { ticker: 005930.KS, name: 삼성전자 }
+  - { ticker: 000660.KS, name: SK하이닉스 }
+  - { ticker: MU,        name: 마이크론 }
+  - { ticker: NVDA,      name: 엔비디아 }
+  - { ticker: TSM,       name: TSMC }
+  - { ticker: SCHD,      name: SCHD }
+
+# 2) 스크리닝 유니버스 (저평가 Top3 후보군) — 너무 많으면 무료 데이터 소스 호출 제한에 걸립니다(권장 ≤150)
+universe:
+  us:
+    - AAPL
+    - MSFT
+    - NVDA
+    - GOOGL
+    - AMZN
+    - META
+    - AVGO
+    - TSM
+    - MU
+    - AMD
+    - QCOM
+    - INTC
+    - ASML
+    - AMAT
+    - LRCX
+    - KLAC
+    - ADBE
+    - CRM
+    - ORCL
+    - CSCO
+    - IBM
+    - TXN
+    - JPM
+    - BAC
+    - WFC
+    - GS
+    - MS
+    - V
+    - MA
+    - PYPL
+    - BRK-B
+    - UNH
+    - JNJ
+    - PFE
+    - MRK
+    - ABBV
+    - LLY
+    - AMGN
+    - CVS
+    - XOM
+    - CVX
+    - COP
+    - SLB
+    - NEE
+    - DUK
+    - SO
+    - PG
+    - KO
+    - PEP
+    - WMT
+    - COST
+    - HD
+    - MCD
+    - NKE
+    - DIS
+    - CAT
+    - DE
+    - HON
+    - GE
+    - LMT
+    - RTX
+    - NOC
+    - UPS
+    - VZ
+    - T
+  kr:   # 티커: 한글명
+    005930.KS: 삼성전자
+    000660.KS: SK하이닉스
+    373220.KS: LG에너지솔루션
+    207940.KS: 삼성바이오로직스
+    005380.KS: 현대차
+    000270.KS: 기아
+    068270.KS: 셀트리온
+    035420.KS: NAVER
+    035720.KS: 카카오
+    105560.KS: KB금융
+    055550.KS: 신한지주
+    086790.KS: 하나금융지주
+    316140.KS: 우리금융지주
+    005490.KS: POSCO홀딩스
+    051910.KS: LG화학
+    006400.KS: 삼성SDI
+    012330.KS: 현대모비스
+    028260.KS: 삼성물산
+    032830.KS: 삼성생명
+    000810.KS: 삼성화재
+    017670.KS: SK텔레콤
+    030200.KS: KT
+    033780.KS: KT&G
+    015760.KS: 한국전력
+    096770.KS: SK이노베이션
+    010950.KS: S-Oil
+    009540.KS: HD한국조선해양
+    329180.KS: HD현대중공업
+    012450.KS: 한화에어로스페이스
+    047810.KS: 한국항공우주
+    064350.KS: 현대로템
+    034020.KS: 두산에너빌리티
+    003550.KS: LG
+    066570.KS: LG전자
+    009150.KS: 삼성전기
+    018260.KS: 삼성에스디에스
+    011200.KS: HMM
+    138040.KS: 메리츠금융지주
+    024110.KS: 기업은행
+    247540.KQ: 에코프로비엠
+
+# 3) 배당 후보 (월간 배당 플랜용)
+#    covered_call: true 인 종목은 구조적 리스크(원금 잠식·상승 제한)로 포트폴리오 내 비중 상한 적용
+dividend_candidates:
+  - { ticker: SCHD, name: "Schwab US Dividend Equity", type: etf }
+  - { ticker: VYM,  name: "Vanguard High Dividend Yield", type: etf }
+  - { ticker: VIG,  name: "Vanguard Dividend Appreciation", type: etf }
+  - { ticker: DGRO, name: "iShares Core Dividend Growth", type: etf }
+  - { ticker: JEPI, name: "JPMorgan Equity Premium Income", type: etf, covered_call: true }
+  - { ticker: JEPQ, name: "JPMorgan Nasdaq Equity Premium Income", type: etf, covered_call: true }
+  - { ticker: O,    name: "Realty Income (월배당 리츠)", type: stock }
+  - { ticker: KO,   name: "Coca-Cola", type: stock }
+  - { ticker: PEP,  name: "PepsiCo", type: stock }
+  - { ticker: JNJ,  name: "Johnson & Johnson", type: stock }
+  - { ticker: PG,   name: "Procter & Gamble", type: stock }
+  - { ticker: ABBV, name: "AbbVie", type: stock }
+  - { ticker: VZ,   name: "Verizon", type: stock }
+  - { ticker: XOM,  name: "Exxon Mobil", type: stock }
+  - { ticker: MO,   name: "Altria", type: stock }
+  - { ticker: TXN,  name: "Texas Instruments", type: stock }
+  - { ticker: 105560.KS, name: "KB금융", type: stock }
+  - { ticker: 055550.KS, name: "신한지주", type: stock }
+  - { ticker: 033780.KS, name: "KT&G", type: stock }
+  - { ticker: 017670.KS, name: "SK텔레콤", type: stock }
+  - { ticker: 024110.KS, name: "기업은행", type: stock }
+
+dividend_plan:
+  default_capital_krw: 10000000     # 기본 투자금(앱에서 변경 가능)
+  max_picks: 6                       # 플랜에 담을 종목 수
+  covered_call_max_weight: 0.20      # 커버드콜 ETF 합산 최대 비중
+  max_yield_cap: 0.09                # 이보다 높은 배당률은 지속가능성 의심 → 점수 상한
+  tax:
+    us: 0.15                         # 미국 배당 원천징수
+    kr: 0.154                        # 국내 배당소득세
+
+# 4) 차트 분석 설정
+technical:
+  ma: [20, 50, 120, 250]     # 이동평균(단기·중기·중장기·장기). 국내식 240일을 원하면 250 → 240
+  rsi: 14
+  macd: [12, 26, 9]
+  bb: [20, 2.0]              # 볼린저 기간·표준편차 배수
+  chart_days: 130            # 앱 상세 차트에 표시할 봉 수(약 6개월)
+
+# 5) 알림 규칙
+alerts:
+  daily_move_pct: 5.0        # 일간 ±5% 이상 변동
+  rsi_low: 30                # RSI 과매도
+  rsi_high: 70               # RSI 과매수
+  ma_cross: true             # 20·50 / 50·120 / 50·250 골든·데드크로스, 250일선 돌파·이탈 (당일 발생분)
+  chart_signals: true        # RSI 30 상향돌파·볼린저 하단 재진입·52주 신고가·RSI 다이버전스·셋업(눌림목/반등/돌파)
+  verdict_change: true       # 5단계 판정 변경
+  target_reach: true         # 애널리스트 평균 목표가 도달
+  custom_price:              # 개별 가격 알림 (above / below)
+    - { ticker: 000660.KS, below: 1500000 }
+    - { ticker: NVDA, above: 250 }
+
+# 6) 장전 브리핑 지표
+briefing:
+  indices:
+    - { ticker: "^DJI",  name: 다우 }
+    - { ticker: "^GSPC", name: "S&P500" }
+    - { ticker: "^IXIC", name: 나스닥 }
+    - { ticker: "^SOX",  name: 필라델피아반도체 }
+    - { ticker: "^KS11", name: 코스피 }
+    - { ticker: "^KQ11", name: 코스닥 }
+  macro:
+    - { ticker: "^TNX",     name: "미 10년물(%)", is_yield: true }
+    - { ticker: "^VIX",     name: VIX }
+    - { ticker: "CL=F",     name: WTI }
+    - { ticker: "BZ=F",     name: 브렌트 }
+    - { ticker: "DX-Y.NYB", name: 달러인덱스 }
+    - { ticker: "KRW=X",    name: 원달러 }
+    - { ticker: "GC=F",     name: 금 }
+  news_tickers: [SPY, QQQ, SOXX]
+  # ANTHROPIC_API_KEY 시크릿이 있으면 Claude로 시황 요약을 작성(선택, 유료). 없으면 규칙 기반 요약.
+  llm_model: claude-sonnet-5-5

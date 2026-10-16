@@ -1,0 +1,100 @@
+name: 장전노트 파이프라인
+
+on:
+  schedule:
+    # GitHub cron은 UTC 기준 + 수 분~수십 분 지연될 수 있습니다.
+    - cron: "40 22 * * 0-4"      # 장전: KST 평일 07:40 (UTC 일~목 22:40)
+    - cron: "5,35 0-6 * * 1-5"   # 국내장 알림: KST 09:05~15:35, 30분 간격
+    - cron: "5,35 13-20 * * 1-5" # 미국장 알림: KST 22:05~05:35, 30분 간격
+    - cron: "10 0 * * 6"         # 백테스트·자가 보정: KST 토요일 09:10
+  workflow_dispatch:
+    inputs:
+      job:
+        description: "실행 작업"
+        type: choice
+        options: [all, morning, alerts, backtest]
+        default: all
+      demo:
+        description: "데모(합성) 데이터 사용"
+        type: boolean
+        default: false
+  push:
+    branches: [main]
+    # 코드·설정을 올리거나 고치면 자동으로 전체 실행 (데이터 자동 커밋은 다시 실행을 일으키지 않음)
+    paths: ["pipeline/**", "config/**", "web/**", ".github/**", "requirements.txt", "!web/data/**"]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pipeline
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 작업 결정
+        id: job
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "job=${{ inputs.job }}" >> "$GITHUB_OUTPUT"
+            echo "demo=${{ inputs.demo && '--demo' || '' }}" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event_name }}" = "push" ]; then
+            echo "job=all" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event.schedule }}" = "40 22 * * 0-4" ]; then
+            echo "job=morning" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event.schedule }}" = "10 0 * * 6" ]; then
+            echo "job=backtest" >> "$GITHUB_OUTPUT"
+          else
+            echo "job=alerts" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/setup-python@v5
+        if: steps.job.outputs.job != 'none'
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: 의존성 설치
+        if: steps.job.outputs.job != 'none'
+        run: pip install -r requirements.txt
+
+      - name: 파이프라인 실행
+        if: steps.job.outputs.job != 'none'
+        env:
+          VAPID_PRIVATE_KEY: ${{ secrets.VAPID_PRIVATE_KEY }}
+          VAPID_SUBJECT: ${{ secrets.VAPID_SUBJECT }}
+          PUSH_SUBSCRIPTIONS: ${{ secrets.PUSH_SUBSCRIPTIONS }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python -m pipeline.run ${{ steps.job.outputs.job }} ${{ steps.job.outputs.demo }}
+
+      - name: 데이터 커밋
+        if: steps.job.outputs.job != 'none'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add web/data state
+          if git diff --cached --quiet; then echo "변경 없음"; exit 0; fi
+          git commit -m "data: ${{ steps.job.outputs.job }} $(TZ=Asia/Seoul date +'%Y-%m-%d %H:%M') KST"
+          git pull --rebase -X theirs origin main || true
+          git push
+
+      - name: 앱 설정 주입 (VAPID 공개키)
+        run: |
+          echo "window.APP_CONFIG = { vapidPublicKey: \"${{ vars.VAPID_PUBLIC_KEY }}\" };" > web/config.js
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: web
+      - id: deploy
+        uses: actions/deploy-pages@v4

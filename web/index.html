@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>장전노트</title>
+  <meta name="description" content="나만의 장전 시황·저평가 추천·배당 플랜·신호 알림">
+  <meta name="theme-color" content="#eef1f5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0d1219" media="(prefers-color-scheme: dark)">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="장전노트">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icons/icon-180.png">
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="config.js"></script>
+</head>
+<body>
+  <header class="top">
+    <div class="top-row">
+      <div class="brand">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="7" width="4" height="10" rx="1" fill="var(--up)"/><path d="M6 4v3M6 17v3" stroke="var(--up)" stroke-width="1.6"/><rect x="14" y="10" width="4" height="8" rx="1" fill="var(--down)"/><path d="M16 6v4M16 18v2" stroke="var(--down)" stroke-width="1.6"/></svg>
+        장전노트
+      </div>
+      <div class="stamp" id="stamp"></div>
+      <button class="icon-btn" id="refresh" aria-label="데이터 새로고침">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 11a8 8 0 1 0-2.3 5.7"/><path d="M20 4v7h-7"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <div id="banner"></div>
+    <section class="view" id="view-brief" aria-label="장전 브리핑"></section>
+    <section class="view" id="view-picks" aria-label="저평가 추천"></section>
+    <section class="view" id="view-screen" aria-label="밸류에이션 스크리닝"></section>
+    <section class="view" id="view-div" aria-label="배당 플랜"></section>
+    <section class="view" id="view-lab" aria-label="규칙 검증"></section>
+    <section class="view" id="view-alerts" aria-label="알림"></section>
+  </main>
+
+  <dialog class="sheet" id="sheet"><div class="sheet-in" id="sheet-in"></div></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <nav class="tabbar" aria-label="메뉴">
+    <div class="brand side-brand" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="7" width="4" height="10" rx="1" fill="var(--up)"/><path d="M6 4v3M6 17v3" stroke="var(--up)" stroke-width="1.6"/><rect x="14" y="10" width="4" height="8" rx="1" fill="var(--down)"/><path d="M16 6v4M16 18v2" stroke="var(--down)" stroke-width="1.6"/></svg>장전노트</div>
+    <a href="#brief" data-tab="brief"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="4"/><path d="M12 3v2M4.2 7.2l1.4 1.4M19.8 7.2l-1.4 1.4M2 17h20M6 21h12"/></svg>브리핑</a>
+    <a href="#picks" data-tab="picks"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.4 6.7 19.4l1.2-6L3.4 9.3l6-.7z"/></svg>추천</a>
+    <a href="#screen" data-tab="screen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 5h16M7 12h10M10 19h4"/></svg>스크리닝</a>
+    <a href="#div" data-tab="div"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>배당</a>
+    <a href="#lab" data-tab="lab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6L4.5 18.5A1.7 1.7 0 0 0 6 21h12a1.7 1.7 0 0 0 1.5-2.5L14 9V3"/><path d="M7.5 15h9"/></svg>검증</a>
+    <a href="#alerts" data-tab="alerts"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 1 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.9 1.9 0 0 0 3.4 0"/></svg>알림</a>
+  </nav>
+
+  <script src="chart.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
