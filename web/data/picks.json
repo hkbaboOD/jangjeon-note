@@ -1,7 +1,7 @@
 {
  "daily": {
   "label": "저평가 + 차트 매수 타이밍",
-  "generated": "2026-10-16T16:39+09:00",
+  "generated": "2026-10-16T16:46+09:00",
   "all": [
    {
     "ticker": "MU",
@@ -1953,7 +1953,7 @@
  },
  "weekly": {
   "label": "가치·퀄리티 + 추세",
-  "generated": "2026-10-16T16:39+09:00",
+  "generated": "2026-10-16T16:46+09:00",
   "all": [
    {
     "ticker": "MU",
@@ -3903,7 +3903,7 @@
       "mdi": 20.5,
       "pctb": 0.36,
       "bw_pct": 28.0,
-      "vol_ratio": 1.23,
+      "vol_ratio": 1.26,
       "updown_vol": 1.11,
       "atr_pct": 6.33,
       "hi52": 177100,
@@ -3917,7 +3917,7 @@
  },
  "monthly": {
   "label": "중장기 저평가 + 장기 추세",
-  "generated": "2026-10-16T16:39+09:00",
+  "generated": "2026-10-16T16:46+09:00",
   "all": [
    {
     "ticker": "MU",
@@ -5858,7 +5858,7 @@
       "mdi": 20.5,
       "pctb": 0.36,
       "bw_pct": 28.0,
-      "vol_ratio": 1.23,
+      "vol_ratio": 1.26,
       "updown_vol": 1.11,
       "atr_pct": 6.33,
       "hi52": 177100,
