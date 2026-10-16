@@ -1,0 +1,80 @@
+{
+ "updated": "2026-10-16T15:59+09:00",
+ "version": 1,
+ "weights": {
+  "daily": {
+   "timing": 0.255,
+   "quality": 0.168,
+   "target": 0.168,
+   "value": 0.281,
+   "trend": 0.128
+  },
+  "weekly": {
+   "quality": 0.25,
+   "target": 0.15,
+   "value": 0.3,
+   "trend": 0.15,
+   "momentum": 0.15
+  },
+  "monthly": {
+   "quality": 0.3,
+   "target": 0.15,
+   "value": 0.3,
+   "trend": 0.1,
+   "growth": 0.15
+  }
+ },
+ "setup_adj": {
+  "daily": {
+   "squeeze": -0.7
+  },
+  "weekly": {},
+  "monthly": {}
+ },
+ "defaults": {
+  "daily": {
+   "value": 0.25,
+   "quality": 0.15,
+   "target": 0.15,
+   "timing": 0.3,
+   "trend": 0.15
+  },
+  "weekly": {
+   "value": 0.3,
+   "quality": 0.25,
+   "target": 0.15,
+   "momentum": 0.15,
+   "trend": 0.15
+  },
+  "monthly": {
+   "value": 0.3,
+   "quality": 0.3,
+   "target": 0.15,
+   "growth": 0.15,
+   "trend": 0.1
+  }
+ },
+ "basis": {
+  "daily": [
+   "차트 종합 IC +0.004(t 0.3) 약함 → 차트 비중 축소"
+  ],
+  "weekly": [],
+  "monthly": []
+ },
+ "log": [
+  {
+   "date": "2026-10-16",
+   "text": "[오늘] 퀄리티 0.15→0.17, 상승여력 0.15→0.17, 타이밍 0.30→0.26, 추세 0.15→0.13, 가치 0.25→0.28 — 차트 종합 IC +0.004(t 0.3) 약함 → 차트 비중 축소"
+  },
+  {
+   "date": "2026-10-16",
+   "text": "[오늘] '변동성 수축(방향 대기)' 가감점 +0.0→-0.7 (백테스트 5일 초과수익 -0.37%, t -3.1)"
+  }
+ ],
+ "changed": true,
+ "backtest_period": [
+  "2022-12-27",
+  "2026-10-12"
+ ],
+ "rules": "차트 가중치·셋업 가감점만 조정 / 기본값과 50:50 축소 / 차트 블록 70~130% / 주당 가중치 ±0.05·가감점 ±2점 / 가중치는 IC t≥2, 가감점은 초과수익 t≥2·유효표본 30 이상일 때만"
+}

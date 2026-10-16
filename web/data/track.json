@@ -1,0 +1,156 @@
+{
+ "items": [
+  {
+   "date": "2026-10-16",
+   "horizon": "daily",
+   "ticker": "MU",
+   "name": "마이크론",
+   "entry": 931.239990234375,
+   "score": 89.0,
+   "setup": "상승추세 속 눌림목",
+   "bench": "^GSPC",
+   "bench_entry": 7744.06005859375,
+   "last": 931.239990234375,
+   "ret": 0.0,
+   "ex_ret": 0.0
+  },
+  {
+   "date": "2026-10-16",
+   "horizon": "daily",
+   "ticker": "055550.KS",
+   "name": "신한지주",
+   "entry": 93400.0,
+   "score": 74.5,
+   "setup": "상승추세 속 눌림목",
+   "bench": "^KS11",
+   "bench_entry": 5668.0498046875,
+   "last": 93400.0,
+   "ret": 0.0,
+   "ex_ret": 0.0
+  },
+  {
+   "date": "2026-10-16",
+   "horizon": "daily",
+   "ticker": "064350.KS",
+   "name": "현대로템",
+   "entry": 96900.0,
+   "score": 72.4,
+   "setup": "하락 후 반등 시도",
+   "bench": "^KS11",
+   "bench_entry": 5668.0498046875,
+   "last": 96900.0,
+   "ret": 0.0,
+   "ex_ret": 0.0
+  },
+  {
+   "date": "2026-10-16",
+   "horizon": "weekly",
+   "ticker": "MU",
+   "name": "마이크론",
+   "entry": 931.239990234375,
+   "score": 82.5,
+   "setup": "상승추세 속 눌림목",
+   "bench": "^GSPC",
+   "bench_entry": 7744.06005859375,
+   "last": 931.239990234375,
+   "ret": 0.0,
+   "ex_ret": 0.0
+  },
+  {
+   "date": "2026-10-16",
+   "horizon": "weekly",
+   "ticker": "COP",
+   "name": "ConocoPhillips",
+   "entry": 141.72999572753906,
+   "score": 66.8,
+   "setup": "중립",
+   "bench": "^GSPC",
+   "bench_entry": 7744.06005859375,
+   "last": 141.72999572753906,
+   "ret": 0.0,
+   "ex_ret": 0.0
+  },
+  {
+   "date": "2026-10-16",
+   "horizon": "weekly",
+   "ticker": "138040.KS",
+   "name": "메리츠금융지주",
+   "entry": 129800.0,
+   "score": 64.8,
+   "setup": "상승추세 속 눌림목",
+   "bench": "^KS11",
+   "bench_entry": 5668.0498046875,
+   "last": 129800.0,
+   "ret": 0.0,
+   "ex_ret": 0.0
+  },
+  {
+   "date": "2026-10-16",
+   "horizon": "monthly",
+   "ticker": "MU",
+   "name": "마이크론",
+   "entry": 931.239990234375,
+   "score": 91.3,
+   "setup": "상승추세 속 눌림목",
+   "bench": "^GSPC",
+   "bench_entry": 7744.06005859375,
+   "last": 931.239990234375,
+   "ret": 0.0,
+   "ex_ret": 0.0
+  },
+  {
+   "date": "2026-10-16",
+   "horizon": "monthly",
+   "ticker": "055550.KS",
+   "name": "신한지주",
+   "entry": 93400.0,
+   "score": 66.4,
+   "setup": "상승추세 속 눌림목",
+   "bench": "^KS11",
+   "bench_entry": 5668.0498046875,
+   "last": 93400.0,
+   "ret": 0.0,
+   "ex_ret": 0.0
+  },
+  {
+   "date": "2026-10-16",
+   "horizon": "monthly",
+   "ticker": "COP",
+   "name": "ConocoPhillips",
+   "entry": 141.72999572753906,
+   "score": 65.7,
+   "setup": "중립",
+   "bench": "^GSPC",
+   "bench_entry": 7744.06005859375,
+   "last": 141.72999572753906,
+   "ret": 0.0,
+   "ex_ret": 0.0
+  }
+ ],
+ "summary": {
+  "count": 9,
+  "avg_ret": 0.0,
+  "hit_rate": 0.0,
+  "avg_ex": 0.0
+ },
+ "by_setup": {
+  "상승추세 속 눌림목": {
+   "count": 6,
+   "avg_ret": 0.0,
+   "hit_rate": 0.0,
+   "avg_ex": 0.0
+  },
+  "중립": {
+   "count": 2,
+   "avg_ret": 0.0,
+   "hit_rate": 0.0,
+   "avg_ex": 0.0
+  },
+  "하락 후 반등 시도": {
+   "count": 1,
+   "avg_ret": 0.0,
+   "hit_rate": 0.0,
+   "avg_ex": 0.0
+  }
+ }
+}

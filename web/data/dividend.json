@@ -1,22 +1,21 @@
 {
  "capital_krw": 10000000,
- "usdkrw": 1420.0,
+ "usdkrw": 1332.280029296875,
  "picks": [
   {
-   "ticker": "JEPI",
-   "name": "JPMorgan Equity Premium Income",
+   "ticker": "JEPQ",
+   "name": "JPMorgan Nasdaq Equity Premium Income",
    "type": "etf",
    "market": "us",
    "covered_call": true,
-   "yield": 10.563618397705362,
-   "cagr5": 4.558231982128214,
-   "payout": 56.41630547110914,
-   "score": 72.6,
+   "yield": 11.45757100637048,
+   "cagr5": 16.705859212439123,
+   "payout": null,
+   "score": 84.0,
    "notes": [
     "커버드콜 — 원금 잠식·상승 제한 구조, 소수 비중 권장"
    ],
    "months": [
-    1,
     2,
     3,
     4,
@@ -30,69 +29,70 @@
     12
    ],
    "freq": 12,
-   "weight": 17.244655581947743,
-   "alloc_krw": 1724465.5581947742,
-   "annual_net_krw": 154841.0668224223,
+   "weight": 20.0,
+   "alloc_krw": 2000000.0,
+   "annual_net_krw": 194778.70710829817,
    "monthly_krw": [
-    13045.459022662244,
-    13045.459022662244,
-    13045.459022662244,
-    13045.459022662244,
-    13045.459022662244,
-    13045.459022662244,
-    13045.459022662244,
-    13045.459022662244,
-    13045.459022662244,
-    12817.073565431743,
-    12253.511552249483,
-    12361.350500780874
+    0.0,
+    13181.364727340539,
+    14397.670914627326,
+    15811.980434728242,
+    16717.138527592826,
+    15953.411386738331,
+    18018.303286085673,
+    19941.764233422917,
+    19319.468044578516,
+    16038.269957944389,
+    13464.22663136072,
+    31935.108963878683
    ]
   },
   {
-   "ticker": "017670.KS",
-   "name": "SK텔레콤",
+   "ticker": "024110.KS",
+   "name": "기업은행",
    "type": "stock",
    "market": "kr",
    "covered_call": false,
-   "yield": 5.325809479718097,
-   "cagr5": 6.681886524879177,
-   "payout": 60.76589043802976,
-   "score": 76.3,
+   "yield": 6.315261044176706,
+   "cagr5": 8.030354405846518,
+   "payout": 34.050000000000004,
+   "score": 73.9,
    "notes": [
-    "연 1회 결산배당(지급은 통상 익년 4월 전후)"
+    "최근 연간 배당 감소 6회"
    ],
    "months": [
-    12
+    3,
+    7
    ],
-   "freq": 1,
-   "weight": 18.12351543942993,
-   "alloc_krw": 1812351.543942993,
-   "annual_net_krw": 81657.9422218307,
+   "freq": 2,
+   "weight": 18.157248157248162,
+   "alloc_krw": 1815724.8157248162,
+   "annual_net_krw": 97008.92661555314,
    "monthly_krw": [
     0.0,
     0.0,
+    80815.06764157368,
+    0.0,
+    0.0,
+    0.0,
+    16193.858973979459,
     0.0,
     0.0,
     0.0,
     0.0,
-    0.0,
-    0.0,
-    0.0,
-    0.0,
-    0.0,
-    81657.9422218307
+    0.0
    ]
   },
   {
-   "ticker": "ABBV",
-   "name": "AbbVie",
-   "type": "stock",
+   "ticker": "SCHD",
+   "name": "Schwab US Dividend Equity",
+   "type": "etf",
    "market": "us",
    "covered_call": false,
-   "yield": 4.997593677982355,
-   "cagr5": 4.569197893232846,
-   "payout": 39.65912996765999,
-   "score": 70.8,
+   "yield": 3.093841780669441,
+   "cagr5": 9.133283157383044,
+   "payout": null,
+   "score": 65.9,
    "notes": [],
    "months": [
     3,
@@ -101,58 +101,22 @@
     12
    ],
    "freq": 4,
-   "weight": 16.817102137767222,
-   "alloc_krw": 1681710.2137767223,
-   "annual_net_krw": 71438.28682683565,
+   "weight": 16.191646191646196,
+   "alloc_krw": 1619164.6191646194,
+   "annual_net_krw": 42580.232762702384,
    "monthly_krw": [
     0.0,
     0.0,
-    18002.689610147496,
+    10372.625421814704,
     0.0,
     0.0,
-    18002.689610147496,
+    10211.18378100825,
     0.0,
     0.0,
-    18002.689610147496,
+    10776.22952383084,
     0.0,
     0.0,
-    17430.217996393178
-   ]
-  },
-  {
-   "ticker": "DGRO",
-   "name": "iShares Core Dividend Growth",
-   "type": "etf",
-   "market": "us",
-   "covered_call": false,
-   "yield": 4.945122733934627,
-   "cagr5": 5.859376151210816,
-   "payout": 77.11933658991398,
-   "score": 67.3,
-   "notes": [],
-   "months": [
-    1,
-    4,
-    7,
-    10
-   ],
-   "freq": 5,
-   "weight": 15.985748218527318,
-   "alloc_krw": 1598574.8218527318,
-   "annual_net_krw": 67193.76389423525,
-   "monthly_krw": [
-    13596.780571022631,
-    0.0,
-    0.0,
-    13596.780571022631,
-    0.0,
-    0.0,
-    13596.780571022631,
-    0.0,
-    0.0,
-    26403.42218116736,
-    0.0,
-    0.0
+    11220.194036048591
    ]
   },
   {
@@ -161,11 +125,51 @@
    "type": "stock",
    "market": "us",
    "covered_call": false,
-   "yield": 5.098400684386439,
-   "cagr5": 2.58937521566609,
-   "payout": 39.88868825034148,
-   "score": 67.1,
-   "notes": [],
+   "yield": 4.522511122584719,
+   "cagr5": 6.924559065444402,
+   "payout": 73.02,
+   "score": 64.1,
+   "notes": [
+    "최근 연간 배당 감소 1회"
+   ],
+   "months": [
+    3,
+    6,
+    9,
+    12
+   ],
+   "freq": 4,
+   "weight": 15.74938574938575,
+   "alloc_krw": 1574938.574938575,
+   "annual_net_krw": 60542.756391653165,
+   "monthly_krw": [
+    0.0,
+    0.0,
+    14838.50195406863,
+    0.0,
+    0.0,
+    15432.876241757955,
+    0.0,
+    0.0,
+    15432.876241757955,
+    0.0,
+    0.0,
+    14838.50195406863
+   ]
+  },
+  {
+   "ticker": "105560.KS",
+   "name": "KB금융",
+   "type": "stock",
+   "market": "kr",
+   "covered_call": false,
+   "yield": 3.020625,
+   "cagr5": 15.038077304966556,
+   "payout": 27.21,
+   "score": 63.4,
+   "notes": [
+    "최근 연간 배당 감소 5회"
+   ],
    "months": [
     2,
     5,
@@ -173,77 +177,79 @@
     11
    ],
    "freq": 4,
-   "weight": 15.938242280285037,
-   "alloc_krw": 1593824.2280285037,
-   "annual_net_krw": 69070.61354726378,
+   "weight": 15.577395577395578,
+   "alloc_krw": 1557739.5577395577,
+   "annual_net_krw": 39807.23605651106,
    "monthly_krw": [
     0.0,
-    17551.67053026597,
+    13219.659398034397,
     0.0,
     0.0,
-    17551.67053026597,
+    9414.374262899262,
     0.0,
     0.0,
-    17551.67053026597,
+    9513.212837837838,
     0.0,
     0.0,
-    16415.601956465885,
+    7659.989557739558,
     0.0
    ]
   },
   {
-   "ticker": "XOM",
-   "name": "Exxon Mobil",
+   "ticker": "PG",
+   "name": "Procter & Gamble",
    "type": "stock",
    "market": "us",
    "covered_call": false,
-   "yield": 3.526055298340801,
-   "cagr5": 5.830921581188031,
-   "payout": 48.68616187788453,
-   "score": 66.9,
-   "notes": [],
+   "yield": 2.732365641691425,
+   "cagr5": 6.020686537931774,
+   "payout": 64.33,
+   "score": 58.3,
+   "notes": [
+    "최근 연간 배당 감소 1회"
+   ],
    "months": [
-    2,
-    5,
-    8,
-    11
+    1,
+    4,
+    7,
+    10
    ],
    "freq": 4,
-   "weight": 15.890736342042757,
-   "alloc_krw": 1589073.6342042757,
-   "annual_net_krw": 47626.87281238709,
+   "weight": 14.324324324324325,
+   "alloc_krw": 1432432.4324324324,
+   "annual_net_krw": 33268.397880594246,
    "monthly_krw": [
-    0.0,
-    12078.469025278571,
-    0.0,
-    0.0,
-    12078.469025278571,
+    8193.079347574117,
     0.0,
     0.0,
-    12078.469025278571,
+    8441.119592723004,
     0.0,
     0.0,
-    11391.46573655138,
+    8441.119592723004,
+    0.0,
+    0.0,
+    8193.079347574117,
+    0.0,
     0.0
    ]
   }
  ],
  "monthly_net_krw": [
-  26642.239593684877,
-  42675.59857820679,
-  31048.148632809738,
-  26642.239593684877,
-  42675.59857820679,
-  31048.148632809738,
-  26642.239593684877,
-  42675.59857820679,
-  31048.148632809738,
-  39220.4957465991,
-  40060.579245266745,
-  111449.51071900476
+  8193.079347574117,
+  26401.024125374934,
+  120423.86593208434,
+  24253.100027451248,
+  26131.51279049209,
+  41597.471409504535,
+  42653.28185278813,
+  29454.977071260757,
+  45528.57381016731,
+  24231.349305518506,
+  21124.216189100276,
+  57993.8049539959
  ],
- "annual_net_krw": 491828.54612497485,
- "portfolio_yield_net": 4.918285461249748,
+ "annual_net_krw": 467986.25681531214,
+ "portfolio_yield_net": 4.679862568153122,
  "months_covered": [
   1,
   2,
@@ -260,89 +266,34 @@
  ],
  "upcoming_ex": [
   {
-   "ticker": "JEPI",
-   "name": "JPMorgan Equity Premium Income",
-   "est_ex_date": "2026-10-23"
+   "ticker": "PG",
+   "name": "Procter & Gamble",
+   "est_ex_date": "2026-10-24"
   },
   {
-   "ticker": "PEP",
-   "name": "PepsiCo",
-   "est_ex_date": "2026-11-14"
+   "ticker": "JEPQ",
+   "name": "JPMorgan Nasdaq Equity Premium Income",
+   "est_ex_date": "2026-11-03"
   },
   {
-   "ticker": "JEPI",
-   "name": "JPMorgan Equity Premium Income",
-   "est_ex_date": "2026-11-17"
-  },
-  {
-   "ticker": "XOM",
-   "name": "Exxon Mobil",
-   "est_ex_date": "2026-11-24"
+   "ticker": "105560.KS",
+   "name": "KB금융",
+   "est_ex_date": "2026-11-13"
   }
  ],
  "candidates": [
-  {
-   "ticker": "017670.KS",
-   "name": "SK텔레콤",
-   "type": "stock",
-   "market": "kr",
-   "covered_call": false,
-   "yield": 5.325809479718097,
-   "cagr5": 6.681886524879177,
-   "payout": 60.76589043802976,
-   "cuts": 0,
-   "freq": 1,
-   "months": [
-    12
-   ],
-   "score": 76.3,
-   "notes": [
-    "연 1회 결산배당(지급은 통상 익년 4월 전후)"
-   ]
-  },
-  {
-   "ticker": "JEPI",
-   "name": "JPMorgan Equity Premium Income",
-   "type": "etf",
-   "market": "us",
-   "covered_call": true,
-   "yield": 10.563618397705362,
-   "cagr5": 4.558231982128214,
-   "payout": 56.41630547110914,
-   "cuts": 0,
-   "freq": 12,
-   "months": [
-    1,
-    2,
-    3,
-    4,
-    5,
-    6,
-    7,
-    8,
-    9,
-    10,
-    11,
-    12
-   ],
-   "score": 72.6,
-   "notes": [
-    "커버드콜 — 원금 잠식·상승 제한 구조, 소수 비중 권장"
-   ]
-  },
   {
    "ticker": "JEPQ",
    "name": "JPMorgan Nasdaq Equity Premium Income",
    "type": "etf",
    "market": "us",
    "covered_call": true,
-   "yield": 9.711365128308428,
-   "cagr5": 4.346961991483411,
-   "payout": 29.150434382507857,
+   "yield": 11.45757100637048,
+   "cagr5": 16.705859212439123,
+   "payout": null,
    "cuts": 0,
    "freq": 12,
    "months": [
-    1,
     2,
     3,
     4,
@@ -355,124 +306,23 @@
     11,
     12
    ],
-   "score": 72.1,
+   "score": 84.0,
    "notes": [
     "커버드콜 — 원금 잠식·상승 제한 구조, 소수 비중 권장"
    ]
   },
   {
-   "ticker": "ABBV",
-   "name": "AbbVie",
-   "type": "stock",
-   "market": "us",
-   "covered_call": false,
-   "yield": 4.997593677982355,
-   "cagr5": 4.569197893232846,
-   "payout": 39.65912996765999,
-   "cuts": 0,
-   "freq": 4,
-   "months": [
-    3,
-    6,
-    9,
-    12
-   ],
-   "score": 70.8,
-   "notes": []
-  },
-  {
-   "ticker": "DGRO",
-   "name": "iShares Core Dividend Growth",
+   "ticker": "JEPI",
+   "name": "JPMorgan Equity Premium Income",
    "type": "etf",
    "market": "us",
-   "covered_call": false,
-   "yield": 4.945122733934627,
-   "cagr5": 5.859376151210816,
-   "payout": 77.11933658991398,
-   "cuts": 0,
-   "freq": 5,
+   "covered_call": true,
+   "yield": 7.982855164767093,
+   "cagr5": 7.886299144175113,
+   "payout": null,
+   "cuts": 2,
+   "freq": 12,
    "months": [
-    1,
-    4,
-    7,
-    10
-   ],
-   "score": 67.3,
-   "notes": []
-  },
-  {
-   "ticker": "PEP",
-   "name": "PepsiCo",
-   "type": "stock",
-   "market": "us",
-   "covered_call": false,
-   "yield": 5.098400684386439,
-   "cagr5": 2.58937521566609,
-   "payout": 39.88868825034148,
-   "cuts": 0,
-   "freq": 4,
-   "months": [
-    2,
-    5,
-    8,
-    11
-   ],
-   "score": 67.1,
-   "notes": []
-  },
-  {
-   "ticker": "XOM",
-   "name": "Exxon Mobil",
-   "type": "stock",
-   "market": "us",
-   "covered_call": false,
-   "yield": 3.526055298340801,
-   "cagr5": 5.830921581188031,
-   "payout": 48.68616187788453,
-   "cuts": 0,
-   "freq": 4,
-   "months": [
-    2,
-    5,
-    8,
-    11
-   ],
-   "score": 66.9,
-   "notes": []
-  },
-  {
-   "ticker": "105560.KS",
-   "name": "KB금융",
-   "type": "stock",
-   "market": "kr",
-   "covered_call": false,
-   "yield": 3.1476922399128258,
-   "cagr5": 5.843571757664323,
-   "payout": 36.86660483483726,
-   "cuts": 0,
-   "freq": 4,
-   "months": [
-    3,
-    6,
-    9,
-    12
-   ],
-   "score": 65.3,
-   "notes": []
-  },
-  {
-   "ticker": "O",
-   "name": "Realty Income (월배당 리츠)",
-   "type": "stock",
-   "market": "us",
-   "covered_call": false,
-   "yield": 4.804036039289268,
-   "cagr5": 4.0068858726240775,
-   "payout": 70.48553927621938,
-   "cuts": 0,
-   "freq": 11,
-   "months": [
-    1,
     2,
     3,
     4,
@@ -481,71 +331,15 @@
     7,
     8,
     9,
+    10,
     11,
     12
    ],
-   "score": 63.9,
-   "notes": []
-  },
-  {
-   "ticker": "VZ",
-   "name": "Verizon",
-   "type": "stock",
-   "market": "us",
-   "covered_call": false,
-   "yield": 4.192035012427031,
-   "cagr5": 3.845217217894703,
-   "payout": 66.62684542465472,
-   "cuts": 0,
-   "freq": 5,
-   "months": [
-    1,
-    4,
-    7,
-    10
-   ],
-   "score": 62.6,
-   "notes": []
-  },
-  {
-   "ticker": "SCHD",
-   "name": "Schwab US Dividend Equity",
-   "type": "etf",
-   "market": "us",
-   "covered_call": false,
-   "yield": 4.938943002813733,
-   "cagr5": 3.5188445820513614,
-   "payout": 80.7829688414181,
-   "cuts": 0,
-   "freq": 4,
-   "months": [
-    3,
-    6,
-    9,
-    12
-   ],
-   "score": 62.3,
-   "notes": []
-  },
-  {
-   "ticker": "TXN",
-   "name": "Texas Instruments",
-   "type": "stock",
-   "market": "us",
-   "covered_call": false,
-   "yield": 5.181943117103265,
-   "cagr5": 6.009538475582388,
-   "payout": 88.45164444240051,
-   "cuts": 0,
-   "freq": 4,
-   "months": [
-    3,
-    6,
-    9,
-    12
-   ],
-   "score": 61.4,
-   "notes": []
+   "score": 78.0,
+   "notes": [
+    "커버드콜 — 원금 잠식·상승 제한 구조, 소수 비중 권장",
+    "최근 연간 배당 감소 2회"
+   ]
   },
   {
    "ticker": "024110.KS",
@@ -553,49 +347,29 @@
    "type": "stock",
    "market": "kr",
    "covered_call": false,
-   "yield": 3.072738569550291,
-   "cagr5": 3.3784743812568685,
-   "payout": 31.188037659401147,
-   "cuts": 0,
-   "freq": 4,
+   "yield": 6.315261044176706,
+   "cagr5": 8.030354405846518,
+   "payout": 34.050000000000004,
+   "cuts": 6,
+   "freq": 2,
    "months": [
     3,
-    6,
-    9,
-    12
+    7
    ],
-   "score": 59.8,
-   "notes": []
+   "score": 73.9,
+   "notes": [
+    "최근 연간 배당 감소 6회"
+   ]
   },
   {
-   "ticker": "MO",
-   "name": "Altria",
-   "type": "stock",
-   "market": "us",
-   "covered_call": false,
-   "yield": 3.4159892103665683,
-   "cagr5": 2.402435554451654,
-   "payout": 61.03805770727235,
-   "cuts": 0,
-   "freq": 4,
-   "months": [
-    3,
-    6,
-    9,
-    12
-   ],
-   "score": 58.7,
-   "notes": []
-  },
-  {
-   "ticker": "VIG",
-   "name": "Vanguard Dividend Appreciation",
+   "ticker": "SCHD",
+   "name": "Schwab US Dividend Equity",
    "type": "etf",
    "market": "us",
    "covered_call": false,
-   "yield": 4.49591221002166,
-   "cagr5": 2.309639301490063,
-   "payout": 82.86211163853478,
+   "yield": 3.093841780669441,
+   "cagr5": 9.133283157383044,
+   "payout": null,
    "cuts": 0,
    "freq": 4,
    "months": [
@@ -604,19 +378,19 @@
     9,
     12
    ],
-   "score": 57.8,
+   "score": 65.9,
    "notes": []
   },
   {
-   "ticker": "PG",
-   "name": "Procter & Gamble",
+   "ticker": "PEP",
+   "name": "PepsiCo",
    "type": "stock",
    "market": "us",
    "covered_call": false,
-   "yield": 4.225236418834979,
-   "cagr5": 5.024792782074106,
-   "payout": 84.19497003849752,
-   "cuts": 0,
+   "yield": 4.522511122584719,
+   "cagr5": 6.924559065444402,
+   "payout": 73.02,
+   "cuts": 1,
    "freq": 4,
    "months": [
     3,
@@ -624,28 +398,32 @@
     9,
     12
    ],
-   "score": 57.0,
-   "notes": []
+   "score": 64.1,
+   "notes": [
+    "최근 연간 배당 감소 1회"
+   ]
   },
   {
-   "ticker": "VYM",
-   "name": "Vanguard High Dividend Yield",
-   "type": "etf",
-   "market": "us",
+   "ticker": "105560.KS",
+   "name": "KB금융",
+   "type": "stock",
+   "market": "kr",
    "covered_call": false,
-   "yield": 3.7922711480496476,
-   "cagr5": 3.1249296196329324,
-   "payout": 61.256289425985265,
-   "cuts": 0,
+   "yield": 3.020625,
+   "cagr5": 15.038077304966556,
+   "payout": 27.21,
+   "cuts": 5,
    "freq": 4,
    "months": [
-    1,
-    4,
-    7,
-    10
+    2,
+    5,
+    8,
+    11
    ],
-   "score": 56.4,
-   "notes": []
+   "score": 63.4,
+   "notes": [
+    "최근 연간 배당 감소 5회"
+   ]
   },
   {
    "ticker": "055550.KS",
@@ -653,37 +431,20 @@
    "type": "stock",
    "market": "kr",
    "covered_call": false,
-   "yield": 4.370888745511546,
-   "cagr5": 4.049425048700606,
-   "payout": 85.78260057798674,
-   "cuts": 0,
+   "yield": 3.137044967880086,
+   "cagr5": 8.447177119769854,
+   "payout": 25.3,
+   "cuts": 5,
    "freq": 4,
    "months": [
-    3,
-    6,
-    9,
-    12
+    2,
+    4,
+    7,
+    11
    ],
-   "score": 54.9,
-   "notes": []
-  },
-  {
-   "ticker": "033780.KS",
-   "name": "KT&G",
-   "type": "stock",
-   "market": "kr",
-   "covered_call": false,
-   "yield": 3.0163985377466584,
-   "cagr5": -0.30907474974172233,
-   "payout": 50.12101605092456,
-   "cuts": 0,
-   "freq": 1,
-   "months": [
-    12
-   ],
-   "score": 51.8,
+   "score": 60.7,
    "notes": [
-    "연 1회 결산배당(지급은 통상 익년 4월 전후)"
+    "최근 연간 배당 감소 5회"
    ]
   },
   {
@@ -692,9 +453,9 @@
    "type": "stock",
    "market": "us",
    "covered_call": false,
-   "yield": 4.483738325490491,
-   "cagr5": 1.7265695969430617,
-   "payout": 85.16687666061212,
+   "yield": 2.0846494099207917,
+   "cagr5": 5.2485228750036805,
+   "payout": 60.72,
    "cuts": 0,
    "freq": 4,
    "months": [
@@ -703,8 +464,167 @@
     8,
     11
    ],
-   "score": 50.8,
+   "score": 59.0,
    "notes": []
+  },
+  {
+   "ticker": "VIG",
+   "name": "Vanguard Dividend Appreciation",
+   "type": "etf",
+   "market": "us",
+   "covered_call": false,
+   "yield": 1.5063003321757333,
+   "cagr5": 9.146292903211783,
+   "payout": null,
+   "cuts": 0,
+   "freq": 4,
+   "months": [
+    3,
+    6,
+    9,
+    12
+   ],
+   "score": 58.9,
+   "notes": []
+  },
+  {
+   "ticker": "PG",
+   "name": "Procter & Gamble",
+   "type": "stock",
+   "market": "us",
+   "covered_call": false,
+   "yield": 2.732365641691425,
+   "cagr5": 6.020686537931774,
+   "payout": 64.33,
+   "cuts": 1,
+   "freq": 4,
+   "months": [
+    1,
+    4,
+    7,
+    10
+   ],
+   "score": 58.3,
+   "notes": [
+    "최근 연간 배당 감소 1회"
+   ]
+  },
+  {
+   "ticker": "VZ",
+   "name": "Verizon",
+   "type": "stock",
+   "market": "us",
+   "covered_call": false,
+   "yield": 6.33783762002764,
+   "cagr5": 1.952198974825703,
+   "payout": 72.78999999999999,
+   "cuts": 4,
+   "freq": 4,
+   "months": [
+    1,
+    4,
+    7,
+    10
+   ],
+   "score": 55.3,
+   "notes": [
+    "최근 연간 배당 감소 4회"
+   ]
+  },
+  {
+   "ticker": "033780.KS",
+   "name": "KT&G",
+   "type": "stock",
+   "market": "kr",
+   "covered_call": false,
+   "yield": 3.4645669291338583,
+   "cagr5": 3.131030647754507,
+   "payout": 43.88,
+   "cuts": 2,
+   "freq": 2,
+   "months": [
+    2,
+    8
+   ],
+   "score": 54.0,
+   "notes": [
+    "최근 연간 배당 감소 2회"
+   ]
+  },
+  {
+   "ticker": "DGRO",
+   "name": "iShares Core Dividend Growth",
+   "type": "etf",
+   "market": "us",
+   "covered_call": false,
+   "yield": 1.9010053055311025,
+   "cagr5": 7.0942213469022075,
+   "payout": null,
+   "cuts": 1,
+   "freq": 4,
+   "months": [
+    3,
+    6,
+    9,
+    12
+   ],
+   "score": 52.8,
+   "notes": [
+    "최근 연간 배당 감소 1회"
+   ]
+  },
+  {
+   "ticker": "MO",
+   "name": "Altria",
+   "type": "stock",
+   "market": "us",
+   "covered_call": false,
+   "yield": 5.809859443070704,
+   "cagr5": 4.117296495987799,
+   "payout": 89.25999999999999,
+   "cuts": 2,
+   "freq": 4,
+   "months": [
+    3,
+    6,
+    9,
+    12
+   ],
+   "score": 52.8,
+   "notes": [
+    "최근 연간 배당 감소 2회"
+   ]
+  },
+  {
+   "ticker": "O",
+   "name": "Realty Income (월배당 리츠)",
+   "type": "stock",
+   "market": "us",
+   "covered_call": false,
+   "yield": 5.846984778773994,
+   "cagr5": 5.134558518786769,
+   "payout": 234.71,
+   "cuts": 2,
+   "freq": 12,
+   "months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "score": 50.8,
+   "notes": [
+    "배당성향 235% — 지속가능성 점검 필요",
+    "최근 연간 배당 감소 2회"
+   ]
   },
   {
    "ticker": "KO",
@@ -712,10 +632,76 @@
    "type": "stock",
    "market": "us",
    "covered_call": false,
-   "yield": 1.2716452767469475,
-   "cagr5": 1.4906414626796094,
-   "payout": 52.73324940184969,
+   "yield": 2.282608695652174,
+   "cagr5": 4.4617420086995985,
+   "payout": 62.46000000000001,
+   "cuts": 2,
+   "freq": 4,
+   "months": [
+    3,
+    6,
+    9,
+    12
+   ],
+   "score": 50.4,
+   "notes": [
+    "최근 연간 배당 감소 2회"
+   ]
+  },
+  {
+   "ticker": "TXN",
+   "name": "Texas Instruments",
+   "type": "stock",
+   "market": "us",
+   "covered_call": false,
+   "yield": 2.034967074865157,
+   "cagr5": 8.134418695281065,
+   "payout": 85.54,
    "cuts": 1,
+   "freq": 4,
+   "months": [
+    1,
+    5,
+    7,
+    10
+   ],
+   "score": 49.7,
+   "notes": [
+    "최근 연간 배당 감소 1회"
+   ]
+  },
+  {
+   "ticker": "ABBV",
+   "name": "AbbVie",
+   "type": "stock",
+   "market": "us",
+   "covered_call": false,
+   "yield": 2.4417784576691353,
+   "cagr5": 6.8051927565147885,
+   "payout": 190.39999,
+   "cuts": 0,
+   "freq": 4,
+   "months": [
+    1,
+    4,
+    7,
+    10
+   ],
+   "score": 46.1,
+   "notes": [
+    "배당성향 190% — 지속가능성 점검 필요"
+   ]
+  },
+  {
+   "ticker": "XOM",
+   "name": "Exxon Mobil",
+   "type": "stock",
+   "market": "us",
+   "covered_call": false,
+   "yield": 2.358598679155557,
+   "cagr5": 2.8243918267097934,
+   "payout": 52.51,
+   "cuts": 4,
    "freq": 4,
    "months": [
     2,
@@ -723,13 +709,55 @@
     8,
     11
    ],
-   "score": 44.3,
+   "score": 45.4,
+   "notes": [
+    "최근 연간 배당 감소 4회"
+   ]
+  },
+  {
+   "ticker": "VYM",
+   "name": "Vanguard High Dividend Yield",
+   "type": "etf",
+   "market": "us",
+   "covered_call": false,
+   "yield": 2.297930844501523,
+   "cagr5": 3.7956851881622233,
+   "payout": null,
+   "cuts": 2,
+   "freq": 4,
+   "months": [
+    3,
+    6,
+    9,
+    12
+   ],
+   "score": 44.2,
+   "notes": [
+    "최근 연간 배당 감소 2회"
+   ]
+  },
+  {
+   "ticker": "017670.KS",
+   "name": "SK텔레콤",
+   "type": "stock",
+   "market": "kr",
+   "covered_call": false,
+   "yield": 2.11734693877551,
+   "cagr5": -3.821636720734267,
+   "payout": 48.610002,
+   "cuts": 1,
+   "freq": 2,
+   "months": [
+    5,
+    8
+   ],
+   "score": 36.9,
    "notes": [
     "최근 연간 배당 감소 1회"
    ]
   }
  ],
  "method": "점수 = 배당수익률 40% + 5년 배당성장 30% + 배당성향 지속가능성 20% + 무삭감 안정성 10%. 플랜은 점수와 '새로 채워지는 지급월'을 함께 고려해 선택, 단일 종목 35%·커버드콜 합산 20% 상한. 월별 금액은 최근 12개월 배당락월 기준 세후 추정치이며 실제 입금은 미국 통상 2~4주, 국내 결산배당은 수개월 뒤입니다.",
- "generated": "2026-10-16T12:24+09:00",
+ "generated": "2026-10-16T15:57+09:00",
  "month": "2026-10"
 }
