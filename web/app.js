@@ -88,7 +88,7 @@ function levelsRow(lv, t) {
 const extLink = (t) => (isKR(t) ? `https://finance.naver.com/item/main.naver?code=${code(t)}` : `https://finance.yahoo.com/quote/${encodeURIComponent(t)}`);
 
 /* ── 데이터 ── */
-const FILES = ["meta", "briefing", "watch", "picks", "track", "screen", "dividend", "alerts", "backtest", "model", "forward", "scorecard", "pdca", "pdca_review"];
+const FILES = ["meta", "briefing", "watch", "picks", "track", "screen", "dividend", "alerts", "backtest", "model", "forward", "scorecard", "pdca", "pdca_review", "changelog"];
 async function load() {
   const btn = $("#refresh"); btn.classList.add("spin");
   const res = await Promise.allSettled(FILES.map((f) => fetch(`data/${f}.json?t=${Date.now()}`, { cache: "no-store" }).then((r) => (r.ok ? r.json() : null))));
@@ -449,6 +449,17 @@ function predVsActual(tr) {
       <div class="num"><b class="${cls(i.final.ex ?? i.final.ret)}">${sgn(i.final.ex ?? i.final.ret, 1)}</b><span>절대 ${sgn(i.final.ret, 1)}</span></div></button>`).join("") ||
       '<div class="empty">추천 후 5·20·60거래일이 지나면 여기서 예측이 맞았는지(✓/✗) 확정됩니다. 첫 결과는 다음 주에 나옵니다.</div>'}</div>`;
 }
+const CL_CLASS = { 전략: "cl-strat", 운영: "cl-ops", 되돌림: "cl-revert", 유지: "cl-keep" };
+function changelogBlock(cl) {
+  const items = (cl?.items || []).slice(0, 12);
+  return `<div class="sec"><h2>자동 변경 이력 <small>Claude가 직접 반영·되돌린 내용</small></h2>
+    <div class="panel">${items.map((c) => `<div class="alert"><i></i><div>
+      <div><span class="cl ${CL_CLASS[c.type] || ""}">${esc(c.type || "")}</span> ${esc(c.title || "")}</div>
+      ${c.detail ? `<div style="font-size:13.5px;color:var(--ink-2);margin-top:2px">${esc(c.detail)}</div>` : ""}
+      <small>${esc(c.date || "")}${c.evidence ? " · 근거: " + esc(c.evidence) : ""}${c.commit ? ` · <a href="https://github.com/hkbaboOD/jangjeon-note/commit/${esc(c.commit)}" target="_blank" rel="noopener">${esc(c.commit)}</a>` : ""}</small>
+    </div></div>`).join("") || '<div class="empty">아직 기록이 없습니다. 매주 토요일 점검 후 바뀐 내용(또는 유지 결정)이 여기 쌓입니다.</div>'}</div>
+    ${(cl?.items || []).length > 12 ? `<p class="note">전체 이력: <a href="https://github.com/hkbaboOD/jangjeon-note/blob/main/docs/CHANGELOG.md" target="_blank" rel="noopener">docs/CHANGELOG.md</a></p>` : ""}</div>`;
+}
 function pdcaBlock(p, rv, tr) {
   if (!p) return `<div class="sec"><h2>이번 주 PDCA</h2><div class="panel pad"><p class="note" style="margin:0">첫 주간 PDCA 리포트는 토요일 09:10 자동 보정 후 생성됩니다. 그 전에도 매일 예측은 기록되고 있습니다.</p></div></div>`;
   const m = p.check?.matured || {}, dw = p.check?.win_delta || {};
@@ -468,7 +479,7 @@ function pdcaBlock(p, rv, tr) {
       ${rv.summary ? `<p style="margin:0 0 6px">${esc(rv.summary)}</p>` : ""}
       ${(rv.findings || []).length ? `<h4>발견</h4><ul>${rv.findings.map((f) => `<li>${esc(f)}</li>`).join("")}</ul>` : ""}
       ${(rv.actions || []).length ? `<h4>조치</h4><ul>${rv.actions.map((f) => `<li>${esc(f)}</li>`).join("")}</ul>` : ""}
-      ${(rv.proposals || []).length ? `<h4>제안(승인 필요)</h4><ul>${rv.proposals.map((f) => `<li>${esc(f)}</li>`).join("")}</ul>` : ""}
+      ${(rv.proposals || []).length ? `<h4>다음 주 계획</h4><ul>${rv.proposals.map((f) => `<li>${esc(f)}</li>`).join("")}</ul>` : ""}
     </div></div>` : ""}`;
 }
 
@@ -563,6 +574,7 @@ function renderLab() {
       <div class="kpi"><small>실추천 지수 대비</small><b class="${cls(tr?.summary?.avg_ex)}">${sgn(tr?.summary?.avg_ex, 1)}</b></div>
     </div>
     ${pdcaBlock(state.data.pdca, state.data.pdca_review, tr)}
+    ${changelogBlock(state.data.changelog)}
     ${forwardBlock(fw, sc, md)}
     <div class="seg" role="group" aria-label="보유 기간">${[["5", "5일 후"], ["20", "20일 후"], ["60", "60일 후"]].map(([k, l]) => `<button data-lh="${k}" aria-pressed="${H === k}">${l}</button>`).join("")}</div>
     <div class="seg sm" role="group" aria-label="시장">${[["all", "전체"], ["us", "미국"], ["kr", "한국"]].map(([k, l]) => `<button data-lm="${k}" aria-pressed="${M === k}">${l}</button>`).join("")}</div>

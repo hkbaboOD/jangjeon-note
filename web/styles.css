@@ -414,3 +414,7 @@ svg.ta .hit { cursor: crosshair; }
 .review ul { margin: 0; padding-left: 18px; font-size: 14px; }
 @media (min-width: 1000px) { .pdca { grid-template-columns: repeat(4, 1fr); } }
 .pdca .dl { font-size: 12px; font-weight: 600; margin-left: 2px; }
+.cl { display: inline-block; font-size: 11.5px; font-weight: 600; padding: 1px 7px; border-radius: 6px; box-shadow: inset 0 0 0 1px var(--line); color: var(--ink-2); margin-right: 4px; }
+.cl.cl-strat { box-shadow: inset 0 0 0 1.5px var(--ink); color: var(--ink); }
+.cl.cl-revert { box-shadow: inset 0 0 0 1.5px var(--down); color: var(--down); }
+.alert a { color: inherit; }
