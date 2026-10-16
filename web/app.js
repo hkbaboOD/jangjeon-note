@@ -88,7 +88,7 @@ function levelsRow(lv, t) {
 const extLink = (t) => (isKR(t) ? `https://finance.naver.com/item/main.naver?code=${code(t)}` : `https://finance.yahoo.com/quote/${encodeURIComponent(t)}`);
 
 /* ── 데이터 ── */
-const FILES = ["meta", "briefing", "watch", "picks", "track", "screen", "dividend", "alerts", "backtest", "model", "forward", "scorecard"];
+const FILES = ["meta", "briefing", "watch", "picks", "track", "screen", "dividend", "alerts", "backtest", "model", "forward", "scorecard", "pdca", "pdca_review"];
 async function load() {
   const btn = $("#refresh"); btn.classList.add("spin");
   const res = await Promise.allSettled(FILES.map((f) => fetch(`data/${f}.json?t=${Date.now()}`, { cache: "no-store" }).then((r) => (r.ok ? r.json() : null))));
@@ -211,6 +211,7 @@ function renderPicks() {
       <div class="kpis"><div class="kpi"><small>추적 건수</small><b>${nf(s.count)}</b></div>
       <div class="kpi"><small>평균 수익률</small><b class="${cls(s.avg_ret)}">${sgn(s.avg_ret, 1)}</b></div>
       <div class="kpi"><small>플러스 비율</small><b>${s.hit_rate == null ? "-" : nf(s.hit_rate, 0) + "%"}</b></div></div>
+      ${predVsActual(tr)}
       ${bySetup.length ? `<div class="panel" style="margin-top:8px"><div class="row head-row"><span>차트 셋업별</span><span></span><span>평균 · 플러스 비율</span></div>${bySetup.map(([k, v]) => `
         <div class="row" style="cursor:default"><div><div class="t1">${esc(k)}</div><div class="t2">${nf(v.count)}건</div></div><span></span>
         <div class="num"><b class="${cls(v.avg_ret)}">${sgn(v.avg_ret, 1)}</b><span>${nf(v.hit_rate, 0)}%</span></div></div>`).join("")}</div>` : ""}
@@ -433,6 +434,44 @@ function dbar(v, max) {
   return `<div class="dbar" aria-hidden="true"><i class="${v >= 0 ? "pos" : "neg"}" style="width:${w}%;${v >= 0 ? "left:50%" : `right:50%`}"></i></div>`;
 }
 const sigBadge = (t) => (t == null ? "" : Math.abs(t) >= 2 ? `<span class="sigb">유의</span>` : "");
+/* PDCA · 예측 vs 실제 */
+const HN = { daily: "오늘", weekly: "이번 주", monthly: "이번 달" };
+function winTiles(m) {
+  return `<div class="kpis">${["daily", "weekly", "monthly"].map((h) => { const v = m?.[h]; return `<div class="kpi"><small>${HN[h]} 추천 승률</small><b class="${v ? (v.win_rate >= 50 ? "up" : "down") : ""}">${v ? nf(v.win_rate, 0) + "%" : "-"}</b><small>${v ? `${nf(v.count)}건 확정 · 초과 ${sgn(v.avg_ex, 1)}` : "채점 대기"}</small></div>`; }).join("")}</div>`;
+}
+function predVsActual(tr) {
+  const fin = (tr?.items || []).filter((i) => i.final).slice(-15).reverse();
+  return `<h2 style="font-size:15px;margin:16px 0 8px">예측 vs 실제 <small style="font-weight:400;color:var(--muted)">기간 도달 시 확정 · 지수 대비</small></h2>
+    ${winTiles(tr?.matured)}
+    <div class="panel" style="margin-top:8px">${fin.map((i) => `
+      <button class="row" data-t="${esc(i.ticker)}"><div><div class="t1">${i.final.win ? "✓" : "✗"} ${esc(i.name)}</div>
+      <div class="t2">${esc(i.date.slice(5).replace("-", "/"))} ${HN[i.horizon]} 추천 · 점수 ${nf(i.score, 1)} · ${nf(i.final.days)}거래일 보유${i.setup ? " · " + esc(i.setup) : ""}</div></div><span></span>
+      <div class="num"><b class="${cls(i.final.ex ?? i.final.ret)}">${sgn(i.final.ex ?? i.final.ret, 1)}</b><span>절대 ${sgn(i.final.ret, 1)}</span></div></button>`).join("") ||
+      '<div class="empty">추천 후 5·20·60거래일이 지나면 여기서 예측이 맞았는지(✓/✗) 확정됩니다. 첫 결과는 다음 주에 나옵니다.</div>'}</div>`;
+}
+function pdcaBlock(p, rv, tr) {
+  if (!p) return `<div class="sec"><h2>이번 주 PDCA</h2><div class="panel pad"><p class="note" style="margin:0">첫 주간 PDCA 리포트는 토요일 09:10 자동 보정 후 생성됩니다. 그 전에도 매일 예측은 기록되고 있습니다.</p></div></div>`;
+  const m = p.check?.matured || {}, dw = p.check?.win_delta || {};
+  const wins = ["daily", "weekly", "monthly"].filter((h) => m[h]).map((h) => `${HN[h]} ${nf(m[h].win_rate, 0)}%${dw[h] ? ` <span class="dl ${cls(dw[h])}">${sgn(dw[h], 0, "%p")}</span>` : ""}`).join("<br>") || "채점 대기 중";
+  const ch = p.act?.changes || [];
+  return `
+    <div class="sec"><h2>이번 주 PDCA <small>${esc(p.week)} · 자동</small></h2>
+      <div class="pdca">
+        <div><b>P 계획</b><p>모델 v${nf(p.plan?.version ?? 0)}</p><small>${p.plan?.changed ? "가중치를 조정했습니다" : "근거 부족 → 현재 모델 유지"}</small></div>
+        <div><b>D 실행</b><p>예측 기록 ${nf(p.do?.days_recorded)}일</p><small>이번 주 신규 추천 ${nf(p.do?.new_picks)}건 · 진행 중 ${nf(p.do?.open_picks)}건</small></div>
+        <div><b>C 점검</b><p>${wins}</p><small>이번 주 확정 ${nf(p.check?.closed_this_week?.length || 0)}건 · 승률 = 지수 대비 플러스 비율</small></div>
+        <div><b>A 개선</b><p>${ch.length ? `${nf(ch.length)}건 조정` : "유지"}</p><small>${esc(ch[0] || "유의한 근거가 없어 바꾸지 않았습니다")}</small></div>
+      </div>
+      ${(p.next || []).length ? `<ul class="bullets" style="margin-top:8px">${p.next.map((n) => `<li>${esc(n)}</li>`).join("")}</ul>` : ""}
+    </div>
+    ${rv ? `<div class="sec"><h2>Claude 주간 점검 <small>${esc(rv.date || "")}</small></h2><div class="panel pad review">
+      ${rv.summary ? `<p style="margin:0 0 6px">${esc(rv.summary)}</p>` : ""}
+      ${(rv.findings || []).length ? `<h4>발견</h4><ul>${rv.findings.map((f) => `<li>${esc(f)}</li>`).join("")}</ul>` : ""}
+      ${(rv.actions || []).length ? `<h4>조치</h4><ul>${rv.actions.map((f) => `<li>${esc(f)}</li>`).join("")}</ul>` : ""}
+      ${(rv.proposals || []).length ? `<h4>제안(승인 필요)</h4><ul>${rv.proposals.map((f) => `<li>${esc(f)}</li>`).join("")}</ul>` : ""}
+    </div></div>` : ""}`;
+}
+
 /* 실전 예측력 블록: 추이 · 채점 · 모델 선택 */
 const HZ_KO = { daily: "오늘(5일)", weekly: "이번 주(20일)", monthly: "이번 달(60일)" };
 const LINE_C = { daily: "var(--ma20)", weekly: "var(--ma50)", monthly: "var(--ink)" };
@@ -523,6 +562,7 @@ function renderLab() {
       <div class="kpi"><small>최근 보정</small><b>${md?.log?.[0]?.date ? esc(md.log[0].date.slice(5).replace("-", "/")) : "-"}</b></div>
       <div class="kpi"><small>실추천 지수 대비</small><b class="${cls(tr?.summary?.avg_ex)}">${sgn(tr?.summary?.avg_ex, 1)}</b></div>
     </div>
+    ${pdcaBlock(state.data.pdca, state.data.pdca_review, tr)}
     ${forwardBlock(fw, sc, md)}
     <div class="seg" role="group" aria-label="보유 기간">${[["5", "5일 후"], ["20", "20일 후"], ["60", "60일 후"]].map(([k, l]) => `<button data-lh="${k}" aria-pressed="${H === k}">${l}</button>`).join("")}</div>
     <div class="seg sm" role="group" aria-label="시장">${[["all", "전체"], ["us", "미국"], ["kr", "한국"]].map(([k, l]) => `<button data-lm="${k}" aria-pressed="${M === k}">${l}</button>`).join("")}</div>

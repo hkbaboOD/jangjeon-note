@@ -40,6 +40,7 @@ BLOCK_RANGE = (0.7, 1.3)
 FLOORS = {"value": 0.10, "quality": 0.08}
 CAP = 0.45
 MARGIN = 0.005  # 교체에 필요한 최소 IC 개선폭
+WIN_GUARD = 5.0  # 교체 후보의 검증구간 승률이 현재보다 5%p 넘게 낮으면 교체 금지
 
 
 def _clip(x, lo, hi):
@@ -146,6 +147,15 @@ def _holdout_ic(hold: pd.DataFrame, w: dict, h: int) -> float | None:
     return st["ic"] if st else None
 
 
+def _holdout_win(hold: pd.DataFrame, w: dict, h: int) -> float | None:
+    """검증 구간에서 날짜·시장별 Top3로 뽑았을 때 초과수익 > 0 비율(%) = 추천 승률."""
+    d = hold.assign(_s=composite(hold, w)).dropna(subset=[f"x{h}"])
+    if d.empty:
+        return None
+    top = d.sort_values("_s", ascending=False).groupby(["date", "market"]).head(3)
+    return round(float((top[f"x{h}"] > 0).mean() * 100), 1) if len(top) >= 15 else None
+
+
 def _step(prev: dict, target: dict) -> dict:
     pw = _norm(prev)
     tg = _norm(target)
@@ -191,12 +201,15 @@ def calibrate(bt: dict, track: dict | None, prev: dict | None, live: pd.DataFram
             prop, why = _full_proposal(base, ev)
             cands = {"현재": cur, "기본": base, "새 후보": prop}
             scores = {k: _holdout_ic(hold, w, h) for k, w in cands.items()}
+            wins = {k: _holdout_win(hold, w, h) for k, w in cands.items()}
             cur_ic = scores["현재"] if scores["현재"] is not None else -1
-            best = max((k for k in scores if scores[k] is not None), key=lambda k: scores[k], default="현재")
+            ok = [k for k in scores if scores[k] is not None and
+                  (wins[k] is None or wins["현재"] is None or wins[k] >= wins["현재"] - WIN_GUARD)]
+            best = max(ok, key=lambda k: scores[k], default="현재")
             chosen = best if best != "현재" and scores[best] - cur_ic >= MARGIN else "현재"
             target = cands[chosen]
             contest[hname] = {"scores": {k: (round(v, 4) if v is not None else None) for k, v in scores.items()},
-                              "chosen": chosen, "hold_dates": int(hold["date"].nunique()),
+                              "wins": wins, "chosen": chosen, "hold_dates": int(hold["date"].nunique()),
                               "train_dates": int(train["date"].nunique())}
             if chosen == "기본":
                 why = ["최근 검증 구간에서 기본 모델이 더 정확 → 자동 롤백"] + why
@@ -244,7 +257,7 @@ def calibrate(bt: dict, track: dict | None, prev: dict | None, live: pd.DataFram
         "updated": now_kst().isoformat(timespec="minutes"), "version": version, "weights": weights,
         "setup_adj": setup_adj, "defaults": defaults, "basis": basis, "log": log, "changed": bool(changes),
         "contest": contest, "evidence": evidence, "history": history, "backtest_period": bt.get("period"),
-        "rules": ("예측 기록을 학습·검증 구간으로 나눠 현재·기본·새 후보를 검증 구간 IC로 비교, 0.005 이상 좋을 때만 교체(기본이 이기면 롤백) / "
+        "rules": ("예측 기록을 학습·검증 구간으로 나눠 현재·기본·새 후보를 검증 구간 IC로 비교, 0.005 이상 좋을 때만 교체(기본이 이기면 롤백), 추천 승률이 5%p 넘게 떨어지는 교체는 금지 / "
                   "실전 기록이 부족하면 백테스트로 차트 비중만 조정 / 근거는 IC t≥2만 / 기본값과 50:50 축소 / "
                   "주당 가중치 ±0.05 / 단일 팩터 ≤45%, 가치 ≥10%·퀄리티 ≥8% / 셋업 가감점 주당 ±2점·최대 ±5점"),
     }

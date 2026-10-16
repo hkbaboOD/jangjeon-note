@@ -13,6 +13,8 @@ import argparse
 import logging
 import re
 
+import numpy as np
+
 import pandas as pd
 
 from . import alerts as alert_mod
@@ -20,6 +22,7 @@ from . import backtest as bt_mod
 from . import briefing as briefing_mod
 from . import dividend as div_mod
 from . import forward as fwd
+from . import pdca as pdca_mod
 from .common import DATA_DIR, STATE_DIR, load_config, market_of, now_kst, read_json, write_json
 from .calibrate import calibrate
 from .data import get_source
@@ -72,6 +75,7 @@ def _watch_rows(src, cfg, hist, scored: pd.DataFrame | None):
 
 
 BENCH = {"kr": "^KS11", "us": "^GSPC"}
+HOLD = {"daily": 5, "weekly": 20, "monthly": 60}  # 추천별 채점 기간(거래일)
 
 
 def _update_track_record(picks_all: dict, prices: dict):
@@ -97,7 +101,14 @@ def _update_track_record(picks_all: dict, prices: dict):
             bp = prices.get(i.get("bench"))
             if bp and i.get("bench_entry"):
                 i["ex_ret"] = i["ret"] - (bp / i["bench_entry"] - 1) * 100
-    hist["items"] = hist["items"][-300:]
+        # 채점 기간에 도달하면 결과 확정(예측 vs 실제): 지수 대비 초과수익 > 0 이면 적중
+        hold = HOLD.get(i.get("horizon"), 20)
+        elapsed = int(np.busday_count(i["date"], today))
+        if "final" not in i and elapsed >= hold and i.get("ret") is not None:
+            ex = i.get("ex_ret")
+            i["final"] = {"ret": round(i["ret"], 2), "ex": None if ex is None else round(ex, 2), "days": elapsed,
+                          "win": bool((ex if ex is not None else i["ret"]) > 0), "closed": today}
+    hist["items"] = hist["items"][-600:]
     rets = [i["ret"] for i in hist["items"] if i.get("ret") is not None]
     exs = [i["ex_ret"] for i in hist["items"] if i.get("ex_ret") is not None]
     hist["summary"] = {"count": len(rets), "avg_ret": sum(rets) / len(rets) if rets else None,
@@ -110,9 +121,19 @@ def _update_track_record(picks_all: dict, prices: dict):
     hist["by_setup"] = {}
     for k, v in sorted(by.items(), key=lambda kv: -len(kv[1])):
         r = [i["ret"] for i in v]
-        x = [i["ex_ret"] for i in v if i.get("ex_ret") is not None]
+        x = [(i.get("final") or {}).get("ex", i.get("ex_ret")) for i in v]
+        x = [e for e in x if e is not None]
         hist["by_setup"][k] = {"count": len(r), "avg_ret": sum(r) / len(r), "hit_rate": sum(y > 0 for y in r) / len(r) * 100,
                                "avg_ex": sum(x) / len(x) if x else None}
+    hist["matured"] = {}
+    for h in HOLD:
+        fin = [i["final"] for i in hist["items"] if i.get("horizon") == h and i.get("final")]
+        if fin:
+            ex = [f["ex"] for f in fin if f["ex"] is not None]
+            last = fin[-20:]
+            hist["matured"][h] = {"count": len(fin), "win_rate": sum(f["win"] for f in fin) / len(fin) * 100,
+                                  "avg_ex": sum(ex) / len(ex) if ex else None,
+                                  "recent_win": sum(f["win"] for f in last) / len(last) * 100, "recent_n": len(last)}
     write_json("track.json", hist)
 
 
@@ -297,6 +318,8 @@ def run_backtest(cfg: dict, src, meta: dict):
     model = calibrate(res, read_json("track.json"), prev, live if ev.get("ok") else None)
     write_json("model.json", model)
     fwd.update_scorecard(ev, model["version"], now.strftime("%Y-%m-%d"))
+    write_json("pdca.json", pdca_mod.build(model, ev, read_json("track.json") or {}, read_json("pdca.json"),
+                                           now.strftime("%Y-%m-%d")))
     meta["backtest"] = res["generated"]
     log.info("백테스트 완료: 표본 %s, 실전 기록 %s일, 모델 v%s (변경 %s)", res.get("samples"), ev.get("days", 0),
              model["version"], model["changed"])

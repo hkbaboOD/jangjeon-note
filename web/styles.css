@@ -402,3 +402,15 @@ svg.ta .hit { cursor: crosshair; }
 }
 
 .ma-table .chosen { font-weight: 700; color: var(--ink); }
+
+/* PDCA */
+.pdca { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.pdca > div { background: var(--surface); border-radius: 14px; padding: 12px; min-width: 0; }
+.pdca b { font-size: 12.5px; color: var(--muted); font-weight: 600; }
+.pdca p { margin: 4px 0 2px; font-size: 15px; font-weight: 600; }
+.pdca small { color: var(--ink-2); font-size: 12px; display: block; overflow-wrap: anywhere; }
+.kpi small + small { margin-top: 2px; }
+.review h4 { margin: 10px 0 2px; font-size: 13px; color: var(--muted); }
+.review ul { margin: 0; padding-left: 18px; font-size: 14px; }
+@media (min-width: 1000px) { .pdca { grid-template-columns: repeat(4, 1fr); } }
+.pdca .dl { font-size: 12px; font-weight: 600; margin-left: 2px; }
