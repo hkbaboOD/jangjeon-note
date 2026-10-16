@@ -19,6 +19,7 @@ from . import alerts as alert_mod
 from . import backtest as bt_mod
 from . import briefing as briefing_mod
 from . import dividend as div_mod
+from . import forward as fwd
 from .common import DATA_DIR, STATE_DIR, load_config, market_of, now_kst, read_json, write_json
 from .calibrate import calibrate
 from .data import get_source
@@ -160,6 +161,8 @@ def run(job: str, demo: bool):
     # 1) 스크리닝 (유니버스 + 관심종목)
     uni_rows = _rows(src, list(dict.fromkeys(uni + watch)), hist, names, tcfg=tcfg)
     scored = score_universe(uni_rows, model)
+    # 오늘의 예측을 기록 → 나중에 실제 수익률로 채점해 보정 근거로 사용
+    fwd.save_snapshot(scored, now.strftime("%Y-%m-%d"), {r["ticker"]: r["tech"].get("date") for r in uni_rows})
     keep = ["ticker", "name", "market", "sector", "price", "fpe", "peg", "pb", "roe", "opm", "de", "eg",
             "upside", "analysts", "rec_key", "rsi", "above_long", "dd52", "chg_1d", "chg_5d", "chg_20d", "chg_60d",
             "value", "quality", "target", "growth", "momentum", "trend", "timing", "tech",
@@ -270,16 +273,33 @@ def run_backtest(cfg: dict, src, meta: dict):
     now = now_kst()
     uni = cfg["universe"]["us"] + list(cfg["universe"]["kr"])
     watch = [w["ticker"] for w in cfg["watchlist"]]
-    hist = src.history(list(dict.fromkeys(uni + watch)), period="5y")
-    log.info("백테스트 시작: %d종목", len(hist))
+    period = (cfg.get("backtest") or {}).get("period", "10y")
+    hist = src.history(list(dict.fromkeys(uni + watch)), period=period)
+    log.info("백테스트 시작: %d종목, %s", len(hist), period)
     res = bt_mod.run(hist, cfg.get("technical"))
     res["generated"] = now.isoformat(timespec="minutes")
     write_json("backtest.json", res)
+
+    # 실전 예측 채점 (매일 저장한 예측 vs 실제 수익률)
+    live = fwd.attach_returns(fwd.load_snapshots(), hist)
+    ev = fwd.evaluate(live)
+    if ev.get("ok"):
+        ev["recent"] = {}
+        for name, (col, h) in fwd.SCORES.items():
+            ser = fwd.date_ics(live, live[f"s_{name}"], h).tail(60)
+            st = fwd.ic_stat(ser, h)
+            if st:
+                ev["recent"][name] = st
+    ev["generated"] = res["generated"]
+    write_json("forward.json", ev)
+
     prev = read_json("model.json")
-    model = calibrate(res, read_json("track.json"), prev)
+    model = calibrate(res, read_json("track.json"), prev, live if ev.get("ok") else None)
     write_json("model.json", model)
+    fwd.update_scorecard(ev, model["version"], now.strftime("%Y-%m-%d"))
     meta["backtest"] = res["generated"]
-    log.info("백테스트 완료: 표본 %s, 모델 v%s (변경 %s)", res.get("samples"), model["version"], model["changed"])
+    log.info("백테스트 완료: 표본 %s, 실전 기록 %s일, 모델 v%s (변경 %s)", res.get("samples"), ev.get("days", 0),
+             model["version"], model["changed"])
     if model["changed"] and prev:
         alert_mod.push({"title": f"🔧 모델 자가 보정 v{model['version']}",
                         "body": "\n".join(c["text"] for c in model["log"][:3]), "url": "./#lab"})

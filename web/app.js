@@ -88,7 +88,7 @@ function levelsRow(lv, t) {
 const extLink = (t) => (isKR(t) ? `https://finance.naver.com/item/main.naver?code=${code(t)}` : `https://finance.yahoo.com/quote/${encodeURIComponent(t)}`);
 
 /* ── 데이터 ── */
-const FILES = ["meta", "briefing", "watch", "picks", "track", "screen", "dividend", "alerts", "backtest", "model"];
+const FILES = ["meta", "briefing", "watch", "picks", "track", "screen", "dividend", "alerts", "backtest", "model", "forward", "scorecard"];
 async function load() {
   const btn = $("#refresh"); btn.classList.add("spin");
   const res = await Promise.allSettled(FILES.map((f) => fetch(`data/${f}.json?t=${Date.now()}`, { cache: "no-store" }).then((r) => (r.ok ? r.json() : null))));
@@ -433,10 +433,71 @@ function dbar(v, max) {
   return `<div class="dbar" aria-hidden="true"><i class="${v >= 0 ? "pos" : "neg"}" style="width:${w}%;${v >= 0 ? "left:50%" : `right:50%`}"></i></div>`;
 }
 const sigBadge = (t) => (t == null ? "" : Math.abs(t) >= 2 ? `<span class="sigb">유의</span>` : "");
+/* 실전 예측력 블록: 추이 · 채점 · 모델 선택 */
+const HZ_KO = { daily: "오늘(5일)", weekly: "이번 주(20일)", monthly: "이번 달(60일)" };
+const LINE_C = { daily: "var(--ma20)", weekly: "var(--ma50)", monthly: "var(--ink)" };
+function icTrend(hist) {
+  const pts = (hist || []).filter((e) => ["daily", "weekly", "monthly"].some((k) => e[`ic_${k}`] != null));
+  if (pts.length < 2) return "";
+  const W = 640, H = 170, L = 8, R = 92, T = 10, B = 24;
+  const vals = pts.flatMap((e) => ["daily", "weekly", "monthly"].map((k) => e[`ic_${k}`]).filter((v) => v != null));
+  const m = Math.max(0.05, ...vals.map(Math.abs)) * 1.15;
+  const x = (i) => L + (i / (pts.length - 1)) * (W - L - R), y = (v) => T + ((m - v) / (2 * m)) * (H - T - B);
+  const ends = [];
+  const lines = ["daily", "weekly", "monthly"].map((k) => {
+    const seg = pts.map((e, i) => [i, e[`ic_${k}`]]).filter(([, v]) => v != null);
+    if (seg.length < 2) return "";
+    const d = seg.map(([i, v], j) => `${j ? "L" : "M"}${x(i).toFixed(1)},${y(v).toFixed(1)}`).join("");
+    const [li, lv] = seg[seg.length - 1];
+    ends.push({ k, x: x(li) + 8, y: y(lv) + 4, v: lv });
+    return `<path d="${d}" fill="none" stroke="${LINE_C[k]}" stroke-width="2"/>
+      ${seg.map(([i, v]) => `<circle cx="${x(i)}" cy="${y(v)}" r="4" fill="${LINE_C[k]}" stroke="var(--surface)" stroke-width="2"><title>${pts[i].date} · ${HZ_KO[k]} IC ${v >= 0 ? "+" : ""}${v.toFixed(3)} · 모델 v${pts[i].version ?? "-"}</title></circle>`).join("")}`;
+  }).join("");
+  // 끝 라벨 겹침 방지: 위에서부터 13px 간격 확보
+  ends.sort((a, b) => a.y - b.y).forEach((e, i, arr) => { if (i && e.y - arr[i - 1].y < 13) e.y = arr[i - 1].y + 13; });
+  const labels = ends.map((e) => `<text x="${e.x}" y="${e.y}" class="ax" style="fill:var(--ink-2)">${HZ_KO[e.k].split("(")[0]} ${e.v >= 0 ? "+" : ""}${e.v.toFixed(3)}</text>`).join("");
+  return `<svg viewBox="0 0 ${W} ${H}" class="ta" role="img" aria-label="주간 예측력(IC) 추이">
+    <line x1="${L}" x2="${W - R}" y1="${y(0)}" y2="${y(0)}" class="grid ref"/>
+    <text x="${W - R + 8}" y="${y(0) + 4}" class="ax">0</text>
+    ${lines}${labels}
+    <text x="${L}" y="${H - 6}" class="ax">${pts[0].date.slice(5).replace("-", "/")}</text>
+    <text x="${W - R}" y="${H - 6}" class="ax" text-anchor="end">${pts[pts.length - 1].date.slice(5).replace("-", "/")}</text></svg>`;
+}
+function forwardBlock(fw, sc, md) {
+  const days = fw?.days || 0;
+  const hist = sc?.history || [];
+  const trend = icTrend(hist);
+  const cont = md?.contest || {};
+  const keys = ["daily", "weekly", "monthly"];
+  const comp = keys.map((k) => ({ k, c: fw?.recent?.[k] || fw?.composite?.[k], t3: fw?.top3?.[k] }));
+  const facs = ["value", "quality", "target", "growth", "momentum", "trend", "timing"];
+  return `
+    <div class="sec"><h2>예측력 추이 <small>앱이 매일 낸 예측을 실제 결과로 채점 · 주간</small></h2>
+      <div class="panel pad">${trend ? trend + `<div class="ta-keys">${keys.map((k) => `<span><i style="background:${LINE_C[k]}"></i>${HZ_KO[k]}</span>`).join("")}</div>` :
+        `<p style="margin:0">예측 기록 <b>${nf(days)}일째</b>입니다. 매일 아침 전 종목의 점수를 기록하고, 기간이 지나면 실제 수익률로 채점합니다.</p>
+         <ul class="bullets" style="margin-top:8px;padding:8px 8px 8px 26px;background:var(--surface-2)">
+           <li>오늘(5일) 추천: 약 2달 뒤부터 실전 채점으로 보정</li><li>이번 주(20일): 약 3달 뒤부터</li><li>이번 달(60일): 약 9달 뒤부터</li>
+           <li>그 전까지는 10년 백테스트로 차트 비중만 조정합니다</li></ul>`}</div>
+      <p class="note">선이 0보다 위에서 점점 올라가면 예측이 실제로 맞아 가고 있다는 뜻입니다. 점을 누르면 날짜·모델 버전이 보입니다.</p>
+    </div>
+    <div class="sec"><h2>실전 채점 <small>최근 60일 · 종합점수 순위와 이후 수익률의 상관</small></h2>
+      <div class="panel ma-table"><div class="mrow mh"><span>추천</span><span>예측력 IC</span><span>Top3 초과수익</span><span>채점 일수</span></div>
+      ${comp.map(({ k, c, t3 }) => `<div class="mrow"><span>${HZ_KO[k]}</span><span class="${c && Math.abs(c.t) >= 2 ? cls(c.ic) : ""}">${c ? (c.ic >= 0 ? "+" : "") + c.ic.toFixed(3) + ` <small>t ${c.t.toFixed(1)}</small>` : "-"}</span><span class="${cls(t3?.avg_ex)}">${t3 ? sgn(t3.avg_ex, 2) : "-"}</span><span>${nf(fw?.matured?.[{ daily: "5", weekly: "20", monthly: "60" }[k]] ?? 0)}일</span></div>`).join("")}</div>
+      ${fw?.ic && Object.keys(fw.ic.value || {}).length ? `<div class="panel ma-table" style="margin-top:8px"><div class="mrow mh"><span>팩터(실전)</span><span>5일</span><span>20일</span><span>60일</span></div>
+      ${facs.map((f) => `<div class="mrow"><span>${FACTOR_KO[f]}</span>${["5", "20", "60"].map((h) => { const v = fw.ic[f]?.[h]; return `<span class="${v && Math.abs(v.t) >= 2 ? cls(v.ic) : ""}">${v ? (v.ic >= 0 ? "+" : "") + v.ic.toFixed(3) + ` <small>t ${v.t.toFixed(1)}</small>` : "-"}</span>`; }).join("")}</div>`).join("")}</div>` : ""}
+    </div>
+    <div class="sec"><h2>모델 선택 <small>최근 검증 구간에서 현재·기본·새 후보 비교</small></h2>
+      <div class="panel ma-table">${Object.keys(cont).length ? `<div class="mrow mh"><span>추천</span><span>현재</span><span>기본</span><span>새 후보</span></div>
+      ${keys.filter((k) => cont[k]).map((k) => { const c = cont[k]; return `<div class="mrow"><span>${HZ_KO[k]}</span>${["현재", "기본", "새 후보"].map((n) => `<span class="${c.chosen === n ? "chosen" : ""}">${c.scores[n] == null ? "-" : (c.scores[n] >= 0 ? "+" : "") + c.scores[n].toFixed(3)}${c.chosen === n ? " ✓" : ""}</span>`).join("")}</div>`; }).join("")}` :
+      `<p class="note" style="margin:10px 0">실전 기록이 학습·검증 구간으로 나눌 만큼 쌓이면, 매주 세 모델을 겨뤄 더 정확한 쪽만 채택하고 나빠지면 기본으로 되돌립니다.</p>`}</div>
+    </div>`;
+}
+
 function renderLab() {
   const el = $("#view-lab"), bt = state.data.backtest, md = state.data.model, tr = state.data.track;
+  const fw = state.data.forward, sc = state.data.scorecard;
   if (!bt || !bt.ok) {
-    el.innerHTML = `<div class="dateline"><h1>규칙 검증</h1></div><div class="empty">백테스트 결과가 아직 없습니다. 매주 토요일 09:00에 자동 실행되며, GitHub Actions에서 job ‘backtest’로 바로 실행할 수도 있습니다.</div>`;
+    el.innerHTML = `<div class="dateline"><h1>규칙 검증</h1></div><div class="empty">백테스트 결과가 아직 없습니다. 매주 토요일 09:10에 자동 실행되며, GitHub Actions에서 job ‘backtest’로 바로 실행할 수도 있습니다.</div>`;
     return;
   }
   const H = state.labH, M = state.labM;
@@ -462,6 +523,7 @@ function renderLab() {
       <div class="kpi"><small>최근 보정</small><b>${md?.log?.[0]?.date ? esc(md.log[0].date.slice(5).replace("-", "/")) : "-"}</b></div>
       <div class="kpi"><small>실추천 지수 대비</small><b class="${cls(tr?.summary?.avg_ex)}">${sgn(tr?.summary?.avg_ex, 1)}</b></div>
     </div>
+    ${forwardBlock(fw, sc, md)}
     <div class="seg" role="group" aria-label="보유 기간">${[["5", "5일 후"], ["20", "20일 후"], ["60", "60일 후"]].map(([k, l]) => `<button data-lh="${k}" aria-pressed="${H === k}">${l}</button>`).join("")}</div>
     <div class="seg sm" role="group" aria-label="시장">${[["all", "전체"], ["us", "미국"], ["kr", "한국"]].map(([k, l]) => `<button data-lm="${k}" aria-pressed="${M === k}">${l}</button>`).join("")}</div>
 

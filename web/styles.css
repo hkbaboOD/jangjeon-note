@@ -400,3 +400,5 @@ svg.ta .hit { cursor: crosshair; }
 @media (min-width: 1500px) {
   #view-picks.active { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
+
+.ma-table .chosen { font-weight: 700; color: var(--ink); }

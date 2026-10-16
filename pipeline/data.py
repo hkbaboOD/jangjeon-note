@@ -186,7 +186,7 @@ class DemoSource:
         return float(r.uniform(30, 600))
 
     def history(self, tickers, period="2y"):
-        nbar = {"1y": 252, "2y": 504, "5y": 1260}.get(period, 504)
+        nbar = {"1y": 252, "2y": 504, "5y": 1260, "10y": 2520}.get(period, 504)
         days = pd.bdate_range(end=pd.Timestamp(now_kst().date()) - pd.Timedelta(days=1), periods=nbar)
         out = {}
         for t in tickers:
