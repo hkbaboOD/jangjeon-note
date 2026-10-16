@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-16T16:46+09:00",
+ "updated": "2026-10-16T17:30+09:00",
  "rows": [
   {
    "ticker": "005930.KS",
@@ -264,7 +264,7 @@
       "mdi": 43.0,
       "pctb": -0.01,
       "bw_pct": 57.0,
-      "vol_ratio": 1.06,
+      "vol_ratio": 1.07,
       "updown_vol": 0.72,
       "atr_pct": 6.04,
       "hi52": 374500,
@@ -549,7 +549,7 @@
       "mdi": 47.1,
       "pctb": -0.06,
       "bw_pct": 49.0,
-      "vol_ratio": 1.41,
+      "vol_ratio": 1.42,
       "updown_vol": 0.61,
       "atr_pct": 7.57,
       "hi52": 2987000,
