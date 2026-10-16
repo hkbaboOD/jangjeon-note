@@ -1,12 +1,12 @@
 {
- "updated": "2026-10-16T16:16+09:00",
+ "updated": "2026-10-16T16:39+09:00",
  "rows": [
   {
    "ticker": "005930.KS",
    "name": "삼성전자",
    "market": "kr",
    "verdict": "강한 매수",
-   "score": 78.0,
+   "score": 81.8,
    "diag": {
     "type": "판단 보류",
     "evidence": [
@@ -287,7 +287,7 @@
    "name": "SK하이닉스",
    "market": "kr",
    "verdict": "강한 매수",
-   "score": 75.8,
+   "score": 82.0,
    "diag": {
     "type": "판단 보류",
     "evidence": [
@@ -572,7 +572,7 @@
    "name": "마이크론",
    "market": "us",
    "verdict": "강한 매수",
-   "score": 82.4,
+   "score": 85.6,
    "diag": {
     "type": "판단 보류",
     "evidence": [
@@ -845,7 +845,7 @@
    "name": "엔비디아",
    "market": "us",
    "verdict": "강한 매수",
-   "score": 79.0,
+   "score": 80.7,
    "diag": null,
    "tech": {
     "last": 217.22999572753906,
@@ -1375,7 +1375,7 @@
    "name": "SCHD",
    "market": "us",
    "verdict": "중립",
-   "score": 56.0,
+   "score": 54.2,
    "diag": null,
    "tech": {
     "last": 34.099998474121094,

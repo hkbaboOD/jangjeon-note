@@ -125,17 +125,31 @@
    "last": 141.72999572753906,
    "ret": 0.0,
    "ex_ret": 0.0
+  },
+  {
+   "date": "2026-10-16",
+   "horizon": "weekly",
+   "ticker": "055550.KS",
+   "name": "신한지주",
+   "entry": 93400.0,
+   "score": 63.7,
+   "setup": "상승추세 속 눌림목",
+   "bench": "^KS11",
+   "bench_entry": 5668.0498046875,
+   "last": 93400.0,
+   "ret": 0.0,
+   "ex_ret": 0.0
   }
  ],
  "summary": {
-  "count": 9,
+  "count": 10,
   "avg_ret": 0.0,
   "hit_rate": 0.0,
   "avg_ex": 0.0
  },
  "by_setup": {
   "상승추세 속 눌림목": {
-   "count": 6,
+   "count": 7,
    "avg_ret": 0.0,
    "hit_rate": 0.0,
    "avg_ex": 0.0
@@ -152,5 +166,6 @@
    "hit_rate": 0.0,
    "avg_ex": 0.0
   }
- }
+ },
+ "matured": {}
 }
