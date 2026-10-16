@@ -2,13 +2,13 @@
  "demo": false,
  "disclaimer": "정보 제공용이며 투자 권유가 아닙니다. 무료 데이터(Yahoo Finance) 특성상 지연·결측이 있을 수 있으니 공시·증권사 자료로 교차 확인하세요.",
  "backtest": "2026-10-16T15:57+09:00",
- "dividend": "2026-10-16T15:57+09:00",
- "morning": "2026-10-16T15:57+09:00",
+ "dividend": "2026-10-16T16:16+09:00",
+ "morning": "2026-10-16T16:16+09:00",
  "horizons_run": [
   "daily",
   "weekly",
   "monthly"
  ],
- "universe_size": 106,
+ "universe_size": 105,
  "model_version": 1
 }

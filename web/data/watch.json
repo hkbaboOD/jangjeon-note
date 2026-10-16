@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-16T15:57+09:00",
+ "updated": "2026-10-16T16:16+09:00",
  "rows": [
   {
    "ticker": "005930.KS",
@@ -572,7 +572,7 @@
    "name": "마이크론",
    "market": "us",
    "verdict": "강한 매수",
-   "score": 82.5,
+   "score": 82.4,
    "diag": {
     "type": "판단 보류",
     "evidence": [
@@ -845,7 +845,7 @@
    "name": "엔비디아",
    "market": "us",
    "verdict": "강한 매수",
-   "score": 78.9,
+   "score": 79.0,
    "diag": null,
    "tech": {
     "last": 217.22999572753906,
@@ -1114,7 +1114,7 @@
    "name": "TSMC",
    "market": "us",
    "verdict": "매수",
-   "score": 67.4,
+   "score": 68.3,
    "diag": null,
    "tech": {
     "last": 422.25,
