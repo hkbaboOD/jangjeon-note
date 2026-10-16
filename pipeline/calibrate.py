@@ -256,6 +256,7 @@ def calibrate(bt: dict, track: dict | None, prev: dict | None, live: pd.DataFram
     return {
         "updated": now_kst().isoformat(timespec="minutes"), "version": version, "weights": weights,
         "setup_adj": setup_adj, "defaults": defaults, "basis": basis, "log": log, "changed": bool(changes),
+        "changes_now": [c["text"] for c in changes],
         "contest": contest, "evidence": evidence, "history": history, "backtest_period": bt.get("period"),
         "rules": ("예측 기록을 학습·검증 구간으로 나눠 현재·기본·새 후보를 검증 구간 IC로 비교, 0.005 이상 좋을 때만 교체(기본이 이기면 롤백), 추천 승률이 5%p 넘게 떨어지는 교체는 금지 / "
                   "실전 기록이 부족하면 백테스트로 차트 비중만 조정 / 근거는 IC t≥2만 / 기본값과 50:50 축소 / "

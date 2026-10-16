@@ -25,7 +25,9 @@ def build(model: dict, ev: dict, track: dict, prev: dict | None, today: str) -> 
     pc = (prev.get("check") or {}).get("matured") or {}
     delta = {h: round(v["win_rate"] - pc[h]["win_rate"], 1) for h, v in matured.items() if h in pc}
 
-    act_today = [c["text"] for c in (model.get("log") or []) if c.get("date") == today]
+    act_today = model.get("changes_now")
+    if act_today is None:  # 구버전 model.json 호환
+        act_today = [c["text"] for c in (model.get("log") or []) if c.get("date") == today]
     contest = model.get("contest") or {}
 
     nxt = []
