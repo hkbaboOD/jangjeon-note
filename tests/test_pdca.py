@@ -2,7 +2,6 @@
 import json
 
 import numpy as np
-import pandas as pd
 
 from pipeline import common
 from pipeline import pdca
