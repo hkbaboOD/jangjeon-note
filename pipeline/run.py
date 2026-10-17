@@ -212,6 +212,11 @@ def run(job: str, demo: bool):
     news = []
     for t in b.get("news_tickers", []):
         news += src.news(t)
+    if not news:  # yfinance 헤드라인이 비면 RSS로 대체 (헤드라인 뉴스 빈 화면 방지)
+        for q in b.get("news_fallback_queries", ["stock market today", "코스피 증시"]):
+            hl, gl = ("ko", "KR") if any("\uac00" <= ch <= "\ud7a3" for ch in q) else ("en-US", "US")
+            news += src.market_news(q, hl=hl, gl=gl)
+        log.info("대체 뉴스(RSS) %d건", len(news))
     seen, uniq = set(), []
     for n in news:
         if n["title"] not in seen:

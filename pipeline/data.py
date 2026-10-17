@@ -33,6 +33,54 @@ FUND_KEYS = [
 
 # ──────────────────────────────────────────────────────────────
 # Live: yfinance
+def _iso(ts) -> str | None:
+    if isinstance(ts, (int, float)):
+        return datetime.utcfromtimestamp(ts).isoformat() + "Z"
+    return ts
+
+
+def parse_yf_news(items: list) -> list[dict]:
+    """yfinance 뉴스 응답(신형 content 래핑·구형 평면 형식 모두)을 {title, link, publisher, time}로 정규화."""
+    out = []
+    for n in items[:8]:
+        if not isinstance(n, dict):
+            continue
+        c = n.get("content") if isinstance(n.get("content"), dict) else n
+        title = c.get("title")
+        link = ((c.get("canonicalUrl") or {}).get("url") or (c.get("clickThroughUrl") or {}).get("url")
+                or c.get("link") or n.get("link"))
+        pub = (c.get("provider") or {}).get("displayName") or c.get("publisher")
+        ts = c.get("pubDate") or c.get("displayTime") or c.get("providerPublishTime")
+        if title and link:
+            out.append({"title": title, "link": link, "publisher": pub, "time": _iso(ts)})
+    return out
+
+
+def parse_rss(xml_text: str, limit: int = 10) -> list[dict]:
+    """RSS 2.0(Google 뉴스 등) → {title, link, publisher, time}. 제목 끝의 ' - 언론사'는 분리."""
+    import xml.etree.ElementTree as ET
+    from email.utils import parsedate_to_datetime
+
+    out = []
+    root = ET.fromstring(xml_text)
+    for it in root.iter("item"):
+        title = (it.findtext("title") or "").strip()
+        link = (it.findtext("link") or "").strip()
+        pub = (it.findtext("source") or "").strip() or None
+        if pub and title.endswith(" - " + pub):
+            title = title[: -len(" - " + pub)]
+        ts = it.findtext("pubDate")
+        try:
+            ts = parsedate_to_datetime(ts).astimezone().isoformat() if ts else None
+        except Exception:
+            pass
+        if title and link:
+            out.append({"title": title, "link": link, "publisher": pub, "time": ts})
+        if len(out) >= limit:
+            break
+    return out
+
+
 # ──────────────────────────────────────────────────────────────
 class LiveSource:
     CACHE_FILE = "fundamentals_cache.json"
@@ -142,21 +190,37 @@ class LiveSource:
             return pd.Series(dtype=float)
 
     def news(self, ticker: str) -> list[dict]:
-        out = []
+        """헤드라인: yfinance 최신 뉴스 → 전체 탭 → 검색 API 순으로 시도(빈 응답 대비)."""
+        attempts = [
+            ("latest", lambda: self.yf.Ticker(ticker).news),
+            ("all", lambda: self.yf.Ticker(ticker).get_news(count=10, tab="all")),
+            ("search", lambda: self.yf.Search(ticker, max_results=1, news_count=8).news),
+        ]
+        for label, fn in attempts:
+            try:
+                out = parse_yf_news(fn() or [])
+            except Exception as e:
+                log.warning("뉴스 실패 %s(%s): %s", ticker, label, e)
+                continue
+            if out:
+                return out
+        log.warning("뉴스 비어 있음 %s (yfinance 3가지 경로 모두 0건)", ticker)
+        return []
+
+    def market_news(self, query: str, hl: str = "en-US", gl: str = "US") -> list[dict]:
+        """yfinance 헤드라인이 모두 비었을 때 쓰는 대체 경로: Google 뉴스 RSS."""
+        import requests
+        from urllib.parse import quote_plus
+
+        url = (f"https://news.google.com/rss/search?q={quote_plus(query)}"
+               f"&hl={hl}&gl={gl}&ceid={gl}:{hl.split('-')[0]}")
         try:
-            for n in (self.yf.Ticker(ticker).news or [])[:8]:
-                c = n.get("content", n)  # 신·구 응답 형식 모두 대응
-                title = c.get("title")
-                link = (c.get("canonicalUrl") or {}).get("url") or c.get("link")
-                pub = (c.get("provider") or {}).get("displayName") or c.get("publisher")
-                ts = c.get("pubDate") or c.get("providerPublishTime")
-                if isinstance(ts, (int, float)):
-                    ts = datetime.utcfromtimestamp(ts).isoformat() + "Z"
-                if title and link:
-                    out.append({"title": title, "link": link, "publisher": pub, "time": ts})
+            r = requests.get(url, timeout=15, headers={"User-Agent": "Mozilla/5.0 jangjeon-note"})
+            r.raise_for_status()
+            return parse_rss(r.text)
         except Exception as e:
-            log.warning("뉴스 실패 %s: %s", ticker, e)
-        return out
+            log.warning("대체 뉴스(RSS) 실패 %s: %s", query, e)
+            return []
 
     def flush(self):
         if self._dirty:
@@ -251,6 +315,9 @@ class DemoSource:
                 dates.append(d)
                 vals.append(price * annual_yield / len(months) * growth)
         return pd.Series(vals, index=pd.DatetimeIndex(dates), dtype=float)
+
+    def market_news(self, query, hl="en-US", gl="US"):
+        return []
 
     def news(self, ticker):
         return [{"title": f"[데모] {ticker} 관련 헤드라인 예시 {i + 1}", "link": "https://finance.yahoo.com",
