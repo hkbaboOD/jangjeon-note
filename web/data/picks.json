@@ -1,7 +1,7 @@
 {
  "daily": {
   "label": "저평가 + 차트 매수 타이밍",
-  "generated": "2026-10-17T10:46+09:00",
+  "generated": "2026-10-17T11:25+09:00",
   "all": [
    {
     "ticker": "005930.KS",
@@ -221,7 +221,32 @@
      }
     },
     "summary": "선행 PER 3.0배(섹터 대비 -71%) · 목표가 상승여력 +122%의 저평가 종목. 차트는 '상승추세 속 눌림목' — 250일선 지지 확인, RSI 30 상향 돌파(오늘). 단, RSI 31 유의.",
-    "relaxed": false
+    "relaxed": false,
+    "geo_notes": [
+     {
+      "pol": -1,
+      "theme": "북한·한반도",
+      "eff": -0.22,
+      "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
+     },
+     {
+      "pol": 1,
+      "theme": "관세·무역분쟁",
+      "eff": 0.11,
+      "text": "관세·무역분쟁: 방향 혼재(관심 보통) → 수출주·중국 노출 성격상 우호적"
+     },
+     {
+      "pol": -1,
+      "theme": "환율(원화)",
+      "eff": -0.08,
+      "text": "환율(원화): 원화 강세(관심 높음) → 수출주 성격상 부담"
+     }
+    ],
+    "links": {
+     "naver": "https://m.stock.naver.com/domestic/stock/005930/total",
+     "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A005930",
+     "news": "https://search.naver.com/search.naver?where=news&query=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90+%EC%A3%BC%EA%B0%80"
+    }
    },
    {
     "ticker": "064350.KS",
@@ -427,7 +452,32 @@
      }
     },
     "summary": "선행 PER 9.5배(섹터 대비 -40%) · 목표가 상승여력 +162%의 저평가 종목. 차트는 '하락 후 반등 시도' — RSI 29, 볼린저 하단 이탈 후 밴드 안 재진입. 단, 이평선 역배열(주가<20·50·120·250일선) 유의.",
-    "relaxed": false
+    "relaxed": false,
+    "geo_notes": [
+     {
+      "pol": 1,
+      "theme": "중동 정세",
+      "eff": 0.15,
+      "text": "중동 정세: 긴장 고조(관심 보통) → 방산 성격상 우호적"
+     },
+     {
+      "pol": 1,
+      "theme": "러시아·우크라이나",
+      "eff": 0.12,
+      "text": "러시아·우크라이나: 전쟁 격화(관심 보통) → 방산 성격상 우호적"
+     },
+     {
+      "pol": -1,
+      "theme": "환율(원화)",
+      "eff": -0.08,
+      "text": "환율(원화): 원화 강세(관심 높음) → 수출주 성격상 부담"
+     }
+    ],
+    "links": {
+     "naver": "https://m.stock.naver.com/domestic/stock/064350/total",
+     "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A064350",
+     "news": "https://search.naver.com/search.naver?where=news&query=%ED%98%84%EB%8C%80%EB%A1%9C%ED%85%9C+%EC%A3%BC%EA%B0%80"
+    }
    },
    {
     "ticker": "055550.KS",
@@ -646,7 +696,32 @@
      }
     },
     "summary": "선행 PER 6.8배 · 목표가 상승여력 +42%의 저평가 종목. 차트는 '상승추세 속 눌림목' — 250일선 지지 확인, 50>120>250일선 장기 정배열 유지. 단, 20·50일선 데드크로스(단기, 1거래일 전) 유의.",
-    "relaxed": false
+    "relaxed": false,
+    "geo_notes": [
+     {
+      "pol": -1,
+      "theme": "북한·한반도",
+      "eff": -0.22,
+      "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
+     },
+     {
+      "pol": -1,
+      "theme": "연준·금리",
+      "eff": -0.15,
+      "text": "연준·금리: 비둘기(금리 하락)(관심 높음) → 금융(금리 수혜) 성격상 부담"
+     },
+     {
+      "pol": 1,
+      "theme": "환율(원화)",
+      "eff": 0.08,
+      "text": "환율(원화): 원화 강세(관심 높음) → 국내 상장주 성격상 우호적"
+     }
+    ],
+    "links": {
+     "naver": "https://m.stock.naver.com/domestic/stock/055550/total",
+     "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A055550",
+     "news": "https://search.naver.com/search.naver?where=news&query=%EC%8B%A0%ED%95%9C%EC%A7%80%EC%A3%BC+%EC%A3%BC%EA%B0%80"
+    }
    }
   ],
   "us": [
@@ -864,11 +939,16 @@
      }
     },
     "summary": "선행 PER 4.2배(섹터 대비 -78%) · 목표가 상승여력 +78%의 저평가 종목. 차트는 '상승추세 속 눌림목' — 50>120>250일선 장기 정배열 유지, 주가 250일선 위(+41.3%), 250일선 우상향(20일간 +12.3%). 단, RSI 34 유의.",
-    "relaxed": false
+    "relaxed": false,
+    "geo_notes": [],
+    "links": {
+     "naver": "https://m.stock.naver.com/worldstock/stock/MU.O/total",
+     "news": "https://search.naver.com/search.naver?where=news&query=%EB%A7%88%EC%9D%B4%ED%81%AC%EB%A1%A0+%EC%A3%BC%EA%B0%80"
+    }
    },
    {
     "ticker": "BAC",
-    "name": "Bank of America Corporation",
+    "name": "뱅크오브아메리카",
     "market": "us",
     "sector": "Financial Services",
     "price": 51.22999954223633,
@@ -1081,11 +1161,23 @@
      }
     },
     "summary": "선행 PER 9.9배(섹터 대비 -25%) · 목표가 상승여력 +24%의 저평가 종목. 차트는 '하락 후 반등 시도' — 50>120>250일선 장기 정배열 유지, RSI 24. 단, 주가 250일선 아래(-6.6%), 250일선 횡보 유의.",
-    "relaxed": false
+    "relaxed": false,
+    "geo_notes": [
+     {
+      "pol": -1,
+      "theme": "연준·금리",
+      "eff": -0.15,
+      "text": "연준·금리: 비둘기(금리 하락)(관심 높음) → 금융(금리 수혜) 성격상 부담"
+     }
+    ],
+    "links": {
+     "naver": "https://m.stock.naver.com/worldstock/stock/BAC/total",
+     "news": "https://search.naver.com/search.naver?where=news&query=%EB%B1%85%ED%81%AC%EC%98%A4%EB%B8%8C%EC%95%84%EB%A9%94%EB%A6%AC%EC%B9%B4+%EC%A3%BC%EA%B0%80"
+    }
    },
    {
     "ticker": "CVS",
-    "name": "CVS Health Corporation",
+    "name": "CVS 헬스",
     "market": "us",
     "sector": "Healthcare",
     "price": 92.36000061035156,
@@ -1300,7 +1392,12 @@
      }
     },
     "summary": "선행 PER 10.8배(섹터 대비 -38%) · 목표가 상승여력 +25%의 저평가 종목. 차트는 '하락 후 반등 시도' — RSI 상승 다이버전스, 주가 250일선 위(+7.0%), 250일선 횡보. 단, 50·120일선 데드크로스(중기, 9거래일 전) 유의.",
-    "relaxed": false
+    "relaxed": false,
+    "geo_notes": [],
+    "links": {
+     "naver": "https://m.stock.naver.com/worldstock/stock/CVS/total",
+     "news": "https://search.naver.com/search.naver?where=news&query=CVS+%ED%97%AC%EC%8A%A4+%EC%A3%BC%EA%B0%80"
+    }
    }
   ],
   "kr": [
@@ -1522,7 +1619,32 @@
      }
     },
     "summary": "선행 PER 3.0배(섹터 대비 -71%) · 목표가 상승여력 +122%의 저평가 종목. 차트는 '상승추세 속 눌림목' — 250일선 지지 확인, RSI 30 상향 돌파(오늘). 단, RSI 31 유의.",
-    "relaxed": false
+    "relaxed": false,
+    "geo_notes": [
+     {
+      "pol": -1,
+      "theme": "북한·한반도",
+      "eff": -0.22,
+      "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
+     },
+     {
+      "pol": 1,
+      "theme": "관세·무역분쟁",
+      "eff": 0.11,
+      "text": "관세·무역분쟁: 방향 혼재(관심 보통) → 수출주·중국 노출 성격상 우호적"
+     },
+     {
+      "pol": -1,
+      "theme": "환율(원화)",
+      "eff": -0.08,
+      "text": "환율(원화): 원화 강세(관심 높음) → 수출주 성격상 부담"
+     }
+    ],
+    "links": {
+     "naver": "https://m.stock.naver.com/domestic/stock/005930/total",
+     "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A005930",
+     "news": "https://search.naver.com/search.naver?where=news&query=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90+%EC%A3%BC%EA%B0%80"
+    }
    },
    {
     "ticker": "064350.KS",
@@ -1728,7 +1850,32 @@
      }
     },
     "summary": "선행 PER 9.5배(섹터 대비 -40%) · 목표가 상승여력 +162%의 저평가 종목. 차트는 '하락 후 반등 시도' — RSI 29, 볼린저 하단 이탈 후 밴드 안 재진입. 단, 이평선 역배열(주가<20·50·120·250일선) 유의.",
-    "relaxed": false
+    "relaxed": false,
+    "geo_notes": [
+     {
+      "pol": 1,
+      "theme": "중동 정세",
+      "eff": 0.15,
+      "text": "중동 정세: 긴장 고조(관심 보통) → 방산 성격상 우호적"
+     },
+     {
+      "pol": 1,
+      "theme": "러시아·우크라이나",
+      "eff": 0.12,
+      "text": "러시아·우크라이나: 전쟁 격화(관심 보통) → 방산 성격상 우호적"
+     },
+     {
+      "pol": -1,
+      "theme": "환율(원화)",
+      "eff": -0.08,
+      "text": "환율(원화): 원화 강세(관심 높음) → 수출주 성격상 부담"
+     }
+    ],
+    "links": {
+     "naver": "https://m.stock.naver.com/domestic/stock/064350/total",
+     "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A064350",
+     "news": "https://search.naver.com/search.naver?where=news&query=%ED%98%84%EB%8C%80%EB%A1%9C%ED%85%9C+%EC%A3%BC%EA%B0%80"
+    }
    },
    {
     "ticker": "055550.KS",
@@ -1947,13 +2094,38 @@
      }
     },
     "summary": "선행 PER 6.8배 · 목표가 상승여력 +42%의 저평가 종목. 차트는 '상승추세 속 눌림목' — 250일선 지지 확인, 50>120>250일선 장기 정배열 유지. 단, 20·50일선 데드크로스(단기, 1거래일 전) 유의.",
-    "relaxed": false
+    "relaxed": false,
+    "geo_notes": [
+     {
+      "pol": -1,
+      "theme": "북한·한반도",
+      "eff": -0.22,
+      "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
+     },
+     {
+      "pol": -1,
+      "theme": "연준·금리",
+      "eff": -0.15,
+      "text": "연준·금리: 비둘기(금리 하락)(관심 높음) → 금융(금리 수혜) 성격상 부담"
+     },
+     {
+      "pol": 1,
+      "theme": "환율(원화)",
+      "eff": 0.08,
+      "text": "환율(원화): 원화 강세(관심 높음) → 국내 상장주 성격상 우호적"
+     }
+    ],
+    "links": {
+     "naver": "https://m.stock.naver.com/domestic/stock/055550/total",
+     "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A055550",
+     "news": "https://search.naver.com/search.naver?where=news&query=%EC%8B%A0%ED%95%9C%EC%A7%80%EC%A3%BC+%EC%A3%BC%EA%B0%80"
+    }
    }
   ]
  },
  "weekly": {
   "label": "가치·퀄리티 + 추세",
-  "generated": "2026-10-17T10:46+09:00",
+  "generated": "2026-10-17T11:25+09:00",
   "all": [
    {
     "ticker": "MU",
@@ -2169,11 +2341,16 @@
      }
     },
     "summary": "선행 PER 4.2배(섹터 대비 -78%) · 목표가 상승여력 +78%의 저평가 종목. 차트는 '상승추세 속 눌림목' — 50>120>250일선 장기 정배열 유지, 주가 250일선 위(+41.3%), 250일선 우상향(20일간 +12.3%). 단, RSI 34 유의.",
-    "relaxed": false
+    "relaxed": false,
+    "geo_notes": [],
+    "links": {
+     "naver": "https://m.stock.naver.com/worldstock/stock/MU.O/total",
+     "news": "https://search.naver.com/search.naver?where=news&query=%EB%A7%88%EC%9D%B4%ED%81%AC%EB%A1%A0+%EC%A3%BC%EA%B0%80"
+    }
    },
    {
     "ticker": "COP",
-    "name": "ConocoPhillips",
+    "name": "코노코필립스",
     "market": "us",
     "sector": "Energy",
     "price": 146.50999450683594,
@@ -2377,7 +2554,19 @@
      }
     },
     "summary": "선행 PER 13.9배(섹터 대비 -9%)의 저평가 종목. 차트는 '신고가·돌파형' — 50>120>250일선 장기 정배열 유지, 주가 250일선 위(+29.6%), 250일선 우상향(20일간 +2.8%). 단, 20·50일선 데드크로스(단기, 3거래일 전) 유의.",
-    "relaxed": false
+    "relaxed": false,
+    "geo_notes": [
+     {
+      "pol": 1,
+      "theme": "중동 정세",
+      "eff": 0.36,
+      "text": "중동 정세: 긴장 고조(관심 보통) → 정유·에너지 성격상 우호적"
+     }
+    ],
+    "links": {
+     "naver": "https://m.stock.naver.com/worldstock/stock/COP/total",
+     "news": "https://search.naver.com/search.naver?where=news&query=%EC%BD%94%EB%85%B8%EC%BD%94%ED%95%84%EB%A6%BD%EC%8A%A4+%EC%A3%BC%EA%B0%80"
+    }
    },
    {
     "ticker": "055550.KS",
@@ -2596,7 +2785,32 @@
      }
     },
     "summary": "선행 PER 6.8배 · 목표가 상승여력 +42%의 저평가 종목. 차트는 '상승추세 속 눌림목' — 250일선 지지 확인, 50>120>250일선 장기 정배열 유지. 단, 20·50일선 데드크로스(단기, 1거래일 전) 유의.",
-    "relaxed": false
+    "relaxed": false,
+    "geo_notes": [
+     {
+      "pol": -1,
+      "theme": "북한·한반도",
+      "eff": -0.22,
+      "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
+     },
+     {
+      "pol": -1,
+      "theme": "연준·금리",
+      "eff": -0.15,
+      "text": "연준·금리: 비둘기(금리 하락)(관심 높음) → 금융(금리 수혜) 성격상 부담"
+     },
+     {
+      "pol": 1,
+      "theme": "환율(원화)",
+      "eff": 0.08,
+      "text": "환율(원화): 원화 강세(관심 높음) → 국내 상장주 성격상 우호적"
+     }
+    ],
+    "links": {
+     "naver": "https://m.stock.naver.com/domestic/stock/055550/total",
+     "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A055550",
+     "news": "https://search.naver.com/search.naver?where=news&query=%EC%8B%A0%ED%95%9C%EC%A7%80%EC%A3%BC+%EC%A3%BC%EA%B0%80"
+    }
    }
   ],
   "us": [
@@ -2814,11 +3028,16 @@
      }
     },
     "summary": "선행 PER 4.2배(섹터 대비 -78%) · 목표가 상승여력 +78%의 저평가 종목. 차트는 '상승추세 속 눌림목' — 50>120>250일선 장기 정배열 유지, 주가 250일선 위(+41.3%), 250일선 우상향(20일간 +12.3%). 단, RSI 34 유의.",
-    "relaxed": false
+    "relaxed": false,
+    "geo_notes": [],
+    "links": {
+     "naver": "https://m.stock.naver.com/worldstock/stock/MU.O/total",
+     "news": "https://search.naver.com/search.naver?where=news&query=%EB%A7%88%EC%9D%B4%ED%81%AC%EB%A1%A0+%EC%A3%BC%EA%B0%80"
+    }
    },
    {
     "ticker": "COP",
-    "name": "ConocoPhillips",
+    "name": "코노코필립스",
     "market": "us",
     "sector": "Energy",
     "price": 146.50999450683594,
@@ -3022,11 +3241,23 @@
      }
     },
     "summary": "선행 PER 13.9배(섹터 대비 -9%)의 저평가 종목. 차트는 '신고가·돌파형' — 50>120>250일선 장기 정배열 유지, 주가 250일선 위(+29.6%), 250일선 우상향(20일간 +2.8%). 단, 20·50일선 데드크로스(단기, 3거래일 전) 유의.",
-    "relaxed": false
+    "relaxed": false,
+    "geo_notes": [
+     {
+      "pol": 1,
+      "theme": "중동 정세",
+      "eff": 0.36,
+      "text": "중동 정세: 긴장 고조(관심 보통) → 정유·에너지 성격상 우호적"
+     }
+    ],
+    "links": {
+     "naver": "https://m.stock.naver.com/worldstock/stock/COP/total",
+     "news": "https://search.naver.com/search.naver?where=news&query=%EC%BD%94%EB%85%B8%EC%BD%94%ED%95%84%EB%A6%BD%EC%8A%A4+%EC%A3%BC%EA%B0%80"
+    }
    },
    {
     "ticker": "CVS",
-    "name": "CVS Health Corporation",
+    "name": "CVS 헬스",
     "market": "us",
     "sector": "Healthcare",
     "price": 92.36000061035156,
@@ -3241,7 +3472,12 @@
      }
     },
     "summary": "선행 PER 10.8배(섹터 대비 -38%) · 목표가 상승여력 +25%의 저평가 종목. 차트는 '하락 후 반등 시도' — RSI 상승 다이버전스, 주가 250일선 위(+7.0%), 250일선 횡보. 단, 50·120일선 데드크로스(중기, 9거래일 전) 유의.",
-    "relaxed": false
+    "relaxed": false,
+    "geo_notes": [],
+    "links": {
+     "naver": "https://m.stock.naver.com/worldstock/stock/CVS/total",
+     "news": "https://search.naver.com/search.naver?where=news&query=CVS+%ED%97%AC%EC%8A%A4+%EC%A3%BC%EA%B0%80"
+    }
    }
   ],
   "kr": [
@@ -3463,7 +3699,32 @@
      }
     },
     "summary": "선행 PER 3.0배(섹터 대비 -71%) · 목표가 상승여력 +122%의 저평가 종목. 차트는 '상승추세 속 눌림목' — 250일선 지지 확인, RSI 30 상향 돌파(오늘). 단, RSI 31 유의.",
-    "relaxed": false
+    "relaxed": false,
+    "geo_notes": [
+     {
+      "pol": -1,
+      "theme": "북한·한반도",
+      "eff": -0.22,
+      "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
+     },
+     {
+      "pol": 1,
+      "theme": "관세·무역분쟁",
+      "eff": 0.11,
+      "text": "관세·무역분쟁: 방향 혼재(관심 보통) → 수출주·중국 노출 성격상 우호적"
+     },
+     {
+      "pol": -1,
+      "theme": "환율(원화)",
+      "eff": -0.08,
+      "text": "환율(원화): 원화 강세(관심 높음) → 수출주 성격상 부담"
+     }
+    ],
+    "links": {
+     "naver": "https://m.stock.naver.com/domestic/stock/005930/total",
+     "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A005930",
+     "news": "https://search.naver.com/search.naver?where=news&query=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90+%EC%A3%BC%EA%B0%80"
+    }
    },
    {
     "ticker": "055550.KS",
@@ -3682,7 +3943,32 @@
      }
     },
     "summary": "선행 PER 6.8배 · 목표가 상승여력 +42%의 저평가 종목. 차트는 '상승추세 속 눌림목' — 250일선 지지 확인, 50>120>250일선 장기 정배열 유지. 단, 20·50일선 데드크로스(단기, 1거래일 전) 유의.",
-    "relaxed": false
+    "relaxed": false,
+    "geo_notes": [
+     {
+      "pol": -1,
+      "theme": "북한·한반도",
+      "eff": -0.22,
+      "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
+     },
+     {
+      "pol": -1,
+      "theme": "연준·금리",
+      "eff": -0.15,
+      "text": "연준·금리: 비둘기(금리 하락)(관심 높음) → 금융(금리 수혜) 성격상 부담"
+     },
+     {
+      "pol": 1,
+      "theme": "환율(원화)",
+      "eff": 0.08,
+      "text": "환율(원화): 원화 강세(관심 높음) → 국내 상장주 성격상 우호적"
+     }
+    ],
+    "links": {
+     "naver": "https://m.stock.naver.com/domestic/stock/055550/total",
+     "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A055550",
+     "news": "https://search.naver.com/search.naver?where=news&query=%EC%8B%A0%ED%95%9C%EC%A7%80%EC%A3%BC+%EC%A3%BC%EA%B0%80"
+    }
    },
    {
     "ticker": "010950.KS",
@@ -3896,13 +4182,38 @@
      }
     },
     "summary": "선행 PER 8.3배(섹터 대비 -26%) · 목표가 상승여력 +19%의 저평가 종목. 차트는 '상승추세 속 눌림목' — 50>120>250일선 장기 정배열 유지, 주가 250일선 위(+37.3%), 250일선 우상향(20일간 +7.5%). 단, MACD 시그널 하향 돌파(3거래일 전, 0선 위) 유의.",
-    "relaxed": false
+    "relaxed": false,
+    "geo_notes": [
+     {
+      "pol": 1,
+      "theme": "중동 정세",
+      "eff": 0.29,
+      "text": "중동 정세: 긴장 고조(관심 보통) → 정유·에너지 성격상 우호적"
+     },
+     {
+      "pol": -1,
+      "theme": "북한·한반도",
+      "eff": -0.22,
+      "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
+     },
+     {
+      "pol": 1,
+      "theme": "환율(원화)",
+      "eff": 0.08,
+      "text": "환율(원화): 원화 강세(관심 높음) → 국내 상장주 성격상 우호적"
+     }
+    ],
+    "links": {
+     "naver": "https://m.stock.naver.com/domestic/stock/010950/total",
+     "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A010950",
+     "news": "https://search.naver.com/search.naver?where=news&query=S-Oil+%EC%A3%BC%EA%B0%80"
+    }
    }
   ]
  },
  "monthly": {
   "label": "중장기 저평가 + 장기 추세",
-  "generated": "2026-10-17T10:46+09:00",
+  "generated": "2026-10-17T11:25+09:00",
   "all": [
    {
     "ticker": "MU",
@@ -4118,7 +4429,12 @@
      }
     },
     "summary": "선행 PER 4.2배(섹터 대비 -78%) · 목표가 상승여력 +78%의 저평가 종목. 차트는 '상승추세 속 눌림목' — 50>120>250일선 장기 정배열 유지, 주가 250일선 위(+41.3%), 250일선 우상향(20일간 +12.3%). 단, RSI 34 유의.",
-    "relaxed": false
+    "relaxed": false,
+    "geo_notes": [],
+    "links": {
+     "naver": "https://m.stock.naver.com/worldstock/stock/MU.O/total",
+     "news": "https://search.naver.com/search.naver?where=news&query=%EB%A7%88%EC%9D%B4%ED%81%AC%EB%A1%A0+%EC%A3%BC%EA%B0%80"
+    }
    },
    {
     "ticker": "055550.KS",
@@ -4337,11 +4653,36 @@
      }
     },
     "summary": "선행 PER 6.8배 · 목표가 상승여력 +42%의 저평가 종목. 차트는 '상승추세 속 눌림목' — 250일선 지지 확인, 50>120>250일선 장기 정배열 유지. 단, 20·50일선 데드크로스(단기, 1거래일 전) 유의.",
-    "relaxed": false
+    "relaxed": false,
+    "geo_notes": [
+     {
+      "pol": -1,
+      "theme": "북한·한반도",
+      "eff": -0.22,
+      "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
+     },
+     {
+      "pol": -1,
+      "theme": "연준·금리",
+      "eff": -0.15,
+      "text": "연준·금리: 비둘기(금리 하락)(관심 높음) → 금융(금리 수혜) 성격상 부담"
+     },
+     {
+      "pol": 1,
+      "theme": "환율(원화)",
+      "eff": 0.08,
+      "text": "환율(원화): 원화 강세(관심 높음) → 국내 상장주 성격상 우호적"
+     }
+    ],
+    "links": {
+     "naver": "https://m.stock.naver.com/domestic/stock/055550/total",
+     "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A055550",
+     "news": "https://search.naver.com/search.naver?where=news&query=%EC%8B%A0%ED%95%9C%EC%A7%80%EC%A3%BC+%EC%A3%BC%EA%B0%80"
+    }
    },
    {
     "ticker": "COP",
-    "name": "ConocoPhillips",
+    "name": "코노코필립스",
     "market": "us",
     "sector": "Energy",
     "price": 146.50999450683594,
@@ -4545,7 +4886,19 @@
      }
     },
     "summary": "선행 PER 13.9배(섹터 대비 -9%)의 저평가 종목. 차트는 '신고가·돌파형' — 50>120>250일선 장기 정배열 유지, 주가 250일선 위(+29.6%), 250일선 우상향(20일간 +2.8%). 단, 20·50일선 데드크로스(단기, 3거래일 전) 유의.",
-    "relaxed": false
+    "relaxed": false,
+    "geo_notes": [
+     {
+      "pol": 1,
+      "theme": "중동 정세",
+      "eff": 0.36,
+      "text": "중동 정세: 긴장 고조(관심 보통) → 정유·에너지 성격상 우호적"
+     }
+    ],
+    "links": {
+     "naver": "https://m.stock.naver.com/worldstock/stock/COP/total",
+     "news": "https://search.naver.com/search.naver?where=news&query=%EC%BD%94%EB%85%B8%EC%BD%94%ED%95%84%EB%A6%BD%EC%8A%A4+%EC%A3%BC%EA%B0%80"
+    }
    }
   ],
   "us": [
@@ -4763,11 +5116,16 @@
      }
     },
     "summary": "선행 PER 4.2배(섹터 대비 -78%) · 목표가 상승여력 +78%의 저평가 종목. 차트는 '상승추세 속 눌림목' — 50>120>250일선 장기 정배열 유지, 주가 250일선 위(+41.3%), 250일선 우상향(20일간 +12.3%). 단, RSI 34 유의.",
-    "relaxed": false
+    "relaxed": false,
+    "geo_notes": [],
+    "links": {
+     "naver": "https://m.stock.naver.com/worldstock/stock/MU.O/total",
+     "news": "https://search.naver.com/search.naver?where=news&query=%EB%A7%88%EC%9D%B4%ED%81%AC%EB%A1%A0+%EC%A3%BC%EA%B0%80"
+    }
    },
    {
     "ticker": "COP",
-    "name": "ConocoPhillips",
+    "name": "코노코필립스",
     "market": "us",
     "sector": "Energy",
     "price": 146.50999450683594,
@@ -4971,11 +5329,23 @@
      }
     },
     "summary": "선행 PER 13.9배(섹터 대비 -9%)의 저평가 종목. 차트는 '신고가·돌파형' — 50>120>250일선 장기 정배열 유지, 주가 250일선 위(+29.6%), 250일선 우상향(20일간 +2.8%). 단, 20·50일선 데드크로스(단기, 3거래일 전) 유의.",
-    "relaxed": false
+    "relaxed": false,
+    "geo_notes": [
+     {
+      "pol": 1,
+      "theme": "중동 정세",
+      "eff": 0.36,
+      "text": "중동 정세: 긴장 고조(관심 보통) → 정유·에너지 성격상 우호적"
+     }
+    ],
+    "links": {
+     "naver": "https://m.stock.naver.com/worldstock/stock/COP/total",
+     "news": "https://search.naver.com/search.naver?where=news&query=%EC%BD%94%EB%85%B8%EC%BD%94%ED%95%84%EB%A6%BD%EC%8A%A4+%EC%A3%BC%EA%B0%80"
+    }
    },
    {
     "ticker": "LMT",
-    "name": "Lockheed Martin Corporation",
+    "name": "록히드마틴",
     "market": "us",
     "sector": "Industrials",
     "price": 552.0900268554688,
@@ -5191,7 +5561,31 @@
      }
     },
     "summary": "선행 PER 16.9배(섹터 대비 -23%) · 목표가 상승여력 +12%의 저평가 종목. 차트는 '신고가·돌파형' — 주가 250일선 위(+1.1%), 250일선 횡보, 주가 250일선 상향 돌파(오늘). 단, 50·250일선 데드크로스(장기, 2거래일 전) 유의.",
-    "relaxed": false
+    "relaxed": false,
+    "geo_notes": [
+     {
+      "pol": 1,
+      "theme": "중동 정세",
+      "eff": 0.22,
+      "text": "중동 정세: 긴장 고조(관심 보통) → 방산 성격상 우호적"
+     },
+     {
+      "pol": 1,
+      "theme": "북한·한반도",
+      "eff": 0.19,
+      "text": "북한·한반도: 도발(관심 보통) → 방산 성격상 우호적"
+     },
+     {
+      "pol": 1,
+      "theme": "러시아·우크라이나",
+      "eff": 0.12,
+      "text": "러시아·우크라이나: 전쟁 격화(관심 보통) → 방산 성격상 우호적"
+     }
+    ],
+    "links": {
+     "naver": "https://m.stock.naver.com/worldstock/stock/LMT/total",
+     "news": "https://search.naver.com/search.naver?where=news&query=%EB%A1%9D%ED%9E%88%EB%93%9C%EB%A7%88%ED%8B%B4+%EC%A3%BC%EA%B0%80"
+    }
    }
   ],
   "kr": [
@@ -5408,7 +5802,32 @@
      }
     },
     "summary": "선행 PER 2.7배(섹터 대비 -74%) · 목표가 상승여력 +147%의 저평가 종목. 차트는 '박스권 횡보' — RSI 26, 20일 이격도 75. 단, 주가 250일선 아래(-0.1%), 250일선 우상향(20일간 +9.4%) 유의.",
-    "relaxed": false
+    "relaxed": false,
+    "geo_notes": [
+     {
+      "pol": -1,
+      "theme": "북한·한반도",
+      "eff": -0.22,
+      "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
+     },
+     {
+      "pol": 1,
+      "theme": "관세·무역분쟁",
+      "eff": 0.11,
+      "text": "관세·무역분쟁: 방향 혼재(관심 보통) → 수출주·중국 노출 성격상 우호적"
+     },
+     {
+      "pol": -1,
+      "theme": "환율(원화)",
+      "eff": -0.08,
+      "text": "환율(원화): 원화 강세(관심 높음) → 수출주 성격상 부담"
+     }
+    ],
+    "links": {
+     "naver": "https://m.stock.naver.com/domestic/stock/000660/total",
+     "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A000660",
+     "news": "https://search.naver.com/search.naver?where=news&query=SK%ED%95%98%EC%9D%B4%EB%8B%89%EC%8A%A4+%EC%A3%BC%EA%B0%80"
+    }
    },
    {
     "ticker": "055550.KS",
@@ -5627,7 +6046,32 @@
      }
     },
     "summary": "선행 PER 6.8배 · 목표가 상승여력 +42%의 저평가 종목. 차트는 '상승추세 속 눌림목' — 250일선 지지 확인, 50>120>250일선 장기 정배열 유지. 단, 20·50일선 데드크로스(단기, 1거래일 전) 유의.",
-    "relaxed": false
+    "relaxed": false,
+    "geo_notes": [
+     {
+      "pol": -1,
+      "theme": "북한·한반도",
+      "eff": -0.22,
+      "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
+     },
+     {
+      "pol": -1,
+      "theme": "연준·금리",
+      "eff": -0.15,
+      "text": "연준·금리: 비둘기(금리 하락)(관심 높음) → 금융(금리 수혜) 성격상 부담"
+     },
+     {
+      "pol": 1,
+      "theme": "환율(원화)",
+      "eff": 0.08,
+      "text": "환율(원화): 원화 강세(관심 높음) → 국내 상장주 성격상 우호적"
+     }
+    ],
+    "links": {
+     "naver": "https://m.stock.naver.com/domestic/stock/055550/total",
+     "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A055550",
+     "news": "https://search.naver.com/search.naver?where=news&query=%EC%8B%A0%ED%95%9C%EC%A7%80%EC%A3%BC+%EC%A3%BC%EA%B0%80"
+    }
    },
    {
     "ticker": "010950.KS",
@@ -5841,7 +6285,32 @@
      }
     },
     "summary": "선행 PER 8.3배(섹터 대비 -26%) · 목표가 상승여력 +19%의 저평가 종목. 차트는 '상승추세 속 눌림목' — 50>120>250일선 장기 정배열 유지, 주가 250일선 위(+37.3%), 250일선 우상향(20일간 +7.5%). 단, MACD 시그널 하향 돌파(3거래일 전, 0선 위) 유의.",
-    "relaxed": false
+    "relaxed": false,
+    "geo_notes": [
+     {
+      "pol": 1,
+      "theme": "중동 정세",
+      "eff": 0.29,
+      "text": "중동 정세: 긴장 고조(관심 보통) → 정유·에너지 성격상 우호적"
+     },
+     {
+      "pol": -1,
+      "theme": "북한·한반도",
+      "eff": -0.22,
+      "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
+     },
+     {
+      "pol": 1,
+      "theme": "환율(원화)",
+      "eff": 0.08,
+      "text": "환율(원화): 원화 강세(관심 높음) → 국내 상장주 성격상 우호적"
+     }
+    ],
+    "links": {
+     "naver": "https://m.stock.naver.com/domestic/stock/010950/total",
+     "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A010950",
+     "news": "https://search.naver.com/search.naver?where=news&query=S-Oil+%EC%A3%BC%EA%B0%80"
+    }
    }
   ]
  }

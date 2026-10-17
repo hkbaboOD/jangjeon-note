@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-17T10:46+09:00",
+ "updated": "2026-10-17T11:25+09:00",
  "rows": [
   {
    "ticker": "005930.KS",
@@ -39,6 +39,9 @@
     "pullback",
     "oversold"
    ],
+   "rev": -1.07,
+   "revision": 46.2,
+   "geo": 34.1,
    "score_daily": 89.4,
    "score_weekly": 82.1,
    "score_monthly": 88.7,
@@ -135,6 +138,38 @@
     232000.0,
     210000.0,
     215500.0
+   ],
+   "desc": "세계 1위 메모리 반도체(D램·낸드)와 스마트폰·가전을 하는 한국 대표 기업. 파운드리·HBM 경쟁력이 주가 변수.",
+   "ctags": [
+    "반도체",
+    "AI 인프라",
+    "수출주",
+    "중국 노출"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/domestic/stock/005930/total",
+    "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A005930",
+    "news": "https://search.naver.com/search.naver?where=news&query=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": -1,
+     "theme": "북한·한반도",
+     "eff": -0.22,
+     "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
+    },
+    {
+     "pol": 1,
+     "theme": "관세·무역분쟁",
+     "eff": 0.11,
+     "text": "관세·무역분쟁: 방향 혼재(관심 보통) → 수출주·중국 노출 성격상 우호적"
+    },
+    {
+     "pol": -1,
+     "theme": "환율(원화)",
+     "eff": -0.08,
+     "text": "환율(원화): 원화 강세(관심 높음) → 수출주 성격상 부담"
+    }
    ],
    "sig": [
     [
@@ -294,6 +329,9 @@
     "range",
     "oversold"
    ],
+   "rev": 0.51,
+   "revision": 74.4,
+   "geo": 34.1,
    "score_daily": 87.1,
    "score_weekly": 82.0,
    "score_monthly": 90.8,
@@ -390,6 +428,38 @@
     1419000.0,
     1262000.0,
     1272000.0
+   ],
+   "desc": "D램·낸드 메모리 전문 기업으로 AI용 고대역폭 메모리(HBM) 1위. 엔비디아 공급이 핵심.",
+   "ctags": [
+    "반도체",
+    "AI 인프라",
+    "수출주",
+    "중국 노출"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/domestic/stock/000660/total",
+    "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A000660",
+    "news": "https://search.naver.com/search.naver?where=news&query=SK%ED%95%98%EC%9D%B4%EB%8B%89%EC%8A%A4+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": -1,
+     "theme": "북한·한반도",
+     "eff": -0.22,
+     "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
+    },
+    {
+     "pol": 1,
+     "theme": "관세·무역분쟁",
+     "eff": 0.11,
+     "text": "관세·무역분쟁: 방향 혼재(관심 보통) → 수출주·중국 노출 성격상 우호적"
+    },
+    {
+     "pol": -1,
+     "theme": "환율(원화)",
+     "eff": -0.08,
+     "text": "환율(원화): 원화 강세(관심 높음) → 수출주 성격상 부담"
+    }
    ],
    "sig": [
     [
@@ -543,6 +613,9 @@
    "tags": [
     "neutral"
    ],
+   "rev": 18.9,
+   "revision": 97.4,
+   "geo": 36.0,
    "score_daily": 29.9,
    "score_weekly": 31.8,
    "score_monthly": 27.2,
@@ -639,6 +712,37 @@
     422000.0,
     402500.0,
     403000.0
+   ],
+   "desc": "전기차·ESS용 배터리 세계 상위권 기업. 미국 공장 비중이 커 미국 보조금(IRA) 정책에 민감.",
+   "ctags": [
+    "이차전지",
+    "수출주",
+    "관세 민감"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/domestic/stock/373220/total",
+    "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A373220",
+    "news": "https://search.naver.com/search.naver?where=news&query=LG%EC%97%90%EB%84%88%EC%A7%80%EC%86%94%EB%A3%A8%EC%85%98+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": -1,
+     "theme": "북한·한반도",
+     "eff": -0.22,
+     "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
+    },
+    {
+     "pol": 1,
+     "theme": "관세·무역분쟁",
+     "eff": 0.19,
+     "text": "관세·무역분쟁: 방향 혼재(관심 보통) → 수출주·관세 민감 성격상 우호적"
+    },
+    {
+     "pol": -1,
+     "theme": "환율(원화)",
+     "eff": -0.08,
+     "text": "환율(원화): 원화 강세(관심 높음) → 수출주 성격상 부담"
+    }
    ],
    "sig": [
     [
@@ -783,6 +887,9 @@
     "reversal",
     "oversold"
    ],
+   "rev": -0.54,
+   "revision": 53.8,
+   "geo": 28.4,
    "score_daily": 46.9,
    "score_weekly": 45.9,
    "score_monthly": 50.5,
@@ -879,6 +986,30 @@
     1182000.0,
     1247000.0,
     1298000.0
+   ],
+   "desc": "세계 최대 규모의 바이오의약품 위탁생산(CDMO) 기업. 미국 바이오 정책(생물보안법 등) 수혜·영향을 받는다.",
+   "ctags": [
+    "제약·바이오",
+    "수출주"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/domestic/stock/207940/total",
+    "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A207940",
+    "news": "https://search.naver.com/search.naver?where=news&query=%EC%82%BC%EC%84%B1%EB%B0%94%EC%9D%B4%EC%98%A4%EB%A1%9C%EC%A7%81%EC%8A%A4+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": -1,
+     "theme": "북한·한반도",
+     "eff": -0.22,
+     "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
+    },
+    {
+     "pol": -1,
+     "theme": "환율(원화)",
+     "eff": -0.08,
+     "text": "환율(원화): 원화 강세(관심 높음) → 수출주 성격상 부담"
+    }
    ],
    "sig": [
     [
@@ -1038,6 +1169,9 @@
     "reversal",
     "oversold"
    ],
+   "rev": -3.04,
+   "revision": 17.9,
+   "geo": 36.0,
    "score_daily": 58.8,
    "score_weekly": 47.3,
    "score_monthly": 43.7,
@@ -1134,6 +1268,36 @@
     313500.0,
     295500.0,
     312000.0
+   ],
+   "desc": "현대·제네시스 브랜드의 완성차 기업. 미국 판매 비중이 커 미국 관세와 환율에 민감.",
+   "ctags": [
+    "수출주",
+    "관세 민감"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/domestic/stock/005380/total",
+    "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A005380",
+    "news": "https://search.naver.com/search.naver?where=news&query=%ED%98%84%EB%8C%80%EC%B0%A8+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": -1,
+     "theme": "북한·한반도",
+     "eff": -0.22,
+     "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
+    },
+    {
+     "pol": 1,
+     "theme": "관세·무역분쟁",
+     "eff": 0.19,
+     "text": "관세·무역분쟁: 방향 혼재(관심 보통) → 수출주·관세 민감 성격상 우호적"
+    },
+    {
+     "pol": -1,
+     "theme": "환율(원화)",
+     "eff": -0.08,
+     "text": "환율(원화): 원화 강세(관심 높음) → 수출주 성격상 부담"
+    }
    ],
    "sig": [
     [
@@ -1282,6 +1446,9 @@
     "reversal",
     "oversold"
    ],
+   "rev": -3.83,
+   "revision": 12.8,
+   "geo": 36.0,
    "score_daily": 69.4,
    "score_weekly": 66.5,
    "score_monthly": 66.5,
@@ -1378,6 +1545,36 @@
     108600.0,
     105900.0,
     110200.0
+   ],
+   "desc": "현대차그룹의 완성차 기업. 높은 수익성과 주주환원이 강점이며 대미 수출·관세 영향이 크다.",
+   "ctags": [
+    "수출주",
+    "관세 민감"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/domestic/stock/000270/total",
+    "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A000270",
+    "news": "https://search.naver.com/search.naver?where=news&query=%EA%B8%B0%EC%95%84+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": -1,
+     "theme": "북한·한반도",
+     "eff": -0.22,
+     "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
+    },
+    {
+     "pol": 1,
+     "theme": "관세·무역분쟁",
+     "eff": 0.19,
+     "text": "관세·무역분쟁: 방향 혼재(관심 보통) → 수출주·관세 민감 성격상 우호적"
+    },
+    {
+     "pol": -1,
+     "theme": "환율(원화)",
+     "eff": -0.08,
+     "text": "환율(원화): 원화 강세(관심 높음) → 수출주 성격상 부담"
+    }
    ],
    "sig": [
     [
@@ -1517,6 +1714,9 @@
     "golden",
     "div_bull"
    ],
+   "rev": 1.64,
+   "revision": 76.9,
+   "geo": 28.4,
    "score_daily": 49.3,
    "score_weekly": 51.5,
    "score_monthly": 54.0,
@@ -1613,6 +1813,30 @@
     179800.0,
     182100.0,
     194000.0
+   ],
+   "desc": "바이오시밀러(복제 바이오의약품) 선도 기업. 미국·유럽 판매와 약가 정책에 실적이 좌우된다.",
+   "ctags": [
+    "제약·바이오",
+    "수출주"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/domestic/stock/068270/total",
+    "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A068270",
+    "news": "https://search.naver.com/search.naver?where=news&query=%EC%85%80%ED%8A%B8%EB%A6%AC%EC%98%A8+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": -1,
+     "theme": "북한·한반도",
+     "eff": -0.22,
+     "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
+    },
+    {
+     "pol": -1,
+     "theme": "환율(원화)",
+     "eff": -0.08,
+     "text": "환율(원화): 원화 강세(관심 높음) → 수출주 성격상 부담"
+    }
    ],
    "sig": [
     [
@@ -1777,6 +2001,9 @@
     "reversal",
     "oversold"
    ],
+   "rev": -2.89,
+   "revision": 20.5,
+   "geo": 58.9,
    "score_daily": 53.7,
    "score_weekly": 46.3,
    "score_monthly": 50.8,
@@ -1873,6 +2100,36 @@
     179400.0,
     173600.0,
     180000.0
+   ],
+   "desc": "국내 1위 검색 포털로 커머스·광고·핀테크·웹툰·클라우드 사업을 한다. 자체 AI(하이퍼클로바X) 보유.",
+   "ctags": [
+    "AI 인프라",
+    "금리 민감"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/domestic/stock/035420/total",
+    "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A035420",
+    "news": "https://search.naver.com/search.naver?where=news&query=NAVER+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": 1,
+     "theme": "연준·금리",
+     "eff": 0.33,
+     "text": "연준·금리: 비둘기(금리 하락)(관심 높음) → AI 인프라·금리 민감 성격상 우호적"
+    },
+    {
+     "pol": -1,
+     "theme": "북한·한반도",
+     "eff": -0.22,
+     "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
+    },
+    {
+     "pol": 1,
+     "theme": "환율(원화)",
+     "eff": 0.08,
+     "text": "환율(원화): 원화 강세(관심 높음) → 국내 상장주 성격상 우호적"
+    }
    ],
    "sig": [
     [
@@ -2016,6 +2273,9 @@
     "reversal",
     "oversold"
    ],
+   "rev": -1.35,
+   "revision": 41.0,
+   "geo": 53.3,
    "score_daily": 43.7,
    "score_weekly": 33.8,
    "score_monthly": 37.7,
@@ -2112,6 +2372,35 @@
     31700.0,
     31000.0,
     31850.0
+   ],
+   "desc": "카카오톡을 기반으로 광고·커머스·모빌리티·금융(카카오뱅크·페이)·콘텐츠 사업을 하는 플랫폼 기업.",
+   "ctags": [
+    "금리 민감"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/domestic/stock/035720/total",
+    "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A035720",
+    "news": "https://search.naver.com/search.naver?where=news&query=%EC%B9%B4%EC%B9%B4%EC%98%A4+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": 1,
+     "theme": "연준·금리",
+     "eff": 0.26,
+     "text": "연준·금리: 비둘기(금리 하락)(관심 높음) → 금리 민감 성격상 우호적"
+    },
+    {
+     "pol": -1,
+     "theme": "북한·한반도",
+     "eff": -0.22,
+     "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
+    },
+    {
+     "pol": 1,
+     "theme": "환율(원화)",
+     "eff": 0.08,
+     "text": "환율(원화): 원화 강세(관심 높음) → 국내 상장주 성격상 우호적"
+    }
    ],
    "sig": [
     [
@@ -2254,6 +2543,9 @@
    "tags": [
     "pullback"
    ],
+   "rev": 0.42,
+   "revision": 69.2,
+   "geo": 25.0,
    "score_daily": 57.1,
    "score_weekly": 56.1,
    "score_monthly": 58.6,
@@ -2350,6 +2642,35 @@
     159200.0,
     156700.0,
     160000.0
+   ],
+   "desc": "국민은행을 중심으로 한 국내 1위권 금융지주. 금리와 주주환원(밸류업) 정책이 주가 변수.",
+   "ctags": [
+    "금융(금리 수혜)"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/domestic/stock/105560/total",
+    "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A105560",
+    "news": "https://search.naver.com/search.naver?where=news&query=KB%EA%B8%88%EC%9C%B5+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": -1,
+     "theme": "북한·한반도",
+     "eff": -0.22,
+     "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
+    },
+    {
+     "pol": -1,
+     "theme": "연준·금리",
+     "eff": -0.15,
+     "text": "연준·금리: 비둘기(금리 하락)(관심 높음) → 금융(금리 수혜) 성격상 부담"
+    },
+    {
+     "pol": 1,
+     "theme": "환율(원화)",
+     "eff": 0.08,
+     "text": "환율(원화): 원화 강세(관심 높음) → 국내 상장주 성격상 우호적"
+    }
    ],
    "sig": [
     [
@@ -2494,6 +2815,9 @@
     "pullback",
     "oversold"
    ],
+   "rev": -0.43,
+   "revision": 56.4,
+   "geo": 25.0,
    "score_daily": 73.1,
    "score_weekly": 63.7,
    "score_monthly": 66.2,
@@ -2590,6 +2914,35 @@
     95000.0,
     94200.0,
     93400.0
+   ],
+   "desc": "신한은행·카드·증권·생명을 거느린 대형 금융지주. 배당·자사주 소각 등 주주환원을 확대 중.",
+   "ctags": [
+    "금융(금리 수혜)"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/domestic/stock/055550/total",
+    "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A055550",
+    "news": "https://search.naver.com/search.naver?where=news&query=%EC%8B%A0%ED%95%9C%EC%A7%80%EC%A3%BC+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": -1,
+     "theme": "북한·한반도",
+     "eff": -0.22,
+     "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
+    },
+    {
+     "pol": -1,
+     "theme": "연준·금리",
+     "eff": -0.15,
+     "text": "연준·금리: 비둘기(금리 하락)(관심 높음) → 금융(금리 수혜) 성격상 부담"
+    },
+    {
+     "pol": 1,
+     "theme": "환율(원화)",
+     "eff": 0.08,
+     "text": "환율(원화): 원화 강세(관심 높음) → 국내 상장주 성격상 우호적"
+    }
    ],
    "sig": [
     [
@@ -2753,6 +3106,9 @@
    "tags": [
     "pullback"
    ],
+   "rev": -0.93,
+   "revision": 48.7,
+   "geo": 25.0,
    "score_daily": 54.9,
    "score_weekly": 53.9,
    "score_monthly": 53.5,
@@ -2849,6 +3205,35 @@
     121600.0,
     122400.0,
     122500.0
+   ],
+   "desc": "하나은행 중심 금융지주로 기업금융·외환에 강하다. 원화 약세 때 외화 관련 손익 변동이 있다.",
+   "ctags": [
+    "금융(금리 수혜)"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/domestic/stock/086790/total",
+    "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A086790",
+    "news": "https://search.naver.com/search.naver?where=news&query=%ED%95%98%EB%82%98%EA%B8%88%EC%9C%B5%EC%A7%80%EC%A3%BC+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": -1,
+     "theme": "북한·한반도",
+     "eff": -0.22,
+     "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
+    },
+    {
+     "pol": -1,
+     "theme": "연준·금리",
+     "eff": -0.15,
+     "text": "연준·금리: 비둘기(금리 하락)(관심 높음) → 금융(금리 수혜) 성격상 부담"
+    },
+    {
+     "pol": 1,
+     "theme": "환율(원화)",
+     "eff": 0.08,
+     "text": "환율(원화): 원화 강세(관심 높음) → 국내 상장주 성격상 우호적"
+    }
    ],
    "sig": [
     [
@@ -2993,6 +3378,9 @@
     "pullback",
     "golden"
    ],
+   "rev": -1.76,
+   "revision": 30.8,
+   "geo": 25.0,
    "score_daily": 65.5,
    "score_weekly": 61.3,
    "score_monthly": 59.6,
@@ -3089,6 +3477,35 @@
     31000.0,
     31150.0,
     31350.0
+   ],
+   "desc": "우리은행 중심 금융지주. 비은행 계열사 확충(보험·증권 인수)을 추진 중이며 고배당.",
+   "ctags": [
+    "금융(금리 수혜)"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/domestic/stock/316140/total",
+    "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A316140",
+    "news": "https://search.naver.com/search.naver?where=news&query=%EC%9A%B0%EB%A6%AC%EA%B8%88%EC%9C%B5%EC%A7%80%EC%A3%BC+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": -1,
+     "theme": "북한·한반도",
+     "eff": -0.22,
+     "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
+    },
+    {
+     "pol": -1,
+     "theme": "연준·금리",
+     "eff": -0.15,
+     "text": "연준·금리: 비둘기(금리 하락)(관심 높음) → 금융(금리 수혜) 성격상 부담"
+    },
+    {
+     "pol": 1,
+     "theme": "환율(원화)",
+     "eff": 0.08,
+     "text": "환율(원화): 원화 강세(관심 높음) → 국내 상장주 성격상 우호적"
+    }
    ],
    "sig": [
     [
@@ -3247,6 +3664,9 @@
    "tags": [
     "range"
    ],
+   "rev": 0.47,
+   "revision": 71.8,
+   "geo": 44.4,
    "score_daily": 44.2,
    "score_weekly": 41.3,
    "score_monthly": 46.5,
@@ -3343,6 +3763,37 @@
     309000.0,
     292000.0,
     296500.0
+   ],
+   "desc": "철강(포스코)과 이차전지 소재(리튬·양극재)를 하는 지주사. 중국 철강 공급과 원자재 가격에 민감.",
+   "ctags": [
+    "중국 노출",
+    "이차전지",
+    "관세 민감"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/domestic/stock/005490/total",
+    "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A005490",
+    "news": "https://search.naver.com/search.naver?where=news&query=POSCO%ED%99%80%EB%94%A9%EC%8A%A4+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": -1,
+     "theme": "북한·한반도",
+     "eff": -0.22,
+     "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
+    },
+    {
+     "pol": 1,
+     "theme": "관세·무역분쟁",
+     "eff": 0.16,
+     "text": "관세·무역분쟁: 방향 혼재(관심 보통) → 중국 노출·관세 민감 성격상 우호적"
+    },
+    {
+     "pol": 1,
+     "theme": "환율(원화)",
+     "eff": 0.08,
+     "text": "환율(원화): 원화 강세(관심 높음) → 국내 상장주 성격상 우호적"
+    }
    ],
    "sig": [
     [
@@ -3491,6 +3942,9 @@
    "tags": [
     "downtrend"
    ],
+   "rev": -37.84,
+   "revision": 2.6,
+   "geo": 18.6,
    "score_daily": 30.8,
    "score_weekly": 33.0,
    "score_monthly": 33.0,
@@ -3587,6 +4041,37 @@
     267500.0,
     252000.0,
     254000.0
+   ],
+   "desc": "석유화학과 배터리 소재, LG에너지솔루션 지분을 가진 화학 기업. 유가 상승은 원가 부담.",
+   "ctags": [
+    "유가 원가 부담주",
+    "이차전지",
+    "중국 노출"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/domestic/stock/051910/total",
+    "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A051910",
+    "news": "https://search.naver.com/search.naver?where=news&query=LG%ED%99%94%ED%95%99+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": -1,
+     "theme": "중동 정세",
+     "eff": -0.44,
+     "text": "중동 정세: 긴장 고조(관심 보통) → 유가 원가 부담주·국내 상장주 성격상 부담"
+    },
+    {
+     "pol": -1,
+     "theme": "북한·한반도",
+     "eff": -0.22,
+     "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
+    },
+    {
+     "pol": 1,
+     "theme": "환율(원화)",
+     "eff": 0.19,
+     "text": "환율(원화): 원화 강세(관심 높음) → 유가 원가 부담주·국내 상장주 성격상 우호적"
+    }
    ],
    "sig": [
     [
@@ -3740,6 +4225,9 @@
    "tags": [
     "pullback"
    ],
+   "rev": 4.27,
+   "revision": 89.7,
+   "geo": 28.4,
    "score_daily": 40.0,
    "score_weekly": 37.3,
    "score_monthly": 34.0,
@@ -3836,6 +4324,30 @@
     591000.0,
     540000.0,
     530000.0
+   ],
+   "desc": "전기차·ESS 배터리와 전자재료를 하는 삼성 계열사. 유럽·미국 전기차 수요에 실적이 좌우된다.",
+   "ctags": [
+    "이차전지",
+    "수출주"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/domestic/stock/006400/total",
+    "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A006400",
+    "news": "https://search.naver.com/search.naver?where=news&query=%EC%82%BC%EC%84%B1SDI+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": -1,
+     "theme": "북한·한반도",
+     "eff": -0.22,
+     "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
+    },
+    {
+     "pol": -1,
+     "theme": "환율(원화)",
+     "eff": -0.08,
+     "text": "환율(원화): 원화 강세(관심 높음) → 수출주 성격상 부담"
+    }
    ],
    "sig": [
     [
@@ -3981,6 +4493,9 @@
     "oversold",
     "squeeze"
    ],
+   "rev": -1.71,
+   "revision": 33.3,
+   "geo": 36.0,
    "score_daily": 68.9,
    "score_weekly": 60.4,
    "score_monthly": 61.8,
@@ -4077,6 +4592,36 @@
     358500.0,
     337500.0,
     352500.0
+   ],
+   "desc": "현대차·기아에 모듈·핵심 부품과 AS 부품을 공급하는 자동차 부품사. 그룹 지배구조의 핵심.",
+   "ctags": [
+    "수출주",
+    "관세 민감"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/domestic/stock/012330/total",
+    "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A012330",
+    "news": "https://search.naver.com/search.naver?where=news&query=%ED%98%84%EB%8C%80%EB%AA%A8%EB%B9%84%EC%8A%A4+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": -1,
+     "theme": "북한·한반도",
+     "eff": -0.22,
+     "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
+    },
+    {
+     "pol": 1,
+     "theme": "관세·무역분쟁",
+     "eff": 0.19,
+     "text": "관세·무역분쟁: 방향 혼재(관심 보통) → 수출주·관세 민감 성격상 우호적"
+    },
+    {
+     "pol": -1,
+     "theme": "환율(원화)",
+     "eff": -0.08,
+     "text": "환율(원화): 원화 강세(관심 높음) → 수출주 성격상 부담"
+    }
    ],
    "sig": [
     [
@@ -4230,6 +4775,9 @@
     "reversal",
     "oversold"
    ],
+   "rev": -0.09,
+   "revision": 64.1,
+   "geo": 34.5,
    "score_daily": 61.8,
    "score_weekly": 50.4,
    "score_monthly": 55.7,
@@ -4326,6 +4874,29 @@
     291500.0,
     267500.0,
     286500.0
+   ],
+   "desc": "건설·상사·패션·리조트 사업과 삼성전자·삼성바이오로직스 지분을 가진 삼성그룹 사실상 지주사.",
+   "ctags": [
+    "원전"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/domestic/stock/028260/total",
+    "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A028260",
+    "news": "https://search.naver.com/search.naver?where=news&query=%EC%82%BC%EC%84%B1%EB%AC%BC%EC%82%B0+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": -1,
+     "theme": "북한·한반도",
+     "eff": -0.22,
+     "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
+    },
+    {
+     "pol": 1,
+     "theme": "환율(원화)",
+     "eff": 0.08,
+     "text": "환율(원화): 원화 강세(관심 높음) → 국내 상장주 성격상 우호적"
+    }
    ],
    "sig": [
     [
@@ -4490,6 +5061,9 @@
     "reversal",
     "oversold"
    ],
+   "rev": null,
+   "revision": null,
+   "geo": 25.0,
    "score_daily": 43.7,
    "score_weekly": 28.3,
    "score_monthly": 27.2,
@@ -4586,6 +5160,35 @@
     246500.0,
     228000.0,
     238500.0
+   ],
+   "desc": "국내 1위 생명보험사로 삼성전자 지분을 보유. 금리 상승 시 운용수익이 개선된다.",
+   "ctags": [
+    "금융(금리 수혜)"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/domestic/stock/032830/total",
+    "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A032830",
+    "news": "https://search.naver.com/search.naver?where=news&query=%EC%82%BC%EC%84%B1%EC%83%9D%EB%AA%85+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": -1,
+     "theme": "북한·한반도",
+     "eff": -0.22,
+     "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
+    },
+    {
+     "pol": -1,
+     "theme": "연준·금리",
+     "eff": -0.15,
+     "text": "연준·금리: 비둘기(금리 하락)(관심 높음) → 금융(금리 수혜) 성격상 부담"
+    },
+    {
+     "pol": 1,
+     "theme": "환율(원화)",
+     "eff": 0.08,
+     "text": "환율(원화): 원화 강세(관심 높음) → 국내 상장주 성격상 우호적"
+    }
    ],
    "sig": [
     [
@@ -4738,6 +5341,9 @@
    "tags": [
     "pullback"
    ],
+   "rev": 1.96,
+   "revision": 84.6,
+   "geo": 23.0,
    "score_daily": 47.8,
    "score_weekly": 42.5,
    "score_monthly": 44.2,
@@ -4834,6 +5440,36 @@
     582000.0,
     580000.0,
     586000.0
+   ],
+   "desc": "국내 1위 손해보험사. 자동차·장기보험이 주력이며 안정적 이익과 배당이 특징.",
+   "ctags": [
+    "금융(금리 수혜)",
+    "경기 방어"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/domestic/stock/000810/total",
+    "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A000810",
+    "news": "https://search.naver.com/search.naver?where=news&query=%EC%82%BC%EC%84%B1%ED%99%94%EC%9E%AC+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": -1,
+     "theme": "북한·한반도",
+     "eff": -0.22,
+     "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
+    },
+    {
+     "pol": -1,
+     "theme": "연준·금리",
+     "eff": -0.15,
+     "text": "연준·금리: 비둘기(금리 하락)(관심 높음) → 금융(금리 수혜) 성격상 부담"
+    },
+    {
+     "pol": 1,
+     "theme": "환율(원화)",
+     "eff": 0.08,
+     "text": "환율(원화): 원화 강세(관심 높음) → 국내 상장주 성격상 우호적"
+    }
    ],
    "sig": [
     [
@@ -4987,6 +5623,9 @@
    "tags": [
     "neutral"
    ],
+   "rev": -1.14,
+   "revision": 43.6,
+   "geo": 37.3,
    "score_daily": 52.1,
    "score_weekly": 47.2,
    "score_monthly": 54.1,
@@ -5083,6 +5722,30 @@
     81900.0,
     78800.0,
     78400.0
+   ],
+   "desc": "국내 1위 이동통신사. AI 데이터센터·AI 서비스로 사업을 넓히고 있으며 고배당 방어주.",
+   "ctags": [
+    "경기 방어",
+    "AI 인프라"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/domestic/stock/017670/total",
+    "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A017670",
+    "news": "https://search.naver.com/search.naver?where=news&query=SK%ED%85%94%EB%A0%88%EC%BD%A4+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": -1,
+     "theme": "북한·한반도",
+     "eff": -0.22,
+     "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
+    },
+    {
+     "pol": 1,
+     "theme": "환율(원화)",
+     "eff": 0.08,
+     "text": "환율(원화): 원화 강세(관심 높음) → 국내 상장주 성격상 우호적"
+    }
    ],
    "sig": [
     [
@@ -5221,6 +5884,9 @@
    "tags": [
     "reversal"
    ],
+   "rev": -0.12,
+   "revision": 60.3,
+   "geo": 32.1,
    "score_daily": 53.2,
    "score_weekly": 51.0,
    "score_monthly": 45.6,
@@ -5317,6 +5983,29 @@
     49900.0,
     50500.0,
     50400.0
+   ],
+   "desc": "유·무선 통신과 IT·클라우드(KT클라우드)·미디어 사업을 하는 통신사. 배당과 자사주 정책이 강화됐다.",
+   "ctags": [
+    "경기 방어"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/domestic/stock/030200/total",
+    "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A030200",
+    "news": "https://search.naver.com/search.naver?where=news&query=KT+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": -1,
+     "theme": "북한·한반도",
+     "eff": -0.22,
+     "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
+    },
+    {
+     "pol": 1,
+     "theme": "환율(원화)",
+     "eff": 0.08,
+     "text": "환율(원화): 원화 강세(관심 높음) → 국내 상장주 성격상 우호적"
+    }
    ],
    "sig": [
     [
@@ -5455,6 +6144,9 @@
     "breakout",
     "golden"
    ],
+   "rev": -1.85,
+   "revision": 25.6,
+   "geo": 32.1,
    "score_daily": 44.7,
    "score_weekly": 52.4,
    "score_monthly": 55.7,
@@ -5551,6 +6243,29 @@
     181800.0,
     189000.0,
     190500.0
+   ],
+   "desc": "국내 1위 담배 기업으로 궐련형 전자담배·홍삼(정관장) 사업과 해외 담배 수출을 한다. 대표 고배당주.",
+   "ctags": [
+    "경기 방어"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/domestic/stock/033780/total",
+    "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A033780",
+    "news": "https://search.naver.com/search.naver?where=news&query=KT%26G+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": -1,
+     "theme": "북한·한반도",
+     "eff": -0.22,
+     "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
+    },
+    {
+     "pol": 1,
+     "theme": "환율(원화)",
+     "eff": 0.08,
+     "text": "환율(원화): 원화 강세(관심 높음) → 국내 상장주 성격상 우호적"
+    }
    ],
    "sig": [
     [
@@ -5706,6 +6421,9 @@
     "squeeze",
     "div_bull"
    ],
+   "rev": -1.78,
+   "revision": 28.2,
+   "geo": 16.2,
    "score_daily": 66.3,
    "score_weekly": 59.8,
    "score_monthly": 55.0,
@@ -5802,6 +6520,37 @@
     29150.0,
     28450.0,
     28600.0
+   ],
+   "desc": "국내 전력 판매를 독점하는 공기업. 연료(가스·석탄) 가격과 전기요금 정책에 이익이 크게 좌우된다.",
+   "ctags": [
+    "유가 원가 부담주",
+    "경기 방어",
+    "원전"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/domestic/stock/015760/total",
+    "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A015760",
+    "news": "https://search.naver.com/search.naver?where=news&query=%ED%95%9C%EA%B5%AD%EC%A0%84%EB%A0%A5+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": -1,
+     "theme": "중동 정세",
+     "eff": -0.44,
+     "text": "중동 정세: 긴장 고조(관심 보통) → 유가 원가 부담주·국내 상장주 성격상 부담"
+    },
+    {
+     "pol": -1,
+     "theme": "북한·한반도",
+     "eff": -0.22,
+     "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
+    },
+    {
+     "pol": 1,
+     "theme": "환율(원화)",
+     "eff": 0.19,
+     "text": "환율(원화): 원화 강세(관심 높음) → 유가 원가 부담주·국내 상장주 성격상 우호적"
+    }
    ],
    "sig": [
     [
@@ -5945,6 +6694,9 @@
     "pullback",
     "aligned"
    ],
+   "rev": 30.55,
+   "revision": 100.0,
+   "geo": 64.4,
    "score_daily": 36.1,
    "score_weekly": 38.3,
    "score_monthly": 33.4,
@@ -6041,6 +6793,36 @@
     163200.0,
     155000.0,
     152000.0
+   ],
+   "desc": "정유·화학과 배터리(SK온) 사업을 하는 에너지 기업. 정제마진·유가와 배터리 적자가 변수.",
+   "ctags": [
+    "정유·에너지",
+    "이차전지"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/domestic/stock/096770/total",
+    "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A096770",
+    "news": "https://search.naver.com/search.naver?where=news&query=SK%EC%9D%B4%EB%85%B8%EB%B2%A0%EC%9D%B4%EC%85%98+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": 1,
+     "theme": "중동 정세",
+     "eff": 0.29,
+     "text": "중동 정세: 긴장 고조(관심 보통) → 정유·에너지 성격상 우호적"
+    },
+    {
+     "pol": -1,
+     "theme": "북한·한반도",
+     "eff": -0.22,
+     "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
+    },
+    {
+     "pol": 1,
+     "theme": "환율(원화)",
+     "eff": 0.08,
+     "text": "환율(원화): 원화 강세(관심 높음) → 국내 상장주 성격상 우호적"
+    }
    ],
    "sig": [
     [
@@ -6194,6 +6976,9 @@
    "tags": [
     "pullback"
    ],
+   "rev": 7.49,
+   "revision": 92.3,
+   "geo": 64.4,
    "score_daily": 53.0,
    "score_weekly": 56.9,
    "score_monthly": 54.3,
@@ -6290,6 +7075,35 @@
     162500.0,
     159400.0,
     153700.0
+   ],
+   "desc": "사우디 아람코가 최대주주인 정유사. 유가·정제마진이 오르면 이익이 늘어난다.",
+   "ctags": [
+    "정유·에너지"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/domestic/stock/010950/total",
+    "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A010950",
+    "news": "https://search.naver.com/search.naver?where=news&query=S-Oil+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": 1,
+     "theme": "중동 정세",
+     "eff": 0.29,
+     "text": "중동 정세: 긴장 고조(관심 보통) → 정유·에너지 성격상 우호적"
+    },
+    {
+     "pol": -1,
+     "theme": "북한·한반도",
+     "eff": -0.22,
+     "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
+    },
+    {
+     "pol": 1,
+     "theme": "환율(원화)",
+     "eff": 0.08,
+     "text": "환율(원화): 원화 강세(관심 높음) → 국내 상장주 성격상 우호적"
+    }
    ],
    "sig": [
     [
@@ -6429,6 +7243,9 @@
     "reversal",
     "oversold"
    ],
+   "rev": -0.12,
+   "revision": 60.3,
+   "geo": 75.0,
    "score_daily": 73.4,
    "score_weekly": 69.5,
    "score_monthly": 78.8,
@@ -6525,6 +7342,37 @@
     276000.0,
     263000.0,
     265000.0
+   ],
+   "desc": "HD현대중공업 등 조선 계열사를 거느린 세계 1위 조선 지주사. LNG선·친환경 선박 수주와 미국 해군 협력이 성장 축.",
+   "ctags": [
+    "해운·조선",
+    "수출주",
+    "방산"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/domestic/stock/009540/total",
+    "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A009540",
+    "news": "https://search.naver.com/search.naver?where=news&query=HD%ED%95%9C%EA%B5%AD%EC%A1%B0%EC%84%A0%ED%95%B4%EC%96%91+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": 1,
+     "theme": "중동 정세",
+     "eff": 0.29,
+     "text": "중동 정세: 긴장 고조(관심 보통) → 해운·조선·방산 성격상 우호적"
+    },
+    {
+     "pol": 1,
+     "theme": "러시아·우크라이나",
+     "eff": 0.12,
+     "text": "러시아·우크라이나: 전쟁 격화(관심 보통) → 방산 성격상 우호적"
+    },
+    {
+     "pol": -1,
+     "theme": "환율(원화)",
+     "eff": -0.08,
+     "text": "환율(원화): 원화 강세(관심 높음) → 수출주 성격상 부담"
+    }
    ],
    "sig": [
     [
@@ -6673,6 +7521,9 @@
     "reversal",
     "oversold"
    ],
+   "rev": -2.71,
+   "revision": 23.1,
+   "geo": 75.0,
    "score_daily": 72.0,
    "score_weekly": 67.4,
    "score_monthly": 77.6,
@@ -6769,6 +7620,37 @@
     369000.0,
     352500.0,
     351500.0
+   ],
+   "desc": "세계 최대 조선소. 상선과 함께 군함·특수선을 건조해 조선 호황과 방산 수요의 수혜를 받는다.",
+   "ctags": [
+    "해운·조선",
+    "수출주",
+    "방산"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/domestic/stock/329180/total",
+    "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A329180",
+    "news": "https://search.naver.com/search.naver?where=news&query=HD%ED%98%84%EB%8C%80%EC%A4%91%EA%B3%B5%EC%97%85+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": 1,
+     "theme": "중동 정세",
+     "eff": 0.29,
+     "text": "중동 정세: 긴장 고조(관심 보통) → 해운·조선·방산 성격상 우호적"
+    },
+    {
+     "pol": 1,
+     "theme": "러시아·우크라이나",
+     "eff": 0.12,
+     "text": "러시아·우크라이나: 전쟁 격화(관심 보통) → 방산 성격상 우호적"
+    },
+    {
+     "pol": -1,
+     "theme": "환율(원화)",
+     "eff": -0.08,
+     "text": "환율(원화): 원화 강세(관심 높음) → 수출주 성격상 부담"
+    }
    ],
    "sig": [
     [
@@ -6917,6 +7799,9 @@
     "reversal",
     "oversold"
    ],
+   "rev": -4.04,
+   "revision": 10.3,
+   "geo": 65.9,
    "score_daily": 67.7,
    "score_weekly": 60.0,
    "score_monthly": 67.4,
@@ -7013,6 +7898,36 @@
     842000.0,
     824000.0,
     888000.0
+   ],
+   "desc": "K9 자주포·레드백 장갑차·항공엔진을 만드는 국내 최대 방산 기업. 유럽·중동 수출이 급증했다.",
+   "ctags": [
+    "방산",
+    "수출주"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/domestic/stock/012450/total",
+    "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A012450",
+    "news": "https://search.naver.com/search.naver?where=news&query=%ED%95%9C%ED%99%94%EC%97%90%EC%96%B4%EB%A1%9C%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": 1,
+     "theme": "중동 정세",
+     "eff": 0.15,
+     "text": "중동 정세: 긴장 고조(관심 보통) → 방산 성격상 우호적"
+    },
+    {
+     "pol": 1,
+     "theme": "러시아·우크라이나",
+     "eff": 0.12,
+     "text": "러시아·우크라이나: 전쟁 격화(관심 보통) → 방산 성격상 우호적"
+    },
+    {
+     "pol": -1,
+     "theme": "환율(원화)",
+     "eff": -0.08,
+     "text": "환율(원화): 원화 강세(관심 높음) → 수출주 성격상 부담"
+    }
    ],
    "sig": [
     [
@@ -7177,6 +8092,9 @@
     "reversal",
     "oversold"
    ],
+   "rev": -3.76,
+   "revision": 15.4,
+   "geo": 65.9,
    "score_daily": 55.3,
    "score_weekly": 42.6,
    "score_monthly": 39.4,
@@ -7273,6 +8191,36 @@
     111000.0,
     105800.0,
     108400.0
+   ],
+   "desc": "국산 전투기 KF-21·FA-50과 헬기를 개발·생산하는 항공 방산 기업.",
+   "ctags": [
+    "방산",
+    "수출주"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/domestic/stock/047810/total",
+    "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A047810",
+    "news": "https://search.naver.com/search.naver?where=news&query=%ED%95%9C%EA%B5%AD%ED%95%AD%EA%B3%B5%EC%9A%B0%EC%A3%BC+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": 1,
+     "theme": "중동 정세",
+     "eff": 0.15,
+     "text": "중동 정세: 긴장 고조(관심 보통) → 방산 성격상 우호적"
+    },
+    {
+     "pol": 1,
+     "theme": "러시아·우크라이나",
+     "eff": 0.12,
+     "text": "러시아·우크라이나: 전쟁 격화(관심 보통) → 방산 성격상 우호적"
+    },
+    {
+     "pol": -1,
+     "theme": "환율(원화)",
+     "eff": -0.08,
+     "text": "환율(원화): 원화 강세(관심 높음) → 수출주 성격상 부담"
+    }
    ],
    "sig": [
     [
@@ -7421,6 +8369,9 @@
     "reversal",
     "oversold"
    ],
+   "rev": -1.49,
+   "revision": 35.9,
+   "geo": 65.9,
    "score_daily": 75.6,
    "score_weekly": 70.4,
    "score_monthly": 70.8,
@@ -7517,6 +8468,36 @@
     97300.0,
     91800.0,
     96900.0
+   ],
+   "desc": "K2 전차(방산)와 철도 차량을 만드는 현대차그룹 계열사. 폴란드 등 전차 수출이 실적을 이끈다.",
+   "ctags": [
+    "방산",
+    "수출주"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/domestic/stock/064350/total",
+    "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A064350",
+    "news": "https://search.naver.com/search.naver?where=news&query=%ED%98%84%EB%8C%80%EB%A1%9C%ED%85%9C+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": 1,
+     "theme": "중동 정세",
+     "eff": 0.15,
+     "text": "중동 정세: 긴장 고조(관심 보통) → 방산 성격상 우호적"
+    },
+    {
+     "pol": 1,
+     "theme": "러시아·우크라이나",
+     "eff": 0.12,
+     "text": "러시아·우크라이나: 전쟁 격화(관심 보통) → 방산 성격상 우호적"
+    },
+    {
+     "pol": -1,
+     "theme": "환율(원화)",
+     "eff": -0.08,
+     "text": "환율(원화): 원화 강세(관심 높음) → 수출주 성격상 부담"
+    }
    ],
    "sig": [
     [
@@ -7665,6 +8646,9 @@
     "range",
     "oversold"
    ],
+   "rev": 1.9,
+   "revision": 82.1,
+   "geo": 28.4,
    "score_daily": 47.0,
    "score_weekly": 35.5,
    "score_monthly": 37.7,
@@ -7761,6 +8745,30 @@
     69400.0,
     63300.0,
     64600.0
+   ],
+   "desc": "원자로·가스터빈·풍력 설비를 만드는 발전 기자재 기업. 원전 수출과 SMR(소형모듈원전)의 대표 수혜주.",
+   "ctags": [
+    "원전",
+    "수출주"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/domestic/stock/034020/total",
+    "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A034020",
+    "news": "https://search.naver.com/search.naver?where=news&query=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": -1,
+     "theme": "북한·한반도",
+     "eff": -0.22,
+     "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
+    },
+    {
+     "pol": -1,
+     "theme": "환율(원화)",
+     "eff": -0.08,
+     "text": "환율(원화): 원화 강세(관심 높음) → 수출주 성격상 부담"
+    }
    ],
    "sig": [
     [
@@ -7919,6 +8927,9 @@
    "tags": [
     "pullback"
    ],
+   "rev": 0.0,
+   "revision": 66.7,
+   "geo": 28.4,
    "score_daily": 50.6,
    "score_weekly": 48.0,
    "score_monthly": 52.6,
@@ -8015,6 +9026,29 @@
     106300.0,
     102700.0,
     103200.0
+   ],
+   "desc": "LG전자·LG화학·LG유플러스 등을 거느린 LG그룹 지주회사.",
+   "ctags": [
+    "수출주"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/domestic/stock/003550/total",
+    "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A003550",
+    "news": "https://search.naver.com/search.naver?where=news&query=LG+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": -1,
+     "theme": "북한·한반도",
+     "eff": -0.22,
+     "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
+    },
+    {
+     "pol": -1,
+     "theme": "환율(원화)",
+     "eff": -0.08,
+     "text": "환율(원화): 원화 강세(관심 높음) → 수출주 성격상 부담"
+    }
    ],
    "sig": [
     [
@@ -8163,6 +9197,9 @@
    "tags": [
     "pullback"
    ],
+   "rev": -12.83,
+   "revision": 7.7,
+   "geo": 36.0,
    "score_daily": 58.0,
    "score_weekly": 50.9,
    "score_monthly": 46.8,
@@ -8259,6 +9296,36 @@
     177400.0,
     168600.0,
     169700.0
+   ],
+   "desc": "가전(TV·생활가전)·전장(자동차 부품)·냉난방공조를 하는 기업. 미국 관세와 물류비에 민감.",
+   "ctags": [
+    "수출주",
+    "관세 민감"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/domestic/stock/066570/total",
+    "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A066570",
+    "news": "https://search.naver.com/search.naver?where=news&query=LG%EC%A0%84%EC%9E%90+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": -1,
+     "theme": "북한·한반도",
+     "eff": -0.22,
+     "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
+    },
+    {
+     "pol": 1,
+     "theme": "관세·무역분쟁",
+     "eff": 0.19,
+     "text": "관세·무역분쟁: 방향 혼재(관심 보통) → 수출주·관세 민감 성격상 우호적"
+    },
+    {
+     "pol": -1,
+     "theme": "환율(원화)",
+     "eff": -0.08,
+     "text": "환율(원화): 원화 강세(관심 높음) → 수출주 성격상 부담"
+    }
    ],
    "sig": [
     [
@@ -8412,6 +9479,9 @@
    "tags": [
     "pullback"
    ],
+   "rev": 2.08,
+   "revision": 87.2,
+   "geo": 34.1,
    "score_daily": 58.5,
    "score_weekly": 52.8,
    "score_monthly": 58.8,
@@ -8508,6 +9578,38 @@
     1374000.0,
     1163000.0,
     1188000.0
+   ],
+   "desc": "적층세라믹콘덴서(MLCC)·카메라 모듈·반도체 기판을 만드는 전자부품 기업. AI 서버용 기판이 성장 동력.",
+   "ctags": [
+    "반도체",
+    "AI 인프라",
+    "수출주",
+    "중국 노출"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/domestic/stock/009150/total",
+    "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A009150",
+    "news": "https://search.naver.com/search.naver?where=news&query=%EC%82%BC%EC%84%B1%EC%A0%84%EA%B8%B0+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": -1,
+     "theme": "북한·한반도",
+     "eff": -0.22,
+     "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
+    },
+    {
+     "pol": 1,
+     "theme": "관세·무역분쟁",
+     "eff": 0.11,
+     "text": "관세·무역분쟁: 방향 혼재(관심 보통) → 수출주·중국 노출 성격상 우호적"
+    },
+    {
+     "pol": -1,
+     "theme": "환율(원화)",
+     "eff": -0.08,
+     "text": "환율(원화): 원화 강세(관심 높음) → 수출주 성격상 부담"
+    }
    ],
    "sig": [
     [
@@ -8651,6 +9753,9 @@
    "tags": [
     "pullback"
    ],
+   "rev": -1.48,
+   "revision": 38.5,
+   "geo": 39.9,
    "score_daily": 48.9,
    "score_weekly": 41.9,
    "score_monthly": 38.3,
@@ -8747,6 +9852,29 @@
     202500.0,
     194300.0,
     199900.0
+   ],
+   "desc": "삼성 계열 IT 서비스·클라우드·물류(첼로스퀘어) 기업. 생성형 AI 서비스로 사업을 확장 중.",
+   "ctags": [
+    "AI 인프라"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/domestic/stock/018260/total",
+    "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A018260",
+    "news": "https://search.naver.com/search.naver?where=news&query=%EC%82%BC%EC%84%B1%EC%97%90%EC%8A%A4%EB%94%94%EC%97%90%EC%8A%A4+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": -1,
+     "theme": "북한·한반도",
+     "eff": -0.22,
+     "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
+    },
+    {
+     "pol": 1,
+     "theme": "환율(원화)",
+     "eff": 0.08,
+     "text": "환율(원화): 원화 강세(관심 높음) → 국내 상장주 성격상 우호적"
+    }
    ],
    "sig": [
     [
@@ -8897,6 +10025,9 @@
     "aligned",
     "golden"
    ],
+   "rev": 12.53,
+   "revision": 94.9,
+   "geo": 45.0,
    "score_daily": 49.6,
    "score_weekly": 54.7,
    "score_monthly": 44.5,
@@ -8993,6 +10124,29 @@
     23350.0,
     23200.0,
     23500.0
+   ],
+   "desc": "국내 최대 컨테이너 해운사. 운임(SCFI)에 실적이 좌우되며 홍해·수에즈 같은 항로 차질 때 운임이 오르는 경향.",
+   "ctags": [
+    "해운·조선"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/domestic/stock/011200/total",
+    "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A011200",
+    "news": "https://search.naver.com/search.naver?where=news&query=HMM+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": -1,
+     "theme": "북한·한반도",
+     "eff": -0.22,
+     "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
+    },
+    {
+     "pol": 1,
+     "theme": "환율(원화)",
+     "eff": 0.08,
+     "text": "환율(원화): 원화 강세(관심 높음) → 국내 상장주 성격상 우호적"
+    }
    ],
    "sig": [
     [
@@ -9143,6 +10297,9 @@
     "aligned",
     "squeeze"
    ],
+   "rev": 1.86,
+   "revision": 79.5,
+   "geo": 25.0,
    "score_daily": 56.5,
    "score_weekly": 62.8,
    "score_monthly": 60.3,
@@ -9239,6 +10396,35 @@
     131000.0,
     130700.0,
     129800.0
+   ],
+   "desc": "메리츠화재·메리츠증권을 거느린 금융지주. 높은 수익성과 적극적인 주주환원(자사주 소각)으로 유명.",
+   "ctags": [
+    "금융(금리 수혜)"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/domestic/stock/138040/total",
+    "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A138040",
+    "news": "https://search.naver.com/search.naver?where=news&query=%EB%A9%94%EB%A6%AC%EC%B8%A0%EA%B8%88%EC%9C%B5%EC%A7%80%EC%A3%BC+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": -1,
+     "theme": "북한·한반도",
+     "eff": -0.22,
+     "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
+    },
+    {
+     "pol": -1,
+     "theme": "연준·금리",
+     "eff": -0.15,
+     "text": "연준·금리: 비둘기(금리 하락)(관심 높음) → 금융(금리 수혜) 성격상 부담"
+    },
+    {
+     "pol": 1,
+     "theme": "환율(원화)",
+     "eff": 0.08,
+     "text": "환율(원화): 원화 강세(관심 높음) → 국내 상장주 성격상 우호적"
+    }
    ],
    "sig": [
     [
@@ -9382,6 +10568,9 @@
    "tags": [
     "squeeze"
    ],
+   "rev": -0.63,
+   "revision": 51.3,
+   "geo": 25.0,
    "score_daily": 54.7,
    "score_weekly": 58.8,
    "score_monthly": 56.6,
@@ -9478,6 +10667,35 @@
     19710.0,
     19740.0,
     19920.0
+   ],
+   "desc": "중소기업 대출 특화 국책은행. 정부가 최대주주이며 배당수익률이 높다.",
+   "ctags": [
+    "금융(금리 수혜)"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/domestic/stock/024110/total",
+    "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A024110",
+    "news": "https://search.naver.com/search.naver?where=news&query=%EA%B8%B0%EC%97%85%EC%9D%80%ED%96%89+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": -1,
+     "theme": "북한·한반도",
+     "eff": -0.22,
+     "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
+    },
+    {
+     "pol": -1,
+     "theme": "연준·금리",
+     "eff": -0.15,
+     "text": "연준·금리: 비둘기(금리 하락)(관심 높음) → 금융(금리 수혜) 성격상 부담"
+    },
+    {
+     "pol": 1,
+     "theme": "환율(원화)",
+     "eff": 0.08,
+     "text": "환율(원화): 원화 강세(관심 높음) → 국내 상장주 성격상 우호적"
+    }
    ],
    "sig": [
     [
@@ -9637,6 +10855,9 @@
     "range",
     "golden"
    ],
+   "rev": -26.53,
+   "revision": 5.1,
+   "geo": 28.4,
    "score_daily": 27.1,
    "score_weekly": 24.9,
    "score_monthly": 24.9,
@@ -9733,6 +10954,30 @@
     116500.0,
     105900.0,
     106900.0
+   ],
+   "desc": "전기차 배터리용 하이니켈 양극재를 만드는 코스닥 대표 이차전지 소재 기업. 전기차 수요와 리튬 가격에 민감.",
+   "ctags": [
+    "이차전지",
+    "수출주"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/domestic/stock/247540/total",
+    "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A247540",
+    "news": "https://search.naver.com/search.naver?where=news&query=%EC%97%90%EC%BD%94%ED%94%84%EB%A1%9C%EB%B9%84%EC%97%A0+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": -1,
+     "theme": "북한·한반도",
+     "eff": -0.22,
+     "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
+    },
+    {
+     "pol": -1,
+     "theme": "환율(원화)",
+     "eff": -0.08,
+     "text": "환율(원화): 원화 강세(관심 높음) → 수출주 성격상 부담"
+    }
    ],
    "sig": [
     [
@@ -9846,7 +11091,7 @@
   },
   {
    "ticker": "AAPL",
-   "name": "Apple Inc.",
+   "name": "애플",
    "market": "us",
    "sector": "Technology",
    "price": 343.4599914550781,
@@ -9883,6 +11128,9 @@
     "aligned",
     "squeeze"
    ],
+   "rev": 0.06,
+   "revision": 54.6,
+   "geo": 65.5,
    "score_daily": 37.8,
    "score_weekly": 42.8,
    "score_monthly": 41.5,
@@ -9979,6 +11227,24 @@
     342.96,
     342.0,
     343.46
+   ],
+   "desc": "아이폰·맥·아이패드 등 하드웨어와 앱스토어·클라우드·결제 서비스를 함께 파는 세계 최대 소비자 기술 기업. 생산을 중국·인도 등 아시아 공급망에 크게 의존한다.",
+   "ctags": [
+    "중국 노출",
+    "관세 민감",
+    "AI 인프라"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/worldstock/stock/AAPL.O/total",
+    "news": "https://search.naver.com/search.naver?where=news&query=%EC%95%A0%ED%94%8C+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": 1,
+     "theme": "관세·무역분쟁",
+     "eff": 0.16,
+     "text": "관세·무역분쟁: 방향 혼재(관심 보통) → 중국 노출·관세 민감 성격상 우호적"
+    }
    ],
    "sig": [
     [
@@ -10102,7 +11368,7 @@
   },
   {
    "ticker": "MSFT",
-   "name": "Microsoft Corporation",
+   "name": "마이크로소프트",
    "market": "us",
    "sector": "Technology",
    "price": 529.0499877929688,
@@ -10138,6 +11404,9 @@
     "pullback",
     "aligned"
    ],
+   "rev": 0.09,
+   "revision": 64.6,
+   "geo": 73.1,
    "score_daily": 56.4,
    "score_weekly": 62.1,
    "score_monthly": 58.6,
@@ -10234,6 +11503,23 @@
     533.69,
     539.44,
     529.05
+   ],
+   "desc": "윈도우·오피스와 클라우드 애저(Azure)가 핵심. OpenAI 협력으로 AI 서비스와 데이터센터 투자를 주도한다.",
+   "ctags": [
+    "AI 인프라",
+    "금리 민감"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/worldstock/stock/MSFT.O/total",
+    "news": "https://search.naver.com/search.naver?where=news&query=%EB%A7%88%EC%9D%B4%ED%81%AC%EB%A1%9C%EC%86%8C%ED%94%84%ED%8A%B8+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": 1,
+     "theme": "연준·금리",
+     "eff": 0.33,
+     "text": "연준·금리: 비둘기(금리 하락)(관심 높음) → AI 인프라·금리 민감 성격상 우호적"
+    }
    ],
    "sig": [
     [
@@ -10392,6 +11678,9 @@
    "tags": [
     "pullback"
    ],
+   "rev": 0.08,
+   "revision": 61.5,
+   "geo": 56.6,
    "score_daily": 78.2,
    "score_weekly": 79.6,
    "score_monthly": 85.3,
@@ -10489,6 +11778,17 @@
     217.23,
     214.13
    ],
+   "desc": "AI 학습·추론용 GPU와 데이터센터 네트워킹 시장 1위 기업. 대중국 반도체 수출 규제의 직접 영향권에 있다.",
+   "ctags": [
+    "반도체",
+    "AI 인프라",
+    "중국 노출"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/worldstock/stock/NVDA.O/total",
+    "news": "https://search.naver.com/search.naver?where=news&query=%EC%97%94%EB%B9%84%EB%94%94%EC%95%84+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [],
    "sig": [
     [
      1,
@@ -10596,7 +11896,7 @@
   },
   {
    "ticker": "GOOGL",
-   "name": "Alphabet Inc.",
+   "name": "알파벳(구글)",
    "market": "us",
    "sector": "Communication Services",
    "price": 340.5899963378906,
@@ -10633,6 +11933,9 @@
     "golden",
     "squeeze"
    ],
+   "rev": -0.1,
+   "revision": 26.2,
+   "geo": 73.1,
    "score_daily": 54.7,
    "score_weekly": 60.1,
    "score_monthly": 65.3,
@@ -10729,6 +12032,23 @@
     347.64,
     349.22,
     340.59
+   ],
+   "desc": "구글 검색·유튜브 광고가 주 수익원이고 구글 클라우드, 자체 AI 칩(TPU)·제미나이 모델, 자율주행 웨이모를 보유.",
+   "ctags": [
+    "AI 인프라",
+    "금리 민감"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/worldstock/stock/GOOGL.O/total",
+    "news": "https://search.naver.com/search.naver?where=news&query=%EC%95%8C%ED%8C%8C%EB%B2%B3%28%EA%B5%AC%EA%B8%80%29+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": 1,
+     "theme": "연준·금리",
+     "eff": 0.33,
+     "text": "연준·금리: 비둘기(금리 하락)(관심 높음) → AI 인프라·금리 민감 성격상 우호적"
+    }
    ],
    "sig": [
     [
@@ -10847,7 +12167,7 @@
   },
   {
    "ticker": "AMZN",
-   "name": "Amazon.com, Inc.",
+   "name": "아마존",
    "market": "us",
    "sector": "Consumer Cyclical",
    "price": 250.0,
@@ -10882,6 +12202,9 @@
    "tags": [
     "pullback"
    ],
+   "rev": 0.15,
+   "revision": 71.5,
+   "geo": 64.0,
    "score_daily": 54.1,
    "score_weekly": 56.0,
    "score_monthly": 59.5,
@@ -10978,6 +12301,23 @@
     254.08,
     254.76,
     250.0
+   ],
+   "desc": "세계 최대 전자상거래와 클라우드 1위 AWS를 운영. 광고·구독(프라임)도 큰 축이며 수입 상품 비중이 높아 관세에 민감.",
+   "ctags": [
+    "AI 인프라",
+    "관세 민감"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/worldstock/stock/AMZN.O/total",
+    "news": "https://search.naver.com/search.naver?where=news&query=%EC%95%84%EB%A7%88%EC%A1%B4+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": 1,
+     "theme": "관세·무역분쟁",
+     "eff": 0.12,
+     "text": "관세·무역분쟁: 방향 혼재(관심 보통) → 관세 민감 성격상 우호적"
+    }
    ],
    "sig": [
     [
@@ -11091,7 +12431,7 @@
   },
   {
    "ticker": "META",
-   "name": "Meta Platforms, Inc.",
+   "name": "메타 플랫폼스",
    "market": "us",
    "sector": "Communication Services",
    "price": 709.3300170898438,
@@ -11128,6 +12468,9 @@
     "golden",
     "squeeze"
    ],
+   "rev": -2.34,
+   "revision": 7.7,
+   "geo": 73.1,
    "score_daily": 56.1,
    "score_weekly": 59.7,
    "score_monthly": 51.0,
@@ -11224,6 +12567,23 @@
     737.54,
     736.72,
     709.33
+   ],
+   "desc": "페이스북·인스타그램·왓츠앱을 운영하는 광고 플랫폼 기업. AI 모델(라마)과 데이터센터에 대규모 투자 중.",
+   "ctags": [
+    "AI 인프라",
+    "금리 민감"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/worldstock/stock/META.O/total",
+    "news": "https://search.naver.com/search.naver?where=news&query=%EB%A9%94%ED%83%80+%ED%94%8C%EB%9E%AB%ED%8F%BC%EC%8A%A4+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": 1,
+     "theme": "연준·금리",
+     "eff": 0.33,
+     "text": "연준·금리: 비둘기(금리 하락)(관심 높음) → AI 인프라·금리 민감 성격상 우호적"
+    }
    ],
    "sig": [
     [
@@ -11337,7 +12697,7 @@
   },
   {
    "ticker": "AVGO",
-   "name": "Broadcom Inc.",
+   "name": "브로드컴",
    "market": "us",
    "sector": "Technology",
    "price": 328.75,
@@ -11372,6 +12732,9 @@
    "tags": [
     "range"
    ],
+   "rev": 0.02,
+   "revision": 47.7,
+   "geo": 56.6,
    "score_daily": 68.3,
    "score_weekly": 65.2,
    "score_monthly": 74.7,
@@ -11469,6 +12832,17 @@
     344.33,
     328.75
    ],
+   "desc": "네트워크·통신용 반도체와 빅테크 맞춤형 AI 칩(ASIC)을 설계하고 VM웨어 등 기업용 소프트웨어도 보유.",
+   "ctags": [
+    "반도체",
+    "AI 인프라",
+    "중국 노출"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/worldstock/stock/AVGO.O/total",
+    "news": "https://search.naver.com/search.naver?where=news&query=%EB%B8%8C%EB%A1%9C%EB%93%9C%EC%BB%B4+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [],
    "sig": [
     [
      -1,
@@ -11605,6 +12979,9 @@
    "tags": [
     "pullback"
    ],
+   "rev": 2.26,
+   "revision": 90.8,
+   "geo": 56.6,
    "score_daily": 69.8,
    "score_weekly": 67.6,
    "score_monthly": 72.0,
@@ -11702,6 +13079,17 @@
     422.25,
     412.61
    ],
+   "desc": "대만의 세계 최대 파운드리(반도체 위탁생산) 기업. 엔비디아·애플 등 최첨단 칩 대부분을 생산하며 대만 해협 리스크에 노출.",
+   "ctags": [
+    "반도체",
+    "AI 인프라",
+    "중국 노출"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/worldstock/stock/TSM/total",
+    "news": "https://search.naver.com/search.naver?where=news&query=TSMC+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [],
    "sig": [
     [
      1,
@@ -11844,6 +13232,9 @@
    "tags": [
     "pullback"
    ],
+   "rev": 12.8,
+   "revision": 100.0,
+   "geo": 56.6,
    "score_daily": 87.1,
    "score_weekly": 84.3,
    "score_monthly": 91.4,
@@ -11941,6 +13332,17 @@
     931.24,
     878.84
    ],
+   "desc": "미국 최대 메모리 반도체(D램·낸드·HBM) 기업. 삼성전자·SK하이닉스와 경쟁하며 메모리 가격 사이클에 실적이 크게 좌우된다.",
+   "ctags": [
+    "반도체",
+    "AI 인프라",
+    "중국 노출"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/worldstock/stock/MU.O/total",
+    "news": "https://search.naver.com/search.naver?where=news&query=%EB%A7%88%EC%9D%B4%ED%81%AC%EB%A1%A0+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [],
    "sig": [
     [
      1,
@@ -12048,7 +13450,7 @@
   },
   {
    "ticker": "AMD",
-   "name": "Advanced Micro Devices, Inc.",
+   "name": "AMD",
    "market": "us",
    "sector": "Technology",
    "price": 528.75,
@@ -12083,6 +13485,9 @@
    "tags": [
     "pullback"
    ],
+   "rev": 0.15,
+   "revision": 71.5,
+   "geo": 56.6,
    "score_daily": 54.3,
    "score_weekly": 47.0,
    "score_monthly": 52.2,
@@ -12180,6 +13585,17 @@
     562.23,
     528.75
    ],
+   "desc": "PC·서버용 CPU와 데이터센터 AI GPU를 설계하는 팹리스 반도체 기업. 생산은 TSMC에 맡긴다.",
+   "ctags": [
+    "반도체",
+    "AI 인프라",
+    "중국 노출"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/worldstock/stock/AMD.O/total",
+    "news": "https://search.naver.com/search.naver?where=news&query=AMD+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [],
    "sig": [
     [
      1,
@@ -12287,7 +13703,7 @@
   },
   {
    "ticker": "QCOM",
-   "name": "QUALCOMM Incorporated",
+   "name": "퀄컴",
    "market": "us",
    "sector": "Technology",
    "price": 172.11000061035156,
@@ -12322,6 +13738,9 @@
    "tags": [
     "pullback"
    ],
+   "rev": -0.01,
+   "revision": 41.5,
+   "geo": 50.9,
    "score_daily": 57.8,
    "score_weekly": 55.5,
    "score_monthly": 49.1,
@@ -12419,6 +13838,16 @@
     178.4,
     172.11
    ],
+   "desc": "스마트폰 모뎀·AP(스냅드래곤) 칩과 통신 특허 라이선스가 핵심. 매출의 상당 부분이 중국 스마트폰 업체에서 나온다.",
+   "ctags": [
+    "반도체",
+    "중국 노출"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/worldstock/stock/QCOM.O/total",
+    "news": "https://search.naver.com/search.naver?where=news&query=%ED%80%84%EC%BB%B4+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [],
    "sig": [
     [
      1,
@@ -12526,7 +13955,7 @@
   },
   {
    "ticker": "INTC",
-   "name": "Intel Corporation",
+   "name": "인텔",
    "market": "us",
    "sector": "Technology",
    "price": 89.8499984741211,
@@ -12561,6 +13990,9 @@
    "tags": [
     "pullback"
    ],
+   "rev": 0.89,
+   "revision": 89.2,
+   "geo": 50.9,
    "score_daily": 47.8,
    "score_weekly": 36.5,
    "score_monthly": 38.4,
@@ -12658,6 +14090,16 @@
     95.37,
     89.85
    ],
+   "desc": "PC·서버 CPU 강자에서 파운드리(위탁생산) 사업으로 전환 중인 미국 반도체 기업. 미국 반도체 지원 정책의 핵심 수혜처.",
+   "ctags": [
+    "반도체",
+    "중국 노출"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/worldstock/stock/INTC.O/total",
+    "news": "https://search.naver.com/search.naver?where=news&query=%EC%9D%B8%ED%85%94+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [],
    "sig": [
     [
      1,
@@ -12770,7 +14212,7 @@
   },
   {
    "ticker": "ASML",
-   "name": "ASML Holding N.V. - New York Re",
+   "name": "ASML",
    "market": "us",
    "sector": "Technology",
    "price": 1641.52001953125,
@@ -12805,6 +14247,9 @@
    "tags": [
     "pullback"
    ],
+   "rev": 7.91,
+   "revision": 96.9,
+   "geo": 50.9,
    "score_daily": 60.3,
    "score_weekly": 58.2,
    "score_monthly": 67.3,
@@ -12902,6 +14347,16 @@
     1657.4399,
     1641.52
    ],
+   "desc": "네덜란드의 반도체 노광장비 기업으로 최첨단 EUV 장비를 사실상 독점 공급. 대중국 장비 수출 통제의 영향을 받는다.",
+   "ctags": [
+    "반도체",
+    "중국 노출"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/worldstock/stock/ASML.O/total",
+    "news": "https://search.naver.com/search.naver?where=news&query=ASML+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [],
    "sig": [
     [
      1,
@@ -13014,7 +14469,7 @@
   },
   {
    "ticker": "AMAT",
-   "name": "Applied Materials, Inc.",
+   "name": "어플라이드 머티어리얼즈",
    "market": "us",
    "sector": "Technology",
    "price": 409.2900085449219,
@@ -13051,6 +14506,9 @@
     "oversold",
     "golden"
    ],
+   "rev": -0.07,
+   "revision": 31.5,
+   "geo": 50.9,
    "score_daily": 68.3,
    "score_weekly": 60.8,
    "score_monthly": 65.7,
@@ -13148,6 +14606,16 @@
     430.01,
     409.29
    ],
+   "desc": "세계 최대 반도체 장비 기업(증착·식각 등). 중국 매출 비중이 커 수출 규제에 민감하다.",
+   "ctags": [
+    "반도체",
+    "중국 노출"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/worldstock/stock/AMAT.O/total",
+    "news": "https://search.naver.com/search.naver?where=news&query=%EC%96%B4%ED%94%8C%EB%9D%BC%EC%9D%B4%EB%93%9C+%EB%A8%B8%ED%8B%B0%EC%96%B4%EB%A6%AC%EC%96%BC%EC%A6%88+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [],
    "sig": [
     [
      1,
@@ -13255,7 +14723,7 @@
   },
   {
    "ticker": "LRCX",
-   "name": "Lam Research Corporation",
+   "name": "램리서치",
    "market": "us",
    "sector": "Technology",
    "price": 263.94000244140625,
@@ -13291,6 +14759,9 @@
     "pullback",
     "golden"
    ],
+   "rev": 0.08,
+   "revision": 61.5,
+   "geo": 50.9,
    "score_daily": 64.0,
    "score_weekly": 58.9,
    "score_monthly": 64.2,
@@ -13388,6 +14859,16 @@
     277.46,
     263.94
    ],
+   "desc": "반도체 식각·증착 장비 전문 기업. 메모리 업체 설비투자와 중국 수출 규제에 실적이 좌우된다.",
+   "ctags": [
+    "반도체",
+    "중국 노출"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/worldstock/stock/LRCX.O/total",
+    "news": "https://search.naver.com/search.naver?where=news&query=%EB%9E%A8%EB%A6%AC%EC%84%9C%EC%B9%98+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [],
    "sig": [
     [
      1,
@@ -13510,7 +14991,7 @@
   },
   {
    "ticker": "KLAC",
-   "name": "KLA Corporation",
+   "name": "KLA",
    "market": "us",
    "sector": "Technology",
    "price": 165.74000549316406,
@@ -13546,6 +15027,9 @@
     "range",
     "golden"
    ],
+   "rev": -0.32,
+   "revision": 18.5,
+   "geo": 50.9,
    "score_daily": 56.3,
    "score_weekly": 50.3,
    "score_monthly": 54.1,
@@ -13643,6 +15127,16 @@
     174.46,
     165.74
    ],
+   "desc": "반도체 공정 검사·계측 장비 1위 기업. 첨단 공정 전환과 파운드리 투자 확대의 수혜를 받는다.",
+   "ctags": [
+    "반도체",
+    "중국 노출"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/worldstock/stock/KLAC.O/total",
+    "news": "https://search.naver.com/search.naver?where=news&query=KLA+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [],
    "sig": [
     [
      -1,
@@ -13759,7 +15253,7 @@
   },
   {
    "ticker": "ADBE",
-   "name": "Adobe Inc.",
+   "name": "어도비",
    "market": "us",
    "sector": "Technology",
    "price": 245.1999969482422,
@@ -13794,6 +15288,9 @@
    "tags": [
     "squeeze"
    ],
+   "rev": 0.36,
+   "revision": 77.7,
+   "geo": 68.4,
    "score_daily": 57.8,
    "score_weekly": 66.8,
    "score_monthly": 62.7,
@@ -13890,6 +15387,22 @@
     240.68,
     251.67,
     245.2
+   ],
+   "desc": "포토샵·프리미어·PDF(애크로뱃) 등 디자인·문서 소프트웨어를 구독형으로 판매. 생성형 AI 경쟁이 변수.",
+   "ctags": [
+    "금리 민감"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/worldstock/stock/ADBE.O/total",
+    "news": "https://search.naver.com/search.naver?where=news&query=%EC%96%B4%EB%8F%84%EB%B9%84+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": 1,
+     "theme": "연준·금리",
+     "eff": 0.26,
+     "text": "연준·금리: 비둘기(금리 하락)(관심 높음) → 금리 민감 성격상 우호적"
+    }
    ],
    "sig": [
     [
@@ -14008,7 +15521,7 @@
   },
   {
    "ticker": "CRM",
-   "name": "Salesforce, Inc.",
+   "name": "세일즈포스",
    "market": "us",
    "sector": "Technology",
    "price": 240.6999969482422,
@@ -14043,6 +15556,9 @@
    "tags": [
     "squeeze"
    ],
+   "rev": 0.36,
+   "revision": 77.7,
+   "geo": 73.1,
    "score_daily": 61.1,
    "score_weekly": 63.8,
    "score_monthly": 64.0,
@@ -14139,6 +15655,23 @@
     235.95,
     246.74,
     240.7
+   ],
+   "desc": "고객관계관리(CRM) 클라우드 소프트웨어 1위 기업. AI 에이전트 기능으로 기업 고객을 확대 중.",
+   "ctags": [
+    "금리 민감",
+    "AI 인프라"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/worldstock/stock/CRM/total",
+    "news": "https://search.naver.com/search.naver?where=news&query=%EC%84%B8%EC%9D%BC%EC%A6%88%ED%8F%AC%EC%8A%A4+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": 1,
+     "theme": "연준·금리",
+     "eff": 0.33,
+     "text": "연준·금리: 비둘기(금리 하락)(관심 높음) → 금리 민감·AI 인프라 성격상 우호적"
+    }
    ],
    "sig": [
     [
@@ -14252,7 +15785,7 @@
   },
   {
    "ticker": "ORCL",
-   "name": "Oracle Corporation",
+   "name": "오라클",
    "market": "us",
    "sector": "Technology",
    "price": 128.22999572753906,
@@ -14287,6 +15820,9 @@
    "tags": [
     "downtrend"
    ],
+   "rev": -0.01,
+   "revision": 41.5,
+   "geo": 55.7,
    "score_daily": 62.2,
    "score_weekly": 65.7,
    "score_monthly": 68.8,
@@ -14384,6 +15920,15 @@
     134.47,
     128.23
    ],
+   "desc": "데이터베이스·기업용 소프트웨어 강자로, AI 데이터센터용 클라우드(OCI) 사업을 빠르게 키우고 있다.",
+   "ctags": [
+    "AI 인프라"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/worldstock/stock/ORCL.K/total",
+    "news": "https://search.naver.com/search.naver?where=news&query=%EC%98%A4%EB%9D%BC%ED%81%B4+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [],
    "sig": [
     [
      -1,
@@ -14501,7 +16046,7 @@
   },
   {
    "ticker": "CSCO",
-   "name": "Cisco Systems, Inc.",
+   "name": "시스코",
    "market": "us",
    "sector": "Technology",
    "price": 107.38999938964844,
@@ -14536,6 +16081,9 @@
    "tags": [
     "pullback"
    ],
+   "rev": 0.06,
+   "revision": 54.6,
+   "geo": 64.0,
    "score_daily": 56.2,
    "score_weekly": 56.0,
    "score_monthly": 58.5,
@@ -14632,6 +16180,23 @@
     113.64,
     109.85,
     107.39
+   ],
+   "desc": "기업·통신사용 네트워크 장비(스위치·라우터)와 보안 소프트웨어를 판매. AI 데이터센터 네트워킹 수요가 성장 동력.",
+   "ctags": [
+    "AI 인프라",
+    "관세 민감"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/worldstock/stock/CSCO.O/total",
+    "news": "https://search.naver.com/search.naver?where=news&query=%EC%8B%9C%EC%8A%A4%EC%BD%94+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": 1,
+     "theme": "관세·무역분쟁",
+     "eff": 0.12,
+     "text": "관세·무역분쟁: 방향 혼재(관심 보통) → 관세 민감 성격상 우호적"
+    }
    ],
    "sig": [
     [
@@ -14735,7 +16300,7 @@
   },
   {
    "ticker": "IBM",
-   "name": "International Business Machines",
+   "name": "IBM",
    "market": "us",
    "sector": "Technology",
    "price": 232.13999938964844,
@@ -14771,6 +16336,9 @@
     "reversal",
     "div_bull"
    ],
+   "rev": -0.08,
+   "revision": 29.2,
+   "geo": 47.3,
    "score_daily": 44.7,
    "score_weekly": 43.6,
    "score_monthly": 37.9,
@@ -14868,6 +16436,15 @@
     234.12,
     232.14
    ],
+   "desc": "기업용 하이브리드 클라우드·IT 컨설팅·메인프레임과 AI(왓슨x) 사업을 하는 미국 IT 기업. 배당이 안정적.",
+   "ctags": [
+    "경기 방어"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/worldstock/stock/IBM/total",
+    "news": "https://search.naver.com/search.naver?where=news&query=IBM+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [],
    "sig": [
     [
      1,
@@ -14980,7 +16557,7 @@
   },
   {
    "ticker": "TXN",
-   "name": "Texas Instruments",
+   "name": "텍사스 인스트루먼트",
    "market": "us",
    "sector": "Technology",
    "price": 276.4800109863281,
@@ -15016,6 +16593,9 @@
     "pullback",
     "golden"
    ],
+   "rev": 0.1,
+   "revision": 66.2,
+   "geo": 50.9,
    "score_daily": 51.9,
    "score_weekly": 50.7,
    "score_monthly": 53.9,
@@ -15113,6 +16693,16 @@
     279.12,
     276.48
    ],
+   "desc": "아날로그·임베디드 반도체 1위 기업으로 산업·자동차용 칩 비중이 크다. 장기간 배당을 늘려 온 기업.",
+   "ctags": [
+    "반도체",
+    "중국 노출"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/worldstock/stock/TXN.O/total",
+    "news": "https://search.naver.com/search.naver?where=news&query=%ED%85%8D%EC%82%AC%EC%8A%A4+%EC%9D%B8%EC%8A%A4%ED%8A%B8%EB%A3%A8%EB%A8%BC%ED%8A%B8+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [],
    "sig": [
     [
      1,
@@ -15225,7 +16815,7 @@
   },
   {
    "ticker": "JPM",
-   "name": "JP Morgan Chase & Co.",
+   "name": "JP모건 체이스",
    "market": "us",
    "sector": "Financial Services",
    "price": 339.7200012207031,
@@ -15260,6 +16850,9 @@
    "tags": [
     "neutral"
    ],
+   "rev": -0.04,
+   "revision": 38.5,
+   "geo": 38.7,
    "score_daily": 51.4,
    "score_weekly": 51.0,
    "score_monthly": 47.8,
@@ -15356,6 +16949,22 @@
     335.28,
     335.53,
     339.72
+   ],
+   "desc": "미국 최대 은행. 소매금융·기업금융·투자은행·자산관리를 모두 하며 금리 수준에 이자이익이 좌우된다.",
+   "ctags": [
+    "금융(금리 수혜)"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/worldstock/stock/JPM/total",
+    "news": "https://search.naver.com/search.naver?where=news&query=JP%EB%AA%A8%EA%B1%B4+%EC%B2%B4%EC%9D%B4%EC%8A%A4+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": -1,
+     "theme": "연준·금리",
+     "eff": -0.15,
+     "text": "연준·금리: 비둘기(금리 하락)(관심 높음) → 금융(금리 수혜) 성격상 부담"
+    }
    ],
    "sig": [
     [
@@ -15454,7 +17063,7 @@
   },
   {
    "ticker": "BAC",
-   "name": "Bank of America Corporation",
+   "name": "뱅크오브아메리카",
    "market": "us",
    "sector": "Financial Services",
    "price": 51.22999954223633,
@@ -15490,6 +17099,9 @@
     "reversal",
     "oversold"
    ],
+   "rev": -4.91,
+   "revision": 3.1,
+   "geo": 38.7,
    "score_daily": 66.7,
    "score_weekly": 57.7,
    "score_monthly": 53.5,
@@ -15586,6 +17198,22 @@
     51.39,
     51.7,
     51.23
+   ],
+   "desc": "미국 2위 은행으로 예금 기반이 커서 금리 상승기에 이자이익이 늘어나는 구조.",
+   "ctags": [
+    "금융(금리 수혜)"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/worldstock/stock/BAC/total",
+    "news": "https://search.naver.com/search.naver?where=news&query=%EB%B1%85%ED%81%AC%EC%98%A4%EB%B8%8C%EC%95%84%EB%A9%94%EB%A6%AC%EC%B9%B4+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": -1,
+     "theme": "연준·금리",
+     "eff": -0.15,
+     "text": "연준·금리: 비둘기(금리 하락)(관심 높음) → 금융(금리 수혜) 성격상 부담"
+    }
    ],
    "sig": [
     [
@@ -15694,7 +17322,7 @@
   },
   {
    "ticker": "WFC",
-   "name": "Wells Fargo & Company",
+   "name": "웰스파고",
    "market": "us",
    "sector": "Financial Services",
    "price": 83.87000274658203,
@@ -15729,6 +17357,9 @@
    "tags": [
     "neutral"
    ],
+   "rev": 0.42,
+   "revision": 80.0,
+   "geo": 38.7,
    "score_daily": 53.3,
    "score_weekly": 56.1,
    "score_monthly": 52.9,
@@ -15825,6 +17456,22 @@
     80.9,
     82.75,
     83.87
+   ],
+   "desc": "미국 대형 상업은행. 소매·주택담보대출 비중이 높아 금리와 경기에 민감하다.",
+   "ctags": [
+    "금융(금리 수혜)"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/worldstock/stock/WFC/total",
+    "news": "https://search.naver.com/search.naver?where=news&query=%EC%9B%B0%EC%8A%A4%ED%8C%8C%EA%B3%A0+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": -1,
+     "theme": "연준·금리",
+     "eff": -0.15,
+     "text": "연준·금리: 비둘기(금리 하락)(관심 높음) → 금융(금리 수혜) 성격상 부담"
+    }
    ],
    "sig": [
     [
@@ -15938,7 +17585,7 @@
   },
   {
    "ticker": "GS",
-   "name": "Goldman Sachs Group, Inc. (The)",
+   "name": "골드만삭스",
    "market": "us",
    "sector": "Financial Services",
    "price": 881.260009765625,
@@ -15973,6 +17620,9 @@
    "tags": [
     "reversal"
    ],
+   "rev": 0.64,
+   "revision": 86.2,
+   "geo": 38.7,
    "score_daily": 51.8,
    "score_weekly": 47.8,
    "score_monthly": 52.3,
@@ -16069,6 +17719,22 @@
     878.72,
     891.28,
     881.26
+   ],
+   "desc": "글로벌 1위권 투자은행. 인수합병 자문·트레이딩·자산운용이 주력으로 시장 거래가 활발할수록 유리.",
+   "ctags": [
+    "금융(금리 수혜)"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/worldstock/stock/GS/total",
+    "news": "https://search.naver.com/search.naver?where=news&query=%EA%B3%A8%EB%93%9C%EB%A7%8C%EC%82%AD%EC%8A%A4+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": -1,
+     "theme": "연준·금리",
+     "eff": -0.15,
+     "text": "연준·금리: 비둘기(금리 하락)(관심 높음) → 금융(금리 수혜) 성격상 부담"
+    }
    ],
    "sig": [
     [
@@ -16171,7 +17837,7 @@
   },
   {
    "ticker": "MS",
-   "name": "Morgan Stanley",
+   "name": "모건스탠리",
    "market": "us",
    "sector": "Financial Services",
    "price": 180.57000732421875,
@@ -16207,6 +17873,9 @@
     "neutral",
     "oversold"
    ],
+   "rev": -1.27,
+   "revision": 10.8,
+   "geo": 38.7,
    "score_daily": 50.6,
    "score_weekly": 44.9,
    "score_monthly": 46.1,
@@ -16303,6 +17972,22 @@
     181.51,
     182.1,
     180.57
+   ],
+   "desc": "투자은행과 대형 자산관리(웰스 매니지먼트) 사업을 함께 하는 미국 금융사.",
+   "ctags": [
+    "금융(금리 수혜)"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/worldstock/stock/MS/total",
+    "news": "https://search.naver.com/search.naver?where=news&query=%EB%AA%A8%EA%B1%B4%EC%8A%A4%ED%83%A0%EB%A6%AC+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": -1,
+     "theme": "연준·금리",
+     "eff": -0.15,
+     "text": "연준·금리: 비둘기(금리 하락)(관심 높음) → 금융(금리 수혜) 성격상 부담"
+    }
    ],
    "sig": [
     [
@@ -16410,7 +18095,7 @@
   },
   {
    "ticker": "V",
-   "name": "Visa Inc.",
+   "name": "비자",
    "market": "us",
    "sector": "Financial Services",
    "price": 402.6099853515625,
@@ -16447,6 +18132,9 @@
     "aligned",
     "golden"
    ],
+   "rev": 0.01,
+   "revision": 45.4,
+   "geo": 47.3,
    "score_daily": 45.1,
    "score_weekly": 53.7,
    "score_monthly": 49.2,
@@ -16544,6 +18232,15 @@
     399.75,
     402.61
    ],
+   "desc": "세계 최대 카드 결제 네트워크. 결제 건수·금액에 수수료를 받아 해외여행·소비 경기에 실적이 연동된다.",
+   "ctags": [
+    "경기 방어"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/worldstock/stock/V/total",
+    "news": "https://search.naver.com/search.naver?where=news&query=%EB%B9%84%EC%9E%90+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [],
    "sig": [
     [
      1,
@@ -16661,7 +18358,7 @@
   },
   {
    "ticker": "MA",
-   "name": "Mastercard Incorporated",
+   "name": "마스터카드",
    "market": "us",
    "sector": "Financial Services",
    "price": 617.4199829101562,
@@ -16696,6 +18393,9 @@
    "tags": [
     "breakout"
    ],
+   "rev": 0.07,
+   "revision": 57.7,
+   "geo": 47.3,
    "score_daily": 45.7,
    "score_weekly": 53.7,
    "score_monthly": 50.9,
@@ -16793,6 +18493,15 @@
     616.32,
     617.42
    ],
+   "desc": "비자와 함께 세계 카드 결제망을 양분하는 기업. 국경 간 결제 비중이 커 여행 수요와 달러에 영향을 받는다.",
+   "ctags": [
+    "경기 방어"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/worldstock/stock/MA/total",
+    "news": "https://search.naver.com/search.naver?where=news&query=%EB%A7%88%EC%8A%A4%ED%84%B0%EC%B9%B4%EB%93%9C+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [],
    "sig": [
     [
      1,
@@ -16905,7 +18614,7 @@
   },
   {
    "ticker": "PYPL",
-   "name": "PayPal Holdings, Inc.",
+   "name": "페이팔",
    "market": "us",
    "sector": "Financial Services",
    "price": 56.70000076293945,
@@ -16940,6 +18649,9 @@
    "tags": [
     "neutral"
    ],
+   "rev": -0.06,
+   "revision": 34.6,
+   "geo": 68.4,
    "score_daily": 53.5,
    "score_weekly": 56.3,
    "score_monthly": 48.9,
@@ -17036,6 +18748,22 @@
     56.1,
     57.16,
     56.7
+   ],
+   "desc": "온라인 간편결제(페이팔·벤모) 기업. 결제 경쟁 심화와 수익성 개선이 핵심 과제.",
+   "ctags": [
+    "금리 민감"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/worldstock/stock/PYPL.O/total",
+    "news": "https://search.naver.com/search.naver?where=news&query=%ED%8E%98%EC%9D%B4%ED%8C%94+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": 1,
+     "theme": "연준·금리",
+     "eff": 0.26,
+     "text": "연준·금리: 비둘기(금리 하락)(관심 높음) → 금리 민감 성격상 우호적"
+    }
    ],
    "sig": [
     [
@@ -17139,7 +18867,7 @@
   },
   {
    "ticker": "BRK-B",
-   "name": "Berkshire Hathaway Inc. New",
+   "name": "버크셔 해서웨이",
    "market": "us",
    "sector": "Financial Services",
    "price": 532.02001953125,
@@ -17176,6 +18904,9 @@
     "aligned",
     "golden"
    ],
+   "rev": 0.73,
+   "revision": 87.7,
+   "geo": 47.3,
    "score_daily": 46.9,
    "score_weekly": 54.4,
    "score_monthly": 55.6,
@@ -17273,6 +19004,15 @@
     525.68,
     532.02
    ],
+   "desc": "워런 버핏이 이끈 지주회사. 보험·철도·에너지 자회사와 애플 등 대규모 주식 포트폴리오를 보유.",
+   "ctags": [
+    "경기 방어"
+   ],
+   "links": {
+    "naver": "https://search.naver.com/search.naver?query=%EB%B2%84%ED%81%AC%EC%85%94+%ED%95%B4%EC%84%9C%EC%9B%A8%EC%9D%B4+%EC%A3%BC%EA%B0%80",
+    "news": "https://search.naver.com/search.naver?where=news&query=%EB%B2%84%ED%81%AC%EC%85%94+%ED%95%B4%EC%84%9C%EC%9B%A8%EC%9D%B4+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [],
    "sig": [
     [
      1,
@@ -17385,7 +19125,7 @@
   },
   {
    "ticker": "UNH",
-   "name": "UnitedHealth Group Incorporated",
+   "name": "유나이티드헬스",
    "market": "us",
    "sector": "Healthcare",
    "price": 401.42999267578125,
@@ -17420,6 +19160,9 @@
    "tags": [
     "breakout"
    ],
+   "rev": 3.54,
+   "revision": 92.3,
+   "geo": 47.3,
    "score_daily": 53.6,
    "score_weekly": 53.1,
    "score_monthly": 54.6,
@@ -17517,6 +19260,16 @@
     406.67,
     401.43
    ],
+   "desc": "미국 최대 건강보험사이자 의료 서비스(옵텀) 기업. 미국 의료비·보험 정책 변화에 민감.",
+   "ctags": [
+    "경기 방어",
+    "제약·바이오"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/worldstock/stock/UNH/total",
+    "news": "https://search.naver.com/search.naver?where=news&query=%EC%9C%A0%EB%82%98%EC%9D%B4%ED%8B%B0%EB%93%9C%ED%97%AC%EC%8A%A4+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [],
    "sig": [
     [
      1,
@@ -17629,7 +19382,7 @@
   },
   {
    "ticker": "JNJ",
-   "name": "Johnson & Johnson",
+   "name": "존슨앤드존슨",
    "market": "us",
    "sector": "Healthcare",
    "price": 255.55999755859375,
@@ -17664,6 +19417,9 @@
    "tags": [
     "pullback"
    ],
+   "rev": 0.49,
+   "revision": 81.5,
+   "geo": 47.3,
    "score_daily": 48.3,
    "score_weekly": 42.6,
    "score_monthly": 36.3,
@@ -17761,6 +19517,16 @@
     253.28,
     255.56
    ],
+   "desc": "전문의약품(면역·항암)과 의료기기를 하는 미국 헬스케어 대표 기업. 60년 넘게 배당을 늘려 왔다.",
+   "ctags": [
+    "경기 방어",
+    "제약·바이오"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/worldstock/stock/JNJ/total",
+    "news": "https://search.naver.com/search.naver?where=news&query=%EC%A1%B4%EC%8A%A8%EC%95%A4%EB%93%9C%EC%A1%B4%EC%8A%A8+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [],
    "sig": [
     [
      1,
@@ -17888,7 +19654,7 @@
   },
   {
    "ticker": "PFE",
-   "name": "Pfizer, Inc.",
+   "name": "화이자",
    "market": "us",
    "sector": "Healthcare",
    "price": 29.579999923706055,
@@ -17924,6 +19690,9 @@
     "uptrend",
     "aligned"
    ],
+   "rev": -0.54,
+   "revision": 15.4,
+   "geo": 47.3,
    "score_daily": 55.5,
    "score_weekly": 61.7,
    "score_monthly": 53.8,
@@ -18021,6 +19790,16 @@
     29.44,
     29.58
    ],
+   "desc": "미국 대형 제약사. 코로나 백신 이후 매출 감소를 항암제 인수 등으로 메우는 중이며 고배당.",
+   "ctags": [
+    "제약·바이오",
+    "경기 방어"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/worldstock/stock/PFE/total",
+    "news": "https://search.naver.com/search.naver?where=news&query=%ED%99%94%EC%9D%B4%EC%9E%90+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [],
    "sig": [
     [
      1,
@@ -18128,7 +19907,7 @@
   },
   {
    "ticker": "MRK",
-   "name": "Merck & Company, Inc.",
+   "name": "머크",
    "market": "us",
    "sector": "Healthcare",
    "price": 145.9499969482422,
@@ -18164,6 +19943,9 @@
     "pullback",
     "aligned"
    ],
+   "rev": -3.23,
+   "revision": 6.2,
+   "geo": 47.3,
    "score_daily": 46.0,
    "score_weekly": 44.1,
    "score_monthly": 40.0,
@@ -18261,6 +20043,16 @@
     145.19,
     145.95
    ],
+   "desc": "면역항암제 키트루다가 주력인 미국 대형 제약사. 키트루다 특허 만료 대응이 과제.",
+   "ctags": [
+    "제약·바이오",
+    "경기 방어"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/worldstock/stock/MRK/total",
+    "news": "https://search.naver.com/search.naver?where=news&query=%EB%A8%B8%ED%81%AC+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [],
    "sig": [
     [
      1,
@@ -18368,7 +20160,7 @@
   },
   {
    "ticker": "ABBV",
-   "name": "AbbVie",
+   "name": "애브비",
    "market": "us",
    "sector": "Healthcare",
    "price": 285.4200134277344,
@@ -18404,6 +20196,9 @@
     "uptrend",
     "aligned"
    ],
+   "rev": -0.34,
+   "revision": 16.9,
+   "geo": 47.3,
    "score_daily": 53.5,
    "score_weekly": 66.8,
    "score_monthly": 68.2,
@@ -18501,6 +20296,16 @@
     283.4,
     285.42
    ],
+   "desc": "면역질환 치료제(스카이리치·린버크)와 미용(보톡스) 사업을 하는 제약사. 배당 성장주로 꼽힌다.",
+   "ctags": [
+    "제약·바이오",
+    "경기 방어"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/worldstock/stock/ABBV.K/total",
+    "news": "https://search.naver.com/search.naver?where=news&query=%EC%95%A0%EB%B8%8C%EB%B9%84+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [],
    "sig": [
     [
      1,
@@ -18613,7 +20418,7 @@
   },
   {
    "ticker": "LLY",
-   "name": "Eli Lilly and Company",
+   "name": "일라이 릴리",
    "market": "us",
    "sector": "Healthcare",
    "price": 1257.030029296875,
@@ -18648,6 +20453,9 @@
    "tags": [
     "pullback"
    ],
+   "rev": -4.66,
+   "revision": 4.6,
+   "geo": 50.0,
    "score_daily": 47.2,
    "score_weekly": 51.9,
    "score_monthly": 50.5,
@@ -18745,6 +20553,15 @@
     1251.61,
     1257.03
    ],
+   "desc": "비만·당뇨 치료제(마운자로·젭바운드)로 급성장한 미국 제약사. 세계 시가총액 상위 제약사.",
+   "ctags": [
+    "제약·바이오"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/worldstock/stock/LLY/total",
+    "news": "https://search.naver.com/search.naver?where=news&query=%EC%9D%BC%EB%9D%BC%EC%9D%B4+%EB%A6%B4%EB%A6%AC+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [],
    "sig": [
     [
      1,
@@ -18857,7 +20674,7 @@
   },
   {
    "ticker": "AMGN",
-   "name": "Amgen Inc.",
+   "name": "암젠",
    "market": "us",
    "sector": "Healthcare",
    "price": 432.489990234375,
@@ -18892,6 +20709,9 @@
    "tags": [
     "neutral"
    ],
+   "rev": -0.1,
+   "revision": 26.2,
+   "geo": 47.3,
    "score_daily": 39.9,
    "score_weekly": 46.2,
    "score_monthly": 46.7,
@@ -18989,6 +20809,16 @@
     434.03,
     432.49
    ],
+   "desc": "바이오의약품 대표 기업. 골다공증·항암·염증 치료제와 비만 신약 개발이 성장 축.",
+   "ctags": [
+    "제약·바이오",
+    "경기 방어"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/worldstock/stock/AMGN.O/total",
+    "news": "https://search.naver.com/search.naver?where=news&query=%EC%95%94%EC%A0%A0+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [],
    "sig": [
     [
      1,
@@ -19081,7 +20911,7 @@
   },
   {
    "ticker": "CVS",
-   "name": "CVS Health Corporation",
+   "name": "CVS 헬스",
    "market": "us",
    "sector": "Healthcare",
    "price": 92.36000061035156,
@@ -19117,6 +20947,9 @@
     "reversal",
     "div_bull"
    ],
+   "rev": 0.27,
+   "revision": 75.4,
+   "geo": 47.3,
    "score_daily": 65.7,
    "score_weekly": 58.6,
    "score_monthly": 62.5,
@@ -19214,6 +21047,16 @@
     92.58,
     92.36
    ],
+   "desc": "미국 최대 약국 체인과 건강보험(애트나), 약제비 관리(PBM)를 함께 하는 헬스케어 기업.",
+   "ctags": [
+    "경기 방어",
+    "제약·바이오"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/worldstock/stock/CVS/total",
+    "news": "https://search.naver.com/search.naver?where=news&query=CVS+%ED%97%AC%EC%8A%A4+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [],
    "sig": [
     [
      1,
@@ -19331,7 +21174,7 @@
   },
   {
    "ticker": "XOM",
-   "name": "Exxon Mobil",
+   "name": "엑슨모빌",
    "market": "us",
    "sector": "Energy",
    "price": 178.97999572753906,
@@ -19367,6 +21210,9 @@
     "breakout",
     "aligned"
    ],
+   "rev": 8.95,
+   "revision": 98.5,
+   "geo": 75.5,
    "score_daily": 39.1,
    "score_weekly": 44.5,
    "score_monthly": 46.3,
@@ -19463,6 +21309,23 @@
     177.01,
     174.68,
     178.98
+   ],
+   "desc": "미국 최대 석유·가스 기업. 원유 생산부터 정유·화학까지 수직 계열화되어 유가에 실적이 연동된다.",
+   "ctags": [
+    "정유·에너지",
+    "경기 방어"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/worldstock/stock/XOM/total",
+    "news": "https://search.naver.com/search.naver?where=news&query=%EC%97%91%EC%8A%A8%EB%AA%A8%EB%B9%8C+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": 1,
+     "theme": "중동 정세",
+     "eff": 0.36,
+     "text": "중동 정세: 긴장 고조(관심 보통) → 정유·에너지 성격상 우호적"
+    }
    ],
    "sig": [
     [
@@ -19570,7 +21433,7 @@
   },
   {
    "ticker": "CVX",
-   "name": "Chevron Corporation",
+   "name": "셰브론",
    "market": "us",
    "sector": "Energy",
    "price": 224.99000549316406,
@@ -19606,6 +21469,9 @@
     "breakout",
     "aligned"
    ],
+   "rev": 7.13,
+   "revision": 95.4,
+   "geo": 77.4,
    "score_daily": 51.6,
    "score_weekly": 59.5,
    "score_monthly": 60.3,
@@ -19703,6 +21569,22 @@
     219.32,
     224.99
    ],
+   "desc": "미국 2위 석유 메이저. 유가가 오르면 이익이 늘고 배당·자사주 매입이 많다.",
+   "ctags": [
+    "정유·에너지"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/worldstock/stock/CVX/total",
+    "news": "https://search.naver.com/search.naver?where=news&query=%EC%85%B0%EB%B8%8C%EB%A1%A0+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": 1,
+     "theme": "중동 정세",
+     "eff": 0.36,
+     "text": "중동 정세: 긴장 고조(관심 보통) → 정유·에너지 성격상 우호적"
+    }
+   ],
    "sig": [
     [
      1,
@@ -19799,7 +21681,7 @@
   },
   {
    "ticker": "COP",
-   "name": "ConocoPhillips",
+   "name": "코노코필립스",
    "market": "us",
    "sector": "Energy",
    "price": 146.50999450683594,
@@ -19834,6 +21716,9 @@
    "tags": [
     "breakout"
    ],
+   "rev": 7.02,
+   "revision": 93.8,
+   "geo": 77.4,
    "score_daily": 54.9,
    "score_weekly": 64.7,
    "score_monthly": 65.1,
@@ -19930,6 +21815,22 @@
     142.34,
     141.73,
     146.51
+   ],
+   "desc": "정유 없이 원유·가스 탐사·생산에 집중한 미국 최대 독립 E&P 기업으로 유가 민감도가 높다.",
+   "ctags": [
+    "정유·에너지"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/worldstock/stock/COP/total",
+    "news": "https://search.naver.com/search.naver?where=news&query=%EC%BD%94%EB%85%B8%EC%BD%94%ED%95%84%EB%A6%BD%EC%8A%A4+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": 1,
+     "theme": "중동 정세",
+     "eff": 0.36,
+     "text": "중동 정세: 긴장 고조(관심 보통) → 정유·에너지 성격상 우호적"
+    }
    ],
    "sig": [
     [
@@ -20047,7 +21948,7 @@
   },
   {
    "ticker": "SLB",
-   "name": "SLB Limited",
+   "name": "SLB(슐럼버거)",
    "market": "us",
    "sector": "Energy",
    "price": 49.5,
@@ -20082,6 +21983,9 @@
    "tags": [
     "pullback"
    ],
+   "rev": -1.23,
+   "revision": 12.3,
+   "geo": 77.4,
    "score_daily": 59.7,
    "score_weekly": 54.4,
    "score_monthly": 45.5,
@@ -20178,6 +22082,22 @@
     48.51,
     48.37,
     49.5
+   ],
+   "desc": "세계 1위 유전 서비스 기업. 석유회사들의 시추·개발 투자에 실적이 좌우된다.",
+   "ctags": [
+    "정유·에너지"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/worldstock/stock/SLB/total",
+    "news": "https://search.naver.com/search.naver?where=news&query=SLB%28%EC%8A%90%EB%9F%BC%EB%B2%84%EA%B1%B0%29+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": 1,
+     "theme": "중동 정세",
+     "eff": 0.36,
+     "text": "중동 정세: 긴장 고조(관심 보통) → 정유·에너지 성격상 우호적"
+    }
    ],
    "sig": [
     [
@@ -20291,7 +22211,7 @@
   },
   {
    "ticker": "NEE",
-   "name": "NextEra Energy, Inc.",
+   "name": "넥스트에라 에너지",
    "market": "us",
    "sector": "Utilities",
    "price": 79.80000305175781,
@@ -20326,6 +22246,9 @@
    "tags": [
     "neutral"
    ],
+   "rev": -0.81,
+   "revision": 13.8,
+   "geo": 66.0,
    "score_daily": 48.3,
    "score_weekly": 45.4,
    "score_monthly": 48.5,
@@ -20422,6 +22345,23 @@
     78.37,
     78.96,
     79.8
+   ],
+   "desc": "미국 최대 전력회사이자 세계 최대 풍력·태양광 발전사. 금리에 민감한 유틸리티.",
+   "ctags": [
+    "금리 민감",
+    "경기 방어"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/worldstock/stock/NEE/total",
+    "news": "https://search.naver.com/search.naver?where=news&query=%EB%84%A5%EC%8A%A4%ED%8A%B8%EC%97%90%EB%9D%BC+%EC%97%90%EB%84%88%EC%A7%80+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": 1,
+     "theme": "연준·금리",
+     "eff": 0.26,
+     "text": "연준·금리: 비둘기(금리 하락)(관심 높음) → 금리 민감 성격상 우호적"
+    }
    ],
    "sig": [
     [
@@ -20525,7 +22465,7 @@
   },
   {
    "ticker": "DUK",
-   "name": "Duke Energy Corporation (Holdin",
+   "name": "듀크 에너지",
    "market": "us",
    "sector": "Utilities",
    "price": 121.47000122070312,
@@ -20560,6 +22500,9 @@
    "tags": [
     "neutral"
    ],
+   "rev": 0.05,
+   "revision": 51.5,
+   "geo": 66.0,
    "score_daily": 41.3,
    "score_weekly": 42.5,
    "score_monthly": 40.1,
@@ -20656,6 +22599,23 @@
     119.64,
     118.88,
     121.47
+   ],
+   "desc": "미국 남동부 대형 전력·가스 유틸리티. 규제 산업으로 실적이 안정적이고 고배당.",
+   "ctags": [
+    "금리 민감",
+    "경기 방어"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/worldstock/stock/DUK/total",
+    "news": "https://search.naver.com/search.naver?where=news&query=%EB%93%80%ED%81%AC+%EC%97%90%EB%84%88%EC%A7%80+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": 1,
+     "theme": "연준·금리",
+     "eff": 0.26,
+     "text": "연준·금리: 비둘기(금리 하락)(관심 높음) → 금리 민감 성격상 우호적"
+    }
    ],
    "sig": [
     [
@@ -20774,7 +22734,7 @@
   },
   {
    "ticker": "SO",
-   "name": "Southern Company (The)",
+   "name": "서던 컴퍼니",
    "market": "us",
    "sector": "Utilities",
    "price": 91.18000030517578,
@@ -20809,6 +22769,9 @@
    "tags": [
     "neutral"
    ],
+   "rev": 0.08,
+   "revision": 61.5,
+   "geo": 66.0,
    "score_daily": 33.3,
    "score_weekly": 36.5,
    "score_monthly": 38.0,
@@ -20905,6 +22868,24 @@
     89.38,
     89.18,
     91.18
+   ],
+   "desc": "미국 남부 전력 유틸리티로 원전(보글 원전)을 보유. 데이터센터 전력 수요 증가 수혜.",
+   "ctags": [
+    "금리 민감",
+    "경기 방어",
+    "원전"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/worldstock/stock/SO/total",
+    "news": "https://search.naver.com/search.naver?where=news&query=%EC%84%9C%EB%8D%98+%EC%BB%B4%ED%8D%BC%EB%8B%88+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": 1,
+     "theme": "연준·금리",
+     "eff": 0.26,
+     "text": "연준·금리: 비둘기(금리 하락)(관심 높음) → 금리 민감 성격상 우호적"
+    }
    ],
    "sig": [
     [
@@ -21023,7 +23004,7 @@
   },
   {
    "ticker": "PG",
-   "name": "Procter & Gamble",
+   "name": "P&G",
    "market": "us",
    "sector": "Consumer Defensive",
    "price": 159.35000610351562,
@@ -21059,6 +23040,9 @@
     "breakout",
     "golden"
    ],
+   "rev": -0.05,
+   "revision": 36.9,
+   "geo": 56.0,
    "score_daily": 44.3,
    "score_weekly": 50.3,
    "score_monthly": 42.1,
@@ -21155,6 +23139,23 @@
     156.53,
     157.08,
     159.35
+   ],
+   "desc": "타이드·질레트·팸퍼스 등 생활용품 세계 1위 기업. 경기와 무관한 필수소비재로 배당을 오래 늘려 왔다.",
+   "ctags": [
+    "경기 방어",
+    "관세 민감"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/worldstock/stock/PG/total",
+    "news": "https://search.naver.com/search.naver?where=news&query=P%26G+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": 1,
+     "theme": "관세·무역분쟁",
+     "eff": 0.08,
+     "text": "관세·무역분쟁: 방향 혼재(관심 보통) → 관세 민감 성격상 우호적"
+    }
    ],
    "sig": [
     [
@@ -21263,7 +23264,7 @@
   },
   {
    "ticker": "KO",
-   "name": "Coca-Cola",
+   "name": "코카콜라",
    "market": "us",
    "sector": "Consumer Defensive",
    "price": 93.9000015258789,
@@ -21298,6 +23299,9 @@
    "tags": [
     "neutral"
    ],
+   "rev": 0.05,
+   "revision": 51.5,
+   "geo": 47.3,
    "score_daily": 42.6,
    "score_weekly": 51.4,
    "score_monthly": 47.9,
@@ -21395,6 +23399,15 @@
     92.0,
     93.9
    ],
+   "desc": "세계 최대 음료 기업. 200개국 이상에서 판매해 달러 강세 시 환산 매출이 줄어든다. 대표 배당주.",
+   "ctags": [
+    "경기 방어"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/worldstock/stock/KO/total",
+    "news": "https://search.naver.com/search.naver?where=news&query=%EC%BD%94%EC%B9%B4%EC%BD%9C%EB%9D%BC+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [],
    "sig": [
     [
      1,
@@ -21497,7 +23510,7 @@
   },
   {
    "ticker": "PEP",
-   "name": "PepsiCo",
+   "name": "펩시코",
    "market": "us",
    "sector": "Consumer Defensive",
    "price": 131.49000549316406,
@@ -21532,6 +23545,9 @@
    "tags": [
     "neutral"
    ],
+   "rev": -1.91,
+   "revision": 9.2,
+   "geo": 47.3,
    "score_daily": 51.9,
    "score_weekly": 53.5,
    "score_monthly": 52.4,
@@ -21629,6 +23645,15 @@
     128.38,
     131.49
    ],
+   "desc": "펩시 음료와 레이즈·도리토스 등 스낵을 파는 식음료 기업. 원자재 가격과 소비 둔화가 변수.",
+   "ctags": [
+    "경기 방어"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/worldstock/stock/PEP.O/total",
+    "news": "https://search.naver.com/search.naver?where=news&query=%ED%8E%A9%EC%8B%9C%EC%BD%94+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [],
    "sig": [
     [
      -1,
@@ -21731,7 +23756,7 @@
   },
   {
    "ticker": "WMT",
-   "name": "Walmart Inc.",
+   "name": "월마트",
    "market": "us",
    "sector": "Consumer Defensive",
    "price": 118.80999755859375,
@@ -21767,6 +23792,9 @@
     "turn",
     "golden"
    ],
+   "rev": -0.01,
+   "revision": 41.5,
+   "geo": 56.0,
    "score_daily": 34.8,
    "score_weekly": 39.8,
    "score_monthly": 32.2,
@@ -21863,6 +23891,23 @@
     116.16,
     117.87,
     118.81
+   ],
+   "desc": "미국 최대 유통 체인. 경기 둔화기에 저가 수요가 몰리지만 수입 상품 비중이 커 관세에 민감.",
+   "ctags": [
+    "경기 방어",
+    "관세 민감"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/worldstock/stock/WMT.O/total",
+    "news": "https://search.naver.com/search.naver?where=news&query=%EC%9B%94%EB%A7%88%ED%8A%B8+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": 1,
+     "theme": "관세·무역분쟁",
+     "eff": 0.08,
+     "text": "관세·무역분쟁: 방향 혼재(관심 보통) → 관세 민감 성격상 우호적"
+    }
    ],
    "sig": [
     [
@@ -21981,7 +24026,7 @@
   },
   {
    "ticker": "COST",
-   "name": "Costco Wholesale Corporation",
+   "name": "코스트코",
    "market": "us",
    "sector": "Consumer Defensive",
    "price": 989.1099853515625,
@@ -22017,6 +24062,9 @@
     "breakout",
     "golden"
    ],
+   "rev": 0.58,
+   "revision": 84.6,
+   "geo": 56.0,
    "score_daily": 34.1,
    "score_weekly": 37.6,
    "score_monthly": 35.1,
@@ -22113,6 +24161,23 @@
     982.0,
     978.01,
     989.11
+   ],
+   "desc": "회원제 창고형 할인점. 연회비 기반의 안정적 수익 구조와 높은 회원 갱신율이 강점.",
+   "ctags": [
+    "경기 방어",
+    "관세 민감"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/worldstock/stock/COST.O/total",
+    "news": "https://search.naver.com/search.naver?where=news&query=%EC%BD%94%EC%8A%A4%ED%8A%B8%EC%BD%94+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": 1,
+     "theme": "관세·무역분쟁",
+     "eff": 0.08,
+     "text": "관세·무역분쟁: 방향 혼재(관심 보통) → 관세 민감 성격상 우호적"
+    }
    ],
    "sig": [
     [
@@ -22231,7 +24296,7 @@
   },
   {
    "ticker": "HD",
-   "name": "Home Depot, Inc. (The)",
+   "name": "홈디포",
    "market": "us",
    "sector": "Consumer Cyclical",
    "price": 309.6300048828125,
@@ -22266,6 +24331,9 @@
    "tags": [
     "downtrend"
    ],
+   "rev": 0.01,
+   "revision": 45.4,
+   "geo": 75.4,
    "score_daily": 48.3,
    "score_weekly": 51.3,
    "score_monthly": 47.9,
@@ -22362,6 +24430,29 @@
     295.51,
     308.24,
     309.63
+   ],
+   "desc": "미국 최대 주택 개량·건자재 유통사. 주택 거래와 모기지 금리에 실적이 연동된다.",
+   "ctags": [
+    "금리 민감",
+    "관세 민감"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/worldstock/stock/HD/total",
+    "news": "https://search.naver.com/search.naver?where=news&query=%ED%99%88%EB%94%94%ED%8F%AC+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": 1,
+     "theme": "연준·금리",
+     "eff": 0.26,
+     "text": "연준·금리: 비둘기(금리 하락)(관심 높음) → 금리 민감 성격상 우호적"
+    },
+    {
+     "pol": 1,
+     "theme": "관세·무역분쟁",
+     "eff": 0.12,
+     "text": "관세·무역분쟁: 방향 혼재(관심 보통) → 관세 민감 성격상 우호적"
+    }
    ],
    "sig": [
     [
@@ -22475,7 +24566,7 @@
   },
   {
    "ticker": "MCD",
-   "name": "McDonald's Corporation",
+   "name": "맥도날드",
    "market": "us",
    "sector": "Consumer Cyclical",
    "price": 242.97000122070312,
@@ -22510,6 +24601,9 @@
    "tags": [
     "downtrend"
    ],
+   "rev": -0.22,
+   "revision": 20.0,
+   "geo": 47.3,
    "score_daily": 64.4,
    "score_weekly": 68.2,
    "score_monthly": 66.1,
@@ -22607,6 +24701,15 @@
     242.5,
     242.97
    ],
+   "desc": "세계 최대 햄버거 프랜차이즈. 가맹점 로열티·임대료 중심이라 경기 방어적이다.",
+   "ctags": [
+    "경기 방어"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/worldstock/stock/MCD/total",
+    "news": "https://search.naver.com/search.naver?where=news&query=%EB%A7%A5%EB%8F%84%EB%82%A0%EB%93%9C+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [],
    "sig": [
     [
      -1,
@@ -22709,7 +24812,7 @@
   },
   {
    "ticker": "NKE",
-   "name": "Nike, Inc.",
+   "name": "나이키",
    "market": "us",
    "sector": "Consumer Cyclical",
    "price": 37.130001068115234,
@@ -22744,6 +24847,9 @@
    "tags": [
     "downtrend"
    ],
+   "rev": -26.63,
+   "revision": 1.5,
+   "geo": 60.2,
    "score_daily": 35.4,
    "score_weekly": 35.8,
    "score_monthly": 33.1,
@@ -22840,6 +24946,23 @@
     35.3,
     37.14,
     37.13
+   ],
+   "desc": "세계 최대 스포츠웨어 기업. 생산 대부분이 베트남·중국 등 아시아라 관세와 중국 소비에 민감.",
+   "ctags": [
+    "관세 민감",
+    "중국 노출"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/worldstock/stock/NKE/total",
+    "news": "https://search.naver.com/search.naver?where=news&query=%EB%82%98%EC%9D%B4%ED%82%A4+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": 1,
+     "theme": "관세·무역분쟁",
+     "eff": 0.16,
+     "text": "관세·무역분쟁: 방향 혼재(관심 보통) → 관세 민감·중국 노출 성격상 우호적"
+    }
    ],
    "sig": [
     [
@@ -22953,7 +25076,7 @@
   },
   {
    "ticker": "DIS",
-   "name": "Walt Disney Company (The)",
+   "name": "디즈니",
    "market": "us",
    "sector": "Communication Services",
    "price": 110.58999633789062,
@@ -22989,6 +25112,9 @@
     "turn",
     "golden"
    ],
+   "rev": 0.07,
+   "revision": 57.7,
+   "geo": 68.4,
    "score_daily": 49.0,
    "score_weekly": 51.9,
    "score_monthly": 39.9,
@@ -23085,6 +25211,22 @@
     108.99,
     110.68,
     110.59
+   ],
+   "desc": "영화·애니메이션 IP, 테마파크, 스트리밍(디즈니+)과 ESPN을 가진 미디어·엔터 기업.",
+   "ctags": [
+    "금리 민감"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/worldstock/stock/DIS/total",
+    "news": "https://search.naver.com/search.naver?where=news&query=%EB%94%94%EC%A6%88%EB%8B%88+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": 1,
+     "theme": "연준·금리",
+     "eff": 0.26,
+     "text": "연준·금리: 비둘기(금리 하락)(관심 높음) → 금리 민감 성격상 우호적"
+    }
    ],
    "sig": [
     [
@@ -23198,7 +25340,7 @@
   },
   {
    "ticker": "CAT",
-   "name": "Caterpillar, Inc.",
+   "name": "캐터필러",
    "market": "us",
    "sector": "Industrials",
    "price": 730.760009765625,
@@ -23233,6 +25375,9 @@
    "tags": [
     "range"
    ],
+   "rev": 0.53,
+   "revision": 83.1,
+   "geo": 58.6,
    "score_daily": 54.5,
    "score_weekly": 47.7,
    "score_monthly": 55.4,
@@ -23329,6 +25474,22 @@
     748.98,
     735.64,
     730.76
+   ],
+   "desc": "세계 1위 건설·광산 장비 제조사. 인프라 투자와 원자재 경기, 데이터센터 발전기 수요의 수혜를 받는다.",
+   "ctags": [
+    "관세 민감"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/worldstock/stock/CAT/total",
+    "news": "https://search.naver.com/search.naver?where=news&query=%EC%BA%90%ED%84%B0%ED%95%84%EB%9F%AC+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": 1,
+     "theme": "관세·무역분쟁",
+     "eff": 0.12,
+     "text": "관세·무역분쟁: 방향 혼재(관심 보통) → 관세 민감 성격상 우호적"
+    }
    ],
    "sig": [
     [
@@ -23436,7 +25597,7 @@
   },
   {
    "ticker": "DE",
-   "name": "Deere & Company",
+   "name": "디어(존디어)",
    "market": "us",
    "sector": "Industrials",
    "price": 641.8599853515625,
@@ -23471,6 +25632,9 @@
    "tags": [
     "pullback"
    ],
+   "rev": -0.07,
+   "revision": 31.5,
+   "geo": 60.2,
    "score_daily": 40.8,
    "score_weekly": 38.6,
    "score_monthly": 34.4,
@@ -23567,6 +25731,23 @@
     650.38,
     650.67,
     641.86
+   ],
+   "desc": "세계 최대 농기계 제조사. 곡물 가격·농가 소득과 미중 농산물 무역에 영향을 받는다.",
+   "ctags": [
+    "관세 민감",
+    "중국 노출"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/worldstock/stock/DE/total",
+    "news": "https://search.naver.com/search.naver?where=news&query=%EB%94%94%EC%96%B4%28%EC%A1%B4%EB%94%94%EC%96%B4%29+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": 1,
+     "theme": "관세·무역분쟁",
+     "eff": 0.16,
+     "text": "관세·무역분쟁: 방향 혼재(관심 보통) → 관세 민감·중국 노출 성격상 우호적"
+    }
    ],
    "sig": [
     [
@@ -23675,7 +25856,7 @@
   },
   {
    "ticker": "HON",
-   "name": "Honeywell International Inc.",
+   "name": "하니웰",
    "market": "us",
    "sector": "Industrials",
    "price": 211.41000366210938,
@@ -23710,6 +25891,9 @@
    "tags": [
     "squeeze"
    ],
+   "rev": -0.1,
+   "revision": 26.2,
+   "geo": 83.0,
    "score_daily": 48.0,
    "score_weekly": 49.6,
    "score_monthly": 56.8,
@@ -23806,6 +25990,34 @@
     207.61,
     210.5,
     211.41
+   ],
+   "desc": "항공우주 부품·빌딩 자동화·산업용 소재를 하는 미국 복합 산업재 기업. 사업 분할을 진행 중.",
+   "ctags": [
+    "방산"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/worldstock/stock/HON.O/total",
+    "news": "https://search.naver.com/search.naver?where=news&query=%ED%95%98%EB%8B%88%EC%9B%B0+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": 1,
+     "theme": "중동 정세",
+     "eff": 0.22,
+     "text": "중동 정세: 긴장 고조(관심 보통) → 방산 성격상 우호적"
+    },
+    {
+     "pol": 1,
+     "theme": "북한·한반도",
+     "eff": 0.19,
+     "text": "북한·한반도: 도발(관심 보통) → 방산 성격상 우호적"
+    },
+    {
+     "pol": 1,
+     "theme": "러시아·우크라이나",
+     "eff": 0.12,
+     "text": "러시아·우크라이나: 전쟁 격화(관심 보통) → 방산 성격상 우호적"
+    }
    ],
    "sig": [
     [
@@ -23924,7 +26136,7 @@
   },
   {
    "ticker": "GE",
-   "name": "GE Aerospace",
+   "name": "GE 에어로스페이스",
    "market": "us",
    "sector": "Industrials",
    "price": 313.8299865722656,
@@ -23961,6 +26173,9 @@
     "squeeze",
     "div_bull"
    ],
+   "rev": 0.18,
+   "revision": 73.8,
+   "geo": 66.5,
    "score_daily": 43.5,
    "score_weekly": 40.0,
    "score_monthly": 42.3,
@@ -24057,6 +26272,35 @@
     307.02,
     312.0,
     313.83
+   ],
+   "desc": "민항기·군용기 제트엔진 세계 1위권 기업. 항공 여행 수요와 정비 매출이 성장 동력.",
+   "ctags": [
+    "방산",
+    "유가 원가 부담주"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/worldstock/stock/GE/total",
+    "news": "https://search.naver.com/search.naver?where=news&query=GE+%EC%97%90%EC%96%B4%EB%A1%9C%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": 1,
+     "theme": "북한·한반도",
+     "eff": 0.19,
+     "text": "북한·한반도: 도발(관심 보통) → 방산 성격상 우호적"
+    },
+    {
+     "pol": -1,
+     "theme": "중동 정세",
+     "eff": -0.15,
+     "text": "중동 정세: 긴장 고조(관심 보통) → 유가 원가 부담주 성격상 부담"
+    },
+    {
+     "pol": 1,
+     "theme": "환율(원화)",
+     "eff": 0.11,
+     "text": "환율(원화): 원화 강세(관심 높음) → 유가 원가 부담주 성격상 우호적"
+    }
    ],
    "sig": [
     [
@@ -24175,7 +26419,7 @@
   },
   {
    "ticker": "LMT",
-   "name": "Lockheed Martin Corporation",
+   "name": "록히드마틴",
    "market": "us",
    "sector": "Industrials",
    "price": 552.0900268554688,
@@ -24211,6 +26455,9 @@
     "breakout",
     "golden"
    ],
+   "rev": -0.21,
+   "revision": 21.5,
+   "geo": 83.0,
    "score_daily": 53.8,
    "score_weekly": 56.0,
    "score_monthly": 61.0,
@@ -24307,6 +26554,34 @@
     522.23,
     532.64,
     552.09
+   ],
+   "desc": "F-35 전투기·미사일을 만드는 세계 최대 방산 기업. 지정학 긴장과 국방 예산에 실적이 연동된다.",
+   "ctags": [
+    "방산"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/worldstock/stock/LMT/total",
+    "news": "https://search.naver.com/search.naver?where=news&query=%EB%A1%9D%ED%9E%88%EB%93%9C%EB%A7%88%ED%8B%B4+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": 1,
+     "theme": "중동 정세",
+     "eff": 0.22,
+     "text": "중동 정세: 긴장 고조(관심 보통) → 방산 성격상 우호적"
+    },
+    {
+     "pol": 1,
+     "theme": "북한·한반도",
+     "eff": 0.19,
+     "text": "북한·한반도: 도발(관심 보통) → 방산 성격상 우호적"
+    },
+    {
+     "pol": 1,
+     "theme": "러시아·우크라이나",
+     "eff": 0.12,
+     "text": "러시아·우크라이나: 전쟁 격화(관심 보통) → 방산 성격상 우호적"
+    }
    ],
    "sig": [
     [
@@ -24430,7 +26705,7 @@
   },
   {
    "ticker": "RTX",
-   "name": "RTX Corporation",
+   "name": "RTX(레이시온)",
    "market": "us",
    "sector": "Industrials",
    "price": 193.9199981689453,
@@ -24467,6 +26742,9 @@
     "golden",
     "div_bull"
    ],
+   "rev": 0.13,
+   "revision": 69.2,
+   "geo": 83.0,
    "score_daily": 48.3,
    "score_weekly": 42.3,
    "score_monthly": 42.2,
@@ -24563,6 +26841,34 @@
     186.47,
     186.95,
     193.92
+   ],
+   "desc": "패트리어트 미사일 등 방산과 프랫앤휘트니 항공엔진을 함께 하는 미국 항공방산 기업.",
+   "ctags": [
+    "방산"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/worldstock/stock/RTX/total",
+    "news": "https://search.naver.com/search.naver?where=news&query=RTX%28%EB%A0%88%EC%9D%B4%EC%8B%9C%EC%98%A8%29+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": 1,
+     "theme": "중동 정세",
+     "eff": 0.22,
+     "text": "중동 정세: 긴장 고조(관심 보통) → 방산 성격상 우호적"
+    },
+    {
+     "pol": 1,
+     "theme": "북한·한반도",
+     "eff": 0.19,
+     "text": "북한·한반도: 도발(관심 보통) → 방산 성격상 우호적"
+    },
+    {
+     "pol": 1,
+     "theme": "러시아·우크라이나",
+     "eff": 0.12,
+     "text": "러시아·우크라이나: 전쟁 격화(관심 보통) → 방산 성격상 우호적"
+    }
    ],
    "sig": [
     [
@@ -24681,7 +26987,7 @@
   },
   {
    "ticker": "NOC",
-   "name": "Northrop Grumman Corporation",
+   "name": "노스럽그러먼",
    "market": "us",
    "sector": "Industrials",
    "price": 519.8599853515625,
@@ -24716,6 +27022,9 @@
    "tags": [
     "reversal"
    ],
+   "rev": -0.06,
+   "revision": 34.6,
+   "geo": 83.0,
    "score_daily": 49.9,
    "score_weekly": 47.6,
    "score_monthly": 42.4,
@@ -24812,6 +27121,34 @@
     495.69,
     499.63,
     519.86
+   ],
+   "desc": "B-21 폭격기·우주·핵전력 시스템을 만드는 미국 방산 기업.",
+   "ctags": [
+    "방산"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/worldstock/stock/NOC/total",
+    "news": "https://search.naver.com/search.naver?where=news&query=%EB%85%B8%EC%8A%A4%EB%9F%BD%EA%B7%B8%EB%9F%AC%EB%A8%BC+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": 1,
+     "theme": "중동 정세",
+     "eff": 0.22,
+     "text": "중동 정세: 긴장 고조(관심 보통) → 방산 성격상 우호적"
+    },
+    {
+     "pol": 1,
+     "theme": "북한·한반도",
+     "eff": 0.19,
+     "text": "북한·한반도: 도발(관심 보통) → 방산 성격상 우호적"
+    },
+    {
+     "pol": 1,
+     "theme": "러시아·우크라이나",
+     "eff": 0.12,
+     "text": "러시아·우크라이나: 전쟁 격화(관심 보통) → 방산 성격상 우호적"
+    }
    ],
    "sig": [
     [
@@ -24925,7 +27262,7 @@
   },
   {
    "ticker": "UPS",
-   "name": "United Parcel Service, Inc.",
+   "name": "UPS",
    "market": "us",
    "sector": "Industrials",
    "price": 97.4800033569336,
@@ -24962,6 +27299,9 @@
     "squeeze",
     "div_bull"
    ],
+   "rev": -0.13,
+   "revision": 23.1,
+   "geo": 36.5,
    "score_daily": 56.1,
    "score_weekly": 53.0,
    "score_monthly": 45.8,
@@ -25058,6 +27398,35 @@
     95.78,
     97.83,
     97.48
+   ],
+   "desc": "세계 최대 택배·물류 기업. 소비 경기, 무역량, 연료비에 실적이 좌우된다.",
+   "ctags": [
+    "관세 민감",
+    "유가 원가 부담주"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/worldstock/stock/UPS/total",
+    "news": "https://search.naver.com/search.naver?where=news&query=UPS+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": -1,
+     "theme": "중동 정세",
+     "eff": -0.36,
+     "text": "중동 정세: 긴장 고조(관심 보통) → 유가 원가 부담주 성격상 부담"
+    },
+    {
+     "pol": 1,
+     "theme": "관세·무역분쟁",
+     "eff": 0.12,
+     "text": "관세·무역분쟁: 방향 혼재(관심 보통) → 관세 민감 성격상 우호적"
+    },
+    {
+     "pol": 1,
+     "theme": "환율(원화)",
+     "eff": 0.11,
+     "text": "환율(원화): 원화 강세(관심 높음) → 유가 원가 부담주 성격상 우호적"
+    }
    ],
    "sig": [
     [
@@ -25181,7 +27550,7 @@
   },
   {
    "ticker": "VZ",
-   "name": "Verizon",
+   "name": "버라이즌",
    "market": "us",
    "sector": "Communication Services",
    "price": 44.790000915527344,
@@ -25217,6 +27586,9 @@
     "reversal",
     "oversold"
    ],
+   "rev": 0.12,
+   "revision": 67.7,
+   "geo": 66.0,
    "score_daily": 59.1,
    "score_weekly": 58.2,
    "score_monthly": 50.7,
@@ -25313,6 +27685,23 @@
     44.42,
     44.4,
     44.79
+   ],
+   "desc": "미국 최대 이동통신사. 안정적 현금흐름과 높은 배당이 특징이며 부채가 많아 금리에 민감.",
+   "ctags": [
+    "경기 방어",
+    "금리 민감"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/worldstock/stock/VZ/total",
+    "news": "https://search.naver.com/search.naver?where=news&query=%EB%B2%84%EB%9D%BC%EC%9D%B4%EC%A6%8C+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": 1,
+     "theme": "연준·금리",
+     "eff": 0.26,
+     "text": "연준·금리: 비둘기(금리 하락)(관심 높음) → 금리 민감 성격상 우호적"
+    }
    ],
    "sig": [
     [
@@ -25431,7 +27820,7 @@
   },
   {
    "ticker": "T",
-   "name": "AT&T Inc.",
+   "name": "AT&T",
    "market": "us",
    "sector": "Communication Services",
    "price": 23.440000534057617,
@@ -25467,6 +27856,9 @@
     "reversal",
     "oversold"
    ],
+   "rev": 0.03,
+   "revision": 49.2,
+   "geo": 66.0,
    "score_daily": 58.6,
    "score_weekly": 55.1,
    "score_monthly": 51.4,
@@ -25563,6 +27955,23 @@
     23.05,
     23.5,
     23.44
+   ],
+   "desc": "미국 대형 통신사(무선·광통신). 미디어 사업 매각 후 통신에 집중하며 배당을 지급.",
+   "ctags": [
+    "경기 방어",
+    "금리 민감"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/worldstock/stock/T/total",
+    "news": "https://search.naver.com/search.naver?where=news&query=AT%26T+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [
+    {
+     "pol": 1,
+     "theme": "연준·금리",
+     "eff": 0.26,
+     "text": "연준·금리: 비둘기(금리 하락)(관심 높음) → 금리 민감 성격상 우호적"
+    }
    ],
    "sig": [
     [
@@ -25711,6 +28120,9 @@
    "tags": [
     "breakout"
    ],
+   "rev": null,
+   "revision": null,
+   "geo": 47.3,
    "score_daily": 51.9,
    "score_weekly": 54.3,
    "score_monthly": 52.0,
@@ -25808,6 +28220,15 @@
     34.1,
     34.35
    ],
+   "desc": "재무가 탄탄하고 배당을 꾸준히 늘린 미국 기업 100개에 투자하는 배당 ETF.",
+   "ctags": [
+    "경기 방어"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/worldstock/etf/SCHD.K/total",
+    "news": "https://search.naver.com/search.naver?where=news&query=SCHD+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [],
    "sig": [
     [
      1,

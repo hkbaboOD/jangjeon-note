@@ -1,6 +1,6 @@
 {
  "ticker": "BAC",
- "name": "BAC",
+ "name": "뱅크오브아메리카",
  "ta": {
   "setup": "reversal",
   "setup_label": "하락 후 반등 시도",
@@ -125,6 +125,419 @@
    "hi52": 65.23,
    "lo52": 46.12
   }
+ },
+ "co": {
+  "ko": "뱅크오브아메리카",
+  "desc": "미국 2위 은행으로 예금 기반이 커서 금리 상승기에 이자이익이 늘어나는 구조.",
+  "tags": [
+   "bank"
+  ],
+  "tags_ko": [
+   "금융(금리 수혜)"
+  ],
+  "industry": null,
+  "country": null,
+  "employees": null,
+  "website": null,
+  "market_cap": 358238519296.0,
+  "currency": "USD",
+  "summary_en": null,
+  "links": {
+   "naver": "https://m.stock.naver.com/worldstock/stock/BAC/total",
+   "news": "https://search.naver.com/search.naver?where=news&query=%EB%B1%85%ED%81%AC%EC%98%A4%EB%B8%8C%EC%95%84%EB%A9%94%EB%A6%AC%EC%B9%B4+%EC%A3%BC%EA%B0%80"
+  }
+ },
+ "fin": {
+  "ok": true,
+  "annual": {
+   "periods": [
+    "2022.12",
+    "2023.12",
+    "2024.12",
+    "2025.12"
+   ],
+   "revenue": [
+    94950000000.0,
+    102769000000.0,
+    105856000000.0,
+    113097000000.0
+   ],
+   "gross": [
+    null,
+    null,
+    null,
+    null
+   ],
+   "op": [
+    null,
+    null,
+    null,
+    null
+   ],
+   "net": [
+    26015000000.0,
+    24656000000.0,
+    25344000000.0,
+    29055000000.0
+   ],
+   "eps": [
+    3.19,
+    3.08,
+    3.21,
+    3.81
+   ]
+  },
+  "quarterly": {
+   "periods": [
+    "25.06",
+    "25.09",
+    "25.12",
+    "26.03",
+    "26.06"
+   ],
+   "revenue": [
+    27443000000.0,
+    28088000000.0,
+    31180000000.0,
+    30272000000.0,
+    null
+   ],
+   "gross": [
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "op": [
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "net": [
+    6879000000.0,
+    8040000000.0,
+    7200000000.0,
+    8155000000.0,
+    null
+   ],
+   "eps": [
+    0.89,
+    1.06,
+    0.98,
+    1.11,
+    1.21
+   ]
+  },
+  "balance": {
+   "periods": [
+    "2024.12",
+    "2025.12"
+   ],
+   "assets": [
+    3261299000000.0,
+    3411738000000.0
+   ],
+   "liab": [
+    2967336000000.0,
+    3108495000000.0
+   ],
+   "equity": [
+    293963000000.0,
+    303243000000.0
+   ],
+   "debt": [
+    326670000000.0,
+    365904000000.0
+   ],
+   "cash": [
+    296486000000.0,
+    239319000000.0
+   ],
+   "cur_assets": [
+    null,
+    null
+   ],
+   "cur_liab": [
+    null,
+    null
+   ]
+  },
+  "cashflow": {
+   "periods": [
+    "2022.12",
+    "2023.12",
+    "2024.12",
+    "2025.12"
+   ],
+   "ocf": [
+    -6327000000.0,
+    44982000000.0,
+    -8805000000.0,
+    12613000000.0
+   ],
+   "capex": [
+    null,
+    null,
+    null,
+    null
+   ],
+   "fcf": [
+    -6327000000.0,
+    44982000000.0,
+    -8805000000.0,
+    12613000000.0
+   ],
+   "div": [
+    -8576000000.0,
+    -9087000000.0,
+    -9503000000.0,
+    -9563000000.0
+   ],
+   "buyback": [
+    -5727000000.0,
+    -4576000000.0,
+    -18358000000.0,
+    -24102000000.0
+   ]
+  },
+  "surprises": [
+   {
+    "q": "25.12",
+    "est": 0.95866,
+    "act": 0.98,
+    "surp": 2.2
+   },
+   {
+    "q": "26.03",
+    "est": 1.02044,
+    "act": 1.11,
+    "surp": 8.8
+   },
+   {
+    "q": "26.06",
+    "est": 1.12309,
+    "act": 1.21,
+    "surp": 7.7
+   },
+   {
+    "q": "26.09",
+    "est": 1.10665,
+    "act": 0.91,
+    "surp": -17.8
+   }
+  ],
+  "calendar": {
+   "next_earnings": "2027-01-15",
+   "eps_avg": 1.13197,
+   "rev_avg": 30518986770.0
+  },
+  "eps_est": {
+   "0q": {
+    "avg": 1.11731,
+    "low": 1.05,
+    "high": 1.16196,
+    "yearAgoEps": 0.98,
+    "numberOfAnalysts": 14.0,
+    "growth": 0.1401,
+    "currency": null
+   },
+   "+1q": {
+    "avg": 1.22,
+    "low": 1.17,
+    "high": 1.3,
+    "yearAgoEps": 1.11,
+    "numberOfAnalysts": 10.0,
+    "growth": 0.0991,
+    "currency": null
+   },
+   "0y": {
+    "avg": 4.43992,
+    "low": 4.27,
+    "high": 4.72,
+    "yearAgoEps": 3.81,
+    "numberOfAnalysts": 20.0,
+    "growth": 0.16530001,
+    "currency": null
+   },
+   "+1y": {
+    "avg": 5.15733,
+    "low": 4.95,
+    "high": 5.347,
+    "yearAgoEps": 4.43992,
+    "numberOfAnalysts": 19.0,
+    "growth": 0.1616,
+    "currency": null
+   }
+  },
+  "rev_est": {
+   "0q": {
+    "avg": 30518986770.0,
+    "low": 29884000000.0,
+    "high": 31268000000.0,
+    "numberOfAnalysts": 7.0,
+    "yearAgoRevenue": 28367000000.0,
+    "growth": 0.0759,
+    "currency": null
+   },
+   "+1q": {
+    "avg": 32404500000.0,
+    "low": 31879000000.0,
+    "high": 32930000000.0,
+    "numberOfAnalysts": 2.0,
+    "yearAgoRevenue": 30272000000.0,
+    "growth": 0.0704,
+    "currency": null
+   },
+   "0y": {
+    "avg": 122831299320.0,
+    "low": 121672000000.0,
+    "high": 124694430000.0,
+    "numberOfAnalysts": 10.0,
+    "yearAgoRevenue": 113097000000.0,
+    "growth": 0.0861,
+    "currency": null
+   },
+   "+1y": {
+    "avg": 130156654090.0,
+    "low": 127718000000.0,
+    "high": 133958250000.0,
+    "numberOfAnalysts": 10.0,
+    "yearAgoRevenue": 122831299320.0,
+    "growth": 0.0596,
+    "currency": null
+   }
+  },
+  "eps_trend": {
+   "0q": {
+    "current": 1.11731,
+    "7daysAgo": 1.14043,
+    "30daysAgo": 1.1577,
+    "60daysAgo": 1.1602,
+    "90daysAgo": 1.15172,
+    "currency": null
+   },
+   "+1q": {
+    "current": 1.22,
+    "7daysAgo": 1.23778,
+    "30daysAgo": 1.2428,
+    "60daysAgo": 1.2444,
+    "90daysAgo": 1.2254,
+    "currency": null
+   },
+   "0y": {
+    "current": 4.43992,
+    "7daysAgo": 4.57218,
+    "30daysAgo": 4.6692,
+    "60daysAgo": 4.67973,
+    "90daysAgo": 4.67249,
+    "currency": null
+   },
+   "+1y": {
+    "current": 5.15733,
+    "7daysAgo": 5.21647,
+    "30daysAgo": 5.27941,
+    "60daysAgo": 5.29151,
+    "90daysAgo": 5.23676,
+    "currency": null
+   }
+  },
+  "eps_rev": {
+   "0q": {
+    "upLast7days": 4.0,
+    "upLast30days": 2.0,
+    "downLast30days": 8.0,
+    "downLast7Days": 5.0,
+    "currency": null
+   },
+   "+1q": {
+    "upLast7days": 0.0,
+    "upLast30days": 1.0,
+    "downLast30days": 2.0,
+    "downLast7Days": 1.0,
+    "currency": null
+   },
+   "0y": {
+    "upLast7days": 1.0,
+    "upLast30days": 0.0,
+    "downLast30days": 15.0,
+    "downLast7Days": 8.0,
+    "currency": null
+   },
+   "+1y": {
+    "upLast7days": 1.0,
+    "upLast30days": 0.0,
+    "downLast30days": 15.0,
+    "downLast7Days": 8.0,
+    "currency": null
+   }
+  },
+  "currency": "USD",
+  "analysis": [
+   {
+    "pol": 1,
+    "cat": "성장",
+    "text": "연간 매출 $113.1B (2025.12), 전년 대비 +6.8%"
+   },
+   {
+    "pol": 1,
+    "cat": "현금흐름",
+    "text": "잉여현금흐름(FCF) $12.6B, 매출 대비 11.2%"
+   },
+   {
+    "pol": -1,
+    "cat": "이익의 질",
+    "text": "영업현금흐름이 순이익의 0.4배 — 이익 대비 현금 유입이 적음"
+   },
+   {
+    "pol": 1,
+    "cat": "주주환원",
+    "text": "최근 연도 배당+자사주 매입 $33.7B"
+   },
+   {
+    "pol": -1,
+    "cat": "재무안정성",
+    "text": "부채비율(부채/자본) 1025%"
+   },
+   {
+    "pol": 0,
+    "cat": "재무안정성",
+    "text": "순차입금 $126.6B"
+   },
+   {
+    "pol": 1,
+    "cat": "실적 발표",
+    "text": "최근 4개 분기 중 3번 예상치 상회 (평균 서프라이즈 +0.2%)"
+   },
+   {
+    "pol": -1,
+    "cat": "컨센서스",
+    "text": "올해 EPS 추정치 30일 변화 -4.9%"
+   },
+   {
+    "pol": -1,
+    "cat": "컨센서스",
+    "text": "최근 30일 추정치 상향 0건 · 하향 15건"
+   },
+   {
+    "pol": 1,
+    "cat": "컨센서스",
+    "text": "내년 EPS 컨센서스 성장률 +16.2% (애널리스트 19명)"
+   }
+  ]
+ },
+ "geo": {
+  "score": 38.7,
+  "notes": [
+   {
+    "pol": -1,
+    "theme": "연준·금리",
+    "eff": -0.15,
+    "text": "연준·금리: 비둘기(금리 하락)(관심 높음) → 금융(금리 수혜) 성격상 부담"
+   }
+  ]
  },
  "d": [
   "2026-04-14",

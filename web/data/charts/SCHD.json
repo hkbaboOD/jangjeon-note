@@ -134,6 +134,36 @@
    "lo52": 26.32
   }
  },
+ "co": {
+  "ko": "슈왑 미국 배당주 ETF",
+  "desc": "재무가 탄탄하고 배당을 꾸준히 늘린 미국 기업 100개에 투자하는 배당 ETF.",
+  "tags": [
+   "defensive"
+  ],
+  "tags_ko": [
+   "경기 방어"
+  ],
+  "industry": null,
+  "country": null,
+  "employees": null,
+  "website": null,
+  "market_cap": 107887099904.0,
+  "currency": "USD",
+  "summary_en": null,
+  "links": {
+   "naver": "https://m.stock.naver.com/worldstock/etf/SCHD.K/total",
+   "news": "https://search.naver.com/search.naver?where=news&query=%EC%8A%88%EC%99%91+%EB%AF%B8%EA%B5%AD+%EB%B0%B0%EB%8B%B9%EC%A3%BC+ETF+%EC%A3%BC%EA%B0%80"
+  }
+ },
+ "fin": {
+  "ok": false,
+  "currency": "USD",
+  "analysis": []
+ },
+ "geo": {
+  "score": 47.3,
+  "notes": []
+ },
  "d": [
   "2026-04-14",
   "2026-04-15",

@@ -528,39 +528,39 @@
    "top": [
     {
      "ticker": "NOC",
-     "name": "Northrop Grumman Corporation",
+     "name": "노스럽그러먼",
      "chg": 4.048992308517363
     },
     {
      "ticker": "RTX",
-     "name": "RTX Corporation",
+     "name": "RTX(레이시온)",
      "chg": 3.7282703046166876
     },
     {
      "ticker": "LMT",
-     "name": "Lockheed Martin Corporation",
+     "name": "록히드마틴",
      "chg": 3.651624300113654
     },
     {
      "ticker": "COP",
-     "name": "ConocoPhillips",
+     "name": "코노코필립스",
      "chg": 3.3726091324280505
     },
     {
      "ticker": "CVX",
-     "name": "Chevron Corporation",
+     "name": "셰브론",
      "chg": 2.585262620643358
     }
    ],
    "bottom": [
     {
      "ticker": "AMD",
-     "name": "Advanced Micro Devices, Inc.",
+     "name": "AMD",
      "chg": -5.954855064974762
     },
     {
      "ticker": "INTC",
-     "name": "Intel Corporation",
+     "name": "인텔",
      "chg": -5.787987955844709
     },
     {
@@ -570,12 +570,12 @@
     },
     {
      "ticker": "KLAC",
-     "name": "KLA Corporation",
+     "name": "KLA",
      "chg": -4.998280915467834
     },
     {
      "ticker": "LRCX",
-     "name": "Lam Research Corporation",
+     "name": "램리서치",
      "chg": -4.87277064443391
     }
    ]
@@ -771,6 +771,62 @@
   }
  ],
  "ai_summary": null,
+ "news_kr": [
+  {
+   "title": "폭락장에 반대매매 속출...완충재 없는 코스피",
+   "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBIX0I0ZWpIdlNCQklqbzhFdFI2OHU0dy1FbFI4MkJ6MDVoZmhGcWVmQ2xMVVdoeEVmaXJXMGJnOWdPYmcyVXk5TURNMWZEbkNGLTBVeEQ5Yzl5MTVuX0E?oc=5",
+   "publisher": "YTN",
+   "time": "2026-10-16T20:28:00+00:00"
+  },
+  {
+   "title": "코스피 14% 폭락 속 13% 솟구쳤다…불기둥 세운 종목[김근희의 증시 랩업] - 머니투데이",
+   "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9VX0J0R01ua2EtWjZLZ0pnRFpPZnJkVW10dDVER2Vuekd1M1JxN3NtRmkzQjBTMTVzb0dOQVNUSFVISzJsTTc0Ujc0VGhZX2lVcVVLdnUzREtnOHhFRDJ6UU56TExhZWFj0gFuQVVfeXFMTWZKZjNUTHI3TWpTZ2NqemsyVEl1ZGlmSkpMSzQ0b2p5VENQSzRfZi0wUUN5R0s3ZU1Vd1FMTG5wMjZyUVdsdHdBSmNGRkJWaTE2dXpsQkRqMWhJX2VKemZ3eXotaEJ1dm5CaG9BbEE?oc=5",
+   "publisher": "머니투데이",
+   "time": "2026-10-17T00:00:00+00:00"
+  },
+  {
+   "title": "코스피 7거래일 연속 하락에 반대매매 3000억원 육박 - 조선비즈",
+   "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPeGFQbVMzSGNQeUZjaVp6V3lRTU9oaDhBeTZKbmJIZjJYckxfUV9QRDJsdXFkd3I4T3hpSTY2MmRLTmo5NEExVkU4Y3NieEZNR1dQb21seUlydUZMRTZaVWZLTDBFODQyZWZDamdZRXJqWkw4S2Y4U0pkSGp6MUNPdDV2emlEd1Yy0gGcAUFVX3lxTE5wUC04dEtFVWVfZTk2UGdnZXhZOVFNVHJhQ2pzTDB2R3FOb2VsNGtyUW5BWWFiZGQtcXNzemZ3YVBzV0F2cG1sRkJtWnBzTlU4UE9IZjBjcGE2NGVLbmI5U1BKVE9RYjZ3ZVQxUk11RFlXVWtYTWFlRjdkWDJGYnhaSVUyblZYQmJ3Y1kwbmh6R1FFSjloemFWRDBRTQ?oc=5",
+   "publisher": "Chosunbiz",
+   "time": "2026-10-17T00:43:00+00:00"
+  },
+  {
+   "title": "삼전닉스가 이끈 폭락장… 5600선 추락한 국장 ‘다음주 운명’은 [주간 증시해설서]",
+   "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5VZ0VxdndDUTB2bW1NUkdBd25feV9TQ0JfLW9fUWx0S180enI4dmFXTGdocWFUZWhSbDFjTEdpVDlaSFV5QkRPZjNfYi1LVExWcW1vRXV3QzVVN2d1MGQ3OEEyV3NieFBUQmhvZUhR?oc=5",
+   "publisher": "더스쿠프",
+   "time": "2026-10-17T01:04:53+00:00"
+  },
+  {
+   "title": "코스피 꺾이자…해외 코인거래소 '큰손' 90% 이상 반등 베팅",
+   "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1rY2I0VWZuR2wtcTAtalNwOWFGc1ZHY25Rd3ZwX3k2WDVsMlJQM1RWc0lnSlBrYUJHT3hLZXlNdzNDRTV0ZHZadkVXbVBwY2NBaXRyNHJxeDI1QXc?oc=5",
+   "publisher": "연합뉴스",
+   "time": "2026-10-16T20:55:01+00:00"
+  },
+  {
+   "title": "'빚투' 부메랑…코스피 급락에 한주간 3천억원 강제청산",
+   "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1MeFJQbXAweXlia1pFSXNQV25Cdmwza1k1UjVibXI1Mk1CYi1TbXF5MW1mcW5DMVJnb0ZCTHZET1NqdkZNb0RGX3A0cXR2MV9pSEE?oc=5",
+   "publisher": "매일경제 마켓",
+   "time": "2026-10-16T23:00:02+00:00"
+  },
+  {
+   "title": "코스피 급락에 반대매매 3000억…채권으로 돈 몰렸다",
+   "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5GQlhGTHEtTzdNTmZBZ2loWTlhMDBqaWp6Yk9UaHR5dU9NV3A1RllTRWptWTI0NDRiaHNnWXJLcllUVll1R05iSlZFejY0VlNrUloxRjNJQTB5Y2gyMWdkb3ptUTI?oc=5",
+   "publisher": "서울경제TV",
+   "time": "2026-10-17T02:16:10+00:00"
+  },
+  {
+   "title": "“과거 16번, 李 정부 15번”…걸핏하면 서킷브레이커, 요동치는 韓 증시 [증시레이더]",
+   "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9PR3F4eThTVmZLZE1HZloxdTJqbzNnTGdxMVZLQ3JxbzBWRHJJX0gtWjZpZG1WZDdBUGxaM2tEQXl3RW05Q2dkU0xyb1ZSVjJkNGdlcVYzdkN6ZnppOWtNdzBlMmg?oc=5",
+   "publisher": "디지털데일리",
+   "time": "2026-10-17T00:00:00+00:00"
+  }
+ ],
+ "geo": [
+  "환율(원화): 48시간 기사 99건, 원화 강세 · 5일 원달러 -0.5% → 유리: 유가 원가 부담주, 국내 상장주 / 부담: 수출주",
+  "중동 정세: 48시간 기사 50건, 긴장 고조 · 5일 WTI +7.8%, 금 -0.7% → 유리: 정유·에너지, 방산, 해운·조선 / 부담: 유가 원가 부담주, 국내 상장주",
+  "연준·금리: 48시간 기사 77건, 비둘기(금리 하락) · 5일 미 10년물 금리 -2.8% → 유리: 금리 민감, AI 인프라 / 부담: 금융(금리 수혜)",
+  "북한·한반도: 48시간 기사 41건, 도발 · 5일 원달러 -0.5%, 코스피 -14.5% → 유리: 방산 / 부담: 국내 상장주"
+ ],
  "date": "2026-10-17",
- "generated": "2026-10-17T10:46+09:00"
+ "generated": "2026-10-17T11:25+09:00"
 }

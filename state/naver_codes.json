@@ -1,0 +1,438 @@
+{
+ "AAPL": {
+  "code": "AAPL.O",
+  "type": "stock",
+  "ko": "애플",
+  "checked": "2026-10-17"
+ },
+ "MSFT": {
+  "code": "MSFT.O",
+  "type": "stock",
+  "ko": "마이크로소프트",
+  "checked": "2026-10-17"
+ },
+ "NVDA": {
+  "code": "NVDA.O",
+  "type": "stock",
+  "ko": "엔비디아",
+  "checked": "2026-10-17"
+ },
+ "GOOGL": {
+  "code": "GOOGL.O",
+  "type": "stock",
+  "ko": "알파벳 Class A",
+  "checked": "2026-10-17"
+ },
+ "AMZN": {
+  "code": "AMZN.O",
+  "type": "stock",
+  "ko": "아마존닷컴",
+  "checked": "2026-10-17"
+ },
+ "META": {
+  "code": "META.O",
+  "type": "stock",
+  "ko": "메타",
+  "checked": "2026-10-17"
+ },
+ "AVGO": {
+  "code": "AVGO.O",
+  "type": "stock",
+  "ko": "브로드컴",
+  "checked": "2026-10-17"
+ },
+ "TSM": {
+  "code": "TSM",
+  "type": "stock",
+  "ko": "TSMC ADR",
+  "checked": "2026-10-17"
+ },
+ "MU": {
+  "code": "MU.O",
+  "type": "stock",
+  "ko": "마이크론 테크놀로지",
+  "checked": "2026-10-17"
+ },
+ "AMD": {
+  "code": "AMD.O",
+  "type": "stock",
+  "ko": "AMD(어드밴스드 마이크로 디바이시스)",
+  "checked": "2026-10-17"
+ },
+ "QCOM": {
+  "code": "QCOM.O",
+  "type": "stock",
+  "ko": "퀄컴",
+  "checked": "2026-10-17"
+ },
+ "INTC": {
+  "code": "INTC.O",
+  "type": "stock",
+  "ko": "인텔",
+  "checked": "2026-10-17"
+ },
+ "ASML": {
+  "code": "ASML.O",
+  "type": "stock",
+  "ko": "ASML 홀딩 ADR",
+  "checked": "2026-10-17"
+ },
+ "AMAT": {
+  "code": "AMAT.O",
+  "type": "stock",
+  "ko": "어플라이드 머티어리얼즈",
+  "checked": "2026-10-17"
+ },
+ "LRCX": {
+  "code": "LRCX.O",
+  "type": "stock",
+  "ko": "램 리서치",
+  "checked": "2026-10-17"
+ },
+ "KLAC": {
+  "code": "KLAC.O",
+  "type": "stock",
+  "ko": "KLA",
+  "checked": "2026-10-17"
+ },
+ "ADBE": {
+  "code": "ADBE.O",
+  "type": "stock",
+  "ko": "어도비",
+  "checked": "2026-10-17"
+ },
+ "CRM": {
+  "code": "CRM",
+  "type": "stock",
+  "ko": "세일즈포스",
+  "checked": "2026-10-17"
+ },
+ "ORCL": {
+  "code": "ORCL.K",
+  "type": "stock",
+  "ko": "오라클",
+  "checked": "2026-10-17"
+ },
+ "CSCO": {
+  "code": "CSCO.O",
+  "type": "stock",
+  "ko": "시스코 시스템즈",
+  "checked": "2026-10-17"
+ },
+ "IBM": {
+  "code": "IBM",
+  "type": "stock",
+  "ko": "IBM(인터내셔널 비지니스 머신)",
+  "checked": "2026-10-17"
+ },
+ "TXN": {
+  "code": "TXN.O",
+  "type": "stock",
+  "ko": "텍사스 인스트루먼트",
+  "checked": "2026-10-17"
+ },
+ "JPM": {
+  "code": "JPM",
+  "type": "stock",
+  "ko": "제이피모간체이스",
+  "checked": "2026-10-17"
+ },
+ "BAC": {
+  "code": "BAC",
+  "type": "stock",
+  "ko": "뱅크오브아메리카",
+  "checked": "2026-10-17"
+ },
+ "WFC": {
+  "code": "WFC",
+  "type": "stock",
+  "ko": "웰스파고",
+  "checked": "2026-10-17"
+ },
+ "GS": {
+  "code": "GS",
+  "type": "stock",
+  "ko": "골드만삭스",
+  "checked": "2026-10-17"
+ },
+ "MS": {
+  "code": "MS",
+  "type": "stock",
+  "ko": "모간스탠리",
+  "checked": "2026-10-17"
+ },
+ "V": {
+  "code": "V",
+  "type": "stock",
+  "ko": "비자",
+  "checked": "2026-10-17"
+ },
+ "MA": {
+  "code": "MA",
+  "type": "stock",
+  "ko": "마스터카드",
+  "checked": "2026-10-17"
+ },
+ "PYPL": {
+  "code": "PYPL.O",
+  "type": "stock",
+  "ko": "페이팔 홀딩스",
+  "checked": "2026-10-17"
+ },
+ "BRK-B": {
+  "code": null,
+  "checked": "2026-10-17"
+ },
+ "UNH": {
+  "code": "UNH",
+  "type": "stock",
+  "ko": "유나이티드헬스 그룹",
+  "checked": "2026-10-17"
+ },
+ "JNJ": {
+  "code": "JNJ",
+  "type": "stock",
+  "ko": "존슨앤드존슨",
+  "checked": "2026-10-17"
+ },
+ "PFE": {
+  "code": "PFE",
+  "type": "stock",
+  "ko": "화이자",
+  "checked": "2026-10-17"
+ },
+ "MRK": {
+  "code": "MRK",
+  "type": "stock",
+  "ko": "머크 앤 코",
+  "checked": "2026-10-17"
+ },
+ "ABBV": {
+  "code": "ABBV.K",
+  "type": "stock",
+  "ko": "애브비",
+  "checked": "2026-10-17"
+ },
+ "LLY": {
+  "code": "LLY",
+  "type": "stock",
+  "ko": "일라이 릴리",
+  "checked": "2026-10-17"
+ },
+ "AMGN": {
+  "code": "AMGN.O",
+  "type": "stock",
+  "ko": "암젠",
+  "checked": "2026-10-17"
+ },
+ "CVS": {
+  "code": "CVS",
+  "type": "stock",
+  "ko": "CVS 헬스",
+  "checked": "2026-10-17"
+ },
+ "XOM": {
+  "code": "XOM",
+  "type": "stock",
+  "ko": "엑슨모빌 홀딩스",
+  "checked": "2026-10-17"
+ },
+ "CVX": {
+  "code": "CVX",
+  "type": "stock",
+  "ko": "셰브론",
+  "checked": "2026-10-17"
+ },
+ "COP": {
+  "code": "COP",
+  "type": "stock",
+  "ko": "코노코필립스",
+  "checked": "2026-10-17"
+ },
+ "SLB": {
+  "code": "SLB",
+  "type": "stock",
+  "ko": "SLB",
+  "checked": "2026-10-17"
+ },
+ "NEE": {
+  "code": "NEE",
+  "type": "stock",
+  "ko": "넥스트에라 에너지",
+  "checked": "2026-10-17"
+ },
+ "DUK": {
+  "code": "DUK",
+  "type": "stock",
+  "ko": "듀크 에너지",
+  "checked": "2026-10-17"
+ },
+ "SO": {
+  "code": "SO",
+  "type": "stock",
+  "ko": "서던",
+  "checked": "2026-10-17"
+ },
+ "PG": {
+  "code": "PG",
+  "type": "stock",
+  "ko": "P&G(프록터 & 갬블)",
+  "checked": "2026-10-17"
+ },
+ "KO": {
+  "code": "KO",
+  "type": "stock",
+  "ko": "코카콜라",
+  "checked": "2026-10-17"
+ },
+ "PEP": {
+  "code": "PEP.O",
+  "type": "stock",
+  "ko": "펩시코",
+  "checked": "2026-10-17"
+ },
+ "WMT": {
+  "code": "WMT.O",
+  "type": "stock",
+  "ko": "월마트",
+  "checked": "2026-10-17"
+ },
+ "COST": {
+  "code": "COST.O",
+  "type": "stock",
+  "ko": "코스트코 홀세일",
+  "checked": "2026-10-17"
+ },
+ "HD": {
+  "code": "HD",
+  "type": "stock",
+  "ko": "홈디포",
+  "checked": "2026-10-17"
+ },
+ "MCD": {
+  "code": "MCD",
+  "type": "stock",
+  "ko": "맥도날드",
+  "checked": "2026-10-17"
+ },
+ "NKE": {
+  "code": "NKE",
+  "type": "stock",
+  "ko": "나이키",
+  "checked": "2026-10-17"
+ },
+ "DIS": {
+  "code": "DIS",
+  "type": "stock",
+  "ko": "월트 디즈니",
+  "checked": "2026-10-17"
+ },
+ "CAT": {
+  "code": "CAT",
+  "type": "stock",
+  "ko": "캐터필러",
+  "checked": "2026-10-17"
+ },
+ "DE": {
+  "code": "DE",
+  "type": "stock",
+  "ko": "디어",
+  "checked": "2026-10-17"
+ },
+ "HON": {
+  "code": "HON.O",
+  "type": "stock",
+  "ko": "허니웰 인터내셔널",
+  "checked": "2026-10-17"
+ },
+ "GE": {
+  "code": "GE",
+  "type": "stock",
+  "ko": "GE 에어로스페이스",
+  "checked": "2026-10-17"
+ },
+ "LMT": {
+  "code": "LMT",
+  "type": "stock",
+  "ko": "록히드 마틴",
+  "checked": "2026-10-17"
+ },
+ "RTX": {
+  "code": "RTX",
+  "type": "stock",
+  "ko": "RTX",
+  "checked": "2026-10-17"
+ },
+ "NOC": {
+  "code": "NOC",
+  "type": "stock",
+  "ko": "노스롭 그루만",
+  "checked": "2026-10-17"
+ },
+ "UPS": {
+  "code": "UPS",
+  "type": "stock",
+  "ko": "UPS(유나이티드 파셀 서비스)",
+  "checked": "2026-10-17"
+ },
+ "VZ": {
+  "code": "VZ",
+  "type": "stock",
+  "ko": "버라이존",
+  "checked": "2026-10-17"
+ },
+ "T": {
+  "code": "T",
+  "type": "stock",
+  "ko": "AT&T",
+  "checked": "2026-10-17"
+ },
+ "SCHD": {
+  "code": "SCHD.K",
+  "type": "etf",
+  "ko": "Schwab US Dividend Equity ETF",
+  "checked": "2026-10-17"
+ },
+ "VYM": {
+  "code": "VYM",
+  "type": "etf",
+  "ko": "Vanguard High Dividend Yield ETF",
+  "checked": "2026-10-17"
+ },
+ "VIG": {
+  "code": "VIG",
+  "type": "etf",
+  "ko": "Vanguard Dividend Appreciation ETF",
+  "checked": "2026-10-17"
+ },
+ "DGRO": {
+  "code": "DGRO.K",
+  "type": "etf",
+  "ko": "iShares Core Dividend Growth ETF",
+  "checked": "2026-10-17"
+ },
+ "JEPI": {
+  "code": "JEPI.K",
+  "type": "etf",
+  "ko": "JPMorgan Equity Premium Income ETF",
+  "checked": "2026-10-17"
+ },
+ "JEPQ": {
+  "code": "JEPQ.O",
+  "type": "etf",
+  "ko": "JPMorgan Nasdaq Equity Premium Income ETF",
+  "checked": "2026-10-17"
+ },
+ "O": {
+  "code": "O",
+  "type": "stock",
+  "ko": "리얼티 인컴",
+  "checked": "2026-10-17"
+ },
+ "MO": {
+  "code": "MO",
+  "type": "stock",
+  "ko": "알트리아그룹",
+  "checked": "2026-10-17"
+ }
+}
