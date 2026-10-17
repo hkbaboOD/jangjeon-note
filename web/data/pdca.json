@@ -4,25 +4,25 @@
   "version": 2,
   "weights": {
    "daily": {
+    "quality": 0.187,
+    "trend": 0.105,
     "target": 0.187,
     "timing": 0.21,
-    "value": 0.311,
-    "trend": 0.105,
-    "quality": 0.187
+    "value": 0.311
    },
    "weekly": {
-    "target": 0.169,
-    "momentum": 0.105,
-    "value": 0.339,
+    "quality": 0.282,
     "trend": 0.105,
-    "quality": 0.282
+    "momentum": 0.105,
+    "target": 0.169,
+    "value": 0.339
    },
    "monthly": {
-    "target": 0.155,
     "growth": 0.155,
-    "value": 0.31,
+    "quality": 0.31,
     "trend": 0.07,
-    "quality": 0.31
+    "target": 0.155,
+    "value": 0.31
    }
   },
   "basis": {
@@ -39,9 +39,9 @@
   "changed": false
  },
  "do": {
-  "days_recorded": 1,
-  "new_picks": 10,
-  "open_picks": 10
+  "days_recorded": 2,
+  "new_picks": 19,
+  "open_picks": 19
  },
  "check": {
   "matured": {},
@@ -55,9 +55,9 @@
   "contest": {}
  },
  "next": [
-  "오늘 추천: 실전 기록 1일 — 실전 채점 기반 보정까지 약 9주",
-  "이번 주 추천: 실전 기록 1일 — 실전 채점 기반 보정까지 약 12주",
-  "이번 달 추천: 실전 기록 1일 — 실전 채점 기반 보정까지 약 36주",
+  "오늘 추천: 실전 기록 2일 — 실전 채점 기반 보정까지 약 9주",
+  "이번 주 추천: 실전 기록 2일 — 실전 채점 기반 보정까지 약 12주",
+  "이번 달 추천: 실전 기록 2일 — 실전 채점 기반 보정까지 약 36주",
   "이번 주 근거가 유의하지 않아 가중치 유지(억지로 바꾸지 않음)"
  ],
  "history": [

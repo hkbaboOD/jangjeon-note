@@ -1,8 +1,8 @@
 {
  "ok": true,
- "days": 1,
+ "days": 2,
  "first": "2026-10-16",
- "last": "2026-10-16",
+ "last": "2026-10-17",
  "matured": {
   "5": 0,
   "20": 0,
@@ -15,10 +15,12 @@
   "growth": {},
   "momentum": {},
   "trend": {},
-  "timing": {}
+  "timing": {},
+  "revision": {},
+  "geo": {}
  },
  "composite": {},
  "top3": {},
  "recent": {},
- "generated": "2026-10-17T10:48+09:00"
+ "generated": "2026-10-17T13:12+09:00"
 }
