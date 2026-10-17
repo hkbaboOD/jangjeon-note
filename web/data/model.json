@@ -1,27 +1,27 @@
 {
- "updated": "2026-10-16T16:43+09:00",
+ "updated": "2026-10-17T10:51+09:00",
  "version": 2,
  "weights": {
   "daily": {
-   "quality": 0.187,
    "target": 0.187,
    "timing": 0.21,
+   "value": 0.311,
    "trend": 0.105,
-   "value": 0.311
+   "quality": 0.187
   },
   "weekly": {
-   "quality": 0.282,
    "target": 0.169,
-   "trend": 0.105,
    "momentum": 0.105,
-   "value": 0.339
+   "value": 0.339,
+   "trend": 0.105,
+   "quality": 0.282
   },
   "monthly": {
-   "quality": 0.31,
    "target": 0.155,
    "growth": 0.155,
+   "value": 0.31,
    "trend": 0.07,
-   "value": 0.31
+   "quality": 0.31
   }
  },
  "setup_adj": {
@@ -99,6 +99,7 @@
   }
  ],
  "changed": false,
+ "changes_now": [],
  "contest": {},
  "evidence": {
   "daily": {
