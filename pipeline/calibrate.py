@@ -29,10 +29,10 @@ from .technical import SETUPS
 from .valuation import HORIZON_WEIGHTS
 
 CHART = ("trend", "momentum", "timing")
-FACTORS = ("value", "quality", "target", "growth", "momentum", "trend", "timing")
+FACTORS = ("value", "quality", "target", "growth", "momentum", "trend", "timing", "revision", "geo")
 HZ = {"daily": "5", "weekly": "20", "monthly": "60"}
 NAME = {"trend": "추세", "momentum": "모멘텀", "timing": "타이밍", "value": "가치", "quality": "퀄리티",
-        "target": "상승여력", "growth": "성장"}
+        "target": "상승여력", "growth": "성장", "revision": "이익 추정치 변화", "geo": "국제 정세"}
 H_NAME = {"daily": "오늘", "weekly": "이번 주", "monthly": "이번 달"}
 MAX_STEP, MAX_ADJ_STEP, ADJ_CAP = 0.05, 2.0, 5.0
 T_MIN = 2.0

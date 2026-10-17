@@ -21,6 +21,7 @@ const state = {
   labH: store.get("labH", "20"),
   labM: store.get("labM", "all"),
   labF: store.get("labF", "total"),
+  finP: store.get("finP", "a"),
 };
 
 /* ── 포맷 ── */
@@ -85,10 +86,36 @@ function levelsRow(lv, t) {
     <div><small>손익비 <span class="sr">1차 저항까지 기대폭 ÷ 손절폭</span></small><b>${lv.rr == null ? "-" : nf(lv.rr, 2) + " : 1"}</b><em>1차 저항 ÷ 손절폭</em></div>
   </div>`;
 }
-const extLink = (t) => (isKR(t) ? `https://finance.naver.com/item/main.naver?code=${code(t)}` : `https://finance.yahoo.com/quote/${encodeURIComponent(t)}`);
+/* 한국어 증권 사이트 링크: 파이프라인이 만든 links(네이버 코드 확인분) 우선, 없으면 네이버 국내 종목 페이지/통합검색 */
+function linksOf(t) {
+  const r = (state.data.screen?.rows || []).find((x) => x.ticker === t);
+  if (r?.links) return r.links;
+  const cd = state.charts[t];
+  if (cd?.co?.links) return cd.co.links;
+  const nm = r?.name || t;
+  const news = `https://search.naver.com/search.naver?where=news&query=${encodeURIComponent(nm + " 주가")}`;
+  return isKR(t) ? { naver: `https://m.stock.naver.com/domestic/stock/${code(t)}/total`, fnguide: `https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A${code(t)}`, news }
+    : { naver: `https://search.naver.com/search.naver?query=${encodeURIComponent(nm + " 주가")}`, news };
+}
+const extLink = (t) => linksOf(t).naver;
+function linkBtns(L, cls = "btn ghost sm") {
+  if (!L) return "";
+  const a = (href, label) => (href ? `<a class="${cls}" href="${esc(href)}" target="_blank" rel="noopener">${label}</a>` : "");
+  return a(L.naver, "네이버 증권") + a(L.news, "관련 뉴스") + a(L.fnguide, "FnGuide 재무");
+}
+/* 재무 숫자 포맷 */
+const money = (v, cur) => {
+  if (v == null || Number.isNaN(v)) return "-";
+  const a = Math.abs(v);
+  if (cur === "KRW") return a >= 1e12 ? nf(v / 1e12, 1) + "조" : nf(v / 1e8, 0) + "억";
+  return a >= 1e9 ? "$" + nf(v / 1e9, 1) + "B" : "$" + nf(v / 1e6, 0) + "M";
+};
+const epsFmt = (v, cur) => (v == null ? "-" : cur === "KRW" ? nf(v, 0) + "원" : "$" + nf(v, 2));
+const pctOf = (a, b) => (a == null || b == null || !b ? null : (a / b) * 100);
+const yoy = (a, b) => (a == null || b == null || !b ? null : b > 0 ? (a / b - 1) * 100 : ((a - b) / Math.abs(b)) * 100);
 
 /* ── 데이터 ── */
-const FILES = ["meta", "briefing", "watch", "picks", "track", "screen", "dividend", "alerts", "backtest", "model", "forward", "scorecard", "pdca", "pdca_review", "changelog"];
+const FILES = ["meta", "briefing", "watch", "picks", "track", "screen", "dividend", "alerts", "backtest", "model", "forward", "scorecard", "pdca", "pdca_review", "changelog", "geo", "geo_weekly"];
 async function load() {
   const btn = $("#refresh"); btn.classList.add("spin");
   const res = await Promise.allSettled(FILES.map((f) => fetch(`data/${f}.json?t=${Date.now()}`, { cache: "no-store" }).then((r) => (r.ok ? r.json() : null))));
@@ -146,13 +173,40 @@ function renderBrief() {
     ${b.ai_summary ? `<div class="sec"><h2>AI 시황 요약</h2><div class="ai">${esc(b.ai_summary)}</div></div>` : ""}
     <div class="sec"><h2>간밤 포인트</h2><ul class="bullets">${(b.points || []).map((p) => `<li>${esc(p)}</li>`).join("") || "<li>특이사항 없음</li>"}</ul></div>
     <div class="sec"><h2>오늘 국내장 체크</h2><ul class="bullets">${(b.outlook || []).map((p) => `<li>${esc(p)}</li>`).join("")}</ul></div>
+    ${geoCard(state.data.geo, state.data.geo_weekly)}
     ${diag ? `<div class="sec"><h2>관심종목 급락 진단</h2>${diag}</div>` : ""}
     <div class="sec"><h2>관심종목 <small>${esc(when(w?.updated))}</small></h2><div class="panel">${watch || '<div class="empty">config/settings.yaml 의 watchlist 에 종목을 추가하세요.</div>'}</div></div>
     ${breadth ? `<div class="sec"><h2>시장 폭</h2><div class="panel pad breadth">${breadth}</div></div>` : ""}
     ${movers}
-    ${(b.news || []).length ? `<div class="sec"><h2>헤드라인</h2><div class="panel news">${b.news.map((n) => `<a href="${esc(n.link)}" target="_blank" rel="noopener">${esc(n.title)}<small>${esc(n.publisher || "")} ${n.time ? "· " + esc(when(n.time)) : ""}</small></a>`).join("")}</div></div>` : ""}
+    ${(b.news_kr || []).length ? `<div class="sec"><h2>국내 증시 헤드라인</h2><div class="panel news">${b.news_kr.map((n) => `<a href="${esc(n.link)}" target="_blank" rel="noopener">${esc(n.title)}<small>${esc(n.publisher || "")} ${n.time ? "· " + esc(when(n.time)) : ""}</small></a>`).join("")}</div></div>` : ""}
+    ${(b.news || []).length ? `<div class="sec"><h2>해외 헤드라인</h2><div class="panel news">${b.news.map((n) => `<a href="${esc(n.link)}" target="_blank" rel="noopener">${esc(n.title)}<small>${esc(n.publisher || "")} ${n.time ? "· " + esc(when(n.time)) : ""}</small></a>`).join("")}</div></div>` : ""}
     <p class="note">${esc(state.data.meta?.disclaimer || "")}</p>`;
 }
+
+/* ── 국제 정세 체크 ── */
+const GEO_LV = { "매우 높음": "lv4", 높음: "lv3", 보통: "lv2", 낮음: "lv1" };
+function geoCard(g, gw) {
+  if (!g?.themes?.length && !gw) return "";
+  const th = (g?.themes || []).slice(0, 6).map((x) => {
+    const dir = x.direction >= 0.2 ? "esc" : x.direction <= -0.2 ? "de" : "mix";
+    const mv = Object.entries(x.moves || {}).map(([k, v]) => `${esc(GEO_TK[k] || k)} <span class="${cls(v)}">${sgn(v, 1)}</span>`).join(" · ");
+    return `<details class="geo-t">
+      <summary><div class="gh"><b>${esc(x.label)}</b><span class="gs ${dir}">${esc(x.stance)}</span></div>
+        <div class="gm"><span class="heat ${GEO_LV[x.level] || ""}"><i style="width:${Math.round((x.heat || 0) * 100)}%"></i></span>
+        <small>관심 ${esc(x.level)} · 48시간 ${nf(x.n)}건${x.ratio ? ` (평소의 ${nf(x.ratio, 1)}배)` : ""}</small></div>
+        ${(x.up?.length || x.down?.length) && Math.abs(x.intensity) >= 0.1 ? `<div class="gi">${x.up?.length ? `<span class="up">유리 ${esc(x.up.join(", "))}</span>` : ""}${x.down?.length ? `<span class="down">부담 ${esc(x.down.join(", "))}</span>` : ""}</div>` : ""}
+      </summary>
+      <div class="gd">${mv ? `<p>시장 반응(5일): ${mv}</p>` : ""}<p>제목 어조: 고조 ${nf(x.esc_n)} · 완화 ${nf(x.de_n)}</p>
+        ${(x.headlines || []).map((n) => `<a href="${esc(n.link)}" target="_blank" rel="noopener">${esc(n.title)}<small>${esc(n.publisher || "")}</small></a>`).join("")}</div>
+    </details>`;
+  }).join("");
+  const wk = gw?.items?.length ? `<div class="geo-wk"><h3>주간 정세 해설 <small>${esc(gw.week || "")} · 웹 검색 기반 자동 작성</small></h3>
+    <ul class="bullets">${gw.items.map((i) => `<li><b>${esc(i.title)}</b> ${esc(i.text || "")}${i.impact ? `<br><small>영향: ${esc(i.impact)}</small>` : ""}${(i.sources || []).length ? `<br><small>${i.sources.map((s) => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name || "출처")}</a>`).join(" · ")}</small>` : ""}</li>`).join("")}</ul></div>` : "";
+  return `<div class="sec"><h2>국제 정세 체크 <small>뉴스 관심도 × 어조 × 시장 반응</small></h2>
+    <div class="panel pad geo">${(g?.summary || []).length ? `<ul class="bullets">${g.summary.map((s) => `<li>${esc(s)}</li>`).join("")}</ul>` : ""}${th}${wk}
+    <p class="note" style="margin:8px 0 0">키워드·가격 반응 기반 자동 판정이라 기사 맥락을 완전히 반영하지 못합니다. 종목별 영향은 상세 화면 ‘국제 정세 영향’에서 볼 수 있습니다.</p></div></div>`;
+}
+const GEO_TK = { "^SOX": "반도체지수", "^GSPC": "S&P500", "KRW=X": "원달러", "CL=F": "WTI", "BZ=F": "브렌트", "GC=F": "금", "^KS11": "코스피", "^VIX": "VIX", "^TNX": "미 10년물" };
 
 /* ── 추천 ── */
 function renderPicks() {
@@ -177,7 +231,9 @@ function renderPicks() {
           <div class="pills">${verdict(x.verdict)}${setupPill(tx.setup_label, tx.setup)}</div></div>
         <div class="score"><b>${nf(x.score, 1)}</b><small>종합점수</small>${x.adj ? `<small class="adj ${x.adj > 0 ? "up" : "down"}">백테스트 ${sgn(x.adj, 1, "")}</small>` : ""}</div></div>
       </div>
+      ${coDesc(x.ticker) ? `<p class="co-desc">${esc(coDesc(x.ticker))}</p>` : ""}
       <p class="summary">${esc(x.summary || "")}</p>
+      ${(x.geo_notes || []).length ? `<ul class="geo-notes">${x.geo_notes.map((n) => `<li class="${n.pol > 0 ? "pos" : "neg"}">${n.pol > 0 ? "🌐 " : "⚠️ "}${esc(n.text)}</li>`).join("")}</ul>` : ""}
       <figure class="mini" data-mini="${esc(x.ticker)}" aria-label="${esc(x.name)} 미니 차트"></figure>
       <div class="metrics">
         <div class="metric"><small>선행 PER</small><b>${nf(x.fpe, 1)}</b></div>
@@ -195,7 +251,7 @@ function renderPicks() {
       </div>
       ${levelsRow(tx.levels, x.ticker)}
       ${x.relaxed ? '<p class="note" style="grid-column:1/-1;margin:6px 0 0">차트 조건을 완화해 채운 후보입니다.</p>' : ""}
-      <button class="btn ghost more" data-t="${esc(x.ticker)}">차트·근거 전체 보기</button>
+      <div class="pick-btns"><button class="btn ghost more" data-t="${esc(x.ticker)}">차트·재무·근거 전체 보기</button>${linkBtns(x.links || linksOf(x.ticker))}</div>
     </article>`;
   };
 
@@ -226,6 +282,8 @@ function renderPicks() {
     fig.innerHTML = TAChart.mini(d, 320, 92) + TAChart.legendHTML(Object.keys(d.ma));
   });
 }
+
+const coDesc = (t) => (state.data.screen?.rows || []).find((x) => x.ticker === t)?.desc || "";
 
 /* ── 스크리닝 ── */
 const SORTS = [
@@ -296,6 +354,129 @@ function checklist(sigs) {
   return CAT_ORDER.filter((c) => by[c]).map((c) => `
     <div class="ck"><h4>${c}</h4><ul>${by[c].map((s) => `<li class="${s.pol > 0 ? "pos" : s.pol < 0 ? "neg" : "neu"}"><i aria-hidden="true">${s.pol > 0 ? "＋" : s.pol < 0 ? "－" : "·"}</i><span class="sr">${s.pol > 0 ? "긍정" : s.pol < 0 ? "부정" : "중립"}</span>${esc(s.text)}</li>`).join("")}</ul></div>`).join("");
 }
+/* 기업 개요 · 재무 · 정세 섹션 */
+const COUNTRY_KO = { "United States": "미국", "South Korea": "한국", Taiwan: "대만", Netherlands: "네덜란드", Ireland: "아일랜드", Switzerland: "스위스", "United Kingdom": "영국", Canada: "캐나다" };
+function coSection(t, r, cd) {
+  const co = cd?.co || {};
+  const desc = co.desc || r?.desc;
+  const tags = co.tags_ko || r?.ctags || [];
+  const facts = [
+    co.industry && ["업종", esc(co.industry)], co.country && ["국가", esc(COUNTRY_KO[co.country] || co.country)],
+    co.employees && ["임직원", nf(co.employees) + "명"], co.market_cap && ["시가총액", money(co.market_cap, co.currency)],
+  ].filter(Boolean);
+  if (!desc && !tags.length && !facts.length) return "";
+  return `<div class="sec"><h2>기업 개요</h2><div class="panel pad co">
+    ${desc ? `<p class="co-d">${esc(desc)}</p>` : ""}
+    ${tags.length ? `<div class="tagrow">${tags.map((x) => `<span class="tag">${esc(x)}</span>`).join("")}</div>` : ""}
+    ${facts.length ? `<div class="co-f">${facts.map(([k, v]) => `<div><small>${k}</small>${v}</div>`).join("")}</div>` : ""}
+    ${co.website ? `<p class="note" style="margin:8px 0 0">홈페이지: <a href="${esc(co.website)}" target="_blank" rel="noopener">${esc(co.website.replace(/^https?:\/\//, ""))}</a></p>` : ""}
+    <div class="btns" style="margin-top:10px">${linkBtns(co.links || r?.links || linksOf(t))}</div>
+  </div></div>`;
+}
+function ftable(head, rows) {
+  return `<div class="ftbl"><table><thead><tr><th></th>${head.map((h) => `<th>${esc(h)}</th>`).join("")}</tr></thead>
+    <tbody>${rows.map(([lab, cells, cl]) => `<tr${cl ? ` class="${cl}"` : ""}><th>${lab}</th>${cells.map((c) => `<td>${c}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`;
+}
+function finBars(tb, cur) {
+  const rev = tb.revenue || [], op = tb.op || [];
+  const vals = [...rev, ...op].filter((v) => v != null);
+  if (vals.length < 2) return "";
+  const hi = Math.max(...vals.map((v) => Math.abs(v))) || 1, n = tb.periods.length, W = 320, H = 96, bw = W / n;
+  const y0 = H - 16, sc = (v) => (Math.abs(v) / hi) * (H - 30);
+  const bars = tb.periods.map((p, i) => {
+    const x = i * bw + bw * 0.18, w = bw * 0.3;
+    const r = rev[i], o = op[i];
+    return `${r != null ? `<rect x="${x.toFixed(1)}" y="${(y0 - sc(r)).toFixed(1)}" width="${w.toFixed(1)}" height="${sc(r).toFixed(1)}" rx="2" class="b-rev"/>` : ""}
+      ${o != null ? `<rect x="${(x + w + 2).toFixed(1)}" y="${o >= 0 ? (y0 - sc(o)).toFixed(1) : y0}" width="${w.toFixed(1)}" height="${sc(o).toFixed(1)}" rx="2" class="${o >= 0 ? "b-op" : "b-neg"}"/>` : ""}
+      <text x="${(i * bw + bw / 2).toFixed(1)}" y="${H - 3}" text-anchor="middle">${esc(p)}</text>`;
+  }).join("");
+  return `<figure class="finbars"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="매출·영업이익 추이">${bars}</svg>
+    <figcaption><span><i class="b-rev"></i>매출</span><span><i class="b-op"></i>영업이익</span><small>단위 ${cur === "KRW" ? "원" : "달러"}</small></figcaption></figure>`;
+}
+function incomeTable(tb, cur, quarterly) {
+  if (!tb?.periods?.length) return "";
+  const n = tb.periods.length, idx = [...Array(n).keys()];
+  const lag = quarterly ? 4 : 1;
+  const opm = idx.map((i) => pctOf(tb.op?.[i], tb.revenue?.[i]));
+  const npm = idx.map((i) => pctOf(tb.net?.[i], tb.revenue?.[i]));
+  const g = idx.map((i) => (i >= lag ? yoy(tb.revenue?.[i], tb.revenue?.[i - lag]) : null));
+  return finBars(tb, cur) + ftable(tb.periods, [
+    ["매출", idx.map((i) => money(tb.revenue?.[i], cur))],
+    [quarterly ? "매출 YoY" : "매출 증가율", g.map((v) => `<span class="${cls(v)}">${v == null ? "-" : sgn(v, 1)}</span>`), "sub"],
+    ["영업이익", idx.map((i) => `<span class="${(tb.op?.[i] ?? 0) < 0 ? "down" : ""}">${money(tb.op?.[i], cur)}</span>`)],
+    ["영업이익률", opm.map((v) => (v == null ? "-" : nf(v, 1) + "%")), "sub"],
+    ["순이익", idx.map((i) => `<span class="${(tb.net?.[i] ?? 0) < 0 ? "down" : ""}">${money(tb.net?.[i], cur)}</span>`)],
+    ["순이익률", npm.map((v) => (v == null ? "-" : nf(v, 1) + "%")), "sub"],
+    ["EPS", idx.map((i) => epsFmt(tb.eps?.[i], cur))],
+  ]);
+}
+function finSection(fin, cd) {
+  if (!cd) return `<div class="sec"><h2>실적·재무제표</h2><div class="panel pad"><p class="note" style="margin:0">재무제표·실적 분석은 관심종목과 추천 종목에 제공됩니다. 네이버 증권 링크에서 전체 재무를 볼 수 있습니다.</p></div></div>`;
+  if (!fin?.ok) return `<div class="sec"><h2>실적·재무제표</h2><div class="panel pad"><p class="note" style="margin:0">${/ETF/.test(cd.co?.ko || "") ? "ETF는 재무제표가 없습니다." : "무료 데이터에서 재무제표를 받지 못했습니다. 네이버 증권에서 확인하세요."}</p></div></div>`;
+  const cur = fin.currency;
+  const per = state.finP === "q" && fin.quarterly ? "q" : "a";
+  const b = fin.balance, c = fin.cashflow;
+  const bal = b?.periods ? ftable(b.periods, [
+    ["자산총계", b.periods.map((_, i) => money(b.assets?.[i], cur))],
+    ["부채총계", b.periods.map((_, i) => money(b.liab?.[i], cur))],
+    ["자본총계", b.periods.map((_, i) => money(b.equity?.[i], cur))],
+    ["부채비율", b.periods.map((_, i) => { const v = pctOf(b.liab?.[i], b.equity?.[i]); return v == null ? "-" : `<span class="${v >= 200 ? "down" : ""}">${nf(v, 0)}%</span>`; }), "sub"],
+    ["현금성자산", b.periods.map((_, i) => money(b.cash?.[i], cur))],
+    ["총차입금", b.periods.map((_, i) => money(b.debt?.[i], cur))],
+    ["유동비율", b.periods.map((_, i) => { const v = pctOf(b.cur_assets?.[i], b.cur_liab?.[i]); return v == null ? "-" : nf(v, 0) + "%"; }), "sub"],
+  ]) : "";
+  const cf = c?.periods ? ftable(c.periods, [
+    ["영업활동현금흐름", c.periods.map((_, i) => money(c.ocf?.[i], cur))],
+    ["설비투자(CAPEX)", c.periods.map((_, i) => money(c.capex?.[i], cur))],
+    ["잉여현금흐름(FCF)", c.periods.map((_, i) => `<span class="${(c.fcf?.[i] ?? 0) < 0 ? "down" : ""}">${money(c.fcf?.[i], cur)}</span>`)],
+    ["배당 지급", c.periods.map((_, i) => (c.div?.[i] == null ? "-" : money(-c.div[i], cur)))],
+    ["자사주 매입", c.periods.map((_, i) => (c.buyback?.[i] == null ? "-" : money(-c.buyback[i], cur)))],
+  ]) : "";
+  const sp = fin.surprises || [];
+  const sur = sp.length ? ftable(sp.map((x) => x.q), [
+    ["예상 EPS", sp.map((x) => epsFmt(x.est, cur))], ["실제 EPS", sp.map((x) => epsFmt(x.act, cur))],
+    ["서프라이즈", sp.map((x) => `<span class="${cls(x.surp)}">${x.surp == null ? "-" : sgn(x.surp, 1)}</span>`)],
+  ]) : "";
+  const EK = [["0q", "이번 분기"], ["+1q", "다음 분기"], ["0y", "올해"], ["+1y", "내년"]];
+  const ee = fin.eps_est || {}, re = fin.rev_est || {}, et = fin.eps_trend || {};
+  const ek = EK.filter(([k]) => ee[k] || re[k]);
+  const cons = ek.length ? ftable(ek.map(([, l]) => l), [
+    ["EPS 컨센서스", ek.map(([k]) => epsFmt(ee[k]?.avg, cur))],
+    ["EPS 성장률", ek.map(([k]) => (ee[k]?.growth == null ? "-" : `<span class="${cls(ee[k].growth)}">${sgn(ee[k].growth * 100, 1)}</span>`)), "sub"],
+    ["매출 컨센서스", ek.map(([k]) => money(re[k]?.avg, cur))],
+    ["매출 성장률", ek.map(([k]) => (re[k]?.growth == null ? "-" : `<span class="${cls(re[k].growth)}">${sgn(re[k].growth * 100, 1)}</span>`)), "sub"],
+    ["애널리스트", ek.map(([k]) => (ee[k]?.numberOfAnalysts ? nf(ee[k].numberOfAnalysts) + "명" : "-")), "sub"],
+    ["EPS 30일 전 대비", ek.map(([k]) => { const v = yoy(et[k]?.current, et[k]?.["30daysAgo"]); return v == null ? "-" : `<span class="${cls(v)}">${sgn(v, 1)}</span>`; })],
+    ["EPS 90일 전 대비", ek.map(([k]) => { const v = yoy(et[k]?.current, et[k]?.["90daysAgo"]); return v == null ? "-" : `<span class="${cls(v)}">${sgn(v, 1)}</span>`; })],
+  ]) : "";
+  const cal = fin.calendar || {};
+  const an = fin.analysis || [];
+  const byCat = {};
+  an.forEach((x) => (byCat[x.cat] = byCat[x.cat] || []).push(x));
+  return `
+    <div class="sec"><h2>실적 자동 분석 <small>수집한 재무 숫자로만 작성</small></h2><div class="panel pad">
+      ${an.length ? Object.entries(byCat).map(([k, v]) => `<div class="ck"><h4>${esc(k)}</h4><ul>${v.map((x) => `<li class="${x.pol > 0 ? "pos" : x.pol < 0 ? "neg" : "neu"}"><i aria-hidden="true">${x.pol > 0 ? "＋" : x.pol < 0 ? "－" : "·"}</i>${esc(x.text)}</li>`).join("")}</ul></div>`).join("") : '<p class="note" style="margin:0">분석할 데이터가 부족합니다.</p>'}
+    </div></div>
+    <div class="sec"><h2>손익 추이 <small>${per === "q" ? "분기" : "연간"} · 기간 말 기준</small></h2>
+      <div class="seg sm" role="group" aria-label="기간"><button data-fp="a" aria-pressed="${per === "a"}">연간</button><button data-fp="q" aria-pressed="${per === "q"}" ${fin.quarterly ? "" : "disabled"}>분기</button></div>
+      <div class="panel pad">${incomeTable(per === "q" ? fin.quarterly : fin.annual, cur, per === "q") || '<p class="note" style="margin:0">손익 데이터 없음</p>'}</div></div>
+    ${cons || cal.next_earnings ? `<div class="sec"><h2>컨센서스 · 추정치 변화</h2><div class="panel pad">
+      ${cal.next_earnings ? `<p class="earn">다음 실적 발표 <b>${esc(cal.next_earnings)}</b>${cal.eps_avg != null ? ` · 예상 EPS ${epsFmt(cal.eps_avg, cur)}` : ""}${cal.rev_avg != null ? ` · 예상 매출 ${money(cal.rev_avg, cur)}` : ""}</p>` : ""}
+      ${cons}</div></div>` : ""}
+    ${sur ? `<div class="sec"><h2>실적 서프라이즈 <small>최근 분기 · EPS</small></h2><div class="panel pad">${sur}</div></div>` : ""}
+    ${bal ? `<div class="sec"><h2>재무상태</h2><div class="panel pad">${bal}</div></div>` : ""}
+    ${cf ? `<div class="sec"><h2>현금흐름</h2><div class="panel pad">${cf}</div></div>` : ""}`;
+}
+function geoSection(cd, r) {
+  const notes = cd?.geo?.notes || r?.geo_notes || [];
+  const score = cd?.geo?.score ?? r?.geo;
+  if (score == null && !notes.length) return "";
+  return `<div class="sec"><h2>국제 정세 영향 <small>오늘 기준 · 50 = 중립</small></h2><div class="panel pad">
+    <div class="factor"><span>정세 점수</span><div class="track"><i style="width:${score ?? 50}%"></i></div><b>${nf(score)}</b></div>
+    ${notes.length ? `<ul class="geo-notes">${notes.map((n) => `<li class="${n.pol > 0 ? "pos" : "neg"}">${n.pol > 0 ? "🌐 " : "⚠️ "}${esc(n.text)}</li>`).join("")}</ul>` : '<p class="note" style="margin:6px 0 0">지금 두드러진 정세 테마와 이 종목의 노출이 겹치지 않습니다.</p>'}
+    <p class="note" style="margin:6px 0 0">점수는 아직 추천 순위에 반영하지 않고(가중치 0) 매일 기록만 합니다. 실전에서 예측력이 통계적으로 확인되면 자동 보정이 비중을 줍니다.</p>
+  </div></div>`;
+}
 async function openDetail(t) {
   const r = (state.data.screen?.rows || []).find((x) => x.ticker === t);
   const w = (state.data.watch?.rows || []).find((x) => x.ticker === t);
@@ -322,6 +503,7 @@ async function openDetail(t) {
         <div style="text-align:right"><div style="font-size:19px;font-weight:600">${price(r?.price ?? tech.last, t)}</div><div class="${cls(r?.chg_1d ?? tech.chg_1d)}">${sgn(r?.chg_1d ?? tech.chg_1d)}</div></div>
       </div>
       <div class="pills" style="margin:10px 0">${verdict(r?.verdict || w?.verdict)}${setupPill(setupLabel, setup)}</div>
+      ${coSection(t, r, cd)}
       ${setupDesc ? `<div class="setup-box"><b>${esc(setupLabel)}</b> · 이평선 ${esc(ta.trend_label || r?.trend_label || "")}<p>${esc(setupDesc)}</p></div>` : ""}
       <div class="sec"><h2>차트 ${cd ? `<small>최근 ${cd.d.length}거래일 · 일봉</small>` : ""}</h2>
         ${cd ? `<div class="panel pad ta-wrap" id="ta-full"></div>` : `<div class="panel pad"><p class="note" style="margin:0">캔들 차트는 관심종목과 추천 종목에만 제공됩니다. 신호 요약은 아래에서 확인하세요.</p></div>`}
@@ -351,9 +533,12 @@ async function openDetail(t) {
         ${kv("영업이익률", r?.opm == null ? "-" : nf(r.opm * 100, 1) + "%")}${kv("부채비율(D/E)", r?.de == null ? "-" : nf(r.de, 0) + "%")}
         ${kv("목표가 상승여력", `<span class="${cls(r?.upside)}">${sgn(r?.upside, 1)}</span>`)}${kv("애널리스트", r?.analysts ? nf(r.analysts) + "명" : "-")}
       </div></div>` : ""}
+      ${finSection(cd?.fin, cd)}
+      ${geoSection(cd, r)}
       ${w?.diag ? `<div class="sec"><h2>급락 성격 진단</h2><div class="diag"><span class="kind">${esc(w.diag.type)}</span><ul>${w.diag.evidence.map((e) => `<li>${esc(e)}</li>`).join("")}</ul></div></div>` : ""}
-      <div class="btns"><a class="btn" href="${extLink(t)}" target="_blank" rel="noopener">${isKR(t) ? "네이버 증권에서 보기" : "Yahoo Finance에서 보기"}</a><button class="btn ghost" id="sheet-close">닫기</button></div>`;
+      <div class="btns"><a class="btn" href="${esc(extLink(t))}" target="_blank" rel="noopener">네이버 증권에서 보기</a><button class="btn ghost" id="sheet-close">닫기</button></div>`;
     $("#sheet-close").onclick = () => dlg.close();
+    $("#sheet-in").querySelectorAll("[data-fp]").forEach((b) => (b.onclick = () => { state.finP = b.dataset.fp; store.set("finP", state.finP); const el = $("#sheet-in"), y = el.scrollTop; paint(cd); el.scrollTop = y; }));
     if (cd) TAChart.full($("#ta-full"), cd, lv);
   };
   if (!dlg.open) dlg.showModal();  // 먼저 열어야 차트가 실제 폭으로 그려짐
@@ -407,7 +592,7 @@ function renderDiv() {
 /* ── 규칙 검증 (백테스트 + 자가 보정) ── */
 const SETUP_KO = { breakout: "신고가·돌파형", pullback: "상승추세 속 눌림목", turn: "장기 추세 전환 초기", reversal: "하락 후 반등 시도",
   squeeze: "변동성 수축", uptrend: "정배열 추세 지속", range: "박스권 횡보", downtrend: "역배열 하락추세", neutral: "중립" };
-const FACTOR_KO = { total: "차트 종합", trend: "추세", momentum: "모멘텀", timing: "타이밍", value: "가치", quality: "퀄리티", target: "상승여력", growth: "성장" };
+const FACTOR_KO = { total: "차트 종합", trend: "추세", momentum: "모멘텀", timing: "타이밍", value: "가치", quality: "퀄리티", target: "상승여력", growth: "성장", revision: "이익 추정치 변화", geo: "국제 정세" };
 const SIG_KO = (code) => {
   const m = {
     ma_aligned: "이평선 완전 정배열", ma_reversed: "이평선 역배열", ma_long_aligned: "장기 정배열 속 조정", ma_short_turn: "단기 정배열 전환",

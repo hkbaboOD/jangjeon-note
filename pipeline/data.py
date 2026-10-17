@@ -28,6 +28,7 @@ FUND_KEYS = [
     "roe", "op_margin", "debt_to_equity", "revenue_growth", "earnings_growth",
     "target_mean", "target_high", "target_low", "analyst_count", "rec_key", "rec_mean",
     "payout_ratio", "market_cap", "high_52w", "low_52w",
+    "forward_eps", "trailing_eps", "industry", "country", "employees", "website", "summary",
 ]
 
 
@@ -176,6 +177,13 @@ class LiveSource:
             "market_cap": safe_float(g("marketCap", "totalAssets")),
             "high_52w": safe_float(g("fiftyTwoWeekHigh")),
             "low_52w": safe_float(g("fiftyTwoWeekLow")),
+            "forward_eps": safe_float(g("forwardEps")),
+            "trailing_eps": safe_float(g("trailingEps")),
+            "industry": g("industry", "category"),
+            "country": g("country"),
+            "employees": safe_float(g("fullTimeEmployees")),
+            "website": g("website"),
+            "summary": (g("longBusinessSummary") or "")[:700] or None,
         }
 
     def dividends(self, ticker: str) -> pd.Series:
@@ -207,7 +215,7 @@ class LiveSource:
         log.warning("뉴스 비어 있음 %s (yfinance 3가지 경로 모두 0건)", ticker)
         return []
 
-    def market_news(self, query: str, hl: str = "en-US", gl: str = "US") -> list[dict]:
+    def market_news(self, query: str, hl: str = "en-US", gl: str = "US", limit: int = 10) -> list[dict]:
         """yfinance 헤드라인이 모두 비었을 때 쓰는 대체 경로: Google 뉴스 RSS."""
         import requests
         from urllib.parse import quote_plus
@@ -217,7 +225,7 @@ class LiveSource:
         try:
             r = requests.get(url, timeout=15, headers={"User-Agent": "Mozilla/5.0 jangjeon-note"})
             r.raise_for_status()
-            return parse_rss(r.text)
+            return parse_rss(r.text, limit=limit)
         except Exception as e:
             log.warning("대체 뉴스(RSS) 실패 %s: %s", query, e)
             return []
@@ -293,6 +301,9 @@ class DemoSource:
             "rec_mean": None if etf else float(r.uniform(1.2, 3.5)),
             "payout_ratio": float(r.uniform(0.2, 0.95)), "market_cap": float(r.uniform(1e10, 3e12)),
             "high_52w": price * float(r.uniform(1.02, 1.5)), "low_52w": price * float(r.uniform(0.6, 0.95)),
+            "forward_eps": None if etf else price / fpe, "trailing_eps": None if etf else price / (fpe * 1.2),
+            "industry": None, "country": "South Korea" if market_of(ticker) == "kr" else "United States",
+            "employees": None if etf else float(r.integers(1000, 200000)), "website": None, "summary": None,
         }
 
     def dividends(self, ticker):
@@ -316,8 +327,14 @@ class DemoSource:
                 vals.append(price * annual_yield / len(months) * growth)
         return pd.Series(vals, index=pd.DatetimeIndex(dates), dtype=float)
 
-    def market_news(self, query, hl="en-US", gl="US"):
-        return []
+    def market_news(self, query, hl="en-US", gl="US", limit=10):
+        if hl != "ko":
+            return []
+        r = self._rng(query, "n")
+        words = ["긴장 고조", "제재 강화", "협상 진전", "휴전 합의", "급등", "완화"]
+        n = int(r.integers(3, min(limit, 40) + 1))
+        return [{"title": f"[데모] {query.split(' OR ')[0].replace(' when:2d', '').replace(' when:1d', '')} {words[int(r.integers(0, len(words)))]} {i + 1}",
+                 "link": "https://news.google.com", "publisher": "Demo", "time": now_kst().isoformat()} for i in range(n)]
 
     def news(self, ticker):
         return [{"title": f"[데모] {ticker} 관련 헤드라인 예시 {i + 1}", "link": "https://finance.yahoo.com",

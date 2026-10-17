@@ -1,5 +1,5 @@
 /* 서비스 워커: 오프라인 캐시 + 웹 푸시 수신 */
-const VERSION = "v6";
+const VERSION = "v7";
 const SHELL = ["./", "index.html", "styles.css", "chart.js", "app.js", "config.js", "manifest.webmanifest", "icons/icon-192.png", "icons/icon-180.png"];
 
 self.addEventListener("install", (e) => {

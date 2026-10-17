@@ -1,0 +1,123 @@
+# 종목 기본 정보 — 한국어 이름·사업 소개·국제 정세 노출 태그
+# 태그는 국제 정세·거시 이슈가 터졌을 때 어느 방향으로 영향을 받는지 판단하는 데 씁니다(pipeline/geo.py).
+#   semis 반도체 · ai AI 인프라 · china 중국 매출/공급망 비중 큼 · export 한국 수출주(원화 약세 수혜)
+#   defense 방산 · oil_up 유가 상승 수혜(정유·에너지) · oil_down 유가 상승 부담(화학·운송)
+#   shipping 해운·조선 · bank 금리 상승 수혜(은행·보험) · rate_sensitive 금리 상승 부담(고성장·리츠·유틸리티)
+#   tariff 관세 부담(수입 의존·대미 수출) · defensive 경기 방어 · battery 이차전지 · pharma 제약·바이오(약가 정책)
+#   nuclear 원전 · korea 한반도 리스크(국내 상장 전 종목에 자동 적용)
+# 새 종목은 주간 자동 점검이 채워 넣습니다.
+
+AAPL: {ko: 애플, desc: "아이폰·맥·아이패드 등 하드웨어와 앱스토어·클라우드·결제 서비스를 함께 파는 세계 최대 소비자 기술 기업. 생산을 중국·인도 등 아시아 공급망에 크게 의존한다.", tags: [china, tariff, ai]}
+MSFT: {ko: 마이크로소프트, desc: "윈도우·오피스와 클라우드 애저(Azure)가 핵심. OpenAI 협력으로 AI 서비스와 데이터센터 투자를 주도한다.", tags: [ai, rate_sensitive]}
+NVDA: {ko: 엔비디아, desc: "AI 학습·추론용 GPU와 데이터센터 네트워킹 시장 1위 기업. 대중국 반도체 수출 규제의 직접 영향권에 있다.", tags: [semis, ai, china]}
+GOOGL: {ko: 알파벳(구글), desc: "구글 검색·유튜브 광고가 주 수익원이고 구글 클라우드, 자체 AI 칩(TPU)·제미나이 모델, 자율주행 웨이모를 보유.", tags: [ai, rate_sensitive]}
+AMZN: {ko: 아마존, desc: "세계 최대 전자상거래와 클라우드 1위 AWS를 운영. 광고·구독(프라임)도 큰 축이며 수입 상품 비중이 높아 관세에 민감.", tags: [ai, tariff]}
+META: {ko: 메타 플랫폼스, desc: "페이스북·인스타그램·왓츠앱을 운영하는 광고 플랫폼 기업. AI 모델(라마)과 데이터센터에 대규모 투자 중.", tags: [ai, rate_sensitive]}
+AVGO: {ko: 브로드컴, desc: "네트워크·통신용 반도체와 빅테크 맞춤형 AI 칩(ASIC)을 설계하고 VM웨어 등 기업용 소프트웨어도 보유.", tags: [semis, ai, china]}
+TSM: {ko: TSMC, desc: "대만의 세계 최대 파운드리(반도체 위탁생산) 기업. 엔비디아·애플 등 최첨단 칩 대부분을 생산하며 대만 해협 리스크에 노출.", tags: [semis, ai, china]}
+MU: {ko: 마이크론, desc: "미국 최대 메모리 반도체(D램·낸드·HBM) 기업. 삼성전자·SK하이닉스와 경쟁하며 메모리 가격 사이클에 실적이 크게 좌우된다.", tags: [semis, ai, china]}
+AMD: {ko: AMD, desc: "PC·서버용 CPU와 데이터센터 AI GPU를 설계하는 팹리스 반도체 기업. 생산은 TSMC에 맡긴다.", tags: [semis, ai, china]}
+QCOM: {ko: 퀄컴, desc: "스마트폰 모뎀·AP(스냅드래곤) 칩과 통신 특허 라이선스가 핵심. 매출의 상당 부분이 중국 스마트폰 업체에서 나온다.", tags: [semis, china]}
+INTC: {ko: 인텔, desc: "PC·서버 CPU 강자에서 파운드리(위탁생산) 사업으로 전환 중인 미국 반도체 기업. 미국 반도체 지원 정책의 핵심 수혜처.", tags: [semis, china]}
+ASML: {ko: ASML, desc: "네덜란드의 반도체 노광장비 기업으로 최첨단 EUV 장비를 사실상 독점 공급. 대중국 장비 수출 통제의 영향을 받는다.", tags: [semis, china]}
+AMAT: {ko: 어플라이드 머티어리얼즈, desc: "세계 최대 반도체 장비 기업(증착·식각 등). 중국 매출 비중이 커 수출 규제에 민감하다.", tags: [semis, china]}
+LRCX: {ko: 램리서치, desc: "반도체 식각·증착 장비 전문 기업. 메모리 업체 설비투자와 중국 수출 규제에 실적이 좌우된다.", tags: [semis, china]}
+KLAC: {ko: KLA, desc: "반도체 공정 검사·계측 장비 1위 기업. 첨단 공정 전환과 파운드리 투자 확대의 수혜를 받는다.", tags: [semis, china]}
+ADBE: {ko: 어도비, desc: "포토샵·프리미어·PDF(애크로뱃) 등 디자인·문서 소프트웨어를 구독형으로 판매. 생성형 AI 경쟁이 변수.", tags: [rate_sensitive]}
+CRM: {ko: 세일즈포스, desc: "고객관계관리(CRM) 클라우드 소프트웨어 1위 기업. AI 에이전트 기능으로 기업 고객을 확대 중.", tags: [rate_sensitive, ai]}
+ORCL: {ko: 오라클, desc: "데이터베이스·기업용 소프트웨어 강자로, AI 데이터센터용 클라우드(OCI) 사업을 빠르게 키우고 있다.", tags: [ai]}
+CSCO: {ko: 시스코, desc: "기업·통신사용 네트워크 장비(스위치·라우터)와 보안 소프트웨어를 판매. AI 데이터센터 네트워킹 수요가 성장 동력.", tags: [ai, tariff]}
+IBM: {ko: IBM, desc: "기업용 하이브리드 클라우드·IT 컨설팅·메인프레임과 AI(왓슨x) 사업을 하는 미국 IT 기업. 배당이 안정적.", tags: [defensive]}
+TXN: {ko: 텍사스 인스트루먼트, desc: "아날로그·임베디드 반도체 1위 기업으로 산업·자동차용 칩 비중이 크다. 장기간 배당을 늘려 온 기업.", tags: [semis, china]}
+JPM: {ko: JP모건 체이스, desc: "미국 최대 은행. 소매금융·기업금융·투자은행·자산관리를 모두 하며 금리 수준에 이자이익이 좌우된다.", tags: [bank]}
+BAC: {ko: 뱅크오브아메리카, desc: "미국 2위 은행으로 예금 기반이 커서 금리 상승기에 이자이익이 늘어나는 구조.", tags: [bank]}
+WFC: {ko: 웰스파고, desc: "미국 대형 상업은행. 소매·주택담보대출 비중이 높아 금리와 경기에 민감하다.", tags: [bank]}
+GS: {ko: 골드만삭스, desc: "글로벌 1위권 투자은행. 인수합병 자문·트레이딩·자산운용이 주력으로 시장 거래가 활발할수록 유리.", tags: [bank]}
+MS: {ko: 모건스탠리, desc: "투자은행과 대형 자산관리(웰스 매니지먼트) 사업을 함께 하는 미국 금융사.", tags: [bank]}
+V: {ko: 비자, desc: "세계 최대 카드 결제 네트워크. 결제 건수·금액에 수수료를 받아 해외여행·소비 경기에 실적이 연동된다.", tags: [defensive]}
+MA: {ko: 마스터카드, desc: "비자와 함께 세계 카드 결제망을 양분하는 기업. 국경 간 결제 비중이 커 여행 수요와 달러에 영향을 받는다.", tags: [defensive]}
+PYPL: {ko: 페이팔, desc: "온라인 간편결제(페이팔·벤모) 기업. 결제 경쟁 심화와 수익성 개선이 핵심 과제.", tags: [rate_sensitive]}
+BRK-B: {ko: 버크셔 해서웨이, desc: "워런 버핏이 이끈 지주회사. 보험·철도·에너지 자회사와 애플 등 대규모 주식 포트폴리오를 보유.", tags: [defensive]}
+UNH: {ko: 유나이티드헬스, desc: "미국 최대 건강보험사이자 의료 서비스(옵텀) 기업. 미국 의료비·보험 정책 변화에 민감.", tags: [defensive, pharma]}
+JNJ: {ko: 존슨앤드존슨, desc: "전문의약품(면역·항암)과 의료기기를 하는 미국 헬스케어 대표 기업. 60년 넘게 배당을 늘려 왔다.", tags: [defensive, pharma]}
+PFE: {ko: 화이자, desc: "미국 대형 제약사. 코로나 백신 이후 매출 감소를 항암제 인수 등으로 메우는 중이며 고배당.", tags: [pharma, defensive]}
+MRK: {ko: 머크, desc: "면역항암제 키트루다가 주력인 미국 대형 제약사. 키트루다 특허 만료 대응이 과제.", tags: [pharma, defensive]}
+ABBV: {ko: 애브비, desc: "면역질환 치료제(스카이리치·린버크)와 미용(보톡스) 사업을 하는 제약사. 배당 성장주로 꼽힌다.", tags: [pharma, defensive]}
+LLY: {ko: 일라이 릴리, desc: "비만·당뇨 치료제(마운자로·젭바운드)로 급성장한 미국 제약사. 세계 시가총액 상위 제약사.", tags: [pharma]}
+AMGN: {ko: 암젠, desc: "바이오의약품 대표 기업. 골다공증·항암·염증 치료제와 비만 신약 개발이 성장 축.", tags: [pharma, defensive]}
+CVS: {ko: CVS 헬스, desc: "미국 최대 약국 체인과 건강보험(애트나), 약제비 관리(PBM)를 함께 하는 헬스케어 기업.", tags: [defensive, pharma]}
+XOM: {ko: 엑슨모빌, desc: "미국 최대 석유·가스 기업. 원유 생산부터 정유·화학까지 수직 계열화되어 유가에 실적이 연동된다.", tags: [oil_up, defensive]}
+CVX: {ko: 셰브론, desc: "미국 2위 석유 메이저. 유가가 오르면 이익이 늘고 배당·자사주 매입이 많다.", tags: [oil_up]}
+COP: {ko: 코노코필립스, desc: "정유 없이 원유·가스 탐사·생산에 집중한 미국 최대 독립 E&P 기업으로 유가 민감도가 높다.", tags: [oil_up]}
+SLB: {ko: SLB(슐럼버거), desc: "세계 1위 유전 서비스 기업. 석유회사들의 시추·개발 투자에 실적이 좌우된다.", tags: [oil_up]}
+NEE: {ko: 넥스트에라 에너지, desc: "미국 최대 전력회사이자 세계 최대 풍력·태양광 발전사. 금리에 민감한 유틸리티.", tags: [rate_sensitive, defensive]}
+DUK: {ko: 듀크 에너지, desc: "미국 남동부 대형 전력·가스 유틸리티. 규제 산업으로 실적이 안정적이고 고배당.", tags: [rate_sensitive, defensive]}
+SO: {ko: 서던 컴퍼니, desc: "미국 남부 전력 유틸리티로 원전(보글 원전)을 보유. 데이터센터 전력 수요 증가 수혜.", tags: [rate_sensitive, defensive, nuclear]}
+PG: {ko: P&G, desc: "타이드·질레트·팸퍼스 등 생활용품 세계 1위 기업. 경기와 무관한 필수소비재로 배당을 오래 늘려 왔다.", tags: [defensive, tariff]}
+KO: {ko: 코카콜라, desc: "세계 최대 음료 기업. 200개국 이상에서 판매해 달러 강세 시 환산 매출이 줄어든다. 대표 배당주.", tags: [defensive]}
+PEP: {ko: 펩시코, desc: "펩시 음료와 레이즈·도리토스 등 스낵을 파는 식음료 기업. 원자재 가격과 소비 둔화가 변수.", tags: [defensive]}
+WMT: {ko: 월마트, desc: "미국 최대 유통 체인. 경기 둔화기에 저가 수요가 몰리지만 수입 상품 비중이 커 관세에 민감.", tags: [defensive, tariff]}
+COST: {ko: 코스트코, desc: "회원제 창고형 할인점. 연회비 기반의 안정적 수익 구조와 높은 회원 갱신율이 강점.", tags: [defensive, tariff]}
+HD: {ko: 홈디포, desc: "미국 최대 주택 개량·건자재 유통사. 주택 거래와 모기지 금리에 실적이 연동된다.", tags: [rate_sensitive, tariff]}
+MCD: {ko: 맥도날드, desc: "세계 최대 햄버거 프랜차이즈. 가맹점 로열티·임대료 중심이라 경기 방어적이다.", tags: [defensive]}
+NKE: {ko: 나이키, desc: "세계 최대 스포츠웨어 기업. 생산 대부분이 베트남·중국 등 아시아라 관세와 중국 소비에 민감.", tags: [tariff, china]}
+DIS: {ko: 디즈니, desc: "영화·애니메이션 IP, 테마파크, 스트리밍(디즈니+)과 ESPN을 가진 미디어·엔터 기업.", tags: [rate_sensitive]}
+CAT: {ko: 캐터필러, desc: "세계 1위 건설·광산 장비 제조사. 인프라 투자와 원자재 경기, 데이터센터 발전기 수요의 수혜를 받는다.", tags: [tariff]}
+DE: {ko: 디어(존디어), desc: "세계 최대 농기계 제조사. 곡물 가격·농가 소득과 미중 농산물 무역에 영향을 받는다.", tags: [tariff, china]}
+HON: {ko: 하니웰, desc: "항공우주 부품·빌딩 자동화·산업용 소재를 하는 미국 복합 산업재 기업. 사업 분할을 진행 중.", tags: [defense]}
+GE: {ko: GE 에어로스페이스, desc: "민항기·군용기 제트엔진 세계 1위권 기업. 항공 여행 수요와 정비 매출이 성장 동력.", tags: [defense, oil_down]}
+LMT: {ko: 록히드마틴, desc: "F-35 전투기·미사일을 만드는 세계 최대 방산 기업. 지정학 긴장과 국방 예산에 실적이 연동된다.", tags: [defense]}
+RTX: {ko: RTX(레이시온), desc: "패트리어트 미사일 등 방산과 프랫앤휘트니 항공엔진을 함께 하는 미국 항공방산 기업.", tags: [defense]}
+NOC: {ko: 노스럽그러먼, desc: "B-21 폭격기·우주·핵전력 시스템을 만드는 미국 방산 기업.", tags: [defense]}
+UPS: {ko: UPS, desc: "세계 최대 택배·물류 기업. 소비 경기, 무역량, 연료비에 실적이 좌우된다.", tags: [tariff, oil_down]}
+VZ: {ko: 버라이즌, desc: "미국 최대 이동통신사. 안정적 현금흐름과 높은 배당이 특징이며 부채가 많아 금리에 민감.", tags: [defensive, rate_sensitive]}
+T: {ko: AT&T, desc: "미국 대형 통신사(무선·광통신). 미디어 사업 매각 후 통신에 집중하며 배당을 지급.", tags: [defensive, rate_sensitive]}
+O: {ko: 리얼티 인컴, desc: "편의점·약국 등 상업용 부동산을 장기 임대하는 리츠로, 배당을 매월 지급한다. 금리 상승에 약하다.", tags: [rate_sensitive, defensive]}
+MO: {ko: 알트리아, desc: "말보로 담배를 미국에서 판매하는 기업. 담배 수요 감소에도 높은 배당을 유지한다.", tags: [defensive]}
+SCHD: {ko: 슈왑 미국 배당주 ETF, desc: "재무가 탄탄하고 배당을 꾸준히 늘린 미국 기업 100개에 투자하는 배당 ETF.", tags: [defensive]}
+VYM: {ko: 뱅가드 고배당 ETF, desc: "배당수익률이 높은 미국 대형주 400여 개에 분산 투자하는 ETF.", tags: [defensive]}
+VIG: {ko: 뱅가드 배당성장 ETF, desc: "10년 이상 배당을 늘려 온 미국 기업에 투자하는 배당 성장 ETF.", tags: [defensive]}
+DGRO: {ko: 아이셰어즈 배당성장 ETF, desc: "배당 성장 이력과 지급 여력이 좋은 미국 기업에 투자하는 ETF.", tags: [defensive]}
+JEPI: {ko: JP모건 프리미엄 인컴 ETF, desc: "S&P500 저변동성 종목에 투자하며 콜옵션을 팔아 매월 높은 분배금을 주는 커버드콜 ETF. 상승장에서는 수익이 제한된다.", tags: [defensive]}
+JEPQ: {ko: JP모건 나스닥 프리미엄 인컴 ETF, desc: "나스닥100 종목에 투자하며 콜옵션 매도로 월 분배금을 주는 커버드콜 ETF.", tags: [rate_sensitive]}
+
+005930.KS: {ko: 삼성전자, desc: "세계 1위 메모리 반도체(D램·낸드)와 스마트폰·가전을 하는 한국 대표 기업. 파운드리·HBM 경쟁력이 주가 변수.", tags: [semis, ai, export, china]}
+000660.KS: {ko: SK하이닉스, desc: "D램·낸드 메모리 전문 기업으로 AI용 고대역폭 메모리(HBM) 1위. 엔비디아 공급이 핵심.", tags: [semis, ai, export, china]}
+373220.KS: {ko: LG에너지솔루션, desc: "전기차·ESS용 배터리 세계 상위권 기업. 미국 공장 비중이 커 미국 보조금(IRA) 정책에 민감.", tags: [battery, export, tariff]}
+207940.KS: {ko: 삼성바이오로직스, desc: "세계 최대 규모의 바이오의약품 위탁생산(CDMO) 기업. 미국 바이오 정책(생물보안법 등) 수혜·영향을 받는다.", tags: [pharma, export]}
+005380.KS: {ko: 현대차, desc: "현대·제네시스 브랜드의 완성차 기업. 미국 판매 비중이 커 미국 관세와 환율에 민감.", tags: [export, tariff]}
+000270.KS: {ko: 기아, desc: "현대차그룹의 완성차 기업. 높은 수익성과 주주환원이 강점이며 대미 수출·관세 영향이 크다.", tags: [export, tariff]}
+068270.KS: {ko: 셀트리온, desc: "바이오시밀러(복제 바이오의약품) 선도 기업. 미국·유럽 판매와 약가 정책에 실적이 좌우된다.", tags: [pharma, export]}
+035420.KS: {ko: NAVER, desc: "국내 1위 검색 포털로 커머스·광고·핀테크·웹툰·클라우드 사업을 한다. 자체 AI(하이퍼클로바X) 보유.", tags: [ai, rate_sensitive]}
+035720.KS: {ko: 카카오, desc: "카카오톡을 기반으로 광고·커머스·모빌리티·금융(카카오뱅크·페이)·콘텐츠 사업을 하는 플랫폼 기업.", tags: [rate_sensitive]}
+105560.KS: {ko: KB금융, desc: "국민은행을 중심으로 한 국내 1위권 금융지주. 금리와 주주환원(밸류업) 정책이 주가 변수.", tags: [bank]}
+055550.KS: {ko: 신한지주, desc: "신한은행·카드·증권·생명을 거느린 대형 금융지주. 배당·자사주 소각 등 주주환원을 확대 중.", tags: [bank]}
+086790.KS: {ko: 하나금융지주, desc: "하나은행 중심 금융지주로 기업금융·외환에 강하다. 원화 약세 때 외화 관련 손익 변동이 있다.", tags: [bank]}
+316140.KS: {ko: 우리금융지주, desc: "우리은행 중심 금융지주. 비은행 계열사 확충(보험·증권 인수)을 추진 중이며 고배당.", tags: [bank]}
+005490.KS: {ko: POSCO홀딩스, desc: "철강(포스코)과 이차전지 소재(리튬·양극재)를 하는 지주사. 중국 철강 공급과 원자재 가격에 민감.", tags: [china, battery, tariff]}
+051910.KS: {ko: LG화학, desc: "석유화학과 배터리 소재, LG에너지솔루션 지분을 가진 화학 기업. 유가 상승은 원가 부담.", tags: [oil_down, battery, china]}
+006400.KS: {ko: 삼성SDI, desc: "전기차·ESS 배터리와 전자재료를 하는 삼성 계열사. 유럽·미국 전기차 수요에 실적이 좌우된다.", tags: [battery, export]}
+012330.KS: {ko: 현대모비스, desc: "현대차·기아에 모듈·핵심 부품과 AS 부품을 공급하는 자동차 부품사. 그룹 지배구조의 핵심.", tags: [export, tariff]}
+028260.KS: {ko: 삼성물산, desc: "건설·상사·패션·리조트 사업과 삼성전자·삼성바이오로직스 지분을 가진 삼성그룹 사실상 지주사.", tags: [nuclear]}
+032830.KS: {ko: 삼성생명, desc: "국내 1위 생명보험사로 삼성전자 지분을 보유. 금리 상승 시 운용수익이 개선된다.", tags: [bank]}
+000810.KS: {ko: 삼성화재, desc: "국내 1위 손해보험사. 자동차·장기보험이 주력이며 안정적 이익과 배당이 특징.", tags: [bank, defensive]}
+017670.KS: {ko: SK텔레콤, desc: "국내 1위 이동통신사. AI 데이터센터·AI 서비스로 사업을 넓히고 있으며 고배당 방어주.", tags: [defensive, ai]}
+030200.KS: {ko: KT, desc: "유·무선 통신과 IT·클라우드(KT클라우드)·미디어 사업을 하는 통신사. 배당과 자사주 정책이 강화됐다.", tags: [defensive]}
+033780.KS: {ko: KT&G, desc: "국내 1위 담배 기업으로 궐련형 전자담배·홍삼(정관장) 사업과 해외 담배 수출을 한다. 대표 고배당주.", tags: [defensive]}
+015760.KS: {ko: 한국전력, desc: "국내 전력 판매를 독점하는 공기업. 연료(가스·석탄) 가격과 전기요금 정책에 이익이 크게 좌우된다.", tags: [oil_down, defensive, nuclear]}
+096770.KS: {ko: SK이노베이션, desc: "정유·화학과 배터리(SK온) 사업을 하는 에너지 기업. 정제마진·유가와 배터리 적자가 변수.", tags: [oil_up, battery]}
+010950.KS: {ko: S-Oil, desc: "사우디 아람코가 최대주주인 정유사. 유가·정제마진이 오르면 이익이 늘어난다.", tags: [oil_up]}
+009540.KS: {ko: HD한국조선해양, desc: "HD현대중공업 등 조선 계열사를 거느린 세계 1위 조선 지주사. LNG선·친환경 선박 수주와 미국 해군 협력이 성장 축.", tags: [shipping, export, defense]}
+329180.KS: {ko: HD현대중공업, desc: "세계 최대 조선소. 상선과 함께 군함·특수선을 건조해 조선 호황과 방산 수요의 수혜를 받는다.", tags: [shipping, export, defense]}
+012450.KS: {ko: 한화에어로스페이스, desc: "K9 자주포·레드백 장갑차·항공엔진을 만드는 국내 최대 방산 기업. 유럽·중동 수출이 급증했다.", tags: [defense, export]}
+047810.KS: {ko: 한국항공우주, desc: "국산 전투기 KF-21·FA-50과 헬기를 개발·생산하는 항공 방산 기업.", tags: [defense, export]}
+064350.KS: {ko: 현대로템, desc: "K2 전차(방산)와 철도 차량을 만드는 현대차그룹 계열사. 폴란드 등 전차 수출이 실적을 이끈다.", tags: [defense, export]}
+034020.KS: {ko: 두산에너빌리티, desc: "원자로·가스터빈·풍력 설비를 만드는 발전 기자재 기업. 원전 수출과 SMR(소형모듈원전)의 대표 수혜주.", tags: [nuclear, export]}
+003550.KS: {ko: LG, desc: "LG전자·LG화학·LG유플러스 등을 거느린 LG그룹 지주회사.", tags: [export]}
+066570.KS: {ko: LG전자, desc: "가전(TV·생활가전)·전장(자동차 부품)·냉난방공조를 하는 기업. 미국 관세와 물류비에 민감.", tags: [export, tariff]}
+009150.KS: {ko: 삼성전기, desc: "적층세라믹콘덴서(MLCC)·카메라 모듈·반도체 기판을 만드는 전자부품 기업. AI 서버용 기판이 성장 동력.", tags: [semis, ai, export, china]}
+018260.KS: {ko: 삼성에스디에스, desc: "삼성 계열 IT 서비스·클라우드·물류(첼로스퀘어) 기업. 생성형 AI 서비스로 사업을 확장 중.", tags: [ai]}
+011200.KS: {ko: HMM, desc: "국내 최대 컨테이너 해운사. 운임(SCFI)에 실적이 좌우되며 홍해·수에즈 같은 항로 차질 때 운임이 오르는 경향.", tags: [shipping]}
+138040.KS: {ko: 메리츠금융지주, desc: "메리츠화재·메리츠증권을 거느린 금융지주. 높은 수익성과 적극적인 주주환원(자사주 소각)으로 유명.", tags: [bank]}
+024110.KS: {ko: 기업은행, desc: "중소기업 대출 특화 국책은행. 정부가 최대주주이며 배당수익률이 높다.", tags: [bank]}
+247540.KQ: {ko: 에코프로비엠, desc: "전기차 배터리용 하이니켈 양극재를 만드는 코스닥 대표 이차전지 소재 기업. 전기차 수요와 리튬 가격에 민감.", tags: [battery, export]}

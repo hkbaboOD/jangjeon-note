@@ -21,7 +21,10 @@ from . import alerts as alert_mod
 from . import backtest as bt_mod
 from . import briefing as briefing_mod
 from . import dividend as div_mod
+from . import company as co_mod
+from . import financials as fin_mod
 from . import forward as fwd
+from . import geo as geo_mod
 from . import pdca as pdca_mod
 from .common import DATA_DIR, STATE_DIR, load_config, market_of, now_kst, read_json, write_json
 from .calibrate import calibrate
@@ -31,7 +34,8 @@ from .technical import chart_series
 from .valuation import HORIZON_LABEL, diagnose_drop, pick_top, score_universe
 
 log = logging.getLogger("pipeline")
-DISCLAIMER = "정보 제공용이며 투자 권유가 아닙니다. 무료 데이터(Yahoo Finance) 특성상 지연·결측이 있을 수 있으니 공시·증권사 자료로 교차 확인하세요."
+DISCLAIMER = ("정보 제공용이며 투자 권유가 아닙니다. 무료 데이터(Yahoo Finance·Google 뉴스) 특성상 지연·결측이 있을 수 있으니 "
+              "네이버 증권·DART 공시·증권사 자료로 교차 확인하세요.")
 
 
 def chart_file(ticker: str) -> str:
@@ -168,10 +172,13 @@ def run(job: str, demo: bool):
 
     # ── morning / all ──
     model = read_json("model.json")
+    companies = co_mod.load_companies()
     kr_names = cfg["universe"]["kr"] if isinstance(cfg["universe"]["kr"], dict) else {}
     uni = cfg["universe"]["us"] + list(cfg["universe"]["kr"])
-    names = {**kr_names, **{d["ticker"]: d["name"] for d in cfg["dividend_candidates"]},
+    names = {**{d["ticker"]: d["name"] for d in cfg["dividend_candidates"]}, **kr_names,
+             **{t: c["ko"] for t, c in companies.items() if c.get("ko")},
              **{w["ticker"]: w["name"] for w in cfg["watchlist"]}}
+    today = now.strftime("%Y-%m-%d")
     div_c = [d["ticker"] for d in cfg["dividend_candidates"]]
     b = cfg["briefing"]
     extra = [i["ticker"] for i in b["indices"]] + [m["ticker"] for m in b["macro"]]
@@ -179,19 +186,40 @@ def run(job: str, demo: bool):
     tcfg = cfg.get("technical")
     tech_all = {t: technicals(h, tcfg, with_ta=False) for t, h in hist.items() if len(h) >= 30}
 
+    # 0) 국제 정세(테마별 뉴스 관심도·어조·시장 반응) + 네이버 코드
+    try:
+        geo_res = geo_mod.collect(src, tech_all, today)
+    except Exception as e:  # 뉴스 실패가 장전 파이프라인 전체를 막지 않도록
+        log.warning("국제 정세 수집 실패: %s", e)
+        geo_res = {"date": today, "themes": [], "impact": {}}
+    naver = co_mod.resolve_naver(uni + watch + div_c) if not demo else {}
+    fins = fin_mod.Financials(src)
+
     # 1) 스크리닝 (유니버스 + 관심종목)
     uni_rows = _rows(src, list(dict.fromkeys(uni + watch)), hist, names, tcfg=tcfg)
+    eps_hist = fin_mod.update_eps_hist({r["ticker"]: r["fund"].get("forward_eps") for r in uni_rows}, today)
+    for r in uni_rows:  # EPS 리비전(추정치 30일 변화) + 정세 노출 점수 → 기록용 팩터
+        rv = fin_mod.trend_revision(fins.trend(r["ticker"]))
+        r["revision"] = rv if rv is not None else fin_mod.hist_revision(eps_hist.get(r["ticker"]), today)
+        r["geo"], r["geo_notes"] = geo_mod.ticker_geo(r["ticker"], companies, geo_res)
     scored = score_universe(uni_rows, model)
     # 오늘의 예측을 기록 → 나중에 실제 수익률로 채점해 보정 근거로 사용
     fwd.save_snapshot(scored, now.strftime("%Y-%m-%d"), {r["ticker"]: r["tech"].get("date") for r in uni_rows})
     keep = ["ticker", "name", "market", "sector", "price", "fpe", "peg", "pb", "roe", "opm", "de", "eg",
             "upside", "analysts", "rec_key", "rsi", "above_long", "dd52", "chg_1d", "chg_5d", "chg_20d", "chg_60d",
             "value", "quality", "target", "growth", "momentum", "trend", "timing", "tech",
-            "setup", "setup_label", "trend_label", "tags",
+            "setup", "setup_label", "trend_label", "tags", "rev", "revision", "geo",
             "score_daily", "score_weekly", "score_monthly", "verdict", "sector_fpe_median", "spark"]
+    geo_notes = {r["ticker"]: r.get("geo_notes") or [] for r in uni_rows}
+    geo_score = {r["ticker"]: r.get("geo") for r in uni_rows}
     screen_rows = []
     for rec in (scored.to_dict("records") if not scored.empty else []):
         row = {k: rec.get(k) for k in keep}
+        c = companies.get(rec["ticker"]) or {}
+        row["desc"] = c.get("desc")
+        row["ctags"] = [co_mod.TAG_KO.get(x, x) for x in (companies.get(rec["ticker"]) or {}).get("tags") or []]
+        row["links"] = co_mod.links(rec["ticker"], names.get(rec["ticker"]), naver.get(rec["ticker"]))
+        row["geo_notes"] = geo_notes.get(rec["ticker"])
         ta = rec.get("_ta") or {}
         row["sig"] = [[s["pol"], s["cat"], s["text"]] for s in ta.get("signals", [])]  # 상세 시트용
         row["levels"] = ta.get("levels")
@@ -223,6 +251,8 @@ def run(job: str, demo: bool):
             seen.add(n["title"])
             uniq.append(n)
     brief = briefing_mod.build(cfg, tech_all, uni_rows, watch_rows, uniq)
+    brief["news_kr"] = src.market_news("코스피 OR 국내 증시 when:1d", hl="ko", gl="KR", limit=8)
+    brief["geo"] = geo_mod.summary_lines(geo_res)
     brief["date"] = now.strftime("%Y-%m-%d")
     brief["generated"] = now.isoformat(timespec="minutes")
     write_json("briefing.json", brief)
@@ -239,6 +269,12 @@ def run(job: str, demo: bool):
     for h in horizons:
         picks[h] = {"label": HORIZON_LABEL[h], "generated": now.isoformat(timespec="minutes"),
                     "all": pick_top(scored, h), "us": pick_top(scored, h, "us"), "kr": pick_top(scored, h, "kr")}
+    for blk in picks.values():  # 정세 영향·한국어 링크는 매일 최신으로 덧붙임
+        for m in ("all", "us", "kr"):
+            for p in blk.get(m, []):
+                p["geo_notes"] = geo_notes.get(p["ticker"]) or []
+                p["links"] = co_mod.links(p["ticker"], names.get(p["ticker"]), naver.get(p["ticker"]))
+                p["name"] = names.get(p["ticker"], p["name"])
     write_json("picks.json", picks)
 
     # 4-1) 상세 차트 파일 (관심종목 + 현재 추천 종목) — 오래된 파일은 삭제해 저장소 비대화 방지
@@ -248,14 +284,22 @@ def run(job: str, demo: bool):
         for m in ("all", "us", "kr"):
             chart_set |= {p["ticker"] for p in blk.get(m, [])}
     ta_map = {r["ticker"]: r["tech"].get("ta") for r in uni_rows + watch_rows}
+    fund_map = {r["ticker"]: r["fund"] for r in uni_rows + watch_rows}
     written = set()
     for t in sorted(chart_set):
         h = hist.get(t)
         if h is None or len(h) < 60:
             continue
         fname = chart_file(t)
-        write_json(fname, {"ticker": t, "name": names.get(t, t), "ta": ta_map.get(t), **chart_series(h, tcfg)},
-                   chart_dir)
+        fund = fund_map.get(t) or src.fundamentals(t)
+        fin = fins.get(t, fund)
+        write_json(fname, {"ticker": t, "name": names.get(t, t), "ta": ta_map.get(t),
+                           "co": co_mod.profile(t, companies, fund, naver.get(t)),
+                           "fin": {**fin_mod.compact(fin), "currency": fund.get("currency"),
+                                   "analysis": fin_mod.analyze(fin, fund)},
+                           "geo": {"score": geo_score.get(t),
+                                   "notes": geo_notes.get(t) or []},
+                           **chart_series(h, tcfg)}, chart_dir)
         written.add(fname)
     for f in chart_dir.glob("*.json"):
         if f.name not in written:
@@ -264,6 +308,8 @@ def run(job: str, demo: bool):
         row["chart"] = chart_file(row["ticker"]) in written
     write_json("screen.json", {"updated": now.isoformat(timespec="minutes"), "rows": screen_rows})
 
+    write_json("geo.json", {**geo_res, "generated": now.isoformat(timespec="minutes"),
+                            "summary": brief["geo"], "tag_ko": co_mod.TAG_KO})
     _update_track_record(picks, {t: v["last"] for t, v in tech_all.items()})
 
     # 5) 배당 플랜 (월간)
@@ -291,6 +337,7 @@ def run(job: str, demo: bool):
                  "universe_size": len(uni_rows), "model_version": (model or {}).get("version")})
     write_json("meta.json", meta)
     src.flush()
+    fins.flush()
     log.info("완료: 유니버스 %d종목, 실행 %s", len(uni_rows), horizons)
 
 

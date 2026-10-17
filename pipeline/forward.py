@@ -19,7 +19,7 @@ import pandas as pd
 
 from .common import STATE_DIR, market_of, read_json, write_json
 
-FACTORS = ["value", "quality", "target", "growth", "momentum", "trend", "timing"]
+FACTORS = ["value", "quality", "target", "growth", "momentum", "trend", "timing", "revision", "geo"]
 SCORES = {"daily": ("score_daily", 5), "weekly": ("score_weekly", 20), "monthly": ("score_monthly", 60)}
 HORIZONS = (5, 20, 60)
 SNAP_DIR = STATE_DIR / "snapshots"

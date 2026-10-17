@@ -64,6 +64,7 @@ def score_universe(rows: list[dict], model: dict | None = None) -> pd.DataFrame:
             "t_trend": sc.get("trend"), "t_mom": sc.get("momentum"), "t_timing": sc.get("timing"),
             "tech": sc.get("total"), "setup": ta.get("setup"), "setup_label": ta.get("setup_label"),
             "trend_label": ta.get("trend_label"), "tags": ta.get("tags") or [], "_ta": ta,
+            "rev": r.get("revision"), "geo": r.get("geo"),
         })
     df = pd.DataFrame(recs)
     if df.empty:
@@ -88,6 +89,7 @@ def score_universe(rows: list[dict], model: dict | None = None) -> pd.DataFrame:
         g["s_rec"] = _pct_rank(g["rec_mean"], False)
         g["s_eg"] = _pct_rank(g["eg"], True)
         g["s_mom"] = _pct_rank(g["chg_60d"], True)
+        g["s_rev"] = _pct_rank(g["rev"].astype(float), True)  # EPS 추정치 상향 종목일수록 높음
         parts.append(g)
     df = pd.concat(parts)
 
@@ -112,9 +114,12 @@ def score_universe(rows: list[dict], model: dict | None = None) -> pd.DataFrame:
         mom_parts = [x for x in (val(r["s_mom"]), val(r["t_mom"])) if x is not None]
         momentum = sum(mom_parts) / len(mom_parts) if mom_parts else None
         factors = {"value": value, "quality": quality, "target": upside, "growth": growth,
-                   "momentum": momentum, "trend": val(r["t_trend"]), "timing": val(r["t_timing"])}
+                   "momentum": momentum, "trend": val(r["t_trend"]), "timing": val(r["t_timing"]),
+                   # 실전 검증용(기본 가중치 0): EPS 리비전 · 국제 정세 노출
+                   "revision": val(r["s_rev"]), "geo": val(r["geo"])}
         coverage = {"value": cv, "quality": cq, "target": cu}
-        coverage.update({k: 1.0 if factors[k] is not None else 0.0 for k in ("growth", "momentum", "trend", "timing")})
+        coverage.update({k: 1.0 if factors[k] is not None else 0.0
+                         for k in ("growth", "momentum", "trend", "timing", "revision", "geo")})
         row = r.to_dict()
         row.update({k: (round(v, 1) if v is not None else None) for k, v in factors.items()})
         for h in HORIZON_WEIGHTS:
