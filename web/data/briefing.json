@@ -3,11 +3,10 @@
   {
    "ticker": "^DJI",
    "name": "다우",
-   "last": 52177.69140625,
-   "chg": 1.0774796314428015,
-   "date": "2026-10-15",
+   "last": 52002.41015625,
+   "chg": -0.33593140147822886,
+   "date": "2026-10-16",
    "spark": [
-    53686.1094,
     53414.25,
     52786.0703,
     52380.6602,
@@ -36,17 +35,17 @@
     51850.5508,
     51670.1016,
     51621.4805,
-    52177.6914
+    52177.6914,
+    52002.4102
    ]
   },
   {
    "ticker": "^GSPC",
    "name": "S&P500",
-   "last": 7744.06005859375,
-   "chg": 0.3254348055326872,
-   "date": "2026-10-15",
+   "last": 7659.43994140625,
+   "chg": -1.0927099809045937,
+   "date": "2026-10-16",
    "spark": [
-    7747.71,
     7718.6001,
     7673.52,
     7636.3599,
@@ -75,17 +74,17 @@
     7807.2402,
     7805.4502,
     7718.9399,
-    7744.0601
+    7744.0601,
+    7659.4399
    ]
   },
   {
    "ticker": "^IXIC",
    "name": "나스닥",
-   "last": 26713.029296875,
-   "chg": 0.0755263742679313,
-   "date": "2026-10-15",
+   "last": 26140.033203125,
+   "chg": -2.1450060469818455,
+   "date": "2026-10-16",
    "spark": [
-    26584.0605,
     26506.9902,
     26421.4102,
     26253.3398,
@@ -114,17 +113,17 @@
     27245.9004,
     27204.3809,
     26692.8691,
-    26713.0293
+    26713.0293,
+    26140.0332
    ]
   },
   {
    "ticker": "^SOX",
    "name": "필라델피아반도체",
-   "last": 11581.2099609375,
-   "chg": -0.8829730196187935,
-   "date": "2026-10-15",
+   "last": 11137.287109375,
+   "chg": -3.833130157037279,
+   "date": "2026-10-16",
    "spark": [
-    11352.1299,
     11735.2598,
     11887.8701,
     11931.3203,
@@ -153,7 +152,8 @@
     12236.79,
     12208.79,
     11684.3799,
-    11581.21
+    11581.21,
+    11137.2871
    ]
   },
   {
@@ -239,11 +239,10 @@
   {
    "ticker": "^TNX",
    "name": "미 10년물(%)",
-   "last": 5.089000225067139,
-   "chg": -1.9460468408436071,
-   "date": "2026-10-15",
+   "last": 5.0980000495910645,
+   "chg": 0.1768485778325335,
+   "date": "2026-10-16",
    "spark": [
-    4.762,
     4.784,
     4.806,
     4.837,
@@ -272,15 +271,16 @@
     5.24,
     5.217,
     5.19,
-    5.089
+    5.089,
+    5.098
    ],
-   "chg_bp": -10.099983215332031
+   "chg_bp": 0.8999824523925781
   },
   {
    "ticker": "^VIX",
    "name": "VIX",
-   "last": 16.049999237060547,
-   "chg": -2.4908862103089513,
+   "last": 19.989999771118164,
+   "chg": 21.44593489057658,
    "date": "2026-10-16",
    "spark": [
     15.3,
@@ -312,14 +312,14 @@
     15.27,
     16.87,
     16.46,
-    16.05
+    19.99
    ]
   },
   {
    "ticker": "CL=F",
    "name": "WTI",
-   "last": 95.68000030517578,
-   "chg": -2.3374511452424307,
+   "last": 99.04000091552734,
+   "chg": 1.0921707476697629,
    "date": "2026-10-16",
    "spark": [
     91.48,
@@ -351,14 +351,14 @@
     94.14,
     95.09,
     97.97,
-    95.68
+    99.04
    ]
   },
   {
    "ticker": "BZ=F",
    "name": "브렌트",
-   "last": 102.66999816894531,
-   "chg": -3.068353527363321,
+   "last": 109.69000244140625,
+   "chg": 3.559294125409318,
    "date": "2026-10-16",
    "spark": [
     96.28,
@@ -390,14 +390,14 @@
     105.69,
     106.06,
     105.92,
-    102.67
+    109.69
    ]
   },
   {
    "ticker": "DX-Y.NYB",
    "name": "달러인덱스",
-   "last": 101.8010025024414,
-   "chg": -0.19509558584175357,
+   "last": 101.77899932861328,
+   "chg": -0.2166673248889417,
    "date": "2026-10-16",
    "spark": [
     99.16,
@@ -429,17 +429,16 @@
     102.18,
     102.55,
     102.0,
-    101.801
+    101.779
    ]
   },
   {
    "ticker": "KRW=X",
    "name": "원달러",
-   "last": 1331.5799560546875,
-   "chg": -0.580133622494805,
-   "date": "2026-10-16",
+   "last": 1334.199951171875,
+   "chg": -0.5033744916505656,
+   "date": "2026-10-17",
    "spark": [
-    1345.0601,
     1343.5699,
     1339.21,
     1339.17,
@@ -468,14 +467,15 @@
     1334.13,
     1340.3101,
     1339.35,
-    1331.58
+    1340.95,
+    1334.2
    ]
   },
   {
    "ticker": "GC=F",
    "name": "금",
-   "last": 4202.89990234375,
-   "chg": 0.786547179189645,
+   "last": 4186.7001953125,
+   "chg": 0.3980743211794868,
    "date": "2026-10-16",
    "spark": [
     4476.6001,
@@ -507,14 +507,14 @@
     4177.2998,
     4107.8999,
     4170.1001,
-    4202.8999
+    4186.7002
    ]
   }
  ],
  "breadth": {
   "us": {
-   "up": 40,
-   "down": 26,
+   "up": 32,
+   "down": 34,
    "total": 66
   },
   "kr": {
@@ -527,56 +527,56 @@
   "us": {
    "top": [
     {
-     "ticker": "NKE",
-     "name": "Nike, Inc.",
-     "chg": 5.212465134152522
+     "ticker": "NOC",
+     "name": "Northrop Grumman Corporation",
+     "chg": 4.048992308517363
     },
     {
-     "ticker": "CRM",
-     "name": "Salesforce, Inc.",
-     "chg": 4.573006435464699
+     "ticker": "RTX",
+     "name": "RTX Corporation",
+     "chg": 3.7282703046166876
     },
     {
-     "ticker": "ADBE",
-     "name": "Adobe Inc.",
-     "chg": 4.566231439091251
+     "ticker": "LMT",
+     "name": "Lockheed Martin Corporation",
+     "chg": 3.651624300113654
     },
     {
-     "ticker": "HD",
-     "name": "Home Depot, Inc. (The)",
-     "chg": 4.307800090713143
+     "ticker": "COP",
+     "name": "ConocoPhillips",
+     "chg": 3.3726091324280505
     },
     {
-     "ticker": "LLY",
-     "name": "Eli Lilly and Company",
-     "chg": 3.546668056285207
+     "ticker": "CVX",
+     "name": "Chevron Corporation",
+     "chg": 2.585262620643358
     }
    ],
    "bottom": [
     {
-     "ticker": "AMAT",
-     "name": "Applied Materials, Inc.",
-     "chg": -3.721199860172464
-    },
-    {
-     "ticker": "CSCO",
-     "name": "Cisco Systems, Inc.",
-     "chg": -3.3350941005659496
-    },
-    {
-     "ticker": "LRCX",
-     "name": "Lam Research Corporation",
-     "chg": -3.2970937996414484
+     "ticker": "AMD",
+     "name": "Advanced Micro Devices, Inc.",
+     "chg": -5.954855064974762
     },
     {
      "ticker": "INTC",
      "name": "Intel Corporation",
-     "chg": -2.802690504506533
+     "chg": -5.787987955844709
+    },
+    {
+     "ticker": "MU",
+     "name": "마이크론",
+     "chg": -5.626902187235128
     },
     {
      "ticker": "KLAC",
      "name": "KLA Corporation",
-     "chg": -2.432744759308625
+     "chg": -4.998280915467834
+    },
+    {
+     "ticker": "LRCX",
+     "name": "Lam Research Corporation",
+     "chg": -4.87277064443391
     }
    ]
   },
@@ -638,43 +638,139 @@
   }
  },
  "points": [
-  "미 증시 강세: S&P500 +0.33%, 나스닥 +0.08%",
-  "미 10년물 금리 -10bp 하락"
+  "미 증시 약세: S&P500 -1.09%, 나스닥 -2.15%",
+  "반도체 약세(SOX -3.83%)",
+  "VIX +21.4% 급등 — 위험회피 심리 확대"
  ],
  "outlook": [
-  "금리 하락 → 성장주·기술주 우호적"
+  "국내 반도체 대형주(삼성전자·SK하이닉스) 약세 출발 가능성 — 코스피 반도체 비중이 커 지수 영향 큼",
+  "변동성 확대 국면: 분할 접근·현금 비중 점검"
  ],
  "diagnosis": [
   {
    "ticker": "005930.KS",
    "name": "삼성전자",
    "chg_1d": 2.6190476190476097,
-   "type": "판단 보류",
+   "type": "수급·심리성",
    "evidence": [
-    "직전 펀더멘털 스냅샷 없음(다음 실행부터 비교 가능)"
+    "평균 목표가 +0.0%",
+    "선행 EPS 추정치 +0.0%",
+    "투자의견 평균 1.36→1.36 (낮을수록 매수)",
+    "이익 추정·목표가 유지 + 밸류에이션 저평가 구간 → 가격만 하락"
    ]
   },
   {
    "ticker": "000660.KS",
    "name": "SK하이닉스",
    "chg_1d": 0.7923930269413626,
-   "type": "판단 보류",
+   "type": "수급·심리성",
    "evidence": [
-    "직전 펀더멘털 스냅샷 없음(다음 실행부터 비교 가능)"
+    "평균 목표가 +0.0%",
+    "선행 EPS 추정치 +0.0%",
+    "투자의견 평균 1.33→1.33 (낮을수록 매수)",
+    "이익 추정·목표가 유지 + 밸류에이션 저평가 구간 → 가격만 하락"
    ]
   },
   {
    "ticker": "MU",
    "name": "마이크론",
-   "chg_1d": 1.8717234157253015,
-   "type": "판단 보류",
+   "chg_1d": -5.626902187235128,
+   "type": "수급·심리성",
    "evidence": [
-    "직전 펀더멘털 스냅샷 없음(다음 실행부터 비교 가능)"
+    "평균 목표가 +0.0%",
+    "선행 EPS 추정치 +1.2%",
+    "투자의견 평균 1.37→1.37 (낮을수록 매수)",
+    "이익 추정·목표가 유지 + 밸류에이션 저평가 구간 → 가격만 하락"
+   ]
+  },
+  {
+   "ticker": "TSM",
+   "name": "TSMC",
+   "chg_1d": -2.2830111660005925,
+   "type": "수급·심리성",
+   "evidence": [
+    "평균 목표가 +0.0%",
+    "선행 EPS 추정치 +0.4%",
+    "투자의견 평균 1.38→1.38 (낮을수록 매수)",
+    "이익 추정·목표가 유지 + 밸류에이션 저평가 구간 → 가격만 하락"
    ]
   }
  ],
- "news": [],
+ "news": [
+  {
+   "title": "Nasdaq 100 Records Worst Week In 18 Months As Investors Steer Clear Of Chipmakers — AAPL, MSTR, UBER, SOXX In Focus",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/nasdaq-100-records-worst-week-221534484.html",
+   "publisher": "Stocktwits",
+   "time": "2026-10-16T22:15:34Z"
+  },
+  {
+   "title": "With Higher Rates For Longer, Can the Economy Still Grow?",
+   "link": "https://finance.yahoo.com/economy/articles/higher-rates-longer-economy-still-203340351.html",
+   "publisher": "etf.com",
+   "time": "2026-10-16T20:33:40Z"
+  },
+  {
+   "title": "Trump Media Declines 6% as Broad Selloff Weighs on High-Beta Stocks; Rumble Drops 8%",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/trump-media-declines-6-broad-191050066.html",
+   "publisher": "24/7 Wall St.",
+   "time": "2026-10-16T19:10:50Z"
+  },
+  {
+   "title": "AMC Is Up 83% in 2026 and Cinemark Is Up 68%: Take Profits, or Hold On for the Ride?",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/amc-83-2026-cinemark-68-190611953.html",
+   "publisher": "24/7 Wall St.",
+   "time": "2026-10-16T19:06:11Z"
+  },
+  {
+   "title": "Bloom Energy Is Up 157% in 2026: Take Profits, or Hold On for the Ride?",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/bloom-energy-157-2026-profits-190321089.html",
+   "publisher": "24/7 Wall St.",
+   "time": "2026-10-16T19:03:21Z"
+  },
+  {
+   "title": "A $1,000 Investment in Eli Lilly Became $18,637. The Obesity Boom Changed Everything",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/1-000-investment-eli-lilly-181555319.html",
+   "publisher": "24/7 Wall St.",
+   "time": "2026-10-16T18:15:55Z"
+  },
+  {
+   "title": "Ford Rises 2%, General Motors and Stellantis Edge Higher While the Stock Market Sells Off",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/ford-rises-2-general-motors-180635973.html",
+   "publisher": "24/7 Wall St.",
+   "time": "2026-10-16T18:06:35Z"
+  },
+  {
+   "title": "Rocket Lab Drops 6% as Citizens Cuts Target Over Neutron Delay; Planet Labs Slides 5%, SpaceX Slips",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/rocket-lab-drops-6-citizens-165146779.html",
+   "publisher": "24/7 Wall St.",
+   "time": "2026-10-16T16:51:46Z"
+  },
+  {
+   "title": "Billionaire Investor Flags a Troubling Twist in AI Boom",
+   "link": "https://finance.yahoo.com/technology/ai/articles/billionaire-investor-flags-troubling-twist-210206609.html",
+   "publisher": "GuruFocus.com",
+   "time": "2026-10-16T21:02:06Z"
+  },
+  {
+   "title": "Bank of America Flags Major Warning for Stock Market",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/bank-america-flags-major-warning-202750047.html",
+   "publisher": "GuruFocus.com",
+   "time": "2026-10-16T20:27:50Z"
+  },
+  {
+   "title": "Double Size, Double Leverage: Why We Supercharged This QQQ Trade",
+   "link": "https://finance.yahoo.com/m/a534f0c7-1b8e-3efc-a9df-221f182ec68b/double-size%2C-double-leverage%3A.html",
+   "publisher": "Investor's Business Daily",
+   "time": "2026-10-16T20:20:49Z"
+  },
+  {
+   "title": "Trade Desk Is Now Down 67% This Year: Is TTD Stock Dead Money or Due for a Bounce?",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/trade-desk-now-down-67-185728793.html",
+   "publisher": "24/7 Wall St.",
+   "time": "2026-10-16T18:57:28Z"
+  }
+ ],
  "ai_summary": null,
- "date": "2026-10-16",
- "generated": "2026-10-16T17:30+09:00"
+ "date": "2026-10-17",
+ "generated": "2026-10-17T10:46+09:00"
 }
