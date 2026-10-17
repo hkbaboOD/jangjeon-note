@@ -199,6 +199,7 @@ python -m http.server 8000            # 브라우저에서 http://localhost:8000
 ```
 .github/workflows/pipeline.yml   예약 실행 → 데이터 커밋 → Pages 배포
 config/settings.yaml             관심종목·유니버스·배당 후보·알림 규칙
+config/companies.yaml            종목별 한국어 이름·사업 소개·국제 정세 노출 태그
 pipeline/
   data.py        데이터 소스 (yfinance / 데모)
   indicators.py  가격·수익률 요약
@@ -211,9 +212,12 @@ pipeline/
   forward.py     실전 예측 기록·채점 (팩터별 실전 IC·Top3 초과수익·예측력 추이)
   calibrate.py   자가 보정 (챔피언/도전자·승률 가드·자동 롤백·안전장치)
   pdca.py        주간 PDCA 리포트
+  company.py     기업 개요·네이버 증권/뉴스/FnGuide 링크
+  financials.py  재무제표·실적 서프라이즈·컨센서스 + 실적 자동 분석, EPS 리비전
+  geo.py         국제 정세 테마(뉴스 관심도×어조×시장 반응) → 업종·종목 영향
   run.py         진입점 (morning / alerts / all / backtest)
 state/           캐시·알림 중복 방지 상태 (자동 생성)
 web/             PWA (index.html, app.js, chart.js, styles.css, sw.js, manifest, icons, data/, data/charts/)
-tests/           차트 분석·백테스트·실전 채점·자가 보정 단위테스트 (30개)
+tests/           차트 분석·백테스트·실전 채점·자가 보정 단위테스트 (42개)
 tools/           VAPID 키·아이콘 생성
 ```
