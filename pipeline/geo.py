@@ -43,7 +43,7 @@ THEMES = [
      "confirm": [("BZ=F", 1, 6.0), ("GC=F", 1, 3.0)], "mkt_w": 0.3, "esc_word": "전쟁 격화", "de_word": "휴전 기대"},
     {"key": "nk", "label": "북한·한반도", "q": "북한 미사일 OR 북한 도발",
      "exp": {"korea": -0.6, "defense": 0.5},
-     "confirm": [("KRW=X", 1, 1.5), ("^KS11", -1, 3.0)], "mkt_w": 0.3, "esc_word": "도발", "de_word": "긴장 완화"},
+     "confirm": [("KRW=X", 1, 1.5)], "mkt_w": 0.3, "esc_word": "도발", "de_word": "긴장 완화"},
     {"key": "taiwan", "label": "대만 해협", "q": "대만해협 OR 양안 긴장 OR 중국 대만 군사",
      "exp": {"semis": -0.8, "china": -0.5, "ai": -0.3, "defense": 0.6},
      "confirm": [("^SOX", -1, 5.0), ("^VIX", 1, 20.0)], "mkt_w": 0.4, "esc_word": "긴장 고조", "de_word": "긴장 완화"},
@@ -132,9 +132,13 @@ def assess(news_by_theme: dict[str, list[dict]], tech_all: dict, today: str, his
             conf.append(_clip(sign * ch / scale))
         cf = sum(conf) / len(conf) if conf else 0.0
         w = th["mkt_w"] if conf else 0.0
-        direction = _clip((1 - w) * tn + w * cf)
+        # 가격은 여러 원인으로 움직이므로, 뉴스 어조와 같은 방향일 때만 온전히 반영(어조 보류면 절반, 반대면 1/4)
+        agree = 1.0 if tn * cf > 0 else 0.5 if tn == 0 else 0.25
+        direction = _clip((1 - w) * tn + w * cf * agree)
         inten = round(h * direction, 3)
         stance = (th["esc_word"] if direction >= 0.2 else th["de_word"] if direction <= -0.2 else "방향 혼재")
+        if abs(direction) < 0.2:  # 방향 혼재 → 업종 영향 없음으로 처리
+            inten = 0.0
         up = sorted([(t, v * inten) for t, v in th["exp"].items() if v * inten > 0.02], key=lambda x: -x[1])
         down = sorted([(t, v * inten) for t, v in th["exp"].items() if v * inten < -0.02], key=lambda x: x[1])
         for t, v in th["exp"].items():
@@ -162,7 +166,7 @@ def ticker_geo(ticker: str, companies: dict, res: dict) -> tuple[float | None, l
     for th in res["themes"]:
         ex = TH[th["key"]]["exp"]
         eff = sum(ex.get(t, 0.0) for t in tags) * th["intensity"]
-        if abs(eff) >= 0.08:
+        if abs(eff) >= 0.08 and abs(th["direction"]) >= 0.2:  # 방향 혼재 테마는 종목 영향 표시 생략
             via = [TAG_KO.get(t, t) for t in tags if ex.get(t) and (ex[t] * th["intensity"] > 0) == (eff > 0)]
             notes.append({"pol": 1 if eff > 0 else -1, "theme": th["label"], "eff": round(eff, 2),
                           "text": f"{th['label']}: {th['stance']}(관심 {th['level']}) → "
@@ -180,7 +184,7 @@ def summary_lines(res: dict, names_by_tag: dict[str, list[str]] | None = None) -
         s = (f"{th['label']}: 48시간 기사 {th['n']}건"
              + (f"(평소 {th['base']:.0f}건의 {th['ratio']:.1f}배)" if th["ratio"] else "")
              + f", {th['stance']}" + (f" · 5일 {mv}" if mv else ""))
-        if abs(th["intensity"]) >= 0.1 and (th["up"] or th["down"]):
+        if abs(th["intensity"]) >= 0.1 and abs(th["direction"]) >= 0.2 and (th["up"] or th["down"]):
             s += " → " + " / ".join(x for x in (
                 ("유리: " + ", ".join(th["up"])) if th["up"] else "",
                 ("부담: " + ", ".join(th["down"])) if th["down"] else "") if x)

@@ -131,3 +131,15 @@ def test_demo_financials_deterministic():
 
 def test_tone_uses_trailing_predicate():
     assert geo.tone(["대이란 제재 완화", "휴전 협상 중단", "긴장 고조 속 공습"]) == (round(1 / 3, 2), 2, 1)
+
+
+def test_market_move_alone_does_not_assign_direction():
+    # 뉴스 어조는 완화 우세인데 코스피·원달러만 크게 움직인 경우 → 가격만으로 '도발' 판정하지 않음
+    news = {"nk": _news(["남북 대화 재개 합의", "긴장 완화 기대"], 40)}
+    res = geo.assess(news, {"KRW=X": {"chg_5d": 3.0}, "^KS11": {"chg_5d": -14.0}}, "2026-10-17", {})
+    nk = next(t for t in res["themes"] if t["key"] == "nk")
+    assert nk["direction"] < 0 and nk["stance"] != "도발"
+    # 어조 판단 보류(기사에 신호 없음) + 가격만 움직임 → 방향 혼재, 업종 영향 0
+    res2 = geo.assess({"nk": _news(["북한 관련 소식"], 40)}, {"KRW=X": {"chg_5d": 1.0}}, "2026-10-17", {})
+    nk2 = next(t for t in res2["themes"] if t["key"] == "nk")
+    assert nk2["stance"] == "방향 혼재" and nk2["intensity"] == 0
