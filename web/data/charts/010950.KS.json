@@ -7,12 +7,19 @@
   "setup_desc": "장기 상승추세(120·250일선 위)를 유지한 채 단기 조정 — 지지선 근처 분할 접근 관점",
   "trend_label": "장기 정배열 속 단기 조정",
   "scores": {
-   "trend": 82.8,
+   "trend": 83.0,
    "momentum": 45.0,
-   "timing": 45.0,
-   "total": 60.1
+   "timing": 57.0,
+   "total": 63.8
   },
   "signals": [
+   {
+    "code": "ma_support_50",
+    "cat": "이평선",
+    "pol": 1,
+    "w": 3,
+    "text": "50일선 지지 확인 — 저가가 이평선 터치 후 종가 회복"
+   },
    {
     "code": "ma_long_aligned",
     "cat": "이평선",
@@ -25,21 +32,21 @@
     "cat": "이평선",
     "pol": 1,
     "w": 2,
-    "text": "주가 250일선 위(+37.3%), 250일선 우상향(20일간 +7.5%) — 장기 추세 상승"
+    "text": "주가 250일선 위(+35.4%), 250일선 우상향(20일간 +7.5%) — 장기 추세 상승"
    },
    {
     "code": "macd_dead",
     "cat": "모멘텀",
     "pol": -1,
     "w": 2,
-    "text": "MACD 시그널 하향 돌파(3거래일 전, 0선 위)"
+    "text": "MACD 시그널 하향 돌파(4거래일 전, 0선 위)"
    },
    {
     "code": "rsi_neutral",
     "cat": "모멘텀",
     "pol": 0,
     "w": 1,
-    "text": "RSI 48 — 중립"
+    "text": "RSI 47 — 중립"
    },
    {
     "code": "adx_range",
@@ -55,65 +62,65 @@
   "levels": {
    "support": [
     {
-     "price": 149750,
+     "price": 150358,
      "label": "50일선",
-     "dist": -2.6
+     "dist": -1.1
     },
     {
      "price": 147200,
      "label": "스윙 저점",
-     "dist": -4.2
+     "dist": -3.2
     }
    ],
    "resistance": [
     {
      "price": 156500,
      "label": "스윙 고점·20일선",
-     "dist": 1.8
+     "dist": 2.9
     },
     {
      "price": 170800,
      "label": "스윙 고점",
-     "dist": 11.1
+     "dist": 12.3
     }
    ],
    "stop": {
-    "price": 144887,
-    "dist": -5.7,
+    "price": 145746,
+    "dist": -4.2,
     "basis": "지지선−0.5ATR"
    },
-   "rr": 0.32
+   "rr": 0.69
   },
   "crosses": [],
   "values": {
    "ma": {
-    "20": 157630,
-    "50": 149750,
-    "120": 131471,
-    "250": 111950
+    "20": 157800,
+    "50": 150358,
+    "120": 131772,
+    "250": 112308
    },
    "dist": {
-    "20": -2.5,
-    "50": 2.6,
-    "120": 16.9,
-    "250": 37.3
+    "20": -3.6,
+    "50": 1.2,
+    "120": 15.4,
+    "250": 35.4
    },
-   "slope_long": 7.48,
-   "slope_mid": 3.2,
-   "slope_mid2": 2.82,
-   "disparity": 97.5,
-   "rsi": 47.9,
-   "macd": 2883,
-   "macd_signal": 3921,
-   "macd_hist": -1038,
-   "adx": 16.4,
-   "pdi": 18.8,
-   "mdi": 20.5,
-   "pctb": 0.36,
-   "bw_pct": 28.0,
-   "vol_ratio": 1.24,
-   "updown_vol": 1.11,
-   "atr_pct": 6.33,
+   "slope_long": 7.46,
+   "slope_mid": 3.59,
+   "slope_mid2": 2.85,
+   "disparity": 96.4,
+   "rsi": 46.7,
+   "macd": 2084,
+   "macd_signal": 3554,
+   "macd_hist": -1470,
+   "adx": 15.7,
+   "pdi": 18.4,
+   "mdi": 21.2,
+   "pctb": 0.29,
+   "bw_pct": 27.0,
+   "vol_ratio": 0.03,
+   "updown_vol": 1.0,
+   "atr_pct": 6.07,
    "hi52": 177100,
    "lo52": 61100
   }
@@ -128,13 +135,13 @@
   "tags_ko": [
    "정유·에너지"
   ],
-  "industry": null,
-  "country": null,
-  "employees": null,
-  "website": null,
-  "market_cap": 17893852971008.0,
+  "industry": "Oil & Gas Refining & Marketing",
+  "country": "South Korea",
+  "employees": 3393.0,
+  "website": "https://www.s-oil.com",
+  "market_cap": 17777431674880.0,
   "currency": "KRW",
-  "summary_en": null,
+  "summary_en": "S-Oil Corporation, together with its subsidiaries, manufactures, sells, and supplies oil refining, lube, and petrochemical products in South Korea. The company offers butane, propane, naphtha, benzene, toluene, xylene, para-xylene, jet fuel, diesel, kerosene, gasoline, propylene, asphalt, polypropylene, and propylene oxide. It also provides lube base oil and petro-chemical products; refined crude oil products; and petroleum products. It exports its products to Southeast Asia, China, Japan, the United States, Australia, Europe, and internationally. The company was formerly known as Ssangyong Oil Refining Co. Ltd. and changed its name to S-Oil Corporation in April 2000. The company was incorpo",
   "links": {
    "naver": "https://m.stock.naver.com/domestic/stock/010950/total",
    "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A010950",
@@ -544,28 +551,38 @@
     "pol": -1,
     "cat": "컨센서스",
     "text": "내년 EPS 컨센서스 성장률 -28.0% (애널리스트 16명)"
+   },
+   {
+    "pol": 0,
+    "cat": "실적 발표",
+    "text": "14일 뒤(2026-11-02) 실적 발표 예정 — 발표 전후 변동성 확대 가능"
    }
   ]
  },
  "geo": {
-  "score": 59.3,
+  "score": 64.2,
   "notes": [
    {
     "pol": 1,
     "theme": "중동 정세",
-    "eff": 0.28,
+    "eff": 0.33,
     "text": "중동 정세: 긴장 고조(관심 보통) → 정유·에너지 성격상 우호적"
    },
    {
     "pol": -1,
     "theme": "북한·한반도",
-    "eff": -0.19,
+    "eff": -0.2,
     "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
+   },
+   {
+    "pol": 1,
+    "theme": "환율(원화)",
+    "eff": 0.1,
+    "text": "환율(원화): 원화 강세(관심 높음) → 국내 상장주 성격상 우호적"
    }
   ]
  },
  "d": [
-  "2026-04-06",
   "2026-04-07",
   "2026-04-08",
   "2026-04-09",
@@ -694,10 +711,10 @@
   "2026-10-13",
   "2026-10-14",
   "2026-10-15",
-  "2026-10-16"
+  "2026-10-16",
+  "2026-10-19"
  ],
  "o": [
-  111300,
   115500,
   117200,
   113000,
@@ -826,10 +843,10 @@
   157600,
   162400,
   162700,
-  159200
+  159200,
+  153800
  ],
  "h": [
-  120400,
   120200,
   119000,
   119900,
@@ -958,10 +975,10 @@
   159200,
   166000,
   166100,
-  162200
+  162200,
+  154000
  ],
  "l": [
-  111200,
   114300,
   110000,
   111200,
@@ -1090,10 +1107,10 @@
   152700,
   156800,
   156800,
-  152800
+  152800,
+  151300
  ],
  "c": [
-  118100,
   114800,
   112100,
   119600,
@@ -1222,10 +1239,10 @@
   158300,
   162500,
   159400,
-  153700
+  153700,
+  152100
  ],
  "v": [
-  865177,
   497660,
   618205,
   844806,
@@ -1354,11 +1371,11 @@
   257824,
   309490,
   333165,
-  423696
+  423696,
+  10363
  ],
  "ma": {
   "20": [
-   110900,
    110745,
    110620,
    110700,
@@ -1487,10 +1504,10 @@
    156525,
    156905,
    157375,
-   157630
+   157630,
+   157800
   ],
   "50": [
-   109786,
    110244,
    110516,
    110918,
@@ -1619,10 +1636,10 @@
    147914,
    148636,
    149222,
-   149750
+   149750,
+   150358
   ],
   "120": [
-   92394,
    92794,
    93177,
    93621,
@@ -1751,10 +1768,10 @@
    130448,
    130823,
    131168,
-   131471
+   131471,
+   131772
   ],
   "250": [
-   74591,
    74819,
    75036,
    75285,
@@ -1883,12 +1900,12 @@
    110806,
    111197,
    111585,
-   111950
+   111950,
+   112308
   ]
  },
  "bb": {
   "u": [
-   118887,
    118291,
    117987,
    118413,
@@ -2017,10 +2034,10 @@
    171026,
    171613,
    171767,
-   171565
+   171565,
+   171373
   ],
   "l": [
-   102913,
    103199,
    103253,
    102987,
@@ -2149,11 +2166,11 @@
    142024,
    142197,
    142983,
-   143695
+   143695,
+   144227
   ]
  },
  "rsi": [
-  55.8,
   52.9,
   50.5,
   56.3,
@@ -2282,11 +2299,11 @@
   51.9,
   54.9,
   52.3,
-  47.9
+  47.9,
+  46.7
  ],
  "macd": {
   "m": [
-   218.8,
    462.77,
    433.25,
    1003,
@@ -2415,10 +2432,10 @@
    4251,
    4107,
    3699,
-   2883
+   2883,
+   2084
   ],
   "s": [
-   185.11,
    240.64,
    279.16,
    424.02,
@@ -2547,10 +2564,10 @@
    4349,
    4301,
    4181,
-   3921
+   3921,
+   3554
   ],
   "h": [
-   33.69,
    222.13,
    154.09,
    579.46,
@@ -2679,7 +2696,8 @@
    -97.88,
    -193.95,
    -481.04,
-   -1038
+   -1038,
+   -1470
   ]
  }
 }

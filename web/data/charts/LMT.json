@@ -173,13 +173,13 @@
   "tags_ko": [
    "방산"
   ],
-  "industry": null,
-  "country": null,
-  "employees": null,
-  "website": null,
+  "industry": "Aerospace & Defense",
+  "country": "United States",
+  "employees": 123000.0,
+  "website": "https://www.lockheedmartin.com",
   "market_cap": 127417270272.0,
   "currency": "USD",
-  "summary_en": null,
+  "summary_en": "Lockheed Martin Corporation, an aerospace and defense company, engages in the research, design, development, manufacture, integration, and sustainment of technology systems, products, and services in the United States, Europe, Asia, the Middle East, and internationally. The company operates through four segments: Aeronautics; Missiles and Fire Control (MFC); Rotary and Mission Systems (RMS); and Space. The Aeronautics segment offers combat and air mobility aircraft, unmanned air vehicles, and related technologies. The MFC segment provides air and missile defense systems; tactical missiles and precision strike weapon systems; logistics; fire control systems; mission operations support, readin",
   "links": {
    "naver": "https://m.stock.naver.com/worldstock/stock/LMT/total",
    "news": "https://search.naver.com/search.naver?where=news&query=%EB%A1%9D%ED%9E%88%EB%93%9C%EB%A7%88%ED%8B%B4+%EC%A3%BC%EA%B0%80"
@@ -582,30 +582,24 @@
    {
     "pol": 0,
     "cat": "실적 발표",
-    "text": "5일 뒤(2026-10-22) 실적 발표 예정 — 발표 전후 변동성 확대 가능"
+    "text": "3일 뒤(2026-10-22) 실적 발표 예정 — 발표 전후 변동성 확대 가능"
    }
   ]
  },
  "geo": {
-  "score": 80.6,
+  "score": 74.5,
   "notes": [
    {
     "pol": 1,
     "theme": "중동 정세",
-    "eff": 0.21,
+    "eff": 0.25,
     "text": "중동 정세: 긴장 고조(관심 보통) → 방산 성격상 우호적"
    },
    {
     "pol": 1,
     "theme": "북한·한반도",
-    "eff": 0.16,
+    "eff": 0.17,
     "text": "북한·한반도: 도발(관심 보통) → 방산 성격상 우호적"
-   },
-   {
-    "pol": 1,
-    "theme": "러시아·우크라이나",
-    "eff": 0.1,
-    "text": "러시아·우크라이나: 전쟁 격화(관심 보통) → 방산 성격상 우호적"
    }
   ]
  },

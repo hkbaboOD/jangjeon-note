@@ -143,13 +143,13 @@
   "tags_ko": [
    "경기 방어"
   ],
-  "industry": null,
+  "industry": "Large Value",
   "country": null,
   "employees": null,
   "website": null,
   "market_cap": 107887099904.0,
   "currency": "USD",
-  "summary_en": null,
+  "summary_en": "To pursue its goal, the fund generally invests in stocks that are included in the index. The index is designed to measure the performance of high dividend yielding stocks issued by U.S. companies that have a record of consistently paying dividends, selected for fundamental strength relative to their peers, based on financial ratios. The fund will invest at least 90% of its net assets in these stocks.",
   "links": {
    "naver": "https://m.stock.naver.com/worldstock/etf/SCHD.K/total",
    "news": "https://search.naver.com/search.naver?where=news&query=%EC%8A%88%EC%99%91+%EB%AF%B8%EA%B5%AD+%EB%B0%B0%EB%8B%B9%EC%A3%BC+ETF+%EC%A3%BC%EA%B0%80"
@@ -161,7 +161,7 @@
   "analysis": []
  },
  "geo": {
-  "score": 46.8,
+  "score": 52.8,
   "notes": []
  },
  "d": [

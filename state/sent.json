@@ -1,8 +1,8 @@
 {
  "005930.KS|rsi_reclaim": "2026-10-17",
  "005930.KS|setup_pullback": "2026-10-16",
- "000660.KS|rsi_low": "2026-10-16",
- "000660.KS|price_below": "2026-10-16",
+ "000660.KS|rsi_low": "2026-10-19",
+ "000660.KS|price_below": "2026-10-19",
  "MU|setup_pullback": "2026-10-16",
  "NVDA|setup_pullback": "2026-10-16",
  "TSM|setup_pullback": "2026-10-16",
@@ -11,5 +11,9 @@
  "005930.KS|rsi_low": "2026-10-17",
  "000660.KS|move": "2026-10-17",
  "000660.KS|cross_price_250": "2026-10-17",
- "MU|move": "2026-10-17"
+ "MU|move": "2026-10-19",
+ "005930.KS|cross_20_50": "2026-10-19",
+ "005930.KS|bb_reclaim": "2026-10-19",
+ "000660.KS|bb_reclaim": "2026-10-19",
+ "000660.KS|setup_reversal": "2026-10-19"
 }

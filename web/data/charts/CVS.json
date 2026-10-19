@@ -160,13 +160,13 @@
    "경기 방어",
    "제약·바이오"
   ],
-  "industry": null,
-  "country": null,
-  "employees": null,
-  "website": null,
+  "industry": "Healthcare Plans",
+  "country": "United States",
+  "employees": 219000.0,
+  "website": "https://www.cvshealth.com",
   "market_cap": 118125707264.0,
   "currency": "USD",
-  "summary_en": null,
+  "summary_en": "CVS Health Corporation provides health solutions in the United States. The Health Care Benefits segment offers traditional, voluntary, and consumer-directed health insurance products and related services, including medical, pharmacy, dental, and behavioral health plans; medical management capabilities; Medicare Advantage and Medicare Supplement plans; prescription drug plans (PDPs); and Medicaid health care management services. It serves employer groups, individuals, college students, part-time and hourly workers, health plans, health care providers, governmental units, government-sponsored plans, labor groups, and expatriates. The Health Services segment offers pharmacy benefit management s",
   "links": {
    "naver": "https://m.stock.naver.com/worldstock/stock/CVS/total",
    "news": "https://search.naver.com/search.naver?where=news&query=CVS+%ED%97%AC%EC%8A%A4+%EC%A3%BC%EA%B0%80"
@@ -574,7 +574,7 @@
   ]
  },
  "geo": {
-  "score": 46.8,
+  "score": 52.8,
   "notes": []
  },
  "d": [

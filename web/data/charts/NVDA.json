@@ -138,13 +138,13 @@
    "AI 인프라",
    "중국 노출"
   ],
-  "industry": null,
-  "country": null,
-  "employees": null,
-  "website": null,
+  "industry": "Semiconductors",
+  "country": "United States",
+  "employees": 42000.0,
+  "website": "https://www.nvidia.com",
   "market_cap": 5170596937728.0,
   "currency": "USD",
-  "summary_en": null,
+  "summary_en": "NVIDIA Corporation operates as a data center scale AI infrastructure company in the United States, Taiwan, China, Hong Kong, Europe, and internationally. It operates through Compute & Networking, and Graphics segments. The Compute & Networking segment provides data center accelerated computing and networking platforms and artificial intelligence solutions and software, and automotive platforms and autonomous and electric vehicle solutions, including software. The Graphics segment offers GeForce GPUs for gaming and PCs; Quadro/NVIDIA RTX GPUs for enterprise workstation graphics. The company's products are used in gaming, professional visualization, data center, and automotive markets. It sell",
   "links": {
    "naver": "https://m.stock.naver.com/worldstock/stock/NVDA.O/total",
    "news": "https://search.naver.com/search.naver?where=news&query=%EC%97%94%EB%B9%84%EB%94%94%EC%95%84+%EC%A3%BC%EA%B0%80"
@@ -542,7 +542,7 @@
   ]
  },
  "geo": {
-  "score": 52.3,
+  "score": 42.8,
   "notes": []
  },
  "d": [

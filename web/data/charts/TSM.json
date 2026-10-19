@@ -138,13 +138,13 @@
    "AI 인프라",
    "중국 노출"
   ],
-  "industry": null,
-  "country": null,
-  "employees": null,
-  "website": null,
+  "industry": "Semiconductors",
+  "country": "Taiwan",
+  "employees": 76907.0,
+  "website": "https://www.tsmc.com",
   "market_cap": 2139990917120.0,
   "currency": "USD",
-  "summary_en": null,
+  "summary_en": "Taiwan Semiconductor Manufacturing Company Limited, together with its subsidiaries, manufactures, packages, tests, and sells integrated circuits and other semiconductor devices in Taiwan, China, Europe, the Middle East, Africa, Japan, the United States, and internationally. It provides various wafer fabrication processes, such as processes to manufacture complementary metal- oxide-semiconductor (CMOS) logic, mixed-signal, radio frequency, embedded memory, bipolar CMOS mixed-signal, and others. The company also involved in providing customer and engineering support services; manufacturing of masks; investment in technology start-up companies; research, designing, developing, manufacturing, pa",
   "links": {
    "naver": "https://m.stock.naver.com/worldstock/stock/TSM/total",
    "news": "https://search.naver.com/search.naver?where=news&query=TSMC+%EC%A3%BC%EA%B0%80"
@@ -547,7 +547,7 @@
   ]
  },
  "geo": {
-  "score": 52.3,
+  "score": 42.8,
   "notes": []
  },
  "d": [

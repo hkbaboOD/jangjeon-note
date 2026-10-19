@@ -3,11 +3,10 @@
  "disclaimer": "정보 제공용이며 투자 권유가 아닙니다. 무료 데이터(Yahoo Finance·Google 뉴스) 특성상 지연·결측이 있을 수 있으니 네이버 증권·DART 공시·증권사 자료로 교차 확인하세요.",
  "backtest": "2026-10-17T13:12+09:00",
  "dividend": "2026-10-17T11:32+09:00",
- "morning": "2026-10-17T11:32+09:00",
+ "morning": "2026-10-19T09:26+09:00",
  "horizons_run": [
   "daily",
-  "weekly",
-  "monthly"
+  "weekly"
  ],
  "universe_size": 106,
  "model_version": 2,

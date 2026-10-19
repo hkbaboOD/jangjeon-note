@@ -160,13 +160,13 @@
   "tags_ko": [
    "정유·에너지"
   ],
-  "industry": null,
-  "country": null,
-  "employees": null,
-  "website": null,
+  "industry": "Oil & Gas E&P",
+  "country": "United States",
+  "employees": 9600.0,
+  "website": "https://www.conocophillips.com",
   "market_cap": 176007954432.0,
   "currency": "USD",
-  "summary_en": null,
+  "summary_en": "ConocoPhillips explores for, produces, transports, and markets crude oil, bitumen, natural gas, liquefied natural gas (LNG), and natural gas liquids. It operates in five segments: Alaska; Lower 48; Canada; Europe, Middle East and North Africa; and Asia Pacific. The company's portfolio includes unconventional plays in North America; conventional assets in North America, Europe, Asia, and Australia; global LNG developments; oil sands assets in Canada; and an inventory of global exploration prospects. It serves in the United States, Canada, China, Equatorial Guinea, Libya, Malaysia, Norway, Singapore, the United Kingdom, and internationally. ConocoPhillips was founded in 1917 and is headquarter",
   "links": {
    "naver": "https://m.stock.naver.com/worldstock/stock/COP/total",
    "news": "https://search.naver.com/search.naver?where=news&query=%EC%BD%94%EB%85%B8%EC%BD%94%ED%95%84%EB%A6%BD%EC%8A%A4+%EC%A3%BC%EA%B0%80"
@@ -569,12 +569,12 @@
   ]
  },
  "geo": {
-  "score": 76.2,
+  "score": 75.8,
   "notes": [
    {
     "pol": 1,
     "theme": "중동 정세",
-    "eff": 0.35,
+    "eff": 0.41,
     "text": "중동 정세: 긴장 고조(관심 보통) → 정유·에너지 성격상 우호적"
    }
   ]
