@@ -142,7 +142,7 @@
   "country": "United States",
   "employees": 42000.0,
   "website": "https://www.nvidia.com",
-  "market_cap": 5170596937728.0,
+  "market_cap": 5248108724224.0,
   "currency": "USD",
   "summary_en": "NVIDIA Corporation operates as a data center scale AI infrastructure company in the United States, Taiwan, China, Hong Kong, Europe, and internationally. It operates through Compute & Networking, and Graphics segments. The Compute & Networking segment provides data center accelerated computing and networking platforms and artificial intelligence solutions and software, and automotive platforms and autonomous and electric vehicle solutions, including software. The Graphics segment offers GeForce GPUs for gaming and PCs; Quadro/NVIDIA RTX GPUs for enterprise workstation graphics. The company's products are used in gaming, professional visualization, data center, and automotive markets. It sell",
   "links": {
@@ -542,7 +542,7 @@
   ]
  },
  "geo": {
-  "score": 42.8,
+  "score": 45.2,
   "notes": []
  },
  "d": [

@@ -142,7 +142,7 @@
   "country": "Taiwan",
   "employees": 76907.0,
   "website": "https://www.tsmc.com",
-  "market_cap": 2139990917120.0,
+  "market_cap": 2186306256896.0,
   "currency": "USD",
   "summary_en": "Taiwan Semiconductor Manufacturing Company Limited, together with its subsidiaries, manufactures, packages, tests, and sells integrated circuits and other semiconductor devices in Taiwan, China, Europe, the Middle East, Africa, Japan, the United States, and internationally. It provides various wafer fabrication processes, such as processes to manufacture complementary metal- oxide-semiconductor (CMOS) logic, mixed-signal, radio frequency, embedded memory, bipolar CMOS mixed-signal, and others. The company also involved in providing customer and engineering support services; manufacturing of masks; investment in technology start-up companies; research, designing, developing, manufacturing, pa",
   "links": {
@@ -547,7 +547,7 @@
   ]
  },
  "geo": {
-  "score": 42.8,
+  "score": 45.2,
   "notes": []
  },
  "d": [

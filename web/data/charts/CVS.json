@@ -164,7 +164,7 @@
   "country": "United States",
   "employees": 219000.0,
   "website": "https://www.cvshealth.com",
-  "market_cap": 118125707264.0,
+  "market_cap": 118534971392.0,
   "currency": "USD",
   "summary_en": "CVS Health Corporation provides health solutions in the United States. The Health Care Benefits segment offers traditional, voluntary, and consumer-directed health insurance products and related services, including medical, pharmacy, dental, and behavioral health plans; medical management capabilities; Medicare Advantage and Medicare Supplement plans; prescription drug plans (PDPs); and Medicaid health care management services. It serves employer groups, individuals, college students, part-time and hourly workers, health plans, health care providers, governmental units, government-sponsored plans, labor groups, and expatriates. The Health Services segment offers pharmacy benefit management s",
   "links": {
@@ -574,7 +574,7 @@
   ]
  },
  "geo": {
-  "score": 52.8,
+  "score": 50.0,
   "notes": []
  },
  "d": [

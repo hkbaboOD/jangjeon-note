@@ -142,7 +142,7 @@
   "country": "United States",
   "employees": 61000.0,
   "website": "https://www.micron.com",
-  "market_cap": 994340044800.0,
+  "market_cap": 1026257453056.0,
   "currency": "USD",
   "summary_en": "Micron Technology, Inc. engages in the provision of semiconductor memory and storage products in the United States, Taiwan, Mainland China, other Asia Pacific countries, Japan, Europe, and internationally. It operates through Cloud Memory Business Unit, Core Data Center Business Unit, Mobile and Client Business Unit, and Automotive and Embedded Business Unit segments. The company provides dynamic random access memory (DRAM) products, including High-Bandwidth Memory, doublie data rate, low-power DRAM, and graphics DRAM products; NAND products comprising solid state drives, managed NAND, and multi-chip packages; and NOR products. The company sells its products under the Micron brand name and p",
   "links": {
@@ -547,7 +547,7 @@
   ]
  },
  "geo": {
-  "score": 42.8,
+  "score": 45.2,
   "notes": []
  },
  "d": [
