@@ -134,7 +134,7 @@ dividend_candidates:
   - { ticker: DGRO, name: "iShares Core Dividend Growth", type: etf }
   - { ticker: JEPI, name: "JPMorgan Equity Premium Income", type: etf, covered_call: true }
   - { ticker: JEPQ, name: "JPMorgan Nasdaq Equity Premium Income", type: etf, covered_call: true }
-  - { ticker: O,    name: "Realty Income (월배당 리츠)", type: stock }
+  - { ticker: O,    name: "Realty Income (월배당 리츠)", type: reit }
   - { ticker: KO,   name: "Coca-Cola", type: stock }
   - { ticker: PEP,  name: "PepsiCo", type: stock }
   - { ticker: JNJ,  name: "Johnson & Johnson", type: stock }
@@ -149,6 +149,65 @@ dividend_candidates:
   - { ticker: 033780.KS, name: "KT&G", type: stock }
   - { ticker: 017670.KS, name: "SK텔레콤", type: stock }
   - { ticker: 024110.KS, name: "기업은행", type: stock }
+  # ── 2026-10-20 확대: 미국 배당 ETF·커버드콜·리츠·배당성장주, 국내 금융·인프라·배당 ETF ──
+  - { ticker: SPYD, name: "SPDR S&P500 고배당", type: etf }
+  - { ticker: HDV,  name: "iShares 코어 고배당", type: etf }
+  - { ticker: DVY,  name: "iShares 셀렉트 배당", type: etf }
+  - { ticker: NOBL, name: "ProShares 배당귀족", type: etf }
+  - { ticker: SDY,  name: "SPDR S&P 배당", type: etf }
+  - { ticker: VYMI, name: "Vanguard 해외 고배당", type: etf }
+  - { ticker: DIVO, name: "Amplify 인핸스드 배당 인컴", type: etf, covered_call: true }
+  - { ticker: QYLD, name: "Global X 나스닥100 커버드콜", type: etf, covered_call: true }
+  - { ticker: VNQ,  name: "Vanguard 리츠", type: etf }
+  - { ticker: PFF,  name: "iShares 우선주", type: etf }
+  - { ticker: MAIN, name: "Main Street Capital", type: bdc }
+  - { ticker: STAG, name: "STAG Industrial", type: reit }
+  - { ticker: ADC,  name: "Agree Realty", type: reit }
+  - { ticker: VICI, name: "VICI Properties", type: reit }
+  - { ticker: PLD,  name: "Prologis", type: reit }
+  - { ticker: AMT,  name: "American Tower", type: reit }
+  - { ticker: SPG,  name: "Simon Property", type: reit }
+  - { ticker: OKE,  name: "ONEOK", type: stock }
+  - { ticker: KMI,  name: "Kinder Morgan", type: stock }
+  - { ticker: ENB,  name: "Enbridge", type: stock }
+  - { ticker: PM,   name: "Philip Morris", type: stock }
+  - { ticker: BMY,  name: "Bristol-Myers Squibb", type: stock }
+  - { ticker: GILD, name: "Gilead", type: stock }
+  - { ticker: MDT,  name: "Medtronic", type: stock }
+  - { ticker: MMM,  name: "3M", type: stock }
+  - { ticker: ADP,  name: "ADP", type: stock }
+  - { ticker: ITW,  name: "Illinois Tool Works", type: stock }
+  - { ticker: EMR,  name: "Emerson", type: stock }
+  - { ticker: CL,   name: "Colgate-Palmolive", type: stock }
+  - { ticker: KMB,  name: "Kimberly-Clark", type: stock }
+  - { ticker: GIS,  name: "General Mills", type: stock }
+  - { ticker: HSY,  name: "Hershey", type: stock }
+  - { ticker: LOW,  name: "Lowe's", type: stock }
+  - { ticker: TGT,  name: "Target", type: stock }
+  - { ticker: BLK,  name: "BlackRock", type: stock }
+  - { ticker: TROW, name: "T. Rowe Price", type: stock }
+  - { ticker: USB,  name: "U.S. Bancorp", type: stock }
+  - { ticker: PNC,  name: "PNC Financial", type: stock }
+  - { ticker: CME,  name: "CME Group", type: stock }
+  - { ticker: ED,   name: "Consolidated Edison", type: stock }
+  - { ticker: AEP,  name: "American Electric Power", type: stock }
+  - { ticker: WEC,  name: "WEC Energy", type: stock }
+  - { ticker: D,    name: "Dominion Energy", type: stock }
+  - { ticker: LYB,  name: "LyondellBasell", type: stock }
+  - { ticker: 005830.KS, name: "DB손해보험", type: stock }
+  - { ticker: 001450.KS, name: "현대해상", type: stock }
+  - { ticker: 029780.KS, name: "삼성카드", type: stock }
+  - { ticker: 016360.KS, name: "삼성증권", type: stock }
+  - { ticker: 005940.KS, name: "NH투자증권", type: stock }
+  - { ticker: 071050.KS, name: "한국금융지주", type: stock }
+  - { ticker: 175330.KS, name: "JB금융지주", type: stock }
+  - { ticker: 138930.KS, name: "BNK금융지주", type: stock }
+  - { ticker: 139130.KS, name: "iM금융지주", type: stock }
+  - { ticker: 078930.KS, name: "GS", type: stock }
+  - { ticker: 088980.KS, name: "맥쿼리인프라", type: fund }
+  - { ticker: 458730.KS, name: "TIGER 미국배당다우존스", type: etf }
+  - { ticker: 446720.KS, name: "SOL 미국배당다우존스", type: etf }
+  - { ticker: 161510.KS, name: "PLUS 고배당주", type: etf }
 
 dividend_plan:
   default_capital_krw: 10000000     # 기본 투자금(앱에서 변경 가능)

@@ -290,12 +290,40 @@ def run(job: str, demo: bool):
                 p["name"] = names.get(p["ticker"], p["name"])
     write_json("picks.json", picks)
 
-    # 4-1) 상세 차트 파일 (관심종목 + 현재 추천 종목) — 오래된 파일은 삭제해 저장소 비대화 방지
+    # 4-1) 배당 데이터 (매일 최신 가격으로 갱신 — 배당 이력은 주 1회 캐시) · 앱에서 구성 변경 가능
+    usdkrw = (tech_all.get("KRW=X") or {}).get("last") or 1400.0
+    cands = []
+    pool = [dict(d, pool="배당 후보") for d in cfg["dividend_candidates"]]
+    have = {d["ticker"] for d in pool}
+    pool += [{"ticker": t, "name": names.get(t, t), "type": "stock", "pool": "유니버스"}
+             for t in uni if t not in have]
+    for d in pool:
+        t = d["ticker"]
+        d = {**d, "name": names.get(t) or d.get("name") or t}
+        price = (tech_all.get(t) or {}).get("last")
+        try:
+            c = div_mod.analyze(t, d, src.dividends(t), price, src.fundamentals(t), cfg["dividend_plan"])
+        except Exception as e:  # 한 종목 오류가 배당 플랜·장전 전체를 막지 않도록
+            log.warning("배당 분석 실패 %s: %s", t, e)
+            continue
+        if c and (d["pool"] == "배당 후보" or c["yield"] >= 0.5):  # 유니버스는 배당률 0.5% 이상만
+            cands.append(c)
+    plan = div_mod.build_plan(cands, cfg["dividend_plan"], usdkrw)
+    plan["generated"] = now.isoformat(timespec="minutes")
+    plan["month"] = now.strftime("%Y-%m")
+    write_json("dividend.json", plan)
+    meta["dividend"] = plan["generated"]
+    div_by = {c["ticker"]: c for c in plan["candidates"]}
+
+    # 4-2) 상세 차트 파일 — 스크리닝 전 종목 + 배당 후보 전 종목(누르면 캔들 차트·근거 화면).
+    #      저장소 비대화를 막기 위해 차트 파일은 main 이 아닌 'charts' 브랜치에 이력 없이 덮어씀(워크플로 참고).
+    #      재무제표(호출 비용 큼)는 관심종목 + 추천 종목 + 기본 배당 플랜 종목만.
     chart_dir = DATA_DIR / "charts"
-    chart_set = set(watch)
+    fin_set = set(watch) | {p["ticker"] for p in plan["picks"]}
     for blk in picks.values():
         for m in ("all", "us", "kr"):
-            chart_set |= {p["ticker"] for p in blk.get(m, [])}
+            fin_set |= {p["ticker"] for p in blk.get(m, [])}
+    chart_set = {r["ticker"] for r in uni_rows} | set(div_by) | fin_set
     ta_map = {r["ticker"]: r["tech"].get("ta") for r in uni_rows + watch_rows}
     fund_map = {r["ticker"]: r["fund"] for r in uni_rows + watch_rows}
     written = set()
@@ -305,13 +333,26 @@ def run(job: str, demo: bool):
             continue
         fname = chart_file(t)
         fund = fund_map.get(t) or src.fundamentals(t)
-        fin = fins.get(t, fund)
-        write_json(fname, {"ticker": t, "name": names.get(t, t), "ta": ta_map.get(t),
+        ta = ta_map.get(t)
+        if ta is None:  # 배당 후보 전용 종목(유니버스 밖)은 여기서 차트 분석
+            try:
+                ta = technicals(h, tcfg).get("ta")
+            except Exception as e:
+                log.warning("차트 분석 실패 %s: %s", t, e)
+        if t in fin_set:
+            fin = fins.get(t, fund)
+            fin_blk = {**fin_mod.compact(fin), "currency": fund.get("currency"), "analysis": fin_mod.analyze(fin, fund)}
+        else:
+            fin_blk = {"ok": False, "skipped": True}
+        dv = div_by.get(t)
+        write_json(fname, {"ticker": t, "name": names.get(t, t), "ta": ta,
                            "co": co_mod.profile(t, companies, fund, naver.get(t)),
-                           "fin": {**fin_mod.compact(fin), "currency": fund.get("currency"),
-                                   "analysis": fin_mod.analyze(fin, fund)},
-                           "geo": {"score": geo_score.get(t),
-                                   "notes": geo_notes.get(t) or []},
+                           "fin": fin_blk,
+                           "geo": {"score": geo_score.get(t), "notes": geo_notes.get(t) or []},
+                           "div": {k: dv.get(k) for k in ("yield", "cagr5", "payout", "cuts", "freq", "months", "dps",
+                                                           "ttm_dps", "score", "notes", "pool", "type", "covered_call")} if dv else None,
+                           "price": (tech_all.get(t) or {}).get("last"), "chg_1d": (tech_all.get(t) or {}).get("chg_1d"),
+                           "sector": fund.get("sector"),
                            **chart_series(h, tcfg)}, chart_dir)
         written.add(fname)
     for f in chart_dir.glob("*.json"):
@@ -320,35 +361,11 @@ def run(job: str, demo: bool):
     for row in screen_rows:
         row["chart"] = chart_file(row["ticker"]) in written
     write_json("screen.json", {"updated": now.isoformat(timespec="minutes"), "rows": screen_rows})
+    log.info("상세 차트 파일 %d개 (재무 포함 %d개)", len(written), len(fin_set))
 
     write_json("geo.json", {**geo_res, "generated": now.isoformat(timespec="minutes"),
                             "summary": brief["geo"], "tag_ko": co_mod.TAG_KO})
     _update_track_record(picks, {t: v["last"] for t, v in tech_all.items()})
-
-    # 5) 배당 플랜 (매일 최신 가격으로 갱신 — 배당 이력은 주 1회 캐시) · 앱에서 구성 변경 가능
-    if True:
-        usdkrw = (tech_all.get("KRW=X") or {}).get("last") or 1400.0
-        cands = []
-        pool = [dict(d, pool="배당 후보") for d in cfg["dividend_candidates"]]
-        have = {d["ticker"] for d in pool}
-        pool += [{"ticker": t, "name": names.get(t, t), "type": "stock", "pool": "유니버스"}
-                 for t in uni if t not in have]
-        for d in pool:
-            t = d["ticker"]
-            d = {**d, "name": names.get(t) or d.get("name") or t}
-            price = (tech_all.get(t) or {}).get("last")
-            try:
-                c = div_mod.analyze(t, d, src.dividends(t), price, src.fundamentals(t), cfg["dividend_plan"])
-            except Exception as e:  # 한 종목 오류가 배당 플랜·장전 전체를 막지 않도록
-                log.warning("배당 분석 실패 %s: %s", t, e)
-                continue
-            if c and (d["pool"] == "배당 후보" or c["yield"] >= 1.0):  # 유니버스는 배당률 1% 이상만
-                cands.append(c)
-        plan = div_mod.build_plan(cands, cfg["dividend_plan"], usdkrw)
-        plan["generated"] = now.isoformat(timespec="minutes")
-        plan["month"] = now.strftime("%Y-%m")
-        write_json("dividend.json", plan)
-        meta["dividend"] = plan["generated"]
 
     # 6) 알림 (판정 변경 포함) + 브리핑 도착 푸시
     head = " / ".join(f"{q['name']} {q['chg']:+.2f}%" for q in brief["indices"][:3] if q.get("chg") is not None)

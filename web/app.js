@@ -296,7 +296,7 @@ function renderPicks() {
       <div class="rank">${i + 1}</div>
       <div>
         <div class="head"><div><h3>${esc(x.name)}</h3><div class="sub">${esc(isKR(x.ticker) ? code(x.ticker) : x.ticker)} · ${esc(sector(x.sector))} · ${price(x.price, x.ticker)}</div>
-          <div class="pills">${verdict(x.verdict)}${setupPill(tx.setup_label, tx.setup)}</div></div>
+          <div class="pills">${verdict(x.verdict)}${setupPill(tx.setup_label, tx.setup)}${divOf(x.ticker) && divOf(x.ticker).yield >= 0.5 ? `<button class="tag div-tag" data-goto="div" title="배당 탭으로">💰 배당 ${nf(divOf(x.ticker).yield, 1)}%</button>` : ""}</div></div>
         <div class="score"><b>${nf(x.score, 1)}</b><small>종합점수</small>${x.adj ? `<small class="adj ${x.adj > 0 ? "up" : "down"}">백테스트 ${sgn(x.adj, 1, "")}</small>` : ""}</div></div>
       </div>
       ${coDesc(x.ticker) ? `<p class="co-desc">${esc(coDesc(x.ticker))}</p>` : ""}
@@ -374,7 +374,7 @@ function renderScreen() {
       <div class="seg sm" role="group" aria-label="시장" id="scr-m"></div>
       <div class="chips" role="group" aria-label="차트 조건" id="scr-f"></div>
       <div class="panel" id="scr-list"></div>
-      <p class="note">행을 누르면 차트 신호 체크리스트·지지/저항·팩터 점수를 볼 수 있습니다(캔들 차트는 관심종목·추천 종목). 한국 종목은 무료 데이터 특성상 컨센서스가 비어 있는 경우가 많습니다.</p>`;
+      <p class="note">행을 누르면 캔들 차트·신호 체크리스트·지지/저항·팩터 점수를 볼 수 있습니다(재무제표 표는 관심·추천·배당 플랜 종목). 한국 종목은 무료 데이터 특성상 컨센서스가 비어 있는 경우가 많습니다.</p>`;
     el.dataset.ready = "1";
     $("#sort").value = state.scrSort;
     $("#q").addEventListener("input", (e) => { state.scrQ = e.target.value.trim().toLowerCase(); drawScreenList(); });
@@ -480,6 +480,7 @@ function incomeTable(tb, cur, quarterly) {
 }
 function finSection(fin, cd) {
   if (!cd) return `<div class="sec"><h2>실적·재무제표</h2><div class="panel pad"><p class="note" style="margin:0">재무제표·실적 분석은 관심종목과 추천 종목에 제공됩니다. 네이버 증권 링크에서 전체 재무를 볼 수 있습니다.</p></div></div>`;
+  if (fin?.skipped) return `<div class="sec"><h2>실적·재무제표</h2><div class="panel pad"><p class="note" style="margin:0">재무제표 표·실적 분석은 관심종목·추천 종목·배당 플랜 종목에 제공됩니다(무료 데이터 호출량 제한). 네이버 증권 링크에서 전체 재무를 볼 수 있습니다.</p></div></div>`;
   if (!fin?.ok) return `<div class="sec"><h2>실적·재무제표</h2><div class="panel pad"><p class="note" style="margin:0">${/ETF/.test(cd.co?.ko || "") ? "ETF는 재무제표가 없습니다." : "무료 데이터에서 재무제표를 받지 못했습니다. 네이버 증권에서 확인하세요."}</p></div></div>`;
   const cur = fin.currency;
   const per = state.finP === "q" && fin.quarterly ? "q" : "a";
@@ -545,15 +546,66 @@ function geoSection(cd, r) {
     <p class="note" style="margin:6px 0 0">점수는 아직 추천 순위에 반영하지 않고(가중치 0) 매일 기록만 합니다. 실전에서 예측력이 통계적으로 확인되면 자동 보정이 비중을 줍니다.</p>
   </div></div>`;
 }
+/* 추천·배당 연계 */
+const H_KO = { daily: "오늘", weekly: "이번 주", monthly: "이번 달" };
+const M_KO = { all: "전체", us: "미국", kr: "한국" };
+function pickRanks(t) {
+  const p = state.data.picks || {}, out = [];
+  for (const h of ["daily", "weekly", "monthly"]) {
+    const blk = p[h];
+    if (!blk) continue;
+    for (const m of ["all", "us", "kr"]) {
+      const i = (blk[m] || []).findIndex((x) => x.ticker === t);
+      if (i >= 0) { out.push({ h, m, rank: i + 1 }); break; }
+    }
+  }
+  return out;
+}
+const divOf = (t) => (state.data.dividend?.candidates || []).find((c) => c.ticker === t);
+const pickBadges = (t) => pickRanks(t).map((x) => `<span class="tag reco">⭐ ${H_KO[x.h]} ${x.rank}위</span>`).join("");
+function recoBox(t) {
+  const rk = pickRanks(t);
+  if (!rk.length) return "";
+  return `<div class="reco-box"><div>⭐ ${rk.map((x) => `<b>${H_KO[x.h]} 추천 ${x.rank}위</b>${x.m !== "all" ? `(${M_KO[x.m]})` : ""}`).join(" · ")}</div>
+    <button class="btn ghost sm" data-goto="picks" data-gh="${rk[0].h}" data-gm="${rk[0].m}">추천 근거 보기</button></div>`;
+}
+function divSection(t, cd) {
+  const c = divOf(t) || (cd?.div ? { ...cd.div, ticker: t } : null);
+  if (!c) return "";
+  const d = state.data.dividend;
+  const o = d ? dvOpts() : null;
+  let inPlan = null;
+  if (d?.candidates?.[0]?.dps && o) inPlan = DivPlan.build(d.candidates, o, d.usdkrw).rows.find((r) => r.ticker === t);
+  const pinned = o ? (o.mode === "manual" ? o.selected.includes(t) : o.pinned.includes(t)) : false;
+  const dps = c.dps || [], mx = Math.max(...dps, 0) || 1;
+  const kv = (l, v) => `<div><small>${l}</small>${v}</div>`;
+  const cur = isKR(t) ? "원" : "$";
+  return `<div class="sec"><h2>배당 정보 <small>최근 12개월 · ${esc(c.pool || "")}</small></h2><div class="panel pad">
+    <div class="kv">
+      ${kv("배당수익률", `<b>${nf(c.yield, 2)}%</b>`)}${kv("주당배당금(연)", c.ttm_dps == null ? "-" : (isKR(t) ? nf(c.ttm_dps, 0) + "원" : "$" + nf(c.ttm_dps, 2)))}
+      ${kv("5년 배당성장(연)", c.cagr5 == null ? "-" : `<span class="${cls(c.cagr5)}">${sgn(c.cagr5, 1)}</span>`)}${kv("배당성향", c.payout == null ? "-" : nf(c.payout, 0) + "%")}
+      ${kv("지급 횟수", `연 ${nf(c.freq)}회`)}${kv("감배 이력(연간)", c.cuts ? `<span class="down">${c.cuts}회</span>` : "없음")}
+      ${kv("배당 점수", nf(c.score, 1) + "점")}${kv("내 플랜", inPlan ? `<b>${nf(inPlan.weight, 0)}%</b> · 연 세후 ${krw(inPlan.annual)}` : "미포함")}
+    </div>
+    ${dps.length ? `<div class="dps-bars" aria-label="월별 주당배당금">${dps.map((v, i) => `<div><i style="height:${(v / mx) * 100}%"></i><span>${i + 1}</span></div>`).join("")}</div><p class="note" style="margin:2px 0 0">월별 주당배당금(배당락월 기준, ${cur === "원" ? "원" : "달러"})</p>` : ""}
+    ${(c.notes || []).length ? `<ul class="bullets" style="margin-top:6px">${c.notes.map((n) => `<li>${esc(n)}</li>`).join("")}</ul>` : ""}
+    <div class="btns" style="margin-top:10px"><button class="btn ${pinned ? "ghost " : ""}sm" data-dvpin="${esc(t)}">${pinned ? (o.mode === "manual" ? "플랜에서 빼기" : "📌 고정 해제") : (o?.mode === "manual" ? "+ 플랜에 담기" : "📌 배당 플랜에 고정")}</button>
+      <button class="btn ghost sm" data-goto="div">배당 탭에서 보기</button></div>
+  </div></div>`;
+}
 async function openDetail(t) {
   const r = (state.data.screen?.rows || []).find((x) => x.ticker === t);
   const w = (state.data.watch?.rows || []).find((x) => x.ticker === t);
-  if (!r && !w) { window.open(extLink(t), "_blank", "noopener"); return; }
-  const name = r?.name || w?.name || t;
-  const tech = w?.tech || {};
+  const dvc = divOf(t);
   const dlg = $("#sheet");
-  const hasChart = r?.chart || !!w;
+  if (!r && !w && !dvc) {  // 데이터에 없는 종목 → 차트 파일이 있으면 그것으로, 없으면 네이버 증권
+    const cd0 = await loadChart(t);
+    if (!cd0) { window.open(extLink(t), "_blank", "noopener"); return; }
+  }
+  const tech = w?.tech || {};
+  const hasChart = true;
   const paint = (cd) => {
+    const name = r?.name || w?.name || dvc?.name || cd?.name || t;
     const ta = cd?.ta || tech.ta || {};
     const sigs = ta.signals || (r?.sig || []).map(([pol, cat, text]) => ({ pol, cat, text }));
     const lv = ta.levels || r?.levels;
@@ -567,17 +619,19 @@ async function openDetail(t) {
     $("#sheet-in").innerHTML = `
       <div class="grip"></div>
       <div class="head" style="display:flex;justify-content:space-between;align-items:start;gap:10px">
-        <div><h2 style="margin:0;font-size:21px">${esc(name)}</h2><div class="t2" style="color:var(--muted);font-size:13px">${esc(isKR(t) ? code(t) : t)} · ${esc(sector(r?.sector))}</div></div>
-        <div style="text-align:right"><div style="font-size:19px;font-weight:600">${price(r?.price ?? tech.last, t)}</div><div class="${cls(r?.chg_1d ?? tech.chg_1d)}">${sgn(r?.chg_1d ?? tech.chg_1d)}</div></div>
+        <div><h2 style="margin:0;font-size:21px">${esc(name)}</h2><div class="t2" style="color:var(--muted);font-size:13px">${esc(isKR(t) ? code(t) : t)} · ${esc(sector(r?.sector || cd?.sector))}</div></div>
+        <div style="text-align:right"><div style="font-size:19px;font-weight:600">${price(r?.price ?? tech.last ?? cd?.price ?? dvc?.price, t)}</div><div class="${cls(r?.chg_1d ?? tech.chg_1d ?? cd?.chg_1d)}">${sgn(r?.chg_1d ?? tech.chg_1d ?? cd?.chg_1d)}</div></div>
       </div>
       <div class="pills" style="margin:10px 0">${verdict(r?.verdict || w?.verdict)}${setupPill(setupLabel, setup)}</div>
-      ${coSection(t, r, cd)}
+      ${recoBox(t)}
       ${setupDesc ? `<div class="setup-box"><b>${esc(setupLabel)}</b> · 이평선 ${esc(ta.trend_label || r?.trend_label || "")}<p>${esc(setupDesc)}</p></div>` : ""}
       <div class="sec"><h2>차트 ${cd ? `<small>최근 ${cd.d.length}거래일 · 일봉</small>` : ""}</h2>
-        ${cd ? `<div class="panel pad ta-wrap" id="ta-full"></div>` : `<div class="panel pad"><p class="note" style="margin:0">캔들 차트는 관심종목과 추천 종목에만 제공됩니다. 신호 요약은 아래에서 확인하세요.</p></div>`}
+        ${cd ? `<div class="panel pad ta-wrap" id="ta-full"></div>` : `<div class="panel pad"><p class="note" style="margin:0">차트 데이터를 불러오는 중이거나 아직 생성되지 않았습니다(평일 아침 실행 후 생성). 신호 요약은 아래에서 확인하세요.</p></div>`}
       </div>
       <div class="sec"><h2>기술적 가격대 <small>스윙 고·저점 + 이평선, ATR 기준</small></h2>${levelsRow(lv, t) || '<div class="empty">-</div>'}
         ${lv && (lv.support?.[1] || lv.resistance?.[1]) ? `<p class="note">2차 지지 ${lvTxt(lv.support?.[1], t)} · 2차 저항 ${lvTxt(lv.resistance?.[1], t)}</p>` : ""}</div>
+      ${divSection(t, cd)}
+      ${coSection(t, r, cd)}
       <div class="sec"><h2>차트 점수 <small>규칙 기반 0~100</small></h2><div class="panel pad">
         ${bar("추세", sc.trend)}${bar("모멘텀", sc.momentum)}${bar("타이밍", sc.timing)}${bar("차트 종합", sc.total)}</div></div>
       ${tv.ma ? `<div class="sec"><h2>이동평균선</h2><div class="panel ma-table">
@@ -644,7 +698,8 @@ function renderDiv() {
   const max = Math.max(...P.monthly, 1), nowM = new Date().getMonth();
   const shares = (r) => (o.whole ? nf(r.shares) : nf(r.shares, 2)) + "주";
   const fq = state.dvQ || "", ff = state.dvF || "all";
-  const cands = d.candidates.filter((c) => (ff === "all" || (ff === "monthly" ? c.freq >= 12 : ff === "etf" ? c.type === "etf" : ff === "stock" ? c.type !== "etf" : c.market === ff))
+  const cands = d.candidates.filter((c) => (ff === "all" || (ff === "monthly" ? c.freq >= 12 : ff === "etf" ? c.type === "etf"
+      : ff === "stock" ? c.type === "stock" : ff === "reit" ? ["reit", "bdc", "fund"].includes(c.type) : ff === "reco" ? pickRanks(c.ticker).length > 0 : c.market === ff))
     && (!fq || c.name.toLowerCase().includes(fq) || c.ticker.toLowerCase().includes(fq)));
   const candBtns = (c) => {
     if (o.mode === "manual") return `<button class="mini-btn ${inPlan.has(c.ticker) ? "on" : ""}" data-dva="${inPlan.has(c.ticker) ? "unselect" : "select"}" data-t2="${esc(c.ticker)}">${inPlan.has(c.ticker) ? "✓ 담김" : "+ 담기"}</button>`;
@@ -689,7 +744,7 @@ function renderDiv() {
       ${P.missing.length ? `<p class="note" style="margin:6px 0 0">배당이 없는 달: ${P.missing.join("·")}월 — 해당 월에 지급하는 종목을 고정하면 채워집니다.</p>` : ""}</div>
     </div>
     <div class="sec"><h2>플랜 구성 <small>${nf(P.rows.length)}종목 · 투자 ${krw(P.invested)}${P.cash > 1 ? ` · 현금 ${krw(P.cash)}` : ""}</small></h2><div class="panel">${P.rows.map((r) => `
-      <div class="row dv-r" style="cursor:default"><div><div class="t1">${esc(r.name)}${r.pinned ? ' <span class="tag">📌</span>' : ""}${r.covered_call ? '<span class="tag">커버드콜</span>' : ""}</div>
+      <div class="row dv-r" data-t="${esc(r.ticker)}" role="button" tabindex="0"><div><div class="t1">${esc(r.name)}${r.pinned ? ' <span class="tag">📌</span>' : ""}${r.covered_call ? '<span class="tag">커버드콜</span>' : ""}${pickBadges(r.ticker)}</div>
         <div class="t2">${esc(isKR(r.ticker) ? code(r.ticker) : r.ticker)} · 배당률 ${nf(r.yield, 2)}% · 5년 성장 ${r.cagr5 == null ? "-" : sgn(r.cagr5, 1)} ${dvDots(r.months)}</div>
         <div class="t2">${shares(r)} × ${price(r.price, r.ticker)} · 연 세후 ${krw(r.annual)}</div></div><span></span>
         <div class="num">${o.weighting === "custom" ? `<label class="pct"><input data-dvw="${esc(r.ticker)}" inputmode="decimal" value="${nf(o.custom[r.ticker] ?? 100 / P.rows.length, 0)}">%</label><small class="t2">실제 ${nf(r.weight, 0)}%</small>` : `<b>${nf(r.weight, 0)}%</b>`}<span>${krw(r.alloc)}</span>
@@ -697,11 +752,11 @@ function renderDiv() {
       ${P.rows.some((r) => (r.notes || []).length) ? `<ul class="bullets" style="margin-top:8px">${P.rows.flatMap((r) => (r.notes || []).map((n) => `<li>${esc(r.name)}: ${esc(n)}</li>`)).join("")}</ul>` : ""}
     </div>
     ${P.upcoming.length ? `<div class="sec"><h2>다가오는 예상 배당락 <small>작년 일정 기준 추정</small></h2><div class="panel">${P.upcoming.map((u) => `<div class="row" style="cursor:default"><div class="t1">${esc(u.name)}</div><span></span><div class="num"><b>${u.date.getMonth() + 1}/${u.date.getDate()}</b><span>${u.days}일 후</span></div></div>`).join("")}</div></div>` : ""}
-    <div class="sec"><h2>후보 ${nf(d.candidates.length)}종목 <small>${o.mode === "manual" ? "담기로 직접 구성" : "📌 고정 = 반드시 포함 · 제외 = 빼고 계산"}</small></h2>
+    <div class="sec"><h2>후보 ${nf(d.candidates.length)}종목 <small>${o.mode === "manual" ? "담기로 직접 구성" : "📌 고정 = 반드시 포함 · 제외 = 빼고 계산"} · 종목을 누르면 차트</small></h2>
       <div class="tools"><input id="dvq" type="search" placeholder="종목명·티커 검색" value="${esc(state.dvQ || "")}" autocomplete="off"></div>
-      <div class="chips">${[["all", "전체"], ["etf", "ETF"], ["stock", "개별주"], ["monthly", "월배당"], ["us", "미국"], ["kr", "국내"]].map(([k, l]) => `<button data-dvf="${k}" aria-pressed="${ff === k}">${l}</button>`).join("")}</div>
+      <div class="chips">${[["all", "전체"], ["etf", "ETF"], ["stock", "개별주"], ["reit", "리츠·인프라"], ["monthly", "월배당"], ["reco", "⭐ 추천 종목"], ["us", "미국"], ["kr", "국내"]].map(([k, l]) => `<button data-dvf="${k}" aria-pressed="${ff === k}">${l}</button>`).join("")}</div>
       <div class="panel">${cands.slice(0, 120).map((c) => `
-      <div class="row dv-r ${o.excluded.includes(c.ticker) && o.mode === "auto" ? "dim" : ""}" style="cursor:default"><div><div class="t1">${esc(c.name)}${c.covered_call ? '<span class="tag">커버드콜</span>' : ""}${inPlan.has(c.ticker) ? '<span class="tag on">플랜</span>' : ""}</div>
+      <div class="row dv-r ${o.excluded.includes(c.ticker) && o.mode === "auto" ? "dim" : ""}" data-t="${esc(c.ticker)}" role="button" tabindex="0"><div><div class="t1">${esc(c.name)}${c.covered_call ? '<span class="tag">커버드콜</span>' : ""}${inPlan.has(c.ticker) ? '<span class="tag on">플랜</span>' : ""}${pickBadges(c.ticker)}</div>
       <div class="t2">${esc(isKR(c.ticker) ? code(c.ticker) : c.ticker)} · 배당률 ${nf(c.yield, 2)}% · 성향 ${c.payout == null ? "-" : nf(c.payout, 0) + "%"} · 연 ${c.freq}회 ${dvDots(c.months)}</div>
       <div class="t2">${esc(c.pool || "")}${c.cagr5 != null ? ` · 5년 성장 ${sgn(c.cagr5, 1)}` : ""}${c.cuts ? ` · 감배 ${c.cuts}회` : ""}</div></div><span></span>
       <div class="num"><b>${nf(c.score, 1)}</b><span class="t2">점</span>${candBtns(c)}</div></div>`).join("") || '<div class="empty">조건에 맞는 후보가 없습니다.</div>'}</div></div>
@@ -1036,7 +1091,8 @@ async function enablePush() {
 /* ── 공통 ── */
 function renderAll() {
   const m = state.data.meta;
-  $("#stamp").innerHTML = m?.morning ? `국장 ${esc(when(m.morning))}${m.evening ? ` · 미장 ${esc(when(m.evening))}` : ""}${m.alerts ? `<br>알림 ${esc(when(m.alerts))}` : ""}` : "";
+  const hm = (iso) => { const d = new Date(iso), n = new Date(); return d.toDateString() === n.toDateString() ? when(iso).split(" ")[1] : when(iso); };
+  $("#stamp").innerHTML = m?.morning ? `국장 ${esc(hm(m.morning))}${m.evening ? ` · 미장 ${esc(hm(m.evening))}` : ""}${m.alerts ? `<br>알림 ${esc(hm(m.alerts))}` : ""}` : "";
   $("#banner").innerHTML = m?.demo ? `<div class="banner">데모 데이터로 표시 중입니다. GitHub Actions 첫 실행 후 실제 시세로 바뀝니다.</div>` :
     !m ? `<div class="banner">데이터를 불러오지 못했습니다. 인터넷 연결을 확인하거나 첫 데이터 생성을 기다려 주세요.</div>` : "";
   renderBrief(); renderPicks(); renderScreen(); renderDiv(); renderLab(); renderAlerts();
@@ -1063,8 +1119,24 @@ document.addEventListener("click", (e) => {
   if (bm) { state.briefM = bm.dataset.bm; renderBrief(); return; }
   const sf = e.target.closest("[data-sf]");
   if (sf) { state.scrF = sf.dataset.sf; store.set("scrF", state.scrF); renderScreen(); return; }
+  const go = e.target.closest("[data-goto]");
+  if (go) {
+    $("#sheet").close();
+    if (go.dataset.goto === "picks") { state.picksH = go.dataset.gh; state.picksM = go.dataset.gm; store.set("picksH", state.picksH); store.set("picksM", state.picksM); renderPicks(); }
+    location.hash = "#" + go.dataset.goto;
+    return;
+  }
+  const pin = e.target.closest("[data-dvpin]");
+  if (pin) {
+    const tk = pin.dataset.dvpin, o = dvOpts(), without = (a) => a.filter((x) => x !== tk);
+    const patch = o.mode === "manual" ? { selected: o.selected.includes(tk) ? without(o.selected) : [...o.selected, tk] }
+      : o.pinned.includes(tk) ? { pinned: without(o.pinned) } : { pinned: [...without(o.pinned), tk], excluded: without(o.excluded) };
+    store.set("divPlan", { ...(store.get("divPlan", {}) || {}), ...patch });
+    renderDiv(); openDetail(tk); toast(o.mode === "manual" ? "배당 플랜 구성을 바꿨습니다" : patch.pinned?.includes(tk) ? "배당 플랜에 고정했습니다" : "고정을 해제했습니다");
+    return;
+  }
   const t = e.target.closest("[data-t]");
-  if (t && !e.target.closest("a")) openDetail(t.dataset.t);
+  if (t && !e.target.closest("a, input, select, label, button[data-dva]")) openDetail(t.dataset.t);
 });
 $("#sheet").addEventListener("click", (e) => { if (e.target.id === "sheet") e.target.close(); });
 $("#refresh").addEventListener("click", () => load().then(() => toast("최신 데이터로 갱신했습니다")));

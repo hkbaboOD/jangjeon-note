@@ -46,7 +46,7 @@ def analyze(ticker: str, meta: dict, divs: pd.Series, price: float | None, fund:
     cap = cfg["max_yield_cap"]
     s_yield = min(yld, cap) / cap * 100
     s_growth = 30 if cagr is None else max(0.0, min(100.0, 30 + cagr * 700))  # 0%→30, 10%→100
-    if meta.get("type") == "etf" or pr is None:
+    if meta.get("type") in ("etf", "reit", "bdc", "fund") or pr is None:  # 리츠·BDC는 법상 이익 대부분을 배당 → 배당성향 평가 제외
         s_sust = 70
     elif pr <= 0.6:
         s_sust = 100
@@ -62,7 +62,7 @@ def analyze(ticker: str, meta: dict, divs: pd.Series, price: float | None, fund:
     notes = []
     if meta.get("covered_call"):
         notes.append("커버드콜 — 원금 잠식·상승 제한 구조, 소수 비중 권장")
-    if pr and pr > 0.9:
+    if pr and pr > 0.9 and meta.get("type") not in ("reit", "bdc", "fund"):
         notes.append(f"배당성향 {pr * 100:.0f}% — 지속가능성 점검 필요")
     if cuts:
         notes.append(f"최근 연간 배당 감소 {cuts}회")

@@ -105,3 +105,21 @@ def test_live_dividends_cache_handles_no_dividend_stocks(tmp_path, monkeypatch):
     assert src2.dividends("AMZN").empty and list(src2.dividends("KO").values) == [0.5, 0.6]
     last12 = src2.dividends("AMZN")
     assert last12[last12.index > pd.Timestamp("2020-01-01")].empty
+
+
+def test_chart_files_live_on_charts_branch():
+    root = Path(__file__).parents[1]
+    wf = (root / ".github/workflows/pipeline.yml").read_text(encoding="utf-8")
+    assert "git fetch --depth=1 origin charts" in wf and 'refs/heads/charts' in wf
+    assert wf.index("차트 파일 복원") < wf.index("파이프라인 실행") < wf.index("차트 파일 저장") < wf.index("upload-pages-artifact")
+    assert "web/data/charts/" in (root / ".gitignore").read_text(encoding="utf-8")
+
+
+def test_dividend_reit_payout_not_penalized():
+    end = pd.Timestamp.today().normalize() - pd.Timedelta(days=1)
+    divs = pd.Series(0.26, index=pd.date_range(end=end, periods=66, freq="30D"))  # 매달 1회, 최근 12개월 12회
+    cfg = load_config()["dividend_plan"]
+    reit = dividend.analyze("O", {"name": "리얼티 인컴", "type": "reit"}, divs, 57.0, {"payout_ratio": 2.9}, cfg)
+    stock = dividend.analyze("X", {"name": "X", "type": "stock"}, divs, 57.0, {"payout_ratio": 2.9}, cfg)
+    assert reit["score"] > stock["score"] and not any("배당성향" in n for n in reit["notes"])
+    assert reit["freq"] >= 12 and len(reit["months"]) >= 11

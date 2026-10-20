@@ -44,6 +44,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # 상세 차트 파일(web/data/charts, 약 170개)은 매일 바뀌어 main 이력이 커지므로
+      # 이력 없는 'charts' 브랜치에 덮어써 두고, 모든 실행에서 복원해 함께 배포한다.
+      - name: 차트 파일 복원 (charts 브랜치)
+        run: |
+          mkdir -p web/data/charts
+          if git fetch --depth=1 origin charts 2>/dev/null; then
+            git archive FETCH_HEAD | tar -x -C web/data/charts
+          fi
+          echo "차트 파일 $(ls web/data/charts | wc -l)개"
+
       - name: 작업 결정
         id: job
         run: |
@@ -91,6 +101,18 @@ jobs:
           git commit -m "data: ${{ steps.job.outputs.job }} $(TZ=Asia/Seoul date +'%Y-%m-%d %H:%M') KST"
           git pull --rebase -X theirs origin main || true
           git push
+
+      - name: 차트 파일 저장 (charts 브랜치, 이력 없이 덮어쓰기)
+        if: steps.job.outputs.job == 'morning' || steps.job.outputs.job == 'all'
+        run: |
+          cd web/data/charts
+          [ -n "$(ls -A)" ] || { echo "차트 없음"; exit 0; }
+          export GIT_DIR="$GITHUB_WORKSPACE/.git" GIT_WORK_TREE="$PWD" GIT_INDEX_FILE="$RUNNER_TEMP/charts.idx"
+          git read-tree --empty
+          git add -A -f .
+          tree=$(git write-tree)
+          commit=$(git commit-tree "$tree" -m "charts $(TZ=Asia/Seoul date +'%Y-%m-%d %H:%M') KST")
+          git push -f origin "$commit:refs/heads/charts"
 
       - name: 앱 설정 주입 (VAPID 공개키)
         run: |

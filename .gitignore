@@ -4,3 +4,6 @@ __pycache__/
 venv/
 .env
 .DS_Store
+
+# 상세 차트 파일은 charts 브랜치에 저장(워크플로가 복원·배포)
+web/data/charts/
