@@ -337,8 +337,11 @@ def run(job: str, demo: bool):
             t = d["ticker"]
             d = {**d, "name": names.get(t) or d.get("name") or t}
             price = (tech_all.get(t) or {}).get("last")
-            fund = src.fundamentals(t)
-            c = div_mod.analyze(t, d, src.dividends(t), price, fund, cfg["dividend_plan"])
+            try:
+                c = div_mod.analyze(t, d, src.dividends(t), price, src.fundamentals(t), cfg["dividend_plan"])
+            except Exception as e:  # 한 종목 오류가 배당 플랜·장전 전체를 막지 않도록
+                log.warning("배당 분석 실패 %s: %s", t, e)
+                continue
             if c and (d["pool"] == "배당 후보" or c["yield"] >= 1.0):  # 유니버스는 배당률 1% 이상만
                 cands.append(c)
         plan = div_mod.build_plan(cands, cfg["dividend_plan"], usdkrw)

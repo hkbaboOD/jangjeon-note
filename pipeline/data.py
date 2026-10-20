@@ -196,20 +196,19 @@ class LiveSource:
         hit = self._div.get(ticker)
         if hit and datetime.utcnow() - datetime.fromisoformat(hit["_fetched"]) < timedelta(days=self.DIV_DAYS):
             s = pd.Series(hit["s"], dtype=float)
-            s.index = pd.to_datetime(s.index)
+            s.index = pd.DatetimeIndex(pd.to_datetime(list(s.index)))
             return s.sort_index()
         try:
             s = self.yf.Ticker(ticker).dividends
-            if s is None or len(s) == 0:
-                s = pd.Series(dtype=float)
-            else:
-                s.index = pd.to_datetime(s.index).tz_localize(None)
-                s = s.astype(float)
         except Exception as e:
             log.warning("배당 이력 실패 %s: %s", ticker, e)
             return pd.Series(dtype=float)
-        cut = pd.Timestamp.now() - pd.Timedelta(days=365 * 7)
-        keep = s[s.index > cut]
+        if s is None or len(s) == 0:  # 무배당 종목: 빈 결과도 캐시(빈 Series 날짜 비교 오류 방지)
+            keep = pd.Series(dtype=float, index=pd.DatetimeIndex([]))
+        else:
+            s.index = pd.to_datetime(s.index).tz_localize(None)
+            s = s.astype(float)
+            keep = s[s.index > pd.Timestamp.now() - pd.Timedelta(days=365 * 7)]
         self._div[ticker] = {"_fetched": datetime.utcnow().isoformat(),
                              "s": {d.strftime("%Y-%m-%d"): round(float(v), 6) for d, v in keep.items()}}
         self._div_dirty = True

@@ -77,3 +77,31 @@ def test_workflow_routes_evening_schedule():
 def test_divplan_js():
     r = subprocess.run(["node", str(Path(__file__).parent / "js" / "divplan.test.js")], capture_output=True, text=True)
     assert r.returncode == 0, r.stderr + r.stdout
+
+
+def test_live_dividends_cache_handles_no_dividend_stocks(tmp_path, monkeypatch):
+    """무배당 종목(빈 배당 이력)도 오류 없이 처리하고, 캐시 재사용 시 같은 결과."""
+    from pipeline import data as data_mod
+
+    monkeypatch.setattr(data_mod, "STATE_DIR", tmp_path)
+    idx = pd.to_datetime(["2024-03-10", "2025-03-10"]).tz_localize("America/New_York")
+
+    class T:
+        def __init__(self, t):
+            self.dividends = pd.Series([0.5, 0.6], index=idx) if t == "KO" else pd.Series(dtype=float)
+
+    class YF:
+        Ticker = T
+
+    src = data_mod.LiveSource.__new__(data_mod.LiveSource)
+    src.yf, src._cache, src._dirty = YF(), {}, False
+    monkeypatch.setattr(data_mod.time, "sleep", lambda s: None)
+    assert src.dividends("AMZN").empty
+    ko = src.dividends("KO")
+    assert list(ko.values) == [0.5, 0.6] and ko.index.tz is None
+    src.flush()
+    src2 = data_mod.LiveSource.__new__(data_mod.LiveSource)
+    src2.yf, src2._cache, src2._dirty = None, {}, False  # 캐시만으로 응답(네트워크 호출 시 실패)
+    assert src2.dividends("AMZN").empty and list(src2.dividends("KO").values) == [0.5, 0.6]
+    last12 = src2.dividends("AMZN")
+    assert last12[last12.index > pd.Timestamp("2020-01-01")].empty
