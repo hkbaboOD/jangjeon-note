@@ -3501,9 +3501,9 @@
   "name": "Vanguard High Dividend Yield ET",
   "sector": "Large Value",
   "currency": "USD",
-  "price": 159.97,
+  "price": 160.25,
   "forward_pe": null,
-  "trailing_pe": 20.094704,
+  "trailing_pe": 20.044067,
   "peg": null,
   "pb": null,
   "roe": null,
@@ -3521,15 +3521,15 @@
   "market_cap": 95754289152.0,
   "high_52w": 167.61,
   "low_52w": 138.35,
-  "_fetched": "2026-10-16T07:01:22.089553"
+  "_fetched": "2026-10-17T01:47:54.853325"
  },
  "VIG": {
   "name": "Vanguard Div Appreciation ETF",
   "sector": "Large Blend",
   "currency": "USD",
-  "price": 242.05,
+  "price": 241.77,
   "forward_pe": null,
-  "trailing_pe": 25.372175,
+  "trailing_pe": 25.278585,
   "peg": null,
   "pb": null,
   "roe": null,
@@ -3547,15 +3547,15 @@
   "market_cap": 127597993984.0,
   "high_52w": 247.45,
   "low_52w": 210.01,
-  "_fetched": "2026-10-16T07:01:23.069226"
+  "_fetched": "2026-10-17T01:47:55.957149"
  },
  "DGRO": {
   "name": "iShares Core Dividend Growth ET",
   "sector": "Large Value",
   "currency": "USD",
-  "price": 78.59,
+  "price": 78.87,
   "forward_pe": null,
-  "trailing_pe": 22.437492,
+  "trailing_pe": 22.517433,
   "peg": null,
   "pb": null,
   "roe": null,
@@ -3573,15 +3573,15 @@
   "market_cap": 41891237888.0,
   "high_52w": 80.58,
   "low_52w": 67.135,
-  "_fetched": "2026-10-16T07:01:24.039953"
+  "_fetched": "2026-10-17T01:47:57.071626"
  },
  "JEPI": {
   "name": "JPMorgan Equity Premium Income ",
   "sector": "Derivative Income",
   "currency": "USD",
-  "price": 57.16,
+  "price": 57.04,
   "forward_pe": null,
-  "trailing_pe": 24.799192,
+  "trailing_pe": 24.74713,
   "peg": null,
   "pb": null,
   "roe": null,
@@ -3599,15 +3599,15 @@
   "market_cap": 45266845696.0,
   "high_52w": 59.9,
   "low_52w": 55.1,
-  "_fetched": "2026-10-16T07:01:24.968331"
+  "_fetched": "2026-10-17T01:47:58.228214"
  },
  "JEPQ": {
   "name": "JPMorgan Nasdaq Equity Premium ",
   "sector": "Derivative Income",
   "currency": "USD",
-  "price": 60.1,
+  "price": 58.81,
   "forward_pe": null,
-  "trailing_pe": 27.659565,
+  "trailing_pe": 27.065876,
   "peg": null,
   "pb": null,
   "roe": null,
@@ -3625,17 +3625,17 @@
   "market_cap": 44315615232.0,
   "high_52w": 61.72,
   "low_52w": 53.51,
-  "_fetched": "2026-10-16T07:01:25.934384"
+  "_fetched": "2026-10-17T01:47:59.268222"
  },
  "O": {
   "name": "Realty Income Corporation",
   "sector": "Real Estate",
   "currency": "USD",
-  "price": 55.55,
-  "forward_pe": 35.769016,
-  "trailing_pe": 40.253624,
+  "price": 56.08,
+  "forward_pe": 36.11029,
+  "trailing_pe": 40.637684,
   "peg": 2.8516,
-  "pb": 1.329011,
+  "pb": 1.341691,
   "roe": 0.03225,
   "op_margin": 0.46965998,
   "debt_to_equity": 74.722,
@@ -3648,20 +3648,20 @@
   "rec_key": "hold",
   "rec_mean": 2.56,
   "payout_ratio": 2.3471,
-  "market_cap": 52562411520.0,
+  "market_cap": 53063909376.0,
   "high_52w": 67.94,
   "low_52w": 53.15,
-  "_fetched": "2026-10-16T07:01:26.869265"
+  "_fetched": "2026-10-17T01:48:00.291453"
  },
  "MO": {
   "name": "Altria Group, Inc.",
   "sector": "Consumer Defensive",
   "currency": "USD",
-  "price": 73.84,
-  "forward_pe": 12.591807,
-  "trailing_pe": 15.545262,
+  "price": 75.11,
+  "forward_pe": 12.808379,
+  "trailing_pe": 15.812632,
   "peg": 2.6418,
-  "pb": -46.207756,
+  "pb": -47.002502,
   "roe": null,
   "op_margin": 0.76363,
   "debt_to_equity": null,
@@ -3674,9 +3674,9 @@
   "rec_key": "hold",
   "rec_mean": 2.64286,
   "payout_ratio": 0.8926,
-  "market_cap": 123293884416.0,
+  "market_cap": 125414465536.0,
   "high_52w": 77.06,
   "low_52w": 54.7,
-  "_fetched": "2026-10-16T07:01:31.109351"
+  "_fetched": "2026-10-17T01:48:04.922029"
  }
 }
