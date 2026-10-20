@@ -3,8 +3,8 @@
   {
    "ticker": "ES=F",
    "name": "S&P500 선물",
-   "last": 7732.25,
-   "chg": -0.02909043894240293,
+   "last": 7741.0,
+   "chg": 0.084039045833606,
    "date": "2026-10-20",
    "spark": [
     7643.75,
@@ -36,14 +36,14 @@
     7791.0,
     7704.25,
     7734.5,
-    7732.25
+    7741.0
    ]
   },
   {
    "ticker": "NQ=F",
    "name": "나스닥100 선물",
-   "last": 29618.75,
-   "chg": -0.34906215829758613,
+   "last": 29652.75,
+   "chg": -0.23467070401210766,
    "date": "2026-10-20",
    "spark": [
     29448.75,
@@ -75,14 +75,14 @@
     30143.75,
     29391.5,
     29722.5,
-    29618.75
+    29652.75
    ]
   },
   {
    "ticker": "YM=F",
    "name": "다우 선물",
-   "last": 52262.0,
-   "chg": 0.15330957034993542,
+   "last": 52349.0,
+   "chg": 0.32003372810547326,
    "date": "2026-10-20",
    "spark": [
     52425.0,
@@ -114,7 +114,7 @@
     52430.0,
     52214.0,
     52182.0,
-    52262.0
+    52349.0
    ]
   }
  ],
@@ -122,8 +122,8 @@
   {
    "ticker": "^KS11",
    "name": "코스피",
-   "last": 5510.740234375,
-   "chg": -4.4602825186465855,
+   "last": 5520.93994140625,
+   "chg": -4.283450171863201,
    "date": "2026-10-20",
    "spark": [
     6579.48,
@@ -155,14 +155,14 @@
     5554.2202,
     5668.0498,
     5768.0098,
-    5510.7402
+    5520.9399
    ]
   },
   {
    "ticker": "^KQ11",
    "name": "코스닥",
-   "last": 782.1599731445312,
-   "chg": -3.304533498973128,
+   "last": 780.5399780273438,
+   "chg": -3.5048073418751935,
    "date": "2026-10-20",
    "spark": [
     790.21,
@@ -194,7 +194,7 @@
     760.82,
     794.78,
     808.89,
-    782.16
+    780.54
    ]
   }
  ],
@@ -400,8 +400,8 @@
   {
    "ticker": "CL=F",
    "name": "WTI",
-   "last": 98.87999725341797,
-   "chg": -4.611235037452188,
+   "last": 98.69999694824219,
+   "chg": -4.784879933088604,
    "date": "2026-10-20",
    "spark": [
     96.05,
@@ -433,14 +433,14 @@
     97.97,
     101.41,
     103.66,
-    98.88
+    98.7
    ]
   },
   {
    "ticker": "BZ=F",
    "name": "브렌트",
-   "last": 110.01000213623047,
-   "chg": 0.41989874181502795,
+   "last": 109.88999938964844,
+   "chg": 0.3103572144402378,
    "date": "2026-10-20",
    "spark": [
     101.21,
@@ -472,14 +472,14 @@
     105.92,
     109.86,
     109.55,
-    110.01
+    109.89
    ]
   },
   {
    "ticker": "DX-Y.NYB",
    "name": "달러인덱스",
-   "last": 101.7750015258789,
-   "chg": -0.20102159669201924,
+   "last": 101.77899932861328,
+   "chg": -0.19710141371224177,
    "date": "2026-10-20",
    "spark": [
     98.77,
@@ -511,14 +511,14 @@
     102.0,
     101.84,
     101.98,
-    101.775
+    101.779
    ]
   },
   {
    "ticker": "KRW=X",
    "name": "원달러",
-   "last": 1328.010009765625,
-   "chg": -0.4064738101731358,
+   "last": 1327.5799560546875,
+   "chg": -0.43872549894681256,
    "date": "2026-10-20",
    "spark": [
     1339.21,
@@ -550,14 +550,14 @@
     1339.35,
     1340.95,
     1333.4301,
-    1328.01
+    1327.58
    ]
   },
   {
    "ticker": "GC=F",
    "name": "금",
-   "last": 4152.7998046875,
-   "chg": -0.17548358927379493,
+   "last": 4148.7998046875,
+   "chg": -0.27163512183556726,
    "date": "2026-10-20",
    "spark": [
     4460.7002,
@@ -589,14 +589,14 @@
     4170.1001,
     4181.1001,
     4160.1001,
-    4152.7998
+    4148.7998
    ]
   }
  ],
  "breadth": {
   "kr": {
-   "up": 1,
-   "down": 39,
+   "up": 3,
+   "down": 37,
    "total": 40
   }
  },
@@ -609,70 +609,70 @@
      "chg": 0.39447731755424265
     },
     {
-     "ticker": "316140.KS",
-     "name": "우리금융지주",
-     "chg": 0.0
-    },
-    {
      "ticker": "033780.KS",
      "name": "KT&G",
-     "chg": -0.15535991714137332
+     "chg": 0.36250647332987107
+    },
+    {
+     "ticker": "316140.KS",
+     "name": "우리금융지주",
+     "chg": 0.15797788309637184
     },
     {
      "ticker": "068270.KS",
      "name": "셀트리온",
-     "chg": -1.2108980827447047
+     "chg": -0.7568113017154432
     },
     {
      "ticker": "000810.KS",
      "name": "삼성화재",
-     "chg": -1.4827018121911006
+     "chg": -1.317957166392092
     }
    ],
    "bottom": [
     {
      "ticker": "064350.KS",
      "name": "현대로템",
-     "chg": -13.80337636544191
+     "chg": -14.001986097318763
     },
     {
      "ticker": "012450.KS",
      "name": "한화에어로스페이스",
-     "chg": -12.486187845303863
-    },
-    {
-     "ticker": "010950.KS",
-     "name": "S-Oil",
-     "chg": -8.770806658130603
+     "chg": -12.044198895027625
     },
     {
      "ticker": "096770.KS",
      "name": "SK이노베이션",
-     "chg": -8.711656441717796
+     "chg": -8.895705521472397
     },
     {
      "ticker": "247540.KQ",
      "name": "에코프로비엠",
-     "chg": -8.549222797927458
+     "chg": -8.721934369602769
+    },
+    {
+     "ticker": "329180.KS",
+     "name": "HD현대중공업",
+     "chg": -8.683068017366136
     }
    ]
   }
  },
  "review": [
-  "코스피 5,510.74 (-4.46%), 코스닥 -3.30% · 원/달러 1,328.0원(-0.41%)",
-  "국내 유니버스 상승 1 · 하락 39 — 강세 KT +0.4%, 약세 현대로템 -13.8%"
+  "코스피 5,520.94 (-4.28%), 코스닥 -3.50% · 원/달러 1,327.6원(-0.44%)",
+  "국내 유니버스 상승 3 · 하락 37 — 강세 KT +0.4%, 약세 현대로템 -14.0%"
  ],
  "tonight": [
-  "미 지수 선물 보합: S&P500 선물 -0.03%, 나스닥100 선물 -0.35%",
+  "미 지수 선물 보합: S&P500 선물 +0.08%, 나스닥100 선물 -0.23%",
   "VIX 18.4 — 안정 구간(20 미만)",
-  "WTI -4.6% — 에너지 약세·인플레 부담 완화"
+  "WTI -4.8% — 에너지 약세·인플레 부담 완화"
  ],
  "earnings": [],
  "diagnosis": [
   {
    "ticker": "005930.KS",
    "name": "삼성전자",
-   "chg_1d": -3.7844036697247674,
+   "chg_1d": -3.5550458715596367,
    "type": "수급·심리성(약)",
    "evidence": [
     "평균 목표가 +0.0%",
@@ -684,7 +684,7 @@
   {
    "ticker": "000660.KS",
    "name": "SK하이닉스",
-   "chg_1d": -5.24667188723571,
+   "chg_1d": -5.090054815974943,
    "type": "수급·심리성(약)",
    "evidence": [
     "평균 목표가 -1.4%",
@@ -847,12 +847,12 @@
     "tone": -0.29,
     "esc_n": 12,
     "de_n": 22,
-    "confirm": -0.31,
+    "confirm": -0.33,
     "moves": {
-     "KRW=X": -0.46
+     "KRW=X": -0.49
     },
-    "direction": -0.3,
-    "intensity": -0.303,
+    "direction": -0.32,
+    "intensity": -0.32,
     "stance": "원화 강세",
     "up": [
      "유가 원가 부담주",
@@ -885,20 +885,20 @@
    {
     "key": "nk",
     "label": "북한·한반도",
-    "n": 47,
+    "n": 44,
     "base": null,
     "ratio": null,
     "level": "보통",
-    "heat": 0.59,
+    "heat": 0.55,
     "tone": 1.0,
-    "esc_n": 44,
+    "esc_n": 42,
     "de_n": 0,
-    "confirm": -0.31,
+    "confirm": -0.33,
     "moves": {
-     "KRW=X": -0.46
+     "KRW=X": -0.49
     },
     "direction": 0.68,
-    "intensity": 0.399,
+    "intensity": 0.371,
     "stance": "도발",
     "up": [
      "방산"
@@ -930,21 +930,21 @@
    {
     "key": "mideast",
     "label": "중동 정세",
-    "n": 47,
+    "n": 46,
     "base": null,
     "ratio": null,
     "level": "보통",
-    "heat": 0.59,
-    "tone": 0.78,
+    "heat": 0.57,
+    "tone": 0.88,
     "esc_n": 16,
-    "de_n": 2,
-    "confirm": 0.32,
+    "de_n": 1,
+    "confirm": 0.29,
     "moves": {
-     "CL=F": 5.04,
-     "GC=F": -0.59
+     "CL=F": 4.84,
+     "GC=F": -0.68
     },
-    "direction": 0.55,
-    "intensity": 0.325,
+    "direction": 0.58,
+    "intensity": 0.333,
     "stance": "긴장 고조",
     "up": [
      "정유·에너지",
@@ -987,13 +987,13 @@
     "tone": 0.4,
     "esc_n": 7,
     "de_n": 3,
-    "confirm": 0.1,
+    "confirm": 0.09,
     "moves": {
      "^GSPC": -1.49,
-     "KRW=X": -0.46
+     "KRW=X": -0.49
     },
-    "direction": 0.28,
-    "intensity": 0.181,
+    "direction": 0.27,
+    "intensity": 0.178,
     "stance": "무역 긴장",
     "up": [
      "경기 방어"
@@ -1066,6 +1066,50 @@
     ]
    },
    {
+    "key": "us_china",
+    "label": "미중 갈등·수출규제",
+    "n": 7,
+    "base": null,
+    "ratio": null,
+    "level": "낮음",
+    "heat": 0.09,
+    "tone": 0.33,
+    "esc_n": 2,
+    "de_n": 1,
+    "confirm": 1.0,
+    "moves": {
+     "^SOX": -7.52
+    },
+    "direction": 0.6,
+    "intensity": 0.054,
+    "stance": "갈등 고조",
+    "up": [],
+    "down": [
+     "중국 노출",
+     "반도체"
+    ],
+    "headlines": [
+     {
+      "title": "\"日, 핵심 희토류 이트륨 수개월 내 고갈 위기...미국에 中설득 요청\"",
+      "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9mdDRmV3VyUkhGUk1DcEUzWjVqUmJjNXZaRkJsekE4WDRoQ0wzZS04QUpoeVhOdnBlSjFHSEhfLVFvSXhqNDNGLU13TVJjQTFuQUFQX1VtcEVLR000?oc=5",
+      "publisher": "뉴스핌",
+      "time": "2026-10-20T05:44:00+00:00"
+     },
+     {
+      "title": "한국, 미중 사이 실익 찾을까…통상·공급망 시험대 [③선전APEC D-30]",
+      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTFAtUDNHcXZnZlEyQ2psZXpFVDNjZU1oSm81Mm1fQ2NqTmMxcXJRZkZ5NUR1eEhxOFQ4Z0FMem1SVklkQ1VQcWlwMjI1UHJNVGZwVE9jbjBZTVdubFVFQTdjb2FXMkc2SkxqcFNCdzFyVDljdF9UdUFlZtIBeEFVX3lxTFAtUDNHcXZnZlEyQ2psZXpFVDNjZU1oSm81Mm1fQ2NqTmMxcXJRZkZ5NUR1eEhxOFQ4Z0FMem1SVklkQ1VQcWlwMjI1UHJNVGZwVE9jbjBZTVdubFVFQTdjb2FXMkc2SkxqcFNCdzFyVDljdF9UdUFlZg?oc=5",
+      "publisher": "뉴시스",
+      "time": "2026-10-18T21:00:00+00:00"
+     },
+     {
+      "title": "中, 첨단 AI 해외 이전 통제… 美와 기술 패권 경쟁 가속",
+      "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQdGZLd1RfdGV6QVc2Qi1PeC1SMDl4bWY5djNoaDB4QVE4YTZ5RDk4ZGR6bDF4LVB2UEhjODRzVjhveGE1YkhPS2gyXzFfeGE4U0ZuYTZUM19iWE9sLVBmV3VtYjJkYzFpUUYxQVIwbXJtMEIzRXRjNVI5clVhRmtuRXhnRQ?oc=5",
+      "publisher": "조선일보",
+      "time": "2026-10-18T16:01:37+00:00"
+     }
+    ]
+   },
+   {
     "key": "russia",
     "label": "러시아·우크라이나",
     "n": 20,
@@ -1076,12 +1120,12 @@
     "tone": -0.09,
     "esc_n": 5,
     "de_n": 6,
-    "confirm": 0.24,
+    "confirm": 0.22,
     "moves": {
-     "BZ=F": 4.09,
-     "GC=F": -0.59
+     "BZ=F": 3.97,
+     "GC=F": -0.68
     },
-    "direction": -0.04,
+    "direction": -0.05,
     "intensity": 0.0,
     "stance": "방향 혼재",
     "up": [],
@@ -1089,21 +1133,21 @@
     "headlines": [
      {
       "title": "우크라, 러 원유시설 대규모 공격…트럼프 \"젤렌스키, 전쟁 끝낼 생각 없어\"",
-      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5UeFhZMnZKd1VPRUQtSndxUzFjSlU1WUx2SjNtSHJZVDVuNTFfUDNqN3g1b0J2RW83MVRxYmlsbllCdUs1QVRZMFliTUZtV1dyVkllZWZPR3VkajRLb29VcmszV1QtMWE4ZmhrWU5BTWFkQ2pBS0E?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1ReEhGdl9md3RzZlpTYnA4M1JvVlUtaGJhdHVmWHJtcTkxbVNTcXI1U0NBZDA2UGpGR3BBbGo4SU1FZ0FTbzE0TGRSRjVrVGVTbGVWU3FGajFkaVpJaFhjU2w0Ql81Y1hoM0c0?oc=5",
       "publisher": "프레시안",
       "time": "2026-10-19T11:47:07+00:00"
-     },
-     {
-      "title": "젤렌스키 \"전쟁 중 대선 치르면 출마할 것\"…트럼프 퇴진 요구 일축",
-      "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE0taUpJTmxkM2RBaWJNVjBOdVo3S3dWVHJkRER5S2hZT3dWZDloVWUwUTFaWUNpMURLeXg5N0dXZ2FLbUdXME9fck5XTEhQZkNSMXgw?oc=5",
-      "publisher": "뉴스1",
-      "time": "2026-10-19T09:20:26+00:00"
      },
      {
       "title": "美 에너지 \"對러 제재 면제는 종전 유인책…봐주기 아냐\" |",
       "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5ZNlVfY2ROSXFrWU9iamVHTUc4ZFBWcWdyZDdGeDlWYWtIT2YxNjF4eENXMmFtRDVfVmZkbW5ZWlNZWFRzLTFndVBsZmt2OENQOEQxUXlCWUxIdGxrcWRBaldESzMzMkx6Rl9NM3M4d3h5TVpO?oc=5",
       "publisher": "연합인포맥스",
       "time": "2026-10-19T01:17:19+00:00"
+     },
+     {
+      "title": "젤렌스키 \"전쟁 중 대선 치르면 출마할 것\"…트럼프 퇴진 요구 일축",
+      "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE0taUpJTmxkM2RBaWJNVjBOdVo3S3dWVHJkRER5S2hZT3dWZDloVWUwUTFaWUNpMURLeXg5N0dXZ2FLbUdXME9fck5XTEhQZkNSMXgw?oc=5",
+      "publisher": "뉴스1",
+      "time": "2026-10-19T09:20:26+00:00"
      }
     ]
    },
@@ -1130,12 +1174,6 @@
     "down": [],
     "headlines": [
      {
-      "title": "[동북아 정세 브리핑] 중국 3분기 성장률 4.5% 반등·인민은행 금리 동결 '전망'…미·일 대만 인근 미사일 배치, 해상 긴장 고조",
-      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1wUW1kRXJQZW9PZHYzY0dudU1mVE1YYmdEMm9tT3ZWRDUyTnJMa3Z6MkQ4RENRajhhWFFNU0U2ZjRqUDI4ZVh5Q09obG9NN1RjU2c?oc=5",
-      "publisher": "kor.theasian.asia",
-      "time": "2026-10-19T23:59:11+00:00"
-     },
-     {
       "title": "‘회색지대 전술’의 실체…대만 해경이 턱밑까지 파고든 중국 해경선 향해 칼을 빼든 사연 [밀리터리노트]",
       "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5QRHREaFdKYUxPQ3BmeTJPclVQRmhBT3RMbmxmNzNZWjhCRHp3TEc3bmhGUDJmSnJBTVktel9aSDhQOVRoUHhINEZUQTBHbDlsbVVZYmF0SktlbEs2Qmp0ZlJzVjhrcW54TWphNnY5TnZ6V0p6eGROZzlSWVJCNFU?oc=5",
       "publisher": "서울신문",
@@ -1146,68 +1184,33 @@
       "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE91OVlyUUlzcEtJNUhTLWVMMFV2MmFMY2NKNmNYTFliX3Ywdjg4ZV91ZWNNSmVtMTdmeGhYX29QTHEzRzRfN182ajU4Zw?oc=5",
       "publisher": "개미신문",
       "time": "2026-10-19T04:00:59+00:00"
-     }
-    ]
-   },
-   {
-    "key": "us_china",
-    "label": "미중 갈등·수출규제",
-    "n": 6,
-    "base": null,
-    "ratio": null,
-    "level": "낮음",
-    "heat": 0.07,
-    "tone": 0.0,
-    "esc_n": 1,
-    "de_n": 1,
-    "confirm": 1.0,
-    "moves": {
-     "^SOX": -7.52
-    },
-    "direction": 0.2,
-    "intensity": 0.014,
-    "stance": "갈등 고조",
-    "up": [],
-    "down": [],
-    "headlines": [
-     {
-      "title": "한국, 미중 사이 실익 찾을까…통상·공급망 시험대 [③선전APEC D-30]",
-      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTFAtUDNHcXZnZlEyQ2psZXpFVDNjZU1oSm81Mm1fQ2NqTmMxcXJRZkZ5NUR1eEhxOFQ4Z0FMem1SVklkQ1VQcWlwMjI1UHJNVGZwVE9jbjBZTVdubFVFQTdjb2FXMkc2SkxqcFNCdzFyVDljdF9UdUFlZtIBeEFVX3lxTFAtUDNHcXZnZlEyQ2psZXpFVDNjZU1oSm81Mm1fQ2NqTmMxcXJRZkZ5NUR1eEhxOFQ4Z0FMem1SVklkQ1VQcWlwMjI1UHJNVGZwVE9jbjBZTVdubFVFQTdjb2FXMkc2SkxqcFNCdzFyVDljdF9UdUFlZg?oc=5",
-      "publisher": "뉴시스",
-      "time": "2026-10-18T21:00:00+00:00"
      },
      {
-      "title": "[차이나 풍향계] 중국 반도체, 기술보다 물량이 변수…CXMT·화웨이의 엇갈린 과제 By EBN",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE40cGt2UnYyeXNfWGJpRy1sT0Jlb3pkU2N0ckV5b2NSQVRuZW5EUXhGNGxVQ1BOUzFiei1PdHl6UmFfOWpkejVYS3EyQWNzaTJlU1NScWdjaVBtM2lSdmZzV2tLcnJXWGxyWGlCejVFb0Q?oc=5",
-      "publisher": "Investing.com 한국어",
-      "time": "2026-10-19T00:41:00+00:00"
-     },
-     {
-      "title": "中, 첨단 AI 해외 이전 통제… 美와 기술 패권 경쟁 가속",
-      "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQdGZLd1RfdGV6QVc2Qi1PeC1SMDl4bWY5djNoaDB4QVE4YTZ5RDk4ZGR6bDF4LVB2UEhjODRzVjhveGE1YkhPS2gyXzFfeGE4U0ZuYTZUM19iWE9sLVBmV3VtYjJkYzFpUUYxQVIwbXJtMEIzRXRjNVI5clVhRmtuRXhnRQ?oc=5",
-      "publisher": "조선일보",
-      "time": "2026-10-18T16:01:37+00:00"
+      "title": "게임 이해를 돕는 짧은 문답, 카지노 가입머니",
+      "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5oSS1QMGsyNml5alFxY3FaMUp3UEI4XzZKNHRfMmlHcDJMRzQ4bEhFS3BicGtmUmNyR0Nucjk4b1pEVWROT0lSVF9hSDFLblJxR2s4SHRsdHVfRm1FX1VBOUl6QktzY2V3NkNiSEVpTWFrWU5oUVZfWkdWcmd5blk?oc=5",
+      "publisher": "Calgary Roughnecks",
+      "time": "2026-10-18T19:41:17+00:00"
      }
     ]
    }
   ],
   "impact": {
-   "china": -0.079,
-   "semis": -0.026,
-   "tariff": -0.185,
-   "defense": 0.412,
-   "export": -0.29,
-   "defensive": 0.054,
-   "oil_up": 0.325,
-   "oil_down": -0.204,
-   "shipping": 0.13,
-   "korea": -0.214,
+   "china": -0.118,
+   "semis": -0.05,
+   "tariff": -0.194,
+   "defense": 0.415,
+   "export": -0.299,
+   "defensive": 0.053,
+   "oil_up": 0.333,
+   "oil_down": -0.205,
+   "shipping": 0.133,
+   "korea": -0.193,
    "ai": -0.007
   },
   "summary": [
    "환율(원화): 48시간 기사 100건, 원화 강세 · 5일 원달러 -0.5% → 유리: 유가 원가 부담주, 국내 상장주 / 부담: 수출주",
-   "북한·한반도: 48시간 기사 47건, 도발 · 5일 원달러 -0.5% → 유리: 방산 / 부담: 국내 상장주",
-   "중동 정세: 48시간 기사 47건, 긴장 고조 · 5일 WTI +5.0%, 금 -0.6% → 유리: 정유·에너지, 방산, 해운·조선 / 부담: 유가 원가 부담주, 국내 상장주",
+   "북한·한반도: 48시간 기사 44건, 도발 · 5일 원달러 -0.5% → 유리: 방산 / 부담: 국내 상장주",
+   "중동 정세: 48시간 기사 46건, 긴장 고조 · 5일 WTI +4.8%, 금 -0.7% → 유리: 정유·에너지, 방산, 해운·조선 / 부담: 유가 원가 부담주, 국내 상장주",
    "관세·무역분쟁: 48시간 기사 52건, 무역 긴장 · 5일 S&P500 -1.5%, 원달러 -0.5% → 유리: 경기 방어 / 부담: 관세 민감, 수출주, 중국 노출"
   ]
  },
@@ -1235,16 +1238,16 @@
   }
  ],
  "date": "2026-10-20",
- "generated": "2026-10-20T14:41+09:00",
+ "generated": "2026-10-20T15:31+09:00",
  "watch": [
   {
    "ticker": "005930.KS",
    "name": "삼성전자",
    "market": "kr",
-   "last": 209750.0,
-   "chg_1d": -3.7844036697247674,
-   "chg_5d": -9.590517241379315,
-   "rsi14": 30.389710736081796,
+   "last": 210250.0,
+   "chg_1d": -3.5550458715596367,
+   "chg_5d": -9.375,
+   "rsi14": 30.53360876064272,
    "spark": [
     260500.0,
     270000.0,
@@ -1305,7 +1308,7 @@
     210000.0,
     215500.0,
     218000.0,
-    209750.0
+    210250.0
    ],
    "setup_label": "상승추세 속 눌림목"
   },
@@ -1313,10 +1316,10 @@
    "ticker": "000660.KS",
    "name": "SK하이닉스",
    "market": "kr",
-   "last": 1210000.0,
-   "chg_1d": -5.24667188723571,
-   "chg_5d": -16.146916146916148,
-   "rsi14": 24.230137202047757,
+   "last": 1212000.0,
+   "chg_1d": -5.090054815974943,
+   "chg_5d": -16.008316008316005,
+   "rsi14": 24.29130395984508,
    "spark": [
     1830000.0,
     1919000.0,
@@ -1377,7 +1380,7 @@
     1262000.0,
     1272000.0,
     1277000.0,
-    1210000.0
+    1212000.0
    ],
    "setup_label": "하락 후 반등 시도"
   },

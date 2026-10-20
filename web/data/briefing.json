@@ -159,8 +159,8 @@
   {
    "ticker": "^KS11",
    "name": "코스피",
-   "last": 5519.31982421875,
-   "chg": -4.311538147669946,
+   "last": 5518.68017578125,
+   "chg": -4.322627734260321,
    "date": "2026-10-20",
    "spark": [
     6579.48,
@@ -192,14 +192,14 @@
     5554.2202,
     5668.0498,
     5768.0098,
-    5519.3198
+    5518.6802
    ]
   },
   {
    "ticker": "^KQ11",
    "name": "코스닥",
-   "last": 783.4500122070312,
-   "chg": -3.14505086979755,
+   "last": 780.6799926757812,
+   "chg": -3.487497862724509,
    "date": "2026-10-20",
    "spark": [
     790.21,
@@ -231,7 +231,7 @@
     760.82,
     794.78,
     808.89,
-    783.45
+    780.68
    ]
   }
  ],
@@ -318,8 +318,8 @@
   {
    "ticker": "CL=F",
    "name": "WTI",
-   "last": 98.77999877929688,
-   "chg": -4.707702788357393,
+   "last": 98.94999694824219,
+   "chg": -4.543706875816778,
    "date": "2026-10-20",
    "spark": [
     96.05,
@@ -351,14 +351,14 @@
     97.97,
     101.41,
     103.66,
-    98.78
+    98.95
    ]
   },
   {
    "ticker": "BZ=F",
    "name": "브렌트",
-   "last": 109.94999694824219,
-   "chg": 0.36512449597596586,
+   "last": 110.11000061035156,
+   "chg": 0.5111798658090194,
    "date": "2026-10-20",
    "spark": [
     101.21,
@@ -390,14 +390,14 @@
     105.92,
     109.86,
     109.55,
-    109.95
+    110.11
    ]
   },
   {
    "ticker": "DX-Y.NYB",
    "name": "달러인덱스",
-   "last": 101.77100372314453,
-   "chg": -0.20494177967179672,
+   "last": 101.76699829101562,
+   "chg": -0.20886944391680373,
    "date": "2026-10-20",
    "spark": [
     98.77,
@@ -429,14 +429,14 @@
     102.0,
     101.84,
     101.98,
-    101.771
+    101.767
    ]
   },
   {
    "ticker": "KRW=X",
    "name": "원달러",
-   "last": 1327.97998046875,
-   "chg": -0.4087258440755859,
+   "last": 1328.47998046875,
+   "chg": -0.3712285641388813,
    "date": "2026-10-20",
    "spark": [
     1339.21,
@@ -468,14 +468,14 @@
     1339.35,
     1340.95,
     1333.4301,
-    1327.98
+    1328.48
    ]
   },
   {
    "ticker": "GC=F",
    "name": "금",
-   "last": 4152.39990234375,
-   "chg": -0.18509639508045295,
+   "last": 4146.5,
+   "chg": -0.32691755815953405,
    "date": "2026-10-20",
    "spark": [
     4460.7002,
@@ -507,7 +507,7 @@
     4170.1001,
     4181.1001,
     4160.1001,
-    4152.3999
+    4146.5
    ]
   }
  ],
@@ -518,8 +518,8 @@
    "total": 66
   },
   "kr": {
-   "up": 1,
-   "down": 39,
+   "up": 2,
+   "down": 38,
    "total": 40
   }
  },
@@ -585,7 +585,12 @@
     {
      "ticker": "030200.KS",
      "name": "KT",
-     "chg": 0.19723865877712132
+     "chg": 0.39447731755424265
+    },
+    {
+     "ticker": "033780.KS",
+     "name": "KT&G",
+     "chg": 0.31071983428274663
     },
     {
      "ticker": "316140.KS",
@@ -593,53 +598,48 @@
      "chg": 0.0
     },
     {
-     "ticker": "033780.KS",
-     "name": "KT&G",
-     "chg": -0.15535991714137332
-    },
-    {
      "ticker": "068270.KS",
      "name": "셀트리온",
-     "chg": -1.2613521695257313
+     "chg": -0.8072653884964698
     },
     {
-     "ticker": "009150.KS",
-     "name": "삼성전기",
-     "chg": -1.2820512820512775
+     "ticker": "000810.KS",
+     "name": "삼성화재",
+     "chg": -1.317957166392092
     }
    ],
    "bottom": [
     {
      "ticker": "064350.KS",
      "name": "현대로템",
-     "chg": -13.80337636544191
+     "chg": -14.200595829195628
     },
     {
      "ticker": "012450.KS",
      "name": "한화에어로스페이스",
-     "chg": -12.26519337016575
-    },
-    {
-     "ticker": "010950.KS",
-     "name": "S-Oil",
-     "chg": -8.706786171574898
+     "chg": -12.044198895027625
     },
     {
      "ticker": "096770.KS",
      "name": "SK이노베이션",
-     "chg": -8.527607361963184
+     "chg": -8.95705521472393
+    },
+    {
+     "ticker": "329180.KS",
+     "name": "HD현대중공업",
+     "chg": -8.827785817655576
     },
     {
      "ticker": "247540.KQ",
      "name": "에코프로비엠",
-     "chg": -8.462867012089815
+     "chg": -8.808290155440412
     }
    ]
   }
  },
  "points": [
   "미 증시 강세: S&P500 +0.41%, 나스닥 +1.11%",
-  "유가 급변(WTI -4.7%)"
+  "유가 급변(WTI -4.5%)"
  ],
  "outlook": [
   "유가 하락: 항공·화학 수혜, 정유 부담"
@@ -648,7 +648,7 @@
   {
    "ticker": "005930.KS",
    "name": "삼성전자",
-   "chg_1d": -3.899082568807344,
+   "chg_1d": -3.7844036697247674,
    "type": "수급·심리성",
    "evidence": [
     "평균 목표가 +0.0%",
@@ -759,6 +759,12 @@
  "ai_summary": null,
  "news_kr": [
   {
+   "title": "22% 빠진 코스피, 바닥 찍었나…반등 조건 따져보니",
+   "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9aVjllbXdrc0RYdkttcTJKLTRURzJVbWdwLTBrQ3AxaDVJNkEwOUNfLVFjeHI3bWo4SVJNbngxQ2Rxc2JmczMwMVY5aTRBMEE?oc=5",
+   "publisher": "딜사이트",
+   "time": "2026-10-20T05:24:56+00:00"
+  },
+  {
    "title": "'폭락 뒤 반등' 코스피, 상승세 이어갈까?...오늘 증시는",
    "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE82dTBqZERpODNJb3BQZ1E5dmpUVE9mZGFsclQwMUpQZWNSRHZwa2pxeVM1RFo1RWJ0dGowb3UzeXJOSUZFamFoRWNTSHR3WmxjRExMeFpFTFBnVG9VaXc?oc=5",
    "publisher": "YTN",
@@ -771,10 +777,22 @@
    "time": "2026-10-20T00:23:00+00:00"
   },
   {
+   "title": "10월 금통위 '금리 동결' 무게…증시 반등 불씨 될까",
+   "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQWi10MzRMaG9MV0kwOXpEdjJoWDZDbHlleVZBNE5HdkR0bHZmZEE4V2xMS1I5Zm56b1dsc0g0bnVHWDc2UGhMVTBnQjc2WVdxMWxrMVFhdnZTX3Y4U2t2MjFrXzZCTWhHR1NhLVh3WjdCRldQNF9TVmlDOXdOblFFdEh4UVpjOEl0?oc=5",
+   "publisher": "글로벌이코노믹",
+   "time": "2026-10-20T05:08:22+00:00"
+  },
+  {
    "title": "이 대통령 “주식시장 매우 저평가…조만간 필요한 조치”",
    "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFBOdW1KYmtRelVDNDIyVmVXLXFyV2FQdGNreEtJaE1NTGVLeHBiUkZpNjc3U2xQQlV5aHhlTkk1bUVENWlPNDlTbHprbHNmUkNGemY0UjZuUEFuSkFOSFdxdlF6OFhnZEJjcXdEN0lOV2JpUQ?oc=5",
    "publisher": "한겨레",
    "time": "2026-10-20T03:33:00+00:00"
+  },
+  {
+   "title": "출렁이는 코스피에 국민연금 반도체·조선·방산 지분율↓",
+   "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFA3NzVUNkQ2X3cxaEhVQzRVTlh5clNULTZ4RnpDV0Y5YWZBaE1XeXJSUjUzaWNtdFhMRWI3OUdsNWw5STlKaG9aSFJUZXJRQndMcGVzWUt6R1hhMUVLMl9jYW1CejY4aUU?oc=5",
+   "publisher": "연합뉴스TV",
+   "time": "2026-10-20T00:06:00+00:00"
   },
   {
    "title": "[고장난 증시] 증시 폭락의 2차 충격…기업 자금조달까지 덮친다 - 조선비즈",
@@ -787,33 +805,15 @@
    "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9BR1dVWFVESkd6SDE2STJ6M2lfZFU5UHhWdHluQ3dhTklZajFoemVhNWFTTTMtTUZyaDgtdTFmS01tY0Q2cjVCNFhhYjNKZ2VmT1lORjRwTFcyU1lk?oc=5",
    "publisher": "뉴스핌",
    "time": "2026-10-20T01:27:00+00:00"
-  },
-  {
-   "title": "간밤 뉴욕증시 올랐길래 기대했는데…코스피 장 초반 2% 하락이라니",
-   "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5wRzVtZWNJWnhkXzI4WFlHV1ZRSTdXZTBzSG43b3RDbmJFMklPX2VCa20yMGlWM3BBd2J1dWFRX3FZa2JRR0VaZld5eVJJN0tjMHc?oc=5",
-   "publisher": "매일경제",
-   "time": "2026-10-20T00:40:47+00:00"
-  },
-  {
-   "title": "이 대통령 \"국내 주식 저평가…조만간 필요 조치\"",
-   "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9DRE5HeDZJb2JUbUR4Qkh0NDFxWFRpSzYxdkhUdUNoVGRwTEZRUWRNakFZV01ES2xOUWFZM1J3enR1QnVvUTVGYVphVHR1LTlXWXNRVHBUUHhMSUFkcHpoc2ZNN2dXMnM?oc=5",
-   "publisher": "연합뉴스TV",
-   "time": "2026-10-19T13:03:00+00:00"
-  },
-  {
-   "title": "美 반도체 반등에도 SK하이닉스ㆍ스퀘어 급락…솔리다임 변수에 투심 급랭",
-   "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFBJYUxmM1JVQmRHMHF3TWttTXptSnRJVEpYT3QxdXpQVHVNZWVHekI1U0F2Nm83cWRrMkFjM0hfTEh1elRvdU9VQnFhMkFGcmtvQlhfUmdjYVNrREw4aXVOeHNEcVFBdG1CaFM2ZWlSTE05UQ?oc=5",
-   "publisher": "인베스트조선",
-   "time": "2026-10-20T01:53:00+00:00"
   }
  ],
  "earnings": [],
  "geo": [
-  "환율(원화): 48시간 기사 100건, 원화 강세 · 5일 원달러 -0.5% → 유리: 유가 원가 부담주, 국내 상장주 / 부담: 수출주",
-  "북한·한반도: 48시간 기사 47건, 도발 · 5일 원달러 -0.5% → 유리: 방산 / 부담: 국내 상장주",
-  "중동 정세: 48시간 기사 47건, 긴장 고조 · 5일 WTI +4.9%, 금 -0.6% → 유리: 정유·에너지, 방산, 해운·조선 / 부담: 유가 원가 부담주, 국내 상장주",
-  "관세·무역분쟁: 48시간 기사 52건, 무역 긴장 · 5일 S&P500 -1.5%, 원달러 -0.5% → 유리: 경기 방어 / 부담: 관세 민감, 수출주, 중국 노출"
+  "환율(원화): 48시간 기사 100건, 원화 강세 · 5일 원달러 -0.4% → 유리: 유가 원가 부담주, 국내 상장주 / 부담: 수출주",
+  "북한·한반도: 48시간 기사 44건, 도발 · 5일 원달러 -0.4% → 유리: 방산 / 부담: 국내 상장주",
+  "중동 정세: 48시간 기사 47건, 긴장 고조 · 5일 WTI +5.1%, 금 -0.7% → 유리: 정유·에너지, 방산, 해운·조선 / 부담: 유가 원가 부담주, 국내 상장주",
+  "관세·무역분쟁: 48시간 기사 52건, 무역 긴장 · 5일 S&P500 -1.5%, 원달러 -0.4% → 유리: 경기 방어 / 부담: 관세 민감, 수출주, 중국 노출"
  ],
  "date": "2026-10-20",
- "generated": "2026-10-20T14:39+09:00"
+ "generated": "2026-10-20T15:28+09:00"
 }

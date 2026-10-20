@@ -434,5 +434,269 @@
   "type": "stock",
   "ko": "알트리아그룹",
   "checked": "2026-10-17"
+ },
+ "SPYD": {
+  "code": "SPYD.K",
+  "type": "etf",
+  "ko": "State Street SPDR Portfolio S&P 500 High Dvd ETF",
+  "checked": "2026-10-20"
+ },
+ "HDV": {
+  "code": "HDV",
+  "type": "etf",
+  "ko": "iShares Core High Dividend ETF",
+  "checked": "2026-10-20"
+ },
+ "DVY": {
+  "code": "DVY.O",
+  "type": "etf",
+  "ko": "iShares Select Dividend ETF",
+  "checked": "2026-10-20"
+ },
+ "NOBL": {
+  "code": "NOBL.K",
+  "type": "etf",
+  "ko": "ProShares S&P 500 Dividend Aristocrats ETF",
+  "checked": "2026-10-20"
+ },
+ "SDY": {
+  "code": "SDY",
+  "type": "etf",
+  "ko": "State Street SPDR S&P Dividend ETF",
+  "checked": "2026-10-20"
+ },
+ "VYMI": {
+  "code": "VYMI.O",
+  "type": "etf",
+  "ko": "Vanguard Internatl High Div Yield ETF",
+  "checked": "2026-10-20"
+ },
+ "DIVO": {
+  "code": "DIVO.K",
+  "type": "etf",
+  "ko": "Amplify CWP Enhanced Dividend Income ETF",
+  "checked": "2026-10-20"
+ },
+ "QYLD": {
+  "code": "QYLD.O",
+  "type": "etf",
+  "ko": "Global X NASDAQ 100 Covered Call ETF",
+  "checked": "2026-10-20"
+ },
+ "VNQ": {
+  "code": "VNQ",
+  "type": "etf",
+  "ko": "Vanguard Real Estate ETF",
+  "checked": "2026-10-20"
+ },
+ "PFF": {
+  "code": "PFF.O",
+  "type": "etf",
+  "ko": "iShares Preferred and Income Securities ETF",
+  "checked": "2026-10-20"
+ },
+ "MAIN": {
+  "code": "MAIN.K",
+  "type": "stock",
+  "ko": "메인 스트리트 캐피털",
+  "checked": "2026-10-20"
+ },
+ "STAG": {
+  "code": "STAG.K",
+  "type": "stock",
+  "ko": "스태그 인더스트리얼",
+  "checked": "2026-10-20"
+ },
+ "ADC": {
+  "code": "ADC",
+  "type": "stock",
+  "ko": "어그리 리얼티",
+  "checked": "2026-10-20"
+ },
+ "VICI": {
+  "code": "VICI.K",
+  "type": "stock",
+  "ko": "비치 프로퍼티스",
+  "checked": "2026-10-20"
+ },
+ "PLD": {
+  "code": "PLD",
+  "type": "stock",
+  "ko": "프로로지스",
+  "checked": "2026-10-20"
+ },
+ "AMT": {
+  "code": "AMT",
+  "type": "stock",
+  "ko": "아메리칸 타워",
+  "checked": "2026-10-20"
+ },
+ "SPG": {
+  "code": "SPG",
+  "type": "stock",
+  "ko": "사이먼 프로퍼티 그룹",
+  "checked": "2026-10-20"
+ },
+ "OKE": {
+  "code": "OKE",
+  "type": "stock",
+  "ko": "원오케이",
+  "checked": "2026-10-20"
+ },
+ "KMI": {
+  "code": "KMI",
+  "type": "stock",
+  "ko": "킨더 모건",
+  "checked": "2026-10-20"
+ },
+ "ENB": {
+  "code": "ENB",
+  "type": "stock",
+  "ko": "엔브리지",
+  "checked": "2026-10-20"
+ },
+ "PM": {
+  "code": "PM",
+  "type": "stock",
+  "ko": "필립 모리스 인터내셔널",
+  "checked": "2026-10-20"
+ },
+ "BMY": {
+  "code": "BMY",
+  "type": "stock",
+  "ko": "브리스톨-마이어스 스큅",
+  "checked": "2026-10-20"
+ },
+ "GILD": {
+  "code": "GILD.O",
+  "type": "stock",
+  "ko": "길리어드 사이언시스",
+  "checked": "2026-10-20"
+ },
+ "MDT": {
+  "code": "MDT",
+  "type": "stock",
+  "ko": "메드트로닉",
+  "checked": "2026-10-20"
+ },
+ "MMM": {
+  "code": "MMM",
+  "type": "stock",
+  "ko": "쓰리엠 (3M)",
+  "checked": "2026-10-20"
+ },
+ "ADP": {
+  "code": "ADP.O",
+  "type": "stock",
+  "ko": "오토매틱 데이터 프로세싱",
+  "checked": "2026-10-20"
+ },
+ "ITW": {
+  "code": "ITW",
+  "type": "stock",
+  "ko": "일리노이 툴 웍스",
+  "checked": "2026-10-20"
+ },
+ "EMR": {
+  "code": "EMR",
+  "type": "stock",
+  "ko": "에머슨 일렉트릭",
+  "checked": "2026-10-20"
+ },
+ "CL": {
+  "code": "CL",
+  "type": "stock",
+  "ko": "콜게이트-팜올리브",
+  "checked": "2026-10-20"
+ },
+ "KMB": {
+  "code": "KMB.O",
+  "type": "stock",
+  "ko": "킴벌리클라크",
+  "checked": "2026-10-20"
+ },
+ "GIS": {
+  "code": "GIS",
+  "type": "stock",
+  "ko": "제너럴 밀즈",
+  "checked": "2026-10-20"
+ },
+ "HSY": {
+  "code": "HSY",
+  "type": "stock",
+  "ko": "허쉬",
+  "checked": "2026-10-20"
+ },
+ "LOW": {
+  "code": "LOW",
+  "type": "stock",
+  "ko": "로우스 컴퍼니",
+  "checked": "2026-10-20"
+ },
+ "TGT": {
+  "code": "TGT",
+  "type": "stock",
+  "ko": "타겟",
+  "checked": "2026-10-20"
+ },
+ "BLK": {
+  "code": "BLK",
+  "type": "stock",
+  "ko": "블랙록",
+  "checked": "2026-10-20"
+ },
+ "TROW": {
+  "code": "TROW.O",
+  "type": "stock",
+  "ko": "티 로웨 프라이스 그룹",
+  "checked": "2026-10-20"
+ },
+ "USB": {
+  "code": "USB",
+  "type": "stock",
+  "ko": "US 뱅코프",
+  "checked": "2026-10-20"
+ },
+ "PNC": {
+  "code": "PNC",
+  "type": "stock",
+  "ko": "PNC 파이낸셜 서비스",
+  "checked": "2026-10-20"
+ },
+ "CME": {
+  "code": "CME.O",
+  "type": "stock",
+  "ko": "CME 그룹",
+  "checked": "2026-10-20"
+ },
+ "ED": {
+  "code": "ED",
+  "type": "stock",
+  "ko": "콘솔리데이티드 에디슨",
+  "checked": "2026-10-20"
+ },
+ "AEP": {
+  "code": "AEP.O",
+  "type": "stock",
+  "ko": "아메리칸 일렉트릭 파워 컴퍼니",
+  "checked": "2026-10-20"
+ },
+ "WEC": {
+  "code": "WEC",
+  "type": "stock",
+  "ko": "WEC 에너지 그룹",
+  "checked": "2026-10-20"
+ },
+ "D": {
+  "code": "D",
+  "type": "stock",
+  "ko": "도미니언 에너지",
+  "checked": "2026-10-20"
+ },
+ "LYB": {
+  "code": "LYB",
+  "type": "stock",
+  "ko": "라이온델바젤 인더스트리스",
+  "checked": "2026-10-20"
  }
 }

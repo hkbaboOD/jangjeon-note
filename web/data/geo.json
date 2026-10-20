@@ -9,15 +9,15 @@
    "ratio": null,
    "level": "높음",
    "heat": 1.0,
-   "tone": -0.29,
-   "esc_n": 12,
+   "tone": -0.38,
+   "esc_n": 10,
    "de_n": 22,
-   "confirm": -0.31,
+   "confirm": -0.28,
    "moves": {
-    "KRW=X": -0.46
+    "KRW=X": -0.42
    },
    "direction": -0.3,
-   "intensity": -0.304,
+   "intensity": -0.302,
    "stance": "원화 강세",
    "up": [
     "유가 원가 부담주",
@@ -50,20 +50,20 @@
   {
    "key": "nk",
    "label": "북한·한반도",
-   "n": 47,
+   "n": 44,
    "base": null,
    "ratio": null,
    "level": "보통",
-   "heat": 0.59,
+   "heat": 0.55,
    "tone": 1.0,
-   "esc_n": 44,
+   "esc_n": 42,
    "de_n": 0,
-   "confirm": -0.31,
+   "confirm": -0.28,
    "moves": {
-    "KRW=X": -0.46
+    "KRW=X": -0.42
    },
    "direction": 0.68,
-   "intensity": 0.399,
+   "intensity": 0.373,
    "stance": "도발",
    "up": [
     "방산"
@@ -100,16 +100,16 @@
    "ratio": null,
    "level": "보통",
    "heat": 0.59,
-   "tone": 0.78,
+   "tone": 0.88,
    "esc_n": 16,
-   "de_n": 2,
-   "confirm": 0.31,
+   "de_n": 1,
+   "confirm": 0.3,
    "moves": {
-    "CL=F": 4.93,
-    "GC=F": -0.6
+    "CL=F": 5.11,
+    "GC=F": -0.74
    },
-   "direction": 0.55,
-   "intensity": 0.322,
+   "direction": 0.59,
+   "intensity": 0.349,
    "stance": "긴장 고조",
    "up": [
     "정유·에너지",
@@ -152,13 +152,13 @@
    "tone": 0.4,
    "esc_n": 7,
    "de_n": 3,
-   "confirm": 0.1,
+   "confirm": 0.11,
    "moves": {
     "^GSPC": -1.49,
-    "KRW=X": -0.46
+    "KRW=X": -0.42
    },
    "direction": 0.28,
-   "intensity": 0.181,
+   "intensity": 0.184,
    "stance": "무역 긴장",
    "up": [
     "경기 방어"
@@ -197,14 +197,14 @@
    "ratio": null,
    "level": "보통",
    "heat": 0.62,
-   "tone": 0.42,
-   "esc_n": 17,
+   "tone": 0.44,
+   "esc_n": 18,
    "de_n": 7,
    "confirm": -0.5,
    "moves": {
     "^TNX": -1.98
    },
-   "direction": 0.04,
+   "direction": 0.05,
    "intensity": 0.0,
    "stance": "방향 혼재",
    "up": [],
@@ -231,6 +231,50 @@
    ]
   },
   {
+   "key": "us_china",
+   "label": "미중 갈등·수출규제",
+   "n": 7,
+   "base": null,
+   "ratio": null,
+   "level": "낮음",
+   "heat": 0.09,
+   "tone": 0.33,
+   "esc_n": 2,
+   "de_n": 1,
+   "confirm": 1.0,
+   "moves": {
+    "^SOX": -7.52
+   },
+   "direction": 0.6,
+   "intensity": 0.054,
+   "stance": "갈등 고조",
+   "up": [],
+   "down": [
+    "중국 노출",
+    "반도체"
+   ],
+   "headlines": [
+    {
+     "title": "\"日, 핵심 희토류 이트륨 수개월 내 고갈 위기...미국에 中설득 요청\"",
+     "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9mdDRmV3VyUkhGUk1DcEUzWjVqUmJjNXZaRkJsekE4WDRoQ0wzZS04QUpoeVhOdnBlSjFHSEhfLVFvSXhqNDNGLU13TVJjQTFuQUFQX1VtcEVLR000?oc=5",
+     "publisher": "뉴스핌",
+     "time": "2026-10-20T05:44:00+00:00"
+    },
+    {
+     "title": "한국, 미중 사이 실익 찾을까…통상·공급망 시험대 [③선전APEC D-30]",
+     "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTFAtUDNHcXZnZlEyQ2psZXpFVDNjZU1oSm81Mm1fQ2NqTmMxcXJRZkZ5NUR1eEhxOFQ4Z0FMem1SVklkQ1VQcWlwMjI1UHJNVGZwVE9jbjBZTVdubFVFQTdjb2FXMkc2SkxqcFNCdzFyVDljdF9UdUFlZtIBeEFVX3lxTFAtUDNHcXZnZlEyQ2psZXpFVDNjZU1oSm81Mm1fQ2NqTmMxcXJRZkZ5NUR1eEhxOFQ4Z0FMem1SVklkQ1VQcWlwMjI1UHJNVGZwVE9jbjBZTVdubFVFQTdjb2FXMkc2SkxqcFNCdzFyVDljdF9UdUFlZg?oc=5",
+     "publisher": "뉴시스",
+     "time": "2026-10-18T21:00:00+00:00"
+    },
+    {
+     "title": "中, 첨단 AI 해외 이전 통제… 美와 기술 패권 경쟁 가속",
+     "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQdGZLd1RfdGV6QVc2Qi1PeC1SMDl4bWY5djNoaDB4QVE4YTZ5RDk4ZGR6bDF4LVB2UEhjODRzVjhveGE1YkhPS2gyXzFfeGE4U0ZuYTZUM19iWE9sLVBmV3VtYjJkYzFpUUYxQVIwbXJtMEIzRXRjNVI5clVhRmtuRXhnRQ?oc=5",
+     "publisher": "조선일보",
+     "time": "2026-10-18T16:01:37+00:00"
+    }
+   ]
+  },
+  {
    "key": "russia",
    "label": "러시아·우크라이나",
    "n": 20,
@@ -241,10 +285,10 @@
    "tone": -0.09,
    "esc_n": 5,
    "de_n": 6,
-   "confirm": 0.24,
+   "confirm": 0.23,
    "moves": {
-    "BZ=F": 4.03,
-    "GC=F": -0.6
+    "BZ=F": 4.18,
+    "GC=F": -0.74
    },
    "direction": -0.05,
    "intensity": 0.0,
@@ -254,21 +298,21 @@
    "headlines": [
     {
      "title": "우크라, 러 원유시설 대규모 공격…트럼프 \"젤렌스키, 전쟁 끝낼 생각 없어\"",
-     "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5UeFhZMnZKd1VPRUQtSndxUzFjSlU1WUx2SjNtSHJZVDVuNTFfUDNqN3g1b0J2RW83MVRxYmlsbllCdUs1QVRZMFliTUZtV1dyVkllZWZPR3VkajRLb29VcmszV1QtMWE4ZmhrWU5BTWFkQ2pBS0E?oc=5",
+     "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1ReEhGdl9md3RzZlpTYnA4M1JvVlUtaGJhdHVmWHJtcTkxbVNTcXI1U0NBZDA2UGpGR3BBbGo4SU1FZ0FTbzE0TGRSRjVrVGVTbGVWU3FGajFkaVpJaFhjU2w0Ql81Y1hoM0c0?oc=5",
      "publisher": "프레시안",
      "time": "2026-10-19T11:47:07+00:00"
-    },
-    {
-     "title": "젤렌스키 \"전쟁 중 대선 치르면 출마할 것\"…트럼프 퇴진 요구 일축",
-     "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE0taUpJTmxkM2RBaWJNVjBOdVo3S3dWVHJkRER5S2hZT3dWZDloVWUwUTFaWUNpMURLeXg5N0dXZ2FLbUdXME9fck5XTEhQZkNSMXgw?oc=5",
-     "publisher": "뉴스1",
-     "time": "2026-10-19T09:20:26+00:00"
     },
     {
      "title": "美 에너지 \"對러 제재 면제는 종전 유인책…봐주기 아냐\" |",
      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5ZNlVfY2ROSXFrWU9iamVHTUc4ZFBWcWdyZDdGeDlWYWtIT2YxNjF4eENXMmFtRDVfVmZkbW5ZWlNZWFRzLTFndVBsZmt2OENQOEQxUXlCWUxIdGxrcWRBaldESzMzMkx6Rl9NM3M4d3h5TVpO?oc=5",
      "publisher": "연합인포맥스",
      "time": "2026-10-19T01:17:19+00:00"
+    },
+    {
+     "title": "젤렌스키 \"전쟁 중 대선 치르면 출마할 것\"…트럼프 퇴진 요구 일축",
+     "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE0taUpJTmxkM2RBaWJNVjBOdVo3S3dWVHJkRER5S2hZT3dWZDloVWUwUTFaWUNpMURLeXg5N0dXZ2FLbUdXME9fck5XTEhQZkNSMXgw?oc=5",
+     "publisher": "뉴스1",
+     "time": "2026-10-19T09:20:26+00:00"
     }
    ]
   },
@@ -295,12 +339,6 @@
    "down": [],
    "headlines": [
     {
-     "title": "[동북아 정세 브리핑] 중국 3분기 성장률 4.5% 반등·인민은행 금리 동결 '전망'…미·일 대만 인근 미사일 배치, 해상 긴장 고조",
-     "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1wUW1kRXJQZW9PZHYzY0dudU1mVE1YYmdEMm9tT3ZWRDUyTnJMa3Z6MkQ4RENRajhhWFFNU0U2ZjRqUDI4ZVh5Q09obG9NN1RjU2c?oc=5",
-     "publisher": "kor.theasian.asia",
-     "time": "2026-10-19T23:59:11+00:00"
-    },
-    {
      "title": "‘회색지대 전술’의 실체…대만 해경이 턱밑까지 파고든 중국 해경선 향해 칼을 빼든 사연 [밀리터리노트]",
      "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5QRHREaFdKYUxPQ3BmeTJPclVQRmhBT3RMbmxmNzNZWjhCRHp3TEc3bmhGUDJmSnJBTVktel9aSDhQOVRoUHhINEZUQTBHbDlsbVVZYmF0SktlbEs2Qmp0ZlJzVjhrcW54TWphNnY5TnZ6V0p6eGROZzlSWVJCNFU?oc=5",
      "publisher": "서울신문",
@@ -311,70 +349,35 @@
      "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE91OVlyUUlzcEtJNUhTLWVMMFV2MmFMY2NKNmNYTFliX3Ywdjg4ZV91ZWNNSmVtMTdmeGhYX29QTHEzRzRfN182ajU4Zw?oc=5",
      "publisher": "개미신문",
      "time": "2026-10-19T04:00:59+00:00"
-    }
-   ]
-  },
-  {
-   "key": "us_china",
-   "label": "미중 갈등·수출규제",
-   "n": 6,
-   "base": null,
-   "ratio": null,
-   "level": "낮음",
-   "heat": 0.07,
-   "tone": 0.0,
-   "esc_n": 1,
-   "de_n": 1,
-   "confirm": 1.0,
-   "moves": {
-    "^SOX": -7.52
-   },
-   "direction": 0.2,
-   "intensity": 0.014,
-   "stance": "갈등 고조",
-   "up": [],
-   "down": [],
-   "headlines": [
-    {
-     "title": "한국, 미중 사이 실익 찾을까…통상·공급망 시험대 [③선전APEC D-30]",
-     "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTFAtUDNHcXZnZlEyQ2psZXpFVDNjZU1oSm81Mm1fQ2NqTmMxcXJRZkZ5NUR1eEhxOFQ4Z0FMem1SVklkQ1VQcWlwMjI1UHJNVGZwVE9jbjBZTVdubFVFQTdjb2FXMkc2SkxqcFNCdzFyVDljdF9UdUFlZtIBeEFVX3lxTFAtUDNHcXZnZlEyQ2psZXpFVDNjZU1oSm81Mm1fQ2NqTmMxcXJRZkZ5NUR1eEhxOFQ4Z0FMem1SVklkQ1VQcWlwMjI1UHJNVGZwVE9jbjBZTVdubFVFQTdjb2FXMkc2SkxqcFNCdzFyVDljdF9UdUFlZg?oc=5",
-     "publisher": "뉴시스",
-     "time": "2026-10-18T21:00:00+00:00"
     },
     {
-     "title": "[차이나 풍향계] 중국 반도체, 기술보다 물량이 변수…CXMT·화웨이의 엇갈린 과제 By EBN",
-     "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE40cGt2UnYyeXNfWGJpRy1sT0Jlb3pkU2N0ckV5b2NSQVRuZW5EUXhGNGxVQ1BOUzFiei1PdHl6UmFfOWpkejVYS3EyQWNzaTJlU1NScWdjaVBtM2lSdmZzV2tLcnJXWGxyWGlCejVFb0Q?oc=5",
-     "publisher": "Investing.com 한국어",
-     "time": "2026-10-19T00:41:00+00:00"
-    },
-    {
-     "title": "中, 첨단 AI 해외 이전 통제… 美와 기술 패권 경쟁 가속",
-     "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQdGZLd1RfdGV6QVc2Qi1PeC1SMDl4bWY5djNoaDB4QVE4YTZ5RDk4ZGR6bDF4LVB2UEhjODRzVjhveGE1YkhPS2gyXzFfeGE4U0ZuYTZUM19iWE9sLVBmV3VtYjJkYzFpUUYxQVIwbXJtMEIzRXRjNVI5clVhRmtuRXhnRQ?oc=5",
-     "publisher": "조선일보",
-     "time": "2026-10-18T16:01:37+00:00"
+     "title": "게임 이해를 돕는 짧은 문답, 카지노 가입머니",
+     "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5oSS1QMGsyNml5alFxY3FaMUp3UEI4XzZKNHRfMmlHcDJMRzQ4bEhFS3BicGtmUmNyR0Nucjk4b1pEVWROT0lSVF9hSDFLblJxR2s4SHRsdHVfRm1FX1VBOUl6QktzY2V3NkNiSEVpTWFrWU5oUVZfWkdWcmd5blk?oc=5",
+     "publisher": "Calgary Roughnecks",
+     "time": "2026-10-18T19:41:17+00:00"
     }
    ]
   }
  ],
  "impact": {
-  "china": -0.079,
-  "semis": -0.026,
-  "tariff": -0.185,
-  "defense": 0.41,
-  "export": -0.291,
-  "defensive": 0.054,
-  "oil_up": 0.322,
-  "oil_down": -0.2,
-  "shipping": 0.129,
-  "korea": -0.213,
+  "china": -0.12,
+  "semis": -0.05,
+  "tariff": -0.2,
+  "defense": 0.425,
+  "export": -0.292,
+  "defensive": 0.055,
+  "oil_up": 0.349,
+  "oil_down": -0.228,
+  "shipping": 0.14,
+  "korea": -0.203,
   "ai": -0.007
  },
- "generated": "2026-10-20T14:39+09:00",
+ "generated": "2026-10-20T15:28+09:00",
  "summary": [
-  "환율(원화): 48시간 기사 100건, 원화 강세 · 5일 원달러 -0.5% → 유리: 유가 원가 부담주, 국내 상장주 / 부담: 수출주",
-  "북한·한반도: 48시간 기사 47건, 도발 · 5일 원달러 -0.5% → 유리: 방산 / 부담: 국내 상장주",
-  "중동 정세: 48시간 기사 47건, 긴장 고조 · 5일 WTI +4.9%, 금 -0.6% → 유리: 정유·에너지, 방산, 해운·조선 / 부담: 유가 원가 부담주, 국내 상장주",
-  "관세·무역분쟁: 48시간 기사 52건, 무역 긴장 · 5일 S&P500 -1.5%, 원달러 -0.5% → 유리: 경기 방어 / 부담: 관세 민감, 수출주, 중국 노출"
+  "환율(원화): 48시간 기사 100건, 원화 강세 · 5일 원달러 -0.4% → 유리: 유가 원가 부담주, 국내 상장주 / 부담: 수출주",
+  "북한·한반도: 48시간 기사 44건, 도발 · 5일 원달러 -0.4% → 유리: 방산 / 부담: 국내 상장주",
+  "중동 정세: 48시간 기사 47건, 긴장 고조 · 5일 WTI +5.1%, 금 -0.7% → 유리: 정유·에너지, 방산, 해운·조선 / 부담: 유가 원가 부담주, 국내 상장주",
+  "관세·무역분쟁: 48시간 기사 52건, 무역 긴장 · 5일 S&P500 -1.5%, 원달러 -0.4% → 유리: 경기 방어 / 부담: 관세 민감, 수출주, 중국 노출"
  ],
  "tag_ko": {
   "semis": "반도체",
