@@ -1,0 +1,79 @@
+"""v7: 미장 장전 브리핑 · 실적 발표 일정 · 앱 배당 플랜 데이터."""
+import shutil
+import subprocess
+from datetime import datetime, timezone
+from pathlib import Path
+
+import pandas as pd
+import pytest
+
+from pipeline import briefing, dividend
+from pipeline.common import load_config
+
+
+def _q(last, chg, prev=None):
+    return {"last": last, "chg_1d": chg, "date": "2026-10-20", "spark": [1, 2, 3], "prev": prev}
+
+
+def test_us_eastern_offset_dst():
+    assert briefing.us_eastern_offset(datetime(2026, 10, 20, 12, tzinfo=timezone.utc)) == -4
+    assert briefing.us_eastern_offset(datetime(2026, 11, 2, 12, tzinfo=timezone.utc)) == -5   # 11/1(일) 종료
+    assert briefing.us_eastern_offset(datetime(2026, 3, 9, 12, tzinfo=timezone.utc)) == -4    # 3/8(일) 시작
+    assert briefing.us_eastern_offset(datetime(2026, 1, 15, 12, tzinfo=timezone.utc)) == -5
+
+
+def test_earnings_soon_uses_market_timezone():
+    now = datetime(2026, 10, 20, 12, 13, tzinfo=timezone.utc)  # KST 21:13, 미 동부 08:13
+    ts = lambda y, m, d, h: datetime(y, m, d, h, tzinfo=timezone.utc).timestamp()  # noqa: E731
+    rows = [{"ticker": "NFLX", "name": "넷플릭스", "fund": {"earnings_ts": ts(2026, 10, 20, 20)}},   # 오늘 장 마감 후
+            {"ticker": "TSLA", "name": "테슬라", "fund": {"earnings_ts": ts(2026, 10, 21, 20)}},
+            {"ticker": "OLD", "name": "지난", "fund": {"earnings_ts": ts(2026, 10, 19, 20)}},
+            {"ticker": "FAR", "name": "먼", "fund": {"earnings_ts": ts(2026, 10, 30, 20)}},
+            {"ticker": "NONE", "fund": {}}]
+    got = briefing.earnings_soon(rows, now, 1, -4)
+    assert [(e["ticker"], e["in_days"]) for e in got] == [("NFLX", 0), ("TSLA", 1)]
+
+
+def test_build_us_brief():
+    cfg = load_config()
+    tech = {"ES=F": _q(6750, 0.5), "NQ=F": _q(25100, 0.7), "YM=F": _q(46200, 0.2), "^KS11": _q(3610.5, -1.2),
+            "^KQ11": _q(870, -2.0), "^GSPC": _q(6700, 0.1), "^IXIC": _q(22800, 0.3), "^SOX": _q(6900, 1.0),
+            "^VIX": _q(26.4, 8.0), "^TNX": _q(4.15, 1.2, 4.08), "CL=F": _q(64, 3.1), "KRW=X": _q(1412.3, 0.4),
+            "DX-Y.NYB": _q(99, 0.1), "BZ=F": _q(67, 2.0), "GC=F": _q(4100, 0.2)}
+    kr = [{"ticker": f"{i:06d}.KS", "name": f"종목{i}", "market": "kr", "tech": {"chg_1d": c}} for i, c in enumerate([-3, -1, 2, 5])]
+    now = datetime(2026, 10, 20, 12, 13, tzinfo=timezone.utc)
+    us = [{"ticker": "NFLX", "name": "넷플릭스", "fund": {"earnings_ts": datetime(2026, 10, 20, 20, tzinfo=timezone.utc).timestamp()}}]
+    b = briefing.build_us(cfg, tech, kr, [], us, [], now)
+    assert [q["ticker"] for q in b["futures"]] == ["ES=F", "NQ=F", "YM=F"]
+    assert b["review"][0].startswith("코스피 3,610.50 (-1.20%)") and "원/달러 1,412.3원" in b["review"][0]
+    assert b["breadth"]["kr"] == {"up": 2, "down": 2, "total": 4} and b["movers"]["kr"]["top"][0]["chg"] == 5
+    t = " | ".join(b["tonight"])
+    assert "미 지수 선물 강세" in t and "VIX 26.4 — 변동성 높은 구간" in t and "+7bp" in t and "WTI +3.1%" in t
+    assert "오늘(미국 시간): 넷플릭스" in t
+    assert b["us_open_kst"] == "22:30" and b["dst"] is True
+    b2 = briefing.build_us(cfg, tech, kr, [], [], [], datetime(2026, 12, 1, 12, tzinfo=timezone.utc))
+    assert b2["us_open_kst"] == "23:30"
+
+
+def test_dividend_candidates_carry_plan_inputs():
+    idx = pd.to_datetime([f"{y}-{m:02d}-10" for y in range(2021, 2027) for m in (3, 6, 9, 12) if (y, m) < (2026, 10)])
+    divs = pd.Series(0.5, index=idx)
+    cfg = load_config()["dividend_plan"]
+    c = dividend.analyze("KO", {"name": "코카콜라", "type": "stock", "pool": "유니버스"}, divs, 70.0, {"currency": "USD"}, cfg)
+    plan = dividend.build_plan([c], cfg, 1400.0)
+    cand = plan["candidates"][0]
+    assert cand["pool"] == "유니버스" and cand["price"] == 70.0 and cand["currency"] == "USD"
+    assert len(cand["dps"]) == 12 and cand["dps"][2] == 0.5 and cand["dps"][0] == 0
+    assert set(plan["defaults"]) >= {"capital", "max_picks", "single_cap", "covered_call_max_weight", "tax_us", "tax_kr"}
+
+
+def test_workflow_routes_evening_schedule():
+    wf = (Path(__file__).parents[1] / ".github/workflows/pipeline.yml").read_text(encoding="utf-8")
+    for cron, job in (("37 21 * * 0-4", "morning"), ("13 12 * * 1-5", "evening")):
+        assert f'cron: "{cron}"' in wf and f'"{cron}" ]; then\n            echo "job={job}"' in wf
+
+
+@pytest.mark.skipif(shutil.which("node") is None, reason="node 없음")
+def test_divplan_js():
+    r = subprocess.run(["node", str(Path(__file__).parent / "js" / "divplan.test.js")], capture_output=True, text=True)
+    assert r.returncode == 0, r.stderr + r.stdout

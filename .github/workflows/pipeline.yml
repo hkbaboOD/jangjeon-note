@@ -3,7 +3,9 @@ name: 장전노트 파이프라인
 on:
   schedule:
     # GitHub cron은 UTC 기준 + 수 분~수십 분 지연될 수 있습니다.
-    - cron: "40 22 * * 0-4"      # 장전: KST 평일 07:40 (UTC 일~목 22:40)
+    # 정각·30분은 GitHub 예약이 몰려 크게 늦어지므로(실측 2시간 이상) 어중간한 분으로 앞당겨 둠
+    - cron: "37 21 * * 0-4"      # 국장 장전: KST 평일 06:37 (UTC 일~목 21:37, 미 증시 마감 후)
+    - cron: "13 12 * * 1-5"      # 미장 장전: KST 평일 21:13 (미국 개장 22:30/23:30 전)
     - cron: "5,35 0-6 * * 1-5"   # 국내장 알림: KST 09:05~15:35, 30분 간격
     - cron: "5,35 13-20 * * 1-5" # 미국장 알림: KST 22:05~05:35, 30분 간격
     - cron: "10 0 * * 6"         # 백테스트·자가 보정: KST 토요일 09:10
@@ -12,7 +14,7 @@ on:
       job:
         description: "실행 작업"
         type: choice
-        options: [all, morning, alerts, backtest]
+        options: [all, morning, evening, alerts, backtest]
         default: all
       demo:
         description: "데모(합성) 데이터 사용"
@@ -50,8 +52,10 @@ jobs:
             echo "demo=${{ inputs.demo && '--demo' || '' }}" >> "$GITHUB_OUTPUT"
           elif [ "${{ github.event_name }}" = "push" ]; then
             echo "job=all" >> "$GITHUB_OUTPUT"
-          elif [ "${{ github.event.schedule }}" = "40 22 * * 0-4" ]; then
+          elif [ "${{ github.event.schedule }}" = "37 21 * * 0-4" ]; then
             echo "job=morning" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event.schedule }}" = "13 12 * * 1-5" ]; then
+            echo "job=evening" >> "$GITHUB_OUTPUT"
           elif [ "${{ github.event.schedule }}" = "10 0 * * 6" ]; then
             echo "job=backtest" >> "$GITHUB_OUTPUT"
           else

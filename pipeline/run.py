@@ -1,7 +1,8 @@
 """파이프라인 진입점.
 
 사용법
-    python -m pipeline.run morning            # 장전: 브리핑 + 스크리닝 + 오늘의 Top3 (+월요일 주간, +매월 첫 평일 월간·배당플랜) + 알림
+    python -m pipeline.run morning            # 국장 장전: 브리핑 + 스크리닝 + 오늘의 Top3 (+월요일 주간, +매월 첫 평일 월간) + 배당 + 알림
+    python -m pipeline.run evening            # 미장 장전: 국내장 마감 리뷰 + 미 지수 선물·매크로 + 오늘 밤 실적 발표 + 정세
     python -m pipeline.run alerts             # 장중: 관심종목 신호만 점검·푸시
     python -m pipeline.run all                # 전체 강제 실행 (주간·월간·배당 포함)
     python -m pipeline.run backtest           # 주간: 5년 백테스트 → 가중치 자가 보정(model.json)
@@ -26,6 +27,8 @@ from . import financials as fin_mod
 from . import forward as fwd
 from . import geo as geo_mod
 from . import pdca as pdca_mod
+from datetime import timezone
+
 from .common import DATA_DIR, STATE_DIR, load_config, market_of, now_kst, read_json, write_json
 from .calibrate import calibrate
 from .data import get_source
@@ -163,6 +166,12 @@ def run(job: str, demo: bool):
         log.info("알림 %d건", len(fresh))
         return
 
+    if job == "evening":
+        run_evening(cfg, src, meta)
+        write_json("meta.json", meta)
+        src.flush()
+        return
+
     if job == "backtest" or (job == "all" and not read_json("backtest.json")):
         run_backtest(cfg, src, meta)
         if job == "backtest":
@@ -252,6 +261,10 @@ def run(job: str, demo: bool):
             uniq.append(n)
     brief = briefing_mod.build(cfg, tech_all, uni_rows, watch_rows, uniq)
     brief["news_kr"] = src.market_news("코스피 OR 국내 증시 when:1d", hl="ko", gl="KR", limit=8)
+    now_utc = now.astimezone(timezone.utc)
+    brief["earnings"] = (briefing_mod.earnings_soon([r for r in uni_rows if r["market"] == "kr"], now_utc, 2, 9)
+                         + briefing_mod.earnings_soon([r for r in uni_rows if r["market"] == "us"], now_utc, 1,
+                                                      briefing_mod.us_eastern_offset(now_utc)))
     brief["geo"] = geo_mod.summary_lines(geo_res)
     brief["date"] = now.strftime("%Y-%m-%d")
     brief["generated"] = now.isoformat(timespec="minutes")
@@ -312,15 +325,22 @@ def run(job: str, demo: bool):
                             "summary": brief["geo"], "tag_ko": co_mod.TAG_KO})
     _update_track_record(picks, {t: v["last"] for t, v in tech_all.items()})
 
-    # 5) 배당 플랜 (월간)
-    if "monthly" in horizons or not read_json("dividend.json"):
+    # 5) 배당 플랜 (매일 최신 가격으로 갱신 — 배당 이력은 주 1회 캐시) · 앱에서 구성 변경 가능
+    if True:
         usdkrw = (tech_all.get("KRW=X") or {}).get("last") or 1400.0
         cands = []
-        for d in cfg["dividend_candidates"]:
+        pool = [dict(d, pool="배당 후보") for d in cfg["dividend_candidates"]]
+        have = {d["ticker"] for d in pool}
+        pool += [{"ticker": t, "name": names.get(t, t), "type": "stock", "pool": "유니버스"}
+                 for t in uni if t not in have]
+        for d in pool:
             t = d["ticker"]
+            d = {**d, "name": names.get(t) or d.get("name") or t}
             price = (tech_all.get(t) or {}).get("last")
             fund = src.fundamentals(t)
-            cands.append(div_mod.analyze(t, d, src.dividends(t), price, fund, cfg["dividend_plan"]))
+            c = div_mod.analyze(t, d, src.dividends(t), price, fund, cfg["dividend_plan"])
+            if c and (d["pool"] == "배당 후보" or c["yield"] >= 1.0):  # 유니버스는 배당률 1% 이상만
+                cands.append(c)
         plan = div_mod.build_plan(cands, cfg["dividend_plan"], usdkrw)
         plan["generated"] = now.isoformat(timespec="minutes")
         plan["month"] = now.strftime("%Y-%m")
@@ -330,15 +350,75 @@ def run(job: str, demo: bool):
     # 6) 알림 (판정 변경 포함) + 브리핑 도착 푸시
     head = " / ".join(f"{q['name']} {q['chg']:+.2f}%" for q in brief["indices"][:3] if q.get("chg") is not None)
     alert_mod.dispatch(alert_mod.evaluate(cfg, watch_rows) + alert_mod.verdict_changes(watch_rows),
-                       extra_push={"title": f"☀️ 장전 시황 {brief['date']}", "body": head or "브리핑 업데이트",
+                       extra_push={"title": f"☀️ 국장 장전 {brief['date']}", "body": head or "브리핑 업데이트",
                                    "url": "./#brief"})
 
+    if job == "all" or not read_json("briefing_us.json"):  # 코드 변경 시 미장 브리핑도 함께 갱신(푸시 없음)
+        try:
+            run_evening(cfg, src, meta, push=False)
+        except Exception as e:
+            log.warning("미장 브리핑 생성 실패: %s", e)
     meta.update({"morning": now.isoformat(timespec="minutes"), "horizons_run": horizons,
                  "universe_size": len(uni_rows), "model_version": (model or {}).get("version")})
     write_json("meta.json", meta)
     src.flush()
     fins.flush()
     log.info("완료: 유니버스 %d종목, 실행 %s", len(uni_rows), horizons)
+
+
+def run_evening(cfg: dict, src, meta: dict, push: bool = True):
+    """미장 장전(평일 저녁): 예측 기록·추천은 하지 않고(하루 1회 원칙) 브리핑만 생성."""
+    now = now_kst()
+    companies = co_mod.load_companies()
+    b, bu = cfg["briefing"], cfg.get("briefing_us") or {}
+    kr_uni = list(cfg["universe"]["kr"])
+    us_uni = cfg["universe"]["us"]
+    watch = [w["ticker"] for w in cfg["watchlist"]]
+    names = {**(cfg["universe"]["kr"] if isinstance(cfg["universe"]["kr"], dict) else {}),
+             **{t: c["ko"] for t, c in companies.items() if c.get("ko")},
+             **{w["ticker"]: w["name"] for w in cfg["watchlist"]}}
+    extra = [i["ticker"] for i in b["indices"]] + [m["ticker"] for m in b["macro"]] + [f["ticker"] for f in bu.get("futures", [])]
+    hist = src.history(list(dict.fromkeys(kr_uni + watch + extra)), period="2y")
+    tcfg = cfg.get("technical")
+    tech_all = {t: technicals(h, tcfg, with_ta=False) for t, h in hist.items() if len(h) >= 30}
+    kr_rows = [{"ticker": t, "market": "kr", "name": names.get(t, t), "tech": tech_all[t]} for t in kr_uni if t in tech_all]
+    # 실적 발표일: 아침에 받은 펀더멘털 캐시 재사용(추가 호출 거의 없음)
+    us_rows = [{"ticker": t, "name": names.get(t, t), "fund": src.fundamentals(t)} for t in us_uni]
+    watch_rows = _watch_rows(src, cfg, hist, None)
+    news = []
+    for t in bu.get("news_tickers", ["SPY", "QQQ"]):
+        news += src.news(t)
+    seen, uniq = set(), []
+    for n in news:
+        if n["title"] not in seen:
+            seen.add(n["title"])
+            uniq.append(n)
+    brief = briefing_mod.build_us(cfg, tech_all, kr_rows, watch_rows, us_rows, uniq, now.astimezone(timezone.utc))
+    brief["news_kr"] = src.market_news(bu.get("news_query_kr", "뉴욕증시 when:1d"), hl="ko", gl="KR", limit=8)
+    try:
+        g = geo_mod.collect(src, tech_all, now.strftime("%Y-%m-%d"), record=False)
+        g["summary"] = geo_mod.summary_lines(g)
+        brief["geo"] = g
+    except Exception as e:
+        log.warning("국제 정세(저녁) 실패: %s", e)
+    picks = read_json("picks.json", default={}) or {}
+    brief["us_picks"] = [{k: p.get(k) for k in ("ticker", "name", "score", "setup_label", "summary")}
+                         for p in (picks.get("daily") or {}).get("us", [])]
+    brief["date"] = now.strftime("%Y-%m-%d")
+    brief["generated"] = now.isoformat(timespec="minutes")
+    for r in watch_rows:
+        r["name"] = names.get(r["ticker"], r["name"])
+    brief["watch"] = [{"ticker": r["ticker"], "name": r["name"], "market": r["market"],
+                       "last": r["tech"].get("last"), "chg_1d": r["tech"].get("chg_1d"), "chg_5d": r["tech"].get("chg_5d"),
+                       "rsi14": r["tech"].get("rsi14"), "spark": (r["tech"].get("spark") or [])[-60:],
+                       "setup_label": (r["tech"].get("ta") or {}).get("setup_label")} for r in watch_rows]
+    write_json("briefing_us.json", brief)
+    write_json(f"briefing_us_{brief['date']}.json", brief, DATA_DIR / "archive")
+    head = " / ".join(f"{q['name']} {q['chg']:+.2f}%" for q in brief["futures"][:2] + brief["kr_indices"][:1] if q.get("chg") is not None)
+    if push:
+        alert_mod.push({"title": f"🌙 미장 장전 {brief['date']}", "body": head or "미장 브리핑 업데이트", "url": "./#brief-us"})
+    meta["evening"] = now.isoformat(timespec="minutes")
+    log.info("미장 브리핑 완료: 선물 %s, 실적 %d건", [q.get("chg") for q in brief["futures"]], len(brief["earnings"]))
 
 
 def run_backtest(cfg: dict, src, meta: dict):
@@ -382,7 +462,7 @@ def run_backtest(cfg: dict, src, meta: dict):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("job", choices=["morning", "alerts", "all", "backtest"])
+    ap.add_argument("job", choices=["morning", "evening", "alerts", "all", "backtest"])
     ap.add_argument("--demo", action="store_true", help="합성 데이터 사용")
     a = ap.parse_args()
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s: %(message)s")

@@ -204,3 +204,12 @@ briefing:
   news_tickers: [SPY, QQQ, SOXX]
   # ANTHROPIC_API_KEY 시크릿이 있으면 Claude로 시황 요약을 작성(선택, 유료). 없으면 규칙 기반 요약.
   llm_model: claude-sonnet-5-5
+
+# 미장 장전 브리핑 (평일 저녁, 미국 개장 전): 국내장 마감 리뷰 + 미 지수 선물 + 오늘 밤 체크
+briefing_us:
+  futures:
+    - { ticker: "ES=F", name: "S&P500 선물" }
+    - { ticker: "NQ=F", name: "나스닥100 선물" }
+    - { ticker: "YM=F", name: "다우 선물" }
+  news_tickers: [SPY, QQQ]
+  news_query_kr: "뉴욕증시 OR 미국 증시 OR 나스닥 when:1d"

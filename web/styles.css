@@ -470,3 +470,36 @@ svg.ta .hit { cursor: crosshair; }
 .gd a small { display: block; color: var(--muted); font-size: 11.5px; }
 .geo-wk { border-top: 1px solid var(--line); margin-top: 6px; padding-top: 8px; }
 .geo-wk h3 { margin: 0 0 4px; font-size: 14px; } .geo-wk h3 small { color: var(--muted); font-weight: 400; font-size: 12px; }
+
+/* ── v7: 국장/미장 전환 · 배당 플랜 설정 ── */
+.brief-seg { margin-bottom: 10px; }
+.brief-seg button { display: flex; flex-direction: column; align-items: center; gap: 1px; line-height: 1.2; padding-top: 7px; padding-bottom: 7px; }
+.brief-seg button small { font-size: 11px; font-weight: 400; opacity: .7; }
+.goal { margin-top: 10px; font-size: 14px; line-height: 1.5; }
+.dv-set { margin-top: 10px; }
+.dv-set summary { cursor: pointer; list-style: none; display: flex; flex-wrap: wrap; gap: 4px 8px; align-items: baseline; }
+.dv-set summary::-webkit-details-marker { display: none; }
+.dv-set summary::after { content: "▾"; margin-left: auto; color: var(--muted); }
+.dv-set[open] summary::after { content: "▴"; }
+.dv-set summary small { color: var(--muted); font-size: 12.5px; }
+.dv-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 8px; margin: 10px 0 4px; }
+.dv-grid label { min-width: 0; display: flex; flex-direction: column; gap: 4px; font-size: 12.5px; color: var(--muted); }
+.dv-grid input, .dv-row select, .pct input { font: inherit; font-size: 15px; color: var(--ink); background: var(--surface-2); border: 1px solid var(--line); border-radius: 10px; padding: 8px 10px; min-width: 0; }
+.dv-row { display: grid; grid-template-columns: 92px 1fr; align-items: center; gap: 8px; margin-top: 8px; font-size: 13.5px; }
+.dv-row > span { color: var(--ink-2); }
+.dv-row .seg { margin: 0; }
+.dv-row select { padding: 7px 10px; font-size: 14px; }
+.stepper { display: inline-flex; align-items: center; gap: 4px; }
+.stepper button { width: 36px; height: 34px; border: 0; border-radius: 10px; background: var(--surface-2); box-shadow: inset 0 0 0 1px var(--line); font-size: 18px; cursor: pointer; color: var(--ink); }
+.stepper b { min-width: 32px; text-align: center; font-size: 16px; }
+.dv-check { display: flex; gap: 8px; align-items: center; margin-top: 10px; font-size: 13.5px; }
+.dv-check input { width: 18px; height: 18px; }
+.note.warn { color: var(--ink-2); background: color-mix(in srgb, #e08a00 12%, transparent); padding: 8px 10px; border-radius: 10px; margin: 8px 0 0; }
+.dv-r .num { display: flex; flex-direction: column; align-items: flex-end; gap: 3px; }
+.mini-btn { border: 0; background: var(--surface-2); box-shadow: inset 0 0 0 1px var(--line); color: var(--ink-2); border-radius: 8px; padding: 4px 8px; font-size: 12px; cursor: pointer; white-space: nowrap; }
+.mini-btn.on { background: var(--ink); color: var(--bg); box-shadow: none; }
+.pct { display: inline-flex; align-items: center; gap: 2px; font-weight: 600; }
+.pct input { width: 52px; padding: 4px 6px; text-align: right; font-size: 14px; }
+.tag.on { background: var(--ink); color: var(--bg); box-shadow: none; }
+.row.dim { opacity: .5; }
+.dv-grid input { width: 100%; box-sizing: border-box; }

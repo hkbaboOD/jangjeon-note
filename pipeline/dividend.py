@@ -76,7 +76,7 @@ def analyze(ticker: str, meta: dict, divs: pd.Series, price: float | None, fund:
         "ttm_dps": ttm, "yield": yld * 100, "cagr5": None if cagr is None else cagr * 100,
         "payout": None if pr is None else pr * 100, "cuts": cuts, "freq": len(last12),
         "months": [m for m in range(1, 13) if by_month[m] > 0], "dps_by_month": by_month,
-        "ex_days": ex_days, "score": round(score, 1), "notes": notes,
+        "ex_days": ex_days, "score": round(score, 1), "notes": notes, "pool": meta.get("pool") or "배당 후보",
     }
 
 
@@ -155,8 +155,14 @@ def build_plan(cands: list[dict], cfg: dict, usdkrw: float) -> dict:
         "monthly_net_krw": monthly, "annual_net_krw": annual,
         "portfolio_yield_net": annual / capital * 100 if capital else None,
         "months_covered": sorted(covered), "upcoming_ex": upcoming,
-        "candidates": [{k: c[k] for k in ("ticker", "name", "type", "market", "covered_call", "yield", "cagr5",
-                                          "payout", "cuts", "freq", "months", "score", "notes")} for c in ranked],
+        # 앱에서 플랜을 다시 짤 수 있도록 계산에 필요한 값(가격·월별 주당배당금·배당락일)까지 전달
+        "candidates": [{**{k: c.get(k) for k in ("ticker", "name", "type", "market", "covered_call", "yield", "cagr5",
+                                                 "payout", "cuts", "freq", "months", "score", "notes", "pool", "price",
+                                                 "currency", "ttm_dps", "ex_days")},
+                        "dps": [round(c["dps_by_month"][m], 6) for m in range(1, 13)]} for c in ranked],
+        "defaults": {"capital": capital, "max_picks": cfg["max_picks"], "single_cap": 0.35, "month_bonus": 4,
+                     "covered_call_max_weight": cfg["covered_call_max_weight"], "covered_call_max_count": 1,
+                     "tax_us": cfg["tax"]["us"], "tax_kr": cfg["tax"]["kr"]},
         "method": "점수 = 배당수익률 40% + 5년 배당성장 30% + 배당성향 지속가능성 20% + 무삭감 안정성 10%. "
                   "플랜은 점수와 '새로 채워지는 지급월'을 함께 고려해 선택, 단일 종목 35%·커버드콜 합산 "
                   f"{cfg['covered_call_max_weight'] * 100:.0f}% 상한. 월별 금액은 최근 12개월 배당락월 기준 세후 추정치이며 "

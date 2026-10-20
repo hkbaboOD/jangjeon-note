@@ -194,16 +194,17 @@ def summary_lines(res: dict, names_by_tag: dict[str, list[str]] | None = None) -
     return out or ["주요 국제 정세 테마의 뉴스 관심도가 평소 수준이고 시장 반응도 제한적입니다."]
 
 
-def collect(src, tech_all: dict, today: str) -> dict:
-    """뉴스 수집 + 평가 + 기록 갱신."""
+def collect(src, tech_all: dict, today: str, record: bool = True) -> dict:
+    """뉴스 수집 + 평가 + 기록 갱신(record=False면 기록·평소 건수는 건드리지 않음: 저녁 미장 브리핑용)."""
     news = {}
     for th in THEMES:
         news[th["key"]] = src.market_news(th["q"] + " when:2d", hl="ko", gl="KR", limit=100)
     hist = read_json(HIST, STATE_DIR, default={}) or {}
     res = assess(news, tech_all, today, hist)
-    for th in res["themes"]:
-        h = [e for e in (hist.get(th["key"]) or []) if e["date"] != today]
-        hist[th["key"]] = (h + [{"date": today, "n": th["n"], "tone": th["tone"]}])[-90:]
-    write_json(HIST, hist, STATE_DIR)
+    if record:
+        for th in res["themes"]:
+            h = [e for e in (hist.get(th["key"]) or []) if e["date"] != today]
+            hist[th["key"]] = (h + [{"date": today, "n": th["n"], "tone": th["tone"]}])[-90:]
+        write_json(HIST, hist, STATE_DIR)
     log.info("국제 정세: %s", ", ".join(f"{t['label']} {t['n']}건/{t['stance']}" for t in res["themes"][:4]))
     return res

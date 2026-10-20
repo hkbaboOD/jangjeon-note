@@ -115,7 +115,7 @@ const pctOf = (a, b) => (a == null || b == null || !b ? null : (a / b) * 100);
 const yoy = (a, b) => (a == null || b == null || !b ? null : b > 0 ? (a / b - 1) * 100 : ((a - b) / Math.abs(b)) * 100);
 
 /* ── 데이터 ── */
-const FILES = ["meta", "briefing", "watch", "picks", "track", "screen", "dividend", "alerts", "backtest", "model", "forward", "scorecard", "pdca", "pdca_review", "changelog", "geo", "geo_weekly"];
+const FILES = ["meta", "briefing", "briefing_us", "watch", "picks", "track", "screen", "dividend", "alerts", "backtest", "model", "forward", "scorecard", "pdca", "pdca_review", "changelog", "geo", "geo_weekly"];
 async function load() {
   const btn = $("#refresh"); btn.classList.add("spin");
   const res = await Promise.allSettled(FILES.map((f) => fetch(`data/${f}.json?t=${Date.now()}`, { cache: "no-store" }).then((r) => (r.ok ? r.json() : null))));
@@ -125,10 +125,76 @@ async function load() {
 }
 
 /* ── 브리핑 ── */
+/* 국장(아침)/미장(저녁) 전환: 기본값은 시간대로 — 16시~다음날 6시는 미장 */
+function autoBriefM() {
+  const h = new Date().getHours();
+  return (h >= 16 || h < 6) && state.data.briefing_us ? "us" : "kr";
+}
+function briefSeg() {
+  const bu = state.data.briefing_us, bk = state.data.briefing;
+  return `<div class="seg brief-seg" role="group" aria-label="브리핑 종류">
+    <button data-bm="kr" aria-pressed="${state.briefM === "kr"}">☀️ 국장 장전<small>${bk ? esc(when(bk.generated)) : "06:37"}</small></button>
+    <button data-bm="us" aria-pressed="${state.briefM === "us"}">🌙 미장 장전<small>${bu ? esc(when(bu.generated)) : "21:13"}</small></button></div>`;
+}
+const briefTick = (q) => `
+    <div class="tick ${q.chg > 0 ? "up-bg" : q.chg < 0 ? "down-bg" : ""}">
+      <span class="nm">${esc(q.name)}</span>
+      <span class="ch ${cls(q.chg)}"><span class="ar" aria-hidden="true">${arrow(q.chg)}</span>${sgn(q.chg)}</span>
+      ${spark(q.spark, 64, 32)}
+      <span class="px">${nf(q.last, 2)}</span>
+    </div>`;
+const macroChips = (list) => (list || []).map((q) => {
+  const v = q.chg_bp != null ? sgn(q.chg_bp, 0, "bp") : sgn(q.chg);
+  return `<div class="chip">${esc(q.name)}<b>${nf(q.last, q.last > 100 ? 1 : 2)} <span class="${cls(q.chg)}">${v}</span></b></div>`;
+}).join("");
+const newsList = (title, list) => ((list || []).length ? `<div class="sec"><h2>${title}</h2><div class="panel news">${list.map((n) => `<a href="${esc(n.link)}" target="_blank" rel="noopener">${esc(n.title)}<small>${esc(n.publisher || "")} ${n.time ? "· " + esc(when(n.time)) : ""}</small></a>`).join("")}</div></div>` : "");
+const earnRows = (list, title) => ((list || []).length ? `<div class="sec"><h2>${title}</h2><div class="panel">${list.map((e) => `
+    <button class="row" data-t="${esc(e.ticker)}"><div><div class="t1">${esc(e.name)}</div><div class="t2">${esc(isKR(e.ticker) ? code(e.ticker) : e.ticker)}</div></div><span></span>
+    <div class="num"><b>${e.in_days === 0 ? "오늘" : e.in_days === 1 ? "내일" : e.in_days + "일 후"}</b><span>${esc(e.date.slice(5).replace("-", "/"))}</span></div></button>`).join("")}</div></div>` : "");
+function moversBlock(movers, label) {
+  return Object.entries(movers || {}).map(([mk, v]) => `
+    <div class="sec"><h2>${label || (mk === "us" ? "미국" : "한국")} 등락 상위</h2><div class="panel">
+    ${[...v.top.slice(0, 3), ...v.bottom.slice(0, 3)].map((m) => `
+      <button class="row" data-t="${esc(m.ticker)}"><div><div class="t1">${esc(m.name)}</div><div class="t2">${esc(isKR(m.ticker) ? code(m.ticker) : m.ticker)}</div></div><span></span><div class="num"><b class="${cls(m.chg)}">${sgn(m.chg)}</b></div></button>`).join("")}
+    </div></div>`).join("");
+}
+function renderBriefUS(el) {
+  const b = state.data.briefing_us;
+  if (!b) { el.innerHTML = briefSeg() + `<div class="empty">미장 장전 브리핑은 평일 저녁 21시 전후(미국 개장 전)에 생성됩니다.</div>`; return; }
+  const d = new Date(b.date + "T00:00:00");
+  const dow = "일월화수목금토"[d.getDay()];
+  const watch = (b.watch || []).slice().sort((a, c) => (a.market === "us" ? 0 : 1) - (c.market === "us" ? 0 : 1)).map((r) => `
+    <button class="row" data-t="${esc(r.ticker)}">
+      <div><div class="t1">${esc(r.name)}</div><div class="t2">${price(r.last, r.ticker)} · ${esc(r.setup_label || "")} · RSI ${nf(r.rsi14)}${r.market === "us" ? " · 전일 종가" : " · 오늘 종가"}</div></div>
+      ${spark(r.spark, 56, 26)}
+      <div class="num"><b class="${cls(r.chg_1d)}">${sgn(r.chg_1d)}</b><span class="${cls(r.chg_5d)}">5일 ${sgn(r.chg_5d, 1)}</span></div>
+    </button>`).join("");
+  const br = b.breadth?.kr;
+  el.innerHTML = `${briefSeg()}
+    <div class="dateline"><h1>${d.getMonth() + 1}월 ${d.getDate()}일 ${dow}요일 미장 장전</h1><p>미국 개장 ${esc(b.us_open_kst || "")} KST${b.dst ? "(서머타임)" : ""} · ${when(b.generated)} 생성 · 선물은 생성 시점 기준</p></div>
+    <div class="tape">${(b.futures || []).map(briefTick).join("")}${(b.kr_indices || []).map(briefTick).join("")}</div>
+    <div class="macro">${macroChips(b.macro)}</div>
+    ${b.ai_summary ? `<div class="sec"><h2>AI 시황 요약</h2><div class="ai">${esc(b.ai_summary)}</div></div>` : ""}
+    <div class="sec"><h2>오늘 밤 미국장 체크</h2><ul class="bullets">${(b.tonight || []).map((p) => `<li>${esc(p)}</li>`).join("")}</ul></div>
+    <div class="sec"><h2>오늘 국내장 마감</h2><ul class="bullets">${(b.review || []).map((p) => `<li>${esc(p)}</li>`).join("") || "<li>데이터 없음</li>"}</ul>
+      ${br ? `<div class="panel pad breadth" style="margin-top:8px"><div><div class="bl"><span>한국 유니버스</span><span><span class="up">상승 ${br.up}</span> · <span class="down">하락 ${br.down}</span></span></div><div class="bar"><i style="width:${(br.up / br.total) * 100}%"></i></div></div></div>` : ""}</div>
+    ${earnRows(b.earnings, "실적 발표 <small>미국 유니버스 · 미국 시간 기준</small>")}
+    ${(b.us_picks || []).length ? `<div class="sec"><h2>오늘의 미국 추천 Top3 <small>아침 산출 · 추천 탭에서 근거 확인</small></h2><div class="panel">${b.us_picks.map((p, i) => `
+      <button class="row" data-t="${esc(p.ticker)}"><div><div class="t1">${i + 1}. ${esc(p.name)}</div><div class="t2">${esc(p.setup_label || "")}</div></div><span></span><div class="num"><b>${nf(p.score, 1)}</b><span class="t2">점</span></div></button>`).join("")}</div></div>` : ""}
+    ${b.geo ? geoCard(b.geo, state.data.geo_weekly) : ""}
+    <div class="sec"><h2>관심종목</h2><div class="panel">${watch || '<div class="empty">관심종목 없음</div>'}</div></div>
+    ${(b.us_prev || []).length ? `<div class="sec"><h2>전일 미 증시 마감</h2><div class="macro">${macroChips(b.us_prev)}</div></div>` : ""}
+    ${moversBlock(b.movers, "오늘 한국")}
+    ${newsList("뉴욕증시 헤드라인", b.news_kr)}
+    ${newsList("해외 헤드라인", b.news)}
+    <p class="note">${esc(state.data.meta?.disclaimer || "")}</p>`;
+}
 function renderBrief() {
   const b = state.data.briefing, w = state.data.watch;
   const el = $("#view-brief");
-  if (!b) { el.innerHTML = `<div class="empty">아직 브리핑이 없습니다. 매일 평일 07:40 전후로 생성됩니다.</div>`; return; }
+  if (state.briefM == null) state.briefM = autoBriefM();
+  if (state.briefM === "us") { renderBriefUS(el); return; }
+  if (!b) { el.innerHTML = briefSeg() + `<div class="empty">아직 브리핑이 없습니다. 평일 아침 7시 전후로 생성됩니다.</div>`; return; }
   const d = new Date(b.date + "T00:00:00");
   const dow = "일월화수목금토"[d.getDay()];
   const idx = b.indices || [];
@@ -167,13 +233,15 @@ function renderBrief() {
     <ul>${(x.evidence || []).map((e) => `<li>${esc(e)}</li>`).join("")}</ul></div>`).join("");
 
   el.innerHTML = `
-    <div class="dateline"><h1>${d.getMonth() + 1}월 ${d.getDate()}일 ${dow}요일 장전</h1><p>전일 종가 기준 · ${when(b.generated)} 생성</p></div>
+    ${briefSeg()}
+    <div class="dateline"><h1>${d.getMonth() + 1}월 ${d.getDate()}일 ${dow}요일 국장 장전</h1><p>전일 종가 기준 · ${when(b.generated)} 생성</p></div>
     <div class="tape">${idx.slice(0, 2).map((q) => tick(q, false)).join("")}${idx.slice(2).map((q) => tick(q, false)).join("")}</div>
     <div class="macro">${macro}</div>
     ${b.ai_summary ? `<div class="sec"><h2>AI 시황 요약</h2><div class="ai">${esc(b.ai_summary)}</div></div>` : ""}
     <div class="sec"><h2>간밤 포인트</h2><ul class="bullets">${(b.points || []).map((p) => `<li>${esc(p)}</li>`).join("") || "<li>특이사항 없음</li>"}</ul></div>
     <div class="sec"><h2>오늘 국내장 체크</h2><ul class="bullets">${(b.outlook || []).map((p) => `<li>${esc(p)}</li>`).join("")}</ul></div>
     ${geoCard(state.data.geo, state.data.geo_weekly)}
+    ${earnRows(b.earnings, "실적 발표 예정 <small>국내 2일 · 미국 1일 이내</small>")}
     ${diag ? `<div class="sec"><h2>관심종목 급락 진단</h2>${diag}</div>` : ""}
     <div class="sec"><h2>관심종목 <small>${esc(when(w?.updated))}</small></h2><div class="panel">${watch || '<div class="empty">config/settings.yaml 의 watchlist 에 종목을 추가하세요.</div>'}</div></div>
     ${breadth ? `<div class="sec"><h2>시장 폭</h2><div class="panel pad breadth">${breadth}</div></div>` : ""}
@@ -549,44 +617,145 @@ async function openDetail(t) {
   }
 }
 
-/* ── 배당 ── */
+/* ── 배당 (앱에서 플랜 구성 변경 → divplan.js 로 즉시 재계산) ── */
+function dvOpts() {
+  const d = state.data.dividend || {}, df = d.defaults || {};
+  const base = { ...DivPlan.DEFAULTS, capital: df.capital || DivPlan.DEFAULTS.capital, n: df.max_picks || 6,
+    singleCap: df.single_cap ?? 0.35, ccCap: df.covered_call_max_weight ?? 0.2, taxUs: df.tax_us ?? 0.15, taxKr: df.tax_kr ?? 0.154 };
+  const saved = store.get("divPlan", {}) || {};
+  if (state.capital && saved.capital == null) saved.capital = state.capital;  // 예전 투자금 설정 이어받기
+  return { ...base, ...saved };
+}
+function dvSave(patch) {
+  const cur = store.get("divPlan", {}) || {};
+  store.set("divPlan", { ...cur, ...patch });
+  renderDiv();
+}
+const dvDots = (ms) => `<span class="dots" aria-label="지급월 ${ms.join(",")}">${Array.from({ length: 12 }, (_, i) => `<i class="${ms.includes(i + 1) ? "on" : ""}"></i>`).join("")}</span>`;
+const dvSeg = (key, val, opts) => `<div class="seg sm" role="group">${opts.map(([v, l]) => `<button data-dv="${key}" data-v="${v}" aria-pressed="${String(val) === String(v)}">${l}</button>`).join("")}</div>`;
+const dvSel = (key, val, opts) => `<select data-dvs="${key}">${opts.map(([v, l]) => `<option value="${v}" ${Math.abs(Number(val) - Number(v)) < 1e-9 ? "selected" : ""}>${l}</option>`).join("")}</select>`;
 function renderDiv() {
   const el = $("#view-div"), d = state.data.dividend;
-  if (!d) { el.innerHTML = `<div class="empty">배당 플랜은 매월 첫 평일 아침에 생성됩니다.</div>`; return; }
-  const cap = state.capital || d.capital_krw;
-  const k = cap / d.capital_krw;
-  const monthly = d.monthly_net_krw.map((v) => v * k);
-  const max = Math.max(...monthly, 1);
-  const nowM = new Date().getMonth();
-  const dots = (ms) => `<span class="dots" aria-label="지급월 ${ms.join(",")}">${Array.from({ length: 12 }, (_, i) => `<i class="${ms.includes(i + 1) ? "on" : ""}"></i>`).join("")}</span>`;
+  if (!d?.candidates?.length) { el.innerHTML = `<div class="empty">배당 데이터가 아직 없습니다. 평일 아침 실행 후 생성됩니다.</div>`; return; }
+  if (!d.candidates[0].dps) { el.innerHTML = `<div class="empty">배당 데이터가 이전 형식입니다. 다음 아침 실행(또는 코드 갱신 직후 자동 실행) 후 설정 화면이 열립니다.</div>`; return; }
+  const o = dvOpts();
+  const P = DivPlan.build(d.candidates, o, d.usdkrw);
+  const inPlan = new Set(P.rows.map((r) => r.ticker));
+  const max = Math.max(...P.monthly, 1), nowM = new Date().getMonth();
+  const shares = (r) => (o.whole ? nf(r.shares) : nf(r.shares, 2)) + "주";
+  const fq = state.dvQ || "", ff = state.dvF || "all";
+  const cands = d.candidates.filter((c) => (ff === "all" || (ff === "monthly" ? c.freq >= 12 : ff === "etf" ? c.type === "etf" : ff === "stock" ? c.type !== "etf" : c.market === ff))
+    && (!fq || c.name.toLowerCase().includes(fq) || c.ticker.toLowerCase().includes(fq)));
+  const candBtns = (c) => {
+    if (o.mode === "manual") return `<button class="mini-btn ${inPlan.has(c.ticker) ? "on" : ""}" data-dva="${inPlan.has(c.ticker) ? "unselect" : "select"}" data-t2="${esc(c.ticker)}">${inPlan.has(c.ticker) ? "✓ 담김" : "+ 담기"}</button>`;
+    const pin = o.pinned.includes(c.ticker), ex = o.excluded.includes(c.ticker);
+    return ex ? `<button class="mini-btn" data-dva="unexclude" data-t2="${esc(c.ticker)}">제외 해제</button>`
+      : `<button class="mini-btn ${pin ? "on" : ""}" data-dva="${pin ? "unpin" : "pin"}" data-t2="${esc(c.ticker)}">${pin ? "📌 고정됨" : "📌 고정"}</button><button class="mini-btn" data-dva="exclude" data-t2="${esc(c.ticker)}">제외</button>`;
+  };
   el.innerHTML = `
-    <div class="dateline"><h1>${esc(d.month?.replace("-", "년 "))}월 배당 플랜</h1><p>${esc(when(d.generated))} 생성 · 환율 ${nf(d.usdkrw, 1)}원</p></div>
-    <div class="panel pad field"><label for="cap">투자금 (원)</label>
-      <input id="cap" inputmode="numeric" value="${nf(cap)}" aria-describedby="cap-h"><span id="cap-h" class="note" style="margin:0">입력하면 아래 금액이 비례해서 다시 계산됩니다.</span></div>
-    <div class="kpis" style="margin-top:10px">
-      <div class="kpi"><small>연간 세후 배당</small><b>${krw(d.annual_net_krw * k)}</b></div>
-      <div class="kpi"><small>월 평균</small><b>${krw((d.annual_net_krw * k) / 12)}</b></div>
-      <div class="kpi"><small>세후 수익률</small><b>${nf(d.portfolio_yield_net, 2)}%</b></div>
+    <div class="dateline"><h1>배당 플랜</h1><p>${esc(when(d.generated))} 가격 기준 · 환율 ${nf(d.usdkrw, 1)}원 · 설정은 이 기기에 저장</p></div>
+    <div class="kpis">
+      <div class="kpi"><small>연간 세후 배당</small><b>${krw(P.annual)}</b></div>
+      <div class="kpi"><small>월 평균</small><b>${krw(P.annual / 12)}</b></div>
+      <div class="kpi"><small>세후 수익률</small><b>${P.yieldNet == null ? "-" : nf(P.yieldNet, 2) + "%"}</b><small>지급월 ${P.covered.length}/12</small></div>
     </div>
+    ${o.target > 0 ? `<div class="panel pad goal">월 <b>${krw(o.target)}</b> 목표 → 이 구성(세후 ${P.yieldNet == null ? "-" : nf(P.yieldNet, 2) + "%"})이면 필요 투자금 <b>${P.need ? krw(P.need) : "-"}</b>${P.need ? ` <span class="${P.need > o.capital ? "down" : "up"}">(현재 투자금 대비 ${P.need > o.capital ? "+" + krw(P.need - o.capital) + " 부족" : "충족"})</span>` : ""}</div>` : ""}
+    <details class="panel pad dv-set" ${store.get("dvOpen", true) ? "open" : ""}>
+      <summary><b>플랜 설정</b> <small>${o.mode === "auto" ? `자동 ${o.n}종목` : `직접 ${o.selected.length}종목`} · ${{ score: "점수 비례", equal: "균등", yield: "배당률 비례", custom: "직접 입력" }[o.weighting]} · 단일 ≤${Math.round(o.singleCap * 100)}%</small></summary>
+      <div class="dv-grid">
+        <label>투자금(원)<input data-dvi="capital" inputmode="numeric" value="${nf(o.capital)}"></label>
+        <label>목표 월 배당(원, 선택)<input data-dvi="target" inputmode="numeric" value="${o.target ? nf(o.target) : ""}" placeholder="예: 1,000,000"></label>
+      </div>
+      <div class="dv-row"><span>구성 방식</span>${dvSeg("mode", o.mode, [["auto", "자동 추천"], ["manual", "직접 고르기"]])}</div>
+      ${o.mode === "auto" ? `<div class="dv-row"><span>종목 수</span><div class="stepper"><button data-dva="n-" aria-label="줄이기">−</button><b>${o.n}</b><button data-dva="n+" aria-label="늘리기">＋</button></div></div>
+      <div class="dv-row"><span>시장</span>${dvSeg("market", o.market, [["all", "전체"], ["us", "미국"], ["kr", "국내"]])}</div>
+      <div class="dv-row"><span>유형</span>${dvSeg("kind", o.kind, [["all", "전체"], ["etf", "ETF"], ["stock", "개별주"]])}</div>
+      <div class="dv-row"><span>최소 배당률</span>${dvSel("minYield", o.minYield, [[0, "제한 없음"], [1, "1% 이상"], [2, "2% 이상"], [3, "3% 이상"], [4, "4% 이상"], [5, "5% 이상"]])}</div>` : ""}
+      <div class="dv-row"><span>비중 방식</span>${dvSeg("weighting", o.weighting, [["score", "점수"], ["equal", "균등"], ["yield", "배당률"], ["custom", "직접"]])}</div>
+      ${o.weighting !== "custom" ? `<div class="dv-row"><span>단일 종목 상한</span>${dvSel("singleCap", o.singleCap, [[0.2, "20%"], [0.25, "25%"], [0.3, "30%"], [0.35, "35%"], [0.4, "40%"], [0.5, "50%"], [1, "제한 없음"]])}</div>` : ""}
+      <div class="dv-row"><span>커버드콜 합산</span>${dvSel("ccCap", o.ccCap, [[0, "제외"], [0.1, "10% 이하"], [0.2, "20% 이하"], [0.3, "30% 이하"], [0.4, "40% 이하"]])}</div>
+      <div class="dv-row"><span>세금</span>${dvSeg("taxPreset", Math.abs(o.taxKr) < 1e-9 ? "pension" : "normal", [["normal", "일반계좌"], ["pension", "연금·ISA"]])}</div>
+      <div class="dv-grid">
+        <label>미국 원천징수(%)<input data-dvi="taxUs" inputmode="decimal" value="${nf(o.taxUs * 100, 1)}"></label>
+        <label>국내 배당소득세(%)<input data-dvi="taxKr" inputmode="decimal" value="${nf(o.taxKr * 100, 1)}"></label>
+      </div>
+      <label class="dv-check"><input type="checkbox" data-dvc="whole" ${o.whole ? "checked" : ""}> 정수 주 단위로 계산(남는 금액은 현금)</label>
+      <div class="btns"><button class="btn ghost sm" data-dva="reset">기본값으로</button>${o.mode === "manual" ? `<button class="btn ghost sm" data-dva="fromauto">자동 추천으로 채우기</button><button class="btn ghost sm" data-dva="clear">모두 빼기</button>` : ""}</div>
+      <p class="note" style="margin:6px 0 0">연금저축·ISA도 미국 배당의 현지 원천징수 15%는 그대로 떼이고, 국내 배당소득세만 과세이연·비과세 됩니다(한도·요건 확인 필요).</p>
+    </details>
+    ${P.warn.map((w) => `<p class="note warn">⚠️ ${esc(w)}</p>`).join("")}
     <div class="sec"><h2>월별 예상 입금 <small>만원 · 배당락월 기준 · 세후</small></h2>
-      <div class="panel pad"><div class="months">${monthly.map((v, i) => `<div class="m ${i === nowM ? "now" : ""}" title="${i + 1}월 ${krw(v)}"><small>${v ? nf(v / 1e4, 0) : ""}</small><i style="height:${(v / max) * 100}%"></i><span>${i + 1}</span></div>`).join("")}</div></div>
+      <div class="panel pad"><div class="months">${P.monthly.map((v, i) => `<div class="m ${i === nowM ? "now" : ""}" title="${i + 1}월 ${krw(v)}"><small>${v ? nf(v / 1e4, 0) : ""}</small><i style="height:${(v / max) * 100}%"></i><span>${i + 1}</span></div>`).join("")}</div>
+      ${P.missing.length ? `<p class="note" style="margin:6px 0 0">배당이 없는 달: ${P.missing.join("·")}월 — 해당 월에 지급하는 종목을 고정하면 채워집니다.</p>` : ""}</div>
     </div>
-    <div class="sec"><h2>플랜 구성</h2><div class="panel">${d.picks.map((p) => `
-      <div class="row" style="cursor:default"><div><div class="t1">${esc(p.name)}${p.covered_call ? '<span class="tag">커버드콜</span>' : ""}</div>
-      <div class="t2">${esc(isKR(p.ticker) ? code(p.ticker) : p.ticker)} · 배당률 ${nf(p.yield, 2)}% · 5년 성장 ${p.cagr5 == null ? "-" : sgn(p.cagr5, 1)} ${dots(p.months)}</div></div><span></span>
-      <div class="num"><b>${nf(p.weight, 0)}%</b><span>${krw(p.alloc_krw * k)}</span></div></div>`).join("")}</div>
-      ${d.picks.some((p) => p.notes.length) ? `<ul class="bullets" style="margin-top:8px">${d.picks.flatMap((p) => p.notes.map((n) => `<li>${esc(p.name)}: ${esc(n)}</li>`)).join("")}</ul>` : ""}
+    <div class="sec"><h2>플랜 구성 <small>${nf(P.rows.length)}종목 · 투자 ${krw(P.invested)}${P.cash > 1 ? ` · 현금 ${krw(P.cash)}` : ""}</small></h2><div class="panel">${P.rows.map((r) => `
+      <div class="row dv-r" style="cursor:default"><div><div class="t1">${esc(r.name)}${r.pinned ? ' <span class="tag">📌</span>' : ""}${r.covered_call ? '<span class="tag">커버드콜</span>' : ""}</div>
+        <div class="t2">${esc(isKR(r.ticker) ? code(r.ticker) : r.ticker)} · 배당률 ${nf(r.yield, 2)}% · 5년 성장 ${r.cagr5 == null ? "-" : sgn(r.cagr5, 1)} ${dvDots(r.months)}</div>
+        <div class="t2">${shares(r)} × ${price(r.price, r.ticker)} · 연 세후 ${krw(r.annual)}</div></div><span></span>
+        <div class="num">${o.weighting === "custom" ? `<label class="pct"><input data-dvw="${esc(r.ticker)}" inputmode="decimal" value="${nf(o.custom[r.ticker] ?? 100 / P.rows.length, 0)}">%</label><small class="t2">실제 ${nf(r.weight, 0)}%</small>` : `<b>${nf(r.weight, 0)}%</b>`}<span>${krw(r.alloc)}</span>
+        <button class="mini-btn" data-dva="${o.mode === "manual" ? "unselect" : "exclude"}" data-t2="${esc(r.ticker)}" aria-label="${esc(r.name)} 빼기">빼기</button></div></div>`).join("") || '<div class="empty">담긴 종목이 없습니다. 아래 후보에서 담아 주세요.</div>'}</div>
+      ${P.rows.some((r) => (r.notes || []).length) ? `<ul class="bullets" style="margin-top:8px">${P.rows.flatMap((r) => (r.notes || []).map((n) => `<li>${esc(r.name)}: ${esc(n)}</li>`)).join("")}</ul>` : ""}
     </div>
-    ${(d.upcoming_ex || []).length ? `<div class="sec"><h2>다가오는 예상 배당락 <small>작년 일정 기준 추정</small></h2><div class="panel">${d.upcoming_ex.map((u) => `<div class="row" style="cursor:default"><div class="t1">${esc(u.name)}</div><span></span><div class="num"><b>${esc(u.est_ex_date.slice(5).replace("-", "/"))}</b></div></div>`).join("")}</div></div>` : ""}
-    <div class="sec"><h2>후보 전체 순위</h2><div class="panel">${d.candidates.map((c) => `
-      <div class="row" style="cursor:default"><div><div class="t1">${esc(c.name)}${c.covered_call ? '<span class="tag">커버드콜</span>' : ""}</div>
-      <div class="t2">배당률 ${nf(c.yield, 2)}% · 성향 ${c.payout == null ? "-" : nf(c.payout, 0) + "%"} · 연 ${c.freq}회 ${dots(c.months)}</div></div><span></span>
-      <div class="num"><b>${nf(c.score, 1)}</b><span class="t2">점</span></div></div>`).join("")}</div></div>
-    <p class="note">${esc(d.method)}</p>`;
-  $("#cap").addEventListener("change", (e) => {
-    const v = Number(String(e.target.value).replace(/[^0-9]/g, ""));
-    if (v > 0) { state.capital = v; store.set("capital", v); renderDiv(); toast(`투자금 ${krw(v)} 기준으로 다시 계산했습니다`); }
+    ${P.upcoming.length ? `<div class="sec"><h2>다가오는 예상 배당락 <small>작년 일정 기준 추정</small></h2><div class="panel">${P.upcoming.map((u) => `<div class="row" style="cursor:default"><div class="t1">${esc(u.name)}</div><span></span><div class="num"><b>${u.date.getMonth() + 1}/${u.date.getDate()}</b><span>${u.days}일 후</span></div></div>`).join("")}</div></div>` : ""}
+    <div class="sec"><h2>후보 ${nf(d.candidates.length)}종목 <small>${o.mode === "manual" ? "담기로 직접 구성" : "📌 고정 = 반드시 포함 · 제외 = 빼고 계산"}</small></h2>
+      <div class="tools"><input id="dvq" type="search" placeholder="종목명·티커 검색" value="${esc(state.dvQ || "")}" autocomplete="off"></div>
+      <div class="chips">${[["all", "전체"], ["etf", "ETF"], ["stock", "개별주"], ["monthly", "월배당"], ["us", "미국"], ["kr", "국내"]].map(([k, l]) => `<button data-dvf="${k}" aria-pressed="${ff === k}">${l}</button>`).join("")}</div>
+      <div class="panel">${cands.slice(0, 120).map((c) => `
+      <div class="row dv-r ${o.excluded.includes(c.ticker) && o.mode === "auto" ? "dim" : ""}" style="cursor:default"><div><div class="t1">${esc(c.name)}${c.covered_call ? '<span class="tag">커버드콜</span>' : ""}${inPlan.has(c.ticker) ? '<span class="tag on">플랜</span>' : ""}</div>
+      <div class="t2">${esc(isKR(c.ticker) ? code(c.ticker) : c.ticker)} · 배당률 ${nf(c.yield, 2)}% · 성향 ${c.payout == null ? "-" : nf(c.payout, 0) + "%"} · 연 ${c.freq}회 ${dvDots(c.months)}</div>
+      <div class="t2">${esc(c.pool || "")}${c.cagr5 != null ? ` · 5년 성장 ${sgn(c.cagr5, 1)}` : ""}${c.cuts ? ` · 감배 ${c.cuts}회` : ""}</div></div><span></span>
+      <div class="num"><b>${nf(c.score, 1)}</b><span class="t2">점</span>${candBtns(c)}</div></div>`).join("") || '<div class="empty">조건에 맞는 후보가 없습니다.</div>'}</div></div>
+    <p class="note">${esc(d.method)} 앱 설정을 바꾸면 같은 규칙(점수 + 새로 채워지는 지급월 보너스, 상한 재분배)으로 이 기기에서 다시 계산합니다.</p>`;
+}
+function dvBind() {
+  const el = $("#view-div");
+  el.addEventListener("click", (e) => {
+    const b = e.target.closest("[data-dv],[data-dva],[data-dvf]");
+    if (!b) return;
+    const o = dvOpts();
+    if (b.dataset.dvf) { state.dvF = b.dataset.dvf; renderDiv(); return; }
+    if (b.dataset.dv) {
+      const k = b.dataset.dv, v = b.dataset.v;
+      if (k === "taxPreset") { dvSave(v === "pension" ? { taxKr: 0, taxUs: 0.15 } : { taxKr: 0.154, taxUs: 0.15 }); return; }
+      if (k === "mode" && v === "manual" && !o.selected.length) {  // 직접 고르기로 바꾸면 현재 자동 구성을 출발점으로
+        const cur = DivPlan.build(state.data.dividend.candidates, o, state.data.dividend.usdkrw).rows.map((r) => r.ticker);
+        dvSave({ mode: v, selected: cur }); return;
+      }
+      if (k === "weighting" && v === "custom" && !Object.keys(o.custom).length) {
+        const cur = DivPlan.build(state.data.dividend.candidates, o, state.data.dividend.usdkrw).rows;
+        dvSave({ weighting: v, custom: Object.fromEntries(cur.map((r) => [r.ticker, Math.round(r.weight)])) }); return;
+      }
+      dvSave({ [k]: v }); return;
+    }
+    const a = b.dataset.dva, t = b.dataset.t2;
+    const without = (arr) => arr.filter((x) => x !== t);
+    if (a === "n-") dvSave({ n: Math.max(1, o.n - 1) });
+    else if (a === "n+") dvSave({ n: Math.min(15, o.n + 1) });
+    else if (a === "pin") dvSave({ pinned: [...without(o.pinned), t], excluded: without(o.excluded) });
+    else if (a === "unpin") dvSave({ pinned: without(o.pinned) });
+    else if (a === "exclude") dvSave({ excluded: [...without(o.excluded), t], pinned: without(o.pinned) });
+    else if (a === "unexclude") dvSave({ excluded: without(o.excluded) });
+    else if (a === "select") dvSave({ selected: [...without(o.selected), t] });
+    else if (a === "unselect") dvSave({ selected: without(o.selected) });
+    else if (a === "clear") dvSave({ selected: [] });
+    else if (a === "fromauto") dvSave({ selected: DivPlan.build(state.data.dividend.candidates, { ...o, mode: "auto" }, state.data.dividend.usdkrw).rows.map((r) => r.ticker) });
+    else if (a === "reset") { store.set("divPlan", {}); state.capital = null; store.set("capital", null); renderDiv(); toast("기본 설정으로 되돌렸습니다"); }
   });
+  el.addEventListener("change", (e) => {
+    const t = e.target;
+    const num = (v) => Number(String(v).replace(/[^0-9.]/g, ""));
+    if (t.dataset.dvi) {
+      const k = t.dataset.dvi, v = num(t.value);
+      if (k === "taxUs" || k === "taxKr") { if (v >= 0 && v <= 60) dvSave({ [k]: v / 100 }); return; }
+      if (k === "capital" && v > 0) { dvSave({ capital: v }); toast(`투자금 ${krw(v)} 기준으로 다시 계산했습니다`); return; }
+      if (k === "target") { dvSave({ target: v || 0 }); return; }
+    }
+    if (t.dataset.dvs) { dvSave({ [t.dataset.dvs]: Number(t.value) }); return; }
+    if (t.dataset.dvc) { dvSave({ [t.dataset.dvc]: t.checked }); return; }
+    if (t.dataset.dvw) { const o = dvOpts(); dvSave({ custom: { ...o.custom, [t.dataset.dvw]: num(t.value) } }); }
+  });
+  el.addEventListener("input", (e) => { if (e.target.id === "dvq") { state.dvQ = e.target.value.trim().toLowerCase(); const pos = e.target.selectionStart; renderDiv(); const q = $("#dvq"); q.focus(); q.setSelectionRange(pos, pos); } });
+  el.addEventListener("toggle", (e) => { if (e.target.classList?.contains("dv-set")) store.set("dvOpen", e.target.open); }, true);
 }
 
 /* ── 규칙 검증 (백테스트 + 자가 보정) ── */
@@ -867,13 +1036,14 @@ async function enablePush() {
 /* ── 공통 ── */
 function renderAll() {
   const m = state.data.meta;
-  $("#stamp").innerHTML = m?.morning ? `장전 ${esc(when(m.morning))}${m.alerts ? `<br>알림 ${esc(when(m.alerts))}` : ""}` : "";
+  $("#stamp").innerHTML = m?.morning ? `국장 ${esc(when(m.morning))}${m.evening ? ` · 미장 ${esc(when(m.evening))}` : ""}${m.alerts ? `<br>알림 ${esc(when(m.alerts))}` : ""}` : "";
   $("#banner").innerHTML = m?.demo ? `<div class="banner">데모 데이터로 표시 중입니다. GitHub Actions 첫 실행 후 실제 시세로 바뀝니다.</div>` :
     !m ? `<div class="banner">데이터를 불러오지 못했습니다. 인터넷 연결을 확인하거나 첫 데이터 생성을 기다려 주세요.</div>` : "";
   renderBrief(); renderPicks(); renderScreen(); renderDiv(); renderLab(); renderAlerts();
 }
 function route() {
-  const tab = (location.hash || "#brief").slice(1);
+  let tab = (location.hash || "#brief").slice(1);
+  if (tab === "brief-us" || tab === "brief-kr") { state.briefM = tab.slice(6); tab = "brief"; if (state.data.briefing) renderBrief(); }
   const valid = ["brief", "picks", "screen", "div", "lab", "alerts"].includes(tab) ? tab : "brief";
   document.querySelectorAll(".view").forEach((v) => v.classList.toggle("active", v.id === "view-" + valid));
   document.querySelectorAll(".tabbar a").forEach((a) => (a.dataset.tab === valid ? a.setAttribute("aria-current", "page") : a.removeAttribute("aria-current")));
@@ -889,6 +1059,8 @@ document.addEventListener("click", (e) => {
   if (lh) { state.labH = lh.dataset.lh; store.set("labH", state.labH); renderLab(); return; }
   if (lm) { state.labM = lm.dataset.lm; store.set("labM", state.labM); renderLab(); return; }
   if (lf) { state.labF = lf.dataset.lf; store.set("labF", state.labF); renderLab(); return; }
+  const bm = e.target.closest("[data-bm]");
+  if (bm) { state.briefM = bm.dataset.bm; renderBrief(); return; }
   const sf = e.target.closest("[data-sf]");
   if (sf) { state.scrF = sf.dataset.sf; store.set("scrF", state.scrF); renderScreen(); return; }
   const t = e.target.closest("[data-t]");
@@ -900,5 +1072,6 @@ window.addEventListener("hashchange", route);
 document.addEventListener("visibilitychange", () => { if (!document.hidden) load(); });
 
 if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(() => {});
+dvBind();
 route();
 load();

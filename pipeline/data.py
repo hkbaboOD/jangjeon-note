@@ -28,7 +28,7 @@ FUND_KEYS = [
     "roe", "op_margin", "debt_to_equity", "revenue_growth", "earnings_growth",
     "target_mean", "target_high", "target_low", "analyst_count", "rec_key", "rec_mean",
     "payout_ratio", "market_cap", "high_52w", "low_52w",
-    "forward_eps", "trailing_eps", "industry", "country", "employees", "website", "summary",
+    "forward_eps", "trailing_eps", "industry", "country", "employees", "website", "summary", "earnings_ts",
 ]
 
 
@@ -184,18 +184,37 @@ class LiveSource:
             "employees": safe_float(g("fullTimeEmployees")),
             "website": g("website"),
             "summary": (g("longBusinessSummary") or "")[:700] or None,
+            "earnings_ts": safe_float(g("earningsTimestampStart", "earningsTimestamp")),  # 다음 실적 발표(UTC 초)
         }
 
+    DIV_CACHE = "dividends_cache.json"
+    DIV_DAYS = 7  # 배당 이력은 자주 바뀌지 않음 → 주 1회만 새로 받음(매일 플랜 갱신 비용 절감)
+
     def dividends(self, ticker: str) -> pd.Series:
+        if not hasattr(self, "_div"):
+            self._div = read_json(self.DIV_CACHE, STATE_DIR, default={}) or {}
+        hit = self._div.get(ticker)
+        if hit and datetime.utcnow() - datetime.fromisoformat(hit["_fetched"]) < timedelta(days=self.DIV_DAYS):
+            s = pd.Series(hit["s"], dtype=float)
+            s.index = pd.to_datetime(s.index)
+            return s.sort_index()
         try:
             s = self.yf.Ticker(ticker).dividends
             if s is None or len(s) == 0:
-                return pd.Series(dtype=float)
-            s.index = pd.to_datetime(s.index).tz_localize(None)
-            return s.astype(float)
+                s = pd.Series(dtype=float)
+            else:
+                s.index = pd.to_datetime(s.index).tz_localize(None)
+                s = s.astype(float)
         except Exception as e:
             log.warning("배당 이력 실패 %s: %s", ticker, e)
             return pd.Series(dtype=float)
+        cut = pd.Timestamp.now() - pd.Timedelta(days=365 * 7)
+        keep = s[s.index > cut]
+        self._div[ticker] = {"_fetched": datetime.utcnow().isoformat(),
+                             "s": {d.strftime("%Y-%m-%d"): round(float(v), 6) for d, v in keep.items()}}
+        self._div_dirty = True
+        time.sleep(0.2)
+        return keep
 
     def news(self, ticker: str) -> list[dict]:
         """헤드라인: yfinance 최신 뉴스 → 전체 탭 → 검색 API 순으로 시도(빈 응답 대비)."""
@@ -233,6 +252,8 @@ class LiveSource:
     def flush(self):
         if self._dirty:
             write_json(self.CACHE_FILE, self._cache, STATE_DIR)
+        if getattr(self, "_div_dirty", False):
+            write_json(self.DIV_CACHE, self._div, STATE_DIR)
 
 
 # ──────────────────────────────────────────────────────────────
@@ -252,7 +273,8 @@ class DemoSource:
         if ticker.startswith("^") or "=" in ticker or "." in ticker and ticker.split(".")[-1] == "NYB":
             return {"^DJI": 46000, "^GSPC": 6700, "^IXIC": 22800, "^SOX": 6900, "^KS11": 3600,
                     "^KQ11": 860, "^TNX": 4.1, "^VIX": 17, "CL=F": 62, "BZ=F": 66,
-                    "DX-Y.NYB": 98.5, "KRW=X": 1420, "GC=F": 4100}.get(ticker, 100)
+                    "DX-Y.NYB": 98.5, "KRW=X": 1420, "GC=F": 4100, "ES=F": 6720, "NQ=F": 25000,
+                    "YM=F": 46100}.get(ticker, 100)
         if market_of(ticker) == "kr":
             return float(r.uniform(20000, 400000))
         return float(r.uniform(30, 600))
@@ -304,6 +326,7 @@ class DemoSource:
             "forward_eps": None if etf else price / fpe, "trailing_eps": None if etf else price / (fpe * 1.2),
             "industry": None, "country": "South Korea" if market_of(ticker) == "kr" else "United States",
             "employees": None if etf else float(r.integers(1000, 200000)), "website": None, "summary": None,
+            "earnings_ts": None if etf else float(time.time() + int(r.integers(-3, 40)) * 86400),
         }
 
     def dividends(self, ticker):
