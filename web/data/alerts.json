@@ -3,6 +3,16 @@
   {
    "ticker": "SCHD",
    "name": "SCHD",
+   "kind": "high52",
+   "level": "good",
+   "msg": "SCHD 52주 신고가",
+   "price": 35.400001525878906,
+   "chg_1d": 2.135030818593764,
+   "time": "2026-10-23T06:27+09:00"
+  },
+  {
+   "ticker": "SCHD",
+   "name": "SCHD",
    "kind": "rsi_high",
    "level": "warn",
    "msg": "SCHD RSI 73 과매수",
@@ -581,5 +591,5 @@
    "time": "2026-10-16T16:01+09:00"
   }
  ],
- "updated": "2026-10-23T02:55+09:00"
+ "updated": "2026-10-23T06:27+09:00"
 }
