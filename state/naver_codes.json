@@ -694,5 +694,11 @@
   "type": "stock",
   "ko": "라이온델바젤 인더스트리스",
   "checked": "2026-10-20"
+ },
+ "BRK-B": {
+  "code": "BRKb",
+  "type": "stock",
+  "ko": "버크셔 해서웨이 Class B",
+  "checked": "2026-10-24"
  }
 }
