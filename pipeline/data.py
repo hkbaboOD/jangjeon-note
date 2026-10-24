@@ -82,6 +82,28 @@ def parse_rss(xml_text: str, limit: int = 10) -> list[dict]:
     return out
 
 
+def _quote_group(t: str) -> str | None:
+    """마지막 봉 비교 그룹: 국내(종목·코스피/코스닥 지수), 미국(종목·지수). 환율·선물(24시간 거래)은 제외."""
+    if "=" in t:
+        return None
+    if market_of(t) == "kr" or t in ("^KS11", "^KQ11", "^KS200"):
+        return "kr"
+    return "us"
+
+
+def stale_tickers(hist: dict[str, pd.DataFrame]) -> list[str]:
+    """같은 그룹의 가장 최근 봉 날짜보다 마지막 봉이 이른 종목(배치 다운로드 누락 의심)."""
+    last: dict[str, pd.Timestamp] = {}
+    for t, df in hist.items():
+        g = _quote_group(t)
+        if g and df is not None and len(df):
+            d = pd.Timestamp(df.index[-1]).normalize()
+            last[g] = max(last.get(g, d), d)
+    return [t for t, df in hist.items()
+            if _quote_group(t) and df is not None and len(df)
+            and pd.Timestamp(df.index[-1]).normalize() < last[_quote_group(t)]]
+
+
 # ──────────────────────────────────────────────────────────────
 class LiveSource:
     CACHE_FILE = "fundamentals_cache.json"
@@ -122,7 +144,36 @@ class LiveSource:
                 except Exception:
                     log.warning("이력 없음: %s", t)
             time.sleep(1)
+        self._refresh_stale(out, period)
         return out
+
+    def _refresh_stale(self, out: dict[str, pd.DataFrame], period: str, budget_sec: float = 90.0) -> int:
+        """배치 다운로드에서 마지막 봉(직전 거래일)이 빠진 종목을 개별 조회로 다시 받음.
+
+        실측(2026-10-21~23 국장 장전): 같은 실행에서 미 지수는 전날 봉이 있는데 미국 종목 전부는 하루 전 봉에서 끊김.
+        같은 시장 안에서 가장 최근 봉보다 늦은 종목만 다시 받으므로 평소에는 추가 호출이 없다.
+        """
+        lag = stale_tickers(out)
+        if not lag:
+            return 0
+        start, fixed = time.time(), 0
+        for t in lag:
+            if time.time() - start > budget_sec:
+                break
+            try:
+                sub = self.yf.Ticker(t).history(period=period, interval="1d", auto_adjust=False)
+                sub = sub[["Open", "High", "Low", "Close", "Volume"]].dropna(subset=["Close"])
+            except Exception as e:
+                log.warning("개별 재조회 실패 %s: %s", t, e)
+                continue
+            if len(sub) == 0:
+                continue
+            sub.index = pd.to_datetime(sub.index).tz_localize(None).normalize()
+            if sub.index[-1] > out[t].index[-1]:
+                out[t] = sub
+                fixed += 1
+        log.info("마지막 봉 누락 %d종목 → 개별 재조회로 %d종목 보완", len(lag), fixed)
+        return fixed
 
     # --- 펀더멘털 (캐시) ---
     def fundamentals(self, ticker: str) -> dict:

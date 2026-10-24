@@ -63,8 +63,13 @@ def links(ticker: str, ko_name: str | None, naver: dict | None) -> dict:
 
 
 def _candidates(t: str) -> list[str]:
-    s = t.replace("-", ".")  # BRK-B → BRK.B (네이버 표기)
-    return [f"{s}.O", s, f"{s}.N", f"{s}.K", f"{s}.A"]
+    s = t.replace("-", ".")  # BRK-B → BRK.B
+    out = [f"{s}.O", s, f"{s}.N", f"{s}.K", f"{s}.A"]
+    if "-" in t:  # 클래스주는 로이터 표기(BRK-B → BRKb)도 시도
+        base, cls = t.split("-", 1)
+        r = f"{base}{cls.lower()}"
+        out += [r, f"{r}.N", f"{r}.O"]
+    return out
 
 
 def resolve_naver(tickers: list[str], budget_sec: float = 120.0) -> dict:

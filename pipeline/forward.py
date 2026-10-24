@@ -68,7 +68,12 @@ def load_snapshots(snap_dir: Path | None = None) -> pd.DataFrame:
         for r in js.get("rows", []):
             recs.append({"date": js["date"], "ticker": r["t"], "pxd": r["pxd"], "setup": r.get("setup"),
                          **{k: r["f"].get(k) for k in FACTORS}, **{f"s_{h}": r["s"].get(h) for h in SCORES}})
-    return pd.DataFrame(recs)
+    df = pd.DataFrame(recs)
+    if df.empty:
+        return df
+    # 같은 종목·같은 가격 봉(pxd)으로 두 번 기록된 예측(토요일 코드 반영 실행 등)은 먼저 기록된 것만 채점
+    # → 같은 결과가 두 번 세어져 IC 표본·t값이 부풀려지는 것을 막음
+    return df.sort_values("date", kind="stable").drop_duplicates(["ticker", "pxd"], keep="first").reset_index(drop=True)
 
 
 def attach_returns(snaps: pd.DataFrame, hist: dict[str, pd.DataFrame]) -> pd.DataFrame:

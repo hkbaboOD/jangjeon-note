@@ -37,6 +37,13 @@ def test_korean_links():
     assert co.tags_of("005930.KS", co.load_companies())[-1] == "korea"
 
 
+def test_naver_candidates_include_reuters_class_share():
+    c = co._candidates("BRK-B")
+    assert c[:2] == ["BRK.B.O", "BRK.B"]  # 기존 후보 순서 유지
+    assert "BRKb" in c and "BRKb.N" in c   # 로이터식 클래스주 표기도 시도
+    assert co._candidates("AAPL") == ["AAPL.O", "AAPL", "AAPL.N", "AAPL.K", "AAPL.A"]
+
+
 def _stmt():
     cols = [pd.Timestamp("2025-12-31"), pd.Timestamp("2024-12-31"), pd.Timestamp("2023-12-31")]
     return pd.DataFrame({cols[0]: [120.0, 24.0, 18.0, 1.8], cols[1]: [100.0, 15.0, 12.0, 1.2], cols[2]: [90.0, 9.0, -2.0, -0.2]},
