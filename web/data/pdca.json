@@ -1,28 +1,28 @@
 {
- "week": "2026-10-17",
+ "week": "2026-10-24",
  "plan": {
   "version": 2,
   "weights": {
    "daily": {
     "quality": 0.187,
+    "value": 0.311,
     "trend": 0.105,
-    "target": 0.187,
     "timing": 0.21,
-    "value": 0.311
+    "target": 0.187
    },
    "weekly": {
     "quality": 0.282,
+    "value": 0.339,
     "trend": 0.105,
     "momentum": 0.105,
-    "target": 0.169,
-    "value": 0.339
+    "target": 0.169
    },
    "monthly": {
-    "growth": 0.155,
     "quality": 0.31,
+    "growth": 0.155,
+    "value": 0.31,
     "trend": 0.07,
-    "target": 0.155,
-    "value": 0.31
+    "target": 0.155
    }
   },
   "basis": {
@@ -39,15 +39,132 @@
   "changed": false
  },
  "do": {
-  "days_recorded": 2,
-  "new_picks": 19,
-  "open_picks": 19
+  "days_recorded": 7,
+  "new_picks": 35,
+  "open_picks": 45
  },
  "check": {
-  "matured": {},
+  "matured": {
+   "daily": {
+    "count": 9,
+    "win_rate": 22.22222222222222,
+    "avg_ex": -4.658888888888889,
+    "recent_win": 22.22222222222222,
+    "recent_n": 9
+   }
+  },
   "ic": {},
   "top3": {},
-  "closed_this_week": [],
+  "closed_this_week": [
+   {
+    "name": "마이크론",
+    "horizon": "daily",
+    "date": "2026-10-16",
+    "score": 89.0,
+    "setup": "상승추세 속 눌림목",
+    "ret": -1.89,
+    "ex": -0.85,
+    "days": 5,
+    "win": false,
+    "closed": "2026-10-23"
+   },
+   {
+    "name": "신한지주",
+    "horizon": "daily",
+    "date": "2026-10-16",
+    "score": 74.5,
+    "setup": "상승추세 속 눌림목",
+    "ret": -3.32,
+    "ex": -4.51,
+    "days": 5,
+    "win": false,
+    "closed": "2026-10-23"
+   },
+   {
+    "name": "현대로템",
+    "horizon": "daily",
+    "date": "2026-10-16",
+    "score": 72.4,
+    "setup": "하락 후 반등 시도",
+    "ret": -11.76,
+    "ex": -12.96,
+    "days": 5,
+    "win": false,
+    "closed": "2026-10-23"
+   },
+   {
+    "name": "삼성전자",
+    "horizon": "daily",
+    "date": "2026-10-17",
+    "score": 89.4,
+    "setup": "상승추세 속 눌림목",
+    "ret": 0.0,
+    "ex": 2.08,
+    "days": 5,
+    "win": true,
+    "closed": "2026-10-24"
+   },
+   {
+    "name": "현대로템",
+    "horizon": "daily",
+    "date": "2026-10-17",
+    "score": 75.6,
+    "setup": "하락 후 반등 시도",
+    "ret": -14.65,
+    "ex": -12.58,
+    "days": 5,
+    "win": false,
+    "closed": "2026-10-24"
+   },
+   {
+    "name": "신한지주",
+    "horizon": "daily",
+    "date": "2026-10-17",
+    "score": 73.1,
+    "setup": "상승추세 속 눌림목",
+    "ret": -5.67,
+    "ex": -3.6,
+    "days": 5,
+    "win": false,
+    "closed": "2026-10-24"
+   },
+   {
+    "name": "삼성전자",
+    "horizon": "daily",
+    "date": "2026-10-19",
+    "score": 89.5,
+    "setup": "상승추세 속 눌림목",
+    "ret": 0.94,
+    "ex": 1.59,
+    "days": 5,
+    "win": true,
+    "closed": "2026-10-24"
+   },
+   {
+    "name": "현대로템",
+    "horizon": "daily",
+    "date": "2026-10-19",
+    "score": 75.6,
+    "setup": "하락 후 반등 시도",
+    "ret": -10.3,
+    "ex": -9.65,
+    "days": 5,
+    "win": false,
+    "closed": "2026-10-24"
+   },
+   {
+    "name": "기아",
+    "horizon": "daily",
+    "date": "2026-10-19",
+    "score": 70.1,
+    "setup": "하락 후 반등 시도",
+    "ret": -2.11,
+    "ex": -1.45,
+    "days": 5,
+    "win": false,
+    "closed": "2026-10-24"
+   }
+  ],
   "win_delta": {}
  },
  "act": {
@@ -55,9 +172,9 @@
   "contest": {}
  },
  "next": [
-  "오늘 추천: 실전 기록 2일 — 실전 채점 기반 보정까지 약 9주",
-  "이번 주 추천: 실전 기록 2일 — 실전 채점 기반 보정까지 약 12주",
-  "이번 달 추천: 실전 기록 2일 — 실전 채점 기반 보정까지 약 36주",
+  "오늘 추천: 실전 기록 7일 — 실전 채점 기반 보정까지 약 8주",
+  "이번 주 추천: 실전 기록 7일 — 실전 채점 기반 보정까지 약 11주",
+  "이번 달 추천: 실전 기록 7일 — 실전 채점 기반 보정까지 약 35주",
   "이번 주 근거가 유의하지 않아 가중치 유지(억지로 바꾸지 않음)"
  ],
  "history": [
@@ -68,6 +185,11 @@
   {
    "week": "2026-10-17",
    "version": 2
+  },
+  {
+   "week": "2026-10-24",
+   "version": 2,
+   "win_daily": 22.2
   }
  ]
 }

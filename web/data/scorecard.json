@@ -9,6 +9,11 @@
    "date": "2026-10-17",
    "version": 2,
    "days": 2
+  },
+  {
+   "date": "2026-10-24",
+   "version": 2,
+   "days": 7
   }
  ],
  "window": 60
