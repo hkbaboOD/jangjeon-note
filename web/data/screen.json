@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-24T10:51+09:00",
+ "updated": "2026-10-26T08:30+09:00",
  "rows": [
   {
    "ticker": "005930.KS",
@@ -8,7 +8,7 @@
    "sector": "Technology",
    "price": 215500.0,
    "fpe": 2.9814029,
-   "peg": 0.1312,
+   "peg": 0.1,
    "pb": null,
    "roe": 0.30794,
    "opm": 0.52182,
@@ -39,8 +39,8 @@
     "pullback"
    ],
    "rev": -0.96,
-   "revision": 51.3,
-   "geo": 14.8,
+   "revision": 53.8,
+   "geo": 44.0,
    "score_daily": 84.2,
    "score_weekly": 81.7,
    "score_monthly": 87.5,
@@ -150,26 +150,7 @@
     "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A005930",
     "news": "https://search.naver.com/search.naver?where=news&query=%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90+%EC%A3%BC%EA%B0%80"
    },
-   "geo_notes": [
-    {
-     "pol": -1,
-     "theme": "미중 갈등·수출규제",
-     "eff": -0.24,
-     "text": "미중 갈등·수출규제: 갈등 고조(관심 보통) → 반도체·중국 노출 성격상 부담"
-    },
-    {
-     "pol": -1,
-     "theme": "대만 해협",
-     "eff": -0.13,
-     "text": "대만 해협: 긴장 고조(관심 보통) → 반도체·AI 인프라·중국 노출 성격상 부담"
-    },
-    {
-     "pol": -1,
-     "theme": "북한·한반도",
-     "eff": -0.12,
-     "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
-    }
-   ],
+   "geo_notes": [],
    "sig": [
     [
      1,
@@ -297,7 +278,7 @@
    "sector": "Technology",
    "price": 1277000.0,
    "fpe": 2.730026,
-   "peg": 0.1998,
+   "peg": 0.14,
    "pb": null,
    "roe": 0.6,
    "opm": 0.76328003,
@@ -330,7 +311,7 @@
    ],
    "rev": 0.78,
    "revision": 71.8,
-   "geo": 14.8,
+   "geo": 44.0,
    "score_daily": 87.5,
    "score_weekly": 81.5,
    "score_monthly": 89.9,
@@ -440,26 +421,7 @@
     "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A000660",
     "news": "https://search.naver.com/search.naver?where=news&query=SK%ED%95%98%EC%9D%B4%EB%8B%89%EC%8A%A4+%EC%A3%BC%EA%B0%80"
    },
-   "geo_notes": [
-    {
-     "pol": -1,
-     "theme": "미중 갈등·수출규제",
-     "eff": -0.24,
-     "text": "미중 갈등·수출규제: 갈등 고조(관심 보통) → 반도체·중국 노출 성격상 부담"
-    },
-    {
-     "pol": -1,
-     "theme": "대만 해협",
-     "eff": -0.13,
-     "text": "대만 해협: 긴장 고조(관심 보통) → 반도체·AI 인프라·중국 노출 성격상 부담"
-    },
-    {
-     "pol": -1,
-     "theme": "북한·한반도",
-     "eff": -0.12,
-     "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
-    }
-   ],
+   "geo_notes": [],
    "sig": [
     [
      1,
@@ -629,7 +591,7 @@
    ],
    "rev": 17.38,
    "revision": 97.4,
-   "geo": 31.4,
+   "geo": 41.3,
    "score_daily": 32.9,
    "score_weekly": 28.2,
    "score_monthly": 25.7,
@@ -741,9 +703,9 @@
    "geo_notes": [
     {
      "pol": -1,
-     "theme": "북한·한반도",
-     "eff": -0.12,
-     "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
+     "theme": "관세·무역분쟁",
+     "eff": -0.1,
+     "text": "관세·무역분쟁: 무역 긴장(관심 보통) → 수출주·관세 민감 성격상 부담"
     }
    ],
    "sig": [
@@ -901,7 +863,7 @@
    ],
    "rev": -6.56,
    "revision": 12.8,
-   "geo": 34.4,
+   "geo": 46.0,
    "score_daily": 44.4,
    "score_weekly": 44.5,
    "score_monthly": 46.5,
@@ -1009,14 +971,7 @@
     "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A207940",
     "news": "https://search.naver.com/search.naver?where=news&query=%EC%82%BC%EC%84%B1%EB%B0%94%EC%9D%B4%EC%98%A4%EB%A1%9C%EC%A7%81%EC%8A%A4+%EC%A3%BC%EA%B0%80"
    },
-   "geo_notes": [
-    {
-     "pol": -1,
-     "theme": "북한·한반도",
-     "eff": -0.12,
-     "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
-    }
-   ],
+   "geo_notes": [],
    "sig": [
     [
      1,
@@ -1167,7 +1122,7 @@
    ],
    "rev": -3.77,
    "revision": 23.1,
-   "geo": 31.4,
+   "geo": 41.3,
    "score_daily": 54.6,
    "score_weekly": 46.2,
    "score_monthly": 42.7,
@@ -1278,9 +1233,9 @@
    "geo_notes": [
     {
      "pol": -1,
-     "theme": "북한·한반도",
-     "eff": -0.12,
-     "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
+     "theme": "관세·무역분쟁",
+     "eff": -0.1,
+     "text": "관세·무역분쟁: 무역 긴장(관심 보통) → 수출주·관세 민감 성격상 부담"
     }
    ],
    "sig": [
@@ -1422,7 +1377,7 @@
    ],
    "rev": -3.83,
    "revision": 17.9,
-   "geo": 31.4,
+   "geo": 41.3,
    "score_daily": 65.6,
    "score_weekly": 65.0,
    "score_monthly": 64.6,
@@ -1533,9 +1488,9 @@
    "geo_notes": [
     {
      "pol": -1,
-     "theme": "북한·한반도",
-     "eff": -0.12,
-     "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
+     "theme": "관세·무역분쟁",
+     "eff": -0.1,
+     "text": "관세·무역분쟁: 무역 긴장(관심 보통) → 수출주·관세 민감 성격상 부담"
     }
    ],
    "sig": [
@@ -1688,7 +1643,7 @@
    ],
    "rev": 2.82,
    "revision": 87.2,
-   "geo": 34.4,
+   "geo": 46.0,
    "score_daily": 46.1,
    "score_weekly": 50.0,
    "score_monthly": 52.2,
@@ -1796,14 +1751,7 @@
     "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A068270",
     "news": "https://search.naver.com/search.naver?where=news&query=%EC%85%80%ED%8A%B8%EB%A6%AC%EC%98%A8+%EC%A3%BC%EA%B0%80"
    },
-   "geo_notes": [
-    {
-     "pol": -1,
-     "theme": "북한·한반도",
-     "eff": -0.12,
-     "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
-    }
-   ],
+   "geo_notes": [],
    "sig": [
     [
      1,
@@ -1956,9 +1904,9 @@
    "tags": [
     "downtrend"
    ],
-   "rev": -2.91,
+   "rev": -2.64,
    "revision": 30.8,
-   "geo": 43.3,
+   "geo": 46.4,
    "score_daily": 46.2,
    "score_weekly": 44.7,
    "score_monthly": 50.3,
@@ -2066,14 +2014,7 @@
     "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A035420",
     "news": "https://search.naver.com/search.naver?where=news&query=NAVER+%EC%A3%BC%EA%B0%80"
    },
-   "geo_notes": [
-    {
-     "pol": -1,
-     "theme": "북한·한반도",
-     "eff": -0.12,
-     "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
-    }
-   ],
+   "geo_notes": [],
    "sig": [
     [
      -1,
@@ -2213,8 +2154,8 @@
     "oversold"
    ],
    "rev": -1.21,
-   "revision": 46.2,
-   "geo": 45.1,
+   "revision": 48.7,
+   "geo": 46.9,
    "score_daily": 38.2,
    "score_weekly": 32.1,
    "score_monthly": 37.0,
@@ -2321,14 +2262,7 @@
     "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A035720",
     "news": "https://search.naver.com/search.naver?where=news&query=%EC%B9%B4%EC%B9%B4%EC%98%A4+%EC%A3%BC%EA%B0%80"
    },
-   "geo_notes": [
-    {
-     "pol": -1,
-     "theme": "북한·한반도",
-     "eff": -0.12,
-     "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
-    }
-   ],
+   "geo_notes": [],
    "sig": [
     [
      -1,
@@ -2477,12 +2411,12 @@
    ],
    "rev": 0.2,
    "revision": 66.7,
-   "geo": 45.1,
+   "geo": 49.9,
    "score_daily": 61.4,
    "score_weekly": 57.9,
    "score_monthly": 58.9,
    "verdict": "중립",
-   "sector_fpe_median": 6.79989375,
+   "sector_fpe_median": 6.797559,
    "spark": [
     161200.0,
     169600.0,
@@ -2584,14 +2518,7 @@
     "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A105560",
     "news": "https://search.naver.com/search.naver?where=news&query=KB%EA%B8%88%EC%9C%B5+%EC%A3%BC%EA%B0%80"
    },
-   "geo_notes": [
-    {
-     "pol": -1,
-     "theme": "북한·한반도",
-     "eff": -0.12,
-     "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
-    }
-   ],
+   "geo_notes": [],
    "sig": [
     [
      1,
@@ -2713,14 +2640,14 @@
    "market": "kr",
    "sector": "Financial Services",
    "price": 88100.0,
-   "fpe": 6.4859056,
+   "fpe": 6.4743943,
    "peg": null,
    "pb": null,
    "roe": 0.08941,
    "opm": 0.44829,
    "de": null,
    "eg": 0.225,
-   "upside": 51.16480136208854,
+   "upside": 51.81341657207719,
    "analysts": 21.0,
    "rec_key": "strong_buy",
    "rsi": 22.025699605786357,
@@ -2745,14 +2672,14 @@
     "neutral",
     "oversold"
    ],
-   "rev": -1.19,
-   "revision": 48.7,
-   "geo": 45.1,
+   "rev": -1.13,
+   "revision": 51.3,
+   "geo": 49.9,
    "score_daily": 66.6,
    "score_weekly": 62.4,
    "score_monthly": 64.9,
    "verdict": "매수",
-   "sector_fpe_median": 6.79989375,
+   "sector_fpe_median": 6.797559,
    "spark": [
     99600.0,
     105600.0,
@@ -2854,14 +2781,7 @@
     "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A055550",
     "news": "https://search.naver.com/search.naver?where=news&query=%EC%8B%A0%ED%95%9C%EC%A7%80%EC%A3%BC+%EC%A3%BC%EA%B0%80"
    },
-   "geo_notes": [
-    {
-     "pol": -1,
-     "theme": "북한·한반도",
-     "eff": -0.12,
-     "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
-    }
-   ],
+   "geo_notes": [],
    "sig": [
     [
      1,
@@ -2982,14 +2902,14 @@
    "market": "kr",
    "sector": "Financial Services",
    "price": 116300.0,
-   "fpe": 6.5527625,
+   "fpe": 6.548093,
    "peg": 4.79,
    "pb": null,
    "roe": 0.08974,
    "opm": 0.5721,
    "de": null,
    "eg": 0.048,
-   "upside": 40.846380051590714,
+   "upside": 40.58469475494411,
    "analysts": 23.0,
    "rec_key": "strong_buy",
    "rsi": 27.58061095073856,
@@ -3014,14 +2934,14 @@
     "pullback",
     "oversold"
    ],
-   "rev": -2.12,
-   "revision": 33.3,
-   "geo": 45.1,
+   "rev": -1.37,
+   "revision": 43.6,
+   "geo": 49.9,
    "score_daily": 61.2,
    "score_weekly": 55.7,
    "score_monthly": 54.3,
    "verdict": "중립",
-   "sector_fpe_median": 6.79989375,
+   "sector_fpe_median": 6.797559,
    "spark": [
     121000.0,
     129300.0,
@@ -3123,14 +3043,7 @@
     "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A086790",
     "news": "https://search.naver.com/search.naver?where=news&query=%ED%95%98%EB%82%98%EA%B8%88%EC%9C%B5%EC%A7%80%EC%A3%BC+%EC%A3%BC%EA%B0%80"
    },
-   "geo_notes": [
-    {
-     "pol": -1,
-     "theme": "북한·한반도",
-     "eff": -0.12,
-     "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
-    }
-   ],
+   "geo_notes": [],
    "sig": [
     [
      1,
@@ -3252,7 +3165,7 @@
    "market": "kr",
    "sector": "Financial Services",
    "price": 30100.0,
-   "fpe": 6.196976,
+   "fpe": 6.177733,
    "peg": 2.56,
    "pb": null,
    "roe": 0.08614001,
@@ -3284,14 +3197,14 @@
     "neutral",
     "oversold"
    ],
-   "rev": -0.43,
-   "revision": 56.4,
-   "geo": 45.1,
+   "rev": -1.44,
+   "revision": 38.5,
+   "geo": 49.9,
    "score_daily": 58.1,
    "score_weekly": 59.2,
    "score_monthly": 58.1,
    "verdict": "중립",
-   "sector_fpe_median": 6.79989375,
+   "sector_fpe_median": 6.797559,
    "spark": [
     31150.0,
     32550.0,
@@ -3393,14 +3306,7 @@
     "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A316140",
     "news": "https://search.naver.com/search.naver?where=news&query=%EC%9A%B0%EB%A6%AC%EA%B8%88%EC%9C%B5%EC%A7%80%EC%A3%BC+%EC%A3%BC%EA%B0%80"
    },
-   "geo_notes": [
-    {
-     "pol": -1,
-     "theme": "북한·한반도",
-     "eff": -0.12,
-     "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
-    }
-   ],
+   "geo_notes": [],
    "sig": [
     [
      1,
@@ -3565,7 +3471,7 @@
    ],
    "rev": 0.47,
    "revision": 69.2,
-   "geo": 28.8,
+   "geo": 42.7,
    "score_daily": 45.1,
    "score_weekly": 41.7,
    "score_monthly": 47.1,
@@ -3677,15 +3583,9 @@
    "geo_notes": [
     {
      "pol": -1,
-     "theme": "미중 갈등·수출규제",
-     "eff": -0.2,
-     "text": "미중 갈등·수출규제: 갈등 고조(관심 보통) → 중국 노출·관세 민감 성격상 부담"
-    },
-    {
-     "pol": -1,
-     "theme": "북한·한반도",
-     "eff": -0.12,
-     "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
+     "theme": "관세·무역분쟁",
+     "eff": -0.08,
+     "text": "관세·무역분쟁: 무역 긴장(관심 보통) → 중국 노출·관세 민감 성격상 부담"
     }
    ],
    "sig": [
@@ -3832,7 +3732,7 @@
    ],
    "rev": -13.34,
    "revision": 5.1,
-   "geo": 40.7,
+   "geo": 43.6,
    "score_daily": 39.7,
    "score_weekly": 34.4,
    "score_monthly": 35.2,
@@ -3943,22 +3843,10 @@
    },
    "geo_notes": [
     {
-     "pol": 1,
-     "theme": "환율(원화)",
-     "eff": 0.17,
-     "text": "환율(원화): 원화 강세(관심 보통) → 유가 원가 부담주·국내 상장주 성격상 우호적"
-    },
-    {
-     "pol": 1,
-     "theme": "러시아·우크라이나",
-     "eff": 0.15,
-     "text": "러시아·우크라이나: 휴전 기대(관심 보통) → 유가 원가 부담주 성격상 우호적"
-    },
-    {
      "pol": -1,
-     "theme": "미중 갈등·수출규제",
-     "eff": -0.15,
-     "text": "미중 갈등·수출규제: 갈등 고조(관심 보통) → 중국 노출 성격상 부담"
+     "theme": "중동 정세",
+     "eff": -0.1,
+     "text": "중동 정세: 긴장 고조(관심 보통) → 유가 원가 부담주·국내 상장주 성격상 부담"
     }
    ],
    "sig": [
@@ -4082,7 +3970,7 @@
    "market": "kr",
    "sector": "Industrials",
    "price": 490500.0,
-   "fpe": 27.122492,
+   "fpe": 27.052061,
    "peg": null,
    "pb": null,
    "roe": 0.00202,
@@ -4114,9 +4002,9 @@
     "pullback",
     "golden"
    ],
-   "rev": 4.03,
-   "revision": 89.7,
-   "geo": 34.4,
+   "rev": 9.67,
+   "revision": 92.3,
+   "geo": 46.0,
    "score_daily": 40.5,
    "score_weekly": 38.9,
    "score_monthly": 35.4,
@@ -4224,14 +4112,7 @@
     "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A006400",
     "news": "https://search.naver.com/search.naver?where=news&query=%EC%82%BC%EC%84%B1SDI+%EC%A3%BC%EA%B0%80"
    },
-   "geo_notes": [
-    {
-     "pol": -1,
-     "theme": "북한·한반도",
-     "eff": -0.12,
-     "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
-    }
-   ],
+   "geo_notes": [],
    "sig": [
     [
      1,
@@ -4386,7 +4267,7 @@
    ],
    "rev": -1.43,
    "revision": 41.0,
-   "geo": 31.4,
+   "geo": 41.3,
    "score_daily": 66.0,
    "score_weekly": 60.8,
    "score_monthly": 62.2,
@@ -4497,9 +4378,9 @@
    "geo_notes": [
     {
      "pol": -1,
-     "theme": "북한·한반도",
-     "eff": -0.12,
-     "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
+     "theme": "관세·무역분쟁",
+     "eff": -0.1,
+     "text": "관세·무역분쟁: 무역 긴장(관심 보통) → 수출주·관세 민감 성격상 부담"
     }
    ],
    "sig": [
@@ -4651,7 +4532,7 @@
    ],
    "rev": 1.0,
    "revision": 74.4,
-   "geo": 45.1,
+   "geo": 48.8,
    "score_daily": 58.4,
    "score_weekly": 51.8,
    "score_monthly": 55.9,
@@ -4758,14 +4639,7 @@
     "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A028260",
     "news": "https://search.naver.com/search.naver?where=news&query=%EC%82%BC%EC%84%B1%EB%AC%BC%EC%82%B0+%EC%A3%BC%EA%B0%80"
    },
-   "geo_notes": [
-    {
-     "pol": -1,
-     "theme": "북한·한반도",
-     "eff": -0.12,
-     "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
-    }
-   ],
+   "geo_notes": [],
    "sig": [
     [
      1,
@@ -4915,12 +4789,12 @@
    ],
    "rev": null,
    "revision": null,
-   "geo": 45.1,
+   "geo": 49.9,
    "score_daily": 36.0,
    "score_weekly": 28.4,
    "score_monthly": 26.0,
    "verdict": "매도",
-   "sector_fpe_median": 6.79989375,
+   "sector_fpe_median": 6.797559,
    "spark": [
     385500.0,
     423000.0,
@@ -5022,14 +4896,7 @@
     "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A032830",
     "news": "https://search.naver.com/search.naver?where=news&query=%EC%82%BC%EC%84%B1%EC%83%9D%EB%AA%85+%EC%A3%BC%EA%B0%80"
    },
-   "geo_notes": [
-    {
-     "pol": -1,
-     "theme": "북한·한반도",
-     "eff": -0.12,
-     "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
-    }
-   ],
+   "geo_notes": [],
    "sig": [
     [
      -1,
@@ -5164,12 +5031,12 @@
    ],
    "rev": 2.43,
    "revision": 84.6,
-   "geo": 45.1,
+   "geo": 51.3,
    "score_daily": 39.9,
    "score_weekly": 43.7,
    "score_monthly": 42.3,
    "verdict": "중립",
-   "sector_fpe_median": 6.79989375,
+   "sector_fpe_median": 6.797559,
    "spark": [
     654000.0,
     676000.0,
@@ -5272,14 +5139,7 @@
     "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A000810",
     "news": "https://search.naver.com/search.naver?where=news&query=%EC%82%BC%EC%84%B1%ED%99%94%EC%9E%AC+%EC%A3%BC%EA%B0%80"
    },
-   "geo_notes": [
-    {
-     "pol": -1,
-     "theme": "북한·한반도",
-     "eff": -0.12,
-     "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
-    }
-   ],
+   "geo_notes": [],
    "sig": [
     [
      1,
@@ -5440,7 +5300,7 @@
    ],
    "rev": -0.34,
    "revision": 59.0,
-   "geo": 43.3,
+   "geo": 49.7,
    "score_daily": 53.4,
    "score_weekly": 46.7,
    "score_monthly": 54.8,
@@ -5548,14 +5408,7 @@
     "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A017670",
     "news": "https://search.naver.com/search.naver?where=news&query=SK%ED%85%94%EB%A0%88%EC%BD%A4+%EC%A3%BC%EA%B0%80"
    },
-   "geo_notes": [
-    {
-     "pol": -1,
-     "theme": "북한·한반도",
-     "eff": -0.12,
-     "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
-    }
-   ],
+   "geo_notes": [],
    "sig": [
     [
      -1,
@@ -5689,8 +5542,8 @@
     "oversold"
    ],
    "rev": -0.82,
-   "revision": 53.8,
-   "geo": 45.1,
+   "revision": 56.4,
+   "geo": 50.2,
    "score_daily": 52.8,
    "score_weekly": 48.5,
    "score_monthly": 45.1,
@@ -5797,14 +5650,7 @@
     "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A030200",
     "news": "https://search.naver.com/search.naver?where=news&query=KT+%EC%A3%BC%EA%B0%80"
    },
-   "geo_notes": [
-    {
-     "pol": -1,
-     "theme": "북한·한반도",
-     "eff": -0.12,
-     "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
-    }
-   ],
+   "geo_notes": [],
    "sig": [
     [
      -1,
@@ -5953,8 +5799,8 @@
     "golden"
    ],
    "rev": -1.76,
-   "revision": 35.9,
-   "geo": 45.1,
+   "revision": 33.3,
+   "geo": 50.2,
    "score_daily": 44.7,
    "score_weekly": 51.9,
    "score_monthly": 54.6,
@@ -6061,14 +5907,7 @@
     "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A033780",
     "news": "https://search.naver.com/search.naver?where=news&query=KT%26G+%EC%A3%BC%EA%B0%80"
    },
-   "geo_notes": [
-    {
-     "pol": -1,
-     "theme": "북한·한반도",
-     "eff": -0.12,
-     "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
-    }
-   ],
+   "geo_notes": [],
    "sig": [
     [
      1,
@@ -6234,7 +6073,7 @@
    ],
    "rev": -3.17,
    "revision": 28.2,
-   "geo": 54.8,
+   "geo": 46.4,
    "score_daily": 59.1,
    "score_weekly": 58.2,
    "score_monthly": 52.9,
@@ -6345,21 +6184,9 @@
    },
    "geo_notes": [
     {
-     "pol": 1,
-     "theme": "환율(원화)",
-     "eff": 0.17,
-     "text": "환율(원화): 원화 강세(관심 보통) → 유가 원가 부담주·국내 상장주 성격상 우호적"
-    },
-    {
-     "pol": 1,
-     "theme": "러시아·우크라이나",
-     "eff": 0.15,
-     "text": "러시아·우크라이나: 휴전 기대(관심 보통) → 유가 원가 부담주 성격상 우호적"
-    },
-    {
      "pol": -1,
      "theme": "중동 정세",
-     "eff": -0.14,
+     "eff": -0.1,
      "text": "중동 정세: 긴장 고조(관심 보통) → 유가 원가 부담주·국내 상장주 성격상 부담"
     }
    ],
@@ -6513,7 +6340,7 @@
    ],
    "rev": 17.94,
    "revision": 100.0,
-   "geo": 42.8,
+   "geo": 52.6,
    "score_daily": 37.2,
    "score_weekly": 38.6,
    "score_monthly": 35.0,
@@ -6621,26 +6448,7 @@
     "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A096770",
     "news": "https://search.naver.com/search.naver?where=news&query=SK%EC%9D%B4%EB%85%B8%EB%B2%A0%EC%9D%B4%EC%85%98+%EC%A3%BC%EA%B0%80"
    },
-   "geo_notes": [
-    {
-     "pol": -1,
-     "theme": "러시아·우크라이나",
-     "eff": -0.15,
-     "text": "러시아·우크라이나: 휴전 기대(관심 보통) → 정유·에너지 성격상 부담"
-    },
-    {
-     "pol": -1,
-     "theme": "북한·한반도",
-     "eff": -0.12,
-     "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
-    },
-    {
-     "pol": 1,
-     "theme": "중동 정세",
-     "eff": 0.09,
-     "text": "중동 정세: 긴장 고조(관심 보통) → 정유·에너지 성격상 우호적"
-    }
-   ],
+   "geo_notes": [],
    "sig": [
     [
      -1,
@@ -6799,8 +6607,8 @@
     "pullback"
    ],
    "rev": 7.49,
-   "revision": 92.3,
-   "geo": 42.8,
+   "revision": 89.7,
+   "geo": 52.6,
    "score_daily": 62.6,
    "score_weekly": 58.5,
    "score_monthly": 58.0,
@@ -6907,26 +6715,7 @@
     "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A010950",
     "news": "https://search.naver.com/search.naver?where=news&query=S-Oil+%EC%A3%BC%EA%B0%80"
    },
-   "geo_notes": [
-    {
-     "pol": -1,
-     "theme": "러시아·우크라이나",
-     "eff": -0.15,
-     "text": "러시아·우크라이나: 휴전 기대(관심 보통) → 정유·에너지 성격상 부담"
-    },
-    {
-     "pol": -1,
-     "theme": "북한·한반도",
-     "eff": -0.12,
-     "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
-    },
-    {
-     "pol": 1,
-     "theme": "중동 정세",
-     "eff": 0.09,
-     "text": "중동 정세: 긴장 고조(관심 보통) → 정유·에너지 성격상 우호적"
-    }
-   ],
+   "geo_notes": [],
    "sig": [
     [
      1,
@@ -7077,7 +6866,7 @@
    ],
    "rev": -0.08,
    "revision": 61.5,
-   "geo": 30.5,
+   "geo": 46.5,
    "score_daily": 71.2,
    "score_weekly": 68.7,
    "score_monthly": 78.9,
@@ -7186,20 +6975,7 @@
     "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A009540",
     "news": "https://search.naver.com/search.naver?where=news&query=HD%ED%95%9C%EA%B5%AD%EC%A1%B0%EC%84%A0%ED%95%B4%EC%96%91+%EC%A3%BC%EA%B0%80"
    },
-   "geo_notes": [
-    {
-     "pol": -1,
-     "theme": "러시아·우크라이나",
-     "eff": -0.37,
-     "text": "러시아·우크라이나: 휴전 기대(관심 보통) → 방산 성격상 부담"
-    },
-    {
-     "pol": 1,
-     "theme": "중동 정세",
-     "eff": 0.09,
-     "text": "중동 정세: 긴장 고조(관심 보통) → 해운·조선·방산 성격상 우호적"
-    }
-   ],
+   "geo_notes": [],
    "sig": [
     [
      -1,
@@ -7354,7 +7130,7 @@
    ],
    "rev": -3.71,
    "revision": 25.6,
-   "geo": 30.5,
+   "geo": 46.5,
    "score_daily": 73.3,
    "score_weekly": 70.4,
    "score_monthly": 80.8,
@@ -7463,20 +7239,7 @@
     "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A329180",
     "news": "https://search.naver.com/search.naver?where=news&query=HD%ED%98%84%EB%8C%80%EC%A4%91%EA%B3%B5%EC%97%85+%EC%A3%BC%EA%B0%80"
    },
-   "geo_notes": [
-    {
-     "pol": -1,
-     "theme": "러시아·우크라이나",
-     "eff": -0.37,
-     "text": "러시아·우크라이나: 휴전 기대(관심 보통) → 방산 성격상 부담"
-    },
-    {
-     "pol": 1,
-     "theme": "중동 정세",
-     "eff": 0.09,
-     "text": "중동 정세: 긴장 고조(관심 보통) → 해운·조선·방산 성격상 우호적"
-    }
-   ],
+   "geo_notes": [],
    "sig": [
     [
      -1,
@@ -7630,7 +7393,7 @@
    ],
    "rev": -3.78,
    "revision": 20.5,
-   "geo": 27.7,
+   "geo": 44.1,
    "score_daily": 63.3,
    "score_weekly": 61.4,
    "score_monthly": 70.0,
@@ -7738,14 +7501,7 @@
     "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A012450",
     "news": "https://search.naver.com/search.naver?where=news&query=%ED%95%9C%ED%99%94%EC%97%90%EC%96%B4%EB%A1%9C%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4+%EC%A3%BC%EA%B0%80"
    },
-   "geo_notes": [
-    {
-     "pol": -1,
-     "theme": "러시아·우크라이나",
-     "eff": -0.37,
-     "text": "러시아·우크라이나: 휴전 기대(관심 보통) → 방산 성격상 부담"
-    }
-   ],
+   "geo_notes": [],
    "sig": [
     [
      -1,
@@ -7900,7 +7656,7 @@
    ],
    "rev": -6.13,
    "revision": 15.4,
-   "geo": 27.7,
+   "geo": 44.1,
    "score_daily": 48.1,
    "score_weekly": 39.8,
    "score_monthly": 37.7,
@@ -8008,14 +7764,7 @@
     "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A047810",
     "news": "https://search.naver.com/search.naver?where=news&query=%ED%95%9C%EA%B5%AD%ED%95%AD%EA%B3%B5%EC%9A%B0%EC%A3%BC+%EC%A3%BC%EA%B0%80"
    },
-   "geo_notes": [
-    {
-     "pol": -1,
-     "theme": "러시아·우크라이나",
-     "eff": -0.37,
-     "text": "러시아·우크라이나: 휴전 기대(관심 보통) → 방산 성격상 부담"
-    }
-   ],
+   "geo_notes": [],
    "sig": [
     [
      -1,
@@ -8155,7 +7904,7 @@
    ],
    "rev": -9.56,
    "revision": 10.3,
-   "geo": 27.7,
+   "geo": 44.1,
    "score_daily": 71.8,
    "score_weekly": 65.8,
    "score_monthly": 71.6,
@@ -8263,14 +8012,7 @@
     "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A064350",
     "news": "https://search.naver.com/search.naver?where=news&query=%ED%98%84%EB%8C%80%EB%A1%9C%ED%85%9C+%EC%A3%BC%EA%B0%80"
    },
-   "geo_notes": [
-    {
-     "pol": -1,
-     "theme": "러시아·우크라이나",
-     "eff": -0.37,
-     "text": "러시아·우크라이나: 휴전 기대(관심 보통) → 방산 성격상 부담"
-    }
-   ],
+   "geo_notes": [],
    "sig": [
     [
      -1,
@@ -8425,7 +8167,7 @@
    ],
    "rev": 1.9,
    "revision": 82.1,
-   "geo": 34.4,
+   "geo": 46.0,
    "score_daily": 42.6,
    "score_weekly": 31.5,
    "score_monthly": 35.2,
@@ -8533,14 +8275,7 @@
     "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A034020",
     "news": "https://search.naver.com/search.naver?where=news&query=%EB%91%90%EC%82%B0%EC%97%90%EB%84%88%EB%B9%8C%EB%A6%AC%ED%8B%B0+%EC%A3%BC%EA%B0%80"
    },
-   "geo_notes": [
-    {
-     "pol": -1,
-     "theme": "북한·한반도",
-     "eff": -0.12,
-     "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
-    }
-   ],
+   "geo_notes": [],
    "sig": [
     [
      -1,
@@ -8695,7 +8430,7 @@
    ],
    "rev": 0.0,
    "revision": 64.1,
-   "geo": 34.4,
+   "geo": 46.0,
    "score_daily": 51.9,
    "score_weekly": 47.4,
    "score_monthly": 52.4,
@@ -8802,14 +8537,7 @@
     "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A003550",
     "news": "https://search.naver.com/search.naver?where=news&query=LG+%EC%A3%BC%EA%B0%80"
    },
-   "geo_notes": [
-    {
-     "pol": -1,
-     "theme": "북한·한반도",
-     "eff": -0.12,
-     "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
-    }
-   ],
+   "geo_notes": [],
    "sig": [
     [
      1,
@@ -8964,7 +8692,7 @@
    ],
    "rev": -12.74,
    "revision": 7.7,
-   "geo": 31.4,
+   "geo": 41.3,
    "score_daily": 56.0,
    "score_weekly": 51.5,
    "score_monthly": 46.7,
@@ -9075,9 +8803,9 @@
    "geo_notes": [
     {
      "pol": -1,
-     "theme": "북한·한반도",
-     "eff": -0.12,
-     "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
+     "theme": "관세·무역분쟁",
+     "eff": -0.1,
+     "text": "관세·무역분쟁: 무역 긴장(관심 보통) → 수출주·관세 민감 성격상 부담"
     }
    ],
    "sig": [
@@ -9239,7 +8967,7 @@
    ],
    "rev": 1.74,
    "revision": 76.9,
-   "geo": 14.8,
+   "geo": 44.0,
    "score_daily": 57.3,
    "score_weekly": 52.5,
    "score_monthly": 58.9,
@@ -9349,26 +9077,7 @@
     "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A009150",
     "news": "https://search.naver.com/search.naver?where=news&query=%EC%82%BC%EC%84%B1%EC%A0%84%EA%B8%B0+%EC%A3%BC%EA%B0%80"
    },
-   "geo_notes": [
-    {
-     "pol": -1,
-     "theme": "미중 갈등·수출규제",
-     "eff": -0.24,
-     "text": "미중 갈등·수출규제: 갈등 고조(관심 보통) → 반도체·중국 노출 성격상 부담"
-    },
-    {
-     "pol": -1,
-     "theme": "대만 해협",
-     "eff": -0.13,
-     "text": "대만 해협: 긴장 고조(관심 보통) → 반도체·AI 인프라·중국 노출 성격상 부담"
-    },
-    {
-     "pol": -1,
-     "theme": "북한·한반도",
-     "eff": -0.12,
-     "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
-    }
-   ],
+   "geo_notes": [],
    "sig": [
     [
      1,
@@ -9512,8 +9221,8 @@
     "neutral"
    ],
    "rev": -1.48,
-   "revision": 38.5,
-   "geo": 43.3,
+   "revision": 35.9,
+   "geo": 48.3,
    "score_daily": 40.9,
    "score_weekly": 42.2,
    "score_monthly": 35.7,
@@ -9620,14 +9329,7 @@
     "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A018260",
     "news": "https://search.naver.com/search.naver?where=news&query=%EC%82%BC%EC%84%B1%EC%97%90%EC%8A%A4%EB%94%94%EC%97%90%EC%8A%A4+%EC%A3%BC%EA%B0%80"
    },
-   "geo_notes": [
-    {
-     "pol": -1,
-     "theme": "북한·한반도",
-     "eff": -0.12,
-     "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
-    }
-   ],
+   "geo_notes": [],
    "sig": [
     [
      1,
@@ -9774,7 +9476,7 @@
    ],
    "rev": 12.53,
    "revision": 94.9,
-   "geo": 48.5,
+   "geo": 51.2,
    "score_daily": 49.8,
    "score_weekly": 52.0,
    "score_monthly": 42.2,
@@ -9881,14 +9583,7 @@
     "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A011200",
     "news": "https://search.naver.com/search.naver?where=news&query=HMM+%EC%A3%BC%EA%B0%80"
    },
-   "geo_notes": [
-    {
-     "pol": -1,
-     "theme": "북한·한반도",
-     "eff": -0.12,
-     "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
-    }
-   ],
+   "geo_notes": [],
    "sig": [
     [
      1,
@@ -10054,12 +9749,12 @@
    ],
    "rev": 1.86,
    "revision": 79.5,
-   "geo": 45.1,
+   "geo": 49.9,
    "score_daily": 57.5,
    "score_weekly": 60.4,
    "score_monthly": 58.9,
    "verdict": "매수",
-   "sector_fpe_median": 6.79989375,
+   "sector_fpe_median": 6.797559,
    "spark": [
     108900.0,
     111300.0,
@@ -10161,14 +9856,7 @@
     "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A138040",
     "news": "https://search.naver.com/search.naver?where=news&query=%EB%A9%94%EB%A6%AC%EC%B8%A0%EA%B8%88%EC%9C%B5%EC%A7%80%EC%A3%BC+%EC%A3%BC%EA%B0%80"
    },
-   "geo_notes": [
-    {
-     "pol": -1,
-     "theme": "북한·한반도",
-     "eff": -0.12,
-     "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
-    }
-   ],
+   "geo_notes": [],
    "sig": [
     [
      1,
@@ -10317,13 +10005,13 @@
     "downtrend"
    ],
    "rev": -1.23,
-   "revision": 43.6,
-   "geo": 45.1,
+   "revision": 46.2,
+   "geo": 49.9,
    "score_daily": 55.7,
    "score_weekly": 58.9,
    "score_monthly": 55.4,
    "verdict": "매도",
-   "sector_fpe_median": 6.79989375,
+   "sector_fpe_median": 6.797559,
    "spark": [
     21800.0,
     22400.0,
@@ -10425,14 +10113,7 @@
     "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A024110",
     "news": "https://search.naver.com/search.naver?where=news&query=%EA%B8%B0%EC%97%85%EC%9D%80%ED%96%89+%EC%A3%BC%EA%B0%80"
    },
-   "geo_notes": [
-    {
-     "pol": -1,
-     "theme": "북한·한반도",
-     "eff": -0.12,
-     "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
-    }
-   ],
+   "geo_notes": [],
    "sig": [
     [
      -1,
@@ -10577,7 +10258,7 @@
    ],
    "rev": -16.53,
    "revision": 2.6,
-   "geo": 34.4,
+   "geo": 46.0,
    "score_daily": 34.5,
    "score_weekly": 24.4,
    "score_monthly": 26.5,
@@ -10685,14 +10366,7 @@
     "fnguide": "https://comp.fnguide.com/SVO2/ASP/SVD_Main.asp?pGB=1&gicode=A247540",
     "news": "https://search.naver.com/search.naver?where=news&query=%EC%97%90%EC%BD%94%ED%94%84%EB%A1%9C%EB%B9%84%EC%97%A0+%EC%A3%BC%EA%B0%80"
    },
-   "geo_notes": [
-    {
-     "pol": -1,
-     "theme": "북한·한반도",
-     "eff": -0.12,
-     "text": "북한·한반도: 도발(관심 보통) → 국내 상장주 성격상 부담"
-    }
-   ],
+   "geo_notes": [],
    "sig": [
     [
      -1,
@@ -10804,14 +10478,14 @@
    "market": "us",
    "sector": "Technology",
    "price": 347.7300109863281,
-   "fpe": 36.332245,
+   "fpe": 36.365494,
    "peg": 2.706,
    "pb": 47.245243,
    "roe": 0.6,
    "opm": 0.32623002,
    "de": 78.445,
    "eg": 0.287,
-   "upside": -5.573220709756366,
+   "upside": -5.315138297641731,
    "analysts": 39.0,
    "rec_key": "buy",
    "rsi": 63.918485802566074,
@@ -10821,11 +10495,11 @@
    "chg_5d": 1.2432363703149152,
    "chg_20d": 1.952679367605148,
    "chg_60d": 4.288761846464073,
-   "value": 11.1,
-   "quality": 71.7,
-   "target": 8.2,
-   "growth": 52.5,
-   "momentum": 66.7,
+   "value": 11.4,
+   "quality": 71.8,
+   "target": 8.1,
+   "growth": 53.2,
+   "momentum": 67.0,
    "trend": 91.0,
    "timing": 47.0,
    "tech": 73.9,
@@ -10836,12 +10510,12 @@
     "pullback",
     "aligned"
    ],
-   "rev": 0.0,
-   "revision": 36.7,
-   "geo": 31.5,
-   "score_daily": 37.8,
-   "score_weekly": 41.9,
-   "score_monthly": 41.4,
+   "rev": 0.09,
+   "revision": 47.7,
+   "geo": 43.4,
+   "score_daily": 37.9,
+   "score_weekly": 42.1,
+   "score_monthly": 41.7,
    "verdict": "중립",
    "sector_fpe_median": 18.943336,
    "spark": [
@@ -10949,9 +10623,9 @@
    "geo_notes": [
     {
      "pol": -1,
-     "theme": "미중 갈등·수출규제",
-     "eff": -0.2,
-     "text": "미중 갈등·수출규제: 갈등 고조(관심 보통) → 중국 노출·관세 민감 성격상 부담"
+     "theme": "관세·무역분쟁",
+     "eff": -0.08,
+     "text": "관세·무역분쟁: 무역 긴장(관심 보통) → 중국 노출·관세 민감 성격상 부담"
     }
    ],
    "sig": [
@@ -11087,11 +10761,11 @@
    "chg_5d": -0.8581378191280464,
    "chg_20d": 1.6157520064316477,
    "chg_60d": 16.27355412743303,
-   "value": 34.5,
-   "quality": 71.2,
-   "target": 62.7,
-   "growth": 55.7,
-   "momentum": 73.6,
+   "value": 34.7,
+   "quality": 71.7,
+   "target": 63.3,
+   "growth": 56.5,
+   "momentum": 73.7,
    "trend": 67.7,
    "timing": 45.0,
    "tech": 58.0,
@@ -11102,11 +10776,11 @@
     "pullback"
    ],
    "rev": 0.0,
-   "revision": 36.7,
-   "geo": 48.2,
-   "score_daily": 52.3,
-   "score_weekly": 57.2,
-   "score_monthly": 55.9,
+   "revision": 36.9,
+   "geo": 47.6,
+   "score_daily": 52.6,
+   "score_weekly": 57.5,
+   "score_monthly": 56.3,
    "verdict": "중립",
    "sector_fpe_median": 18.943336,
    "spark": [
@@ -11317,9 +10991,9 @@
    "market": "us",
    "sector": "Technology",
    "price": 210.9600067138672,
-   "fpe": 13.2991085,
-   "peg": 0.4791,
-   "pb": 22.318886,
+   "fpe": 13.255753,
+   "peg": 0.4544,
+   "pb": 22.246126,
    "roe": 0.6,
    "opm": 0.66236997,
    "de": 16.971,
@@ -11334,11 +11008,11 @@
    "chg_5d": -1.4804082084059922,
    "chg_20d": -6.269160772730487,
    "chg_60d": 8.162435385433465,
-   "value": 72.4,
-   "quality": 92.9,
-   "target": 92.6,
-   "growth": 88.5,
-   "momentum": 49.9,
+   "value": 72.3,
+   "quality": 93.0,
+   "target": 92.7,
+   "growth": 88.7,
+   "momentum": 50.1,
    "trend": 73.6,
    "timing": 58.0,
    "tech": 54.6,
@@ -11349,8 +11023,8 @@
     "pullback"
    ],
    "rev": 0.06,
-   "revision": 46.9,
-   "geo": 24.9,
+   "revision": 45.4,
+   "geo": 48.1,
    "score_daily": 77.1,
    "score_weekly": 79.4,
    "score_monthly": 84.5,
@@ -11458,20 +11132,7 @@
     "naver": "https://m.stock.naver.com/worldstock/stock/NVDA.O/total",
     "news": "https://search.naver.com/search.naver?where=news&query=%EC%97%94%EB%B9%84%EB%94%94%EC%95%84+%EC%A3%BC%EA%B0%80"
    },
-   "geo_notes": [
-    {
-     "pol": -1,
-     "theme": "미중 갈등·수출규제",
-     "eff": -0.24,
-     "text": "미중 갈등·수출규제: 갈등 고조(관심 보통) → 반도체·중국 노출 성격상 부담"
-    },
-    {
-     "pol": -1,
-     "theme": "대만 해협",
-     "eff": -0.13,
-     "text": "대만 해협: 긴장 고조(관심 보통) → 반도체·AI 인프라·중국 노출 성격상 부담"
-    }
-   ],
+   "geo_notes": [],
    "sig": [
     [
      1,
@@ -11595,11 +11256,11 @@
    "chg_5d": -5.983735606431029,
    "chg_20d": -6.89405124649377,
    "chg_60d": -4.031053185700917,
-   "value": 36.3,
-   "quality": 73.7,
-   "target": 83.6,
-   "growth": 88.5,
-   "momentum": 29.9,
+   "value": 36.6,
+   "quality": 74.1,
+   "target": 85.0,
+   "growth": 88.7,
+   "momentum": 29.7,
    "trend": 40.2,
    "timing": 63.0,
    "tech": 42.8,
@@ -11611,11 +11272,11 @@
     "golden"
    ],
    "rev": -0.14,
-   "revision": 21.9,
-   "geo": 48.2,
-   "score_daily": 58.2,
-   "score_weekly": 54.6,
-   "score_monthly": 63.6,
+   "revision": 21.5,
+   "geo": 47.6,
+   "score_daily": 58.6,
+   "score_weekly": 55.0,
+   "score_monthly": 64.1,
    "verdict": "중립",
    "sector_fpe_median": 15.010191,
    "spark": [
@@ -11853,11 +11514,11 @@
    "chg_5d": -0.8000000000000007,
    "chg_20d": -0.6688821969771719,
    "chg_60d": 5.307855626326963,
-   "value": 37.3,
-   "quality": 48.2,
-   "target": 83.8,
-   "growth": 88.5,
-   "momentum": 53.3,
+   "value": 37.6,
+   "quality": 48.5,
+   "target": 85.2,
+   "growth": 88.7,
+   "momentum": 53.6,
    "trend": 70.3,
    "timing": 45.0,
    "tech": 55.1,
@@ -11867,14 +11528,14 @@
    "tags": [
     "pullback"
    ],
-   "rev": 0.2,
-   "revision": 62.5,
+   "rev": 0.22,
+   "revision": 61.5,
    "geo": 44.8,
-   "score_daily": 53.1,
-   "score_weekly": 53.4,
-   "score_monthly": 58.1,
+   "score_daily": 53.5,
+   "score_weekly": 53.9,
+   "score_monthly": 58.6,
    "verdict": "중립",
-   "sector_fpe_median": 21.700049,
+   "sector_fpe_median": 21.7922815,
    "spark": [
     237.5,
     244.39,
@@ -12083,14 +11744,14 @@
    "market": "us",
    "sector": "Communication Services",
    "price": 642.6199951171875,
-   "fpe": 18.467154,
-   "peg": 0.86,
-   "pb": 6.020762,
+   "fpe": 18.33438,
+   "peg": 0.85,
+   "pb": 6.0301967,
    "roe": 0.32264,
    "opm": 0.35414,
-   "de": 41.153,
+   "de": 42.161,
    "eg": 1.0,
-   "upside": 31.243006194695155,
+   "upside": 31.37715390353555,
    "analysts": 58.0,
    "rec_key": "strong_buy",
    "rsi": 35.73224277027947,
@@ -12100,11 +11761,11 @@
    "chg_5d": -9.404652329016939,
    "chg_20d": -14.506556411562077,
    "chg_60d": 19.21784690835091,
-   "value": 53.5,
-   "quality": 63.9,
-   "target": 79.3,
-   "growth": 88.5,
-   "momentum": 56.9,
+   "value": 54.5,
+   "quality": 64.5,
+   "target": 79.2,
+   "growth": 88.7,
+   "momentum": 57.0,
    "trend": 57.9,
    "timing": 83.0,
    "tech": 54.1,
@@ -12114,12 +11775,12 @@
    "tags": [
     "neutral"
    ],
-   "rev": -6.33,
+   "rev": -6.47,
    "revision": 3.1,
-   "geo": 48.2,
-   "score_daily": 66.9,
-   "score_weekly": 61.6,
-   "score_monthly": 66.5,
+   "geo": 47.6,
+   "score_daily": 67.3,
+   "score_weekly": 62.1,
+   "score_monthly": 67.0,
    "verdict": "매수",
    "sector_fpe_median": 15.010191,
    "spark": [
@@ -12368,10 +12029,10 @@
    "chg_20d": -8.823447492482838,
    "chg_60d": -17.058581963390395,
    "value": 69.2,
-   "quality": 75.4,
+   "quality": 75.5,
    "target": 96.5,
-   "growth": 88.5,
-   "momentum": 17.6,
+   "growth": 88.7,
+   "momentum": 17.5,
    "trend": 22.3,
    "timing": 58.0,
    "tech": 34.1,
@@ -12382,8 +12043,8 @@
     "neutral"
    ],
    "rev": 0.03,
-   "revision": 43.0,
-   "geo": 24.9,
+   "revision": 42.3,
+   "geo": 48.1,
    "score_daily": 68.2,
    "score_weekly": 65.2,
    "score_monthly": 75.1,
@@ -12491,20 +12152,7 @@
     "naver": "https://m.stock.naver.com/worldstock/stock/AVGO.O/total",
     "news": "https://search.naver.com/search.naver?where=news&query=%EB%B8%8C%EB%A1%9C%EB%93%9C%EC%BB%B4+%EC%A3%BC%EA%B0%80"
    },
-   "geo_notes": [
-    {
-     "pol": -1,
-     "theme": "미중 갈등·수출규제",
-     "eff": -0.24,
-     "text": "미중 갈등·수출규제: 갈등 고조(관심 보통) → 반도체·중국 노출 성격상 부담"
-    },
-    {
-     "pol": -1,
-     "theme": "대만 해협",
-     "eff": -0.13,
-     "text": "대만 해협: 긴장 고조(관심 보통) → 반도체·AI 인프라·중국 노출 성격상 부담"
-    }
-   ],
+   "geo_notes": [],
    "sig": [
     [
      -1,
@@ -12605,9 +12253,9 @@
    "market": "us",
    "sector": "Technology",
    "price": 418.510009765625,
-   "fpe": 17.85738,
+   "fpe": 17.896294,
    "peg": 0.8581,
-   "pb": 79.69587,
+   "pb": 79.86954,
    "roe": 0.41854998,
    "opm": 0.58655,
    "de": 11.619,
@@ -12622,11 +12270,11 @@
    "chg_5d": 1.4299276855928245,
    "chg_20d": -7.123671607253302,
    "chg_60d": 3.768816121356622,
-   "value": 57.1,
-   "quality": 80.7,
-   "target": 89.1,
-   "growth": 68.9,
-   "momentum": 43.4,
+   "value": 56.7,
+   "quality": 81.0,
+   "target": 89.2,
+   "growth": 69.4,
+   "momentum": 43.8,
    "trend": 77.2,
    "timing": 50.0,
    "tech": 55.8,
@@ -12637,11 +12285,11 @@
     "pullback"
    ],
    "rev": 3.41,
-   "revision": 87.5,
-   "geo": 24.9,
+   "revision": 87.7,
+   "geo": 48.1,
    "score_daily": 68.1,
-   "score_weekly": 69.8,
-   "score_monthly": 72.6,
+   "score_weekly": 69.9,
+   "score_monthly": 72.7,
    "verdict": "매수",
    "sector_fpe_median": 18.943336,
    "spark": [
@@ -12746,20 +12394,7 @@
     "naver": "https://m.stock.naver.com/worldstock/stock/TSM/total",
     "news": "https://search.naver.com/search.naver?where=news&query=TSMC+%EC%A3%BC%EA%B0%80"
    },
-   "geo_notes": [
-    {
-     "pol": -1,
-     "theme": "미중 갈등·수출규제",
-     "eff": -0.24,
-     "text": "미중 갈등·수출규제: 갈등 고조(관심 보통) → 반도체·중국 노출 성격상 부담"
-    },
-    {
-     "pol": -1,
-     "theme": "대만 해협",
-     "eff": -0.13,
-     "text": "대만 해협: 긴장 고조(관심 보통) → 반도체·AI 인프라·중국 노출 성격상 부담"
-    }
-   ],
+   "geo_notes": [],
    "sig": [
     [
      1,
@@ -12861,9 +12496,9 @@
    "market": "us",
    "sector": "Technology",
    "price": 877.5499877929688,
-   "fpe": 4.277194,
+   "fpe": 4.2415476,
    "peg": 0.1598,
-   "pb": 7.2327337,
+   "pb": 7.1724563,
    "roe": 0.6,
    "opm": 0.80678004,
    "de": 3.743,
@@ -12878,11 +12513,11 @@
    "chg_5d": -0.14678883790896213,
    "chg_20d": -18.91654987267143,
    "chg_60d": 0.3304157886689918,
-   "value": 88.7,
-   "quality": 95.1,
+   "value": 88.9,
+   "quality": 95.2,
    "target": 96.9,
-   "growth": 88.5,
-   "momentum": 37.6,
+   "growth": 88.7,
+   "momentum": 37.2,
    "trend": 74.0,
    "timing": 66.0,
    "tech": 57.2,
@@ -12892,12 +12527,12 @@
    "tags": [
     "pullback"
    ],
-   "rev": 10.72,
-   "revision": 98.4,
-   "geo": 24.9,
-   "score_daily": 85.1,
+   "rev": 10.6,
+   "revision": 98.5,
+   "geo": 48.1,
+   "score_daily": 85.2,
    "score_weekly": 85.0,
-   "score_monthly": 90.9,
+   "score_monthly": 91.0,
    "verdict": "강한 매수",
    "sector_fpe_median": 18.943336,
    "spark": [
@@ -13002,20 +12637,7 @@
     "naver": "https://m.stock.naver.com/worldstock/stock/MU.O/total",
     "news": "https://search.naver.com/search.naver?where=news&query=%EB%A7%88%EC%9D%B4%ED%81%AC%EB%A1%A0+%EC%A3%BC%EA%B0%80"
    },
-   "geo_notes": [
-    {
-     "pol": -1,
-     "theme": "미중 갈등·수출규제",
-     "eff": -0.24,
-     "text": "미중 갈등·수출규제: 갈등 고조(관심 보통) → 반도체·중국 노출 성격상 부담"
-    },
-    {
-     "pol": -1,
-     "theme": "대만 해협",
-     "eff": -0.13,
-     "text": "대만 해협: 긴장 고조(관심 보통) → 반도체·AI 인프라·중국 노출 성격상 부담"
-    }
-   ],
+   "geo_notes": [],
    "sig": [
     [
      1,
@@ -13145,10 +12767,10 @@
    "chg_20d": -18.051793599104627,
    "chg_60d": 6.469017167905466,
    "value": 31.1,
-   "quality": 35.2,
-   "target": 71.1,
-   "growth": 88.5,
-   "momentum": 43.8,
+   "quality": 35.0,
+   "target": 71.5,
+   "growth": 88.7,
+   "momentum": 44.1,
    "trend": 81.8,
    "timing": 88.0,
    "tech": 65.1,
@@ -13159,11 +12781,11 @@
     "pullback"
    ],
    "rev": 0.17,
-   "revision": 57.0,
-   "geo": 24.9,
-   "score_daily": 56.6,
+   "revision": 56.9,
+   "geo": 48.1,
+   "score_daily": 56.7,
    "score_weekly": 45.7,
-   "score_monthly": 51.0,
+   "score_monthly": 51.1,
    "verdict": "중립",
    "sector_fpe_median": 18.943336,
    "spark": [
@@ -13268,20 +12890,7 @@
     "naver": "https://m.stock.naver.com/worldstock/stock/AMD.O/total",
     "news": "https://search.naver.com/search.naver?where=news&query=AMD+%EC%A3%BC%EA%B0%80"
    },
-   "geo_notes": [
-    {
-     "pol": -1,
-     "theme": "미중 갈등·수출규제",
-     "eff": -0.24,
-     "text": "미중 갈등·수출규제: 갈등 고조(관심 보통) → 반도체·중국 노출 성격상 부담"
-    },
-    {
-     "pol": -1,
-     "theme": "대만 해협",
-     "eff": -0.13,
-     "text": "대만 해협: 긴장 고조(관심 보통) → 반도체·AI 인프라·중국 노출 성격상 부담"
-    }
-   ],
+   "geo_notes": [],
    "sig": [
     [
      1,
@@ -13420,11 +13029,11 @@
    "chg_5d": 2.2078920680273617,
    "chg_20d": -12.902905085452087,
    "chg_60d": 16.035617796739654,
-   "value": 67.1,
-   "quality": 52.7,
-   "target": 33.2,
-   "growth": 9.8,
-   "momentum": 57.3,
+   "value": 67.3,
+   "quality": 52.6,
+   "target": 33.8,
+   "growth": 9.7,
+   "momentum": 57.4,
    "trend": 61.8,
    "timing": 70.0,
    "tech": 53.8,
@@ -13436,11 +13045,11 @@
     "squeeze"
    ],
    "rev": -0.01,
-   "revision": 32.0,
-   "geo": 26.3,
-   "score_daily": 58.1,
-   "score_weekly": 55.7,
-   "score_monthly": 48.1,
+   "revision": 32.3,
+   "geo": 48.6,
+   "score_daily": 58.3,
+   "score_weekly": 55.9,
+   "score_monthly": 48.3,
    "verdict": "중립",
    "sector_fpe_median": 18.943336,
    "spark": [
@@ -13544,20 +13153,7 @@
     "naver": "https://m.stock.naver.com/worldstock/stock/QCOM.O/total",
     "news": "https://search.naver.com/search.naver?where=news&query=%ED%80%84%EC%BB%B4+%EC%A3%BC%EA%B0%80"
    },
-   "geo_notes": [
-    {
-     "pol": -1,
-     "theme": "미중 갈등·수출규제",
-     "eff": -0.24,
-     "text": "미중 갈등·수출규제: 갈등 고조(관심 보통) → 반도체·중국 노출 성격상 부담"
-    },
-    {
-     "pol": -1,
-     "theme": "대만 해협",
-     "eff": -0.1,
-     "text": "대만 해협: 긴장 고조(관심 보통) → 반도체·중국 노출 성격상 부담"
-    }
-   ],
+   "geo_notes": [],
    "sig": [
     [
      1,
@@ -13701,11 +13297,11 @@
    "chg_5d": -3.2164712729303213,
    "chg_20d": -29.300813752461252,
    "chg_60d": -4.575878738752959,
-   "value": 29.7,
-   "quality": 18.9,
-   "target": 67.2,
+   "value": 30.0,
+   "quality": 19.4,
+   "target": 67.3,
    "growth": null,
-   "momentum": 25.4,
+   "momentum": 25.2,
    "trend": 59.6,
    "timing": 66.0,
    "tech": 49.6,
@@ -13716,11 +13312,11 @@
     "pullback"
    ],
    "rev": 0.62,
-   "revision": 71.9,
-   "geo": 26.3,
-   "score_daily": 45.5,
-   "score_weekly": 35.7,
-   "score_monthly": 37.4,
+   "revision": 72.3,
+   "geo": 48.6,
+   "score_daily": 45.7,
+   "score_weekly": 35.9,
+   "score_monthly": 37.7,
    "verdict": "매도",
    "sector_fpe_median": 18.943336,
    "spark": [
@@ -13824,20 +13420,7 @@
     "naver": "https://m.stock.naver.com/worldstock/stock/INTC.O/total",
     "news": "https://search.naver.com/search.naver?where=news&query=%EC%9D%B8%ED%85%94+%EC%A3%BC%EA%B0%80"
    },
-   "geo_notes": [
-    {
-     "pol": -1,
-     "theme": "미중 갈등·수출규제",
-     "eff": -0.24,
-     "text": "미중 갈등·수출규제: 갈등 고조(관심 보통) → 반도체·중국 노출 성격상 부담"
-    },
-    {
-     "pol": -1,
-     "theme": "대만 해협",
-     "eff": -0.1,
-     "text": "대만 해협: 긴장 고조(관심 보통) → 반도체·중국 노출 성격상 부담"
-    }
-   ],
+   "geo_notes": [],
    "sig": [
     [
      1,
@@ -13961,7 +13544,7 @@
    "opm": 0.44356,
    "de": 8.897,
    "eg": 1.0,
-   "upside": 36.7213216211695,
+   "upside": 36.81327988272302,
    "analysts": 17.0,
    "rec_key": "strong_buy",
    "rsi": 35.220449659788585,
@@ -13971,11 +13554,11 @@
    "chg_5d": -4.247281170718475,
    "chg_20d": -9.870746606062452,
    "chg_60d": -4.82245164243208,
-   "value": 18.8,
-   "quality": 89.7,
-   "target": 87.9,
-   "growth": 88.5,
-   "momentum": 24.6,
+   "value": 19.0,
+   "quality": 89.9,
+   "target": 88.1,
+   "growth": 88.7,
+   "momentum": 24.4,
    "trend": 76.6,
    "timing": 68.0,
    "tech": 57.0,
@@ -13987,10 +13570,10 @@
    ],
    "rev": 7.91,
    "revision": 93.8,
-   "geo": 26.3,
-   "score_daily": 61.4,
-   "score_weekly": 57.1,
-   "score_monthly": 66.3,
+   "geo": 48.6,
+   "score_daily": 61.5,
+   "score_weekly": 57.3,
+   "score_monthly": 66.5,
    "verdict": "중립",
    "sector_fpe_median": 18.943336,
    "spark": [
@@ -14094,20 +13677,7 @@
     "naver": "https://m.stock.naver.com/worldstock/stock/ASML.O/total",
     "news": "https://search.naver.com/search.naver?where=news&query=ASML+%EC%A3%BC%EA%B0%80"
    },
-   "geo_notes": [
-    {
-     "pol": -1,
-     "theme": "미중 갈등·수출규제",
-     "eff": -0.24,
-     "text": "미중 갈등·수출규제: 갈등 고조(관심 보통) → 반도체·중국 노출 성격상 부담"
-    },
-    {
-     "pol": -1,
-     "theme": "대만 해협",
-     "eff": -0.1,
-     "text": "대만 해협: 긴장 고조(관심 보통) → 반도체·중국 노출 성격상 부담"
-    }
-   ],
+   "geo_notes": [],
    "sig": [
     [
      1,
@@ -14236,10 +13806,10 @@
    "chg_5d": -7.830637846374211,
    "chg_20d": -22.218558714561855,
    "chg_60d": -24.818144071167993,
-   "value": 51.1,
-   "quality": 67.0,
-   "target": 93.4,
-   "growth": 60.7,
+   "value": 51.0,
+   "quality": 67.5,
+   "target": 93.5,
+   "growth": 61.3,
    "momentum": 10.8,
    "trend": 35.0,
    "timing": 73.0,
@@ -14253,11 +13823,11 @@
     "golden"
    ],
    "rev": -0.07,
-   "revision": 24.2,
-   "geo": 26.3,
-   "score_daily": 64.9,
-   "score_weekly": 56.8,
-   "score_monthly": 62.9,
+   "revision": 23.8,
+   "geo": 48.6,
+   "score_daily": 65.0,
+   "score_weekly": 56.9,
+   "score_monthly": 63.2,
    "verdict": "중립",
    "sector_fpe_median": 18.943336,
    "spark": [
@@ -14361,20 +13931,7 @@
     "naver": "https://m.stock.naver.com/worldstock/stock/AMAT.O/total",
     "news": "https://search.naver.com/search.naver?where=news&query=%EC%96%B4%ED%94%8C%EB%9D%BC%EC%9D%B4%EB%93%9C+%EB%A8%B8%ED%8B%B0%EC%96%B4%EB%A6%AC%EC%96%BC%EC%A6%88+%EC%A3%BC%EA%B0%80"
    },
-   "geo_notes": [
-    {
-     "pol": -1,
-     "theme": "미중 갈등·수출규제",
-     "eff": -0.24,
-     "text": "미중 갈등·수출규제: 갈등 고조(관심 보통) → 반도체·중국 노출 성격상 부담"
-    },
-    {
-     "pol": -1,
-     "theme": "대만 해협",
-     "eff": -0.1,
-     "text": "대만 해협: 긴장 고조(관심 보통) → 반도체·중국 노출 성격상 부담"
-    }
-   ],
+   "geo_notes": [],
    "sig": [
     [
      -1,
@@ -14507,10 +14064,10 @@
    "chg_5d": -12.821094197497773,
    "chg_20d": -27.001043005862925,
    "chg_60d": -22.712614147498968,
-   "value": 46.8,
-   "quality": 85.5,
-   "target": 90.2,
-   "growth": 72.1,
+   "value": 47.0,
+   "quality": 85.7,
+   "target": 91.2,
+   "growth": 72.6,
    "momentum": 11.5,
    "trend": 31.0,
    "timing": 83.0,
@@ -14523,12 +14080,12 @@
     "oversold"
    ],
    "rev": 1.69,
-   "revision": 79.7,
-   "geo": 26.3,
-   "score_daily": 68.1,
-   "score_weekly": 59.7,
-   "score_monthly": 68.4,
-   "verdict": "중립",
+   "revision": 80.0,
+   "geo": 48.6,
+   "score_daily": 68.4,
+   "score_weekly": 60.0,
+   "score_monthly": 68.7,
+   "verdict": "매수",
    "sector_fpe_median": 18.943336,
    "spark": [
     374.18,
@@ -14631,20 +14188,7 @@
     "naver": "https://m.stock.naver.com/worldstock/stock/LRCX.O/total",
     "news": "https://search.naver.com/search.naver?where=news&query=%EB%9E%A8%EB%A6%AC%EC%84%9C%EC%B9%98+%EC%A3%BC%EA%B0%80"
    },
-   "geo_notes": [
-    {
-     "pol": -1,
-     "theme": "미중 갈등·수출규제",
-     "eff": -0.24,
-     "text": "미중 갈등·수출규제: 갈등 고조(관심 보통) → 반도체·중국 노출 성격상 부담"
-    },
-    {
-     "pol": -1,
-     "theme": "대만 해협",
-     "eff": -0.1,
-     "text": "대만 해협: 긴장 고조(관심 보통) → 반도체·중국 노출 성격상 부담"
-    }
-   ],
+   "geo_notes": [],
    "sig": [
     [
      -1,
@@ -14782,11 +14326,11 @@
    "chg_5d": -12.1455316855548,
    "chg_20d": -22.514898877636156,
    "chg_60d": -19.253591120811475,
-   "value": 29.9,
+   "value": 30.1,
    "quality": 77.3,
-   "target": 83.6,
-   "growth": 39.3,
-   "momentum": 13.1,
+   "target": 83.8,
+   "growth": 40.3,
+   "momentum": 13.0,
    "trend": 39.7,
    "timing": 78.0,
    "tech": 45.3,
@@ -14797,12 +14341,12 @@
     "neutral",
     "oversold"
    ],
-   "rev": 0.17,
-   "revision": 57.0,
-   "geo": 26.3,
-   "score_daily": 59.9,
-   "score_weekly": 51.6,
-   "score_monthly": 55.0,
+   "rev": 0.18,
+   "revision": 59.2,
+   "geo": 48.6,
+   "score_daily": 60.0,
+   "score_weekly": 51.7,
+   "score_monthly": 55.3,
    "verdict": "중립",
    "sector_fpe_median": 18.943336,
    "spark": [
@@ -14906,20 +14450,7 @@
     "naver": "https://m.stock.naver.com/worldstock/stock/KLAC.O/total",
     "news": "https://search.naver.com/search.naver?where=news&query=KLA+%EC%A3%BC%EA%B0%80"
    },
-   "geo_notes": [
-    {
-     "pol": -1,
-     "theme": "미중 갈등·수출규제",
-     "eff": -0.24,
-     "text": "미중 갈등·수출규제: 갈등 고조(관심 보통) → 반도체·중국 노출 성격상 부담"
-    },
-    {
-     "pol": -1,
-     "theme": "대만 해협",
-     "eff": -0.1,
-     "text": "대만 해협: 긴장 고조(관심 보통) → 반도체·중국 노출 성격상 부담"
-    }
-   ],
+   "geo_notes": [],
    "sig": [
     [
      -1,
@@ -15031,7 +14562,7 @@
    "sector": "Technology",
    "price": 263.82000732421875,
    "fpe": 9.590818,
-   "peg": 0.65,
+   "peg": 0.64,
    "pb": 8.768572,
    "roe": 0.6,
    "opm": 0.34822,
@@ -15047,11 +14578,11 @@
    "chg_5d": 7.593805304943357,
    "chg_20d": 12.039752816301853,
    "chg_60d": 6.421949907099278,
-   "value": 82.5,
+   "value": 82.4,
    "quality": 78.1,
-   "target": 15.6,
-   "growth": 34.4,
-   "momentum": 70.1,
+   "target": 15.4,
+   "growth": 35.5,
+   "momentum": 70.3,
    "trend": 29.9,
    "timing": 40.0,
    "tech": 46.2,
@@ -15062,11 +14593,11 @@
     "downtrend"
    ],
    "rev": 0.36,
-   "revision": 66.4,
-   "geo": 50.0,
+   "revision": 65.4,
+   "geo": 48.1,
    "score_daily": 54.7,
    "score_weekly": 63.1,
-   "score_monthly": 59.6,
+   "score_monthly": 59.8,
    "verdict": "중립",
    "sector_fpe_median": 18.943336,
    "spark": [
@@ -15303,10 +14834,10 @@
    "chg_5d": 3.2696345973235896,
    "chg_20d": 6.217418505307681,
    "chg_60d": 37.55187764327839,
-   "value": 77.6,
-   "quality": 38.8,
-   "target": 57.0,
-   "growth": 88.5,
+   "value": 77.8,
+   "quality": 38.2,
+   "target": 57.7,
+   "growth": 88.7,
    "momentum": 87.0,
    "trend": 67.2,
    "timing": 45.0,
@@ -15318,8 +14849,8 @@
     "neutral"
    ],
    "rev": -0.0,
-   "revision": 36.7,
-   "geo": 48.2,
+   "revision": 36.9,
+   "geo": 47.6,
    "score_daily": 58.6,
    "score_weekly": 63.1,
    "score_monthly": 63.4,
@@ -15545,11 +15076,11 @@
    "chg_5d": -1.6142806943766685,
    "chg_20d": -7.979578376638541,
    "chg_60d": -1.097517970585804,
-   "value": 82.0,
-   "quality": 56.9,
-   "target": 92.6,
-   "growth": 63.9,
-   "momentum": 34.5,
+   "value": 82.2,
+   "quality": 57.2,
+   "target": 92.7,
+   "growth": 64.5,
+   "momentum": 34.2,
    "trend": 6.1,
    "timing": 46.0,
    "tech": 24.0,
@@ -15560,11 +15091,11 @@
     "downtrend"
    ],
    "rev": -0.01,
-   "revision": 32.0,
-   "geo": 48.2,
-   "score_daily": 63.8,
-   "score_weekly": 63.8,
-   "score_monthly": 67.7,
+   "revision": 32.3,
+   "geo": 49.5,
+   "score_daily": 63.9,
+   "score_weekly": 63.9,
+   "score_monthly": 68.0,
    "verdict": "중립",
    "sector_fpe_median": 18.943336,
    "spark": [
@@ -15791,11 +15322,11 @@
    "chg_5d": -0.8287544414812831,
    "chg_20d": -0.18743856978665763,
    "chg_60d": -6.216975792863144,
-   "value": 54.8,
-   "quality": 51.0,
-   "target": 69.1,
-   "growth": 62.3,
-   "momentum": 29.6,
+   "value": 54.3,
+   "quality": 51.4,
+   "target": 69.6,
+   "growth": 62.9,
+   "momentum": 29.4,
    "trend": 62.4,
    "timing": 50.0,
    "tech": 49.9,
@@ -15806,12 +15337,12 @@
     "pullback",
     "golden"
    ],
-   "rev": 0.06,
-   "revision": 46.9,
+   "rev": -0.01,
+   "revision": 32.3,
    "geo": 44.8,
-   "score_daily": 56.5,
+   "score_daily": 56.6,
    "score_weekly": 54.3,
-   "score_monthly": 57.5,
+   "score_monthly": 57.7,
    "verdict": "중립",
    "sector_fpe_median": 18.943336,
    "spark": [
@@ -16029,9 +15560,9 @@
    "price": 253.55999755859375,
    "fpe": 19.157873,
    "peg": 2.1883,
-   "pb": 6.7384195,
+   "pb": 6.743617,
    "roe": 0.34769002,
-   "opm": 0.16307,
+   "opm": 0.16968,
    "de": 185.439,
    "eg": 0.25,
    "upside": 1.442073858894588,
@@ -16044,11 +15575,11 @@
    "chg_5d": 9.227189723987085,
    "chg_20d": 12.438474451254322,
    "chg_60d": 14.350135869555869,
-   "value": 41.5,
-   "quality": 42.8,
-   "target": 17.2,
-   "growth": 49.2,
-   "momentum": 72.6,
+   "value": 41.9,
+   "quality": 43.9,
+   "target": 16.9,
+   "growth": 50.0,
+   "momentum": 72.7,
    "trend": 34.3,
    "timing": 42.0,
    "tech": 44.0,
@@ -16060,11 +15591,11 @@
     "div_bull"
    ],
    "rev": 0.89,
-   "revision": 75.0,
-   "geo": 50.0,
-   "score_daily": 36.5,
-   "score_weekly": 40.3,
-   "score_monthly": 38.8,
+   "revision": 75.4,
+   "geo": 51.4,
+   "score_daily": 36.8,
+   "score_weekly": 40.7,
+   "score_monthly": 39.4,
    "verdict": "매도",
    "sector_fpe_median": 18.943336,
    "spark": [
@@ -16283,9 +15814,9 @@
    "peg": 0.9193,
    "pb": 13.563126,
    "roe": 0.39723998,
-   "opm": 0.47581002,
+   "opm": 0.47547,
    "de": 70.654,
-   "eg": 0.769,
+   "eg": 0.77,
    "upside": 18.325918406401208,
    "analysts": 29.0,
    "rec_key": "buy",
@@ -16297,10 +15828,10 @@
    "chg_20d": 2.38069368965379,
    "chg_60d": 2.12727524323415,
    "value": 39.0,
-   "quality": 68.7,
-   "target": 58.2,
-   "growth": 73.8,
-   "momentum": 54.4,
+   "quality": 68.9,
+   "target": 58.5,
+   "growth": 74.2,
+   "momentum": 54.0,
    "trend": 70.7,
    "timing": 40.0,
    "tech": 57.7,
@@ -16311,11 +15842,11 @@
     "squeeze"
    ],
    "rev": 6.49,
-   "revision": 92.2,
-   "geo": 26.3,
-   "score_daily": 51.3,
+   "revision": 92.3,
+   "geo": 48.6,
+   "score_daily": 51.4,
    "score_weekly": 55.6,
-   "score_monthly": 58.8,
+   "score_monthly": 59.0,
    "verdict": "중립",
    "sector_fpe_median": 18.943336,
    "spark": [
@@ -16419,20 +15950,7 @@
     "naver": "https://m.stock.naver.com/worldstock/stock/TXN.O/total",
     "news": "https://search.naver.com/search.naver?where=news&query=%ED%85%8D%EC%82%AC%EC%8A%A4+%EC%9D%B8%EC%8A%A4%ED%8A%B8%EB%A3%A8%EB%A8%BC%ED%8A%B8+%EC%A3%BC%EA%B0%80"
    },
-   "geo_notes": [
-    {
-     "pol": -1,
-     "theme": "미중 갈등·수출규제",
-     "eff": -0.24,
-     "text": "미중 갈등·수출규제: 갈등 고조(관심 보통) → 반도체·중국 노출 성격상 부담"
-    },
-    {
-     "pol": -1,
-     "theme": "대만 해협",
-     "eff": -0.1,
-     "text": "대만 해협: 긴장 고조(관심 보통) → 반도체·중국 노출 성격상 부담"
-    }
-   ],
+   "geo_notes": [],
    "sig": [
     [
      1,
@@ -16566,11 +16084,11 @@
    "chg_5d": -2.3960952016920722,
    "chg_20d": -3.346356633832648,
    "chg_60d": -5.492381130403778,
-   "value": 56.0,
-   "quality": 53.6,
-   "target": 40.2,
-   "growth": 31.1,
-   "momentum": 38.3,
+   "value": 56.3,
+   "quality": 53.3,
+   "target": 40.8,
+   "growth": 32.3,
+   "momentum": 38.1,
    "trend": 69.4,
    "timing": 40.0,
    "tech": 54.5,
@@ -16582,11 +16100,11 @@
     "squeeze"
    ],
    "rev": -0.24,
-   "revision": 20.3,
-   "geo": 50.0,
-   "score_daily": 50.6,
-   "score_weekly": 52.2,
-   "score_monthly": 49.9,
+   "revision": 20.0,
+   "geo": 51.1,
+   "score_daily": 50.8,
+   "score_weekly": 52.3,
+   "score_monthly": 50.2,
    "verdict": "중립",
    "sector_fpe_median": 12.987226,
    "spark": [
@@ -16823,10 +16341,10 @@
    "chg_5d": -1.3078238823581056,
    "chg_20d": -10.828922940088736,
    "chg_60d": -18.094926699785052,
-   "value": 94.8,
-   "quality": 28.7,
-   "target": 74.2,
-   "growth": 13.1,
+   "value": 94.9,
+   "quality": 28.8,
+   "target": 74.6,
+   "growth": 12.9,
    "momentum": 19.3,
    "trend": 44.6,
    "timing": 65.0,
@@ -16839,11 +16357,11 @@
     "oversold"
    ],
    "rev": -5.84,
-   "revision": 5.5,
-   "geo": 50.0,
-   "score_daily": 67.1,
-   "score_weekly": 59.5,
-   "score_monthly": 55.0,
+   "revision": 6.2,
+   "geo": 51.1,
+   "score_daily": 67.2,
+   "score_weekly": 59.6,
+   "score_monthly": 55.1,
    "verdict": "중립",
    "sector_fpe_median": 12.987226,
    "spark": [
@@ -17053,7 +16571,7 @@
    "market": "us",
    "sector": "Financial Services",
    "price": 82.38999938964844,
-   "fpe": 10.282017,
+   "fpe": 10.28394,
    "peg": 1.4723,
    "pb": 1.5587044,
    "roe": 0.1291,
@@ -17070,11 +16588,11 @@
    "chg_5d": -1.7646396905524275,
    "chg_20d": -0.6990500452228043,
    "chg_60d": -3.558469980882306,
-   "value": 73.2,
-   "quality": 41.0,
-   "target": 62.3,
-   "growth": 37.7,
-   "momentum": 46.0,
+   "value": 73.4,
+   "quality": 40.9,
+   "target": 62.9,
+   "growth": 38.7,
+   "momentum": 45.7,
    "trend": 34.9,
    "timing": 40.0,
    "tech": 42.5,
@@ -17085,11 +16603,11 @@
     "range"
    ],
    "rev": 0.36,
-   "revision": 66.4,
-   "geo": 50.0,
-   "score_daily": 54.1,
-   "score_weekly": 55.4,
-   "score_monthly": 53.3,
+   "revision": 65.4,
+   "geo": 51.1,
+   "score_daily": 54.3,
+   "score_weekly": 55.5,
+   "score_monthly": 53.6,
    "verdict": "중립",
    "sector_fpe_median": 12.987226,
    "spark": [
@@ -17323,7 +16841,7 @@
    "eg": 0.388,
    "upside": 17.753381215114583,
    "analysts": 21.0,
-   "rec_key": "hold",
+   "rec_key": "buy",
    "rsi": 37.437288001442354,
    "above_long": false,
    "dd52": -23.990726822061635,
@@ -17331,11 +16849,11 @@
    "chg_5d": -0.6331862365260177,
    "chg_20d": -6.389440242801758,
    "chg_60d": -14.556133989815923,
-   "value": 69.5,
-   "quality": 40.1,
-   "target": 50.0,
-   "growth": 59.0,
-   "momentum": 24.2,
+   "value": 69.7,
+   "quality": 39.9,
+   "target": 50.8,
+   "growth": 59.7,
+   "momentum": 24.1,
    "trend": 29.5,
    "timing": 63.0,
    "tech": 41.5,
@@ -17348,11 +16866,11 @@
     "div_bull"
    ],
    "rev": 2.01,
-   "revision": 81.2,
-   "geo": 50.0,
-   "score_daily": 54.8,
-   "score_weekly": 48.9,
-   "score_monthly": 52.9,
+   "revision": 81.5,
+   "geo": 51.1,
+   "score_daily": 55.0,
+   "score_weekly": 49.1,
+   "score_monthly": 53.1,
    "verdict": "중립",
    "sector_fpe_median": 12.987226,
    "spark": [
@@ -17594,11 +17112,11 @@
    "chg_5d": -0.5981069874552936,
    "chg_20d": -8.568077160924691,
    "chg_60d": -14.552981253321473,
-   "value": 48.3,
-   "quality": 47.3,
-   "target": 50.4,
-   "growth": 27.9,
-   "momentum": 24.9,
+   "value": 48.7,
+   "quality": 47.5,
+   "target": 50.8,
+   "growth": 29.0,
+   "momentum": 24.8,
    "trend": 29.8,
    "timing": 80.0,
    "tech": 46.7,
@@ -17611,11 +17129,11 @@
     "div_bull"
    ],
    "rev": -1.0,
-   "revision": 12.5,
-   "geo": 50.0,
-   "score_daily": 53.2,
-   "score_weekly": 44.0,
-   "score_monthly": 43.9,
+   "revision": 12.3,
+   "geo": 51.1,
+   "score_daily": 53.4,
+   "score_weekly": 44.2,
+   "score_monthly": 44.3,
    "verdict": "중립",
    "sector_fpe_median": 12.987226,
    "spark": [
@@ -17841,7 +17359,7 @@
    "sector": "Financial Services",
    "price": 407.9200134277344,
    "fpe": 27.152346,
-   "peg": 1.88,
+   "peg": 1.85,
    "pb": 21.617382,
    "roe": 0.6,
    "opm": 0.66130996,
@@ -17857,11 +17375,11 @@
    "chg_5d": 1.3189012367726294,
    "chg_20d": 11.034897927516063,
    "chg_60d": 11.3713996951325,
-   "value": 15.9,
-   "quality": 86.0,
-   "target": 37.7,
-   "growth": 32.8,
-   "momentum": 74.5,
+   "value": 16.2,
+   "quality": 85.9,
+   "target": 37.5,
+   "growth": 33.9,
+   "momentum": 74.7,
    "trend": 92.9,
    "timing": 35.0,
    "tech": 68.4,
@@ -17874,11 +17392,11 @@
     "golden"
    ],
    "rev": 0.03,
-   "revision": 43.0,
-   "geo": 50.0,
+   "revision": 42.3,
+   "geo": 51.4,
    "score_daily": 45.7,
    "score_weekly": 54.9,
-   "score_monthly": 49.0,
+   "score_monthly": 49.2,
    "verdict": "중립",
    "sector_fpe_median": 12.987226,
    "spark": [
@@ -18099,7 +17617,7 @@
    "sector": "Financial Services",
    "price": 623.5999755859375,
    "fpe": 27.031454,
-   "peg": 1.65,
+   "peg": 1.63,
    "pb": 97.498436,
    "roe": 0.6,
    "opm": 0.61108,
@@ -18115,11 +17633,11 @@
    "chg_5d": 1.0009382344012163,
    "chg_20d": 9.856416588659078,
    "chg_60d": 8.01073905875931,
-   "value": 22.5,
-   "quality": 75.0,
-   "target": 48.2,
-   "growth": 47.5,
-   "momentum": 70.7,
+   "value": 22.8,
+   "quality": 75.1,
+   "target": 49.0,
+   "growth": 48.4,
+   "momentum": 70.9,
    "trend": 91.1,
    "timing": 35.0,
    "tech": 67.6,
@@ -18131,12 +17649,12 @@
     "aligned",
     "golden"
    ],
-   "rev": 0.08,
-   "revision": 50.0,
-   "geo": 50.0,
-   "score_daily": 47.5,
-   "score_weekly": 55.2,
-   "score_monthly": 51.5,
+   "rev": 0.12,
+   "revision": 53.1,
+   "geo": 51.4,
+   "score_daily": 47.7,
+   "score_weekly": 55.5,
+   "score_monthly": 51.8,
    "verdict": "중립",
    "sector_fpe_median": 12.987226,
    "spark": [
@@ -18357,7 +17875,7 @@
    "sector": "Financial Services",
    "price": 57.02000045776367,
    "fpe": 9.859576,
-   "peg": 1.02,
+   "peg": 1.01,
    "pb": 2.479885,
    "roe": 0.24497,
    "opm": 0.16966,
@@ -18373,11 +17891,11 @@
    "chg_5d": 0.5643733518842842,
    "chg_20d": 3.597382829399165,
    "chg_60d": -1.092803211518445,
-   "value": 82.7,
-   "quality": 41.7,
-   "target": 10.2,
-   "growth": 16.4,
-   "momentum": 56.8,
+   "value": 84.0,
+   "quality": 41.3,
+   "target": 10.0,
+   "growth": 16.1,
+   "momentum": 56.5,
    "trend": 52.6,
    "timing": 50.0,
    "tech": 56.7,
@@ -18388,11 +17906,11 @@
     "neutral"
    ],
    "rev": -0.02,
-   "revision": 28.9,
-   "geo": 50.0,
-   "score_daily": 51.4,
-   "score_weekly": 53.0,
-   "score_monthly": 46.3,
+   "revision": 28.5,
+   "geo": 48.1,
+   "score_daily": 51.8,
+   "score_weekly": 53.3,
+   "score_monthly": 46.6,
    "verdict": "중립",
    "sector_fpe_median": 12.987226,
    "spark": [
@@ -18620,10 +18138,10 @@
    "chg_20d": 7.262402203293261,
    "chg_60d": 6.378514015225489,
    "value": 51.1,
-   "quality": 44.3,
-   "target": 40.1,
-   "growth": 88.5,
-   "momentum": 66.8,
+   "quality": 45.2,
+   "target": 39.9,
+   "growth": 88.7,
+   "momentum": 67.1,
    "trend": 89.7,
    "timing": 35.0,
    "tech": 67.1,
@@ -18636,11 +18154,11 @@
     "golden"
    ],
    "rev": 0.98,
-   "revision": 76.6,
-   "geo": 50.0,
-   "score_daily": 48.9,
-   "score_weekly": 54.3,
-   "score_monthly": 55.8,
+   "revision": 76.9,
+   "geo": 51.4,
+   "score_daily": 49.1,
+   "score_weekly": 54.6,
+   "score_monthly": 56.1,
    "verdict": "중립",
    "sector_fpe_median": 12.987226,
    "spark": [
@@ -18877,11 +18395,11 @@
    "chg_5d": 4.1501641546661805,
    "chg_20d": 11.01994221927356,
    "chg_60d": -0.8019562182416284,
-   "value": 47.8,
-   "quality": 29.1,
-   "target": 51.6,
-   "growth": 70.5,
-   "momentum": 58.3,
+   "value": 52.5,
+   "quality": 28.6,
+   "target": 52.3,
+   "growth": 71.0,
+   "momentum": 58.0,
    "trend": 69.1,
    "timing": 40.0,
    "tech": 60.3,
@@ -18893,13 +18411,13 @@
     "golden"
    ],
    "rev": 3.63,
-   "revision": 89.1,
-   "geo": 50.0,
-   "score_daily": 45.6,
-   "score_weekly": 46.5,
-   "score_monthly": 47.6,
+   "revision": 89.2,
+   "geo": 51.4,
+   "score_daily": 47.1,
+   "score_weekly": 48.1,
+   "score_monthly": 49.1,
    "verdict": "중립",
-   "sector_fpe_median": 17.632414,
+   "sector_fpe_median": 17.785840999999998,
    "spark": [
     399.53,
     400.96,
@@ -19108,6 +18626,258 @@
    "chart": true
   },
   {
+   "ticker": "JNJ",
+   "name": "존슨앤드존슨",
+   "market": "us",
+   "sector": "Healthcare",
+   "price": 263.80999755859375,
+   "fpe": 22.707983,
+   "peg": 2.8229,
+   "pb": 7.788899,
+   "roe": 0.20018,
+   "opm": 0.25737,
+   "de": 54.767,
+   "eg": -0.5,
+   "upside": 5.913006552354649,
+   "analysts": 22.0,
+   "rec_key": "buy",
+   "rsi": 53.01902075055536,
+   "above_long": true,
+   "dd52": -5.250869339429176,
+   "chg_1d": -1.4199723481829962,
+   "chg_5d": 3.2282047577138817,
+   "chg_20d": -2.732100740638055,
+   "chg_60d": 3.123285906347717,
+   "value": 25.9,
+   "quality": 47.3,
+   "target": 35.0,
+   "growth": 4.0,
+   "momentum": 57.5,
+   "trend": 74.7,
+   "timing": 67.0,
+   "tech": 68.6,
+   "setup": "pullback",
+   "setup_label": "상승추세 속 눌림목",
+   "trend_label": "장기 정배열 속 단기 조정",
+   "tags": [
+    "pullback"
+   ],
+   "rev": 0.42,
+   "revision": 67.7,
+   "geo": 51.4,
+   "score_daily": 45.4,
+   "score_weekly": 41.9,
+   "score_monthly": 34.0,
+   "verdict": "중립",
+   "sector_fpe_median": 17.785840999999998,
+   "spark": [
+    234.2,
+    228.39,
+    231.29,
+    239.08,
+    241.0,
+    244.88,
+    254.66,
+    258.51,
+    253.97,
+    253.98,
+    263.04,
+    259.33,
+    267.24,
+    263.4,
+    259.1,
+    256.98,
+    257.77,
+    253.85,
+    247.02,
+    249.97,
+    253.04,
+    248.82,
+    250.61,
+    255.63,
+    259.27,
+    263.4,
+    265.95,
+    266.73,
+    265.53,
+    255.82,
+    256.35,
+    254.41,
+    254.93,
+    257.59,
+    256.98,
+    259.24,
+    261.81,
+    259.8,
+    260.86,
+    262.08,
+    260.35,
+    262.37,
+    271.11,
+    273.41,
+    267.37,
+    270.24,
+    273.04,
+    273.14,
+    270.0,
+    265.77,
+    268.04,
+    265.85,
+    271.19,
+    275.21,
+    278.43,
+    275.23,
+    269.12,
+    267.08,
+    266.35,
+    265.58,
+    266.32,
+    267.2,
+    267.28,
+    270.22,
+    269.99,
+    269.47,
+    269.19,
+    269.17,
+    270.68,
+    271.22,
+    271.95,
+    267.57,
+    264.74,
+    258.66,
+    256.03,
+    252.93,
+    254.78,
+    258.45,
+    256.48,
+    261.44,
+    263.73,
+    248.61,
+    253.91,
+    253.28,
+    255.56,
+    253.79,
+    259.36,
+    257.78,
+    267.61,
+    263.81
+   ],
+   "desc": "전문의약품(면역·항암)과 의료기기를 하는 미국 헬스케어 대표 기업. 60년 넘게 배당을 늘려 왔다.",
+   "ctags": [
+    "경기 방어",
+    "제약·바이오"
+   ],
+   "links": {
+    "naver": "https://m.stock.naver.com/worldstock/stock/JNJ/total",
+    "news": "https://search.naver.com/search.naver?where=news&query=%EC%A1%B4%EC%8A%A8%EC%95%A4%EB%93%9C%EC%A1%B4%EC%8A%A8+%EC%A3%BC%EA%B0%80"
+   },
+   "geo_notes": [],
+   "sig": [
+    [
+     1,
+     "이평선",
+     "120일선 지지 확인 — 저가가 이평선 터치 후 종가 회복"
+    ],
+    [
+     1,
+     "이평선",
+     "50>120>250일선 장기 정배열 유지 — 주가는 50일선 아래까지 조정, 20일선 위에서 지지 시도"
+    ],
+    [
+     1,
+     "이평선",
+     "주가 250일선 위(+11.5%), 250일선 우상향(20일간 +2.4%) — 장기 추세 상승"
+    ],
+    [
+     1,
+     "모멘텀",
+     "MACD 시그널 상향 돌파(2거래일 전, 0선 아래)"
+    ],
+    [
+     1,
+     "모멘텀",
+     "RSI 53 — 50 이상 강세 영역"
+    ],
+    [
+     0,
+     "추세",
+     "ADX 15 — 비추세(박스권), 오실레이터(RSI·볼린저) 신호 신뢰도 상대적으로 높음"
+    ]
+   ],
+   "levels": {
+    "support": [
+     {
+      "price": 260.68,
+      "label": "스윙 저점·20일선",
+      "dist": -1.2
+     },
+     {
+      "price": 252.79,
+      "label": "120일선",
+      "dist": -4.2
+     }
+    ],
+    "resistance": [
+     {
+      "price": 264.39,
+      "label": "스윙 고점·50일선",
+      "dist": 0.2
+     },
+     {
+      "price": 269.43,
+      "label": "스윙 고점",
+      "dist": 2.1
+     }
+    ],
+    "stop": {
+     "price": 257.5,
+     "dist": -2.4,
+     "basis": "지지선−0.5ATR"
+    },
+    "rr": 0.09
+   },
+   "setup_desc": "장기 상승추세(120·250일선 위)를 유지한 채 단기 조정 — 지지선 근처 분할 접근 관점",
+   "tvals": {
+    "ma": {
+     "20": 259.02,
+     "50": 265.2,
+     "120": 252.79,
+     "250": 236.58
+    },
+    "dist": {
+     "20": 1.8,
+     "50": -0.5,
+     "120": 4.4,
+     "250": 11.5
+    },
+    "slope_long": 2.4,
+    "slope_mid": -0.05,
+    "slope_mid2": 1.02,
+    "disparity": 101.8,
+    "rsi": 53.0,
+    "macd": -1.16,
+    "macd_signal": -2.3,
+    "macd_hist": 1.14,
+    "adx": 14.7,
+    "pdi": 34.5,
+    "mdi": 24.9,
+    "pctb": 0.71,
+    "bw_pct": 61.0,
+    "vol_ratio": 0.68,
+    "updown_vol": 0.68,
+    "atr_pct": 2.41,
+    "hi52": 281.07,
+    "lo52": 184.66
+   },
+   "tscores": {
+    "trend": 74.7,
+    "momentum": 62.0,
+    "timing": 67.0,
+    "total": 68.6
+   },
+   "chart": true
+  },
+  {
    "ticker": "PFE",
    "name": "화이자",
    "market": "us",
@@ -19131,8 +18901,8 @@
    "chg_20d": 4.743636577371668,
    "chg_60d": 20.553997874734286,
    "value": 96.6,
-   "quality": 26.3,
-   "target": 7.0,
+   "quality": 26.6,
+   "target": 6.5,
    "growth": null,
    "momentum": 84.2,
    "trend": 93.8,
@@ -19146,13 +18916,13 @@
     "aligned"
    ],
    "rev": -0.64,
-   "revision": 14.1,
-   "geo": 50.0,
+   "revision": 13.8,
+   "geo": 51.4,
    "score_daily": 55.0,
-   "score_weekly": 61.3,
+   "score_weekly": 61.4,
    "score_monthly": 53.5,
    "verdict": "매수",
-   "sector_fpe_median": 17.632414,
+   "sector_fpe_median": 17.785840999999998,
    "spark": [
     25.92,
     25.21,
@@ -19367,7 +19137,7 @@
    "sector": "Healthcare",
    "price": 145.27000427246094,
    "fpe": 15.685077,
-   "peg": 2.75,
+   "peg": 2.72,
    "pb": 8.552338,
    "roe": 0.06961,
    "opm": -0.00241,
@@ -19383,11 +19153,11 @@
    "chg_5d": -0.46590797533376804,
    "chg_20d": -2.359184390129432,
    "chg_60d": 11.926968015323913,
-   "value": 50.7,
-   "quality": 10.2,
-   "target": 43.6,
+   "value": 52.8,
+   "quality": 10.0,
+   "target": 44.4,
    "growth": null,
-   "momentum": 72.0,
+   "momentum": 72.2,
    "trend": 81.3,
    "timing": 55.0,
    "tech": 67.3,
@@ -19398,13 +19168,13 @@
     "pullback"
    ],
    "rev": -3.23,
-   "revision": 9.4,
-   "geo": 50.0,
-   "score_daily": 45.9,
-   "score_weekly": 43.5,
-   "score_monthly": 39.1,
+   "revision": 7.7,
+   "geo": 51.4,
+   "score_daily": 46.7,
+   "score_weekly": 44.4,
+   "score_monthly": 39.8,
    "verdict": "중립",
-   "sector_fpe_median": 17.632414,
+   "sector_fpe_median": 17.785840999999998,
    "spark": [
     115.44,
     113.87,
@@ -19635,11 +19405,11 @@
    "chg_5d": 0.07707981583386925,
    "chg_20d": 8.057811381415124,
    "chg_60d": 10.966944013327629,
-   "value": 68.5,
-   "quality": 79.7,
+   "value": 72.2,
+   "quality": 80.0,
    "target": 23.8,
-   "growth": 88.5,
-   "momentum": 76.2,
+   "growth": 88.7,
+   "momentum": 76.4,
    "trend": 95.3,
    "timing": 40.0,
    "tech": 72.3,
@@ -19651,13 +19421,13 @@
     "aligned"
    ],
    "rev": -0.37,
-   "revision": 17.2,
-   "geo": 50.0,
-   "score_daily": 59.6,
-   "score_weekly": 69.0,
-   "score_monthly": 70.0,
+   "revision": 16.9,
+   "geo": 51.4,
+   "score_daily": 60.8,
+   "score_weekly": 70.4,
+   "score_monthly": 71.3,
    "verdict": "매수",
-   "sector_fpe_median": 17.632414,
+   "sector_fpe_median": 17.785840999999998,
    "spark": [
     221.23,
     216.49,
@@ -19898,11 +19668,11 @@
    "chg_5d": 1.3070436869209168,
    "chg_20d": 7.604820016784086,
    "chg_60d": 10.259140344769357,
-   "value": 25.6,
+   "value": 24.7,
    "quality": 77.7,
-   "target": 36.7,
-   "growth": 50.8,
-   "momentum": 75.5,
+   "target": 36.5,
+   "growth": 51.6,
+   "momentum": 75.6,
    "trend": 95.6,
    "timing": 40.0,
    "tech": 72.4,
@@ -19914,14 +19684,14 @@
     "aligned",
     "golden"
    ],
-   "rev": -5.84,
-   "revision": 5.5,
+   "rev": -6.29,
+   "revision": 4.6,
    "geo": 50.0,
-   "score_daily": 48.3,
-   "score_weekly": 56.1,
-   "score_monthly": 52.3,
+   "score_daily": 48.0,
+   "score_weekly": 55.8,
+   "score_monthly": 52.1,
    "verdict": "중립",
-   "sector_fpe_median": 17.632414,
+   "sector_fpe_median": 17.785840999999998,
    "spark": [
     1112.0,
     1098.5699,
@@ -20161,11 +19931,11 @@
    "chg_5d": 1.5653586635799854,
    "chg_20d": 5.945352327479725,
    "chg_60d": 13.316477444673303,
-   "value": 31.6,
-   "quality": 67.7,
+   "value": 35.8,
+   "quality": 67.9,
    "target": 3.1,
-   "growth": 65.6,
-   "momentum": 81.3,
+   "growth": 66.1,
+   "momentum": 81.4,
    "trend": 95.7,
    "timing": 45.0,
    "tech": 75.2,
@@ -20178,13 +19948,13 @@
     "golden"
    ],
    "rev": -0.03,
-   "revision": 26.6,
-   "geo": 50.0,
-   "score_daily": 43.1,
-   "score_weekly": 50.2,
-   "score_monthly": 48.1,
+   "revision": 26.2,
+   "geo": 51.4,
+   "score_daily": 44.4,
+   "score_weekly": 51.7,
+   "score_monthly": 49.6,
    "verdict": "중립",
-   "sector_fpe_median": 17.632414,
+   "sector_fpe_median": 17.785840999999998,
    "spark": [
     341.66,
     337.6,
@@ -20415,11 +20185,11 @@
    "chg_5d": 1.2018196221483812,
    "chg_20d": 4.8692966464988,
    "chg_60d": -11.167078372631744,
-   "value": 90.8,
-   "quality": 12.5,
+   "value": 91.8,
+   "quality": 12.3,
    "target": 75.4,
-   "growth": 88.5,
-   "momentum": 43.0,
+   "growth": 88.7,
+   "momentum": 42.8,
    "trend": 57.8,
    "timing": 40.0,
    "tech": 55.8,
@@ -20430,13 +20200,13 @@
     "neutral"
    ],
    "rev": 0.27,
-   "revision": 64.1,
-   "geo": 50.0,
-   "score_daily": 59.1,
-   "score_weekly": 57.6,
-   "score_monthly": 61.5,
+   "revision": 63.1,
+   "geo": 51.4,
+   "score_daily": 59.4,
+   "score_weekly": 57.9,
+   "score_monthly": 61.7,
    "verdict": "중립",
-   "sector_fpe_median": 17.632414,
+   "sector_fpe_median": 17.785840999999998,
    "spark": [
     99.16,
     98.32,
@@ -20669,9 +20439,9 @@
    "chg_60d": 16.716573414731695,
    "value": 54.9,
    "quality": 37.3,
-   "target": 10.2,
-   "growth": 88.5,
-   "momentum": 81.9,
+   "target": 10.0,
+   "growth": 88.7,
+   "momentum": 82.0,
    "trend": 98.5,
    "timing": 35.0,
    "tech": 71.8,
@@ -20684,7 +20454,7 @@
    ],
    "rev": 12.18,
    "revision": 100.0,
-   "geo": 47.8,
+   "geo": 55.2,
    "score_daily": 43.6,
    "score_weekly": 49.8,
    "score_monthly": 50.8,
@@ -20793,15 +20563,9 @@
    },
    "geo_notes": [
     {
-     "pol": -1,
-     "theme": "러시아·우크라이나",
-     "eff": -0.15,
-     "text": "러시아·우크라이나: 휴전 기대(관심 보통) → 정유·에너지 성격상 부담"
-    },
-    {
      "pol": 1,
      "theme": "중동 정세",
-     "eff": 0.12,
+     "eff": 0.08,
      "text": "중동 정세: 긴장 고조(관심 보통) → 정유·에너지 성격상 우호적"
     }
    ],
@@ -20932,10 +20696,10 @@
    "chg_5d": 3.65349616427868,
    "chg_20d": 14.06701403517545,
    "chg_60d": 21.267749817745106,
-   "value": 77.0,
-   "quality": 39.3,
+   "value": 77.1,
+   "quality": 39.8,
    "target": 22.1,
-   "growth": 88.5,
+   "growth": 88.7,
    "momentum": 85.0,
    "trend": 98.0,
    "timing": 35.0,
@@ -20948,11 +20712,11 @@
     "aligned"
    ],
    "rev": 8.02,
-   "revision": 95.3,
-   "geo": 47.8,
-   "score_daily": 53.1,
-   "score_weekly": 60.1,
-   "score_monthly": 60.1,
+   "revision": 95.4,
+   "geo": 53.8,
+   "score_daily": 53.2,
+   "score_weekly": 60.3,
+   "score_monthly": 60.3,
    "verdict": "매수",
    "sector_fpe_median": 14.8815065,
    "spark": [
@@ -21057,15 +20821,9 @@
    },
    "geo_notes": [
     {
-     "pol": -1,
-     "theme": "러시아·우크라이나",
-     "eff": -0.15,
-     "text": "러시아·우크라이나: 휴전 기대(관심 보통) → 정유·에너지 성격상 부담"
-    },
-    {
      "pol": 1,
      "theme": "중동 정세",
-     "eff": 0.12,
+     "eff": 0.08,
      "text": "중동 정세: 긴장 고조(관심 보통) → 정유·에너지 성격상 우호적"
     }
    ],
@@ -21196,10 +20954,10 @@
    "chg_5d": 2.9281337149471565,
    "chg_20d": 18.460329486752116,
    "chg_60d": 26.69075409415762,
-   "value": 86.7,
-   "quality": 47.2,
+   "value": 86.9,
+   "quality": 47.3,
    "target": 24.2,
-   "growth": 88.5,
+   "growth": 88.7,
    "momentum": 82.7,
    "trend": 99.6,
    "timing": 25.0,
@@ -21212,12 +20970,12 @@
     "aligned",
     "golden"
    ],
-   "rev": 8.49,
+   "rev": 8.15,
    "revision": 96.9,
-   "geo": 47.8,
-   "score_daily": 56.0,
-   "score_weekly": 65.9,
-   "score_monthly": 66.0,
+   "geo": 53.8,
+   "score_daily": 56.1,
+   "score_weekly": 66.0,
+   "score_monthly": 66.1,
    "verdict": "매수",
    "sector_fpe_median": 14.8815065,
    "spark": [
@@ -21322,15 +21080,9 @@
    },
    "geo_notes": [
     {
-     "pol": -1,
-     "theme": "러시아·우크라이나",
-     "eff": -0.15,
-     "text": "러시아·우크라이나: 휴전 기대(관심 보통) → 정유·에너지 성격상 부담"
-    },
-    {
      "pol": 1,
      "theme": "중동 정세",
-     "eff": 0.12,
+     "eff": 0.08,
      "text": "중동 정세: 긴장 고조(관심 보통) → 정유·에너지 성격상 우호적"
     }
    ],
@@ -21444,14 +21196,14 @@
    "market": "us",
    "sector": "Energy",
    "price": 53.060001373291016,
-   "fpe": 16.859753,
+   "fpe": 16.855093,
    "peg": 1.374,
-   "pb": 3.0389464,
-   "roe": 0.12909001,
-   "opm": 0.12706,
-   "de": 47.002,
-   "eg": -0.297,
-   "upside": 17.49873423746784,
+   "pb": 2.8779085,
+   "roe": 0.1166,
+   "opm": 0.12054,
+   "de": 47.036,
+   "eg": -0.02,
+   "upside": 17.56371727385606,
    "analysts": 29.0,
    "rec_key": "buy",
    "rsi": 60.19672572975636,
@@ -21461,11 +21213,11 @@
    "chg_5d": 7.191921966244474,
    "chg_20d": 2.949166532330705,
    "chg_60d": 8.484975544522499,
-   "value": 41.7,
-   "quality": 31.2,
-   "target": 61.7,
-   "growth": 8.2,
-   "momentum": 65.7,
+   "value": 42.2,
+   "quality": 27.4,
+   "target": 62.3,
+   "growth": 19.4,
+   "momentum": 65.9,
    "trend": 74.4,
    "timing": 72.0,
    "tech": 68.2,
@@ -21476,12 +21228,12 @@
     "breakout",
     "div_bull"
    ],
-   "rev": -3.7,
-   "revision": 7.8,
-   "geo": 47.8,
-   "score_daily": 53.3,
-   "score_weekly": 48.1,
-   "score_monthly": 38.6,
+   "rev": -2.52,
+   "revision": 9.2,
+   "geo": 53.8,
+   "score_daily": 52.8,
+   "score_weekly": 47.3,
+   "score_monthly": 39.4,
    "verdict": "중립",
    "sector_fpe_median": 14.8815065,
    "spark": [
@@ -21586,15 +21338,9 @@
    },
    "geo_notes": [
     {
-     "pol": -1,
-     "theme": "러시아·우크라이나",
-     "eff": -0.15,
-     "text": "러시아·우크라이나: 휴전 기대(관심 보통) → 정유·에너지 성격상 부담"
-    },
-    {
      "pol": 1,
      "theme": "중동 정세",
-     "eff": 0.12,
+     "eff": 0.08,
      "text": "중동 정세: 긴장 고조(관심 보통) → 정유·에너지 성격상 우호적"
     }
    ],
@@ -21746,11 +21492,11 @@
    "chg_5d": 2.882199667174845,
    "chg_20d": 7.912718846188471,
    "chg_60d": -6.630276141044799,
-   "value": 49.5,
-   "quality": 38.0,
-   "target": 54.7,
-   "growth": 75.4,
-   "momentum": 52.3,
+   "value": 50.3,
+   "quality": 37.8,
+   "target": 55.0,
+   "growth": 75.8,
+   "momentum": 52.1,
    "trend": 38.8,
    "timing": 57.0,
    "tech": 56.6,
@@ -21761,11 +21507,11 @@
     "neutral"
    ],
    "rev": -0.57,
-   "revision": 15.6,
-   "geo": 50.0,
-   "score_daily": 48.8,
-   "score_weekly": 46.3,
-   "score_monthly": 50.0,
+   "revision": 15.4,
+   "geo": 49.6,
+   "score_daily": 49.0,
+   "score_weekly": 46.6,
+   "score_monthly": 50.3,
    "verdict": "중립",
    "sector_fpe_median": 18.751526,
    "spark": [
@@ -22008,11 +21754,11 @@
    "chg_5d": 2.889604100565557,
    "chg_20d": 10.260260290579314,
    "chg_60d": -1.0216150474600116,
-   "value": 56.5,
-   "quality": 24.5,
-   "target": 29.7,
-   "growth": 36.1,
-   "momentum": 57.6,
+   "value": 57.2,
+   "quality": 24.6,
+   "target": 28.8,
+   "growth": 37.1,
+   "momentum": 57.2,
    "trend": 61.2,
    "timing": 45.0,
    "tech": 58.7,
@@ -22024,11 +21770,11 @@
     "golden"
    ],
    "rev": 0.06,
-   "revision": 46.9,
-   "geo": 50.0,
-   "score_daily": 43.6,
+   "revision": 45.4,
+   "geo": 49.6,
+   "score_daily": 43.7,
    "score_weekly": 43.6,
-   "score_monthly": 39.6,
+   "score_monthly": 39.9,
    "verdict": "중립",
    "sector_fpe_median": 18.751526,
    "spark": [
@@ -22266,11 +22012,11 @@
    "chg_5d": 1.8754102640374581,
    "chg_20d": 12.077705680447103,
    "chg_60d": -1.5369906768374686,
-   "value": 46.9,
+   "value": 47.7,
    "quality": 28.1,
-   "target": 18.8,
-   "growth": 54.1,
-   "momentum": 58.3,
+   "target": 18.5,
+   "growth": 54.8,
+   "momentum": 58.0,
    "trend": 60.5,
    "timing": 40.0,
    "tech": 58.7,
@@ -22282,11 +22028,11 @@
     "golden"
    ],
    "rev": 0.1,
-   "revision": 51.6,
-   "geo": 50.0,
-   "score_daily": 38.1,
-   "score_weekly": 39.4,
-   "score_monthly": 38.8,
+   "revision": 49.2,
+   "geo": 49.6,
+   "score_daily": 38.3,
+   "score_weekly": 39.6,
+   "score_monthly": 39.1,
    "verdict": "매도",
    "sector_fpe_median": 18.751526,
    "spark": [
@@ -22515,11 +22261,11 @@
    "price": 161.02000427246094,
    "fpe": 21.730299,
    "peg": 3.792,
-   "pb": 6.883256,
-   "roe": 0.29608,
-   "opm": 0.26396,
-   "de": 70.342,
-   "eg": 0.011,
+   "pb": 6.8668175,
+   "roe": 0.29609,
+   "opm": 0.27062,
+   "de": 70.343,
+   "eg": 0.008,
    "upside": 7.0350362855359005,
    "analysts": 23.0,
    "rec_key": "buy",
@@ -22530,11 +22276,11 @@
    "chg_5d": 1.0480063413743856,
    "chg_20d": 10.114209790773131,
    "chg_60d": 11.850511783110672,
-   "value": 55.0,
-   "quality": 51.8,
-   "target": 32.8,
-   "growth": 19.7,
-   "momentum": 80.8,
+   "value": 55.2,
+   "quality": 52.3,
+   "target": 34.2,
+   "growth": 21.0,
+   "momentum": 80.9,
    "trend": 75.7,
    "timing": 40.0,
    "tech": 66.3,
@@ -22545,12 +22291,12 @@
     "turn",
     "golden"
    ],
-   "rev": 0.18,
-   "revision": 60.2,
-   "geo": 46.6,
-   "score_daily": 49.3,
-   "score_weekly": 55.2,
-   "score_monthly": 46.6,
+   "rev": 0.14,
+   "revision": 55.4,
+   "geo": 46.7,
+   "score_daily": 49.7,
+   "score_weekly": 55.7,
+   "score_monthly": 47.2,
    "verdict": "중립",
    "sector_fpe_median": 26.30623,
    "spark": [
@@ -22798,11 +22544,11 @@
    "chg_5d": -1.267308223715291,
    "chg_20d": 5.580231934990354,
    "chg_60d": 4.768901935334902,
-   "value": 41.1,
-   "quality": 62.2,
-   "target": 29.1,
-   "growth": 44.3,
-   "momentum": 67.5,
+   "value": 40.9,
+   "quality": 62.4,
+   "target": 29.0,
+   "growth": 45.2,
+   "momentum": 67.8,
    "trend": 94.4,
    "timing": 30.0,
    "tech": 70.2,
@@ -22815,11 +22561,11 @@
     "golden"
    ],
    "rev": 0.11,
-   "revision": 53.1,
-   "geo": 50.0,
+   "revision": 50.8,
+   "geo": 51.4,
    "score_daily": 46.6,
    "score_weekly": 54.7,
-   "score_monthly": 50.0,
+   "score_monthly": 50.2,
    "verdict": "중립",
    "sector_fpe_median": 26.30623,
    "spark": [
@@ -23067,10 +22813,10 @@
    "chg_20d": 5.550803948233751,
    "chg_60d": -3.159766599293634,
    "value": 76.7,
-   "quality": 50.1,
-   "target": 20.3,
-   "growth": 45.9,
-   "momentum": 59.2,
+   "quality": 49.2,
+   "target": 20.0,
+   "growth": 46.8,
+   "momentum": 58.9,
    "trend": 38.5,
    "timing": 40.0,
    "tech": 51.4,
@@ -23081,11 +22827,11 @@
     "neutral"
    ],
    "rev": -1.91,
-   "revision": 10.9,
-   "geo": 50.0,
-   "score_daily": 49.5,
-   "score_weekly": 53.8,
-   "score_monthly": 52.3,
+   "revision": 10.8,
+   "geo": 51.4,
+   "score_daily": 49.3,
+   "score_weekly": 53.5,
+   "score_monthly": 52.1,
    "verdict": "중립",
    "sector_fpe_median": 26.30623,
    "spark": [
@@ -23322,11 +23068,11 @@
    "chg_5d": 0.9090159525692032,
    "chg_20d": 11.029816320106711,
    "chg_60d": 7.911792111837723,
-   "value": 29.6,
-   "quality": 32.8,
-   "target": 41.4,
-   "growth": 14.8,
-   "momentum": 72.9,
+   "value": 29.5,
+   "quality": 33.0,
+   "target": 42.3,
+   "growth": 14.5,
+   "momentum": 73.1,
    "trend": 65.3,
    "timing": 40.0,
    "tech": 60.6,
@@ -23338,11 +23084,11 @@
     "golden"
    ],
    "rev": -0.0,
-   "revision": 36.7,
-   "geo": 46.6,
-   "score_daily": 38.3,
-   "score_weekly": 40.8,
-   "score_monthly": 32.6,
+   "revision": 36.9,
+   "geo": 46.7,
+   "score_daily": 38.5,
+   "score_weekly": 41.0,
+   "score_monthly": 32.8,
    "verdict": "중립",
    "sector_fpe_median": 26.30623,
    "spark": [
@@ -23585,11 +23331,11 @@
    "chg_5d": 1.4366473074888253,
    "chg_20d": 8.72915093555886,
    "chg_60d": 5.151076358968876,
-   "value": 17.2,
-   "quality": 42.6,
-   "target": 35.5,
-   "growth": 42.6,
-   "momentum": 66.7,
+   "value": 17.1,
+   "quality": 43.1,
+   "target": 36.2,
+   "growth": 43.5,
+   "momentum": 67.0,
    "trend": 69.7,
    "timing": 40.0,
    "tech": 62.4,
@@ -23601,11 +23347,11 @@
     "golden"
    ],
    "rev": 0.63,
-   "revision": 73.4,
-   "geo": 46.6,
-   "score_daily": 35.7,
-   "score_weekly": 38.2,
-   "score_monthly": 35.5,
+   "revision": 73.8,
+   "geo": 46.7,
+   "score_daily": 35.9,
+   "score_weekly": 38.4,
+   "score_monthly": 35.9,
    "verdict": "매도",
    "sector_fpe_median": 26.30623,
    "spark": [
@@ -23843,11 +23589,11 @@
    "chg_5d": 3.294248467073979,
    "chg_20d": 9.082528395814226,
    "chg_60d": -4.055802994961278,
-   "value": 53.3,
+   "value": 53.5,
    "quality": 51.9,
-   "target": 62.5,
-   "growth": 23.0,
-   "momentum": 53.2,
+   "target": 63.5,
+   "growth": 24.2,
+   "momentum": 52.9,
    "trend": 34.1,
    "timing": 30.0,
    "tech": 44.8,
@@ -23858,13 +23604,13 @@
     "downtrend"
    ],
    "rev": 0.01,
-   "revision": 40.6,
-   "geo": 46.6,
-   "score_daily": 47.8,
-   "score_weekly": 52.4,
-   "score_monthly": 48.2,
+   "revision": 40.0,
+   "geo": 43.4,
+   "score_daily": 48.1,
+   "score_weekly": 52.6,
+   "score_monthly": 48.6,
    "verdict": "매도",
-   "sector_fpe_median": 21.700049,
+   "sector_fpe_median": 21.7922815,
    "spark": [
     327.48,
     334.28,
@@ -24084,7 +23830,7 @@
    "sector": "Consumer Cyclical",
    "price": 248.4600067138672,
    "fpe": 18.080627,
-   "peg": 2.67,
+   "peg": 2.63,
    "pb": null,
    "roe": null,
    "opm": 0.46485,
@@ -24100,11 +23846,11 @@
    "chg_5d": 2.259540464082721,
    "chg_20d": 5.057085291275776,
    "chg_60d": -7.443002363964069,
-   "value": 74.3,
-   "quality": 87.5,
-   "target": 51.6,
-   "growth": 24.6,
-   "momentum": 51.5,
+   "value": 74.7,
+   "quality": 87.7,
+   "target": 51.9,
+   "growth": 25.8,
+   "momentum": 51.4,
    "trend": 35.1,
    "timing": 40.0,
    "tech": 50.0,
@@ -24115,13 +23861,13 @@
     "downtrend"
    ],
    "rev": -0.29,
-   "revision": 18.8,
-   "geo": 50.0,
-   "score_daily": 61.2,
-   "score_weekly": 67.7,
-   "score_monthly": 64.4,
+   "revision": 18.5,
+   "geo": 51.4,
+   "score_daily": 61.4,
+   "score_weekly": 67.9,
+   "score_monthly": 64.8,
    "verdict": "중립",
-   "sector_fpe_median": 21.700049,
+   "sector_fpe_median": 21.7922815,
    "spark": [
     283.82,
     278.61,
@@ -24339,7 +24085,7 @@
    "market": "us",
    "sector": "Consumer Cyclical",
    "price": 37.29999923706055,
-   "fpe": 23.397608,
+   "fpe": 23.582073,
    "peg": 1.3992,
    "pb": 3.634415,
    "roe": 0.21563,
@@ -24356,11 +24102,11 @@
    "chg_5d": 0.45784584986532373,
    "chg_20d": 4.335662201567958,
    "chg_60d": -11.799483495954831,
-   "value": 53.2,
-   "quality": 33.1,
-   "target": 5.9,
-   "growth": 18.0,
-   "momentum": 41.7,
+   "value": 53.5,
+   "quality": 33.4,
+   "target": 5.8,
+   "growth": 17.7,
+   "momentum": 41.6,
    "trend": 25.2,
    "timing": 50.0,
    "tech": 45.5,
@@ -24370,14 +24116,14 @@
    "tags": [
     "downtrend"
    ],
-   "rev": -26.17,
-   "revision": 1.6,
-   "geo": 33.1,
-   "score_daily": 37.0,
-   "score_weekly": 35.4,
-   "score_monthly": 32.2,
+   "rev": -26.09,
+   "revision": 1.5,
+   "geo": 43.9,
+   "score_daily": 37.1,
+   "score_weekly": 35.6,
+   "score_monthly": 32.4,
    "verdict": "강한 매도",
-   "sector_fpe_median": 21.700049,
+   "sector_fpe_median": 21.7922815,
    "spark": [
     44.19,
     45.2,
@@ -24482,9 +24228,9 @@
    "geo_notes": [
     {
      "pol": -1,
-     "theme": "미중 갈등·수출규제",
-     "eff": -0.2,
-     "text": "미중 갈등·수출규제: 갈등 고조(관심 보통) → 관세 민감·중국 노출 성격상 부담"
+     "theme": "관세·무역분쟁",
+     "eff": -0.08,
+     "text": "관세·무역분쟁: 무역 긴장(관심 보통) → 관세 민감·중국 노출 성격상 부담"
     }
    ],
    "sig": [
@@ -24611,9 +24357,9 @@
    "chg_20d": 6.00093737693872,
    "chg_60d": 17.01330320082286,
    "value": 53.8,
-   "quality": 30.6,
-   "target": 51.6,
-   "growth": 6.6,
+   "quality": 30.4,
+   "target": 52.3,
+   "growth": 8.1,
    "momentum": 83.7,
    "trend": 69.8,
    "timing": 30.0,
@@ -24626,11 +24372,11 @@
     "golden"
    ],
    "rev": 0.18,
-   "revision": 60.2,
-   "geo": 50.0,
-   "score_daily": 45.7,
-   "score_weekly": 51.7,
-   "score_monthly": 40.1,
+   "revision": 59.2,
+   "geo": 48.1,
+   "score_daily": 45.8,
+   "score_weekly": 51.8,
+   "score_monthly": 40.4,
    "verdict": "중립",
    "sector_fpe_median": 15.010191,
    "spark": [
@@ -24867,11 +24613,11 @@
    "chg_5d": -5.988287424165428,
    "chg_20d": -16.380634179315333,
    "chg_60d": -15.095040714493157,
-   "value": 52.7,
-   "quality": 54.4,
+   "value": 52.8,
+   "quality": 54.3,
    "target": 75.6,
-   "growth": 67.2,
-   "momentum": 15.4,
+   "growth": 67.7,
+   "momentum": 15.3,
    "trend": 33.9,
    "timing": 78.0,
    "tech": 43.0,
@@ -24883,13 +24629,13 @@
     "oversold"
    ],
    "rev": 0.53,
-   "revision": 70.3,
-   "geo": 46.6,
+   "revision": 70.8,
+   "geo": 45.3,
    "score_daily": 60.6,
    "score_weekly": 51.1,
-   "score_monthly": 57.7,
+   "score_monthly": 57.8,
    "verdict": "중립",
-   "sector_fpe_median": 21.785185,
+   "sector_fpe_median": 21.7746995,
    "spark": [
     955.92,
     985.82,
@@ -25118,11 +24864,11 @@
    "chg_5d": 0.6683761506257824,
    "chg_20d": -6.417460265403829,
    "chg_60d": 7.786887749554161,
-   "value": 34.6,
-   "quality": 28.0,
-   "target": 38.3,
-   "growth": 26.2,
-   "momentum": 53.6,
+   "value": 34.9,
+   "quality": 27.5,
+   "target": 38.8,
+   "growth": 27.4,
+   "momentum": 53.8,
    "trend": 77.0,
    "timing": 50.0,
    "tech": 57.2,
@@ -25133,13 +24879,13 @@
     "pullback"
    ],
    "rev": -0.07,
-   "revision": 24.2,
-   "geo": 33.1,
-   "score_daily": 41.7,
-   "score_weekly": 39.8,
-   "score_monthly": 34.8,
+   "revision": 23.8,
+   "geo": 43.9,
+   "score_daily": 41.9,
+   "score_weekly": 39.9,
+   "score_monthly": 35.0,
    "verdict": "매도",
-   "sector_fpe_median": 21.785185,
+   "sector_fpe_median": 21.7746995,
    "spark": [
     588.47,
     589.24,
@@ -25244,9 +24990,9 @@
    "geo_notes": [
     {
      "pol": -1,
-     "theme": "미중 갈등·수출규제",
-     "eff": -0.2,
-     "text": "미중 갈등·수출규제: 갈등 고조(관심 보통) → 관세 민감·중국 노출 성격상 부담"
+     "theme": "관세·무역분쟁",
+     "eff": -0.08,
+     "text": "관세·무역분쟁: 무역 긴장(관심 보통) → 관세 민감·중국 노출 성격상 부담"
     }
    ],
    "sig": [
@@ -25365,14 +25111,14 @@
    "market": "us",
    "sector": "Industrials",
    "price": 221.14999389648438,
-   "fpe": 22.48723,
+   "fpe": 22.466259,
    "peg": 3.3074,
-   "pb": 3.099466,
+   "pb": 3.1308396,
    "roe": 0.44387,
-   "opm": 0.14818,
-   "de": 73.245,
+   "opm": 0.1692,
+   "de": 76.101,
    "eg": -0.5,
-   "upside": 14.716553019101397,
+   "upside": 14.618253219870226,
    "analysts": 23.0,
    "rec_key": "buy",
    "rsi": 66.31917953421527,
@@ -25383,10 +25129,10 @@
    "chg_20d": 4.046102432956622,
    "chg_60d": -8.581707846452591,
    "value": 44.6,
-   "quality": 52.6,
-   "target": 47.5,
-   "growth": 3.3,
-   "momentum": 48.3,
+   "quality": 53.6,
+   "target": 47.9,
+   "growth": 4.0,
+   "momentum": 48.1,
    "trend": 33.4,
    "timing": 27.0,
    "tech": 44.0,
@@ -25396,14 +25142,14 @@
    "tags": [
     "range"
    ],
-   "rev": 1.64,
-   "revision": 78.1,
-   "geo": 42.2,
-   "score_daily": 41.8,
-   "score_weekly": 46.5,
-   "score_monthly": 40.3,
+   "rev": 1.63,
+   "revision": 78.5,
+   "geo": 48.1,
+   "score_daily": 42.0,
+   "score_weekly": 46.9,
+   "score_monthly": 40.8,
    "verdict": "중립",
-   "sector_fpe_median": 21.785185,
+   "sector_fpe_median": 21.7746995,
    "spark": [
     239.7588,
     240.1783,
@@ -25504,20 +25250,7 @@
     "naver": "https://m.stock.naver.com/worldstock/stock/HON.O/total",
     "news": "https://search.naver.com/search.naver?where=news&query=%ED%95%98%EB%8B%88%EC%9B%B0+%EC%A3%BC%EA%B0%80"
    },
-   "geo_notes": [
-    {
-     "pol": -1,
-     "theme": "러시아·우크라이나",
-     "eff": -0.37,
-     "text": "러시아·우크라이나: 휴전 기대(관심 보통) → 방산 성격상 부담"
-    },
-    {
-     "pol": 1,
-     "theme": "북한·한반도",
-     "eff": 0.1,
-     "text": "북한·한반도: 도발(관심 보통) → 방산 성격상 우호적"
-    }
-   ],
+   "geo_notes": [],
    "sig": [
     [
      -1,
@@ -25639,14 +25372,14 @@
    "market": "us",
    "sector": "Industrials",
    "price": 285.6400146484375,
-   "fpe": 30.762838,
+   "fpe": 30.680231,
    "peg": 4.0588,
    "pb": 16.845955,
    "roe": 0.50165004,
    "opm": 0.18494,
    "de": 115.989,
    "eg": 0.089,
-   "upside": 34.018162851292956,
+   "upside": 32.651144996737116,
    "analysts": 21.0,
    "rec_key": "strong_buy",
    "rsi": 25.866146040754515,
@@ -25656,10 +25389,10 @@
    "chg_5d": -8.982561619342523,
    "chg_20d": -12.672347718832233,
    "chg_60d": -19.547091095707724,
-   "value": 12.0,
-   "quality": 54.8,
-   "target": 81.6,
-   "growth": 29.5,
+   "value": 11.9,
+   "quality": 54.7,
+   "target": 78.5,
+   "growth": 30.6,
    "momentum": 12.3,
    "trend": 27.3,
    "timing": 70.0,
@@ -25672,14 +25405,14 @@
     "oversold",
     "div_bull"
    ],
-   "rev": 2.82,
-   "revision": 85.9,
-   "geo": 51.9,
-   "score_daily": 46.8,
-   "score_weekly": 37.5,
-   "score_monthly": 39.8,
+   "rev": 2.79,
+   "revision": 86.2,
+   "geo": 44.3,
+   "score_daily": 46.2,
+   "score_weekly": 36.9,
+   "score_monthly": 39.5,
    "verdict": "매도",
-   "sector_fpe_median": 21.785185,
+   "sector_fpe_median": 21.7746995,
    "spark": [
     357.03,
     357.64,
@@ -25781,26 +25514,7 @@
     "naver": "https://m.stock.naver.com/worldstock/stock/GE/total",
     "news": "https://search.naver.com/search.naver?where=news&query=GE+%EC%97%90%EC%96%B4%EB%A1%9C%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4+%EC%A3%BC%EA%B0%80"
    },
-   "geo_notes": [
-    {
-     "pol": -1,
-     "theme": "러시아·우크라이나",
-     "eff": -0.22,
-     "text": "러시아·우크라이나: 휴전 기대(관심 보통) → 방산 성격상 부담"
-    },
-    {
-     "pol": 1,
-     "theme": "환율(원화)",
-     "eff": 0.1,
-     "text": "환율(원화): 원화 강세(관심 보통) → 유가 원가 부담주 성격상 우호적"
-    },
-    {
-     "pol": 1,
-     "theme": "북한·한반도",
-     "eff": 0.1,
-     "text": "북한·한반도: 도발(관심 보통) → 방산 성격상 우호적"
-    }
-   ],
+   "geo_notes": [],
    "sig": [
     [
      1,
@@ -25927,14 +25641,14 @@
    "market": "us",
    "sector": "Industrials",
    "price": 604.1799926757812,
-   "fpe": 18.284138,
+   "fpe": 18.235085,
    "peg": 1.0155,
-   "pb": 13.839246,
+   "pb": 13.809197,
    "roe": 0.6,
    "opm": 0.11405,
    "de": 203.697,
    "eg": 0.147,
-   "upside": 4.872572359412186,
+   "upside": 5.022312504893245,
    "analysts": 21.0,
    "rec_key": "buy",
    "rsi": 77.98286339756818,
@@ -25944,11 +25658,11 @@
    "chg_5d": 9.435049228655789,
    "chg_20d": 16.286857247443187,
    "chg_60d": 5.237673632484374,
-   "value": 71.1,
+   "value": 70.7,
    "quality": 52.2,
-   "target": 26.2,
-   "growth": 41.0,
-   "momentum": 62.5,
+   "target": 25.8,
+   "growth": 41.9,
+   "momentum": 62.8,
    "trend": 56.4,
    "timing": 25.0,
    "tech": 49.6,
@@ -25958,14 +25672,14 @@
    "tags": [
     "neutral"
    ],
-   "rev": 0.38,
-   "revision": 68.8,
-   "geo": 42.2,
-   "score_daily": 47.9,
-   "score_weekly": 55.7,
+   "rev": 0.47,
+   "revision": 69.2,
+   "geo": 48.1,
+   "score_daily": 47.8,
+   "score_weekly": 55.6,
    "score_monthly": 52.6,
    "verdict": "중립",
-   "sector_fpe_median": 21.785185,
+   "sector_fpe_median": 21.7746995,
    "spark": [
     532.32,
     510.95,
@@ -26066,20 +25780,7 @@
     "naver": "https://m.stock.naver.com/worldstock/stock/LMT/total",
     "news": "https://search.naver.com/search.naver?where=news&query=%EB%A1%9D%ED%9E%88%EB%93%9C%EB%A7%88%ED%8B%B4+%EC%A3%BC%EA%B0%80"
    },
-   "geo_notes": [
-    {
-     "pol": -1,
-     "theme": "러시아·우크라이나",
-     "eff": -0.37,
-     "text": "러시아·우크라이나: 휴전 기대(관심 보통) → 방산 성격상 부담"
-    },
-    {
-     "pol": 1,
-     "theme": "북한·한반도",
-     "eff": 0.1,
-     "text": "북한·한반도: 도발(관심 보통) → 방산 성격상 우호적"
-    }
-   ],
+   "geo_notes": [],
    "sig": [
     [
      -1,
@@ -26211,7 +25912,7 @@
    "market": "us",
    "sector": "Industrials",
    "price": 191.00999450683594,
-   "fpe": 23.797152,
+   "fpe": 23.77781,
    "peg": 2.2145,
    "pb": 3.7220857,
    "roe": 0.1285,
@@ -26228,11 +25929,11 @@
    "chg_5d": -1.5006207145145223,
    "chg_20d": 0.8500531479591844,
    "chg_60d": -10.901208062175115,
-   "value": 39.2,
-   "quality": 32.5,
-   "target": 63.3,
-   "growth": 57.4,
-   "momentum": 33.7,
+   "value": 39.6,
+   "quality": 32.7,
+   "target": 63.5,
+   "growth": 58.1,
+   "momentum": 33.6,
    "trend": 51.2,
    "timing": 55.0,
    "tech": 51.7,
@@ -26243,14 +25944,14 @@
     "reversal",
     "div_bull"
    ],
-   "rev": 5.05,
-   "revision": 90.6,
-   "geo": 42.2,
-   "score_daily": 47.0,
-   "score_weekly": 42.1,
-   "score_monthly": 44.5,
+   "rev": 5.35,
+   "revision": 90.8,
+   "geo": 48.1,
+   "score_daily": 47.2,
+   "score_weekly": 42.3,
+   "score_monthly": 44.8,
    "verdict": "중립",
-   "sector_fpe_median": 21.785185,
+   "sector_fpe_median": 21.7746995,
    "spark": [
     192.58,
     185.6,
@@ -26351,20 +26052,7 @@
     "naver": "https://m.stock.naver.com/worldstock/stock/RTX/total",
     "news": "https://search.naver.com/search.naver?where=news&query=RTX%28%EB%A0%88%EC%9D%B4%EC%8B%9C%EC%98%A8%29+%EC%A3%BC%EA%B0%80"
    },
-   "geo_notes": [
-    {
-     "pol": -1,
-     "theme": "러시아·우크라이나",
-     "eff": -0.37,
-     "text": "러시아·우크라이나: 휴전 기대(관심 보통) → 방산 성격상 부담"
-    },
-    {
-     "pol": 1,
-     "theme": "북한·한반도",
-     "eff": 0.1,
-     "text": "북한·한반도: 도발(관심 보통) → 방산 성격상 우호적"
-    }
-   ],
+   "geo_notes": [],
    "sig": [
     [
      1,
@@ -26486,7 +26174,7 @@
    "market": "us",
    "sector": "Industrials",
    "price": 551.4400024414062,
-   "fpe": 18.341373,
+   "fpe": 18.376776,
    "peg": 3.3766,
    "pb": 4.1931095,
    "roe": 0.26073998,
@@ -26504,10 +26192,10 @@
    "chg_20d": 8.015359693709968,
    "chg_60d": 3.101809406889111,
    "value": 56.7,
-   "quality": 37.1,
-   "target": 46.3,
-   "growth": 21.3,
-   "momentum": 60.7,
+   "quality": 37.3,
+   "target": 46.7,
+   "growth": 22.6,
+   "momentum": 60.3,
    "trend": 36.4,
    "timing": 35.0,
    "tech": 45.8,
@@ -26518,13 +26206,13 @@
     "downtrend"
    ],
    "rev": 2.59,
-   "revision": 84.4,
-   "geo": 42.2,
-   "score_daily": 44.4,
-   "score_weekly": 47.7,
-   "score_monthly": 42.1,
+   "revision": 84.6,
+   "geo": 48.1,
+   "score_daily": 44.5,
+   "score_weekly": 47.8,
+   "score_monthly": 42.4,
    "verdict": "매도",
-   "sector_fpe_median": 21.785185,
+   "sector_fpe_median": 21.7746995,
    "spark": [
     550.15,
     521.5,
@@ -26625,20 +26313,7 @@
     "naver": "https://m.stock.naver.com/worldstock/stock/NOC/total",
     "news": "https://search.naver.com/search.naver?where=news&query=%EB%85%B8%EC%8A%A4%EB%9F%BD%EA%B7%B8%EB%9F%AC%EB%A8%BC+%EC%A3%BC%EA%B0%80"
    },
-   "geo_notes": [
-    {
-     "pol": -1,
-     "theme": "러시아·우크라이나",
-     "eff": -0.37,
-     "text": "러시아·우크라이나: 휴전 기대(관심 보통) → 방산 성격상 부담"
-    },
-    {
-     "pol": 1,
-     "theme": "북한·한반도",
-     "eff": 0.1,
-     "text": "북한·한반도: 도발(관심 보통) → 방산 성격상 우호적"
-    }
-   ],
+   "geo_notes": [],
    "sig": [
     [
      -1,
@@ -26772,11 +26447,11 @@
    "chg_5d": 3.672542140311208,
    "chg_20d": 7.556405431355961,
    "chg_60d": -3.999239307233271,
-   "value": 80.8,
-   "quality": 32.4,
-   "target": 40.6,
-   "growth": 3.3,
-   "momentum": 54.7,
+   "value": 81.1,
+   "quality": 32.7,
+   "target": 41.2,
+   "growth": 4.0,
+   "momentum": 54.4,
    "trend": 46.4,
    "timing": 60.0,
    "tech": 58.8,
@@ -26788,13 +26463,13 @@
     "div_bull"
    ],
    "rev": -0.02,
-   "revision": 28.9,
-   "geo": 56.3,
-   "score_daily": 56.3,
-   "score_weekly": 54.0,
-   "score_monthly": 45.2,
+   "revision": 28.5,
+   "geo": 41.5,
+   "score_daily": 56.5,
+   "score_weekly": 54.3,
+   "score_monthly": 45.5,
    "verdict": "중립",
-   "sector_fpe_median": 21.785185,
+   "sector_fpe_median": 21.7746995,
    "spark": [
     105.13,
     104.86,
@@ -26898,22 +26573,10 @@
    },
    "geo_notes": [
     {
-     "pol": 1,
-     "theme": "러시아·우크라이나",
-     "eff": 0.15,
-     "text": "러시아·우크라이나: 휴전 기대(관심 보통) → 유가 원가 부담주 성격상 우호적"
-    },
-    {
      "pol": -1,
      "theme": "중동 정세",
-     "eff": -0.12,
+     "eff": -0.08,
      "text": "중동 정세: 긴장 고조(관심 보통) → 유가 원가 부담주 성격상 부담"
-    },
-    {
-     "pol": 1,
-     "theme": "환율(원화)",
-     "eff": 0.1,
-     "text": "환율(원화): 원화 강세(관심 보통) → 유가 원가 부담주 성격상 우호적"
     }
    ],
    "sig": [
@@ -27044,11 +26707,11 @@
    "chg_5d": -0.29024573667773,
    "chg_20d": -5.140190929317912,
    "chg_60d": -3.144655701032306,
-   "value": 83.0,
-   "quality": 33.9,
-   "target": 46.1,
-   "growth": 11.5,
-   "momentum": 44.5,
+   "value": 82.7,
+   "quality": 33.4,
+   "target": 46.5,
+   "growth": 11.3,
+   "momentum": 44.2,
    "trend": 48.5,
    "timing": 45.0,
    "tech": 47.6,
@@ -27059,11 +26722,11 @@
     "reversal"
    ],
    "rev": 0.12,
-   "revision": 54.7,
-   "geo": 50.0,
-   "score_daily": 55.3,
-   "score_weekly": 55.3,
-   "score_monthly": 48.6,
+   "revision": 53.1,
+   "geo": 49.6,
+   "score_daily": 55.2,
+   "score_weekly": 55.1,
+   "score_monthly": 48.4,
    "verdict": "중립",
    "sector_fpe_median": 15.010191,
    "spark": [
@@ -27301,11 +26964,11 @@
    "chg_5d": -10.708191858762461,
    "chg_20d": -17.533487008422767,
    "chg_60d": -9.823347131548054,
-   "value": 85.2,
-   "quality": 27.9,
-   "target": 66.4,
-   "growth": 3.3,
-   "momentum": 20.0,
+   "value": 85.5,
+   "quality": 27.4,
+   "target": 67.3,
+   "growth": 4.0,
+   "momentum": 19.8,
    "trend": 29.0,
    "timing": 65.0,
    "tech": 37.1,
@@ -27316,11 +26979,11 @@
     "neutral"
    ],
    "rev": 2.4,
-   "revision": 82.8,
-   "geo": 50.0,
-   "score_daily": 60.8,
-   "score_weekly": 53.1,
-   "score_monthly": 47.9,
+   "revision": 83.1,
+   "geo": 49.6,
+   "score_daily": 61.0,
+   "score_weekly": 53.2,
+   "score_monthly": 48.1,
    "verdict": "중립",
    "sector_fpe_median": 15.010191,
    "spark": [
@@ -27567,7 +27230,7 @@
    "quality": null,
    "target": null,
    "growth": null,
-   "momentum": 63.0,
+   "momentum": 63.3,
    "trend": 78.7,
    "timing": 35.0,
    "tech": 60.9,
@@ -27579,7 +27242,7 @@
    ],
    "rev": null,
    "revision": null,
-   "geo": 50.0,
+   "geo": 51.4,
    "score_daily": 49.9,
    "score_weekly": 54.4,
    "score_monthly": 52.0,

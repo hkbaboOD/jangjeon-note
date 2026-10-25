@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-24T10:51+09:00",
+ "updated": "2026-10-26T08:30+09:00",
  "rows": [
   {
    "ticker": "005930.KS",
@@ -277,7 +277,7 @@
    },
    "fund": {
     "forward_pe": 2.9814029,
-    "peg": 0.1312,
+    "peg": 0.1,
     "roe": 0.30794,
     "target_mean": 478905.62,
     "analyst_count": 36.0,
@@ -586,7 +586,7 @@
    },
    "fund": {
     "forward_pe": 2.730026,
-    "peg": 0.1998,
+    "peg": 0.14,
     "roe": 0.92679,
     "target_mean": 3096288.0,
     "analyst_count": 38.0,
@@ -839,7 +839,7 @@
     }
    },
    "fund": {
-    "forward_pe": 4.277194,
+    "forward_pe": 4.2415476,
     "peg": 0.1598,
     "roe": 0.8826,
     "target_mean": 1561.9111,
@@ -1086,8 +1086,8 @@
     }
    },
    "fund": {
-    "forward_pe": 13.2991085,
-    "peg": 0.4791,
+    "forward_pe": 13.255753,
+    "peg": 0.4544,
     "roe": 1.17211,
     "target_mean": 328.95346,
     "analyst_count": 58.0,
@@ -1100,7 +1100,7 @@
    "name": "TSMC",
    "market": "us",
    "verdict": "매수",
-   "score": 69.8,
+   "score": 69.9,
    "diag": null,
    "tech": {
     "last": 418.510009765625,
@@ -1326,7 +1326,7 @@
     }
    },
    "fund": {
-    "forward_pe": 17.85738,
+    "forward_pe": 17.896294,
     "peg": 0.8581,
     "roe": 0.41854998,
     "target_mean": 584.39294,
