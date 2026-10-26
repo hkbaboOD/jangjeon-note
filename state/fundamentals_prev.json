@@ -4,7 +4,7 @@
   "sector": "Technology",
   "currency": "USD",
   "price": 347.725,
-  "forward_pe": 36.332245,
+  "forward_pe": 36.365494,
   "trailing_pe": 39.87672,
   "peg": 2.706,
   "pb": 47.245243,
@@ -13,9 +13,9 @@
   "debt_to_equity": 78.445,
   "revenue_growth": 0.164,
   "earnings_growth": 0.287,
-  "target_mean": 328.35025,
+  "target_mean": 329.24768,
   "target_high": 405.0,
-  "target_low": 215.0,
+  "target_low": 240.0,
   "analyst_count": 39.0,
   "rec_key": "buy",
   "rec_mean": 2.25,
@@ -23,7 +23,7 @@
   "market_cap": 5074761285632.0,
   "high_52w": 351.73,
   "low_52w": 243.42,
-  "forward_eps": 9.5707,
+  "forward_eps": 9.56195,
   "trailing_eps": 8.72,
   "industry": "Consumer Electronics",
   "country": "United States",
@@ -31,7 +31,7 @@
   "website": "https://www.apple.com",
   "summary": "Apple Inc. designs, manufactures, and markets smartphones, personal computers, tablets, wearables, and accessories worldwide. The company offers iPhone, a line of smartphones; Mac, a line of personal computers; iPad, a line of multi-purpose tablets; and wearables, home, and accessories comprising AirPods, Apple Vision Pro, Apple TV, Apple Watch, Beats products, and HomePod, as well as Apple branded and third-party accessories. It also provides AppleCare support and cloud services; and operates various platforms, including the App Store that allows customers to discover and download applications and digital content, such as books, music, video, games, and podcasts, as well as advertising serv",
   "earnings_ts": 1793649600.0,
-  "_fetched": "2026-10-24T01:51:35.299328"
+  "_fetched": "2026-10-25T23:33:36.374527"
  },
  "MSFT": {
   "name": "Microsoft Corporation",
@@ -65,17 +65,17 @@
   "website": "https://www.microsoft.com",
   "summary": "Microsoft Corporation, a technology company, develops and supports a portfolio of technology solutions for individuals and businesses worldwide. Its products include operating systems, server applications, business solution applications, software development tools, desktop and server management tools, and video games; and devices, such as PCs, tablets, gaming and entertainment consoles, other intelligent devices, and related accessories. The company's Productivity and Business Processes segment offers Microsoft 365 Commercial, Enterprise Mobility + Security, Power BI, Exchange, SharePoint, Microsoft Teams, Microsoft 365 Security and Compliance, Microsoft 365 Copilot, and Windows Commercial o",
   "earnings_ts": 1793217600.0,
-  "_fetched": "2026-10-24T01:51:36.151645"
+  "_fetched": "2026-10-25T23:33:37.929466"
  },
  "NVDA": {
   "name": "NVIDIA Corporation",
   "sector": "Technology",
   "currency": "USD",
-  "price": 211.65,
-  "forward_pe": 13.2991085,
-  "trailing_pe": 26.757269,
-  "peg": 0.4791,
-  "pb": 22.318886,
+  "price": 210.96,
+  "forward_pe": 13.255753,
+  "trailing_pe": 26.67004,
+  "peg": 0.4544,
+  "pb": 22.246126,
   "roe": 1.17211,
   "op_margin": 0.66236997,
   "debt_to_equity": 16.971,
@@ -88,7 +88,7 @@
   "rec_key": "strong_buy",
   "rec_mean": 1.29032,
   "payout_ratio": 0.0354,
-  "market_cap": 5110712238080.0,
+  "market_cap": 5094050889728.0,
   "high_52w": 243.37,
   "low_52w": 164.27,
   "forward_eps": 15.9146,
@@ -99,7 +99,7 @@
   "website": "https://www.nvidia.com",
   "summary": "NVIDIA Corporation operates as a data center scale AI infrastructure company in the United States, Taiwan, China, Hong Kong, Europe, and internationally. It operates through Compute & Networking, and Graphics segments. The Compute & Networking segment provides data center accelerated computing and networking platforms and artificial intelligence solutions and software, and automotive platforms and autonomous and electric vehicle solutions, including software. The Graphics segment offers GeForce GPUs for gaming and PCs; Quadro/NVIDIA RTX GPUs for enterprise workstation graphics. The company's products are used in gaming, professional visualization, data center, and automotive markets. It sell",
   "earnings_ts": 1794945600.0,
-  "_fetched": "2026-10-23T17:01:12.439568"
+  "_fetched": "2026-10-25T23:33:39.419291"
  },
  "GOOGL": {
   "name": "Alphabet Inc.",
@@ -124,7 +124,7 @@
   "payout_ratio": 0.042600002,
   "market_cap": 3916147458048.0,
   "high_52w": 408.61,
-  "low_52w": 255.32,
+  "low_52w": 264.28,
   "forward_eps": 15.35864,
   "trailing_eps": 19.93,
   "industry": "Internet Content & Information",
@@ -133,7 +133,7 @@
   "website": "https://abc.xyz",
   "summary": "Alphabet Inc. offers various products and platforms in the United States, Europe, the Middle East, Africa, the Asia-Pacific, Canada, and Latin America. It operates through Google Services, Google Cloud, and Other Bets segments. The Google Services segment provides products and services, including ads, Android, Chrome, devices, Gmail, Google Drive, Google Maps, Google Photos, Google Play, Search, and YouTube. It is also involved in the sale of apps and in-app purchases and digital content in Google Play and YouTube; and devices, as well as the provision of YouTube consumer subscription services, such as YouTube TV, YouTube Music and Premium, NFL Sunday Ticket, and Google One. The Google Cloud",
   "earnings_ts": 1793217600.0,
-  "_fetched": "2026-10-24T01:51:36.979402"
+  "_fetched": "2026-10-25T23:33:41.126915"
  },
  "AMZN": {
   "name": "Amazon.com, Inc.",
@@ -167,25 +167,25 @@
   "website": "https://www.amazon.com",
   "summary": "Amazon.com, Inc. engages in the retail sale of consumer products, advertising, and subscriptions service through online and physical stores in North America and internationally. The company operates through three segments: North America, International, and Amazon Web Services (AWS). It also manufactures and sells electronic devices, including Kindle, fire tablets, fire TVs, echo, ring, blink, and eero; and develops and produces media content. In addition, the company offers programs that enable sellers to sell their products in its stores; and programs that allow authors, independent publishers, musicians, filmmakers, Twitch streamers, skill and app developers, and others to publish and sell",
   "earnings_ts": 1793304000.0,
-  "_fetched": "2026-10-24T01:51:37.795555"
+  "_fetched": "2026-10-25T23:33:42.764289"
  },
  "META": {
   "name": "Meta Platforms, Inc.",
   "sector": "Communication Services",
   "currency": "USD",
   "price": 642.62,
-  "forward_pe": 18.467154,
+  "forward_pe": 18.33438,
   "trailing_pe": 21.92494,
-  "peg": 0.86,
-  "pb": 6.020762,
+  "peg": 0.85,
+  "pb": 6.0301967,
   "roe": 0.32264,
   "op_margin": 0.35414,
-  "debt_to_equity": 41.153,
+  "debt_to_equity": 42.161,
   "revenue_growth": 0.261,
   "earnings_growth": 2.648,
-  "target_mean": 843.3938,
+  "target_mean": 844.25586,
   "target_high": 1050.0,
-  "target_low": 600.0,
+  "target_low": 629.06,
   "analyst_count": 58.0,
   "rec_key": "strong_buy",
   "rec_mean": 1.40323,
@@ -193,7 +193,7 @@
   "market_cap": 1637078401024.0,
   "high_52w": 779.82,
   "low_52w": 520.26,
-  "forward_eps": 34.798,
+  "forward_eps": 35.05,
   "trailing_eps": 29.31,
   "industry": "Internet Content & Information",
   "country": "United States",
@@ -201,7 +201,7 @@
   "website": "https://www.meta.com",
   "summary": "Meta Platforms, Inc. engages in the development of products that enable people to connect and share with friends and family through mobile devices, personal computers, virtual reality (VR) headsets, and AI glasses in the United States, Canada, Europe, Asia-Pacific, and internationally. It operates through two segments, Family of Apps (FoA) and Reality Labs (RL). The FoA segment offers Facebook, which enables people to build community through feed, reels, stories, groups, marketplace, and other; Instagram that brings people closer through Instagram feed, stories, reels, live, and messaging; Messenger, a messaging application for people to connect with friends, family, communities, and busines",
   "earnings_ts": 1792612800.0,
-  "_fetched": "2026-10-24T01:51:38.639686"
+  "_fetched": "2026-10-25T23:33:44.295834"
  },
  "AVGO": {
   "name": "Broadcom Inc.",
@@ -209,7 +209,7 @@
   "currency": "USD",
   "price": 321.68,
   "forward_pe": 16.554564,
-  "trailing_pe": 42.94793,
+  "trailing_pe": 41.08301,
   "peg": 0.361,
   "pb": 15.4046545,
   "roe": 0.44245,
@@ -228,24 +228,24 @@
   "high_52w": 495.0,
   "low_52w": 289.96,
   "forward_eps": 19.4315,
-  "trailing_eps": 7.49,
+  "trailing_eps": 7.83,
   "industry": "Semiconductors",
   "country": "United States",
   "employees": 33000.0,
   "website": "https://www.broadcom.com",
   "summary": "Broadcom Inc. designs, develops, and supplies various semiconductor devices and infrastructure software solutions internationally. The company operates in two segments: Semiconductor Solutions and Infrastructure Software. The company offers networking connectivity, such as custom silicon solutions, ethernet switching & routing, ethernet NIC controllers, physical layer devices, and fiber optic components; wireless device connectivity, including RF semiconductor devices, connectivity solutions, custom touch controllers, and inductive charging ASICS; servers and storage system solutions, such as PCIE switches, SAS & raid products, fibre channel products, and HDD & SSD solutions; broadband solut",
   "earnings_ts": 1796846400.0,
-  "_fetched": "2026-10-24T01:51:39.460100"
+  "_fetched": "2026-10-25T23:33:45.771828"
  },
  "TSM": {
   "name": "Taiwan Semiconductor Manufactur",
   "sector": "Technology",
   "currency": "USD",
-  "price": 417.6,
-  "forward_pe": 17.85738,
-  "trailing_pe": 27.064161,
+  "price": 418.51,
+  "forward_pe": 17.896294,
+  "trailing_pe": 27.123137,
   "peg": 0.8581,
-  "pb": 79.69587,
+  "pb": 79.86954,
   "roe": 0.41854998,
   "op_margin": 0.58655,
   "debt_to_equity": 11.619,
@@ -258,7 +258,7 @@
   "rec_key": "strong_buy",
   "rec_mean": 1.38095,
   "payout_ratio": 0.2446,
-  "market_cap": 2165871607808.0,
+  "market_cap": 2170591248384.0,
   "high_52w": 487.47,
   "low_52w": 266.82,
   "forward_eps": 23.38529,
@@ -269,17 +269,17 @@
   "website": "https://www.tsmc.com",
   "summary": "Taiwan Semiconductor Manufacturing Company Limited, together with its subsidiaries, manufactures, packages, tests, and sells integrated circuits and other semiconductor devices in Taiwan, China, Europe, the Middle East, Africa, Japan, the United States, and internationally. It provides various wafer fabrication processes, such as processes to manufacture complementary metal- oxide-semiconductor (CMOS) logic, mixed-signal, radio frequency, embedded memory, bipolar CMOS mixed-signal, and others. The company also involved in providing customer and engineering support services; manufacturing of masks; investment in technology start-up companies; research, designing, developing, manufacturing, pa",
   "earnings_ts": 1799929800.0,
-  "_fetched": "2026-10-23T17:01:13.387267"
+  "_fetched": "2026-10-25T23:33:47.251459"
  },
  "MU": {
   "name": "Micron Technology, Inc.",
   "sector": "Technology",
   "currency": "USD",
-  "price": 884.925,
-  "forward_pe": 4.277194,
-  "trailing_pe": 11.9053545,
+  "price": 877.55,
+  "forward_pe": 4.2415476,
+  "trailing_pe": 11.806134,
   "peg": 0.1598,
-  "pb": 7.2327337,
+  "pb": 7.1724563,
   "roe": 0.8826,
   "op_margin": 0.80678004,
   "debt_to_equity": 3.743,
@@ -292,7 +292,7 @@
   "rec_key": "strong_buy",
   "rec_mean": 1.36735,
   "payout_ratio": 0.0070999996,
-  "market_cap": 1001224667136.0,
+  "market_cap": 992880427008.0,
   "high_52w": 1255.0,
   "low_52w": 192.59,
   "forward_eps": 206.89381,
@@ -303,7 +303,7 @@
   "website": "https://www.micron.com",
   "summary": "Micron Technology, Inc. engages in the provision of semiconductor memory and storage products in the United States, Taiwan, Mainland China, other Asia Pacific countries, Japan, Europe, and internationally. It operates through Cloud Memory Business Unit, Core Data Center Business Unit, Mobile and Client Business Unit, and Automotive and Embedded Business Unit segments. The company provides dynamic random access memory (DRAM) products, including High-Bandwidth Memory, doublie data rate, low-power DRAM, and graphics DRAM products; NAND products comprising solid state drives, managed NAND, and multi-chip packages; and NOR products. The company sells its products under the Micron brand name and p",
   "earnings_ts": 1798056000.0,
-  "_fetched": "2026-10-23T17:01:14.317364"
+  "_fetched": "2026-10-25T23:33:48.737325"
  },
  "AMD": {
   "name": "Advanced Micro Devices, Inc.",
@@ -337,7 +337,7 @@
   "website": "https://www.amd.com",
   "summary": "Advanced Micro Devices, Inc. operates as a semiconductor company internationally. It operates in three segments: Data Center, Client and Gaming, and Embedded. The company offers artificial intelligence (AI) accelerators, microprocessors, and graphics processing units (GPUs) as standalone devices or as incorporated into accelerated processing units, chipsets, and data center and professional GPUs; and embedded processors and semi-custom system-on-chip (SoC) products, microprocessor and SoC development services and technology, data processing units, field programmable gate arrays (FPGA), system on modules, AI network interface cards, and adaptive SoC products. It provides processors under the ",
   "earnings_ts": 1793736000.0,
-  "_fetched": "2026-10-24T01:51:40.329751"
+  "_fetched": "2026-10-25T23:33:50.390016"
  },
  "QCOM": {
   "name": "QUALCOMM Incorporated",
@@ -371,7 +371,7 @@
   "website": "https://www.qualcomm.com",
   "summary": "QUALCOMM Incorporated engages in the development and commercialization of foundational technologies for the wireless industry worldwide. It operates through three segments: Qualcomm CDMA Technologies (QCT); Qualcomm Technology Licensing (QTL); and Qualcomm Strategic Initiatives (QSI). The QCT segment develops and supplies integrated circuits and system software with connectivity and computing technologies for use in mobile devices; automotive systems for connectivity, digital cockpit, and ADAS/AD; and IoT, including consumer electronic devices, industrial devices, and edge networking products. The QTL segment grants licenses or provides rights to use portions of its intellectual property por",
   "earnings_ts": 1793822400.0,
-  "_fetched": "2026-10-24T01:51:41.150973"
+  "_fetched": "2026-10-25T23:33:51.861687"
  },
  "INTC": {
   "name": "Intel Corporation",
@@ -405,7 +405,7 @@
   "website": "https://www.intel.com",
   "summary": "Intel Corporation designs, develops, manufactures, markets, sells, and services computing and related end products and services in the United States, Ireland, Israel, and internationally. It operates through three segments: CCG, DCAI, and Intel Foundry. The company offers client computing group products, including client and commercial CPUs, discrete client GPUs, edge computing, and connectivity products; data center and AI products, such as server CPUs, discrete GPUs, and networking products; and semiconductors comprising wafer fabrication, substrates, and other related products and services. It also provides driving assistance and self-driving solutions; and develops and manufactures multi",
   "earnings_ts": 1793304000.0,
-  "_fetched": "2026-10-24T01:51:42.010316"
+  "_fetched": "2026-10-25T23:33:53.517631"
  },
  "ASML": {
   "name": "ASML Holding N.V. - New York Re",
@@ -421,9 +421,9 @@
   "debt_to_equity": 8.897,
   "revenue_growth": 0.552,
   "earnings_growth": 1.359,
-  "target_mean": 2148.9858,
-  "target_high": 2847.468,
-  "target_low": 866.8236,
+  "target_mean": 2150.4312,
+  "target_high": 2849.3833,
+  "target_low": 867.4066,
   "analyst_count": 17.0,
   "rec_key": "strong_buy",
   "rec_mean": 1.36585,
@@ -439,7 +439,7 @@
   "website": "https://www.asml.com",
   "summary": "ASML Holding N.V. provides lithography solutions for the development, production, marketing, sales, upgrading, and servicing of advanced semiconductor equipment systems. The company offers lithography, metrology, and inspection systems. It also provides extreme ultraviolet lithography systems; and deep ultraviolet lithography systems comprising immersion and dry lithography systems solutions to manufacture various range of semiconductor nodes and technologies. In addition, the company offers metrology and inspection systems, including YieldStar optical metrology systems, a diffraction-based wafer metrology platform to assess the quality of patterns on the wafers; and HMI electron beam soluti",
   "earnings_ts": 1791981000.0,
-  "_fetched": "2026-10-24T01:51:42.848166"
+  "_fetched": "2026-10-25T23:33:54.998431"
  },
  "AMAT": {
   "name": "Applied Materials, Inc.",
@@ -473,7 +473,7 @@
   "website": "https://www.appliedmaterials.com",
   "summary": "Applied Materials, Inc. provides materials engineering solutions, equipment, services, and software to the semiconductor and related industries in the United States, China, Korea, Taiwan, Japan, Southeast Asia, Europe, and internationally. The company operates through Semiconductor Systems and Applied Global Services (AGS) segments. The Semiconductor Systems segment includes semiconductor capital equipment to enable materials engineering steps, including etch, rapid thermal processing, deposition, chemical mechanical planarization, metrology and inspection, wafer packaging, and ion implantation. The AGS segment offers integrated solutions to optimize equipment and fab performance and product",
   "earnings_ts": 1794513600.0,
-  "_fetched": "2026-10-24T01:51:43.709516"
+  "_fetched": "2026-10-25T23:33:56.494225"
  },
  "LRCX": {
   "name": "Lam Research Corporation",
@@ -494,7 +494,7 @@
   "target_low": 255.0,
   "analyst_count": 30.0,
   "rec_key": "strong_buy",
-  "rec_mean": 1.41176,
+  "rec_mean": 1.38235,
   "payout_ratio": 0.16540001,
   "market_cap": 287952764928.0,
   "high_52w": 438.5,
@@ -503,11 +503,11 @@
   "trailing_eps": 6.71,
   "industry": "Semiconductor Equipment & Materials",
   "country": "United States",
-  "employees": 23300.0,
+  "employees": 24300.0,
   "website": "https://www.lamresearch.com",
   "summary": "Lam Research Corporation designs, manufactures, markets, refurbishes, and services semiconductor processing equipment used in the fabrication of integrated circuits in the United States, China, Korea, Taiwan, Japan, Southeast Asia, and Europe. The company offers ALTUS systems to deposit conformal or selective films for tungsten or molybdenum metallization applications; SABRE electrochemical deposition products for copper interconnect transition, which support copper damascene manufacturing; Striker single-wafer atomic layer deposition products for dielectric film solutions; and VECTOR plasma-enhanced chemical vapor deposition (CVD) products. It also provides Akara, a conductor etch system de",
   "earnings_ts": 1792612800.0,
-  "_fetched": "2026-10-24T01:51:44.534091"
+  "_fetched": "2026-10-25T23:33:58.331003"
  },
  "KLAC": {
   "name": "KLA Corporation",
@@ -541,7 +541,7 @@
   "website": "https://www.kla.com",
   "summary": "KLA Corporation, together with its subsidiaries, provides process control and process-enabling solutions for manufacturing wafers, reticles/masks, chemicals/materials, integrated circuits (ICs), packaged ICs, and printed circuit boards. It operates through three segments: Semiconductor Process Control; Specialty Semiconductor Process; and PCB and Component Inspection. The company offers inspection and review tools to identify, locate, characterize, review, and analyze defects on various surfaces of patterned and unpatterned wafers; chemical process control equipment; wired and wireless sensor wafers and reticles; wafer defect inspection, review, and metrology systems; reticle inspection and ",
   "earnings_ts": 1793217600.0,
-  "_fetched": "2026-10-24T01:51:45.429901"
+  "_fetched": "2026-10-25T23:33:59.941840"
  },
  "ADBE": {
   "name": "Adobe Inc.",
@@ -550,7 +550,7 @@
   "price": 263.82,
   "forward_pe": 9.590818,
   "trailing_pe": 14.730319,
-  "peg": 0.65,
+  "peg": 0.64,
   "pb": 8.768572,
   "roe": 0.61902,
   "op_margin": 0.34822,
@@ -575,7 +575,7 @@
   "website": "https://www.adobe.com",
   "summary": "Adobe Inc. operates as a technology company worldwide. The Digital Media segment offers products and services that enable individuals, teams, and enterprises to create, publish, and promote content. This segment serves photographers, video editors, graphic and experience designers, game developers, content creators, students, marketers, business owners, knowledge workers, and consumers. The Digital Experience segment provides an integrated platform; and products, services, and solutions that enable brands and businesses to create, manage, execute, measure, monetize, and optimize customer experiences from analytics to commerce. This segment serves marketers, advertisers, agencies, publishers,",
   "earnings_ts": 1796846400.0,
-  "_fetched": "2026-10-24T01:51:46.320719"
+  "_fetched": "2026-10-25T23:34:01.609760"
  },
  "CRM": {
   "name": "Salesforce, Inc.",
@@ -583,7 +583,7 @@
   "currency": "USD",
   "price": 248.57,
   "forward_pe": 15.520851,
-  "trailing_pe": 21.977896,
+  "trailing_pe": 22.741995,
   "peg": 0.7791,
   "pb": 5.33046,
   "roe": 0.19381,
@@ -602,14 +602,14 @@
   "high_52w": 269.11,
   "low_52w": 146.32,
   "forward_eps": 16.01523,
-  "trailing_eps": 11.31,
+  "trailing_eps": 10.93,
   "industry": "Software - Application",
   "country": "United States",
   "employees": 83334.0,
   "website": "https://www.salesforce.com",
   "summary": "Salesforce, Inc. provides customer relationship management technology services that connect companies and customers together in the United States, Europe, and the Asia Pacific. The company offers Agentforce, which enables customers to build, deploy, and manage enterprise-grade, autonomous AI agents at scale, enabling humans and agents to work together; Agentforce Sales, an integrated platform that brings together the power of humans with AI agents to help sales teams for selling, managing, and automating entire sales processes; Agentforce Service, which enables companies in every industry to bring all of their customer, employee, IT, and field service needs onto one integrated AI-powered pla",
   "earnings_ts": 1796241600.0,
-  "_fetched": "2026-10-24T01:51:47.135811"
+  "_fetched": "2026-10-25T23:34:03.078686"
  },
  "ORCL": {
   "name": "Oracle Corporation",
@@ -633,7 +633,7 @@
   "rec_mean": 1.5814,
   "payout_ratio": 0.31350002,
   "market_cap": 382454169600.0,
-  "high_52w": 287.19,
+  "high_52w": 287.0,
   "low_52w": 114.5,
   "forward_eps": 10.98987,
   "trailing_eps": 6.38,
@@ -643,7 +643,7 @@
   "website": "https://www.oracle.com",
   "summary": "Oracle Corporation offers products and services that build, run and support enterprise information technology frameworks worldwide. Its Oracle cloud software as a service offering includes various cloud software applications, including Oracle Fusion cloud enterprise resource planning ERP, Oracle Fusion cloud enterprise performance management EPM, Oracle Fusion cloud supply chain and manufacturing management SCM, Oracle Fusion cloud human capital management HCM, and NetSuite applications suite, Oracle Health applications, as well as Oracle Fusion Sales, Service, and Marketing. The company also offers cloud-based industry solutions for various industries; Oracle cloud license and on-premise li",
   "earnings_ts": 1797278400.0,
-  "_fetched": "2026-10-24T01:51:47.978529"
+  "_fetched": "2026-10-25T23:34:04.720395"
  },
  "CSCO": {
   "name": "Cisco Systems, Inc.",
@@ -668,7 +668,7 @@
   "payout_ratio": 0.4985,
   "market_cap": 419885514752.0,
   "high_52w": 130.37,
-  "low_52w": 70.06,
+  "low_52w": 70.43,
   "forward_eps": 5.62203,
   "trailing_eps": 3.33,
   "industry": "Communication Equipment",
@@ -677,7 +677,7 @@
   "website": "https://www.cisco.com",
   "summary": "Cisco Systems, Inc. designs, develops, and sells technologies to power, help, secure, and draw insights from the internet in the Americas, Europe, the Middle East, Africa, the Asia Pacific, Japan, and China. The company provides data center switching; network security, identity and access management, and secure access service edge; identity and agentic security solutions; interconnects public and private wireline and mobile networks, delivering connectivity to campus, data center, and branch networks; WEBEX suite, collaboration devices, and contact center; communication platform as a service software, including perpetual licenses, subscription arrangements, and hardware solutions; network as",
   "earnings_ts": 1794513600.0,
-  "_fetched": "2026-10-24T01:51:48.801853"
+  "_fetched": "2026-10-25T23:34:06.361069"
  },
  "IBM": {
   "name": "International Business Machines",
@@ -687,9 +687,9 @@
   "forward_pe": 19.157873,
   "trailing_pe": 21.634811,
   "peg": 2.1883,
-  "pb": 6.7384195,
+  "pb": 6.743617,
   "roe": 0.34769002,
-  "op_margin": 0.16307,
+  "op_margin": 0.16968,
   "debt_to_equity": 185.439,
   "revenue_growth": 0.047,
   "earnings_growth": 0.25,
@@ -711,7 +711,7 @@
   "website": "https://www.ibm.com",
   "summary": "International Business Machines Corporation, together with its subsidiaries, provides integrated solutions and services in the Americas, Europe, the Middle East, Africa, and the Asia Pacific. It operates through Software, Consulting, Infrastructure, and Financing segments. The Software segment offers hybrid cloud and AI platforms that allow clients to realize their digital and AI transformations across the applications, data, and environments in which they operate. The Consulting segment delivers strategy and technology services and intelligent operations, providing business transformation, technology implementation, managed services, application modernization, and AI-powered solutions. The ",
   "earnings_ts": 1792612800.0,
-  "_fetched": "2026-10-24T01:51:49.641627"
+  "_fetched": "2026-10-25T23:34:08.010458"
  },
  "TXN": {
   "name": "Texas Instruments Incorporated",
@@ -723,10 +723,10 @@
   "peg": 0.9193,
   "pb": 13.563126,
   "roe": 0.39723998,
-  "op_margin": 0.47581002,
+  "op_margin": 0.47547,
   "debt_to_equity": 70.654,
   "revenue_growth": 0.277,
-  "earnings_growth": 0.769,
+  "earnings_growth": 0.77,
   "target_mean": 336.86206,
   "target_high": 400.0,
   "target_low": 250.0,
@@ -745,7 +745,7 @@
   "website": "https://www.ti.com",
   "summary": "Texas Instruments Incorporated designs, manufactures, and sells semiconductors to electronics designers and manufacturers in the United States, China, the rest of Asia, Europe, the Middle East, Africa, Japan, and internationally. It operates through Analog and Embedded Processing segments. The Analog segment offers power products to manage power requirements across various voltage levels, including battery-management solutions, DC/DC switching regulators, AC/DC and isolated controllers and converters, power switches, linear regulators, voltage references, multiphase controllers and power stages, and lighting products. This segment also provides signal chain products that sense, condition, an",
   "earnings_ts": 1792612800.0,
-  "_fetched": "2026-10-24T01:51:50.554671"
+  "_fetched": "2026-10-25T23:34:09.532479"
  },
  "JPM": {
   "name": "JP Morgan Chase & Co.",
@@ -779,7 +779,7 @@
   "website": "https://www.jpmorganchase.com",
   "summary": "JPMorgan Chase & Co. operates as a bank and financial holding company in the United States, rest of North America, Europe, the Middle East, Africa, the Asia Pacific, Latin America, and the Caribbean. It operates in three segments: Consumer & Community Banking, Commercial & Investment Bank, and Asset & Wealth Management. The company offers deposit, investment and lending products, and cash management; mortgage origination and servicing activities; residential mortgages and home equity loans; and credit cards, payment solutions, travel services, merchant offers, lifestyle benefits, auto loans, and leases to consumers and small businesses through bank branches, ATMs, and digital and telephone b",
   "earnings_ts": 1799929800.0,
-  "_fetched": "2026-10-24T01:51:51.402099"
+  "_fetched": "2026-10-25T23:34:11.017686"
  },
  "BAC": {
   "name": "Bank of America Corporation",
@@ -802,7 +802,7 @@
   "rec_key": "strong_buy",
   "rec_mean": 1.48,
   "payout_ratio": 0.2587,
-  "market_cap": 353553383424.0,
+  "market_cap": 350011490304.0,
   "high_52w": 65.23,
   "low_52w": 46.12,
   "forward_eps": 5.19213,
@@ -813,14 +813,14 @@
   "website": "https://www.bankofamerica.com",
   "summary": "Bank of America Corporation, through its subsidiaries, provides various financial products and services for individual consumers, small and middle-market businesses, institutional investors, large corporations, and governments worldwide. It operates through four segments: Consumer Banking, Global Wealth & Investment Management (GWIM), Global Banking, and Global Markets. The Consumer Banking segment offers traditional and money market savings accounts, certificates of deposit and IRAs, checking accounts, and investment accounts and products; credit and debit cards; residential mortgages and home equity loans; and direct and indirect loans. The GWIM segment provides investment management, brok",
   "earnings_ts": 1800016200.0,
-  "_fetched": "2026-10-24T01:51:52.262362"
+  "_fetched": "2026-10-25T23:34:12.524979"
  },
  "WFC": {
   "name": "Wells Fargo & Company",
   "sector": "Financial Services",
   "currency": "USD",
   "price": 82.39,
-  "forward_pe": 10.282017,
+  "forward_pe": 10.28394,
   "trailing_pe": 11.620592,
   "peg": 1.4723,
   "pb": 1.5587044,
@@ -839,7 +839,7 @@
   "market_cap": 247305027584.0,
   "high_52w": 97.76,
   "low_52w": 72.78,
-  "forward_eps": 8.01302,
+  "forward_eps": 8.01152,
   "trailing_eps": 7.09,
   "industry": "Banks - Diversified",
   "country": "United States",
@@ -847,7 +847,7 @@
   "website": "https://www.wellsfargo.com",
   "summary": "Wells Fargo & Company, a financial services company, provides diversified banking, investment, mortgage, and consumer and commercial finance products and services in the United States and internationally. It operates through four segments: Consumer Banking and Lending; Commercial Banking; Corporate and Investment Banking; and Wealth and Investment Management. The company's financial products and services includes checking and savings accounts, and credit and debit cards, as well as home, auto, personal, and small business lending services. It also provides personalized wealth management, brokerage, financial planning, lending, private banking, trust and fiduciary products and services; and f",
   "earnings_ts": 1799929800.0,
-  "_fetched": "2026-10-24T01:51:53.084643"
+  "_fetched": "2026-10-25T23:34:13.994234"
  },
  "GS": {
   "name": "Goldman Sachs Group, Inc. (The)",
@@ -867,8 +867,8 @@
   "target_high": 1250.0,
   "target_low": 730.0,
   "analyst_count": 21.0,
-  "rec_key": "hold",
-  "rec_mean": 2.53846,
+  "rec_key": "buy",
+  "rec_mean": 2.46154,
   "payout_ratio": 0.2625,
   "market_cap": 254972968960.0,
   "high_52w": 1153.99,
@@ -881,7 +881,7 @@
   "website": "https://www.goldmansachs.com",
   "summary": "The Goldman Sachs Group, Inc., a financial institution, provides a range of financial services for corporations, financial institutions, governments, and individuals in the Americas, Europe, the Middle East, Africa, and Asia. It operates through three segments: Global Banking & Markets, Asset & Wealth Management, and Platform Solutions. The Global Banking & Markets segment provides financial advisory services, including strategic advisory assignments related to mergers and acquisitions, divestitures, corporate defense activities, restructurings, and spin-offs; equity and debt underwriting of public offerings and private placements; relationship lending and acquisition financing; secured lend",
   "earnings_ts": 1800361800.0,
-  "_fetched": "2026-10-24T01:51:53.902419"
+  "_fetched": "2026-10-25T23:34:15.634104"
  },
  "MS": {
   "name": "Morgan Stanley",
@@ -904,7 +904,7 @@
   "rec_key": "buy",
   "rec_mean": 2.30769,
   "payout_ratio": 0.3231,
-  "market_cap": 281900941312.0,
+  "market_cap": 280901844992.0,
   "high_52w": 232.25,
   "low_52w": 152.8,
   "forward_eps": 13.63676,
@@ -915,7 +915,7 @@
   "website": "https://www.morganstanley.com",
   "summary": "Morgan Stanley, a financial holding company, provides various financial products and services to corporations, governments, financial institutions, and individuals in the Americas, Asia, Europe, the Middle East, and Africa. It operates through Institutional Securities, Wealth Management, and Investment Management segments. The company offers capital raising and financial advisory services, including services related to the underwriting of debt, equity securities, and other products, as well as advice on mergers and acquisitions, restructurings, and project finance. It also provides equity and fixed income products comprising sales, financing, prime brokerage, and market-making services; Asia",
   "earnings_ts": 1799929800.0,
-  "_fetched": "2026-10-24T01:51:54.733241"
+  "_fetched": "2026-10-25T23:34:17.108191"
  },
  "V": {
   "name": "Visa Inc.",
@@ -924,7 +924,7 @@
   "price": 407.92,
   "forward_pe": 27.152346,
   "trailing_pe": 34.7166,
-  "peg": 1.88,
+  "peg": 1.85,
   "pb": 21.617382,
   "roe": 0.6119,
   "op_margin": 0.66130996,
@@ -949,7 +949,7 @@
   "website": "https://www.visa.com",
   "summary": "Visa Inc. operates as a payment technology company in the United States and internationally. The company operates VisaNet, a transaction processing network that enables authorization, clearing, and settlement of payment transactions. It also offers credit, debit, and prepaid card products; tap to pay, tokenization, and click to pay services; Visa Direct, a platform which facilitates money movement, enabling clients to collect, hold, convert, and send funds across its network; and issuing solutions, such as airport lounge access, dining reservations, shopping experiences, event tickets, and seller offers. In addition, the company provides acceptance solutions, an omnichannel payment integrati",
   "earnings_ts": 1793131200.0,
-  "_fetched": "2026-10-24T01:51:55.549915"
+  "_fetched": "2026-10-25T23:34:18.593044"
  },
  "MA": {
   "name": "Mastercard Incorporated",
@@ -958,7 +958,7 @@
   "price": 623.6,
   "forward_pe": 27.031454,
   "trailing_pe": 34.30143,
-  "peg": 1.65,
+  "peg": 1.63,
   "pb": 97.498436,
   "roe": 2.41202,
   "op_margin": 0.61108,
@@ -983,7 +983,7 @@
   "website": "https://www.mastercard.com",
   "summary": "Mastercard Incorporated, a technology company, provides transaction processing and other payment-related products and services in the United States and internationally. The company offers products and services for account holders, merchants, financial institutions, digital partners, businesses, governments, and other organizations, such as programs that enable issuers to provide consumers with credits to defer payments; payment products and solutions that allow its customers to access funds in deposit and other accounts; prepaid programs services; consumer bill payment services; and commercial credit, debit, and prepaid payment products and solutions. It also provides solutions that enable b",
   "earnings_ts": 1793277000.0,
-  "_fetched": "2026-10-24T01:51:56.433081"
+  "_fetched": "2026-10-25T23:34:20.069035"
  },
  "PYPL": {
   "name": "PayPal Holdings, Inc.",
@@ -992,7 +992,7 @@
   "price": 57.02,
   "forward_pe": 9.859576,
   "trailing_pe": 10.778828,
-  "peg": 1.02,
+  "peg": 1.01,
   "pb": 2.479885,
   "roe": 0.24497,
   "op_margin": 0.16966,
@@ -1017,7 +1017,7 @@
   "website": "https://www.paypal.com",
   "summary": "PayPal Holdings, Inc. operates a technology platform that enables digital payments for merchants and consumers worldwide. The company operates a two-sided network at scale that connects merchants and consumers that enables its customers to connect, transact, and send and receive payments through online and in person, as well as transfer and withdraw funds using various funding sources, such as bank accounts, PayPal or Venmo account balance, consumer credit and debit products, credit and debit cards, and cryptocurrencies, as well as other stored value products, including gift cards and eligible rewards. It provides payment solutions under the PayPal, PayPal Credit, Braintree, Venmo, Xoom, Hyp",
   "earnings_ts": 1793104200.0,
-  "_fetched": "2026-10-24T01:51:57.251421"
+  "_fetched": "2026-10-25T23:34:21.540426"
  },
  "BRK-B": {
   "name": "Berkshire Hathaway Inc. New",
@@ -1051,7 +1051,7 @@
   "website": "https://www.berkshirehathaway.com",
   "summary": "Berkshire Hathaway Inc., together with its subsidiaries, engages in the insurance, freight rail transportation, and utility businesses. The company provides property, casualty, life, accident, and health insurance and reinsurance; operates railroad systems in North America; generates, transmits, stores, and distributes electricity from natural gas, coal, wind, solar, hydroelectric, nuclear, and geothermal sources; operates natural gas distribution and storage facilities, interstate pipelines, liquefied natural gas facilities, and compressor and meter stations; and holds interest in coal mining assets. It manufactures boxed chocolates and other confectionery products; specialty chemicals, met",
   "earnings_ts": 1794081600.0,
-  "_fetched": "2026-10-24T01:51:58.078124"
+  "_fetched": "2026-10-25T23:34:23.089848"
  },
  "UNH": {
   "name": "UnitedHealth Group Incorporated",
@@ -1085,7 +1085,7 @@
   "website": "https://www.unitedhealthgroup.com",
   "summary": "UnitedHealth Group Incorporated operates as a health care company in the United States and internationally. It operates through four segments: Optum Health, Optum Insight, Optum Rx; and UnitedHealthcare. The Optum Health segment provides care delivery, care management, wellness and consumer engagement, and health financial services with patients, consumers, care delivery systems, providers, employers, payers, and public-sector entities. The Optum Insight segment offers software and information products, advisory consulting arrangements, and managed services outsourcing contracts to hospital systems, physicians, health plans, public entities, life sciences companies and other organizations. T",
   "earnings_ts": 1799757000.0,
-  "_fetched": "2026-10-24T01:51:58.966677"
+  "_fetched": "2026-10-25T23:34:24.584534"
  },
  "JNJ": {
   "name": "Johnson & Johnson",
@@ -1095,12 +1095,12 @@
   "forward_pe": 22.707983,
   "trailing_pe": 40.031864,
   "peg": 2.8229,
-  "pb": 7.47676,
-  "roe": null,
-  "op_margin": 0.25059998,
-  "debt_to_equity": 57.709,
+  "pb": 7.788899,
+  "roe": 0.20018,
+  "op_margin": 0.25737,
+  "debt_to_equity": 54.767,
   "revenue_growth": 0.059,
-  "earnings_growth": -0.96,
+  "earnings_growth": -0.959,
   "target_mean": 279.4091,
   "target_high": 320.0,
   "target_low": 190.0,
@@ -1119,7 +1119,7 @@
   "website": "https://www.jnj.com",
   "summary": "Johnson & Johnson, together with its subsidiaries, engages in the research and development, manufacture, and sale of a range of products in the healthcare field worldwide. It operates in two segments, Innovative Medicine and MedTech. The Innovative Medicine segment offers products for various therapeutic areas, such as oncology, immunology, neuroscience, pulmonary hypertension, infectious diseases, and cardiovascular and metabolism distributed through retailers, wholesalers, distributors, hospitals, and healthcare professionals for prescription use. The MedTech segment provides a portfolio of products used in the surgery, orthopedic, cardiovascular, and vision fields distributed through whol",
   "earnings_ts": 1791894600.0,
-  "_fetched": "2026-10-24T01:53:39.101394"
+  "_fetched": "2026-10-25T23:34:26.078008"
  },
  "PFE": {
   "name": "Pfizer, Inc.",
@@ -1153,7 +1153,7 @@
   "website": "https://www.pfizer.com",
   "summary": "Pfizer Inc. discovers, develops, manufactures, markets, distributes, and sells biopharmaceutical products in the United States and internationally. It operates in three segments: Biopharma, PC1, and Pfizer Ignite. The company offers internal medicine products, including cardiovascular metabolic diseases products under the Eliquis brand; migraine products under the Nurtec ODT/Vydura and Zavzpret brand; vaccines under the Prevnar family, Abrysvo, Nimenrix, FSME/IMMUN-TicoVac, and Trumenba brands; and Paxlovid for the treatment of COVID-19. It also provides inflammation and immunology products, such as Xeljanz, Enbrel, Cibinqo, Litfulo, Eucrisa, and Velsipity; rare disease products for therapeu",
   "earnings_ts": 1793709000.0,
-  "_fetched": "2026-10-24T01:51:59.780080"
+  "_fetched": "2026-10-25T23:34:27.723076"
  },
  "MRK": {
   "name": "Merck & Company, Inc.",
@@ -1162,7 +1162,7 @@
   "price": 145.27,
   "forward_pe": 15.685077,
   "trailing_pe": 117.15323,
-  "peg": 2.75,
+  "peg": 2.72,
   "pb": 8.552338,
   "roe": 0.06961,
   "op_margin": -0.00241,
@@ -1187,7 +1187,7 @@
   "website": "https://www.merck.com",
   "summary": "Merck & Co., Inc. operates as a healthcare company worldwide. It offers human health pharmaceutical for various areas under the Keytruda, Keytruda Qlex, Welireg, Gardasil, ProQuad, M-M-R II, Varivax, Vaxneuvance, Capvaxive, RotaTeq, Pneumovax 23, Bridion, Prevymis, Dificid, Zerbaxa, Winrevair, Adempas/ Verquvo, Ohtuvayre, Lagevrio, Isentress/Isentress HD, Delstrigo, Pifeltro, Belsomra, Januvia, and Janumet brands. The company also provides veterinary pharmaceuticals, vaccines and health management solutions and services, such as livestock products under the Nuflor, Bovilis/Vista, Bovilis Cryptium, Banamine, Estrumate, Matrix, Resflor, Zuprevo, Revalor, Safe-Guard, M+Pac, Porcilis, Circumvent",
   "earnings_ts": 1793277000.0,
-  "_fetched": "2026-10-24T01:52:00.637621"
+  "_fetched": "2026-10-25T23:34:29.194383"
  },
  "ABBV": {
   "name": "AbbVie Inc.",
@@ -1221,7 +1221,7 @@
   "website": "https://www.abbvie.com",
   "summary": "AbbVie Inc., a research-based biopharmaceutical company, engages in the research and development, manufacturing, commercializing, and sale of medicines and therapies worldwide. The company offers Skyrizi to treat autoimmune diseases; Rinvoq to treat inflammatory diseases; Imbruvica for the treatment of adult patients with blood cancers; Venclexta to treat blood cancers; Elahere to treat various cancer; and Epkinly to treat lymphoma; and Emrelis for the treatment of lung cancer. It also provides facial injectables, plastics and regenerative medicine, body contouring, and skincare products; botox Cosmetic for the treatment of glabellar lines, crow's feet, forehead lines, and platysma bands; Ju",
   "earnings_ts": 1793363400.0,
-  "_fetched": "2026-10-24T01:52:01.464100"
+  "_fetched": "2026-10-25T23:34:30.660252"
  },
  "LLY": {
   "name": "Eli Lilly and Company",
@@ -1255,7 +1255,7 @@
   "website": "https://www.lilly.com",
   "summary": "Eli Lilly and Company discovers, develops, manufactures, and markets human pharmaceutical products in the United States, Europe, China, Japan, and internationally. The company offers cardiometabolic health products, including Basaglar, Humalog, Humalog Mix 75/25, Humalog U-100, Humalog U-200, Humalog Mix 50/50, insulin lispro, insulin lispro protamine, insulin lispro mix 75/25, Humulin, Humulin 70/30, Humulin N, Humulin R, Humulin U-500 for diabetes; Jardiance, Mounjaro, and Trulicity for type 2 diabetes; and Zepbound for obesity. It also provides oncology products, such as Cyramza for the second-line treatment of gastric cancer or gastro-esophageal junction adenocarcinoma; Erbitux for color",
   "earnings_ts": 1793277000.0,
-  "_fetched": "2026-10-24T01:52:02.281974"
+  "_fetched": "2026-10-25T23:34:32.143645"
  },
  "AMGN": {
   "name": "Amgen Inc.",
@@ -1289,7 +1289,7 @@
   "website": "https://www.amgen.com",
   "summary": "Amgen Inc. discovers, develops, manufactures, and delivers human therapeutics worldwide. The company's principal products include Enbrel for the treatment of rheumatoid arthritis, plaque psoriasis, and psoriatic arthritis; Otezla for the treatment of adult patients with plaque psoriasis, psoriatic arthritis, and oral ulcers associated with Behçet's disease; Prolia to treat postmenopausal women with osteoporosis; XGEVA for skeletal-related events prevention; Repatha, which reduces the risks of myocardial infarction, stroke, and coronary revascularization; Nplate for the treatment of patients with immune thrombocytopenia; KYPROLIS to treat patients with relapsed or refractory multiple myeloma;",
   "earnings_ts": 1793736000.0,
-  "_fetched": "2026-10-24T01:52:03.134549"
+  "_fetched": "2026-10-25T23:34:33.645677"
  },
  "CVS": {
   "name": "CVS Health Corporation",
@@ -1323,7 +1323,7 @@
   "website": "https://www.cvshealth.com",
   "summary": "CVS Health Corporation provides health solutions in the United States. The Health Care Benefits segment offers traditional, voluntary, and consumer-directed health insurance products and related services, including medical, pharmacy, dental, and behavioral health plans; medical management capabilities; Medicare Advantage and Medicare Supplement plans; prescription drug plans (PDPs); and Medicaid health care management services. It serves employer groups, individuals, college students, part-time and hourly workers, health plans, health care providers, governmental units, government-sponsored plans, labor groups, and expatriates. The Health Services segment offers pharmacy benefit management s",
   "earnings_ts": 1793795400.0,
-  "_fetched": "2026-10-24T01:52:03.951358"
+  "_fetched": "2026-10-25T23:34:35.300343"
  },
  "XOM": {
   "name": "ExxonMobil Holdings Corporation",
@@ -1357,7 +1357,7 @@
   "website": "https://corporate.exxonmobil.com",
   "summary": "ExxonMobil Holdings Corporation engages in the exploration and production of crude oil and natural gas in the United States, Canada, and internationally. The company operates through Upstream, Energy Products, Chemical Products, and Specialty Products segments. Its Upstream segment explores for and produces crude oil and natural gas. The Energy Products segment offers fuels, aromatics, and catalysts, as well as licensing services. Its Chemical Products segment manufactures and sells olefins, polyolefins, and intermediates. The Specialty Products segment offers finished lubricants, basestocks, waxes, synthetics, elastomers, and resins. It is also involved in the manufacture, trade, transport,",
   "earnings_ts": 1793363400.0,
-  "_fetched": "2026-10-24T01:52:04.780320"
+  "_fetched": "2026-10-25T23:34:36.789905"
  },
  "CVX": {
   "name": "Chevron Corporation",
@@ -1391,7 +1391,7 @@
   "website": "https://www.chevron.com",
   "summary": "Chevron Corporation, through its subsidiaries, engages in the integrated energy and chemicals operations. It operates through Upstream and Downstream segments. The Upstream segment engages in the exploration for, development, production, and transportation of crude oil and natural gas; processing, liquefaction, transportation, and regasification of liquefied natural gas; transportation of crude oil through pipelines; transportation, storage, and marketing of natural gas; carbon capture and storage; and operation of a gas-to-liquids plant. The Downstream segment refines crude oil into petroleum products; markets crude oil, refined products, and lubricants; manufactures and markets renewable f",
   "earnings_ts": 1793363400.0,
-  "_fetched": "2026-10-24T01:52:05.595212"
+  "_fetched": "2026-10-25T23:34:38.312630"
  },
  "COP": {
   "name": "ConocoPhillips",
@@ -1412,7 +1412,7 @@
   "target_low": 126.0,
   "analyst_count": 26.0,
   "rec_key": "buy",
-  "rec_mean": 1.78571,
+  "rec_mean": 1.82143,
   "payout_ratio": 0.4371,
   "market_cap": 181161689088.0,
   "high_52w": 152.77,
@@ -1425,41 +1425,41 @@
   "website": "https://www.conocophillips.com",
   "summary": "ConocoPhillips explores for, produces, transports, and markets crude oil, bitumen, natural gas, liquefied natural gas (LNG), and natural gas liquids. It operates in five segments: Alaska; Lower 48; Canada; Europe, Middle East and North Africa; and Asia Pacific. The company's portfolio includes unconventional plays in North America; conventional assets in North America, Europe, Asia, and Australia; global LNG developments; oil sands assets in Canada; and an inventory of global exploration prospects. It serves in the United States, Canada, China, Equatorial Guinea, Libya, Malaysia, Norway, Singapore, the United Kingdom, and internationally. ConocoPhillips was founded in 1917 and is headquarter",
   "earnings_ts": 1793881800.0,
-  "_fetched": "2026-10-24T01:52:06.419312"
+  "_fetched": "2026-10-25T23:34:39.794122"
  },
  "SLB": {
   "name": "SLB Limited",
   "sector": "Energy",
   "currency": "USD",
   "price": 53.06,
-  "forward_pe": 16.859753,
+  "forward_pe": 16.855093,
   "trailing_pe": 25.632853,
   "peg": 1.374,
-  "pb": 3.0389464,
-  "roe": 0.12909001,
-  "op_margin": 0.12706,
-  "debt_to_equity": 47.002,
-  "revenue_growth": 0.05,
-  "earnings_growth": -0.297,
-  "target_mean": 62.34483,
+  "pb": 2.8779085,
+  "roe": 0.1166,
+  "op_margin": 0.12054,
+  "debt_to_equity": 47.036,
+  "revenue_growth": 0.058,
+  "earnings_growth": -0.02,
+  "target_mean": 62.37931,
   "target_high": 75.0,
   "target_low": 43.0,
   "analyst_count": 29.0,
   "rec_key": "buy",
   "rec_mean": 1.6,
   "payout_ratio": 0.5604,
-  "market_cap": 78748639232.0,
+  "market_cap": 78316560384.0,
   "high_52w": 60.46,
   "low_52w": 34.65,
-  "forward_eps": 3.14714,
+  "forward_eps": 3.14801,
   "trailing_eps": 2.07,
   "industry": "Oil & Gas Equipment & Services",
   "country": "United States",
   "employees": 109000.0,
   "website": "https://www.slb.com",
   "summary": "SLB N.V. engages in the provision of technology for the energy industry worldwide. The company operates through four divisions: Digital & Integration, Reservoir Performance, Well Construction, and Production Systems. The company provides field development and hydrocarbon production, carbon management, and integration of adjacent energy systems; reservoir interpretation and data processing services for exploration data; and well construction and production improvement services and products. It also offers subsurface geology and fluids evaluation information; stimulation services to restore or enhance well productivity through hydraulic fracturing, matrix stimulation, and water treatment; and ",
-  "earnings_ts": 1792758600.0,
-  "_fetched": "2026-10-24T01:52:07.251809"
+  "earnings_ts": 1800621000.0,
+  "_fetched": "2026-10-25T23:34:41.433231"
  },
  "NEE": {
   "name": "NextEra Energy, Inc.",
@@ -1480,7 +1480,7 @@
   "target_low": 56.0,
   "analyst_count": 19.0,
   "rec_key": "buy",
-  "rec_mean": 1.86364,
+  "rec_mean": 1.90909,
   "payout_ratio": 0.4389,
   "market_cap": 172188827648.0,
   "high_52w": 98.75,
@@ -1493,7 +1493,7 @@
   "website": "https://www.nexteraenergy.com",
   "summary": "NextEra Energy, Inc., through its subsidiaries, generates, stores, transmits, distributes, and sells electric power to retail and wholesale customers in North America. It operates through Florida Power & Light Company (FPL) and NEER segments. The company generates electricity from wind, solar, nuclear, natural gas, and other clean energy assets. It also invests in generation, storage, transmission, and distribution facilities; owns, develops, constructs, manages, and operates generation facilities, including renewables, nuclear and natural gas, and battery storage facilities in the wholesale energy market in the United States and Canada, as well as electric and gas transmission assets, and n",
   "earnings_ts": 1792585800.0,
-  "_fetched": "2026-10-24T01:52:08.079998"
+  "_fetched": "2026-10-25T23:34:43.079106"
  },
  "DUK": {
   "name": "Duke Energy Corporation (Holdin",
@@ -1527,7 +1527,7 @@
   "website": "https://www.duke-energy.com",
   "summary": "Duke Energy Corporation, through its subsidiaries, operates as an energy company in the United States. The company operates through two segments: Electric Utilities and Infrastructure (EU&I); and Gas Utilities and Infrastructure (GU&I). The EU&I segment generates, transmits, distributes, and sells electricity to customers in the Southeast and Midwest regions. It generates electricity through coal, hydroelectric, natural gas, oil, renewables, and nuclear fuel. This segment also engages in the wholesale of electricity to municipalities, electric cooperative utilities, and other load-serving entities. The GU&I segment distributes natural gas to customers in the residential, commercial, industri",
   "earnings_ts": 1793881800.0,
-  "_fetched": "2026-10-24T01:52:08.891160"
+  "_fetched": "2026-10-25T23:34:44.550099"
  },
  "SO": {
   "name": "Southern Company (The)",
@@ -1561,7 +1561,7 @@
   "website": "https://www.southerncompany.com",
   "summary": "The Southern Company, through its subsidiaries, engages in the sale of electricity. The company offers electric service to retail customers and wholesale customers; and energy-related products and services to natural gas choice markets. It also develops, constructs, acquires, owns, operates, and manages power generation assets, as well as battery energy storage projects; sells electricity at market-based rates in the wholesale market; and deploys microgrids for commercial, industrial, governmental, and utility customers. In addition, the company is involved in the distribution of natural gas in Illinois, Georgia, Virginia, and Tennessee; distributes energy and resilience solutions; and inves",
   "earnings_ts": 1793881800.0,
-  "_fetched": "2026-10-24T01:52:09.710610"
+  "_fetched": "2026-10-25T23:34:46.032663"
  },
  "PG": {
   "name": "Procter & Gamble Company (The)",
@@ -1571,18 +1571,18 @@
   "forward_pe": 21.730299,
   "trailing_pe": 24.250002,
   "peg": 3.792,
-  "pb": 6.883256,
-  "roe": 0.29608,
-  "op_margin": 0.26396,
-  "debt_to_equity": 70.342,
+  "pb": 6.8668175,
+  "roe": 0.29609,
+  "op_margin": 0.27062,
+  "debt_to_equity": 70.343,
   "revenue_growth": 0.04,
-  "earnings_growth": 0.011,
+  "earnings_growth": 0.008,
   "target_mean": 172.34782,
   "target_high": 190.0,
   "target_low": 143.0,
   "analyst_count": 23.0,
   "rec_key": "buy",
-  "rec_mean": 2.16,
+  "rec_mean": 2.08,
   "payout_ratio": 0.6462,
   "market_cap": 373209432064.0,
   "high_52w": 167.25,
@@ -1595,7 +1595,7 @@
   "website": "https://www.pginvestor.com",
   "summary": "The Procter & Gamble Company provides branded consumer packaged goods worldwide. It operates through five segments: Beauty; Grooming; Health Care; Fabric & Home Care; and Baby, Feminine & Family Care. The company offers conditioners, shampoos, styling aids, and treatments under the Head & Shoulders, Herbal Essences, Pantene, and Rejoice brands; antiperspirants, deodorants, and personal cleansing products under the Native, Old Spice, Safeguard, and Secret brands; and facial moisturizers, cleaners, and treatments under the Olay and SK-II brands. It also provides blades, razors, shave products, appliances, and other grooming products under the Braun, Gillette, and Venus brands. In addition, the",
   "earnings_ts": 1800534600.0,
-  "_fetched": "2026-10-24T01:52:10.524396"
+  "_fetched": "2026-10-25T23:34:47.501650"
  },
  "KO": {
   "name": "Coca-Cola Company (The)",
@@ -1629,7 +1629,7 @@
   "website": "https://www.coca-colacompany.com",
   "summary": "The Coca-Cola Company, a beverage company, manufactures and sells various nonalcoholic beverages in the United States and internationally. The company provides Trademark Coca-Cola, sparkling soft drinks and flavors; water, sports, coffee, and tea; juice, value-added dairy, and plant-based beverages; and emerging beverages. It also offers beverage concentrates and syrups, as well as fountain syrups to fountain retailers comprising restaurants and convenience stores. The company sells its products under the Coca-Cola, Diet Coke/Coca-Cola Light, Coca-Cola Zero Sugar, caffeine free Diet Coke, Cherry Coke, Fanta, Sprite, Simply, Fanta Orange, Fanta Zero Orange, Fanta Zero Sugar, Fanta Apple, Spri",
   "earnings_ts": 1793104200.0,
-  "_fetched": "2026-10-24T01:52:11.340217"
+  "_fetched": "2026-10-25T23:34:48.972513"
  },
  "PEP": {
   "name": "Pepsico, Inc.",
@@ -1663,7 +1663,7 @@
   "website": "https://www.pepsico.com",
   "summary": "PepsiCo, Inc. engages in the manufacture, marketing, distribution, and sale of various beverages and convenient foods worldwide. The company operates through six segments: PepsiCo Foods North America; PepsiCo Beverages North America; International Beverages Franchise; Europe, Middle East and Africa; Latin America Foods; and Asia Pacific Foods. It offers cereals, chips, dips, granola bars, oatmeal, pasta, rice, and syrups and mixes; refrigerated dips and spreads; beverage concentrates, fountain syrups, and finished goods; and ready-to-drink tea and coffee products. The company also provides SodaStream sparkling water makers and related products, as well as various dairy products under the Agu",
   "earnings_ts": 1791462600.0,
-  "_fetched": "2026-10-24T01:52:12.162389"
+  "_fetched": "2026-10-25T23:34:50.450060"
  },
  "WMT": {
   "name": "Walmart Inc.",
@@ -1697,7 +1697,7 @@
   "website": "https://www.stock.walmart.com",
   "summary": "Walmart Inc. engages in the operation of retail and wholesale stores and clubs, ecommerce websites, and mobile applications worldwide. The company operates through three segments: Walmart U.S., Walmart International, and Sam's Club U.S. It operates supercenters, supermarkets, warehouse clubs, cash and carry stores, and discount stores under Walmart and Walmart Neighborhood Market brands; membership-only warehouse clubs; and ecommerce websites, such as walmart.com.mx, walmart.ca, flipkart.com, PhonePe and other sites. It offers grocery items, including dry grocery, snacks, dairy, meat, produce, deli and bakery, frozen foods, alcoholic and nonalcoholic beverages, as well as consumables, such a",
   "earnings_ts": 1795091400.0,
-  "_fetched": "2026-10-24T01:52:13.003163"
+  "_fetched": "2026-10-25T23:34:51.918878"
  },
  "COST": {
   "name": "Costco Wholesale Corporation",
@@ -1731,7 +1731,7 @@
   "website": "https://www.costco.com",
   "summary": "Costco Wholesale Corporation, together with its subsidiaries, engages in the operation of membership warehouses in the United States, Puerto Rico, Canada, Mexico, Japan, the United Kingdom, Korea, Australia, Taiwan, China, Spain, France, Sweden, Iceland, and New Zealand. It offers merchandise, including sundries, dry groceries, candies, coolers, freezers, liquor, and tobacco; non-food merchandise comprising consumer electronics, appliances, small electrics, health and beauty aids, hardware, lawn and garden, sporting goods, tires, toys and seasonal, automotive, stamps, tickets, apparel, furniture, domestics, housewares, special order kiosks, and jewelry; and fresh food, such as meat, produce,",
   "earnings_ts": 1796932800.0,
-  "_fetched": "2026-10-24T01:52:13.819184"
+  "_fetched": "2026-10-25T23:34:53.399214"
  },
  "HD": {
   "name": "Home Depot, Inc. (The)",
@@ -1765,7 +1765,7 @@
   "website": "https://www.homedepot.com",
   "summary": "The Home Depot, Inc. operates as a home improvement retailer in the United States and internationally. It sells various building materials, home improvement products, lawn and garden products, and décor products, as well as facilities maintenance, repair, and operations products. The company also offers installation services for flooring, water heaters, baths, garage doors, cabinets, cabinet makeovers, countertops, sheds, furnaces and central air systems, windows, and window coverings. In addition, it provides tool and equipment rental services. The company serves consumers, such as do-it-yourself homeowners and do-it-for-me customers; and professional renovators/remodelers, general contract",
   "earnings_ts": 1794918600.0,
-  "_fetched": "2026-10-24T01:52:14.662519"
+  "_fetched": "2026-10-25T23:34:54.882971"
  },
  "MCD": {
   "name": "McDonald's Corporation",
@@ -1774,7 +1774,7 @@
   "price": 248.46,
   "forward_pe": 18.080627,
   "trailing_pe": 20.18359,
-  "peg": 2.67,
+  "peg": 2.63,
   "pb": -171.82573,
   "roe": null,
   "op_margin": 0.46485,
@@ -1799,14 +1799,14 @@
   "website": "https://www.mcdonalds.com",
   "summary": "McDonald's Corporation owns, operates, and franchises restaurants under the McDonald's brand in the United States and internationally. It offers food and beverages, including hamburgers and cheeseburgers, various chicken sandwiches, fries, shakes, frozen desserts, sundaes, soft serve cones, cookies, pies, soft drinks, coffee, and other beverages; and full or limited breakfast, as well as sells various other products during limited-time promotions. The company owns and operates franchised restaurants under various structures, including conventional franchise, developmental license, or affiliate. McDonald's Corporation was founded in 1940 and is based in Chicago, Illinois.",
   "earnings_ts": 1793795400.0,
-  "_fetched": "2026-10-24T01:52:15.584044"
+  "_fetched": "2026-10-25T23:34:56.372164"
  },
  "NKE": {
   "name": "Nike, Inc.",
   "sector": "Consumer Cyclical",
   "currency": "USD",
   "price": 37.3,
-  "forward_pe": 23.397608,
+  "forward_pe": 23.582073,
   "trailing_pe": 17.932693,
   "peg": 1.3992,
   "pb": 3.634415,
@@ -1825,7 +1825,7 @@
   "market_cap": 55402016768.0,
   "high_52w": 70.44,
   "low_52w": 31.97,
-  "forward_eps": 1.59418,
+  "forward_eps": 1.58171,
   "trailing_eps": 2.08,
   "industry": "Footwear & Accessories",
   "country": "United States",
@@ -1833,7 +1833,7 @@
   "website": "https://www.nike.com",
   "summary": "NIKE, Inc., together with its subsidiaries, designs, develops, markets, and sells athletic footwear, apparel, equipment, accessories, and services for men, women, and kids in North America, Europe, the Middle East, Africa, Greater China, the Asia Pacific, and Latin America. The company offers its products under the NIKE, Jordan, Converse, Jumpman, Chuck Taylor, All Star, One Star, Star Chevron, and Jack Purcell trademarks. It also provides a line of performance equipment and accessories, including bags, socks, sport balls, eyewear, timepieces, digital devices, bats, gloves, protective equipment, and other equipment for sports activities; and sports apparel, as well as sells products to whole",
   "earnings_ts": 1797537600.0,
-  "_fetched": "2026-10-24T01:52:16.442388"
+  "_fetched": "2026-10-25T23:34:57.849808"
  },
  "DIS": {
   "name": "Walt Disney Company (The)",
@@ -1867,7 +1867,7 @@
   "website": "https://thewaltdisneycompany.com",
   "summary": "The Walt Disney Company operates as an entertainment company in Americas, Europe, and the Asia Pacific. It operates in three segments: Entertainment, Sports, and Experiences. The company produces and distributes film and television content under the ABC Television Network, Disney, Freeform, FX, Fox, National Geographic, and Star brand television channels, as well as ABC television stations and A+E television networks; and produces original content under the Disney Branded Television, FX Productions, Lucasfilm, Marvel, National Geographic Studios, Pixar, Searchlight Pictures, Twentieth Century Studios, 20th Television, and Walt Disney Pictures banners. It also provides direct-to-consumer stre",
   "earnings_ts": 1794918600.0,
-  "_fetched": "2026-10-24T01:52:17.289230"
+  "_fetched": "2026-10-25T23:34:59.551435"
  },
  "CAT": {
   "name": "Caterpillar, Inc.",
@@ -1892,7 +1892,7 @@
   "payout_ratio": 0.26,
   "market_cap": 315796652032.0,
   "high_52w": 1073.46,
-  "low_52w": 521.02,
+  "low_52w": 521.43,
   "forward_eps": 32.58528,
   "trailing_eps": 23.23,
   "industry": "Farm & Heavy Construction Machinery",
@@ -1901,7 +1901,7 @@
   "website": "https://www.caterpillar.com",
   "summary": "Caterpillar Inc. provides construction and mining equipment, off-highway diesel and natural gas engines, industrial gas turbines, and diesel-electric locomotives in the United States and internationally. The Construction Industries segment offers asphalt pavers, cold planers, compactors, forestry machines, material handlers, motor graders, pipelayers, road reclaimers, telehandlers, track-type tractors, and track and wheel excavators; backhoe, compact track, skid steer, track-type, and wheel loaders; and related parts and work tools. Its Resource Industries segment provides electric rope and hydraulic shovels, draglines, rotary drills, hard rock vehicles, mining trucks, wheel loaders, off-hig",
   "earnings_ts": 1793277000.0,
-  "_fetched": "2026-10-24T01:52:18.106067"
+  "_fetched": "2026-10-25T23:35:01.195986"
  },
  "DE": {
   "name": "Deere & Company",
@@ -1933,25 +1933,25 @@
   "country": "United States",
   "employees": 73100.0,
   "website": "https://www.deere.com",
-  "summary": "Deere & Company engages in the manufacture and distribution of various equipment worldwide. The company operates through four segments: Production and Precision Agriculture, Small Agriculture and Turf, Construction and Forestry, and Financial Services. The Production and Precision Agriculture segment provides four-wheel-drive track and row crop tractors, harvesters, cotton pickers and strippers, sugarcane harvesters and loaders, soil preparation, tillage, seeding, and crop care equipment, as well as application equipment, including sprayers and nutrient management, soil preparation machinery, and related attachments and service parts. The Small Agriculture and Turf segment offers specialty, ",
+  "summary": "Deere & Company manufactures and distributes various equipment worldwide. It operates through four segments: Production and Precision Agriculture, Small Agriculture and Turf, Construction and Forestry, and Financial Services. The Production and Precision Agriculture segment provides track and row crop tractors, harvesters, cotton pickers and strippers, sugarcane harvesters and loaders, soil preparation, tillage, seeding, and crop care equipment; and application equipment, such as sprayers and nutrient management, soil preparation machinery, and related attachments and service parts. The Small Agriculture and Turf segment offers specialty, utility, and compact tractors; self-propelled forage ",
   "earnings_ts": 1795609800.0,
-  "_fetched": "2026-10-24T01:52:18.936540"
+  "_fetched": "2026-10-25T23:35:02.656701"
  },
  "HON": {
   "name": "Honeywell International Inc.",
   "sector": "Industrials",
   "currency": "USD",
   "price": 221.15,
-  "forward_pe": 22.48723,
+  "forward_pe": 22.466259,
   "trailing_pe": 10.964303,
   "peg": 3.3074,
-  "pb": 3.099466,
+  "pb": 3.1308396,
   "roe": 0.44387,
-  "op_margin": 0.14818,
-  "debt_to_equity": 73.245,
-  "revenue_growth": -0.52,
-  "earnings_growth": -0.637,
-  "target_mean": 253.69565,
+  "op_margin": 0.1692,
+  "debt_to_equity": 76.101,
+  "revenue_growth": 0.013,
+  "earnings_growth": -0.636,
+  "target_mean": 253.47826,
   "target_high": 290.0,
   "target_low": 186.0,
   "analyst_count": 23.0,
@@ -1961,7 +1961,7 @@
   "market_cap": 70091276288.0,
   "high_52w": 260.28317,
   "low_52w": 195.86786,
-  "forward_eps": 9.83447,
+  "forward_eps": 9.84365,
   "trailing_eps": 20.17,
   "industry": "Conglomerates",
   "country": "United States",
@@ -1969,15 +1969,15 @@
   "website": "https://www.honeywell.com",
   "summary": "Honeywell International Inc. engages in the industrial automation, building automation, and energy and sustainability solutions businesses in the United States, Europe, and internationally. The Industrial Automation segment provides automation control and instrumentation products and services; smart energy products; sensing technologies, including custom-engineered sensors and related services; gas detection technologies and personal protective equipment; and system design automation equipment, as well as software and analytics for manufacturing, distribution, and fulfillment operations. The Building Automation segment provides software applications for building control and optimization; sen",
   "earnings_ts": 1792672200.0,
-  "_fetched": "2026-10-24T01:52:19.759219"
+  "_fetched": "2026-10-25T23:35:04.232701"
  },
  "GE": {
   "name": "GE Aerospace",
   "sector": "Industrials",
   "currency": "USD",
   "price": 285.64,
-  "forward_pe": 30.762838,
-  "trailing_pe": 33.683968,
+  "forward_pe": 30.680231,
+  "trailing_pe": 32.644573,
   "peg": 4.0588,
   "pb": 16.845955,
   "roe": 0.50165004,
@@ -1985,41 +1985,41 @@
   "debt_to_equity": 115.989,
   "revenue_growth": 0.159,
   "earnings_growth": 0.089,
-  "target_mean": 382.8095,
+  "target_mean": 378.90475,
   "target_high": 435.0,
   "target_low": 280.0,
   "analyst_count": 21.0,
   "rec_key": "strong_buy",
   "rec_mean": 1.47826,
-  "payout_ratio": 0.1958,
+  "payout_ratio": 0.2023,
   "market_cap": 296369356800.0,
   "high_52w": 388.84,
   "low_52w": 268.91,
-  "forward_eps": 9.28523,
-  "trailing_eps": 8.48,
+  "forward_eps": 9.31023,
+  "trailing_eps": 8.75,
   "industry": "Aerospace & Defense",
   "country": "United States",
   "employees": 57000.0,
   "website": "https://www.geaerospace.com",
   "summary": "General Electric Company, doing business as GE Aerospace, designs and produces commercial and defense aircraft engines, integrated engine components, electric power, and aircraft systems. The company operates through two segments, Commercial Engines & Services, and Defense & Propulsion Technologies. The Commercial Engines & Services segment designs, develops, manufactures, maintenance, repair, and overhaul (MRO) services of jet engines and sale of spare parts for commercial airframes, business aviation, and aeroderivative applications. The Defense & Propulsion Technologies designs, develops, manufactures, and services jet engines and avionics and power systems for governments, militaries, an",
   "earnings_ts": 1800534600.0,
-  "_fetched": "2026-10-24T01:52:20.571034"
+  "_fetched": "2026-10-25T23:35:05.801720"
  },
  "LMT": {
   "name": "Lockheed Martin Corporation",
   "sector": "Industrials",
   "currency": "USD",
   "price": 604.18,
-  "forward_pe": 18.284138,
+  "forward_pe": 18.235085,
   "trailing_pe": 21.455256,
   "peg": 1.0155,
-  "pb": 13.839246,
+  "pb": 13.809197,
   "roe": 0.8019,
   "op_margin": 0.11405,
   "debt_to_equity": 203.697,
   "revenue_growth": 0.113,
   "earnings_growth": 0.147,
-  "target_mean": 633.6191,
+  "target_mean": 634.5238,
   "target_high": 756.0,
   "target_low": 498.0,
   "analyst_count": 21.0,
@@ -2029,7 +2029,7 @@
   "market_cap": 139568381952.0,
   "high_52w": 692.0,
   "low_52w": 437.25,
-  "forward_eps": 33.04394,
+  "forward_eps": 33.13283,
   "trailing_eps": 28.16,
   "industry": "Aerospace & Defense",
   "country": "United States",
@@ -2037,14 +2037,14 @@
   "website": "https://www.lockheedmartin.com",
   "summary": "Lockheed Martin Corporation, an aerospace and defense company, engages in the research, design, development, manufacture, integration, and sustainment of technology systems, products, and services in the United States, Europe, Asia, the Middle East, and internationally. The company operates through four segments: Aeronautics; Missiles and Fire Control (MFC); Rotary and Mission Systems (RMS); and Space. The Aeronautics segment offers combat and air mobility aircraft, unmanned air vehicles, and related technologies. The MFC segment provides air and missile defense systems; tactical missiles and precision strike weapon systems; logistics; fire control systems; mission operations support, readin",
   "earnings_ts": 1792672200.0,
-  "_fetched": "2026-10-24T01:52:21.394676"
+  "_fetched": "2026-10-25T23:35:07.295471"
  },
  "RTX": {
   "name": "RTX Corporation",
   "sector": "Industrials",
   "currency": "USD",
   "price": 191.01,
-  "forward_pe": 23.797152,
+  "forward_pe": 23.77781,
   "trailing_pe": 31.058535,
   "peg": 2.2145,
   "pb": 3.7220857,
@@ -2063,7 +2063,7 @@
   "market_cap": 257756626944.0,
   "high_52w": 226.88,
   "low_52w": 166.74,
-  "forward_eps": 8.02659,
+  "forward_eps": 8.03312,
   "trailing_eps": 6.15,
   "industry": "Aerospace & Defense",
   "country": "United States",
@@ -2071,14 +2071,14 @@
   "website": "https://www.rtx.com",
   "summary": "RTX Corporation, an aerospace and defense company, provides systems and services for commercial, military, and government customers worldwide. It operates through three segments: Collins Aerospace (Collins), Pratt & Whitney, and Raytheon. The Collins segment offers aerospace and defense products, and aftermarket services for civil and military aircraft manufacturers and commercial airlines, as well as regional, business, and general aviation, defense, and commercial space operations. This segment designs, manufactures, and supplies electric power generation and management and distribution, environmental control, flight control, air data and aircraft sensing, engine control, and engine nacell",
   "earnings_ts": 1792499400.0,
-  "_fetched": "2026-10-24T01:52:22.256902"
+  "_fetched": "2026-10-25T23:35:08.988685"
  },
  "NOC": {
   "name": "Northrop Grumman Corporation",
   "sector": "Industrials",
   "currency": "USD",
   "price": 551.44,
-  "forward_pe": 18.341373,
+  "forward_pe": 18.376776,
   "trailing_pe": 17.406565,
   "peg": 3.3766,
   "pb": 4.1931095,
@@ -2094,10 +2094,10 @@
   "rec_key": "buy",
   "rec_mean": 2.0,
   "payout_ratio": 0.3018,
-  "market_cap": 78339235840.0,
+  "market_cap": 78340046848.0,
   "high_52w": 774.0,
   "low_52w": 470.06,
-  "forward_eps": 30.06536,
+  "forward_eps": 30.00744,
   "trailing_eps": 31.68,
   "industry": "Aerospace & Defense",
   "country": "United States",
@@ -2105,7 +2105,7 @@
   "website": "https://www.northropgrumman.com",
   "summary": "Northrop Grumman Corporation operates as an aerospace and defense technology company in the United States, Asia/Pacific, Europe, and internationally. It operates through four segments: Aeronautics Systems, Defense Systems, Mission Systems and Space Systems. The Aeronautics Systems segment designs, develops, produces, integrates, sustains, and modernizes aircraft systems. This segment also offers unmanned autonomous aircraft systems, including high-altitude long-endurance strategic, surveillance and reconnaissance systems; and strategic long-range strike aircraft, tactical fighter and air dominance aircraft, and airborne battle management and command and control systems. Its Defense Systems s",
   "earnings_ts": 1792499400.0,
-  "_fetched": "2026-10-24T01:52:23.070379"
+  "_fetched": "2026-10-25T23:35:10.463837"
  },
  "UPS": {
   "name": "United Parcel Service, Inc.",
@@ -2130,7 +2130,7 @@
   "payout_ratio": 1.2193,
   "market_cap": 85979979776.0,
   "high_52w": 122.41,
-  "low_52w": 87.14,
+  "low_52w": 88.22,
   "forward_eps": 8.05861,
   "trailing_eps": 5.38,
   "industry": "Integrated Freight & Logistics",
@@ -2139,7 +2139,7 @@
   "website": "https://www.ups.com",
   "summary": "United Parcel Service, Inc., a package delivery and logistics provider, offers transportation and delivery services. It operates through two segments, U.S. Domestic Package and International Package. The U.S. Domestic Package segment offers time-definite delivery services for express letters, documents, packages and palletized freight through air and ground services. The International Package segment provides small package operations in Europe, the Middle East and Africa, Canada and Latin America, and Asia. The company offers a range of guaranteed day- and time-definite international transportation services; day-definite services; cross-border ground package delivery; contract-only, e-commer",
   "earnings_ts": 1793104200.0,
-  "_fetched": "2026-10-24T01:52:23.879864"
+  "_fetched": "2026-10-25T23:35:12.116156"
  },
  "VZ": {
   "name": "Verizon Communications Inc.",
@@ -2164,7 +2164,7 @@
   "payout_ratio": 0.7279,
   "market_cap": 185552257024.0,
   "high_52w": 51.68,
-  "low_52w": 38.54,
+  "low_52w": 38.68,
   "forward_eps": 5.27189,
   "trailing_eps": 3.84,
   "industry": "Telecom Services",
@@ -2173,7 +2173,7 @@
   "website": "https://www.verizon.com",
   "summary": "Verizon Communications Inc., through its subsidiaries, engages in the provision of communications, technology, information, and streaming products and services to consumers, businesses, and governmental entities worldwide. It operates in two segments, Verizon Consumer Group (Consumer) and Verizon Business Group (Business). The Consumer segment provides wireless services across the wireless networks in the United States under the Verizon and TracFone brands and through wholesale and other arrangements; and fixed wireless access (FWA) broadband through its wireless networks, as well as related equipment and devices, such as smartphones, tablets, smartwatches, and other wireless-enabled connect",
   "earnings_ts": 1793017800.0,
-  "_fetched": "2026-10-24T01:52:24.698479"
+  "_fetched": "2026-10-25T23:35:13.744558"
  },
  "T": {
   "name": "AT&T Inc.",
@@ -2207,7 +2207,7 @@
   "website": "https://www.att.com",
   "summary": "AT&T Inc. provides telecommunications and technology services worldwide. It operates through two segments, Communications and Latin America. The Communications segment offers wireless voice and data communications services; and sells handsets, wireless data cards, wireless computing devices, carrying cases/protective covers, and wireless chargers through its own company-owned stores, agents, and third-party retail stores. It also provides AT&T Dedicated Internet, fiber ethernet and broadband, fixed wireless, and hosted and managed professional services; and copper-based voice and data, Virtual Private Networks (VPN), wholesale, outsourcing, and IP, as well as customer premises equipment for ",
   "earnings_ts": 1792585800.0,
-  "_fetched": "2026-10-24T01:52:25.508920"
+  "_fetched": "2026-10-25T23:35:15.225590"
  },
  "005930.KS": {
   "name": "SamsungElec",
@@ -2216,7 +2216,7 @@
   "price": 215500.0,
   "forward_pe": 2.9814029,
   "trailing_pe": null,
-  "peg": 0.1312,
+  "peg": 0.1,
   "pb": null,
   "roe": 0.30794,
   "op_margin": 0.52182,
@@ -2232,7 +2232,7 @@
   "payout_ratio": 0.0749,
   "market_cap": 1403319360684032.0,
   "high_52w": 374500.0,
-  "low_52w": 94500.0,
+  "low_52w": 0.0,
   "forward_eps": null,
   "trailing_eps": null,
   "industry": "Consumer Electronics",
@@ -2241,7 +2241,7 @@
   "website": "https://www.samsung.com",
   "summary": "Samsung Electronics Co., Ltd. engages in the consumer electronics, information technology and mobile communications, and device solutions businesses worldwide. The company operates through four divisions: Device eXperience (DX), Device Solutions (DS), SDC, and Harman. The company offers smartphones, tablets, audio sounds, watches, switches, and accessories; TVs, and sound devices; appliances, including refrigerators, washing machines and dryers, vacuum cleaners, cooking appliances, dishwashers, air conditioners, and air purifiers; monitors and memory storage products; displays, and smart and LED signages; and other accessories. It also engages in venture capital investments, cloud services, ",
   "earnings_ts": 1793167200.0,
-  "_fetched": "2026-10-23T17:01:15.327135"
+  "_fetched": "2026-10-25T23:35:17.030526"
  },
  "000660.KS": {
   "name": "SK hynix",
@@ -2250,7 +2250,7 @@
   "price": 1277000.0,
   "forward_pe": 2.730026,
   "trailing_pe": null,
-  "peg": 0.1998,
+  "peg": 0.14,
   "pb": null,
   "roe": 0.92679,
   "op_margin": 0.76328003,
@@ -2266,7 +2266,7 @@
   "payout_ratio": 0.013200001,
   "market_cap": 930762698260480.0,
   "high_52w": 2987000.0,
-  "low_52w": 491500.0,
+  "low_52w": 0.0,
   "forward_eps": null,
   "trailing_eps": null,
   "industry": "Semiconductors",
@@ -2275,7 +2275,7 @@
   "website": "https://www.skhynix.com",
   "summary": "SK hynix Inc. through its subsidiaries, engages in research, develops, manufactures, distributes, and sells semiconductor devices in Korea, China, rest of Asia, the United States, Europe, and internationally. It offers DRAM, such as server memory, graphics memory, mobile memory, PC memory, consumer memory; NAND flash memory; SSD; and MCP products. It also engages in foundry business, produces non-memory semiconductors. The company serves its products for server, networking, mobile, personal computer, consumer, and automotive applications. The company was formerly known as Hynix Semiconductor Inc. and changed its name to SK hynix Inc. in March 2012. SK hynix Inc. was incorporated in 1949 and ",
   "earnings_ts": 1793080800.0,
-  "_fetched": "2026-10-23T17:01:16.341122"
+  "_fetched": "2026-10-25T23:35:18.589385"
  },
  "373220.KS": {
   "name": "LG Energy Solution",
@@ -3573,9 +3573,9 @@
   "name": "Schwab US Dividend Equity ETF",
   "sector": "Large Value",
   "currency": "USD",
-  "price": 35.265,
+  "price": 35.27,
   "forward_pe": null,
-  "trailing_pe": 19.69973,
+  "trailing_pe": 19.702524,
   "peg": null,
   "pb": null,
   "roe": null,
@@ -3601,7 +3601,7 @@
   "website": null,
   "summary": "To pursue its goal, the fund generally invests in stocks that are included in the index. The index is designed to measure the performance of high dividend yielding stocks issued by U.S. companies that have a record of consistently paying dividends, selected for fundamental strength relative to their peers, based on financial ratios. The fund will invest at least 90% of its net assets in these stocks.",
   "earnings_ts": null,
-  "_fetched": "2026-10-23T17:01:17.482106"
+  "_fetched": "2026-10-25T23:36:18.815681"
  },
  "VYM": {
   "name": "Vanguard High Dividend Yield ET",
