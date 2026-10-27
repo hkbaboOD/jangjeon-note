@@ -2300,7 +2300,7 @@
   "payout_ratio": 0.0,
   "market_cap": 89622000435200.0,
   "high_52w": 527000.0,
-  "low_52w": 290500.0,
+  "low_52w": 0.0,
   "forward_eps": null,
   "trailing_eps": null,
   "industry": "Electrical Equipment & Parts",
@@ -2309,7 +2309,7 @@
   "website": "https://www.lgensol.com",
   "summary": "LG Energy Solution, Ltd. provides energy solutions worldwide. The company offers automotive batteries, which include pouch-type battery cells, modules/packs, and battery management system products for use in electric vehicle batteries; mobility and IT batteries for various applications in IT devices, such as smartphones and laptops, as well as light electric vehicles, electric bicycles, power tools, and wireless earphones; and energy storage systems that are used in power grids, UPS, and commercial and residential applications. It operates in South Korea, China, and the United States. The company also owns lithium ores. LG Energy Solution, Ltd. was founded in 2020 and is headquartered in Seo",
   "earnings_ts": 1793685600.0,
-  "_fetched": "2026-10-24T01:52:26.362260"
+  "_fetched": "2026-10-25T23:35:20.072870"
  },
  "207940.KS": {
   "name": "SAMSUNG BIOLOGICS",
@@ -2334,7 +2334,7 @@
   "payout_ratio": 0.0,
   "market_cap": 68247353294848.0,
   "high_52w": 1987000.0,
-  "low_52w": 1150000.0,
+  "low_52w": 0.0,
   "forward_eps": null,
   "trailing_eps": null,
   "industry": "Biotechnology",
@@ -2343,7 +2343,7 @@
   "website": "https://samsungbiologics.com",
   "summary": "Samsung Biologics Co.,Ltd., together with its subsidiaries engages in the manufacturing, commercializing, distributing, and selling of biopharmaceuticals products in South Korea, Europe, the United States, and internationally. Its development services include late discovery, cell line development, process development, analytical development, and non-GMP / CGMP manufacturing. The company also offers aseptic filling, lyophilization, finishing, cold chain storage and shipping, and regulatory support services; and quality services and analytical testing services, such as IPC and release testing, stability study and testing, environmental monitoring, biosafety testing, as well as manufactures dru",
   "earnings_ts": 1800424800.0,
-  "_fetched": "2026-10-24T01:52:27.190176"
+  "_fetched": "2026-10-25T23:35:21.566987"
  },
  "005380.KS": {
   "name": "HyundaiMtr",
@@ -2368,7 +2368,7 @@
   "payout_ratio": 0.3225,
   "market_cap": 77371973566464.0,
   "high_52w": 783000.0,
-  "low_52w": 248000.0,
+  "low_52w": 0.0,
   "forward_eps": null,
   "trailing_eps": null,
   "industry": "Auto Manufacturers",
@@ -2377,7 +2377,7 @@
   "website": "https://www.hyundai.com/worldwide/en/",
   "summary": "Hyundai Motor Company, together with its subsidiaries, manufactures and distributes motor vehicles and parts. The company operates through Vehicle, Finance, and Others segments. It offers cars under the ELANTRA, SONATA, AZERA, i30, ACCENT, i20, and i10 names; eco vehicles under the IONIQ 9, NEXO, PALISADE Hybrid, IONIQ 6, INSTER, IONIQ 5, ELANTRA Hybrid, KONA Hybrid, KONA Electric, TUCSON Hybrid, SANTA FE Hybrid, SONATA Hybrid, AZERA Hybrid, i30 Hybrid, and STARIA Hybrid names; SUVs under the PALISADE, TUCSON, SANTA FE, KONA, and VENUE names; MPVs under the STARIA name; and commercial vehicles under the STARIA, H-1, and H-100 names, as well as N series and N Line series vehicles under variou",
   "earnings_ts": 1793253600.0,
-  "_fetched": "2026-10-24T01:52:28.039032"
+  "_fetched": "2026-10-25T23:35:23.091640"
  },
  "000270.KS": {
   "name": "KIA CORP.",
@@ -2402,7 +2402,7 @@
   "payout_ratio": 0.3736,
   "market_cap": 41547328389120.0,
   "high_52w": 212500.0,
-  "low_52w": 102600.0,
+  "low_52w": 0.0,
   "forward_eps": null,
   "trailing_eps": null,
   "industry": "Auto Manufacturers",
@@ -2411,7 +2411,7 @@
   "website": "https://www.kia.com",
   "summary": "Kia Corporation manufactures and sells vehicles in South Korea, North America, and Europe. The company offers cars, SUVs and MPV, commercial, electric, and hybrid vehicles. It sells its products through a network of dealers. The company was formerly known as Kia Motors Corporation and changed its name to Kia Corporation in January 2021. Kia Corporation was founded in 1944 and is headquartered in Seoul, South Korea.",
   "earnings_ts": 1793340000.0,
-  "_fetched": "2026-10-24T01:52:28.854225"
+  "_fetched": "2026-10-25T23:35:24.556450"
  },
  "068270.KS": {
   "name": "Celltrion",
@@ -2434,9 +2434,9 @@
   "rec_key": "buy",
   "rec_mean": 1.54545,
   "payout_ratio": 0.1042,
-  "market_cap": 44328235827200.0,
+  "market_cap": 44327422132224.0,
   "high_52w": 239047.62,
-  "low_52w": 158500.0,
+  "low_52w": 0.0,
   "forward_eps": null,
   "trailing_eps": null,
   "industry": "Biotechnology",
@@ -2445,7 +2445,7 @@
   "website": "https://www.celltrion.com",
   "summary": "Celltrion, Inc., a biopharmaceutical company, engages in the development, production, and sale of development, production, and sale of medicinal products. It offers biosimilars, including Remsima for rheumatoid arthritis and inflammatory bowel disease; Truxima for non-hodgkin's lymphoma and chronic lymphocytic leukemia; Herzuma for metastatic breast and gastric cancer; Remsima SC and Yuflyma for rheumatoid arthritis and inflammatory bowel disease; Vegzelma for metastatic colorectal cancer and non-small cell lung cancer; Omlyclo for Asthma and urticaria; Eydenzelt for diabetic macular edema and wet age-related macular degeneration; Steqeyma for psoriasis and inflammatory bowel disease; Stoboc",
   "earnings_ts": 1793253600.0,
-  "_fetched": "2026-10-24T01:52:29.667574"
+  "_fetched": "2026-10-25T23:35:26.026716"
  },
  "035420.KS": {
   "name": "NAVER",
@@ -2470,7 +2470,7 @@
   "payout_ratio": 0.19639999,
   "market_cap": 26006033268736.0,
   "high_52w": 304000.0,
-  "low_52w": 171100.0,
+  "low_52w": 0.0,
   "forward_eps": null,
   "trailing_eps": null,
   "industry": "Internet Content & Information",
@@ -2479,7 +2479,7 @@
   "website": "https://www.navercorp.com",
   "summary": "NAVER Corporation, together with its subsidiaries, provides online search portal and information services in South Korea and internationally. It is involved in the electronic financial; film and audio content production and distribution; Webtoon service development and operation; language learning application development; monitoring and advertisement operation; mobile service operation; trading platform operation; clothes, accessories, and news distribution; web novel platform support; and e-commerce businesses. In addition, the company engages in the provision of cloud service management, business support, workforce supply, and employee dispatch; camera and communication application develop",
   "earnings_ts": 1794463200.0,
-  "_fetched": "2026-10-24T01:52:30.519718"
+  "_fetched": "2026-10-25T23:35:27.669731"
  },
  "035720.KS": {
   "name": "Kakao",
@@ -2504,7 +2504,7 @@
   "payout_ratio": 0.0657,
   "market_cap": 13251444211712.0,
   "high_52w": 69700.0,
-  "low_52w": 29700.0,
+  "low_52w": 0.0,
   "forward_eps": null,
   "trailing_eps": null,
   "industry": "Internet Content & Information",
@@ -2513,7 +2513,7 @@
   "website": "https://www.kakaocorp.com",
   "summary": "Kakao Corp. operates mobile and online platforms in South Korea. The company offers Kakao Pay, a financial service solution; Kakao Bank, a banking solution; Kakao Mobility for mobility services; Kakao Style, a lifestyle solution; Kakao Entertainment, a solution for entertainment industry; Kakao Games, a solution for the gaming industry; Kakao piccoma, a content service platform; Kakao Brain, an artificial intelligence solution; Kakao Enterprise, a cloud service solution; and Kakao Healthcare, a mobile-based personal healthcare solution. It also provides Linkagelab, a workplace for individuals with disabilities; investment services in start-ups under the Kakao Investment name; and various sol",
   "earnings_ts": 1793944800.0,
-  "_fetched": "2026-10-24T01:52:31.388184"
+  "_fetched": "2026-10-25T23:35:29.311437"
  },
  "105560.KS": {
   "name": "KBFinancialGroup",
@@ -2538,7 +2538,7 @@
   "payout_ratio": 0.2721,
   "market_cap": 53719236345856.0,
   "high_52w": 194500.0,
-  "low_52w": 113800.0,
+  "low_52w": 0.0,
   "forward_eps": null,
   "trailing_eps": null,
   "industry": "Banks - Regional",
@@ -2547,14 +2547,14 @@
   "website": "https://www.kbfg.com",
   "summary": "KB Financial Group Inc. provides financial products and services in South Korea, the United States, New Zealand, China, Cambodia, the United Kingdom, Indonesia, and internationally. The company offers deposit products, such as demand and time deposits, certificates of deposit, foreign currency deposits, and savings deposits for housing subscription; loan products, including mortgage loans to finance home purchases, construction, improvements, or rentals; and home equity loans, overdraft loans, and other consumer loans. It also provides debit and credit cards; working capital loans and facility loans; mortgage loans to home builders or developers; securities underwriting; financing and financ",
   "earnings_ts": 1793253600.0,
-  "_fetched": "2026-10-24T01:52:32.208472"
+  "_fetched": "2026-10-25T23:35:30.985554"
  },
  "055550.KS": {
   "name": "ShinhanGroup",
   "sector": "Financial Services",
   "currency": "KRW",
   "price": 88100.0,
-  "forward_pe": 6.4859056,
+  "forward_pe": 6.4743943,
   "trailing_pe": null,
   "peg": 5.14,
   "pb": null,
@@ -2563,7 +2563,7 @@
   "debt_to_equity": null,
   "revenue_growth": 0.057,
   "earnings_growth": 0.225,
-  "target_mean": 133176.19,
+  "target_mean": 133747.62,
   "target_high": 147000.0,
   "target_low": 120000.0,
   "analyst_count": 21.0,
@@ -2572,7 +2572,7 @@
   "payout_ratio": 0.253,
   "market_cap": 41483151343616.0,
   "high_52w": 116500.0,
-  "low_52w": 72500.0,
+  "low_52w": 0.0,
   "forward_eps": null,
   "trailing_eps": null,
   "industry": "Banks - Regional",
@@ -2581,14 +2581,14 @@
   "website": "https://www.shinhangroup.com",
   "summary": "Shinhan Financial Group Co., Ltd. provides financial products and services in South Korea and overseas. It offers credit, lending and receiving deposits; credit cards, short-term and long-term card loan services, installment financing, and leases; securities trading, consignment trading, and underwriting; life and non-life insurance business; facility rental and new technology business financing; and real estate trust, investment advisory services, venture business investment, and other businesses. Shinhan Financial Group Co., Ltd. was founded in 1982 and is based in Seoul, South Korea.",
   "earnings_ts": 1793080800.0,
-  "_fetched": "2026-10-24T01:52:33.032687"
+  "_fetched": "2026-10-25T23:35:32.460387"
  },
  "086790.KS": {
   "name": "HANAFINANCIALGR",
   "sector": "Financial Services",
   "currency": "KRW",
   "price": 116300.0,
-  "forward_pe": 6.5527625,
+  "forward_pe": 6.548093,
   "trailing_pe": null,
   "peg": 4.79,
   "pb": null,
@@ -2597,8 +2597,8 @@
   "debt_to_equity": null,
   "revenue_growth": 0.184,
   "earnings_growth": 0.048,
-  "target_mean": 163804.34,
-  "target_high": 194000.0,
+  "target_mean": 163500.0,
+  "target_high": 187000.0,
   "target_low": 148000.0,
   "analyst_count": 23.0,
   "rec_key": "strong_buy",
@@ -2606,7 +2606,7 @@
   "payout_ratio": 0.2976,
   "market_cap": 31064573607936.0,
   "high_52w": 142500.0,
-  "low_52w": 84500.0,
+  "low_52w": 0.0,
   "forward_eps": null,
   "trailing_eps": null,
   "industry": "Banks - Regional",
@@ -2615,14 +2615,14 @@
   "website": "https://www.hanafn.com",
   "summary": "Hana Financial Group Inc., through its subsidiaries, provides financial services in South Korea, Hong Kong, Singapore, the United States, Japan, China, Indonesia, the United Kingdom, Canada, and internationally. It operates through five segments: Banking, Securities, Credit Card, Capital Financing, and Others. The company engages in banking services; financial investments; credit card business; installment credit financing; real estate trust; system development service; mutual savings banking; life and non-life insurance; transfer agent; asset management; investment and management service for non-performing loan asset-backed securities; private placed fund; trust account; special purpose veh",
   "earnings_ts": 1792735200.0,
-  "_fetched": "2026-10-24T01:52:33.843305"
+  "_fetched": "2026-10-25T23:35:33.990159"
  },
  "316140.KS": {
   "name": "WooriFinancialGroup",
   "sector": "Financial Services",
   "currency": "KRW",
   "price": 30100.0,
-  "forward_pe": 6.196976,
+  "forward_pe": 6.177733,
   "trailing_pe": null,
   "peg": 2.56,
   "pb": null,
@@ -2638,9 +2638,9 @@
   "rec_key": "strong_buy",
   "rec_mean": 1.47619,
   "payout_ratio": 0.3321,
-  "market_cap": 21913875251200.0,
+  "market_cap": 22064169746432.0,
   "high_52w": 41500.0,
-  "low_52w": 25200.0,
+  "low_52w": 0.0,
   "forward_eps": null,
   "trailing_eps": null,
   "industry": "Banks - Regional",
@@ -2649,7 +2649,7 @@
   "website": "https://www.woorifg.com",
   "summary": "Woori Financial Group Inc., together with its subsidiaries, operates as a bank which provides various financial services in Korea, China, the United States, the United Kingdom, Japan, and internationally. The company operates through Banking Insurance, Credit Card Capital, Investment Securities, and Others segments. It offers loans, deposits, and relevant services; and contracting and maintenance of insurance policies, payment of insurance benefits, insurance agents and brokers, and provision of life insurance-related services. The company also offers debit and credit cards, cash services, card loans, and related services; lease financing; and securities operation, sale of financial instrume",
   "earnings_ts": 1792735200.0,
-  "_fetched": "2026-10-24T01:52:34.714095"
+  "_fetched": "2026-10-25T23:35:35.470205"
  },
  "005490.KS": {
   "name": "POSCO Holdings",
@@ -2674,7 +2674,7 @@
   "payout_ratio": 0.5204,
   "market_cap": 20833523204096.0,
   "high_52w": 542000.0,
-  "low_52w": 272000.0,
+  "low_52w": 0.0,
   "forward_eps": null,
   "trailing_eps": null,
   "industry": "Steel",
@@ -2683,7 +2683,7 @@
   "website": "https://www.posco-inc.com",
   "summary": "POSCO Holdings Inc., together with its subsidiaries, operates as an integrated steel producer in Korea and internationally. It operates through six segments: Steel, Trading, Construction, Logistics and Others, Green Materials and Energy, and Others. The company engages in the production, import, sale, and export of steel products, such as hot and cold rolled steel, stainless steel, plates, wire rods, and silicon steel sheets, as well as pig iron, billets, blooms, and slabs; trading of steel and raw materials, textiles, agricultural commodities, and other goods; natural resources development and power generation activities; and planning, designing, and construction of industrial plants, civil",
   "earnings_ts": 1793599200.0,
-  "_fetched": "2026-10-24T01:52:35.542196"
+  "_fetched": "2026-10-25T23:35:37.439185"
  },
  "051910.KS": {
   "name": "LGCHEM",
@@ -2708,7 +2708,7 @@
   "payout_ratio": 2.9118,
   "market_cap": 17924997775360.0,
   "high_52w": 437500.0,
-  "low_52w": 224000.0,
+  "low_52w": 0.0,
   "forward_eps": null,
   "trailing_eps": null,
   "industry": "Chemicals",
@@ -2717,14 +2717,14 @@
   "website": "https://www.lgchem.com",
   "summary": "LG Chem, Ltd., together with its subsidiaries, operates as a chemical company in Korea, China, Asia/Oceania, the United States, Europe, and internationally. It offers ethylene-based synthetic resin products, such as ethylene vinyl acetate, high density polyethylene, low density polyethylene, linear low-density polyethylene, polyolefin elastomer, polyvinyl chloride, metallocene PE, and UNIQABLE, a recyclable all-PE packaging solution; and styrene-based synthetic resin, including acrylonitrile butadiene styrene, acrylonitrile styrene acrylate, expandable polystyrene, polystyrene, styrene acrylonitrile copolymer. The company also provides polycarbonate, a benzene-based synthetic resin product; ",
   "earnings_ts": 1793858400.0,
-  "_fetched": "2026-10-24T01:52:36.359515"
+  "_fetched": "2026-10-25T23:35:38.908359"
  },
  "006400.KS": {
   "name": "SAMSUNG SDI CO.,LTD.",
   "sector": "Industrials",
   "currency": "KRW",
   "price": 490500.0,
-  "forward_pe": 27.122492,
+  "forward_pe": 27.052061,
   "trailing_pe": null,
   "peg": 12.29,
   "pb": null,
@@ -2742,7 +2742,7 @@
   "payout_ratio": 1.3123,
   "market_cap": 38599227604992.0,
   "high_52w": 723000.0,
-  "low_52w": 259000.0,
+  "low_52w": 0.0,
   "forward_eps": null,
   "trailing_eps": null,
   "industry": "Electrical Equipment & Parts",
@@ -2751,7 +2751,7 @@
   "website": "https://www.samsungsdi.com",
   "summary": "Samsung SDI Co., Ltd. manufactures and sells batteries in South Korea, Europe, China, North America, Southeast Asia, and internationally. The company operates through Energy Solutions and Electronic Materials segments. It offers small-sized lithium ion batteries used in laptops, tablets, mobile phones, wearable devices, power banks, power tools, garden tools, vacuum cleaners, e-bikes, e-scooters, and ignition products; automotive batteries; and energy storage systems for use in residential, utility, commercial, UPS, and base transceiver station applications. In addition, the company provides electronic materials, including semiconductor products, such as spin-on hardmasks, spin-on dielectric",
   "earnings_ts": 1793253600.0,
-  "_fetched": "2026-10-24T01:52:37.177734"
+  "_fetched": "2026-10-25T23:35:40.432638"
  },
  "012330.KS": {
   "name": "Mobis",
@@ -2776,7 +2776,7 @@
   "payout_ratio": 0.1593,
   "market_cap": 29060939907072.0,
   "high_52w": 822000.0,
-  "low_52w": 283000.0,
+  "low_52w": 0.0,
   "forward_eps": null,
   "trailing_eps": null,
   "industry": "Auto Parts",
@@ -2785,7 +2785,7 @@
   "website": "https://www.mobis.co.kr",
   "summary": "Hyundai Mobis Co.,Ltd engages in the auto parts business in Korea, China, the United States, Europe, and internationally. It operates in two segments, Auto Parts and After-Sales Services. The Auto Parts segment sells auto modules and parts for manufacturing vehicles. The After-Sales Services segment engages in sale of after-sales services parts and accessories. It offers autonomous driving solutions, including driving, parking, in-cabin sensing, and electronic control; and lamps, such as headlamps, rear, small, and grille lamps, as well as lamp parts. The company provides electrification products comprising power conversion, drive, battery, and 48V mild hybrid; safety products consisting of ",
   "earnings_ts": 1793340000.0,
-  "_fetched": "2026-10-24T01:52:37.993598"
+  "_fetched": "2026-10-25T23:35:41.924240"
  },
  "028260.KS": {
   "name": "SAMSUNG C&T",
@@ -2810,7 +2810,7 @@
   "payout_ratio": 0.16399999,
   "market_cap": 47126927114240.0,
   "high_52w": 565000.0,
-  "low_52w": 205000.0,
+  "low_52w": 0.0,
   "forward_eps": null,
   "trailing_eps": null,
   "industry": "Engineering & Construction",
@@ -2819,7 +2819,7 @@
   "website": "https://www.samsungcnt.com",
   "summary": "Samsung C&T Corporation engages in the engineering and construction, trading and investment, fashion, and resort businesses in South Korea, Europe, the Middle East, Africa, the Asia Pacific, and the Americas. Its engineering and construction business cover building, civil infrastructure, plant, and housing construction activities. The company trades in chemicals such as polymers, fertilizers, methanol, general chemical, and mining materials; hot and cold-rolled, stainless steel, coated/colored steel, plates, and wire rods products; energy resources comprising renewable energy, biofuel, hydrogen, LNG power plants, and project organizing; and industrial materials, including component and proce",
   "earnings_ts": 1793167200.0,
-  "_fetched": "2026-10-24T01:52:38.851953"
+  "_fetched": "2026-10-25T23:35:43.443152"
  },
  "032830.KS": {
   "name": "SAMSUNG LIFE",
@@ -2844,7 +2844,7 @@
   "payout_ratio": 0.3397,
   "market_cap": 43995820457984.0,
   "high_52w": 516500.0,
-  "low_52w": 144000.0,
+  "low_52w": 0.0,
   "forward_eps": null,
   "trailing_eps": null,
   "industry": "Insurance - Life",
@@ -2853,7 +2853,7 @@
   "website": "https://www.samsunglife.com",
   "summary": "Samsung Life Insurance Co., Ltd., together with its subsidiaries, engages in the life insurance business to corporate and individual customers in South Korea and internationally. The company operates through Domestic Insurance; Credit Card Service, Installment Financing and Leasing; and Overseas segments. It also offers various loan products for companies, household, and stocks and bonds, as well as mortgage loans; and retirement pension, funds, and asset management services. The company was formerly known as Dongbang Life Insurance and changed its name to Samsung Life Insurance Co., Ltd. in July 1989. Samsung Life Insurance Co., Ltd. was founded in 1957 and is headquartered in Seoul, South ",
   "earnings_ts": 1794463200.0,
-  "_fetched": "2026-10-24T01:52:39.783667"
+  "_fetched": "2026-10-25T23:35:44.922246"
  },
  "000810.KS": {
   "name": "SamsungF&MIns",
@@ -2878,7 +2878,7 @@
   "payout_ratio": 0.4002,
   "market_cap": 25590727966720.0,
   "high_52w": 757000.0,
-  "low_52w": 419000.0,
+  "low_52w": 0.0,
   "forward_eps": null,
   "trailing_eps": null,
   "industry": "Insurance - Property & Casualty",
@@ -2887,7 +2887,7 @@
   "website": "https://www.samsungfire.com",
   "summary": "Samsung Fire & Marine Insurance Co., Ltd., together with its subsidiaries, provides non-life insurance products and services in South Korea, China, Indonesia, Vietnam, Singapore, the United States, and the United Kingdom. The company offers automobile insurance, long-term damage insurance, personal pensions, and retirement pensions, as well as claim adjustment, agency, and insurance consulting services. It also provides general insurance that covers risks related to business management, personal property, and body, including fire, marine, technology, liability, injury, and disease. The company was founded in 1952 and is headquartered in Seoul, South Korea.",
   "earnings_ts": 1794463200.0,
-  "_fetched": "2026-10-24T01:52:40.647679"
+  "_fetched": "2026-10-25T23:35:46.428037"
  },
  "017670.KS": {
   "name": "SKTelecom",
@@ -2912,7 +2912,7 @@
   "payout_ratio": 0.48610002,
   "market_cap": 15872893648896.0,
   "high_52w": 139500.0,
-  "low_52w": 51400.0,
+  "low_52w": 0.0,
   "forward_eps": null,
   "trailing_eps": null,
   "industry": "Telecom Services",
@@ -2921,7 +2921,7 @@
   "website": "https://www.sktelecom.com",
   "summary": "SK Telecom Co., Ltd. engages in the provision of wireless telecommunication services in South Korea. The company operates through three segments: Cellular Services, Fixed-Line Telecommunications Services, and Other Businesses. The Cellular Services segment offers wireless voice and data transmission, cellular interconnection, Internet of Things solutions and enterprise communications, cloud, subscription, advertising and curated shopping services; as well as sells wireless devices. Its Fixed-Line Telecommunications Services segment provides fixed-line telephone, broadband Internet services; media platform services, such as internet protocol TV and cable TV; and business communications and re",
   "earnings_ts": 1793772000.0,
-  "_fetched": "2026-10-24T01:52:41.624879"
+  "_fetched": "2026-10-25T23:35:47.921953"
  },
  "030200.KS": {
   "name": "KT",
@@ -2946,7 +2946,7 @@
   "payout_ratio": 0.44979998,
   "market_cap": 11078761185280.0,
   "high_52w": 69400.0,
-  "low_52w": 46600.0,
+  "low_52w": 0.0,
   "forward_eps": null,
   "trailing_eps": null,
   "industry": "Telecom Services",
@@ -2955,7 +2955,7 @@
   "website": "https://corp.kt.com",
   "summary": "KT Corporation provides integrated telecommunications and platform services in South Korea, rest of Asia, and internationally. The company offers mobile voice and data telecommunications services based on 5G, 4G LTE and 3G W-CDMA technology; fixed-line telephone services, including local, domestic long-distance, international long-distance, and voice over Internet protocol telephone services, as well as interconnection services; broadband Internet access service and other Internet-related services; and data communication services, such as fixed-line and satellite leased line services, as well as broadband Internet connection services. It also provides media and content services, including IP",
   "earnings_ts": 1793858400.0,
-  "_fetched": "2026-10-24T01:52:42.438259"
+  "_fetched": "2026-10-25T23:35:49.390475"
  },
  "033780.KS": {
   "name": "KT&G",
@@ -2980,7 +2980,7 @@
   "payout_ratio": 0.4388,
   "market_cap": 19661699678208.0,
   "high_52w": 196400.0,
-  "low_52w": 132100.0,
+  "low_52w": 0.0,
   "forward_eps": null,
   "trailing_eps": null,
   "industry": "Tobacco",
@@ -2989,7 +2989,7 @@
   "website": "https://www.ktng.com",
   "summary": "KT&G Corporation, together with its subsidiaries, engages in the production, distribution, and sale of tobacco products in South Korea, Europe, and internationally. It provides reconstituent tobacco sheets, red ginseng, red ginseng products, other health foods, food and beverage products, health functional food products, and cosmetic and related products. The company also offers leaf tobacco cultivation support services; and develops, manufactures, and distributes drugs, bio-pharmaceuticals, over-the-counter medicines, and medical supplies and equipment. In addition, it engages in the trading, real estate, leasing, and housing businesses. Further, the company engages in hotel development and",
   "earnings_ts": 1793858400.0,
-  "_fetched": "2026-10-24T01:52:43.251594"
+  "_fetched": "2026-10-25T23:35:50.862907"
  },
  "015760.KS": {
   "name": "KEPCO",
@@ -3014,7 +3014,7 @@
   "payout_ratio": 0.1263,
   "market_cap": null,
   "high_52w": 69500.0,
-  "low_52w": 27800.0,
+  "low_52w": 0.0,
   "forward_eps": null,
   "trailing_eps": null,
   "industry": "Utilities - Regulated Electric",
@@ -3023,7 +3023,7 @@
   "website": "https://www.kepco.co.kr",
   "summary": "Korea Electric Power Corporation, together with its subsidiaries, engages in the generation, transmission, and distribution of electricity in South Korea and internationally. The company operates through five segments: Electricity Sales, Nuclear Power Generation, Thermal Power Generation, Power Support, and Other. It builds and operates overhead and underground transmission power grids; offers digital substations, grid stabilization equipment, and predictive diagnostic system; high voltage direct current transmission; distribution network construction, distributed energy, and smart distribution network; power outage prevention, insulated sticks, and scheduled power shutdowns; and smart meter",
   "earnings_ts": 1794463200.0,
-  "_fetched": "2026-10-24T01:52:44.094623"
+  "_fetched": "2026-10-25T23:35:52.667183"
  },
  "096770.KS": {
   "name": "SK Innovation",
@@ -3048,7 +3048,7 @@
   "payout_ratio": 0.0,
   "market_cap": 23500381224960.0,
   "high_52w": 165400.0,
-  "low_52w": 87700.0,
+  "low_52w": 0.0,
   "forward_eps": null,
   "trailing_eps": null,
   "industry": "Oil & Gas Refining & Marketing",
@@ -3057,7 +3057,7 @@
   "website": "https://www.skinnovation.com",
   "summary": "SK Innovation Co., Ltd., together with its subsidiaries, engages in the development, production, and sale of petroleum, natural gas, petrochemical, lubricants, and base oil products in South Korea, Asia, Europe, the United States, and internationally. The company operates through Energy & Chemicals, Battery & Materials, E&S, and Others segments. The company is also involved in insurance, power, district energy, renewable, city gas, LNG, manufacturing, trading, and oil exploration businesses; storage and sale of petroleum products; manufacturing of industrial gas and separator for secondary batteries; operating gas station and sports club; selling asphalt; issuance and redemption of floating ",
   "earnings_ts": 1793253600.0,
-  "_fetched": "2026-10-24T01:52:44.959931"
+  "_fetched": "2026-10-25T23:35:54.142098"
  },
  "010950.KS": {
   "name": "S-Oil",
@@ -3082,7 +3082,7 @@
   "payout_ratio": 0.0252,
   "market_cap": 15414092365824.0,
   "high_52w": 177100.0,
-  "low_52w": 70700.0,
+  "low_52w": 0.0,
   "forward_eps": null,
   "trailing_eps": null,
   "industry": "Oil & Gas Refining & Marketing",
@@ -3091,7 +3091,7 @@
   "website": "https://www.s-oil.com",
   "summary": "S-Oil Corporation, together with its subsidiaries, manufactures, sells, and supplies oil refining, lube, and petrochemical products in South Korea. The company offers butane, propane, naphtha, benzene, toluene, xylene, para-xylene, jet fuel, diesel, kerosene, gasoline, propylene, asphalt, polypropylene, and propylene oxide. It also provides lube base oil and petro-chemical products; refined crude oil products; and petroleum products. It exports its products to Southeast Asia, China, Japan, the United States, Australia, Europe, and internationally. The company was formerly known as Ssangyong Oil Refining Co. Ltd. and changed its name to S-Oil Corporation in April 2000. The company was incorpo",
   "earnings_ts": 1793599200.0,
-  "_fetched": "2026-10-24T01:52:45.769838"
+  "_fetched": "2026-10-25T23:35:55.621043"
  },
  "009540.KS": {
   "name": "HDKSOE",
@@ -3116,7 +3116,7 @@
   "payout_ratio": 0.1866,
   "market_cap": 17537229127680.0,
   "high_52w": 494500.0,
-  "low_52w": 236500.0,
+  "low_52w": 0.0,
   "forward_eps": null,
   "trailing_eps": null,
   "industry": "Aerospace & Defense",
@@ -3125,7 +3125,7 @@
   "website": "https://www.hdksoe.co.kr",
   "summary": "HD Korea Shipbuilding & Offshore Engineering Co., Ltd. engages in shipbuilding and offshore engineering business in South Korea. The company offers ship types, including tankers, container ships, petrochemical carriers, LNG carriers, LNG-FSRUs, LPG carriers, LEG carriers, car carriers, Ro-Pax, Ro-Ro, LNG bunkering carriers, and LCO2 ships; and offshore plant business includes the manufacturing and installation of offshore structures, floating crude oil production facilities, power generation facilities, and other individual equipment units. It also specializes in building various types of special-purpose ships, such as destroyers, frigates, corvettes, logistics support ships, amphibious, min",
   "earnings_ts": 1793167200.0,
-  "_fetched": "2026-10-24T01:52:46.591225"
+  "_fetched": "2026-10-25T23:35:57.265605"
  },
  "329180.KS": {
   "name": "HD HYUNDAI HEAVY INDUSTRIES",
@@ -3150,7 +3150,7 @@
   "payout_ratio": 0.1575,
   "market_cap": 32004496162816.0,
   "high_52w": 765000.0,
-  "low_52w": 293000.0,
+  "low_52w": 0.0,
   "forward_eps": null,
   "trailing_eps": null,
   "industry": "Aerospace & Defense",
@@ -3159,7 +3159,7 @@
   "website": "https://www.hhi.co.kr",
   "summary": "HD Hyundai Heavy Industries Co., Ltd., together with its subsidiaries, engages in the shipbuilding business in South Korea, North America, Asia, Europe, and internationally. It operates through four segments: Shipbuilding, Offshore Plants, Engine Machinery, and Others. The company manufactures and sells general merchant ships, including container ships, tankers, ro-pax, ro-ro, and LNG bunkering vessels, as well as LNG, LPG, LEG, bulk, car, and petrochemical product carriers; special merchant ships, such as drillships, semi-submersible drilling rigs, and offshore support vessels; and naval and medium size ships comprising destroyer, frigate, submarine, patrol vessel, minelayer, and landing, c",
   "earnings_ts": 1793253600.0,
-  "_fetched": "2026-10-24T01:52:47.448364"
+  "_fetched": "2026-10-25T23:35:58.736057"
  },
  "012450.KS": {
   "name": "HANWHA AEROSPACE",
@@ -3184,7 +3184,7 @@
   "payout_ratio": 0.1725,
   "market_cap": 40747441061888.0,
   "high_52w": 1655000.0,
-  "low_52w": 763000.0,
+  "low_52w": 0.0,
   "forward_eps": null,
   "trailing_eps": null,
   "industry": "Aerospace & Defense",
@@ -3193,7 +3193,7 @@
   "website": "https://www.hanwhaaerospace.co.kr",
   "summary": "Hanwha Aerospace Co., Ltd. engages in the development, production, and maintenance of aircraft engines worldwide. The company offers Korea space launch vehicle; satellite services, such as earth observation and satellite communication; fixed and rotary wing engines, guided missile engines, electric propulsion systems, aircraft and missile components, and aircraft engine modules and parts; and artillery systems, armored vehicles, air defense systems, missile and ammunition, manned-unmanned teaming systems, and navigation systems. It also provides marine gas turbine engines and gensets; lithium battery systems; specialty and commercial ships; and offshore plants. In addition, the company offer",
   "earnings_ts": 1793253600.0,
-  "_fetched": "2026-10-24T01:52:48.262594"
+  "_fetched": "2026-10-25T23:36:00.217860"
  },
  "047810.KS": {
   "name": "KOREA AEROSPACE",
@@ -3218,7 +3218,7 @@
   "payout_ratio": 0.2749,
   "market_cap": 9961955393536.0,
   "high_52w": 215500.0,
-  "low_52w": 95100.0,
+  "low_52w": 0.0,
   "forward_eps": null,
   "trailing_eps": null,
   "industry": "Aerospace & Defense",
@@ -3227,7 +3227,7 @@
   "website": "https://www.koreaaero.com",
   "summary": "Korea Aerospace Industries, Ltd. manufactures and sells fixed and rotary wing aircrafts, and airframe products in South Korea. The company develops supersonic jets; airfield controlled and basic trainer aircrafts; utility, police, maritime police agency, coast guard, forest, and fire-fighting helicopters; unmanned air vehicles; commercial and civil aircrafts; and aero structures. It also provides aircraft maintenance, repair, and overhaul services; aircraft training systems; and compact advanced satellite 500 and defense satellite, and multi-purpose satellites, as well as space launch vehicles. Korea Aerospace Industries, Ltd. was founded in 1999 and is headquartered in Sacheon-si, South Kor",
   "earnings_ts": 1753700340.0,
-  "_fetched": "2026-10-24T01:52:49.091164"
+  "_fetched": "2026-10-25T23:36:01.807053"
  },
  "064350.KS": {
   "name": "HYUNDAI ROTEM",
@@ -3252,7 +3252,7 @@
   "payout_ratio": 0.081099994,
   "market_cap": 9026067759104.0,
   "high_52w": 282000.0,
-  "low_52w": 80400.0,
+  "low_52w": 0.0,
   "forward_eps": null,
   "trailing_eps": null,
   "industry": "Railroads",
@@ -3261,7 +3261,7 @@
   "website": "https://www.hyundai-rotem.co.kr",
   "summary": "Hyundai Rotem Company manufactures and sells railway vehicles, defense systems, and plants and machinery in South Korea and internationally. The company provides railway solutions, such as high-speed trains, regional and intercity, commuter trains and metros, tram and LRVs, locomotives, and passengers cars; power mechanical, inspection, and system engineering; operation and maintenance; signaling; and hydrogen mobility services. It also offers defense solutions, including tanks, wheeled armored vehicles, and future weapon systems. In addition, the company provides logistic automation system, automotive conveyor system, port AGV, and boarding bridge and cargo handling system; hydrogen infrast",
   "earnings_ts": 1792735200.0,
-  "_fetched": "2026-10-24T01:52:49.907510"
+  "_fetched": "2026-10-25T23:36:03.347393"
  },
  "034020.KS": {
   "name": "Doosan Enerbility",
@@ -3286,7 +3286,7 @@
   "payout_ratio": 0.0,
   "market_cap": 37964486803456.0,
   "high_52w": 139200.0,
-  "low_52w": 57000.0,
+  "low_52w": 0.0,
   "forward_eps": null,
   "trailing_eps": null,
   "industry": "Specialty Industrial Machinery",
@@ -3295,7 +3295,7 @@
   "website": "https://www.doosanenerbility.com",
   "summary": "Doosan Enerbility Co., Ltd. operates as an energy company in South Korea, the Americas, Asia, the Middle East, Europe, and internationally. The company offers new energy solutions, including wind power solutions, gas turbines for power generation, small modular reactors, hydrogen energy, and energy storage systems. It also engages in the manufacture of power generation equipment, including boilers, turbines, and generators; engineering, procurement, and construction of thermal power plants; general construction; seawater desalination; 3D printing technology; and castings and forgings for power plants, marine vessels, steelworks, molds and tool steel, and other various industrial facilities. ",
   "earnings_ts": 1753354740.0,
-  "_fetched": "2026-10-24T01:52:50.762863"
+  "_fetched": "2026-10-25T23:36:04.994849"
  },
  "003550.KS": {
   "name": "LG Corp.",
@@ -3320,7 +3320,7 @@
   "payout_ratio": 0.6309,
   "market_cap": 15266117320704.0,
   "high_52w": 185900.0,
-  "low_52w": 77700.0,
+  "low_52w": 0.0,
   "forward_eps": null,
   "trailing_eps": null,
   "industry": "Consumer Electronics",
@@ -3329,7 +3329,7 @@
   "website": "https://www.lgcorp.com",
   "summary": "LG Corp., through its subsidiaries, operates in the electronics, chemicals, and telecommunication and services sectors. The company offers TVs, home appliances, air solutions, monitors, automotive components and solutions; LG displays, including mobile, IT, TV, and automotive display products. It also provides vehicle sensing, communication, and lighting solutions, as well as substrates for AI and semiconductors, such as FC-BGA. In addition, the company offers advanced materials, and petrochemical and life science products; daily necessities, cosmetics, and beverages; automotive, mobility and IT, and energy storage system batteries; telecommunications services; cable TV and internet services",
   "earnings_ts": 1794463200.0,
-  "_fetched": "2026-10-24T01:52:51.624905"
+  "_fetched": "2026-10-25T23:36:06.461372"
  },
  "066570.KS": {
   "name": "LGELECTRONICS",
@@ -3354,7 +3354,7 @@
   "payout_ratio": 0.2319,
   "market_cap": 28184976293888.0,
   "high_52w": 438000.0,
-  "low_52w": 83400.0,
+  "low_52w": 0.0,
   "forward_eps": null,
   "trailing_eps": null,
   "industry": "Consumer Electronics",
@@ -3363,7 +3363,7 @@
   "website": "https://www.lge.co.kr",
   "summary": "LG Electronics Inc., together with its subsidiaries, manufactures and sells consumer and commercial products in South Korea and internationally. It operates through the Home Appliance & Air Solution, Home Entertainment, Vehicle Component Solutions, Business Solutions, LG Innotek Co., Ltd. (Innotek), and Other segments. The Home Appliance & Air Solution segment provides refrigerators, washing machines, vacuum cleaners, and residential and commercial air conditioners. Its Home Entertainment segment offers televisions and digital media products. The Vehicle Component Solutions segment designs and manufactures automobile parts. Its Business Solutions segment provides monitors, PCs, information d",
   "earnings_ts": 1793167200.0,
-  "_fetched": "2026-10-24T01:52:52.467974"
+  "_fetched": "2026-10-25T23:36:08.100040"
  },
  "009150.KS": {
   "name": "SamsungElecMech",
@@ -3388,16 +3388,16 @@
   "payout_ratio": 0.1761,
   "market_cap": 84764014936064.0,
   "high_52w": 2417000.0,
-  "low_52w": 201000.0,
+  "low_52w": 0.0,
   "forward_eps": null,
   "trailing_eps": null,
   "industry": "Electronic Components",
   "country": "South Korea",
   "employees": 11514.0,
   "website": "https://www.samsungsem.com/global",
-  "summary": "Samsung Electro-Mechanics Co., Ltd. manufactures and sells various electronic components in Korea, China, Southeast Asia, Japan, the Americas, and Europe. The company operates through three segments: Component, Package Solution, and Optics Solution. It offers multilayer ceramic capacitors, inductors, tantalums, and chip resistors; camera modules; package substrates; and semiconductor PKG boards. The company is also involved in the real estate and real estate software, as well as investment business. Its products are used in automotive, computer, display, mobile phone, network, server, solid state drive, tablet, and wearable products applications. The company was formerly known as Samsung Ele",
+  "summary": "Samsung Electro-Mechanics Co., Ltd. manufactures and sells various electronic components in Korea, China, Southeast Asia, Japan, the Americas, and Europe. The company operates through three segments: Component, Package Solution, and Optics Solution. It offers multilayer ceramic capacitors, inductors, tantalums, and chip resistors; camera modules; package substrates; and semiconductor PKG boards. The company is also involved in the real estate and real estate software, as well as investment business. Its products are used in automotive, computer, display, mobile phone, network, server, solid-state drive, tablet, and wearable product applications. The company has a strategic partnership with N",
   "earnings_ts": 1793253600.0,
-  "_fetched": "2026-10-24T01:52:53.296473"
+  "_fetched": "2026-10-25T23:36:09.573479"
  },
  "018260.KS": {
   "name": "SAMSUNG SDS",
@@ -3422,7 +3422,7 @@
   "payout_ratio": 0.38189998,
   "market_cap": 16514264596480.0,
   "high_52w": 388500.0,
-  "low_52w": 146100.0,
+  "low_52w": 0.0,
   "forward_eps": null,
   "trailing_eps": null,
   "industry": "Information Technology Services",
@@ -3431,7 +3431,7 @@
   "website": "https://www.samsungsds.com",
   "summary": "Samsung SDS Co., Ltd. provides cloud and digital logistics platform-based logistics services in South Korea, the America, Europe, Asia, Africa, and China. It operates in IT Service and Logistics. The IT Service segment offers IT consulting, IT system design and development, system integration, information system operation and maintenance, data centers, and network service outsourcing solutions. The Logistics segment provides global logistics services, such as supply chain and logistics consulting and solutions. It offers cloud transformation, management, and infrastructure, as well as network and security solutions. The company also provides artificial intelligence (AI) services, such as Fab",
   "earnings_ts": 1793253600.0,
-  "_fetched": "2026-10-24T01:52:54.129219"
+  "_fetched": "2026-10-25T23:36:11.132304"
  },
  "011200.KS": {
   "name": "HMM",
@@ -3456,7 +3456,7 @@
   "payout_ratio": 0.4727,
   "market_cap": 21364339638272.0,
   "high_52w": 24950.0,
-  "low_52w": 17910.0,
+  "low_52w": 0.0,
   "forward_eps": null,
   "trailing_eps": null,
   "industry": "Marine Shipping",
@@ -3465,7 +3465,7 @@
   "website": "https://www.hmm21.com",
   "summary": "HMM Co.,Ltd, an integrated logistics company, provides shipping and logistics services in Japan and internationally. The company offers container services for general, reefer, oversized, and dangerous cargo; bulk liners; trampers that include Cape, Panamax, Supramax, and Handy; tankers, such as crude and product tankers, and LNG carriers; and heavy lifts and project carriers. It also operates container terminals and provides intermodal services using rails, barges, and trucks. In addition, the company offers digital solutions, such as Hi-Quote online reservation platform; HMM eBL; vendor partners; and invoice payments, as well as interfaces, including API, HMM EDI, HMM e-Service, and HMM Cha",
   "earnings_ts": 1794376800.0,
-  "_fetched": "2026-10-24T01:52:54.980206"
+  "_fetched": "2026-10-25T23:36:12.690022"
  },
  "138040.KS": {
   "name": "Meritz Financial",
@@ -3490,7 +3490,7 @@
   "payout_ratio": 0.0,
   "market_cap": 20562260787200.0,
   "high_52w": 149800.0,
-  "low_52w": 98000.0,
+  "low_52w": 0.0,
   "forward_eps": null,
   "trailing_eps": null,
   "industry": "Capital Markets",
@@ -3499,7 +3499,7 @@
   "website": "https://www.meritzgroup.com/web/ko/main/main.do",
   "summary": "Meritz Financial Group Inc., together with its subsidiaries, provides various financial services in South Korea and internationally. The company operates through Insurance, Securities, Capital, and Others segments. It offers various insurance contracts, including general non-life insurance comprising fire, marine, personal accident, engineering, liability, comprehensive, authority, guarantee, and other special types of insurance; and auto insurance products, which include personal, business, commercial, motorcycle, and others; and long-term non-life insurance products, such as long-term damage, property, personal accident, driver, savings, disease, nursing care, pension savings damage, etc. ",
   "earnings_ts": 1754996340.0,
-  "_fetched": "2026-10-24T01:52:55.805552"
+  "_fetched": "2026-10-25T23:36:14.170469"
  },
  "024110.KS": {
   "name": "IBK",
@@ -3524,7 +3524,7 @@
   "payout_ratio": 0.3405,
   "market_cap": 15517907681280.0,
   "high_52w": 29550.0,
-  "low_52w": 18950.0,
+  "low_52w": 0.0,
   "forward_eps": null,
   "trailing_eps": null,
   "industry": "Banks - Regional",
@@ -3533,7 +3533,7 @@
   "website": "https://www.ibk.co.kr",
   "summary": "Industrial Bank of Korea operates as a small and medium-sized enterprise (SME) financing bank in Korea and internationally. It provides personal and corporate banking, such as check, transfer, deposit/trust, fund, insurance, credit card, loan, forex, dues, check/draft, information management, retirement pension, and B2B; and provides various financial products and services, including personal and corporate product mail, product guide and tree; smart finance; banking, product, and affiliate services; and customer preferential service, as well as financial information for corporate management support, legal support, stock, real estate, and auction/public auction. The company also offers card i",
   "earnings_ts": 1793253600.0,
-  "_fetched": "2026-10-24T01:52:56.616430"
+  "_fetched": "2026-10-25T23:36:15.660345"
  },
  "247540.KQ": {
   "name": "ECOPROBM",
@@ -3556,9 +3556,9 @@
   "rec_key": "hold",
   "rec_mean": 3.0,
   "payout_ratio": 0.2237,
-  "market_cap": 9078122217472.0,
+  "market_cap": 9996933791744.0,
   "high_52w": 260000.0,
-  "low_52w": 88300.0,
+  "low_52w": 0.0,
   "forward_eps": null,
   "trailing_eps": null,
   "industry": "Electrical Equipment & Parts",
@@ -3567,7 +3567,7 @@
   "website": "https://ecoprobm.com",
   "summary": "EcoPro BM Co., Ltd. manufactures and sells cathode materials used in batteries in the United States, Korea, Japan, China, Hungary, Malaysia, and internationally. It offers cathode active materials and precursors for electric vehicles (EV), electric energy storage systems (ESS), uninterruptible power supply (UPS), and smart grids, as well as aerospace, medical, and military purposes applications. The company was founded in 2016 and is headquartered in Cheongju, South Korea.",
   "earnings_ts": 1793858400.0,
-  "_fetched": "2026-10-24T01:52:57.438206"
+  "_fetched": "2026-10-25T23:36:17.302114"
  },
  "SCHD": {
   "name": "Schwab US Dividend Equity ETF",
@@ -3635,7 +3635,7 @@
   "website": null,
   "summary": "The fund employs an indexing investment approach designed to track the performance of the the Target Index, which consists of common stocks of companies that pay dividends that generally are higher than average (excluding real estate investment trusts (“REITs”)). Under normal circumstances, it invests at least 80% of its net assets, plus the amount of any borrowings for investment purposes, in the stocks that make up the Target Index.",
   "earnings_ts": null,
-  "_fetched": "2026-10-24T01:53:34.154567"
+  "_fetched": "2026-10-25T23:37:28.180249"
  },
  "VIG": {
   "name": "Vanguard Div Appreciation ETF",
@@ -3669,7 +3669,7 @@
   "website": null,
   "summary": "The adviser employs an indexing investment approach designed to track the performance of the index, which consists of common stocks of companies that have a record of increasing dividends over time. The adviser attempts to replicate the target index by investing all, or substantially all, of its assets in the stocks that make up the index, holding each stock in approximately the same proportion as its weighting in the index.",
   "earnings_ts": null,
-  "_fetched": "2026-10-24T01:53:34.985264"
+  "_fetched": "2026-10-25T23:37:29.693755"
  },
  "DGRO": {
   "name": "iShares Core Dividend Growth ET",
@@ -3703,7 +3703,7 @@
   "website": null,
   "summary": "The fund seeks to track the investment results of the Morningstar® U.S. Dividend Growth IndexSM (the “underlying index”), which is a dividend dollar-weighted index that seeks to measure the performance of U.S. companies selected based on a consistent history of growing dividends. The underlying index may include large-, mid- and small-capitalization companies.",
   "earnings_ts": null,
-  "_fetched": "2026-10-24T01:53:35.794705"
+  "_fetched": "2026-10-25T23:37:31.319357"
  },
  "JEPI": {
   "name": "JPMorgan Equity Premium Income ",
@@ -3737,7 +3737,7 @@
   "website": null,
   "summary": "The fund seeks to achieve this objective by (1) creating an actively managed portfolio of equity securities and (2) through equity-linked notes (ELNs),selling call options with exposure to the fund’s primary benchmark, the Standard & Poor’s 500 Total Return Index (the Benchmark). The resulting Fund is designed to provide investors with total return through capital appreciation and income, while exposing investors to lower volatility than the broad U.S. large cap market and also providing incremental income.",
   "earnings_ts": null,
-  "_fetched": "2026-10-24T01:53:36.594106"
+  "_fetched": "2026-10-25T23:37:32.787632"
  },
  "JEPQ": {
   "name": "JPMorgan Nasdaq Equity Premium ",
@@ -3771,7 +3771,7 @@
   "website": null,
   "summary": "The fund seeks to achieve this objective by (1) creating an actively managed portfolio of equity securities comprised significantly of those included in the fund’s primary benchmark, the Nasdaq-100 Index® (the Benchmark), and (2) through equity-linked notes (ELNs), selling call options with exposure to the Benchmark. It is non-diversified.",
   "earnings_ts": null,
-  "_fetched": "2026-10-24T01:53:37.437678"
+  "_fetched": "2026-10-25T23:37:34.418703"
  },
  "O": {
   "name": "Realty Income Corporation",
@@ -3805,14 +3805,14 @@
   "website": "https://www.realtyincome.com",
   "summary": "Realty Income Corporation, an S&P 500 company, is real estate partner to the world's leading companies. Founded in 1969, they serve their clients as a full-service real estate capital provider. As of June 30, 2026, they have a portfolio of over 15,500 properties in all 50 U.S. states, the U.K., and eight other countries in Europe. They are known as (The Monthly Dividend Company) and have a mission to invest in people and places to deliver dependable monthly dividends that increase over time. Since their founding, they have declared 676 consecutive monthly dividends and are a member of the S&P 500 Dividend Aristocrats index for having increased dividend for over 31 consecutive years. Realty I",
   "earnings_ts": 1793649600.0,
-  "_fetched": "2026-10-24T01:53:38.275103"
+  "_fetched": "2026-10-25T23:37:35.881053"
  },
  "MO": {
   "name": "Altria Group, Inc.",
   "sector": "Consumer Defensive",
   "currency": "USD",
   "price": 74.31,
-  "forward_pe": 12.671956,
+  "forward_pe": 12.639754,
   "trailing_pe": 15.64421,
   "peg": 2.6299,
   "pb": -46.501873,
@@ -3831,7 +3831,7 @@
   "market_cap": 124078661632.0,
   "high_52w": 77.06,
   "low_52w": 54.7,
-  "forward_eps": 5.86413,
+  "forward_eps": 5.87907,
   "trailing_eps": 4.75,
   "industry": "Tobacco",
   "country": "United States",
@@ -3839,7 +3839,7 @@
   "website": "https://www.altria.com",
   "summary": "Altria Group, Inc., through its subsidiaries, manufactures and sells smokeable and oral tobacco products in the United States. It offers cigarettes primarily under the Marlboro brand; large cigars and pipe tobacco under the Black & Mild brand; moist smokeless tobacco and oral tobacco products under the Copenhagen, Skoal, Red Seal, and Husky brands; oral nicotine pouches under the on! brand; and e-vapor products under the NJOY ACE brand. The company sells its products to distributors, as well as large retail organizations, such as chain stores. Altria Group, Inc. was founded in 1822 and is headquartered in Richmond, Virginia.",
   "earnings_ts": 1793277000.0,
-  "_fetched": "2026-10-24T01:53:39.928698"
+  "_fetched": "2026-10-25T23:37:37.348723"
  },
  "SPYD": {
   "name": "State Street SPDR Portfolio S&P",
@@ -3873,7 +3873,7 @@
   "website": null,
   "summary": "Under normal market conditions, the fund generally invests substantially all, but at least 80%, of its total assets in the securities comprising the index. The index is designed to measure the performance of 80 high dividend-yielding companies within the S&P 500® Index. The S&P 500 Index focuses on the large capitalization U.S. equity market, including common stock and real estate investment trusts (\"REITs\").",
   "earnings_ts": null,
-  "_fetched": "2026-10-24T01:53:40.732211"
+  "_fetched": "2026-10-25T23:37:38.815650"
  },
  "HDV": {
   "name": "iShares Core High Dividend ETF",
@@ -3907,7 +3907,7 @@
   "website": null,
   "summary": "The fund generally will invest at least 80% of its assets in the component securities of its underlying index and in investments that have economic characteristics that are substantially identical to the component securities of its underlying index. The underlying index is comprised of qualified income paying securities that are screened for superior company quality and financial health as determined by Morningstar, Inc.'s proprietary index methodology. The fund is non-diversified.",
   "earnings_ts": null,
-  "_fetched": "2026-10-24T01:53:41.536450"
+  "_fetched": "2026-10-25T23:37:40.281308"
  },
  "DVY": {
   "name": "iShares Select Dividend ETF",
@@ -3941,7 +3941,7 @@
   "website": null,
   "summary": "The fund seeks to track the investment results of the underlying index, which measures the performance of the U.S.'s leading stocks by dividend yield. Dividend yield is calculated using a stock's indicated annual dividend (not including any special dividends) divided by its price. The underlying index is composed of 100 of the highest dividend-yielding securities (excluding REITs) in the Dow Jones U.S. Index, a broad-based index representative of the total market for U.S. equity securities.",
   "earnings_ts": null,
-  "_fetched": "2026-10-24T01:53:42.373112"
+  "_fetched": "2026-10-25T23:37:41.745903"
  },
  "NOBL": {
   "name": "ProShares S&P 500 Dividend Aris",
@@ -3975,7 +3975,7 @@
   "website": null,
   "summary": "The fund invests in financial instruments that ProShare Advisors believes, in combination, should track the performance of the index. The index is designed to measure the performance of companies in the S&P 500 Index that have consistently increased dividends each year for at least 25 years. Under normal circumstances, it will invest at least 80% of its total assets in components of the index or in instruments with similar economic characteristics.",
   "earnings_ts": null,
-  "_fetched": "2026-10-24T01:53:43.170756"
+  "_fetched": "2026-10-25T23:37:43.465178"
  },
  "SDY": {
   "name": "State Street SPDR S&P Dividend ",
@@ -4009,7 +4009,7 @@
   "website": null,
   "summary": "The fund generally invests substantially all, but at least 80%, of its total assets in the securities comprising the index. The index is designed to measure the performance of the highest dividend yielding S&P Composite 1500® Index constituents that have followed a managed-dividends policy of consistently increasing dividends every year for at least 20 consecutive years.",
   "earnings_ts": null,
-  "_fetched": "2026-10-24T01:53:43.967852"
+  "_fetched": "2026-10-25T23:37:44.934875"
  },
  "VYMI": {
   "name": "Vanguard International High Div",
@@ -4043,7 +4043,7 @@
   "website": null,
   "summary": "Under normal circumstances,the fund invests at least 80% of its net assets,plus the amount of any borrowings for investment purposes,in the stocks that make up the target index.",
   "earnings_ts": null,
-  "_fetched": "2026-10-24T01:53:44.790740"
+  "_fetched": "2026-10-25T23:37:46.394689"
  },
  "DIVO": {
   "name": "Amplify CWP Enhanced Dividend I",
@@ -4077,7 +4077,7 @@
   "website": null,
   "summary": "Under normal circumstances, the fund invests at least 80% of its net assets in dividend-paying U.S. exchange-traded equity securities (\"Equity Securities\") and will opportunistically utilize an \"option strategy\" consisting of writing (selling) U.S. exchange-traded covered call options on such Equity Securities. The fund is non-diversified.",
   "earnings_ts": null,
-  "_fetched": "2026-10-24T01:53:45.634822"
+  "_fetched": "2026-10-25T23:37:47.895206"
  },
  "QYLD": {
   "name": "Global X NASDAQ 100 Covered Cal",
@@ -4111,7 +4111,7 @@
   "website": null,
   "summary": "The fund will invest at least 80% of its total assets in the securities of the underlying index. The CBOE NASDAQ-100® BuyWrite Index is a benchmark index that measures the performance of a theoretical portfolio that holds a portfolio of the stocks included in the NASDAQ-100® Index, and \"writes\" (or sells) a succession of one-month at-the-money NASDAQ-100® Index covered call options. It is non-diversified.",
   "earnings_ts": null,
-  "_fetched": "2026-10-24T01:53:46.461635"
+  "_fetched": "2026-10-25T23:37:49.514392"
  },
  "VNQ": {
   "name": "Vanguard Real Estate ETF",
@@ -4145,7 +4145,7 @@
   "website": null,
   "summary": "The fund invests at least 80% of its net assets, plus the amount of any borrowings for investment purposes, in the stocks that make up the Target Index. The advisor attempts to track the index by investing all, or substantially all, of its assets-either directly or indirectly through a wholly owned subsidiary. The fund is non-diversified.",
   "earnings_ts": null,
-  "_fetched": "2026-10-24T01:53:47.288724"
+  "_fetched": "2026-10-25T23:37:51.053935"
  },
  "PFF": {
   "name": "iShares Preferred and Income Se",
@@ -4179,7 +4179,7 @@
   "website": null,
   "summary": "The fund may invest at least 80% of its assets in the component securities of its underlying index and and may invest up to 20% of its assets in certain futures, options and swap contracts, cash and cash equivalents.",
   "earnings_ts": null,
-  "_fetched": "2026-10-24T01:53:48.089915"
+  "_fetched": "2026-10-25T23:37:52.522620"
  },
  "MAIN": {
   "name": "Main Street Capital Corporation",
@@ -4213,7 +4213,7 @@
   "website": "https://www.mainstcapital.com",
   "summary": "Main Street Capital Corporation is a business development company and a small business investment company specializing in direct and indirect investments. In direct investments, the firm specializes in private equity capital to lower middle market companies. The firm specializes in recapitalizations, loan, growth capital, mezzanine debt, corporate carveouts, family estate planning, management buyouts, refinancing, private loan, private credit solutions, senior secured term debt, unintranche term debt, subordinated debt, preferred equity, common equity, minimal or no fixed amortization, split lien term debt, industry consolidation, mature, later stage and emerging growth. The firm makes both ",
   "earnings_ts": 1793908800.0,
-  "_fetched": "2026-10-24T01:53:48.917797"
+  "_fetched": "2026-10-25T23:37:53.991120"
  },
  "STAG": {
   "name": "Stag Industrial, Inc.",
@@ -4247,7 +4247,7 @@
   "website": "https://www.stagindustrial.com",
   "summary": "STAG Industrial, Inc. is a real estate investment trust focused on the acquisition, development, ownership and operation of industrial properties throughout the United States. As of June 30, 2026, the Company's portfolio consists of 606 buildings in 41 states with approximately 122.6 million rentable square feet. STAG Industrial, Inc. was established in 2010 and was incorporated in Maryland.",
   "earnings_ts": 1793131200.0,
-  "_fetched": "2026-10-24T01:53:49.729237"
+  "_fetched": "2026-10-25T23:37:55.516880"
  },
  "ADC": {
   "name": "Agree Realty Corporation",
@@ -4263,8 +4263,8 @@
   "debt_to_equity": 53.868,
   "revenue_growth": 0.167,
   "earnings_growth": 0.178,
-  "target_mean": 78.52778,
-  "target_high": 93.0,
+  "target_mean": 78.08333,
+  "target_high": 91.0,
   "target_low": 72.0,
   "analyst_count": 18.0,
   "rec_key": "buy",
@@ -4279,9 +4279,9 @@
   "country": "United States",
   "employees": 90.0,
   "website": "https://www.agreerealty.com",
-  "summary": "Agree Realty Corporation is a publicly traded real estate investment trust. The Firm is Rethinking Retail through the acquisition and development of properties net leased to industry-leading, omni-channel retail tenants. As of June 30, 2026, the Company owned and operated a portfolio of 2,825 properties, located in all 50 states and containing approximately 59.6 million square feet of gross leasable area. Agree Realty Corporation was incorporated in 1971 and is based in Royal Oak, United States.",
+  "summary": "Agree Realty Corporation is a publicly traded real estate investment trust. The Firm is Rethinking Retail through the acquisition and development of properties net leased to industry-leading, omni-channel retail tenants. As of September 30, 2026, the Company owned and operated a portfolio of 2,888 properties, located in all 50 states and containing approximately 61.1 million square feet of gross leasable area. Agree Realty Corporation was incorporated in 1971 and is based in Royal Oak, United States.",
   "earnings_ts": 1792526400.0,
-  "_fetched": "2026-10-24T01:53:50.533894"
+  "_fetched": "2026-10-25T23:37:56.988967"
  },
  "VICI": {
   "name": "VICI Properties Inc.",
@@ -4305,7 +4305,7 @@
   "rec_mean": 1.88,
   "payout_ratio": 0.7004,
   "market_cap": 26161602560.0,
-  "high_52w": 31.69,
+  "high_52w": 31.18,
   "low_52w": 22.425,
   "forward_eps": 2.99,
   "trailing_eps": 2.57,
@@ -4315,7 +4315,7 @@
   "website": "https://www.viciproperties.com",
   "summary": "VICI Properties Inc. is an S&P 500 experiential real estate investment trust that owns one of the largest portfolios of market-leading gaming, hospitality, wellness, entertainment and leisure destinations, including Caesars Palace Las Vegas, MGM Grand and the Venetian Resort Las Vegas, three of the most iconic entertainment facilities on the Las Vegas Strip. VICI Properties owns 103 experiential assets across a geographically diverse portfolio consisting of 63 gaming properties and 40 other experiential properties across the United States and Canada. The portfolio is comprised of approximately 130 million square feet and features approximately 66,000 hotel rooms and over 700 restaurants, bar",
   "earnings_ts": 1793217600.0,
-  "_fetched": "2026-10-24T01:53:51.346480"
+  "_fetched": "2026-10-25T23:37:58.465883"
  },
  "PLD": {
   "name": "Prologis, Inc.",
@@ -4349,7 +4349,7 @@
   "website": "https://www.prologis.com",
   "summary": "Prologis, Inc. don't just lead the industry, they define it. The firm creates the intelligent infrastructure that powers global commerce, seamlessly connecting the digital and physical worlds. From agile supply chains to clean energy solutions, their ecosystems help your business move faster, operate smarter and grow sustainably. With unmatched scale, innovation and expertise, Prologis is a category of onenot just shaping the future of logistics but building what comes next. Prologis, Inc. was established in 1983 and is incorporated in Maryland.",
   "earnings_ts": 1800448200.0,
-  "_fetched": "2026-10-24T01:53:52.159004"
+  "_fetched": "2026-10-25T23:37:59.923348"
  },
  "AMT": {
   "name": "American Tower Corporation (REI",
@@ -4383,7 +4383,7 @@
   "website": "https://www.americantower.com",
   "summary": "American Tower Corporation one of the largest global REITs, is a leading independent owner, operator and developer of multitenant communications real estate with a portfolio of over 148,000 communications sites and a highly interconnected footprint of U.S. data center facilities. American Tower Corporation was incorporated in 1995 in Delaware and is based in Massachusetts, Boston.",
   "earnings_ts": 1793104200.0,
-  "_fetched": "2026-10-24T01:53:52.959574"
+  "_fetched": "2026-10-25T23:38:01.398105"
  },
  "SPG": {
   "name": "Simon Property Group, Inc.",
@@ -4417,7 +4417,7 @@
   "website": "https://www.simon.com",
   "summary": "Simon Property Group, Inc. is a self-administered and self-managed real estate investment trust (REIT). Simon Property Group, L.P., or the Operating Partnership, is our majority-owned partnership subsidiary that owns all of our real estate properties and other assets. In this package, the terms Simon, we, our, or the Company refer to Simon Property Group, Inc., the Operating Partnership, and its subsidiaries. We own, develop and manage premier shopping, dining, entertainment and mixed-use destinations, which consist primarily of malls, Premium Outlets, The Mills, and International Properties. At December 31, 2024, we owned or had an interest in 229 properties comprising 183 million square fe",
   "earnings_ts": 1793908800.0,
-  "_fetched": "2026-10-24T01:53:53.817079"
+  "_fetched": "2026-10-25T23:38:03.024286"
  },
  "OKE": {
   "name": "ONEOK, Inc.",
@@ -4451,7 +4451,7 @@
   "website": "https://www.oneok.com",
   "summary": "ONEOK, Inc. operates as a midstream service provider of gathering, processing, fractionation, transportation, storage, and marine export services in the United States. It operates in four segments: Natural Gas Gathering and Processing; Natural Gas Liquids; Natural Gas Pipelines; and Refined Products and Crude. The company owns natural gas gathering pipelines and processing plants in the Mid-Continent, Permian Basin, North Texas, Gulf Coast region, and Rocky Mountain regions; and provides midstream services to producers of NGLs. It also owns NGL gathering and distribution pipelines, fractionation, terminal and storage facilities; and transports refined products, including gasoline, diesel fue",
   "earnings_ts": 1793131200.0,
-  "_fetched": "2026-10-24T01:53:54.663879"
+  "_fetched": "2026-10-25T23:38:04.478042"
  },
  "KMI": {
   "name": "Kinder Morgan, Inc.",
@@ -4461,12 +4461,12 @@
   "forward_pe": 21.880184,
   "trailing_pe": 21.253086,
   "peg": 3.1918,
-  "pb": 2.4268696,
+  "pb": 2.4275541,
   "roe": 0.11428001,
-  "op_margin": 0.25601,
-  "debt_to_equity": 100.749,
+  "op_margin": 0.24034001,
+  "debt_to_equity": 101.736,
   "revenue_growth": 0.093,
-  "earnings_growth": 0.223,
+  "earnings_growth": 0.216,
   "target_mean": 37.04545,
   "target_high": 43.0,
   "target_low": 32.0,
@@ -4474,7 +4474,7 @@
   "rec_key": "buy",
   "rec_mean": 2.0,
   "payout_ratio": 0.7581,
-  "market_cap": 76668796928.0,
+  "market_cap": 76700237824.0,
   "high_52w": 34.81,
   "low_52w": 25.6,
   "forward_eps": 1.57357,
@@ -4485,7 +4485,7 @@
   "website": "https://www.kindermorgan.com",
   "summary": "Kinder Morgan, Inc. operates as an energy infrastructure company primarily in North America. It operates through Natural Gas Pipelines, Products Pipelines, Terminals, and CO2 segments. The Natural Gas Pipelines segment owns and operates interstate and intrastate natural gas pipeline, and storage systems; natural gas gathering systems and natural gas processing and treating facilities; natural gas liquids fractionation facilities and transportation systems; and liquefied natural gas gasification, liquefaction, and storage facilities. The Products Pipelines segment owns and operates refined petroleum products, and crude oil and condensate pipelines; and associated product terminals and petrole",
   "earnings_ts": 1792612800.0,
-  "_fetched": "2026-10-24T01:53:55.563367"
+  "_fetched": "2026-10-25T23:38:05.956327"
  },
  "ENB": {
   "name": "Enbridge Inc",
@@ -4494,16 +4494,16 @@
   "price": 48.15,
   "forward_pe": 21.317944,
   "trailing_pe": 25.748663,
-  "peg": 4.8867,
+  "peg": 4.92,
   "pb": 2.52309,
   "roe": 0.092209995,
   "op_margin": 0.101610005,
   "debt_to_equity": 162.975,
   "revenue_growth": 0.971,
   "earnings_growth": -0.36,
-  "target_mean": 51.547638,
-  "target_high": 59.984287,
-  "target_low": 45.567776,
+  "target_mean": 51.486965,
+  "target_high": 59.913685,
+  "target_low": 45.51414,
   "analyst_count": 5.0,
   "rec_key": "buy",
   "rec_mean": 2.16667,
@@ -4519,7 +4519,7 @@
   "website": "https://www.enbridge.com",
   "summary": "Enbridge Inc., together with its subsidiaries, operates as an energy infrastructure company. The company operates through four segments: Liquids Pipelines, Gas Transmission, Gas Distribution and Storage, and Renewable Power Generation. The Liquids Pipelines segment operates pipelines and related terminals to transport, store, and export various grades of crude oil and other liquid hydrocarbons in Canada and the United States. This segment also provides physical commodity marketing and logistical services, and crude oil marketing services. The Gas Transmission segment invests in natural gas pipelines and gathering and processing facilities in Canada and the United States. The Gas Distribution",
   "earnings_ts": 1793968200.0,
-  "_fetched": "2026-10-24T01:53:56.405277"
+  "_fetched": "2026-10-25T23:38:07.432269"
  },
  "PM": {
   "name": "Philip Morris International Inc",
@@ -4528,10 +4528,10 @@
   "price": 199.47,
   "forward_pe": 21.93856,
   "trailing_pe": 29.119709,
-  "peg": 2.42,
-  "pb": -39.27348,
+  "peg": 2.79,
+  "pb": -39.18091,
   "roe": null,
-  "op_margin": 0.41904,
+  "op_margin": 0.41965,
   "debt_to_equity": null,
   "revenue_growth": 0.055,
   "earnings_growth": -0.048,
@@ -4553,7 +4553,7 @@
   "website": "https://www.pmi.com",
   "summary": "Philip Morris International Inc. operates as a tobacco company. The company offers cigarettes and smoke-free products, including heat-not-burn, e-vapor, and oral nicotine products under the IQOS, VEEV, and ZYN brands; and consumer accessories, such as lighters and matches. It also offers wellness products. The company was incorporated in 1987 and is headquartered in Stamford, Connecticut.",
   "earnings_ts": 1792585800.0,
-  "_fetched": "2026-10-24T01:53:57.209053"
+  "_fetched": "2026-10-25T23:38:08.958296"
  },
  "BMY": {
   "name": "Bristol-Myers Squibb Company",
@@ -4587,7 +4587,7 @@
   "website": "https://www.bms.com",
   "summary": "Bristol-Myers Squibb Company discovers, develops, licenses, manufactures, markets, distributes, and sells biopharmaceutical products worldwide. The company offers products for oncology, hematology, immunology, cardiovascular, and neuroscience indications. Its products include Opdivo for anti-cancer indications; Opdivo Qvantig, a subcutaneous PD-1 inhibitor for solid tumors; Orencia for active rheumatoid arthritis and psoriatic arthritis; Yervoy for the treatment of unresectable or metastatic melanoma; Reblozyl to treat anemia; Breyanzi for the treatment of relapsed or refractory large B-cell lymphoma; Opdualag to treat unresectable or metastatic melanoma; and Camzyos for the treatment of sym",
   "earnings_ts": 1793277000.0,
-  "_fetched": "2026-10-24T01:53:58.043273"
+  "_fetched": "2026-10-25T23:38:10.431001"
  },
  "GILD": {
   "name": "Gilead Sciences, Inc.",
@@ -4621,7 +4621,7 @@
   "website": "https://www.gilead.com",
   "summary": "Gilead Sciences, Inc., a biopharmaceutical company, discovers, develops, and commercializes medicines in the areas of unmet medical need in the United States, Europe, and internationally. The company provides Biktarvy, Descovy, Genvoya, Odefsey, Sunlenca, Symtuza, and YeztugoFor the treatment of HIV-1 infection in patients. It also provides Epclusa, Livdelzi, and Vemlidy to treat chronic hepatitis C virus, primary biliary cholangitis, and chronic hepatitis B virus; Tecartus, a T-cell therapy for the treatment of adult patients; Trodelvy, an injection for intravenous use; and Yescarta, a suspension for intravenous infusion, is a CAR T-cell therapy for the treatment of adult patients. Further,",
   "earnings_ts": 1793304000.0,
-  "_fetched": "2026-10-24T01:53:58.878534"
+  "_fetched": "2026-10-25T23:38:11.935115"
  },
  "MDT": {
   "name": "Medtronic plc.",
@@ -4655,7 +4655,7 @@
   "website": "https://www.medtronic.com",
   "summary": "Medtronic plc develops, manufactures, and sells device-based medical therapies to healthcare systems, physicians, clinicians, and patients in the United States, Ireland, and internationally. It operates through three segments: The Cardiovascular Portfolio, Neuroscience Portfolio, and Medical Surgical Portfolio. The Cardiovascular Portfolio segment offers implantable cardiac pacemakers, cardioverter defibrillators, and cardiac resynchronization therapy devices; cardiac ablation products; insertable cardiac monitor systems; TYRX products; and remote monitoring and patient-centered software. It also provides aortic valves, surgical valve replacement and repair products, endovascular stent graft",
   "earnings_ts": 1794918600.0,
-  "_fetched": "2026-10-24T01:53:59.678417"
+  "_fetched": "2026-10-25T23:38:13.399725"
  },
  "MMM": {
   "name": "3M Company",
@@ -4689,7 +4689,7 @@
   "website": "https://www.3m.com",
   "summary": "3M Company provides diversified technology services in the America, the Asia Pacific, Europe, the Middle East, Africa, and internationally. It operates through three segments: Safety and Industrial, Transportation and Electronics, and Consumer. The Safety and Industrial segment provides industrial abrasives and finishing for metalworking applications; autobody repair solutions; industrial specialty products, such as personal hygiene products, masking, and packaging materials; electrical products and materials for construction and maintenance, power distribution, and electrical original equipment manufacturers; structural adhesives and tapes; respiratory, hearing, eye, and fall protection sol",
   "earnings_ts": 1800361800.0,
-  "_fetched": "2026-10-24T01:54:00.505362"
+  "_fetched": "2026-10-25T23:38:14.868988"
  },
  "ADP": {
   "name": "Automatic Data Processing, Inc.",
@@ -4705,12 +4705,12 @@
   "debt_to_equity": 91.436,
   "revenue_growth": 0.068,
   "earnings_growth": 0.098,
-  "target_mean": 289.06668,
+  "target_mean": 290.4,
   "target_high": 340.0,
   "target_low": 225.0,
   "analyst_count": 15.0,
   "rec_key": "hold",
-  "rec_mean": 2.72222,
+  "rec_mean": 2.77778,
   "payout_ratio": 0.6069,
   "market_cap": 120523874304.0,
   "high_52w": 309.4,
@@ -4723,7 +4723,7 @@
   "website": "https://www.adp.com",
   "summary": "Automatic Data Processing, Inc. provides cloud-based human capital management (HCM) solutions worldwide. It operates in two segments, Employer Services and Professional Employer Organization (PEO). The Employer Services segment offers strategic, cloud-based platforms, and human resources (HR) outsourcing solutions. This segment's offerings include RUN Powered by ADP, a software platform for small business payroll, HR, and compliance; ADP Workforce Now, a HCM solution used across mid-sized and large businesses to manage employees; and ADP Lyric HCM, a solution for HR management, payroll, workforce management, talent, and data analytics. Its PEO Services segment provides HR outsourcing solutio",
   "earnings_ts": 1793190600.0,
-  "_fetched": "2026-10-24T01:54:01.307172"
+  "_fetched": "2026-10-25T23:38:16.549991"
  },
  "ITW": {
   "name": "Illinois Tool Works Inc.",
@@ -4757,14 +4757,14 @@
   "website": "https://www.itw.com",
   "summary": "Illinois Tool Works Inc. provides industrial products and equipment in North America, Europe, the Middle East, Africa, the Asia Pacific, and South America. It operates through seven segments: Automotive OEM; Food Equipment; Test & Measurement and Electronics; Welding; Polymers & Fluids; Construction Products; and Specialty Products. The Automotive OEM segment offers plastic and metal components, fasteners, and assemblies for automobiles, light trucks, and other industrial uses. The Food Equipment segment provides warewashing, cooking, refrigeration, and food processing equipment; kitchen exhaust, ventilation, and pollution control systems; and food equipment maintenance and repair services. ",
   "earnings_ts": 1793104200.0,
-  "_fetched": "2026-10-24T01:54:02.105334"
+  "_fetched": "2026-10-25T23:38:18.017977"
  },
  "EMR": {
   "name": "Emerson Electric Company",
   "sector": "Industrials",
   "currency": "USD",
   "price": 161.59,
-  "forward_pe": 22.196123,
+  "forward_pe": 22.21715,
   "trailing_pe": 35.35886,
   "peg": 1.6989,
   "pb": 4.422882,
@@ -4773,8 +4773,8 @@
   "debt_to_equity": 67.677,
   "revenue_growth": 0.07,
   "earnings_growth": 0.23,
-  "target_mean": 174.96393,
-  "target_high": 205.0,
+  "target_mean": 175.07108,
+  "target_high": 208.0,
   "target_low": 104.0,
   "analyst_count": 28.0,
   "rec_key": "buy",
@@ -4783,7 +4783,7 @@
   "market_cap": 90134896640.0,
   "high_52w": 166.35,
   "low_52w": 122.64,
-  "forward_eps": 7.2801,
+  "forward_eps": 7.27321,
   "trailing_eps": 4.57,
   "industry": "Specialty Industrial Machinery",
   "country": "United States",
@@ -4791,7 +4791,7 @@
   "website": "https://www.emerson.com",
   "summary": "Emerson Electric Co., a technology and software company, provides various solutions in the Americas, Asia, the Middle East, Africa, and Europe. It operates through Final Control, Measurement & Analytical, Discrete Automation, Safety & Productivity, Control Systems & Software, and Test & Measurement segments. The Final Control segment provides control valves, isolation valves, shutoff valves, pressure relief valves, pressure safety valves, actuators, and regulators for process and hybrid industries under Anderson Greenwood, Bettis, Crosby, Fisher, Keystone, KTM, and Vanessa brands. The Measurement & Analytical segment supplies intelligent instrumentation measuring the physical properties of l",
   "earnings_ts": 1793795400.0,
-  "_fetched": "2026-10-24T01:54:02.955541"
+  "_fetched": "2026-10-25T23:38:19.487080"
  },
  "CL": {
   "name": "Colgate-Palmolive Company",
@@ -4812,7 +4812,7 @@
   "target_low": 87.0,
   "analyst_count": 20.0,
   "rec_key": "buy",
-  "rec_mean": 2.04762,
+  "rec_mean": 2.09524,
   "payout_ratio": 0.8228,
   "market_cap": 74966130688.0,
   "high_52w": 99.33,
@@ -4825,7 +4825,7 @@
   "website": "https://www.colgatepalmolive.com",
   "summary": "Colgate-Palmolive Company, together with its subsidiaries, manufactures and sells consumer products in the United States and internationally. It operates through two segments: Oral, Personal and Home Care; and Pet Nutrition. The Oral, Personal and Home Care segment offers toothpaste, toothbrushes, mouthwash, bar and liquid hand soaps, shower gels, shampoos, conditioners, deodorants and antiperspirants, skin health products, dishwashing detergents, fabric conditioners, household cleaners, and other related items. This segment markets and sells its products under the Colgate, Palmolive, Darlie, elmex, hello, meridol, Sorriso, Tom's of Maine, EltaMD, Filorga, Irish Spring, Lady Speed Stick, PCA",
   "earnings_ts": 1793363400.0,
-  "_fetched": "2026-10-24T01:54:03.761862"
+  "_fetched": "2026-10-25T23:38:20.947262"
  },
  "KMB": {
   "name": "Kimberly-Clark Corporation",
@@ -4846,7 +4846,7 @@
   "target_low": 90.0,
   "analyst_count": 16.0,
   "rec_key": "buy",
-  "rec_mean": 2.4375,
+  "rec_mean": 2.47059,
   "payout_ratio": 1.002,
   "market_cap": 36633583616.0,
   "high_52w": 123.09,
@@ -4859,7 +4859,7 @@
   "website": "https://www.kimberly-clark.com",
   "summary": "Kimberly-Clark Corporation, together with its subsidiaries, manufactures and markets personal care products in the United States. It operates in two segments, North America and International Personal Care. The North America segment offers disposable diapers, training and youth pants, swimpants, baby wipes, feminine and incontinence care products, reusable underwear, facial and bathroom tissue, paper towels, napkins, wipers, tissue, towels, soaps and sanitizers, and other related products under the Huggies, Pull-Ups, Goodnites, Kotex, Poise, Depend, Kleenex, Scott, Cottonelle, Viva, Wypall, and other brand names. Its International Personal Care segment provides baby and child care, adult care",
   "earnings_ts": 1793881800.0,
-  "_fetched": "2026-10-24T01:54:04.555297"
+  "_fetched": "2026-10-25T23:38:22.427465"
  },
  "GIS": {
   "name": "General Mills, Inc.",
@@ -4893,7 +4893,7 @@
   "website": "https://www.generalmills.com",
   "summary": "General Mills, Inc. manufactures and markets branded consumer food in the United States and internationally. The company operates through four segments: North America Retail; International; North America Pet; and North America Foodservice. It offers snacks, including grain, fruit and savory snacks, nutrition bars, and frozen hot snacks; ready-to-eat cereal; convenient meals comprising meal kits, ethnic meals, pizza, soup, side dish mixes, frozen breakfast, and frozen entrees; wholesome natural pet food; refrigerated and frozen dough; baking mixes and ingredients; and ice cream products. The company also offers dog and cat food, such as dry food, wet food, fresh food, and treats. In addition,",
   "earnings_ts": 1798029000.0,
-  "_fetched": "2026-10-24T01:54:05.383510"
+  "_fetched": "2026-10-25T23:38:24.056842"
  },
  "HSY": {
   "name": "The Hershey Company",
@@ -4902,7 +4902,7 @@
   "price": 169.64,
   "forward_pe": 17.23649,
   "trailing_pe": 23.174862,
-  "peg": 0.88,
+  "peg": 0.85,
   "pb": 7.470166,
   "roe": 0.32808998,
   "op_margin": 0.23119,
@@ -4927,7 +4927,7 @@
   "website": "https://www.thehersheycompany.com",
   "summary": "The Hershey Company, together with its subsidiaries, engages in the manufacture and sale of confectionery products and pantry items in the United States and internationally. It operates through three segments: North America Confectionery, North America Salty Snacks, and International. The company offers chocolate and non-chocolate confectionery products; gum and mint refreshment products, including mints, chewing gums, and bubble gums; protein bars; pantry items, such as baking ingredients, toppings, beverages, and sundae syrups; and snack items comprising spreads, bars, snack bites, mixes, popcorn, and pretzels. It provides its products primarily under the Hershey's, Reese's, Kisses, Jolly ",
   "earnings_ts": 1793277000.0,
-  "_fetched": "2026-10-24T01:54:06.196268"
+  "_fetched": "2026-10-25T23:38:25.518073"
  },
  "LOW": {
   "name": "Lowe's Companies, Inc.",
@@ -4961,7 +4961,7 @@
   "website": "https://corporate.lowes.com",
   "summary": "Lowe's Companies, Inc., together with its subsidiaries, operates as a home improvement retailer in the United States and Canada. It provides a line of products for construction, maintenance, repair, remodeling, and decorating. The company also offers home improvement products, such as appliances, seasonal and outdoor living, lumber, lawn and garden, kitchens and bath, hardware, building materials, millwork, paint, rough plumbing, tools, electrical, flooring, and décor. In addition, it provides installation services through independent contractors in various product categories; and extended protection plans and repair services. Further, the company provides design, distribution, and installat",
   "earnings_ts": 1795005000.0,
-  "_fetched": "2026-10-24T01:54:06.997206"
+  "_fetched": "2026-10-25T23:38:26.978364"
  },
  "TGT": {
   "name": "Target Corporation",
@@ -4995,7 +4995,7 @@
   "website": "https://corporate.target.com",
   "summary": "Target Corporation operates as a general merchandise retailer in the United States. It offers apparel for women, men, young adults, kids, toddlers, and babies, as well as jewelry, accessories, and shoes; and beauty products, such as skin and bath care, cosmetics, hair care, oral care, deodorant, and shaving products. The company also provides food and beverage products comprising dry and perishable grocery, including snacks, candy, beverages, deli, bakery, meat, produce, and food service; electronics which includes video games and consoles, toys, sporting goods, entertainment, and luggage; bed and bath, home décor, school/office supplies, storage, small appliances, kitchenware, greeting card",
   "earnings_ts": 1795005000.0,
-  "_fetched": "2026-10-24T01:54:07.853186"
+  "_fetched": "2026-10-25T23:38:28.450406"
  },
  "BLK": {
   "name": "BlackRock, Inc.",
@@ -5004,7 +5004,7 @@
   "price": 1118.25,
   "forward_pe": 17.250044,
   "trailing_pe": 25.461067,
-  "peg": 0.94,
+  "peg": 0.93,
   "pb": 3.0084422,
   "roe": null,
   "op_margin": 0.379,
@@ -5029,7 +5029,7 @@
   "website": "https://www.blackrock.com",
   "summary": "BlackRock, Inc. is a publicly owned investment manager. The firm primarily provides its services to institutional, intermediary, and individual investors including corporate, public, union, and industry pension plans, insurance companies, third-party mutual funds, endowments, public institutions, governments, foundations, charities, sovereign wealth funds, corporations, official institutions, and banks. It also provides global risk management and advisory services. The firm manages separate client-focused equity, fixed income, and balanced portfolios. It also launches and manages open-end and closed-end mutual funds, offshore funds, unit trusts, and alternative investment vehicles including ",
   "earnings_ts": 1799929800.0,
-  "_fetched": "2026-10-24T01:54:08.690469"
+  "_fetched": "2026-10-25T23:38:29.929125"
  },
  "TROW": {
   "name": "T. Rowe Price Group, Inc.",
@@ -5063,7 +5063,7 @@
   "website": "https://www.troweprice.com",
   "summary": "T. Rowe Price Group, Inc. is a publicly owned investment manager. The firm provides its services to individuals, institutional investors, retirement plans, financial intermediaries, and institutions. It launches and manages equity and fixed income mutual funds. The firm invests in the public equity and fixed income markets across the globe. It employs fundamental and quantitative analysis with a bottom-up approach. The firm utilizes in-house and external research to make its investments. It employs socially responsible investing with a focus on environmental, social, and governance issues. It makes investment in late-stage venture capital transactions and usually invests between $3 million a",
   "earnings_ts": 1793277000.0,
-  "_fetched": "2026-10-24T01:54:09.500605"
+  "_fetched": "2026-10-25T23:38:31.412360"
  },
  "USB": {
   "name": "U.S. Bancorp",
@@ -5097,7 +5097,7 @@
   "website": "https://www.usbank.com",
   "summary": "U.S. Bancorp, a financial services holding company, provides various financial services to individuals, businesses, institutional organizations, governmental entities, and other financial institutions in the United States. The company operates through Wealth, Corporate, Commercial and Institutional Banking; Consumer and Business Banking; Payment Services; and Treasury and Corporate Support segments. It offers depository services, including checking accounts, savings accounts, and time certificate contracts; and lending services, such as traditional credit products and credit card services, lease financing and import/export trade, agricultural finance, asset-backed lending, and other products",
   "earnings_ts": 1792067400.0,
-  "_fetched": "2026-10-24T01:54:10.316336"
+  "_fetched": "2026-10-25T23:38:32.909072"
  },
  "PNC": {
   "name": "PNC Financial Services Group, I",
@@ -5131,7 +5131,7 @@
   "website": "https://www.pnc.com",
   "summary": "The PNC Financial Services Group, Inc. operates as a diversified financial services company in the United States. It operates through three segments: Retail Banking, Corporate & Institutional Banking, and Asset Management Group segments. The Retail Banking segment offers checking, savings, and money market accounts, and time deposit; residential mortgages, home equity loans and lines of credit, auto loans, credit cards, education loans, and personal and small business loans and lines of credit; and brokerage, insurance, and investment and cash management services. This segment serves consumer and small business customers through a network of branches, digital channels, ATMs, and through phon",
   "earnings_ts": 1800016200.0,
-  "_fetched": "2026-10-24T01:54:11.120867"
+  "_fetched": "2026-10-25T23:38:34.366680"
  },
  "CME": {
   "name": "CME Group Inc.",
@@ -5141,20 +5141,20 @@
   "forward_pe": 23.134085,
   "trailing_pe": 25.058197,
   "peg": 4.777,
-  "pb": 4.120803,
+  "pb": 4.113982,
   "roe": 0.16131,
-  "op_margin": 0.65699995,
-  "debt_to_equity": 12.896,
-  "revenue_growth": 0.132,
+  "op_margin": 0.65850997,
+  "debt_to_equity": 14.507,
+  "revenue_growth": 0.13,
   "earnings_growth": 0.161,
-  "target_mean": 314.875,
+  "target_mean": 316.0,
   "target_high": 367.0,
   "target_low": 227.0,
   "analyst_count": 16.0,
   "rec_key": "buy",
   "rec_mean": 2.41176,
   "payout_ratio": 0.95419997,
-  "market_cap": 109926973440.0,
+  "market_cap": 109423968256.0,
   "high_52w": 329.16,
   "low_52w": 218.31,
   "forward_eps": 13.2147,
@@ -5165,7 +5165,7 @@
   "website": "https://www.cmegroup.com",
   "summary": "CME Group Inc., together with its subsidiaries, operates contract markets for the trading of futures and options on futures contracts worldwide. It offers futures and options products based on interest rates, equity indexes, and foreign exchange; and agricultural, energy, and metals commodities, as well as fixed income and foreign currency trading services. The company provides clearing house services, including clearing, settling, and guaranteeing futures and options contracts, and cleared swaps products traded through its exchanges. In addition, the company offers a range of market data services, including real-time and historical data services. It serves professional traders, financial in",
   "earnings_ts": 1792585800.0,
-  "_fetched": "2026-10-24T01:54:11.975731"
+  "_fetched": "2026-10-25T23:38:35.834934"
  },
  "ED": {
   "name": "Consolidated Edison, Inc.",
@@ -5199,7 +5199,7 @@
   "website": "https://www.conedison.com",
   "summary": "Consolidated Edison, Inc., through its subsidiaries, engages in the regulated electric, gas, and steam delivery businesses in the United States. The company offers electric services to approximately 3.7 million customers in New York City and Westchester County; gas to approximately 1.1 million customers in Manhattan, the Bronx, parts of Queens, and Westchester County; and steam to approximately 1,490 customers in parts of Manhattan. It also supplies electricity to approximately 0.3 million customers in southeastern New York and northern New Jersey; and gas to approximately 0.1 million customers in southeastern New York. In addition, the company operates 552 circuit miles of transmission line",
   "earnings_ts": 1793908800.0,
-  "_fetched": "2026-10-24T01:54:12.786598"
+  "_fetched": "2026-10-25T23:38:37.470659"
  },
  "AEP": {
   "name": "American Electric Power Company",
@@ -5233,7 +5233,7 @@
   "website": "https://www.aep.com",
   "summary": "American Electric Power Company, Inc., an electric public utility holding company, engages in the generation, transmission, and distribution of electricity for sale to retail and wholesale customers in the United States. It operates through Vertically Integrated Utilities, Transmission and Distribution Utilities, AEP Transmission Holdco, and Generation & Marketing segments. The company generates electricity using coal and lignite, nuclear, natural gas, renewable, hydro, solar, wind, and other energy sources; owns, operates, maintains, and invests in transmission infrastructure; and engages in the retail supply, and wholesale energy trading and marketing businesses. It operates approximately ",
   "earnings_ts": 1793190600.0,
-  "_fetched": "2026-10-24T01:54:13.584515"
+  "_fetched": "2026-10-25T23:38:38.937338"
  },
  "WEC": {
   "name": "WEC Energy Group, Inc.",
@@ -5267,7 +5267,7 @@
   "website": "https://www.wecenergygroup.com",
   "summary": "WEC Energy Group, Inc., through its subsidiaries, provides regulated natural gas and electricity, and renewable and nonregulated renewable energy services in the United States. The company operates through Wisconsin, Illinois, Other States, Electric Transmission, and Non-Utility Energy Infrastructure segments. It generates and distributes electricity from coal, natural gas, oil, and nuclear, as well as renewable energy resources, including wind, solar, hydroelectric, and biomass; and distributes and hydroelectric natural gas. The company also owns, maintains, monitors, and operates electric transmission systems; and generates, distributes, and sells steam. As of December 31, 2025, the compan",
   "earnings_ts": 1793277000.0,
-  "_fetched": "2026-10-24T01:54:14.415918"
+  "_fetched": "2026-10-25T23:38:40.424237"
  },
  "D": {
   "name": "Dominion Energy, Inc.",
@@ -5301,7 +5301,7 @@
   "website": "https://www.dominionenergy.com",
   "summary": "Dominion Energy, Inc. provides regulated electricity and natural gas services in the United States. It operates through Dominion Energy Virginia, Dominion Energy South Carolina, and Contracted Energy segments. The Dominion Energy Virginia segment engages in the generation, distribution, and transmission of electricity to approximately 2.8 million residential, commercial, industrial, and governmental customers in Virginia and North Carolina. The Dominion Energy South Carolina segment generates, transmits, and distributes electricity to approximately 0.8 million customers in the central, southern, and southwestern portions of South Carolina; and distributes natural gas to approximately 0.5 mil",
   "earnings_ts": 1793363400.0,
-  "_fetched": "2026-10-24T01:54:15.229394"
+  "_fetched": "2026-10-25T23:38:41.888834"
  },
  "LYB": {
   "name": "LyondellBasell Industries NV",
@@ -5335,7 +5335,7 @@
   "website": "https://www.lyondellbasell.com",
   "summary": "LyondellBasell Industries N.V. operates as a chemical company in the United States, Germany, China, Mexico, Italy, Japan, France, Poland, the Netherlands, and internationally. It operates in five segments: Olefins and PolyolefinsAmericas; Olefins and PolyolefinsEurope, Asia, International; Intermediates and Derivatives; Advanced Polymer Solutions; and Technology. The company produces and markets olefins and co-products, such as ethylene, aromatics, propylene and butadiene; polyolefins; polyethylene; polypropylene homopolymers and copolymers; propylene oxide and derivatives; oxyfuels and related products; and intermediate chemicals, such as styrene monomer and acetyls. It also produces and ",
   "earnings_ts": 1793363400.0,
-  "_fetched": "2026-10-24T01:54:16.045111"
+  "_fetched": "2026-10-25T23:38:43.515216"
  },
  "005830.KS": {
   "name": "DB INSURANCE",
@@ -5360,7 +5360,7 @@
   "payout_ratio": 0.2572,
   "market_cap": 11170527313920.0,
   "high_52w": 214000.0,
-  "low_52w": 118100.0,
+  "low_52w": 0.0,
   "forward_eps": null,
   "trailing_eps": null,
   "industry": "Insurance - Property & Casualty",
@@ -5369,7 +5369,7 @@
   "website": "https://www.idbins.com",
   "summary": "DB Insurance Co., Ltd. provides various insurance products and services in South Korea. It offers automobile, fire, maritime, driver, travel, comprehensive, health, indemnity/dental, children's, pet, and long-term care insurance. The company was formerly known as Dongbu Insurance Co., Ltd. and changed its name to DB Insurance Co., Ltd. in November 2017. The company was founded in 1962 and is headquartered in Seoul, South Korea.",
   "earnings_ts": 1794549600.0,
-  "_fetched": "2026-10-24T01:54:16.869409"
+  "_fetched": "2026-10-25T23:38:44.972346"
  },
  "001450.KS": {
   "name": "Hyundai M&F INS",
@@ -5394,7 +5394,7 @@
   "payout_ratio": 0.0,
   "market_cap": 3354749304832.0,
   "high_52w": 54700.0,
-  "low_52w": 26100.0,
+  "low_52w": 0.0,
   "forward_eps": null,
   "trailing_eps": null,
   "industry": "Insurance - Property & Casualty",
@@ -5403,7 +5403,7 @@
   "website": "https://www.hi.co.kr",
   "summary": "Hyundai Marine & Fire Insurance Co., Ltd. provides non-life insurance and other related insurance services in South Korea and internationally. The company offers automobile/driver, health/child, property, annuity/savings, fire, marine, accident, engineering, workers' compensation, and liability insurance products. It also engages in the building and facility management, asset management, investment advisory, reinsurance brokerage, and claims service businesses. The company was formerly known as Dongbang Fire & Marine Insurance Co., Ltd. and changed its name to Hyundai Marine & Fire Insurance Co. Ltd. in October 1985. Hyundai Marine & Fire Insurance Co., Ltd. was incorporated in 1955 and is h",
   "earnings_ts": 1794463200.0,
-  "_fetched": "2026-10-24T01:54:17.766055"
+  "_fetched": "2026-10-25T23:38:46.472851"
  },
  "029780.KS": {
   "name": "SAMSUNG CARD",
@@ -5428,7 +5428,7 @@
   "payout_ratio": 0.4813,
   "market_cap": 4497855741952.0,
   "high_52w": 69200.0,
-  "low_52w": 40700.0,
+  "low_52w": 0.0,
   "forward_eps": null,
   "trailing_eps": null,
   "industry": "Credit Services",
@@ -5437,7 +5437,7 @@
   "website": "https://www.samsungcard.com",
   "summary": "Samsung Card Co., Ltd. provides financial services in South Korea. It operates through Credit Card, Installment and Leasing, and Other segments. The company offers card payment services, such as credit card, debit card, and pre-paid cards; short-term and long-term card loans; and installment services for electronics, consumer durables, industrial goods, and automobiles; and auto leasing, flat leasing, and rental services. It also provides general loans, debt cancellation and debt suspension, SMS notification, fraud protection, and asset-backed securitization services; insurance sales agency services; and shopping, travel, and wedding services. The company was formerly known as Samsung Credit",
   "earnings_ts": 1793080800.0,
-  "_fetched": "2026-10-24T01:54:18.567689"
+  "_fetched": "2026-10-25T23:38:47.924792"
  },
  "016360.KS": {
   "name": "SamsungSecu",
@@ -5462,7 +5462,7 @@
   "payout_ratio": 0.2441,
   "market_cap": 6929680171008.0,
   "high_52w": 163000.0,
-  "low_52w": 71300.0,
+  "low_52w": 0.0,
   "forward_eps": null,
   "trailing_eps": null,
   "industry": "Capital Markets",
@@ -5471,7 +5471,7 @@
   "website": "https://www.samsungpop.com",
   "summary": "Samsung Securities Co.,Ltd. operates as a financial investment company in South Korea. The company offers asset and wealth management services; global investment strategy; tax, real estate, and legal consulting services; digital and pension services, such as pension asset management services; investment products, including domestic and overseas stocks, funds, ELS, fixed-income, wrap, and other financial products; channel solutions; credits and loans; corporate banking; and capital management services. It also provides an equity platform to support investment activities, such as brokerage and liquidity provision for domestic and global stocks, ETFs, and ETNs; private equity fund solutions; FI",
   "earnings_ts": 1794376800.0,
-  "_fetched": "2026-10-24T01:54:19.370031"
+  "_fetched": "2026-10-25T23:38:49.392120"
  },
  "005940.KS": {
   "name": "NHIS",
@@ -5496,7 +5496,7 @@
   "payout_ratio": 0.3177,
   "market_cap": 9026265939968.0,
   "high_52w": 42600.0,
-  "low_52w": 19610.0,
+  "low_52w": 0.0,
   "forward_eps": null,
   "trailing_eps": null,
   "industry": "Capital Markets",
@@ -5504,8 +5504,8 @@
   "employees": 2189.0,
   "website": "https://www.nhqv.com",
   "summary": "NH Investment & Securities Co., Ltd. provides investment management services in South Korea and internationally. The company offers financial products and services tailored to the clients investment; and wealth management solutions, including digital platform-based bespoke and family office services. It also engages in the provision of investment banking solutions, including traditional IB revenue sources and corporate advisory services; acquisition financing services; and sales, investing, and trading of equity, bonds, FICC derivative products, and other products. In addition, the company provides various services in areas of equity comprising ETF LP, stock exchange market maker, prime brok",
-  "earnings_ts": 1792735200.0,
-  "_fetched": "2026-10-24T01:54:20.175513"
+  "earnings_ts": 1792994400.0,
+  "_fetched": "2026-10-25T23:38:50.845733"
  },
  "071050.KS": {
   "name": "KIH",
@@ -5530,7 +5530,7 @@
   "payout_ratio": 0.173,
   "market_cap": 8479210209280.0,
   "high_52w": 300500.0,
-  "low_52w": 140600.0,
+  "low_52w": 0.0,
   "forward_eps": null,
   "trailing_eps": null,
   "industry": "Capital Markets",
@@ -5539,7 +5539,7 @@
   "website": "https://www.koreaholdings.com",
   "summary": "Korea Investment Holdings Co., Ltd., through its subsidiaries, provides various financial products and services. The company offers securities, asset management, savings bank, credit finance, venture capital, private equity fund, brokerage, investment banking, and trading services, as well as other financial businesses. It is also involved in the trust business, collective investment, real estate trust, investment fund, and financial investment services. The company was formerly known as Dongwon Financial Holding Co., Ltd. and changed its name to Korea Investment Holdings Co., Ltd. in May 2005. Korea Investment Holdings Co., Ltd. was founded in 2003 and is headquartered in Seoul, South Korea",
   "earnings_ts": 1754305140.0,
-  "_fetched": "2026-10-24T01:54:20.988490"
+  "_fetched": "2026-10-25T23:38:52.305394"
  },
  "175330.KS": {
   "name": "JB Financial Group",
@@ -5564,7 +5564,7 @@
   "payout_ratio": 0.3443,
   "market_cap": 4628297547776.0,
   "high_52w": 38500.0,
-  "low_52w": 21700.0,
+  "low_52w": 0.0,
   "forward_eps": null,
   "trailing_eps": null,
   "industry": "Banks - Regional",
@@ -5573,7 +5573,7 @@
   "website": "https://www.jbfg.com",
   "summary": "JB Financial Group Co., Ltd., through its subsidiaries, engages in the provision of financial services in South Korea and internationally. It is involved in banking business for smaller enterprises, merchants, and households; and installment financing, rental of facilities business. The company also offers asset management in the energy and resources fund markets; venture investment; finance, microfinance; new technology; and securities business. JB Financial Group Co., Ltd. was founded in 2013 and is based in Jeonju-si, South Korea.",
   "earnings_ts": 1793080800.0,
-  "_fetched": "2026-10-24T01:54:21.818639"
+  "_fetched": "2026-10-25T23:38:53.755288"
  },
  "138930.KS": {
   "name": "BNK Financial Group",
@@ -5598,7 +5598,7 @@
   "payout_ratio": 0.32580003,
   "market_cap": 4194499297280.0,
   "high_52w": 23050.0,
-  "low_52w": 13300.0,
+  "low_52w": 0.0,
   "forward_eps": null,
   "trailing_eps": null,
   "industry": "Banks - Regional",
@@ -5607,7 +5607,7 @@
   "website": "https://www.bnkfg.com",
   "summary": "BNK Financial Group Inc., together with its subsidiaries, provides various financial products and services in South Korea and internationally. The company is involved in banking; specialized credit financial; investment brokerage and trading; financial advisory and collective investment; credit investigation and collection agency; start-up investment company advisory; and leasing activities. It also operates as a savings bank; small loan specialty; and provides system software development and supply services. The company was formerly known as BS Financial Group Inc. and changed its name to BNK Financial Group Inc. in April 2015. BNK Financial Group Inc. was founded in 1967 and is headquarter",
   "earnings_ts": 1792994400.0,
-  "_fetched": "2026-10-24T01:54:22.634168"
+  "_fetched": "2026-10-25T23:38:55.209458"
  },
  "139130.KS": {
   "name": "iM Financial Group",
@@ -5632,7 +5632,7 @@
   "payout_ratio": 0.2839,
   "market_cap": 2494223613952.0,
   "high_52w": 22000.0,
-  "low_52w": 13170.0,
+  "low_52w": 0.0,
   "forward_eps": null,
   "trailing_eps": null,
   "industry": "Banks - Regional",
@@ -5641,7 +5641,7 @@
   "website": "https://www.imfngroup.com",
   "summary": "iM Financial Group Co., Ltd., through its subsidiaries, engages in the provision of various banking products and services in South Korea. The company offers deposit products; loans; financial products, including fund and bancassurance; and foreign exchange, asset management, and internet banking services. It also provides investment trading and brokerage, discretionary investment, investment advisory, and trust services; and insurance contract loans, etc., as well as sells insurance products, including coverage, endowment, pension, and variable. In addition, the company is involved in the collective investment services; issuing and managing prepaid electronic payment and payment gateway solu",
   "earnings_ts": 1753700340.0,
-  "_fetched": "2026-10-24T01:54:23.441397"
+  "_fetched": "2026-10-25T23:38:56.677254"
  },
  "078930.KS": {
   "name": "GS",
@@ -5666,7 +5666,7 @@
   "payout_ratio": 0.121300004,
   "market_cap": 8104194342912.0,
   "high_52w": 133200.0,
-  "low_52w": 46950.0,
+  "low_52w": 0.0,
   "forward_eps": null,
   "trailing_eps": null,
   "industry": "Conglomerates",
@@ -5675,7 +5675,7 @@
   "website": "https://www.gs.co.kr",
   "summary": "GS Holdings Corp., together its subsidiaries, engages in the energy, power generation, retail, service, construction, and infrastructure businesses. The company supplies heating and cooling facilities; composite resin; electricity and steam by operating coal power plant and wind power farms; produces electricity through combined heat and power plant; provides LNG to power distribution companies; bio diesel; exports refined oils, lubricants, aromatics, and polymers; collects wastes and converts them into rare metals; manufactures wind turbines; operates shipping fleet, comprising petrochemical tankers and gas carriers; and provides petroleum product distribution, transportation, and car shari",
   "earnings_ts": 1793858400.0,
-  "_fetched": "2026-10-24T01:54:24.285563"
+  "_fetched": "2026-10-25T23:38:58.147671"
  },
  "088980.KS": {
   "name": "MKIF",
@@ -5700,7 +5700,7 @@
   "payout_ratio": null,
   "market_cap": null,
   "high_52w": 11890.0,
-  "low_52w": 9320.0,
+  "low_52w": 0.0,
   "forward_eps": null,
   "trailing_eps": null,
   "industry": null,
@@ -5709,7 +5709,7 @@
   "website": null,
   "summary": null,
   "earnings_ts": 1753786740.0,
-  "_fetched": "2026-10-24T01:54:25.118418"
+  "_fetched": "2026-10-25T23:38:59.615383"
  },
  "458730.KS": {
   "name": "TIGER U.S. Dividend Equity",
@@ -5734,7 +5734,7 @@
   "payout_ratio": null,
   "market_cap": null,
   "high_52w": 15975.0,
-  "low_52w": 12025.0,
+  "low_52w": 0.0,
   "forward_eps": null,
   "trailing_eps": null,
   "industry": null,
@@ -5743,7 +5743,7 @@
   "website": null,
   "summary": null,
   "earnings_ts": null,
-  "_fetched": "2026-10-24T01:54:25.947599"
+  "_fetched": "2026-10-25T23:39:01.078294"
  },
  "446720.KS": {
   "name": "SOL US Dividend Equity",
@@ -5768,7 +5768,7 @@
   "payout_ratio": null,
   "market_cap": null,
   "high_52w": 14660.0,
-  "low_52w": 11030.0,
+  "low_52w": 0.0,
   "forward_eps": null,
   "trailing_eps": null,
   "industry": null,
@@ -5777,7 +5777,7 @@
   "website": null,
   "summary": null,
   "earnings_ts": null,
-  "_fetched": "2026-10-24T01:54:26.812910"
+  "_fetched": "2026-10-25T23:39:02.530187"
  },
  "161510.KS": {
   "name": "PLUS High Dividend ETF",
@@ -5802,7 +5802,7 @@
   "payout_ratio": null,
   "market_cap": null,
   "high_52w": 30380.0,
-  "low_52w": 19480.0,
+  "low_52w": 0.0,
   "forward_eps": null,
   "trailing_eps": null,
   "industry": null,
@@ -5811,6 +5811,6 @@
   "website": null,
   "summary": null,
   "earnings_ts": null,
-  "_fetched": "2026-10-24T01:54:27.618532"
+  "_fetched": "2026-10-25T23:39:04.180485"
  }
 }

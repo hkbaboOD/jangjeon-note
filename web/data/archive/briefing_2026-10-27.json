@@ -1,0 +1,903 @@
+{
+ "indices": [
+  {
+   "ticker": "^DJI",
+   "name": "다우",
+   "last": 52361.578125,
+   "chg": 0.28041275428793977,
+   "date": "2026-10-26",
+   "spark": [
+    52093.1094,
+    51461.8984,
+    51778.0391,
+    51682.6406,
+    52048.8281,
+    51863.6914,
+    51511.5898,
+    51349.9805,
+    51828.6211,
+    51481.5117,
+    51349.9219,
+    50906.0508,
+    50926.5586,
+    51176.9609,
+    51267.8984,
+    51521.2812,
+    51179.8711,
+    51231.6406,
+    51654.9492,
+    51850.5508,
+    51670.1016,
+    51621.4805,
+    52177.6914,
+    52002.4102,
+    51966.0312,
+    52495.8789,
+    52856.0898,
+    52867.9805,
+    52215.1602,
+    52361.5781
+   ]
+  },
+  {
+   "ticker": "^GSPC",
+   "name": "S&P500",
+   "last": 7676.77001953125,
+   "chg": 0.6963807836358971,
+   "date": "2026-10-26",
+   "spark": [
+    7585.73,
+    7551.8101,
+    7637.7598,
+    7650.5,
+    7764.7002,
+    7764.6401,
+    7706.0298,
+    7704.1299,
+    7743.4102,
+    7683.6899,
+    7670.8398,
+    7651.54,
+    7666.4502,
+    7722.7202,
+    7773.9502,
+    7818.9302,
+    7801.77,
+    7765.3599,
+    7811.54,
+    7807.2402,
+    7805.4502,
+    7718.9399,
+    7744.0601,
+    7659.4399,
+    7690.73,
+    7712.5698,
+    7757.1699,
+    7663.4302,
+    7623.6802,
+    7676.77
+   ]
+  },
+  {
+   "ticker": "^IXIC",
+   "name": "나스닥",
+   "last": 26169.380859375,
+   "chg": 0.8246511774205878,
+   "date": "2026-10-26",
+   "spark": [
+    25981.5703,
+    25978.4297,
+    26418.3008,
+    26522.5391,
+    27122.0898,
+    27244.2793,
+    26936.0391,
+    26939.3691,
+    27068.7207,
+    26820.3809,
+    26797.5391,
+    26861.0605,
+    26871.5996,
+    27190.8594,
+    27477.3105,
+    27599.7891,
+    27538.6895,
+    27193.3398,
+    27366.1699,
+    27245.9004,
+    27204.3809,
+    26692.8691,
+    26713.0293,
+    26140.0293,
+    26430.8906,
+    26424.8203,
+    26702.8594,
+    26008.8594,
+    25955.3398,
+    26169.3809
+   ]
+  },
+  {
+   "ticker": "^SOX",
+   "name": "필라델피아반도체",
+   "last": 11083.4697265625,
+   "chg": 2.8202689812538706,
+   "date": "2026-10-26",
+   "spark": [
+    11175.5498,
+    11246.1104,
+    11599.4902,
+    11921.6904,
+    12433.1699,
+    12689.8203,
+    12534.2803,
+    12492.54,
+    12668.9297,
+    12465.2402,
+    12629.1602,
+    12628.6201,
+    12829.0,
+    13136.6699,
+    13172.7402,
+    13217.8203,
+    13066.1504,
+    12623.71,
+    12572.4199,
+    12236.79,
+    12208.79,
+    11684.3799,
+    11581.21,
+    11137.29,
+    11316.3398,
+    11283.8096,
+    11505.5596,
+    10731.9805,
+    10779.46,
+    11083.4697
+   ]
+  },
+  {
+   "ticker": "^KS11",
+   "name": "코스피",
+   "last": 5698.10986328125,
+   "chg": 2.6631004413296244,
+   "date": "2026-10-27",
+   "spark": [
+    7051.6401,
+    7033.9199,
+    6909.9102,
+    6684.3701,
+    6627.2598,
+    6717.9702,
+    6715.4102,
+    6894.23,
+    7007.7202,
+    7017.9102,
+    7080.9199,
+    6889.7402,
+    6870.8101,
+    6838.04,
+    6971.3501,
+    7003.7402,
+    6941.3901,
+    6803.8999,
+    6625.9302,
+    6384.2402,
+    6035.3501,
+    6008.8101,
+    5554.2202,
+    5668.0498,
+    5768.0098,
+    5552.7402,
+    5735.6602,
+    5533.77,
+    5550.2998,
+    5698.1099
+   ]
+  },
+  {
+   "ticker": "^KQ11",
+   "name": "코스닥",
+   "last": 751.0499877929688,
+   "chg": -0.0851434296530229,
+   "date": "2026-10-27",
+   "spark": [
+    830.37,
+    836.92,
+    820.64,
+    806.79,
+    812.41,
+    815.98,
+    822.18,
+    827.12,
+    836.27,
+    834.38,
+    844.48,
+    846.58,
+    849.8,
+    855.91,
+    894.29,
+    893.29,
+    919.92,
+    898.43,
+    892.27,
+    849.19,
+    837.03,
+    823.88,
+    760.82,
+    794.78,
+    808.89,
+    781.97,
+    792.76,
+    764.1,
+    751.69,
+    751.05
+   ]
+  }
+ ],
+ "macro": [
+  {
+   "ticker": "^TNX",
+   "name": "미 10년물(%)",
+   "last": 4.986000061035156,
+   "chg": -0.040093325484191755,
+   "date": "2026-10-26",
+   "spark": [
+    4.996,
+    5.006,
+    4.947,
+    4.998,
+    4.963,
+    4.968,
+    5.114,
+    5.162,
+    5.184,
+    5.24,
+    5.255,
+    5.293,
+    5.237,
+    5.277,
+    5.311,
+    5.269,
+    5.277,
+    5.231,
+    5.244,
+    5.24,
+    5.217,
+    5.19,
+    5.089,
+    5.098,
+    5.136,
+    5.117,
+    5.146,
+    4.953,
+    4.988,
+    4.986
+   ],
+   "chg_bp": -0.19998550415039062
+  },
+  {
+   "ticker": "^VIX",
+   "name": "VIX",
+   "last": 18.389999389648438,
+   "chg": -5.449878312142642,
+   "date": "2026-10-26",
+   "spark": [
+    17.2,
+    17.71,
+    15.44,
+    14.81,
+    14.87,
+    14.21,
+    15.18,
+    15.67,
+    14.87,
+    16.07,
+    16.04,
+    16.34,
+    16.39,
+    15.31,
+    15.52,
+    15.01,
+    15.08,
+    15.41,
+    14.84,
+    15.21,
+    15.27,
+    16.87,
+    16.46,
+    19.99,
+    18.44,
+    17.31,
+    16.68,
+    19.03,
+    19.45,
+    18.39
+   ]
+  },
+  {
+   "ticker": "CL=F",
+   "name": "WTI",
+   "last": 101.13999938964844,
+   "chg": -2.0625518763014106,
+   "date": "2026-10-26",
+   "spark": [
+    105.83,
+    102.43,
+    101.91,
+    100.3,
+    95.78,
+    94.59,
+    92.16,
+    94.61,
+    92.41,
+    92.6,
+    89.38,
+    90.42,
+    92.87,
+    91.11,
+    89.43,
+    89.44,
+    88.28,
+    91.49,
+    91.85,
+    93.74,
+    94.14,
+    95.09,
+    97.97,
+    101.41,
+    103.66,
+    101.79,
+    97.15,
+    99.47,
+    103.27,
+    101.14
+   ]
+  },
+  {
+   "ticker": "BZ=F",
+   "name": "브렌트",
+   "last": 109.97000122070312,
+   "chg": -5.783070535817236,
+   "date": "2026-10-26",
+   "spark": [
+    108.75,
+    105.83,
+    104.82,
+    103.87,
+    100.34,
+    99.25,
+    103.08,
+    106.6,
+    104.32,
+    105.28,
+    102.59,
+    103.53,
+    102.31,
+    102.25,
+    100.32,
+    100.58,
+    100.2,
+    104.28,
+    104.72,
+    106.65,
+    105.69,
+    106.06,
+    105.92,
+    109.86,
+    109.55,
+    108.79,
+    108.82,
+    113.17,
+    116.72,
+    109.97
+   ]
+  },
+  {
+   "ticker": "DX-Y.NYB",
+   "name": "달러인덱스",
+   "last": 102.02799987792969,
+   "chg": 0.21412663251512143,
+   "date": "2026-10-26",
+   "spark": [
+    99.65,
+    100.31,
+    100.22,
+    100.22,
+    100.43,
+    100.6,
+    101.1,
+    101.29,
+    100.97,
+    101.2,
+    101.37,
+    101.45,
+    102.1,
+    101.93,
+    102.17,
+    101.83,
+    102.24,
+    102.14,
+    102.21,
+    102.58,
+    102.18,
+    102.55,
+    102.0,
+    101.84,
+    101.98,
+    101.73,
+    101.78,
+    101.61,
+    101.81,
+    102.028
+   ]
+  },
+  {
+   "ticker": "KRW=X",
+   "name": "원달러",
+   "last": 1324.72998046875,
+   "chg": 0.22469818130232966,
+   "date": "2026-10-27",
+   "spark": [
+    1363.5699,
+    1376.6,
+    1379.53,
+    1384.86,
+    1373.6801,
+    1350.36,
+    1362.5,
+    1367.36,
+    1354.51,
+    1359.5601,
+    1350.5,
+    1356.84,
+    1360.59,
+    1342.5601,
+    1343.75,
+    1339.74,
+    1339.08,
+    1342.99,
+    1340.84,
+    1334.13,
+    1340.3101,
+    1339.35,
+    1340.95,
+    1333.4301,
+    1330.0,
+    1323.9399,
+    1325.59,
+    1325.99,
+    1321.76,
+    1324.73
+   ]
+  },
+  {
+   "ticker": "GC=F",
+   "name": "금",
+   "last": 4022.300048828125,
+   "chg": 0.3592940651026222,
+   "date": "2026-10-26",
+   "spark": [
+    4332.7998,
+    4387.5,
+    4399.7002,
+    4424.8999,
+    4383.8999,
+    4376.3999,
+    4318.3999,
+    4298.0,
+    4321.2002,
+    4168.3999,
+    4179.7002,
+    4186.7002,
+    4202.2998,
+    4162.2998,
+    4156.7998,
+    4187.1001,
+    4140.7002,
+    4157.0,
+    4216.2998,
+    4190.6001,
+    4177.2998,
+    4107.8999,
+    4170.1001,
+    4181.1001,
+    4160.1001,
+    4142.6001,
+    4150.0,
+    4060.3999,
+    4007.8999,
+    4022.3
+   ]
+  }
+ ],
+ "breadth": {
+  "us": {
+   "up": 21,
+   "down": 45,
+   "total": 66
+  },
+  "kr": {
+   "up": 31,
+   "down": 9,
+   "total": 40
+  }
+ },
+ "movers": {
+  "us": {
+   "top": [
+    {
+     "ticker": "SLB",
+     "name": "SLB(슐럼버거)",
+     "chg": 7.083758204390023
+    },
+    {
+     "ticker": "COP",
+     "name": "코노코필립스",
+     "chg": 3.5500913243157406
+    },
+    {
+     "ticker": "CVX",
+     "name": "셰브론",
+     "chg": 2.880719185228564
+    },
+    {
+     "ticker": "XOM",
+     "name": "엑슨모빌",
+     "chg": 2.7941486313791453
+    },
+    {
+     "ticker": "MU",
+     "name": "마이크론",
+     "chg": 2.4588725844689296
+    }
+   ],
+   "bottom": [
+    {
+     "ticker": "T",
+     "name": "AT&T",
+     "chg": -7.959540387688325
+    },
+    {
+     "ticker": "PG",
+     "name": "P&G",
+     "chg": -2.7598237613970955
+    },
+    {
+     "ticker": "KO",
+     "name": "코카콜라",
+     "chg": -2.758545578391991
+    },
+    {
+     "ticker": "GE",
+     "name": "GE 에어로스페이스",
+     "chg": -2.691283527463484
+    },
+    {
+     "ticker": "NKE",
+     "name": "나이키",
+     "chg": -2.6617966228779544
+    }
+   ]
+  },
+  "kr": {
+   "top": [
+    {
+     "ticker": "009150.KS",
+     "name": "삼성전기",
+     "chg": 8.00536672629697
+    },
+    {
+     "ticker": "000660.KS",
+     "name": "SK하이닉스",
+     "chg": 7.4509803921568585
+    },
+    {
+     "ticker": "005930.KS",
+     "name": "삼성전자",
+     "chg": 5.164319248826299
+    },
+    {
+     "ticker": "017670.KS",
+     "name": "SK텔레콤",
+     "chg": 4.576976421636614
+    },
+    {
+     "ticker": "247540.KQ",
+     "name": "에코프로비엠",
+     "chg": 4.57589285714286
+    }
+   ],
+   "bottom": [
+    {
+     "ticker": "207940.KS",
+     "name": "삼성바이오로직스",
+     "chg": -3.7878787878787845
+    },
+    {
+     "ticker": "138040.KS",
+     "name": "메리츠금융지주",
+     "chg": -2.8753993610223683
+    },
+    {
+     "ticker": "030200.KS",
+     "name": "KT",
+     "chg": -1.2035010940919078
+    },
+    {
+     "ticker": "055550.KS",
+     "name": "신한지주",
+     "chg": -1.1695906432748537
+    },
+    {
+     "ticker": "033780.KS",
+     "name": "KT&G",
+     "chg": -0.847008999470622
+    }
+   ]
+  }
+ },
+ "points": [
+  "미 증시 강세: S&P500 +0.70%, 나스닥 +0.82%",
+  "반도체 강세(SOX +2.82%)"
+ ],
+ "outlook": [
+  "반도체 대형주 중심 강세 출발 기대"
+ ],
+ "diagnosis": [],
+ "news": [
+  {
+   "title": "S&P 500, Nasdaq, Dow Begin Week Higher As Anthropic IPO Filing Rekindles AI Enthusiasm — MSFT, AAPL, CART, VZ In Focus",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/p-500-nasdaq-dow-begin-223516076.html",
+   "publisher": "Stocktwits",
+   "time": "2026-10-26T22:35:16Z"
+  },
+  {
+   "title": "What If You Had Put $1,000 Into Bitcoin, Ethereum, XRP and Solana 5 Years Ago?",
+   "link": "https://finance.yahoo.com/markets/crypto/articles/had-put-1-000-bitcoin-213022522.html",
+   "publisher": "24/7 Wall St.",
+   "time": "2026-10-26T21:30:22Z"
+  },
+  {
+   "title": "BUFR Holders Left $62,250 on the Table on a $300,000 Position While Chasing Calm",
+   "link": "https://finance.yahoo.com/markets/options/articles/bufr-holders-left-62-250-203318889.html",
+   "publisher": "24/7 Wall St.",
+   "time": "2026-10-26T20:33:18Z"
+  },
+  {
+   "title": "Intuitive Machines Just Dropped 30% in a Month. Is It Time to Sell?",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/intuitive-machines-just-dropped-30-185157745.html",
+   "publisher": "24/7 Wall St.",
+   "time": "2026-10-26T18:51:57Z"
+  },
+  {
+   "title": "Alibaba Is Now Down 31% This Year: Is BABA Stock a Falling Knife or Poised for a Comeback?",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/alibaba-now-down-31-baba-184907519.html",
+   "publisher": "24/7 Wall St.",
+   "time": "2026-10-26T18:49:07Z"
+  },
+  {
+   "title": "Oklo Is Now Down 63% This Year: Is OKLO Stock Dead Money or Due for a Bounce?",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/oklo-now-down-63-oklo-184234711.html",
+   "publisher": "24/7 Wall St.",
+   "time": "2026-10-26T18:42:34Z"
+  },
+  {
+   "title": "Skydance Sinks 6% Despite Citi Buy Call and Elon Musk’s Reported $1B Investment; Roku and Disney Dip",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/skydance-sinks-6-despite-citi-180025310.html",
+   "publisher": "24/7 Wall St.",
+   "time": "2026-10-26T18:00:25Z"
+  },
+  {
+   "title": "Micron Climbs 4% as Bank of America Grows More Positive on Memory; Western Digital Rises 5%, SanDisk Gains 3%",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/micron-climbs-4-bank-america-175234042.html",
+   "publisher": "24/7 Wall St.",
+   "time": "2026-10-26T17:52:34Z"
+  },
+  {
+   "title": "Forget QQQ: The Company Behind It Runs the Same Index for $30 Less a Year on a $100K Balance",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/forget-qqq-company-behind-runs-210357303.html",
+   "publisher": "24/7 Wall St.",
+   "time": "2026-10-26T21:03:57Z"
+  },
+  {
+   "title": "Food Network New York City Wine & Food Festival presented by Invesco QQQ Took Over New York City for Four Days of Food, Entertainment and Star-Studded Moments",
+   "link": "https://finance.yahoo.com/media-advertising/articles/food-network-york-city-wine-195900912.html",
+   "publisher": "Business Wire",
+   "time": "2026-10-26T19:59:00Z"
+  },
+  {
+   "title": "Intel Rises 5% as New Street Upgrade Cites Server CPU Shortage; AMD and NVIDIA Gain 3%",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/intel-rises-5-street-upgrade-175031538.html",
+   "publisher": "24/7 Wall St.",
+   "time": "2026-10-26T17:50:31Z"
+  },
+  {
+   "title": "Exchange-Traded Funds Higher as US Equities Advance After Midday",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/exchange-traded-funds-higher-us-171302344.html",
+   "publisher": "MT Newswires",
+   "time": "2026-10-26T17:13:02Z"
+  }
+ ],
+ "ai_summary": null,
+ "news_kr": [
+  {
+   "title": "국내 증시 거래대금이 보여주는 신호 이 그림에 답이 있습니다",
+   "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1mQVZBUW9WSFRGYmtIOG9WakUwcmw2LXlPb1FyUTV2bkNZc0Y1d0ZxMW5BYy12d2o2ZnZ0QVdIQkEzRy04a2NUaEdjYUt5eTRPOGZNTU5iTV9mbTJlakhiUS15VlRHcnZQSkN3a3cwU1HSAXRBVV95cUxQeEY1ZTJIZzNrWnlmdXk0X3RVMDB6WW12N1dMRUJSUEYzWnZBUnItVXdBLUZYZXIzYUxzOGt3OUoxZDNhbTVNT2R5SUY0QUxSMldyRGJUZHhvZ1k0YmhWRWRwNFNib0hpdFgyX1RlWko0OTdyYQ?oc=5",
+   "publisher": "연합인포맥스",
+   "time": "2026-10-26T23:40:23+00:00"
+  },
+  {
+   "title": "코스피 5,400선 밀리며 7개월 내 최저치...오늘 증시는?",
+   "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1vWFF6eHZsdjVzc01neG9od1dQdmNEVEUtbkNYa3hxMml3c1BhSS1sOEdzZUFqdTd2TGJWd2hLajhBb000THd3dktXVTJZblZsaEVreEpfM043MlJEZHc?oc=5",
+   "publisher": "YTN",
+   "time": "2026-10-27T00:14:00+00:00"
+  },
+  {
+   "title": "소비심리 한달 만에 다시 하락세…국내 증시 불안정·중동 정세 여파",
+   "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE1XRHZMZWcySHpiamZnUTlSV3hRT3pGM1J5YjBqUmZxVWZ3cFhkcDhMNmJDWGRTMWppWjJBNUtqendGN0ItdS1vN1hRVV9HSG93eHJKSEhRRVdGNTY4WWVnNnpRNHpQeENRZ3FZMERJOTM0dw?oc=5",
+   "publisher": "한겨레",
+   "time": "2026-10-26T22:29:00+00:00"
+  },
+  {
+   "title": "코스피, 뉴욕 증시 훈풍에 3%대 급등 출발… 5650선 돌파 - 조선비즈",
+   "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOXzNwMF9tYnlpcFN4SjhzU2wwYVlDaEM3Y0FoelUxamdFRlBHVjlqN2xWN1FUaTdqenNVcjBpeV9GQlItRzRzaXowWXJhZTVHOGxkcW9fbkRfMTltcHRZaWI1UkFzTmhxc2Z3Qmc0NkNsOGtKdVBBYkZQbjBOZHNSQjAyTDZWSWEz0gGcAUFVX3lxTE52RVFwQmtybmhKTUIxcFB2cEpsZlFzQWRPMHpOSkFQcWVtSTQtZHBKZURteGVBemRuWUZSa2s2QkpCU0plUGk1UDBPUzNnMjI3TFM4MXZ6bGVMbWxFdmtGVDJFNGVRdlJsNVg2UDZEZUVqeHc1anozWXlKeTdMaGhhNnhEWXIyQmhIRmZVNWNoS2pIOXpUT2d6OUJrMg?oc=5",
+   "publisher": "Chosunbiz",
+   "time": "2026-10-27T00:14:00+00:00"
+  },
+  {
+   "title": "[AI MY 증시전망] 美 증시 반등에 코스피 상승 출발 전망",
+   "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1YbGFxeXZFOGg1aUlzV0lyUzlNS2ZiejEyOWVOU0U4SzJvV2x3NXk4czV6TWtSdk95bHBlcDAxbmNKVk1GdmtsQmpYa0NUWm5LWXRNdEJOYVpuQ1Bt?oc=5",
+   "publisher": "뉴스핌",
+   "time": "2026-10-26T23:08:00+00:00"
+  },
+  {
+   "title": "앤트로픽 역대 최대 IPO추진… 국내증시, 커지는 바닥 논쟁 [오늘아침, 당신이 알아야 할 7가지]",
+   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFAycDdBUVp0TUVvS0MtZHRtQ0FGeWJPekFuR044TlFzNGVYeUVUUXlncEw0TXlXZlRxNTlwMFhJazd6d0xEZV9FQUZIRS1SUlVMSFUwZzFlemc3Zw?oc=5",
+   "publisher": "한국경제",
+   "time": "2026-10-26T22:43:15+00:00"
+  },
+  {
+   "title": "급감했던 순대외금융자산 3분기 반등 전망…주가 하락·경상흑자 효과",
+   "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFBaTGpRT3dVR3Z3TThwX1ZaRXpCUVpycTBubDFnN3hhdnlMNWM3UUpsSTdMWUN6bkM5Z1NYVVNpal9haTF0c3JtNW1idzlpTDgtOWtteTlrMF9nNUwzRGowNjFaeWlPY0FtWEF6QWJWWjBHZw?oc=5",
+   "publisher": "KB Think",
+   "time": "2026-10-26T23:17:50+00:00"
+  },
+  {
+   "title": "중동발 악재에 흔들리는 국내 증시…김동화 대표가 주목한 새로운 수급의 방향은?",
+   "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5MUnpEbldiVVJEZnFtUHkybkVjdDZKc3JmVGxVSVRUZ3RPbVRHdk1WNjlDUEFMOVpHdjM1MEE2blk1U2t1bzdQVm9ON2xfek1KdmNvNm40WGRUOXNWY1hyUg?oc=5",
+   "publisher": "아시아경제",
+   "time": "2026-10-27T00:00:00+00:00"
+  }
+ ],
+ "earnings": [
+  {
+   "ticker": "000660.KS",
+   "name": "SK하이닉스",
+   "date": "2026-10-27",
+   "in_days": 0
+  },
+  {
+   "ticker": "068270.KS",
+   "name": "셀트리온",
+   "date": "2026-10-27",
+   "in_days": 0
+  },
+  {
+   "ticker": "055550.KS",
+   "name": "신한지주",
+   "date": "2026-10-27",
+   "in_days": 0
+  },
+  {
+   "ticker": "009540.KS",
+   "name": "HD한국조선해양",
+   "date": "2026-10-28",
+   "in_days": 1
+  },
+  {
+   "ticker": "066570.KS",
+   "name": "LG전자",
+   "date": "2026-10-28",
+   "in_days": 1
+  },
+  {
+   "ticker": "028260.KS",
+   "name": "삼성물산",
+   "date": "2026-10-28",
+   "in_days": 1
+  },
+  {
+   "ticker": "009150.KS",
+   "name": "삼성전기",
+   "date": "2026-10-28",
+   "in_days": 1
+  },
+  {
+   "ticker": "005930.KS",
+   "name": "삼성전자",
+   "date": "2026-10-28",
+   "in_days": 1
+  },
+  {
+   "ticker": "329180.KS",
+   "name": "HD현대중공업",
+   "date": "2026-10-29",
+   "in_days": 2
+  },
+  {
+   "ticker": "105560.KS",
+   "name": "KB금융",
+   "date": "2026-10-29",
+   "in_days": 2
+  },
+  {
+   "ticker": "096770.KS",
+   "name": "SK이노베이션",
+   "date": "2026-10-29",
+   "in_days": 2
+  },
+  {
+   "ticker": "006400.KS",
+   "name": "삼성SDI",
+   "date": "2026-10-29",
+   "in_days": 2
+  },
+  {
+   "ticker": "018260.KS",
+   "name": "삼성에스디에스",
+   "date": "2026-10-29",
+   "in_days": 2
+  },
+  {
+   "ticker": "012450.KS",
+   "name": "한화에어로스페이스",
+   "date": "2026-10-29",
+   "in_days": 2
+  },
+  {
+   "ticker": "005380.KS",
+   "name": "현대차",
+   "date": "2026-10-29",
+   "in_days": 2
+  },
+  {
+   "ticker": "VZ",
+   "name": "버라이즌",
+   "date": "2026-10-26",
+   "in_days": 0
+  },
+  {
+   "ticker": "UPS",
+   "name": "UPS",
+   "date": "2026-10-27",
+   "in_days": 1
+  },
+  {
+   "ticker": "V",
+   "name": "비자",
+   "date": "2026-10-27",
+   "in_days": 1
+  },
+  {
+   "ticker": "KO",
+   "name": "코카콜라",
+   "date": "2026-10-27",
+   "in_days": 1
+  },
+  {
+   "ticker": "PYPL",
+   "name": "페이팔",
+   "date": "2026-10-27",
+   "in_days": 1
+  }
+ ],
+ "geo": [
+  "대만 해협: 48시간 기사 6건(평소 6건의 0.9배), 긴장 고조 · 5일 반도체지수 -2.1%, VIX -0.3% → 유리: 방산 / 부담: 반도체, 중국 노출, AI 인프라",
+  "중동 정세: 48시간 기사 46건(평소 44건의 1.1배), 긴장 고조 · 5일 WTI -2.4%, 금 -3.3% → 유리: 정유·에너지, 방산, 해운·조선 / 부담: 유가 원가 부담주, 국내 상장주",
+  "북한·한반도: 48시간 기사 46건(평소 44건의 1.0배), 도발 · 5일 원달러 -0.4% → 유리: 방산 / 부담: 국내 상장주",
+  "환율(원화): 48시간 기사 100건(평소 100건의 1.0배), 원화 강세 · 5일 원달러 -0.4% → 유리: 유가 원가 부담주, 국내 상장주 / 부담: 수출주"
+ ],
+ "date": "2026-10-27",
+ "generated": "2026-10-27T09:45+09:00"
+}
