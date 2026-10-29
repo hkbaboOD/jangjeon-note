@@ -1,6 +1,46 @@
 {
  "items": [
   {
+   "ticker": "SCHD",
+   "name": "SCHD",
+   "kind": "setup_breakout",
+   "level": "info",
+   "msg": "SCHD 차트 셋업: 신고가·돌파형",
+   "price": 35.45500183105469,
+   "chg_1d": 1.040187166941009,
+   "time": "2026-10-30T03:55+09:00"
+  },
+  {
+   "ticker": "SCHD",
+   "name": "SCHD",
+   "kind": "high52",
+   "level": "good",
+   "msg": "SCHD 52주 신고가",
+   "price": 35.45500183105469,
+   "chg_1d": 1.040187166941009,
+   "time": "2026-10-30T03:55+09:00"
+  },
+  {
+   "ticker": "SCHD",
+   "name": "SCHD",
+   "kind": "rsi_high",
+   "level": "warn",
+   "msg": "SCHD RSI 71 과매수",
+   "price": 35.45500183105469,
+   "chg_1d": 1.040187166941009,
+   "time": "2026-10-30T03:55+09:00"
+  },
+  {
+   "ticker": "MU",
+   "name": "마이크론",
+   "kind": "move",
+   "level": "warn",
+   "msg": "마이크론 -5.4% 급락 · 수급·심리성(약) 추정",
+   "price": 929.6500244140625,
+   "chg_1d": -5.449381845450185,
+   "time": "2026-10-30T03:55+09:00"
+  },
+  {
    "ticker": "000660.KS",
    "name": "SK하이닉스",
    "kind": "setup_turn",
@@ -861,5 +901,5 @@
    "time": "2026-10-16T16:01+09:00"
   }
  ],
- "updated": "2026-10-29T20:41+09:00"
+ "updated": "2026-10-30T03:55+09:00"
 }
