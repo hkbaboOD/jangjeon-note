@@ -3,7 +3,7 @@
   "v": {
    "0q": {
     "current": 1.97891,
-    "7daysAgo": 1.97842,
+    "7daysAgo": 1.97817,
     "30daysAgo": 1.97754,
     "60daysAgo": 1.97656,
     "90daysAgo": 2.01204,
@@ -11,67 +11,67 @@
    },
    "+1q": {
     "current": 2.89631,
-    "7daysAgo": 2.90188,
+    "7daysAgo": 2.89774,
     "30daysAgo": 2.90313,
     "60daysAgo": 2.90859,
-    "90daysAgo": 2.96966,
+    "90daysAgo": 2.97326,
     "currency": null
    },
    "0y": {
-    "current": 8.82706,
-    "7daysAgo": 8.82006,
-    "30daysAgo": 8.81945,
-    "60daysAgo": 8.81249,
+    "current": 8.83476,
+    "7daysAgo": 8.82793,
+    "30daysAgo": 8.8242,
+    "60daysAgo": 8.81768,
     "90daysAgo": 8.7615,
     "currency": null
    },
    "+1y": {
-    "current": 9.5552,
-    "7daysAgo": 9.5706,
-    "30daysAgo": 9.57829,
-    "60daysAgo": 9.53127,
+    "current": 9.5758,
+    "7daysAgo": 9.58385,
+    "30daysAgo": 9.59815,
+    "60daysAgo": 9.5528,
     "90daysAgo": 9.71808,
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:20.552264"
+  "_fetched": "2026-10-29T01:14:22.471980"
  },
  "MSFT": {
   "v": {
    "0q": {
-    "current": 4.72072,
-    "7daysAgo": 4.71837,
-    "30daysAgo": 4.72455,
-    "60daysAgo": 4.72455,
-    "90daysAgo": 4.61379,
+    "current": 4.81705,
+    "7daysAgo": 4.81562,
+    "30daysAgo": 4.82158,
+    "60daysAgo": 4.82878,
+    "90daysAgo": 4.77689,
     "currency": null
    },
    "+1q": {
-    "current": 4.81705,
-    "7daysAgo": 4.82101,
-    "30daysAgo": 4.82158,
-    "60daysAgo": 4.82878,
-    "90daysAgo": 4.78249,
+    "current": 4.89207,
+    "7daysAgo": 4.88699,
+    "30daysAgo": 4.88963,
+    "60daysAgo": 4.88323,
+    "90daysAgo": 4.86303,
     "currency": null
    },
    "0y": {
     "current": 19.75986,
-    "7daysAgo": 19.77839,
+    "7daysAgo": 19.76251,
     "30daysAgo": 19.75972,
     "60daysAgo": 19.75306,
-    "90daysAgo": 19.391,
+    "90daysAgo": 19.37878,
     "currency": null
    },
    "+1y": {
     "current": 23.68972,
-    "7daysAgo": 23.72118,
+    "7daysAgo": 23.69881,
     "30daysAgo": 23.67588,
     "60daysAgo": 23.57328,
     "90daysAgo": 22.59043,
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:20.926275"
+  "_fetched": "2026-10-29T01:14:22.803586"
  },
  "NVDA": {
   "v": {
@@ -79,7 +79,7 @@
     "current": 2.47325,
     "7daysAgo": 2.47325,
     "30daysAgo": 2.47356,
-    "60daysAgo": 2.42943,
+    "60daysAgo": 2.46864,
     "90daysAgo": 2.34245,
     "currency": null
    },
@@ -87,7 +87,7 @@
     "current": 2.74622,
     "7daysAgo": 2.74622,
     "30daysAgo": 2.74295,
-    "60daysAgo": 2.7349,
+    "60daysAgo": 2.74157,
     "90daysAgo": 2.65454,
     "currency": null
    },
@@ -95,7 +95,7 @@
     "current": 9.31242,
     "7daysAgo": 9.31242,
     "30daysAgo": 9.30713,
-    "60daysAgo": 9.2471,
+    "60daysAgo": 9.28024,
     "90daysAgo": 8.95389,
     "currency": null
    },
@@ -103,123 +103,123 @@
     "current": 15.9146,
     "7daysAgo": 15.9146,
     "30daysAgo": 15.68263,
-    "60daysAgo": 14.09032,
+    "60daysAgo": 15.23752,
     "90daysAgo": 12.81483,
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:21.304482"
+  "_fetched": "2026-10-29T01:14:23.106827"
  },
  "GOOGL": {
   "v": {
    "0q": {
-    "current": 3.00299,
-    "7daysAgo": 3.00004,
-    "30daysAgo": 3.01896,
-    "60daysAgo": 3.00777,
-    "90daysAgo": 3.00113,
+    "current": 3.34748,
+    "7daysAgo": 3.34592,
+    "30daysAgo": 3.34037,
+    "60daysAgo": 3.33268,
+    "90daysAgo": 3.33261,
     "currency": null
    },
    "+1q": {
-    "current": 3.34261,
-    "7daysAgo": 3.33792,
-    "30daysAgo": 3.34037,
-    "60daysAgo": 3.33909,
-    "90daysAgo": 3.33275,
+    "current": 3.41786,
+    "7daysAgo": 3.39722,
+    "30daysAgo": 3.4211,
+    "60daysAgo": 3.40915,
+    "90daysAgo": 3.401,
     "currency": null
    },
    "0y": {
-    "current": 20.59556,
-    "7daysAgo": 20.5882,
+    "current": 20.60216,
+    "7daysAgo": 20.60046,
     "30daysAgo": 20.62484,
-    "60daysAgo": 20.60434,
-    "90daysAgo": 20.56255,
+    "60daysAgo": 20.60283,
+    "90daysAgo": 20.58642,
     "currency": null
    },
    "+1y": {
-    "current": 15.11603,
-    "7daysAgo": 15.07611,
+    "current": 15.16719,
+    "7daysAgo": 15.14315,
     "30daysAgo": 14.9221,
-    "60daysAgo": 14.83929,
-    "90daysAgo": 14.74587,
+    "60daysAgo": 14.85475,
+    "90daysAgo": 14.76431,
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:21.674535"
+  "_fetched": "2026-10-29T01:14:23.407702"
  },
  "AMZN": {
   "v": {
    "0q": {
-    "current": 1.95857,
-    "7daysAgo": 1.9539,
+    "current": 1.95944,
+    "7daysAgo": 1.95659,
     "30daysAgo": 1.94095,
     "60daysAgo": 1.95221,
-    "90daysAgo": 1.91266,
+    "90daysAgo": 1.91799,
     "currency": null
    },
    "+1q": {
-    "current": 2.44682,
-    "7daysAgo": 2.44323,
+    "current": 2.45589,
+    "7daysAgo": 2.44778,
     "30daysAgo": 2.43264,
     "60daysAgo": 2.44116,
-    "90daysAgo": 2.39298,
+    "90daysAgo": 2.39889,
     "currency": null
    },
    "0y": {
-    "current": 12.91407,
-    "7daysAgo": 12.90474,
+    "current": 12.92204,
+    "7daysAgo": 12.91076,
     "30daysAgo": 12.88672,
     "60daysAgo": 12.82461,
-    "90daysAgo": 8.77889,
+    "90daysAgo": 8.78872,
     "currency": null
    },
    "+1y": {
-    "current": 10.54625,
-    "7daysAgo": 10.5655,
+    "current": 10.55268,
+    "7daysAgo": 10.5713,
     "30daysAgo": 10.51844,
     "60daysAgo": 10.50823,
-    "90daysAgo": 10.06198,
+    "90daysAgo": 10.07903,
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:22.044751"
+  "_fetched": "2026-10-29T01:14:23.742344"
  },
  "META": {
   "v": {
    "0q": {
-    "current": 8.34127,
-    "7daysAgo": 8.27679,
+    "current": 8.34477,
+    "7daysAgo": 8.27562,
     "30daysAgo": 8.2675,
     "60daysAgo": 8.22325,
-    "90daysAgo": 8.48848,
+    "90daysAgo": 8.30436,
     "currency": null
    },
    "+1q": {
-    "current": 7.60723,
+    "current": 7.60281,
     "7daysAgo": 7.86446,
     "30daysAgo": 7.82547,
     "60daysAgo": 7.77755,
-    "90daysAgo": 8.3343,
+    "90daysAgo": 8.22459,
     "currency": null
    },
    "0y": {
-    "current": 29.1661,
-    "7daysAgo": 30.46424,
+    "current": 29.11265,
+    "7daysAgo": 30.40588,
     "30daysAgo": 31.16832,
     "60daysAgo": 31.37308,
-    "90daysAgo": 33.04684,
+    "90daysAgo": 31.93383,
     "currency": null
    },
    "+1y": {
-    "current": 33.97029,
-    "7daysAgo": 33.82523,
+    "current": 33.96154,
+    "7daysAgo": 33.76097,
     "30daysAgo": 34.06806,
     "60daysAgo": 33.94621,
-    "90daysAgo": 35.09669,
+    "90daysAgo": 34.98042,
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:22.424577"
+  "_fetched": "2026-10-29T01:14:24.094135"
  },
  "AVGO": {
   "v": {
@@ -256,7 +256,7 @@
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:22.796678"
+  "_fetched": "2026-10-29T01:14:24.432659"
  },
  "TSM": {
   "v": {
@@ -293,14 +293,14 @@
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:23.164856"
+  "_fetched": "2026-10-29T01:14:24.735759"
  },
  "MU": {
   "v": {
    "0q": {
     "current": 38.29128,
     "7daysAgo": 38.27861,
-    "30daysAgo": 35.59407,
+    "30daysAgo": 35.52375,
     "60daysAgo": 34.89147,
     "90daysAgo": 34.87982,
     "currency": null
@@ -308,7 +308,7 @@
    "+1q": {
     "current": 42.24979,
     "7daysAgo": 42.24048,
-    "30daysAgo": 38.48743,
+    "30daysAgo": 38.46609,
     "60daysAgo": 37.76854,
     "90daysAgo": 37.71849,
     "currency": null
@@ -316,7 +316,7 @@
    "0y": {
     "current": 176.58401,
     "7daysAgo": 176.54659,
-    "30daysAgo": 159.66069,
+    "30daysAgo": 160.04182,
     "60daysAgo": 156.24937,
     "90daysAgo": 153.86687,
     "currency": null
@@ -324,50 +324,50 @@
    "+1y": {
     "current": 206.89381,
     "7daysAgo": 206.89381,
-    "30daysAgo": 179.30592,
+    "30daysAgo": 179.51343,
     "60daysAgo": 171.02492,
     "90daysAgo": 162.94437,
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:23.545540"
+  "_fetched": "2026-10-29T01:14:25.038621"
  },
  "AMD": {
   "v": {
    "0q": {
-    "current": 1.93464,
-    "7daysAgo": 1.93439,
+    "current": 1.93659,
+    "7daysAgo": 1.93463,
     "30daysAgo": 1.92579,
     "60daysAgo": 1.92527,
     "90daysAgo": 1.85237,
     "currency": null
    },
    "+1q": {
-    "current": 2.64729,
-    "7daysAgo": 2.64704,
+    "current": 2.65893,
+    "7daysAgo": 2.65332,
     "30daysAgo": 2.65183,
     "60daysAgo": 2.65132,
     "90daysAgo": 2.63781,
     "currency": null
    },
    "0y": {
-    "current": 7.58843,
-    "7daysAgo": 7.58823,
-    "30daysAgo": 7.57578,
-    "60daysAgo": 7.55174,
+    "current": 7.60715,
+    "7daysAgo": 7.60069,
+    "30daysAgo": 7.58778,
+    "60daysAgo": 7.56347,
     "90daysAgo": 7.43799,
     "currency": null
    },
    "+1y": {
-    "current": 15.75581,
-    "7daysAgo": 15.76209,
+    "current": 15.84721,
+    "7daysAgo": 15.76289,
     "30daysAgo": 15.57829,
     "60daysAgo": 15.32884,
     "90daysAgo": 13.77774,
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:23.914448"
+  "_fetched": "2026-10-29T01:14:25.336568"
  },
  "QCOM": {
   "v": {
@@ -404,7 +404,7 @@
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:24.289375"
+  "_fetched": "2026-10-29T01:14:25.678059"
  },
  "INTC": {
   "v": {
@@ -441,7 +441,7 @@
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:24.663623"
+  "_fetched": "2026-10-29T01:14:25.991587"
  },
  "ASML": {
   "v": {
@@ -478,15 +478,15 @@
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:25.103932"
+  "_fetched": "2026-10-29T01:14:26.291602"
  },
  "AMAT": {
   "v": {
    "0q": {
     "current": 4.05576,
-    "7daysAgo": 4.05592,
+    "7daysAgo": 4.05576,
     "30daysAgo": 4.06032,
-    "60daysAgo": 4.06075,
+    "60daysAgo": 4.06032,
     "90daysAgo": 3.63515,
     "currency": null
    },
@@ -501,27 +501,27 @@
    "0y": {
     "current": 12.78556,
     "7daysAgo": 12.78556,
-    "30daysAgo": 12.79441,
-    "60daysAgo": 12.79456,
+    "30daysAgo": 12.7891,
+    "60daysAgo": 12.79441,
     "90daysAgo": 12.27733,
     "currency": null
    },
    "+1y": {
     "current": 18.49094,
-    "7daysAgo": 18.45665,
-    "30daysAgo": 18.45479,
-    "60daysAgo": 18.39387,
+    "7daysAgo": 18.49094,
+    "30daysAgo": 18.4498,
+    "60daysAgo": 18.45829,
     "90daysAgo": 16.90444,
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:25.474330"
+  "_fetched": "2026-10-29T01:14:26.593088"
  },
  "LRCX": {
   "v": {
    "0q": {
     "current": 2.34922,
-    "7daysAgo": 2.31167,
+    "7daysAgo": 2.3158,
     "30daysAgo": 2.30683,
     "60daysAgo": 2.30683,
     "90daysAgo": 1.9973,
@@ -529,7 +529,7 @@
    },
    "+1q": {
     "current": 2.47891,
-    "7daysAgo": 2.42265,
+    "7daysAgo": 2.42746,
     "30daysAgo": 2.41856,
     "60daysAgo": 2.41869,
     "90daysAgo": 2.13997,
@@ -537,7 +537,7 @@
    },
    "0y": {
     "current": 9.62799,
-    "7daysAgo": 9.47755,
+    "7daysAgo": 9.48746,
     "30daysAgo": 9.46781,
     "60daysAgo": 9.45969,
     "90daysAgo": 8.21645,
@@ -545,31 +545,31 @@
    },
    "+1y": {
     "current": 12.15311,
-    "7daysAgo": 11.87792,
+    "7daysAgo": 11.91272,
     "30daysAgo": 11.73954,
     "60daysAgo": 11.55714,
     "90daysAgo": 10.15695,
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:25.839074"
+  "_fetched": "2026-10-29T01:14:26.897036"
  },
  "KLAC": {
   "v": {
    "0q": {
-    "current": 1.17822,
-    "7daysAgo": 1.17822,
-    "30daysAgo": 1.17852,
-    "60daysAgo": 1.17852,
-    "90daysAgo": 1.13373,
-    "currency": null
-   },
-   "+1q": {
     "current": 1.35935,
     "7daysAgo": 1.35935,
     "30daysAgo": 1.36058,
     "60daysAgo": 1.36058,
-    "90daysAgo": 1.29411,
+    "90daysAgo": 1.31185,
+    "currency": null
+   },
+   "+1q": {
+    "current": 1.43424,
+    "7daysAgo": 1.43424,
+    "30daysAgo": 1.43197,
+    "60daysAgo": 1.43197,
+    "90daysAgo": 1.39552,
     "currency": null
    },
    "0y": {
@@ -577,28 +577,28 @@
     "7daysAgo": 5.46439,
     "30daysAgo": 5.4548,
     "60daysAgo": 5.4493,
-    "90daysAgo": 5.17378,
+    "90daysAgo": 5.30454,
     "currency": null
    },
    "+1y": {
     "current": 6.74039,
     "7daysAgo": 6.74039,
     "30daysAgo": 6.70539,
-    "60daysAgo": 6.60384,
-    "90daysAgo": 6.27751,
+    "60daysAgo": 6.67484,
+    "90daysAgo": 6.46379,
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:26.208466"
+  "_fetched": "2026-10-29T01:14:27.194587"
  },
  "ADBE": {
   "v": {
    "0q": {
     "current": 6.32965,
-    "7daysAgo": 6.33138,
-    "30daysAgo": 6.33069,
+    "7daysAgo": 6.32965,
+    "30daysAgo": 6.33138,
     "60daysAgo": 6.31791,
-    "90daysAgo": 6.31783,
+    "90daysAgo": 6.31791,
     "currency": null
    },
    "+1q": {
@@ -611,22 +611,22 @@
    },
    "0y": {
     "current": 24.47602,
-    "7daysAgo": 24.39502,
-    "30daysAgo": 24.38866,
+    "7daysAgo": 24.47602,
+    "30daysAgo": 24.39502,
     "60daysAgo": 24.32585,
-    "90daysAgo": 24.32674,
+    "90daysAgo": 24.32209,
     "currency": null
    },
    "+1y": {
     "current": 27.50756,
-    "7daysAgo": 27.53806,
-    "30daysAgo": 27.53217,
-    "60daysAgo": 27.35982,
-    "90daysAgo": 27.38162,
+    "7daysAgo": 27.50756,
+    "30daysAgo": 27.53806,
+    "60daysAgo": 27.35649,
+    "90daysAgo": 27.34924,
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:26.577229"
+  "_fetched": "2026-10-29T01:14:27.504859"
  },
  "CRM": {
   "v": {
@@ -634,7 +634,7 @@
     "current": 3.4463,
     "7daysAgo": 3.44653,
     "30daysAgo": 3.4463,
-    "60daysAgo": 3.36867,
+    "60daysAgo": 3.42955,
     "90daysAgo": 3.36353,
     "currency": null
    },
@@ -642,7 +642,7 @@
     "current": 3.55693,
     "7daysAgo": 3.55791,
     "30daysAgo": 3.5562,
-    "60daysAgo": 3.63121,
+    "60daysAgo": 3.54366,
     "90daysAgo": 3.63633,
     "currency": null
    },
@@ -650,20 +650,20 @@
     "current": 16.75484,
     "7daysAgo": 16.7558,
     "30daysAgo": 16.75532,
-    "60daysAgo": 14.13597,
+    "60daysAgo": 16.39813,
     "90daysAgo": 14.13332,
     "currency": null
    },
    "+1y": {
     "current": 16.01523,
     "7daysAgo": 16.02297,
-    "30daysAgo": 16.00495,
-    "60daysAgo": 15.51821,
+    "30daysAgo": 16.00674,
+    "60daysAgo": 15.8178,
     "90daysAgo": 15.51229,
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:26.949050"
+  "_fetched": "2026-10-29T01:14:27.804171"
  },
  "ORCL": {
   "v": {
@@ -700,7 +700,7 @@
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:27.337862"
+  "_fetched": "2026-10-29T01:14:28.115657"
  },
  "CSCO": {
   "v": {
@@ -730,14 +730,14 @@
    },
    "+1y": {
     "current": 5.62203,
-    "7daysAgo": 5.62092,
-    "30daysAgo": 5.60226,
-    "60daysAgo": 5.58251,
-    "90daysAgo": 5.27766,
+    "7daysAgo": 5.62203,
+    "30daysAgo": 5.62188,
+    "60daysAgo": 5.5977,
+    "90daysAgo": 5.2776,
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:27.710138"
+  "_fetched": "2026-10-29T01:14:28.423267"
  },
  "IBM": {
   "v": {
@@ -746,7 +746,7 @@
     "7daysAgo": 4.61311,
     "30daysAgo": 4.61512,
     "60daysAgo": 4.60169,
-    "90daysAgo": 4.61011,
+    "90daysAgo": 4.60169,
     "currency": null
    },
    "+1q": {
@@ -762,7 +762,7 @@
     "7daysAgo": 12.31137,
     "30daysAgo": 12.31036,
     "60daysAgo": 12.32077,
-    "90daysAgo": 12.32254,
+    "90daysAgo": 12.3266,
     "currency": null
    },
    "+1y": {
@@ -770,20 +770,20 @@
     "7daysAgo": 13.15008,
     "30daysAgo": 13.14773,
     "60daysAgo": 13.16241,
-    "90daysAgo": 13.19449,
+    "90daysAgo": 13.17491,
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:28.081048"
+  "_fetched": "2026-10-29T01:14:28.756163"
  },
  "TXN": {
   "v": {
    "0q": {
     "current": 2.62037,
-    "7daysAgo": 2.28485,
+    "7daysAgo": 2.28633,
     "30daysAgo": 2.28002,
     "60daysAgo": 2.28002,
-    "90daysAgo": 2.27959,
+    "90daysAgo": 2.28002,
     "currency": null
    },
    "+1q": {
@@ -796,22 +796,22 @@
    },
    "0y": {
     "current": 9.06021,
-    "7daysAgo": 8.51695,
+    "7daysAgo": 8.53003,
     "30daysAgo": 8.50803,
     "60daysAgo": 8.50803,
-    "90daysAgo": 8.50146,
+    "90daysAgo": 8.50212,
     "currency": null
    },
    "+1y": {
     "current": 11.55494,
-    "7daysAgo": 10.18324,
+    "7daysAgo": 10.1894,
     "30daysAgo": 10.1005,
     "60daysAgo": 10.1005,
-    "90daysAgo": 10.03249,
+    "90daysAgo": 10.03407,
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:28.448870"
+  "_fetched": "2026-10-29T01:14:29.068049"
  },
  "JPM": {
   "v": {
@@ -848,7 +848,7 @@
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:28.824086"
+  "_fetched": "2026-10-29T01:14:29.374636"
  },
  "BAC": {
   "v": {
@@ -885,7 +885,7 @@
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:29.189698"
+  "_fetched": "2026-10-29T01:14:29.680653"
  },
  "WFC": {
   "v": {
@@ -922,7 +922,7 @@
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:29.552858"
+  "_fetched": "2026-10-29T01:14:29.988954"
  },
  "GS": {
   "v": {
@@ -959,7 +959,7 @@
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:29.920999"
+  "_fetched": "2026-10-29T01:14:30.338888"
  },
  "MS": {
   "v": {
@@ -996,58 +996,58 @@
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:30.293232"
+  "_fetched": "2026-10-29T01:14:30.665393"
  },
  "V": {
   "v": {
    "0q": {
-    "current": 3.62057,
+    "current": 3.63021,
     "7daysAgo": 3.62417,
-    "30daysAgo": 3.6281,
+    "30daysAgo": 3.62739,
     "60daysAgo": 3.6281,
-    "90daysAgo": 3.60156,
+    "90daysAgo": 3.62553,
     "currency": null
    },
    "+1q": {
-    "current": 3.66353,
-    "7daysAgo": 3.66593,
-    "30daysAgo": 3.67377,
+    "current": 3.6393,
+    "7daysAgo": 3.66553,
+    "30daysAgo": 3.67413,
     "60daysAgo": 3.67377,
-    "90daysAgo": 3.65199,
+    "90daysAgo": 3.67284,
     "currency": null
    },
    "0y": {
-    "current": 15.02263,
-    "7daysAgo": 15.00888,
+    "current": 15.03547,
+    "7daysAgo": 15.02288,
     "30daysAgo": 15.0043,
     "60daysAgo": 15.0043,
-    "90daysAgo": 14.87416,
+    "90daysAgo": 14.94522,
     "currency": null
    },
    "+1y": {
-    "current": 17.04383,
-    "7daysAgo": 17.04311,
+    "current": 17.14223,
+    "7daysAgo": 17.04383,
     "30daysAgo": 17.03797,
     "60daysAgo": 17.03797,
-    "90daysAgo": 16.80578,
+    "90daysAgo": 16.92726,
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:30.658058"
+  "_fetched": "2026-10-29T01:14:30.968580"
  },
  "MA": {
   "v": {
    "0q": {
     "current": 5.17079,
-    "7daysAgo": 5.16175,
+    "7daysAgo": 5.16401,
     "30daysAgo": 5.15122,
-    "60daysAgo": 5.15088,
+    "60daysAgo": 5.15122,
     "90daysAgo": 5.10995,
     "currency": null
    },
    "+1q": {
     "current": 5.17694,
-    "7daysAgo": 5.17876,
+    "7daysAgo": 5.17942,
     "30daysAgo": 5.17032,
     "60daysAgo": 5.17032,
     "90daysAgo": 5.20803,
@@ -1055,7 +1055,7 @@
    },
    "0y": {
     "current": 19.95479,
-    "7daysAgo": 19.93952,
+    "7daysAgo": 19.94268,
     "30daysAgo": 19.93029,
     "60daysAgo": 19.92584,
     "90daysAgo": 19.65492,
@@ -1063,51 +1063,51 @@
    },
    "+1y": {
     "current": 23.06942,
-    "7daysAgo": 23.07261,
+    "7daysAgo": 23.06876,
     "30daysAgo": 23.02481,
     "60daysAgo": 23.02581,
     "90daysAgo": 22.79094,
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:31.121693"
+  "_fetched": "2026-10-29T01:14:31.305597"
  },
  "PYPL": {
   "v": {
    "0q": {
-    "current": 1.35318,
+    "current": 1.43491,
     "7daysAgo": 1.34595,
     "30daysAgo": 1.345,
     "60daysAgo": 1.34527,
-    "90daysAgo": 1.34922,
+    "90daysAgo": 1.34724,
     "currency": null
    },
    "+1q": {
-    "current": 1.42541,
-    "7daysAgo": 1.42578,
-    "30daysAgo": 1.43204,
-    "60daysAgo": 1.43358,
-    "90daysAgo": 1.45065,
+    "current": 1.43134,
+    "7daysAgo": 1.42541,
+    "30daysAgo": 1.43246,
+    "60daysAgo": 1.43255,
+    "90daysAgo": 1.43429,
     "currency": null
    },
    "0y": {
-    "current": 5.39033,
-    "7daysAgo": 5.38797,
+    "current": 5.53246,
+    "7daysAgo": 5.38821,
     "30daysAgo": 5.39109,
-    "60daysAgo": 5.38671,
-    "90daysAgo": 5.30653,
+    "60daysAgo": 5.38838,
+    "90daysAgo": 5.37948,
     "currency": null
    },
    "+1y": {
-    "current": 5.77251,
-    "7daysAgo": 5.77717,
+    "current": 5.86767,
+    "7daysAgo": 5.78112,
     "30daysAgo": 5.78532,
-    "60daysAgo": 5.78734,
-    "90daysAgo": 5.74183,
+    "60daysAgo": 5.78827,
+    "90daysAgo": 5.7842,
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:31.489394"
+  "_fetched": "2026-10-29T01:14:31.638252"
  },
  "BRK-B": {
   "v": {
@@ -1144,7 +1144,7 @@
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:31.857341"
+  "_fetched": "2026-10-29T01:14:31.946158"
  },
  "UNH": {
   "v": {
@@ -1181,7 +1181,7 @@
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:32.301991"
+  "_fetched": "2026-10-29T01:14:32.250597"
  },
  "JNJ": {
   "v": {
@@ -1218,7 +1218,7 @@
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:32.678599"
+  "_fetched": "2026-10-29T01:14:32.547348"
  },
  "PFE": {
   "v": {
@@ -1255,12 +1255,12 @@
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:33.050565"
+  "_fetched": "2026-10-29T01:14:32.878038"
  },
  "MRK": {
   "v": {
    "0q": {
-    "current": 2.09056,
+    "current": 2.08726,
     "7daysAgo": 2.08893,
     "30daysAgo": 2.20569,
     "60daysAgo": 2.21014,
@@ -1268,7 +1268,7 @@
     "currency": null
    },
    "+1q": {
-    "current": 1.94871,
+    "current": 1.94922,
     "7daysAgo": 1.95704,
     "30daysAgo": 1.94721,
     "60daysAgo": 1.95763,
@@ -1276,7 +1276,7 @@
     "currency": null
    },
    "0y": {
-    "current": 2.65226,
+    "current": 2.65195,
     "7daysAgo": 2.65714,
     "30daysAgo": 2.74075,
     "60daysAgo": 2.7474,
@@ -1284,7 +1284,7 @@
     "currency": null
    },
    "+1y": {
-    "current": 9.23429,
+    "current": 9.23408,
     "7daysAgo": 9.26349,
     "30daysAgo": 9.53304,
     "60daysAgo": 9.54286,
@@ -1292,7 +1292,7 @@
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:33.417266"
+  "_fetched": "2026-10-29T01:14:33.212802"
  },
  "ABBV": {
   "v": {
@@ -1301,15 +1301,15 @@
     "7daysAgo": 3.78674,
     "30daysAgo": 3.84451,
     "60daysAgo": 3.84425,
-    "90daysAgo": 3.84939,
+    "90daysAgo": 3.84856,
     "currency": null
    },
    "+1q": {
     "current": 3.88632,
-    "7daysAgo": 3.88238,
+    "7daysAgo": 3.87792,
     "30daysAgo": 3.86785,
     "60daysAgo": 3.8671,
-    "90daysAgo": 4.0016,
+    "90daysAgo": 4.00142,
     "currency": null
    },
    "0y": {
@@ -1317,19 +1317,19 @@
     "7daysAgo": 13.95835,
     "30daysAgo": 14.0084,
     "60daysAgo": 14.00848,
-    "90daysAgo": 14.1396,
+    "90daysAgo": 14.13764,
     "currency": null
    },
    "+1y": {
     "current": 16.20158,
-    "7daysAgo": 16.21603,
+    "7daysAgo": 16.20459,
     "30daysAgo": 16.26772,
     "60daysAgo": 16.28202,
-    "90daysAgo": 16.33109,
+    "90daysAgo": 16.3335,
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:33.791717"
+  "_fetched": "2026-10-29T01:14:33.523929"
  },
  "LLY": {
   "v": {
@@ -1366,7 +1366,7 @@
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:34.170596"
+  "_fetched": "2026-10-29T01:14:33.826769"
  },
  "AMGN": {
   "v": {
@@ -1375,7 +1375,7 @@
     "7daysAgo": 5.76291,
     "30daysAgo": 5.78099,
     "60daysAgo": 5.78099,
-    "90daysAgo": 5.7428,
+    "90daysAgo": 5.75962,
     "currency": null
    },
    "+1q": {
@@ -1383,7 +1383,7 @@
     "7daysAgo": 5.77594,
     "30daysAgo": 5.80226,
     "60daysAgo": 5.80226,
-    "90daysAgo": 5.76636,
+    "90daysAgo": 5.76693,
     "currency": null
    },
    "0y": {
@@ -1391,7 +1391,7 @@
     "7daysAgo": 23.01701,
     "30daysAgo": 23.05565,
     "60daysAgo": 23.04147,
-    "90daysAgo": 22.33131,
+    "90daysAgo": 22.35162,
     "currency": null
    },
    "+1y": {
@@ -1399,48 +1399,48 @@
     "7daysAgo": 24.49536,
     "30daysAgo": 24.44897,
     "60daysAgo": 24.39759,
-    "90daysAgo": 23.44701,
+    "90daysAgo": 23.43866,
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:34.537719"
+  "_fetched": "2026-10-29T01:14:34.147623"
  },
  "CVS": {
   "v": {
    "0q": {
     "current": 1.65081,
-    "7daysAgo": 1.62851,
-    "30daysAgo": 1.61064,
-    "60daysAgo": 1.63746,
-    "90daysAgo": 1.71305,
+    "7daysAgo": 1.65081,
+    "30daysAgo": 1.62481,
+    "60daysAgo": 1.62837,
+    "90daysAgo": 1.71035,
     "currency": null
    },
    "+1q": {
     "current": 1.24383,
-    "7daysAgo": 1.26618,
-    "30daysAgo": 1.28883,
-    "60daysAgo": 1.28654,
-    "90daysAgo": 1.32909,
+    "7daysAgo": 1.24383,
+    "30daysAgo": 1.26919,
+    "60daysAgo": 1.29427,
+    "90daysAgo": 1.32558,
     "currency": null
    },
    "0y": {
     "current": 8.04287,
-    "7daysAgo": 8.04331,
-    "30daysAgo": 8.02128,
-    "60daysAgo": 7.94807,
-    "90daysAgo": 7.44479,
+    "7daysAgo": 8.04287,
+    "30daysAgo": 8.04331,
+    "60daysAgo": 7.97047,
+    "90daysAgo": 7.45278,
     "currency": null
    },
    "+1y": {
     "current": 8.53519,
-    "7daysAgo": 8.53485,
-    "30daysAgo": 8.52459,
-    "60daysAgo": 8.50136,
-    "90daysAgo": 8.41188,
+    "7daysAgo": 8.53519,
+    "30daysAgo": 8.52869,
+    "60daysAgo": 8.50713,
+    "90daysAgo": 8.42042,
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:34.978089"
+  "_fetched": "2026-10-29T01:14:34.449930"
  },
  "XOM": {
   "v": {
@@ -1477,7 +1477,7 @@
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:35.350069"
+  "_fetched": "2026-10-29T01:14:34.828160"
  },
  "CVX": {
   "v": {
@@ -1514,7 +1514,7 @@
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:35.723740"
+  "_fetched": "2026-10-29T01:14:35.127935"
  },
  "COP": {
   "v": {
@@ -1551,7 +1551,7 @@
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:36.098323"
+  "_fetched": "2026-10-29T01:14:35.436902"
  },
  "SLB": {
   "v": {
@@ -1588,7 +1588,7 @@
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:36.478020"
+  "_fetched": "2026-10-29T01:14:35.740366"
  },
  "NEE": {
   "v": {
@@ -1625,7 +1625,7 @@
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:36.847655"
+  "_fetched": "2026-10-29T01:14:36.041955"
  },
  "DUK": {
   "v": {
@@ -1662,7 +1662,7 @@
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:37.218491"
+  "_fetched": "2026-10-29T01:14:36.372061"
  },
  "SO": {
   "v": {
@@ -1699,7 +1699,7 @@
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:37.593465"
+  "_fetched": "2026-10-29T01:14:36.712804"
  },
  "PG": {
   "v": {
@@ -1720,67 +1720,67 @@
     "currency": null
    },
    "0y": {
-    "current": 6.97187,
+    "current": 6.97687,
     "7daysAgo": 6.97603,
-    "30daysAgo": 6.97974,
+    "30daysAgo": 6.97995,
     "60daysAgo": 6.98849,
-    "90daysAgo": 7.035,
+    "90daysAgo": 7.02274,
     "currency": null
    },
    "+1y": {
     "current": 7.40102,
     "7daysAgo": 7.39145,
-    "30daysAgo": 7.3998,
+    "30daysAgo": 7.39995,
     "60daysAgo": 7.39849,
-    "90daysAgo": 7.41603,
+    "90daysAgo": 7.40192,
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:38.038684"
+  "_fetched": "2026-10-29T01:14:37.014161"
  },
  "KO": {
   "v": {
    "0q": {
-    "current": 0.60098,
+    "current": 0.60097,
     "7daysAgo": 0.59541,
     "30daysAgo": 0.59561,
     "60daysAgo": 0.59561,
-    "90daysAgo": 0.59506,
+    "90daysAgo": 0.59561,
     "currency": null
    },
    "+1q": {
-    "current": 0.8938,
+    "current": 0.89071,
     "7daysAgo": 0.8938,
     "30daysAgo": 0.89551,
     "60daysAgo": 0.89628,
-    "90daysAgo": 0.89503,
+    "90daysAgo": 0.89628,
     "currency": null
    },
    "0y": {
-    "current": 3.31632,
+    "current": 3.33284,
     "7daysAgo": 3.30391,
-    "30daysAgo": 3.30148,
+    "30daysAgo": 3.30149,
     "60daysAgo": 3.30148,
-    "90daysAgo": 3.29598,
+    "90daysAgo": 3.30143,
     "currency": null
    },
    "+1y": {
-    "current": 3.52666,
+    "current": 3.52418,
     "7daysAgo": 3.52426,
-    "30daysAgo": 3.52638,
+    "30daysAgo": 3.52639,
     "60daysAgo": 3.52638,
-    "90daysAgo": 3.52158,
+    "90daysAgo": 3.52642,
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:38.404152"
+  "_fetched": "2026-10-29T01:14:37.319603"
  },
  "PEP": {
   "v": {
    "0q": {
     "current": 2.23796,
-    "7daysAgo": 2.23901,
-    "30daysAgo": 2.43651,
+    "7daysAgo": 2.23796,
+    "30daysAgo": 2.43418,
     "60daysAgo": 2.43651,
     "90daysAgo": 2.43651,
     "currency": null
@@ -1795,39 +1795,39 @@
    },
    "0y": {
     "current": 8.39504,
-    "7daysAgo": 8.39993,
-    "30daysAgo": 8.55878,
+    "7daysAgo": 8.39504,
+    "30daysAgo": 8.55602,
     "60daysAgo": 8.55878,
-    "90daysAgo": 8.56378,
+    "90daysAgo": 8.55878,
     "currency": null
    },
    "+1y": {
     "current": 8.63872,
-    "7daysAgo": 8.71447,
-    "30daysAgo": 8.97539,
+    "7daysAgo": 8.63872,
+    "30daysAgo": 8.96089,
     "60daysAgo": 8.97844,
-    "90daysAgo": 8.9867,
+    "90daysAgo": 8.97844,
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:38.774085"
+  "_fetched": "2026-10-29T01:14:37.653058"
  },
  "WMT": {
   "v": {
    "0q": {
     "current": 0.63582,
-    "7daysAgo": 0.63529,
+    "7daysAgo": 0.63582,
     "30daysAgo": 0.63531,
-    "60daysAgo": 0.63704,
-    "90daysAgo": 0.68398,
+    "60daysAgo": 0.63485,
+    "90daysAgo": 0.68367,
     "currency": null
    },
    "+1q": {
     "current": 0.78616,
-    "7daysAgo": 0.78596,
+    "7daysAgo": 0.78616,
     "30daysAgo": 0.78481,
-    "60daysAgo": 0.7859,
-    "90daysAgo": 0.81441,
+    "60daysAgo": 0.7834,
+    "90daysAgo": 0.8141,
     "currency": null
    },
    "0y": {
@@ -1847,44 +1847,44 @@
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:39.221701"
+  "_fetched": "2026-10-29T01:14:37.974706"
  },
  "COST": {
   "v": {
    "0q": {
     "current": 4.90973,
-    "7daysAgo": 4.90889,
-    "30daysAgo": 4.85696,
-    "60daysAgo": 4.86506,
+    "7daysAgo": 4.90973,
+    "30daysAgo": 4.89445,
+    "60daysAgo": 4.86562,
     "90daysAgo": 4.86082,
     "currency": null
    },
    "+1q": {
     "current": 5.11844,
-    "7daysAgo": 5.11796,
-    "30daysAgo": 5.08653,
-    "60daysAgo": 5.10325,
+    "7daysAgo": 5.11844,
+    "30daysAgo": 5.11016,
+    "60daysAgo": 5.1038,
     "90daysAgo": 5.10149,
     "currency": null
    },
    "0y": {
     "current": 22.80827,
-    "7daysAgo": 22.80379,
-    "30daysAgo": 22.66559,
-    "60daysAgo": 22.70401,
+    "7daysAgo": 22.80092,
+    "30daysAgo": 22.76141,
+    "60daysAgo": 22.70548,
     "90daysAgo": 22.69137,
     "currency": null
    },
    "+1y": {
     "current": 25.07598,
-    "7daysAgo": 25.07363,
-    "30daysAgo": 24.8772,
-    "60daysAgo": 24.9595,
+    "7daysAgo": 25.06888,
+    "30daysAgo": 24.94565,
+    "60daysAgo": 24.96189,
     "90daysAgo": 24.93409,
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:39.590103"
+  "_fetched": "2026-10-29T01:14:38.281390"
  },
  "HD": {
   "v": {
@@ -1921,7 +1921,7 @@
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:39.961267"
+  "_fetched": "2026-10-29T01:14:38.593324"
  },
  "MCD": {
   "v": {
@@ -1958,14 +1958,14 @@
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:40.326504"
+  "_fetched": "2026-10-29T01:14:38.895161"
  },
  "NKE": {
   "v": {
    "0q": {
     "current": 0.36917,
     "7daysAgo": 0.36914,
-    "30daysAgo": 0.51068,
+    "30daysAgo": 0.50589,
     "60daysAgo": 0.52964,
     "90daysAgo": 0.53086,
     "currency": null
@@ -1973,7 +1973,7 @@
    "+1q": {
     "current": 0.25087,
     "7daysAgo": 0.25288,
-    "30daysAgo": 0.41914,
+    "30daysAgo": 0.41349,
     "60daysAgo": 0.43587,
     "90daysAgo": 0.43624,
     "currency": null
@@ -1981,7 +1981,7 @@
    "0y": {
     "current": 1.25006,
     "7daysAgo": 1.24825,
-    "30daysAgo": 1.67808,
+    "30daysAgo": 1.67237,
     "60daysAgo": 1.72321,
     "90daysAgo": 1.73255,
     "currency": null
@@ -1989,50 +1989,50 @@
    "+1y": {
     "current": 1.52604,
     "7daysAgo": 1.55556,
-    "30daysAgo": 2.12859,
+    "30daysAgo": 2.11688,
     "60daysAgo": 2.23717,
     "90daysAgo": 2.25285,
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:40.693882"
+  "_fetched": "2026-10-29T01:14:39.200527"
  },
  "DIS": {
   "v": {
    "0q": {
-    "current": 1.69319,
-    "7daysAgo": 1.68896,
+    "current": 1.69145,
+    "7daysAgo": 1.69319,
     "30daysAgo": 1.68306,
-    "60daysAgo": 1.66275,
-    "90daysAgo": 1.7728,
+    "60daysAgo": 1.67502,
+    "90daysAgo": 1.76513,
     "currency": null
    },
    "+1q": {
-    "current": 1.95612,
-    "7daysAgo": 1.93951,
+    "current": 1.94829,
+    "7daysAgo": 1.95612,
     "30daysAgo": 1.90182,
     "60daysAgo": 1.88606,
-    "90daysAgo": 1.92714,
+    "90daysAgo": 1.91972,
     "currency": null
    },
    "0y": {
-    "current": 6.93292,
-    "7daysAgo": 6.92509,
-    "30daysAgo": 6.92026,
-    "60daysAgo": 6.8913,
-    "90daysAgo": 6.81537,
+    "current": 6.93154,
+    "7daysAgo": 6.92533,
+    "30daysAgo": 6.9206,
+    "60daysAgo": 6.89406,
+    "90daysAgo": 6.80925,
     "currency": null
    },
    "+1y": {
-    "current": 7.49624,
-    "7daysAgo": 7.4714,
-    "30daysAgo": 7.47437,
-    "60daysAgo": 7.44516,
-    "90daysAgo": 7.46879,
+    "current": 7.49504,
+    "7daysAgo": 7.48984,
+    "30daysAgo": 7.47574,
+    "60daysAgo": 7.44849,
+    "90daysAgo": 7.46272,
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:41.132752"
+  "_fetched": "2026-10-29T01:14:39.503572"
  },
  "CAT": {
   "v": {
@@ -2069,7 +2069,7 @@
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:41.501996"
+  "_fetched": "2026-10-29T01:14:39.840154"
  },
  "DE": {
   "v": {
@@ -2106,16 +2106,16 @@
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:41.868392"
+  "_fetched": "2026-10-29T01:14:40.142285"
  },
  "HON": {
   "v": {
    "0q": {
     "current": 2.45287,
-    "7daysAgo": 2.41379,
-    "30daysAgo": 2.43208,
+    "7daysAgo": 2.41442,
+    "30daysAgo": 2.41674,
     "60daysAgo": 2.43393,
-    "90daysAgo": 2.40105,
+    "90daysAgo": 2.43093,
     "currency": null
    },
    "+1q": {
@@ -2128,22 +2128,22 @@
    },
    "0y": {
     "current": 8.44184,
-    "7daysAgo": 8.29891,
+    "7daysAgo": 8.29881,
     "30daysAgo": 8.30152,
     "60daysAgo": 8.3123,
-    "90daysAgo": 8.27979,
+    "90daysAgo": 8.29054,
     "currency": null
    },
    "+1y": {
     "current": 9.85365,
-    "7daysAgo": 9.81581,
-    "30daysAgo": 9.93901,
-    "60daysAgo": 9.99337,
-    "90daysAgo": 9.9338,
+    "7daysAgo": 9.81265,
+    "30daysAgo": 9.89054,
+    "60daysAgo": 10.0026,
+    "90daysAgo": 9.98413,
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:42.240103"
+  "_fetched": "2026-10-29T01:14:40.443849"
  },
  "GE": {
   "v": {
@@ -2152,7 +2152,7 @@
     "7daysAgo": 2.31296,
     "30daysAgo": 2.27468,
     "60daysAgo": 2.24151,
-    "90daysAgo": 2.2413,
+    "90daysAgo": 2.24151,
     "currency": null
    },
    "+1q": {
@@ -2173,14 +2173,14 @@
    },
    "+1y": {
     "current": 9.98384,
-    "7daysAgo": 9.89,
+    "7daysAgo": 9.89021,
     "30daysAgo": 9.74578,
     "60daysAgo": 9.71732,
-    "90daysAgo": 9.74659,
+    "90daysAgo": 9.71732,
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:42.605832"
+  "_fetched": "2026-10-29T01:14:40.742947"
  },
  "LMT": {
   "v": {
@@ -2217,7 +2217,7 @@
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:42.980488"
+  "_fetched": "2026-10-29T01:14:41.045898"
  },
  "RTX": {
   "v": {
@@ -2254,14 +2254,14 @@
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:43.356578"
+  "_fetched": "2026-10-29T01:14:41.350641"
  },
  "NOC": {
   "v": {
    "0q": {
-    "current": 7.94177,
-    "7daysAgo": 7.98501,
-    "30daysAgo": 8.01072,
+    "current": 7.94422,
+    "7daysAgo": 7.9427,
+    "30daysAgo": 8.01538,
     "60daysAgo": 8.00723,
     "90daysAgo": 8.0133,
     "currency": null
@@ -2275,36 +2275,36 @@
     "currency": null
    },
    "0y": {
-    "current": 29.8094,
-    "7daysAgo": 28.98197,
-    "30daysAgo": 28.99613,
+    "current": 29.7979,
+    "7daysAgo": 29.7437,
+    "30daysAgo": 29.00516,
     "60daysAgo": 28.99309,
     "90daysAgo": 28.96324,
     "currency": null
    },
    "+1y": {
-    "current": 30.00401,
-    "7daysAgo": 30.37104,
-    "30daysAgo": 30.44997,
+    "current": 30.00277,
+    "7daysAgo": 30.06052,
+    "30daysAgo": 30.46669,
     "60daysAgo": 30.43997,
     "90daysAgo": 30.36815,
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:43.794420"
+  "_fetched": "2026-10-29T01:14:41.652638"
  },
  "UPS": {
   "v": {
    "0q": {
-    "current": 2.77858,
-    "7daysAgo": 2.74453,
+    "current": 2.7676,
+    "7daysAgo": 2.74781,
     "30daysAgo": 2.74286,
     "60daysAgo": 2.7459,
     "90daysAgo": 2.74344,
     "currency": null
    },
    "+1q": {
-    "current": 1.43273,
+    "current": 1.42652,
     "7daysAgo": 1.45252,
     "30daysAgo": 1.45461,
     "60daysAgo": 1.45604,
@@ -2312,28 +2312,28 @@
     "currency": null
    },
    "0y": {
-    "current": 7.23189,
-    "7daysAgo": 7.20229,
+    "current": 7.27538,
+    "7daysAgo": 7.20336,
     "30daysAgo": 7.20456,
     "60daysAgo": 7.20885,
     "90daysAgo": 7.20885,
     "currency": null
    },
    "+1y": {
-    "current": 8.05708,
-    "7daysAgo": 8.05897,
+    "current": 8.08633,
+    "7daysAgo": 8.05861,
     "30daysAgo": 8.06955,
     "60daysAgo": 8.0749,
     "90daysAgo": 8.0736,
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:44.166899"
+  "_fetched": "2026-10-29T01:14:41.958594"
  },
  "VZ": {
   "v": {
    "0q": {
-    "current": 1.1527,
+    "current": 1.15289,
     "7daysAgo": 1.15751,
     "30daysAgo": 1.15718,
     "60daysAgo": 1.1479,
@@ -2341,7 +2341,7 @@
     "currency": null
    },
    "+1q": {
-    "current": 1.323,
+    "current": 1.32139,
     "7daysAgo": 1.31456,
     "30daysAgo": 1.318,
     "60daysAgo": 1.321,
@@ -2349,7 +2349,7 @@
     "currency": null
    },
    "0y": {
-    "current": 5.06672,
+    "current": 5.06462,
     "7daysAgo": 5.01787,
     "30daysAgo": 5.02564,
     "60daysAgo": 5.01203,
@@ -2357,7 +2357,7 @@
     "currency": null
    },
    "+1y": {
-    "current": 5.30449,
+    "current": 5.30704,
     "7daysAgo": 5.27189,
     "30daysAgo": 5.28059,
     "60daysAgo": 5.28049,
@@ -2365,7 +2365,7 @@
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:44.542570"
+  "_fetched": "2026-10-29T01:14:42.261453"
  },
  "T": {
   "v": {
@@ -2402,7 +2402,7 @@
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:44.932619"
+  "_fetched": "2026-10-29T01:14:42.588915"
  },
  "005930.KS": {
   "v": {
@@ -2439,44 +2439,44 @@
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:45.307979"
+  "_fetched": "2026-10-29T01:14:42.920938"
  },
  "000660.KS": {
   "v": {
    "0q": {
-    "current": 85590.555,
-    "7daysAgo": 85670.06,
-    "30daysAgo": 85670.06,
-    "60daysAgo": 86759.62,
-    "90daysAgo": 89648.375,
+    "current": 118887.59,
+    "7daysAgo": 100119.36,
+    "30daysAgo": 99437.125,
+    "60daysAgo": 100755.336,
+    "90daysAgo": 101588.74,
     "currency": null
    },
    "+1q": {
-    "current": 99612.94,
-    "7daysAgo": 99437.125,
-    "30daysAgo": 99437.125,
-    "60daysAgo": 100755.336,
-    "90daysAgo": 103073.43,
+    "current": 115257.84,
+    "7daysAgo": 106720.27,
+    "30daysAgo": 106031.516,
+    "60daysAgo": 107336.15,
+    "90daysAgo": 107312.195,
     "currency": null
    },
    "0y": {
-    "current": 354500.47,
-    "7daysAgo": 354197.5,
+    "current": 373113.94,
+    "7daysAgo": 354500.47,
     "30daysAgo": 353079.25,
-    "60daysAgo": 353646.8,
-    "90daysAgo": 318225.6,
+    "60daysAgo": 353504.8,
+    "90daysAgo": 344660.56,
     "currency": null
    },
    "+1y": {
-    "current": 467761.1,
-    "7daysAgo": 466735.6,
+    "current": 505086.28,
+    "7daysAgo": 467761.1,
     "30daysAgo": 469469.56,
-    "60daysAgo": 460526.4,
-    "90daysAgo": 451137.5,
+    "60daysAgo": 471097.94,
+    "90daysAgo": 452071.78,
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:45.678872"
+  "_fetched": "2026-10-29T01:14:43.222503"
  },
  "373220.KS": {
   "v": {
@@ -2513,7 +2513,7 @@
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:46.046181"
+  "_fetched": "2026-10-29T01:14:43.521242"
  },
  "207940.KS": {
   "v": {
@@ -2521,8 +2521,8 @@
     "current": 10195.264,
     "7daysAgo": 11766.228,
     "30daysAgo": 11255.587,
-    "60daysAgo": 11159.887,
-    "90daysAgo": 12038.01,
+    "60daysAgo": 11255.587,
+    "90daysAgo": 11255.587,
     "currency": null
    },
    "+1q": {
@@ -2538,7 +2538,7 @@
     "7daysAgo": 40881.99,
     "30daysAgo": 41210.312,
     "60daysAgo": 41273.727,
-    "90daysAgo": 41320.594,
+    "90daysAgo": 41227.01,
     "currency": null
    },
    "+1y": {
@@ -2546,11 +2546,11 @@
     "7daysAgo": 48218.312,
     "30daysAgo": 49296.297,
     "60daysAgo": 49575.19,
-    "90daysAgo": 49258.656,
+    "90daysAgo": 49452.96,
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:46.435817"
+  "_fetched": "2026-10-29T01:14:43.827038"
  },
  "005380.KS": {
   "v": {
@@ -2587,65 +2587,65 @@
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:46.809046"
+  "_fetched": "2026-10-29T01:14:44.132319"
  },
  "000270.KS": {
   "v": {
    "0q": {
     "current": 5181.129,
-    "7daysAgo": 5562.119,
-    "30daysAgo": 5730.5776,
+    "7daysAgo": 5181.129,
+    "30daysAgo": 5665.5835,
     "60daysAgo": 5730.5776,
-    "90daysAgo": 5961.769,
+    "90daysAgo": 5537.441,
     "currency": null
    },
    "+1q": {
     "current": 4482.811,
-    "7daysAgo": 5002.4194,
-    "30daysAgo": 5138.2754,
+    "7daysAgo": 4482.811,
+    "30daysAgo": 5075.279,
     "60daysAgo": 5138.2754,
-    "90daysAgo": 5111.4307,
+    "90daysAgo": 5102.5425,
     "currency": null
    },
    "0y": {
     "current": 20999.549,
-    "7daysAgo": 21432.406,
-    "30daysAgo": 21835.502,
-    "60daysAgo": 21836.553,
-    "90daysAgo": 21831.432,
+    "7daysAgo": 20999.549,
+    "30daysAgo": 21738.531,
+    "60daysAgo": 21847.936,
+    "90daysAgo": 21841.42,
     "currency": null
    },
    "+1y": {
     "current": 22262.89,
-    "7daysAgo": 22841.82,
-    "30daysAgo": 23766.928,
-    "60daysAgo": 23783.305,
-    "90daysAgo": 23766.523,
+    "7daysAgo": 22262.89,
+    "30daysAgo": 23388.172,
+    "60daysAgo": 23808.361,
+    "90daysAgo": 23784.594,
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:47.255001"
+  "_fetched": "2026-10-29T01:14:44.433115"
  },
  "068270.KS": {
   "v": {
    "0q": {
-    "current": 1722.8044,
-    "7daysAgo": 1708.6744,
+    "current": 2144.9426,
+    "7daysAgo": 1722.8044,
     "30daysAgo": 1708.6744,
     "60daysAgo": 1708.6744,
     "90daysAgo": 1800.889,
     "currency": null
    },
    "+1q": {
-    "current": 1277.0,
-    "7daysAgo": 1308.5714,
-    "30daysAgo": 1308.5714,
-    "60daysAgo": 1308.5714,
-    "90daysAgo": 0.0,
+    "current": 1366.13,
+    "7daysAgo": 1321.565,
+    "30daysAgo": 1299.25,
+    "60daysAgo": 1299.25,
+    "90daysAgo": 1299.25,
     "currency": null
    },
    "0y": {
-    "current": 6330.136,
+    "current": 6219.8213,
     "7daysAgo": 6707.7026,
     "30daysAgo": 6543.5137,
     "60daysAgo": 6578.1084,
@@ -2653,7 +2653,7 @@
     "currency": null
    },
    "+1y": {
-    "current": 7625.8184,
+    "current": 7746.0996,
     "7daysAgo": 7613.409,
     "30daysAgo": 7618.268,
     "60daysAgo": 7621.0015,
@@ -2661,7 +2661,7 @@
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:47.634557"
+  "_fetched": "2026-10-29T01:14:44.739150"
  },
  "035420.KS": {
   "v": {
@@ -2698,7 +2698,7 @@
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:48.006306"
+  "_fetched": "2026-10-29T01:14:45.037771"
  },
  "035720.KS": {
   "v": {
@@ -2735,7 +2735,7 @@
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:48.369713"
+  "_fetched": "2026-10-29T01:14:45.335753"
  },
  "105560.KS": {
   "v": {
@@ -2772,12 +2772,12 @@
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:48.741577"
+  "_fetched": "2026-10-29T01:14:45.638124"
  },
  "055550.KS": {
   "v": {
    "0q": {
-    "current": 1605.6711,
+    "current": 1470.9357,
     "7daysAgo": 1492.3511,
     "30daysAgo": 1711.9939,
     "60daysAgo": 1725.3018,
@@ -2785,7 +2785,7 @@
     "currency": null
    },
    "+1q": {
-    "current": 3581.4795,
+    "current": 3564.9795,
     "7daysAgo": 3699.2896,
     "30daysAgo": 3726.4424,
     "60daysAgo": 3726.4424,
@@ -2793,7 +2793,7 @@
     "currency": null
    },
    "0y": {
-    "current": 12426.954,
+    "current": 12311.028,
     "7daysAgo": 12436.071,
     "30daysAgo": 12578.27,
     "60daysAgo": 12611.499,
@@ -2801,7 +2801,7 @@
     "currency": null
    },
    "+1y": {
-    "current": 13591.371,
+    "current": 13257.589,
     "7daysAgo": 13607.45,
     "30daysAgo": 13762.956,
     "60daysAgo": 13750.963,
@@ -2809,7 +2809,7 @@
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:49.179554"
+  "_fetched": "2026-10-29T01:14:45.969213"
  },
  "086790.KS": {
   "v": {
@@ -2846,7 +2846,7 @@
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:49.545563"
+  "_fetched": "2026-10-29T01:14:46.275175"
  },
  "316140.KS": {
   "v": {
@@ -2883,44 +2883,44 @@
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:49.912470"
+  "_fetched": "2026-10-29T01:14:46.576751"
  },
  "005490.KS": {
   "v": {
    "0q": {
     "current": 5994.49,
-    "7daysAgo": 6547.72,
-    "30daysAgo": 6547.72,
-    "60daysAgo": 5847.805,
-    "90daysAgo": 6591.225,
+    "7daysAgo": 5994.49,
+    "30daysAgo": 5994.49,
+    "60daysAgo": 6547.72,
+    "90daysAgo": 5847.805,
     "currency": null
    },
    "+1q": {
     "current": 5354.135,
-    "7daysAgo": 5893.99,
-    "30daysAgo": 5893.99,
-    "60daysAgo": 5816.4146,
-    "90daysAgo": 6610.695,
+    "7daysAgo": 5354.135,
+    "30daysAgo": 5354.135,
+    "60daysAgo": 5893.99,
+    "90daysAgo": 5816.4146,
     "currency": null
    },
    "0y": {
     "current": 25803.504,
-    "7daysAgo": 25968.58,
-    "30daysAgo": 25682.139,
-    "60daysAgo": 25353.389,
+    "7daysAgo": 25803.504,
+    "30daysAgo": 25650.4,
+    "60daysAgo": 25682.139,
     "90daysAgo": 22488.652,
     "currency": null
    },
    "+1y": {
     "current": 29861.832,
-    "7daysAgo": 29408.537,
-    "30daysAgo": 29318.92,
-    "60daysAgo": 29347.525,
+    "7daysAgo": 29861.832,
+    "30daysAgo": 29998.408,
+    "60daysAgo": 29783.172,
     "90daysAgo": 29779.22,
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:50.352518"
+  "_fetched": "2026-10-29T01:14:46.884134"
  },
  "051910.KS": {
   "v": {
@@ -2957,7 +2957,7 @@
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:50.719924"
+  "_fetched": "2026-10-29T01:14:47.182907"
  },
  "006400.KS": {
   "v": {
@@ -2994,44 +2994,44 @@
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:51.087274"
+  "_fetched": "2026-10-29T01:14:47.522564"
  },
  "012330.KS": {
   "v": {
    "0q": {
     "current": 12090.428,
-    "7daysAgo": 12520.357,
+    "7daysAgo": 12090.428,
     "30daysAgo": 12520.357,
     "60daysAgo": 12520.357,
-    "90daysAgo": 12810.346,
+    "90daysAgo": 12520.357,
     "currency": null
    },
    "+1q": {
     "current": 11833.273,
-    "7daysAgo": 12144.363,
+    "7daysAgo": 11833.273,
     "30daysAgo": 12144.363,
     "60daysAgo": 12144.363,
-    "90daysAgo": 12866.838,
+    "90daysAgo": 12144.363,
     "currency": null
    },
    "0y": {
     "current": 45537.258,
     "7daysAgo": 45659.934,
     "30daysAgo": 46197.957,
-    "60daysAgo": 46733.67,
-    "90daysAgo": 47242.39,
+    "60daysAgo": 46763.13,
+    "90daysAgo": 46733.67,
     "currency": null
    },
    "+1y": {
     "current": 51016.57,
     "7daysAgo": 51188.75,
     "30daysAgo": 52233.35,
-    "60daysAgo": 52941.35,
-    "90daysAgo": 53097.105,
+    "60daysAgo": 53029.926,
+    "90daysAgo": 52941.35,
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:51.459365"
+  "_fetched": "2026-10-29T01:14:47.831178"
  },
  "028260.KS": {
   "v": {
@@ -3068,7 +3068,7 @@
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:51.827113"
+  "_fetched": "2026-10-29T01:14:48.132869"
  },
  "032830.KS": {
   "v": {
@@ -3105,7 +3105,7 @@
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:52.200672"
+  "_fetched": "2026-10-29T01:14:48.431658"
  },
  "000810.KS": {
   "v": {
@@ -3142,81 +3142,81 @@
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:52.633701"
+  "_fetched": "2026-10-29T01:14:48.756900"
  },
  "017670.KS": {
   "v": {
    "0q": {
-    "current": 2200.5774,
-    "7daysAgo": 2132.255,
-    "30daysAgo": 2132.255,
-    "60daysAgo": 2036.1234,
-    "90daysAgo": 1496.3118,
+    "current": 2116.6614,
+    "7daysAgo": 2062.0034,
+    "30daysAgo": 2062.0034,
+    "60daysAgo": 2062.0034,
+    "90daysAgo": 1510.6517,
     "currency": null
    },
    "+1q": {
-    "current": 927.0867,
-    "7daysAgo": 1019.37665,
-    "30daysAgo": 1019.37665,
-    "60daysAgo": 1210.3662,
-    "90daysAgo": 1436.4562,
+    "current": 1042.9486,
+    "7daysAgo": 1112.1661,
+    "30daysAgo": 1112.1661,
+    "60daysAgo": 1112.1661,
+    "90daysAgo": 1362.9362,
     "currency": null
    },
    "0y": {
-    "current": 6114.9043,
-    "7daysAgo": 6111.408,
-    "30daysAgo": 6135.724,
-    "60daysAgo": 6206.3203,
-    "90daysAgo": 5712.2227,
+    "current": 6123.907,
+    "7daysAgo": 6124.0864,
+    "30daysAgo": 6143.6865,
+    "60daysAgo": 6191.1436,
+    "90daysAgo": 5701.7905,
     "currency": null
    },
    "+1y": {
     "current": 6439.832,
-    "7daysAgo": 6426.5464,
+    "7daysAgo": 6439.832,
     "30daysAgo": 6374.5957,
-    "60daysAgo": 6387.187,
-    "90daysAgo": 6167.678,
+    "60daysAgo": 6374.5957,
+    "90daysAgo": 6167.693,
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:52.999485"
+  "_fetched": "2026-10-29T01:14:49.056573"
  },
  "030200.KS": {
   "v": {
    "0q": {
-    "current": 1683.74,
+    "current": 1559.9944,
     "7daysAgo": 1689.185,
     "30daysAgo": 1689.185,
-    "60daysAgo": 1510.81,
-    "90daysAgo": 1474.4711,
+    "60daysAgo": 1689.185,
+    "90daysAgo": 1374.0343,
     "currency": null
    },
    "+1q": {
-    "current": 475.17,
+    "current": 827.5304,
     "7daysAgo": 581.7,
     "30daysAgo": 581.7,
-    "60daysAgo": 1031.47,
-    "90daysAgo": 1149.3904,
+    "60daysAgo": 581.7,
+    "90daysAgo": 1219.2637,
     "currency": null
    },
    "0y": {
-    "current": 5802.0195,
-    "7daysAgo": 5865.4316,
-    "30daysAgo": 5850.203,
-    "60daysAgo": 5764.676,
-    "90daysAgo": 5817.0503,
+    "current": 5807.3843,
+    "7daysAgo": 5817.615,
+    "30daysAgo": 5853.6445,
+    "60daysAgo": 5761.046,
+    "90daysAgo": 5810.5957,
     "currency": null
    },
    "+1y": {
-    "current": 6332.365,
-    "7daysAgo": 6388.2266,
-    "30daysAgo": 6418.9883,
-    "60daysAgo": 6404.0884,
-    "90daysAgo": 6345.6934,
+    "current": 6334.3765,
+    "7daysAgo": 6342.592,
+    "30daysAgo": 6417.183,
+    "60daysAgo": 6408.0464,
+    "90daysAgo": 6343.894,
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:53.384298"
+  "_fetched": "2026-10-29T01:14:49.366024"
  },
  "033780.KS": {
   "v": {
@@ -3253,7 +3253,7 @@
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:53.770868"
+  "_fetched": "2026-10-29T01:14:49.696680"
  },
  "015760.KS": {
   "v": {
@@ -3290,30 +3290,30 @@
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:54.138051"
+  "_fetched": "2026-10-29T01:14:49.996442"
  },
  "096770.KS": {
   "v": {
    "0q": {
     "current": 9638.758,
-    "7daysAgo": 8798.93,
-    "30daysAgo": 3119.21,
+    "7daysAgo": 9638.758,
+    "30daysAgo": 8798.93,
     "60daysAgo": 3119.21,
-    "90daysAgo": -346.92,
+    "90daysAgo": 178.74667,
     "currency": null
    },
    "+1q": {
     "current": 7789.076,
-    "7daysAgo": 5754.105,
-    "30daysAgo": 2537.04,
+    "7daysAgo": 7789.076,
+    "30daysAgo": 5754.105,
     "60daysAgo": 2537.04,
-    "90daysAgo": 1469.91,
+    "90daysAgo": 1995.5767,
     "currency": null
    },
    "0y": {
     "current": 21971.854,
     "7daysAgo": 21984.398,
-    "30daysAgo": 18630.16,
+    "30daysAgo": 20868.066,
     "60daysAgo": 14063.785,
     "90daysAgo": 12491.088,
     "currency": null
@@ -3321,19 +3321,19 @@
    "+1y": {
     "current": 10675.554,
     "7daysAgo": 10676.554,
-    "30daysAgo": 9859.565,
+    "30daysAgo": 10534.115,
     "60daysAgo": 8494.179,
     "90daysAgo": 6344.5957,
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:54.504481"
+  "_fetched": "2026-10-29T01:14:50.297679"
  },
  "010950.KS": {
   "v": {
    "0q": {
     "current": 7150.6997,
-    "7daysAgo": 5964.733,
+    "7daysAgo": 7150.6997,
     "30daysAgo": 3797.4822,
     "60daysAgo": 3797.4822,
     "90daysAgo": 4803.796,
@@ -3341,7 +3341,7 @@
    },
    "+1q": {
     "current": 12166.095,
-    "7daysAgo": 10754.118,
+    "7daysAgo": 12166.095,
     "30daysAgo": 9048.149,
     "60daysAgo": 9048.149,
     "90daysAgo": 5839.1826,
@@ -3349,28 +3349,28 @@
    },
    "0y": {
     "current": 25608.426,
-    "7daysAgo": 25122.852,
-    "30daysAgo": 23824.889,
+    "7daysAgo": 25608.426,
+    "30daysAgo": 24144.326,
     "60daysAgo": 23235.576,
-    "90daysAgo": 20378.643,
+    "90daysAgo": 20375.604,
     "currency": null
    },
    "+1y": {
     "current": 18437.611,
-    "7daysAgo": 18216.4,
-    "30daysAgo": 16546.475,
-    "60daysAgo": 15926.928,
-    "90daysAgo": 14157.181,
+    "7daysAgo": 18437.611,
+    "30daysAgo": 16884.037,
+    "60daysAgo": 16176.111,
+    "90daysAgo": 14473.475,
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:54.881120"
+  "_fetched": "2026-10-29T01:14:50.597823"
  },
  "009540.KS": {
   "v": {
    "0q": {
     "current": 11503.606,
-    "7daysAgo": 11451.272,
+    "7daysAgo": 11503.606,
     "30daysAgo": 11451.272,
     "60daysAgo": 11451.272,
     "90daysAgo": 11156.316,
@@ -3378,7 +3378,7 @@
    },
    "+1q": {
     "current": 11390.584,
-    "7daysAgo": 12620.326,
+    "7daysAgo": 11390.584,
     "30daysAgo": 12620.326,
     "60daysAgo": 12620.326,
     "90daysAgo": 15143.511,
@@ -3386,39 +3386,39 @@
    },
    "0y": {
     "current": 51923.582,
-    "7daysAgo": 52203.832,
+    "7daysAgo": 51904.78,
     "30daysAgo": 51965.734,
-    "60daysAgo": 51099.254,
+    "60daysAgo": 51960.484,
     "90daysAgo": 47815.555,
     "currency": null
    },
    "+1y": {
     "current": 60335.652,
-    "7daysAgo": 61304.83,
+    "7daysAgo": 60438.07,
     "30daysAgo": 61490.49,
-    "60daysAgo": 60611.57,
-    "90daysAgo": 56922.8,
+    "60daysAgo": 61354.22,
+    "90daysAgo": 56934.22,
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:55.260023"
+  "_fetched": "2026-10-29T01:14:50.900725"
  },
  "329180.KS": {
   "v": {
    "0q": {
-    "current": 6724.6865,
-    "7daysAgo": 7905.915,
-    "30daysAgo": 7905.915,
-    "60daysAgo": 7905.915,
-    "90daysAgo": 7664.077,
-    "currency": null
-   },
-   "+1q": {
     "current": 6032.7437,
     "7daysAgo": 6642.754,
     "30daysAgo": 6642.754,
     "60daysAgo": 6642.754,
     "90daysAgo": 6430.34,
+    "currency": null
+   },
+   "+1q": {
+    "current": 8331.0,
+    "7daysAgo": 9057.0,
+    "30daysAgo": 9057.0,
+    "60daysAgo": 9057.0,
+    "90daysAgo": 7931.0,
     "currency": null
    },
    "0y": {
@@ -3438,7 +3438,7 @@
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:55.625357"
+  "_fetched": "2026-10-29T01:14:51.252479"
  },
  "012450.KS": {
   "v": {
@@ -3475,7 +3475,7 @@
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:55.997696"
+  "_fetched": "2026-10-29T01:14:51.556561"
  },
  "047810.KS": {
   "v": {
@@ -3512,7 +3512,7 @@
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:56.364427"
+  "_fetched": "2026-10-29T01:14:51.861140"
  },
  "064350.KS": {
   "v": {
@@ -3549,7 +3549,7 @@
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:56.740874"
+  "_fetched": "2026-10-29T01:14:52.160135"
  },
  "034020.KS": {
   "v": {
@@ -3586,7 +3586,7 @@
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:57.120826"
+  "_fetched": "2026-10-29T01:14:52.459900"
  },
  "003550.KS": {
   "v": {
@@ -3623,7 +3623,7 @@
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:57.488591"
+  "_fetched": "2026-10-29T01:14:52.765022"
  },
  "066570.KS": {
   "v": {
@@ -3644,60 +3644,60 @@
     "currency": null
    },
    "0y": {
-    "current": 12013.531,
-    "7daysAgo": 11976.099,
-    "30daysAgo": 13767.186,
+    "current": 12210.144,
+    "7daysAgo": 12013.531,
+    "30daysAgo": 13704.454,
     "60daysAgo": 13738.266,
-    "90daysAgo": 13190.191,
+    "90daysAgo": 13598.527,
     "currency": null
    },
    "+1y": {
-    "current": 17133.305,
-    "7daysAgo": 17108.611,
-    "30daysAgo": 16778.33,
+    "current": 16855.562,
+    "7daysAgo": 17133.305,
+    "30daysAgo": 16762.322,
     "60daysAgo": 16583.77,
-    "90daysAgo": 16274.369,
+    "90daysAgo": 16209.731,
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:57.921430"
+  "_fetched": "2026-10-29T01:14:53.066422"
  },
  "009150.KS": {
   "v": {
    "0q": {
-    "current": 6262.0815,
+    "current": 6237.943,
     "7daysAgo": 6147.595,
     "30daysAgo": 6147.595,
-    "60daysAgo": 6159.124,
+    "60daysAgo": 6147.595,
     "90daysAgo": 6019.4546,
     "currency": null
    },
    "+1q": {
-    "current": 8015.253,
+    "current": 7987.183,
     "7daysAgo": 7964.195,
     "30daysAgo": 7964.195,
-    "60daysAgo": 7742.846,
+    "60daysAgo": 7964.195,
     "90daysAgo": 7210.2354,
     "currency": null
    },
    "0y": {
-    "current": 21057.27,
+    "current": 21039.98,
     "7daysAgo": 21021.803,
     "30daysAgo": 20698.01,
-    "60daysAgo": 20507.678,
+    "60daysAgo": 20576.043,
     "90daysAgo": 18596.873,
     "currency": null
    },
    "+1y": {
-    "current": 43317.9,
+    "current": 43271.684,
     "7daysAgo": 43608.863,
-    "30daysAgo": 43333.902,
-    "60daysAgo": 42023.465,
+    "30daysAgo": 42513.305,
+    "60daysAgo": 42686.664,
     "90daysAgo": 38536.547,
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:58.291303"
+  "_fetched": "2026-10-29T01:14:53.379769"
  },
  "018260.KS": {
   "v": {
@@ -3734,7 +3734,7 @@
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:58.658416"
+  "_fetched": "2026-10-29T01:14:53.682185"
  },
  "011200.KS": {
   "v": {
@@ -3771,7 +3771,7 @@
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:59.025163"
+  "_fetched": "2026-10-29T01:14:53.982430"
  },
  "138040.KS": {
   "v": {
@@ -3808,7 +3808,7 @@
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:59.393199"
+  "_fetched": "2026-10-29T01:14:54.281329"
  },
  "024110.KS": {
   "v": {
@@ -3829,7 +3829,7 @@
     "currency": null
    },
    "0y": {
-    "current": 3391.25,
+    "current": 3424.764,
     "7daysAgo": 3444.287,
     "30daysAgo": 3487.0007,
     "60daysAgo": 3487.4941,
@@ -3837,7 +3837,7 @@
     "currency": null
    },
    "+1y": {
-    "current": 3669.5022,
+    "current": 3638.7654,
     "7daysAgo": 3666.4,
     "30daysAgo": 3677.4893,
     "60daysAgo": 3676.5566,
@@ -3845,7 +3845,7 @@
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:44:59.776243"
+  "_fetched": "2026-10-29T01:14:54.581424"
  },
  "247540.KQ": {
   "v": {
@@ -3866,7 +3866,7 @@
     "currency": null
    },
    "0y": {
-    "current": 88.74049,
+    "current": 93.41178,
     "7daysAgo": 78.09928,
     "30daysAgo": 106.30803,
     "60daysAgo": 49.40245,
@@ -3874,7 +3874,7 @@
     "currency": null
    },
    "+1y": {
-    "current": 704.7311,
+    "current": 705.8025,
     "7daysAgo": 710.5168,
     "30daysAgo": 726.30835,
     "60daysAgo": 789.71765,
@@ -3882,10 +3882,10 @@
     "currency": null
    }
   },
-  "_fetched": "2026-10-28T00:45:00.152053"
+  "_fetched": "2026-10-29T01:14:54.889569"
  },
  "SCHD": {
   "v": null,
-  "_fetched": "2026-10-28T00:45:00.757765"
+  "_fetched": "2026-10-29T01:14:55.289978"
  }
 }
