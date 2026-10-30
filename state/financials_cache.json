@@ -4221,34 +4221,34 @@
   "eps_trend": {
    "0q": {
     "current": 5181.129,
-    "7daysAgo": 5562.119,
-    "30daysAgo": 5730.5776,
+    "7daysAgo": 5181.129,
+    "30daysAgo": 5665.5835,
     "60daysAgo": 5730.5776,
-    "90daysAgo": 5961.769,
+    "90daysAgo": 5537.441,
     "currency": null
    },
    "+1q": {
     "current": 4482.811,
-    "7daysAgo": 5002.4194,
-    "30daysAgo": 5138.2754,
+    "7daysAgo": 4482.811,
+    "30daysAgo": 5075.279,
     "60daysAgo": 5138.2754,
-    "90daysAgo": 5111.4307,
+    "90daysAgo": 5102.5425,
     "currency": null
    },
    "0y": {
     "current": 20999.549,
-    "7daysAgo": 21432.406,
-    "30daysAgo": 21835.502,
-    "60daysAgo": 21836.553,
-    "90daysAgo": 21831.432,
+    "7daysAgo": 20999.549,
+    "30daysAgo": 21738.531,
+    "60daysAgo": 21847.936,
+    "90daysAgo": 21841.42,
     "currency": null
    },
    "+1y": {
     "current": 22262.89,
-    "7daysAgo": 22841.82,
-    "30daysAgo": 23766.928,
-    "60daysAgo": 23783.305,
-    "90daysAgo": 23766.523,
+    "7daysAgo": 22262.89,
+    "30daysAgo": 23388.172,
+    "60daysAgo": 23808.361,
+    "90daysAgo": 23784.594,
     "currency": null
    }
   },
@@ -4282,7 +4282,7 @@
     "currency": null
    }
   },
-  "_fetched": "2026-10-27T00:48:08.211216"
+  "_fetched": "2026-10-30T01:21:38.239260"
  },
  "138040.KS": {
   "ok": true,
@@ -5967,46 +5967,46 @@
   },
   "quarterly": {
    "periods": [
-    "25.06",
     "25.09",
     "25.12",
     "26.03",
-    "26.06"
+    "26.06",
+    "26.09"
    ],
    "revenue": [
-    1001334000.0,
     1007488000.0,
     1013090000.0,
     1018521000.0,
-    1058505000.0
+    1058505000.0,
+    1065484000.0
    ],
    "gross": [
-    994715000.0,
     1000723000.0,
     1006096000.0,
     1012052000.0,
-    1051110000.0
+    1051110000.0,
+    1058626000.0
    ],
    "op": [
-    1101878000.0,
     984048000.0,
     813849000.0,
     1094985000.0,
-    744709000.0
+    744709000.0,
+    563272000.0
    ],
    "net": [
-    865079000.0,
     762040000.0,
     604767000.0,
     872390000.0,
-    526521000.0
+    526521000.0,
+    342534000.0
    ],
    "eps": [
-    0.82,
     0.71,
     0.57,
     0.82,
-    0.48
+    0.48,
+    0.31
    ]
   },
   "balance": {
@@ -6083,12 +6083,6 @@
   },
   "surprises": [
    {
-    "q": "25.09",
-    "est": 0.69,
-    "act": 0.71328,
-    "surp": 3.4
-   },
-   {
     "q": "25.12",
     "est": 0.7,
     "act": 0.5662,
@@ -6105,30 +6099,36 @@
     "est": 0.71,
     "act": 0.4846,
     "surp": -31.7
+   },
+   {
+    "q": "26.09",
+    "est": 0.72,
+    "act": 0.3114,
+    "surp": -56.8
    }
   ],
   "calendar": {
    "next_earnings": "2026-10-28",
-   "eps_avg": 0.72,
-   "rev_avg": 1063898550.0
+   "eps_avg": 0.73,
+   "rev_avg": 1073748750.0
   },
   "eps_est": {
    "0q": {
-    "avg": 0.72,
-    "low": 0.72,
-    "high": 0.72,
-    "yearAgoEps": 0.71328,
-    "numberOfAnalysts": 1.0,
-    "growth": 0.0094,
-    "currency": null
-   },
-   "+1q": {
     "avg": 0.73,
     "low": 0.73,
     "high": 0.73,
     "yearAgoEps": 0.5662,
     "numberOfAnalysts": 1.0,
     "growth": 0.2893,
+    "currency": null
+   },
+   "+1q": {
+    "avg": 0.7375,
+    "low": 0.73,
+    "high": 0.7425,
+    "yearAgoEps": 0.82,
+    "numberOfAnalysts": 3.0,
+    "growth": -0.100600004,
     "currency": null
    },
    "0y": {
@@ -6152,21 +6152,21 @@
   },
   "rev_est": {
    "0q": {
-    "avg": 1063898550.0,
-    "low": 1052117000.0,
-    "high": 1072683680.0,
-    "numberOfAnalysts": 11.0,
-    "yearAgoRevenue": 1007488000.0,
-    "growth": 0.055999998,
-    "currency": null
-   },
-   "+1q": {
     "avg": 1073748750.0,
     "low": 1063193000.0,
     "high": 1081300000.0,
     "numberOfAnalysts": 11.0,
     "yearAgoRevenue": 1013090000.0,
     "growth": 0.059899997,
+    "currency": null
+   },
+   "+1q": {
+    "avg": 1077593390.0,
+    "low": 1061916660.0,
+    "high": 1087612080.0,
+    "numberOfAnalysts": 7.0,
+    "yearAgoRevenue": 1018521000.0,
+    "growth": 0.058000002,
     "currency": null
    },
    "0y": {
@@ -6190,19 +6190,19 @@
   },
   "eps_trend": {
    "0q": {
-    "current": 0.72,
-    "7daysAgo": 0.72,
-    "30daysAgo": 0.72,
-    "60daysAgo": 0.72,
-    "90daysAgo": 0.71,
-    "currency": null
-   },
-   "+1q": {
     "current": 0.73,
     "7daysAgo": 0.73,
     "30daysAgo": 0.73,
     "60daysAgo": 0.73,
     "90daysAgo": 0.71,
+    "currency": null
+   },
+   "+1q": {
+    "current": 0.7375,
+    "7daysAgo": 0.7375,
+    "30daysAgo": 0.7375,
+    "60daysAgo": 0.73625,
+    "90daysAgo": 0.7287,
     "currency": null
    },
    "0y": {
@@ -6231,8 +6231,8 @@
     "currency": null
    },
    "+1q": {
-    "upLast7days": 0.0,
-    "upLast30days": 0.0,
+    "upLast7days": 1.0,
+    "upLast30days": 1.0,
     "downLast30days": 0.0,
     "downLast7Days": 0.0,
     "currency": null
@@ -6252,7 +6252,7 @@
     "currency": null
    }
   },
-  "_fetched": "2026-10-24T01:55:21.878408"
+  "_fetched": "2026-10-30T01:21:43.015762"
  },
  "175330.KS": {
   "ok": true,
