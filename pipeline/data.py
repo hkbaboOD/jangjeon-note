@@ -14,7 +14,7 @@ from __future__ import annotations
 import hashlib
 import logging
 import time
-from datetime import datetime, timedelta
+from datetime import date, datetime, timedelta
 
 import numpy as np
 import pandas as pd
@@ -91,9 +91,24 @@ def _quote_group(t: str) -> str | None:
     return "us"
 
 
-def stale_tickers(hist: dict[str, pd.DataFrame]) -> list[str]:
-    """같은 그룹의 가장 최근 봉 날짜보다 마지막 봉이 이른 종목(배치 다운로드 누락 의심)."""
-    last: dict[str, pd.Timestamp] = {}
+def last_kr_session(now_kst_dt) -> date:
+    """이미 마감된 가장 최근 국내장 평일(15:40 KST 이후면 오늘, 아니면 직전 평일). 공휴일은 고려하지 않음."""
+    d = now_kst_dt.date()
+    if d.weekday() >= 5 or (now_kst_dt.hour, now_kst_dt.minute) < (15, 40):
+        d -= timedelta(days=1)
+    while d.weekday() >= 5:
+        d -= timedelta(days=1)
+    return d
+
+
+def stale_tickers(hist: dict[str, pd.DataFrame], expect: dict | None = None) -> list[str]:
+    """같은 그룹의 가장 최근 봉 날짜보다 마지막 봉이 이른 종목(배치 다운로드 누락 의심).
+
+    expect: {그룹: 날짜} — 그 그룹에 반드시 있어야 할 봉 날짜(예: 미장 장전 실행 시 국내장 '오늘').
+    그룹 전체가 같은 날 봉을 빠뜨리면 그룹 안 비교로는 잡히지 않으므로(2026-10 미장 장전 국내장 마감이
+    매일 하루 전 봉으로 표시됨) 기대 날짜와도 비교한다.
+    """
+    last: dict[str, pd.Timestamp] = {g: pd.Timestamp(d).normalize() for g, d in (expect or {}).items() if d}
     for t, df in hist.items():
         g = _quote_group(t)
         if g and df is not None and len(df):
@@ -118,7 +133,7 @@ class LiveSource:
         self._dirty = False
 
     # --- 가격 이력 (배치 다운로드) ---
-    def history(self, tickers: list[str], period: str = "2y") -> dict[str, pd.DataFrame]:
+    def history(self, tickers: list[str], period: str = "2y", expect: dict | None = None) -> dict[str, pd.DataFrame]:
         out: dict[str, pd.DataFrame] = {}
         tickers = list(dict.fromkeys(tickers))
         for i in range(0, len(tickers), 40):
@@ -144,21 +159,25 @@ class LiveSource:
                 except Exception:
                     log.warning("이력 없음: %s", t)
             time.sleep(1)
-        self._refresh_stale(out, period)
+        self._refresh_stale(out, period, expect=expect)
         return out
 
-    def _refresh_stale(self, out: dict[str, pd.DataFrame], period: str, budget_sec: float = 90.0) -> int:
+    def _refresh_stale(self, out: dict[str, pd.DataFrame], period: str, budget_sec: float = 90.0,
+                       expect: dict | None = None, max_miss: int = 5) -> int:
         """배치 다운로드에서 마지막 봉(직전 거래일)이 빠진 종목을 개별 조회로 다시 받음.
 
         실측(2026-10-21~23 국장 장전): 같은 실행에서 미 지수는 전날 봉이 있는데 미국 종목 전부는 하루 전 봉에서 끊김.
         같은 시장 안에서 가장 최근 봉보다 늦은 종목만 다시 받으므로 평소에는 추가 호출이 없다.
         """
-        lag = stale_tickers(out)
+        lag = stale_tickers(out, expect)
         if not lag:
             return 0
-        start, fixed = time.time(), 0
+        start, fixed, miss = time.time(), 0, 0
         for t in lag:
             if time.time() - start > budget_sec:
+                break
+            if fixed == 0 and miss >= max_miss:  # 데이터 제공처에 아직 봉이 없음 → 헛호출 중단
+                log.info("개별 재조회 %d종목 연속 보완 실패 → 중단(제공처 미반영 추정)", miss)
                 break
             try:
                 sub = self.yf.Ticker(t).history(period=period, interval="1d", auto_adjust=False)
@@ -167,11 +186,14 @@ class LiveSource:
                 log.warning("개별 재조회 실패 %s: %s", t, e)
                 continue
             if len(sub) == 0:
+                miss += 1
                 continue
             sub.index = pd.to_datetime(sub.index).tz_localize(None).normalize()
             if sub.index[-1] > out[t].index[-1]:
                 out[t] = sub
                 fixed += 1
+            else:
+                miss += 1
         log.info("마지막 봉 누락 %d종목 → 개별 재조회로 %d종목 보완", len(lag), fixed)
         return fixed
 
@@ -329,7 +351,7 @@ class DemoSource:
             return float(r.uniform(20000, 400000))
         return float(r.uniform(30, 600))
 
-    def history(self, tickers, period="2y"):
+    def history(self, tickers, period="2y", expect=None):
         nbar = {"1y": 252, "2y": 504, "5y": 1260, "10y": 2520}.get(period, 504)
         days = pd.bdate_range(end=pd.Timestamp(now_kst().date()) - pd.Timedelta(days=1), periods=nbar)
         out = {}

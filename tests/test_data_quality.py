@@ -66,3 +66,53 @@ def test_duplicate_price_bar_predictions_are_scored_once(tmp_path):
     aaa = snaps[snaps.ticker == "AAA"]
     assert len(aaa) == 1 and aaa.iloc[0]["date"] == "2026-10-16"  # 먼저 기록된 예측만 남김
     assert set(snaps[snaps.ticker == "BBB"]["pxd"]) == {d0, d1}
+
+
+# ── 2026-10-31 주간 점검: 미장 장전 '국내장 마감'이 매일 하루 전 봉으로 표시되던 문제 ──
+from datetime import date, datetime, timedelta, timezone  # noqa: E402
+
+from pipeline import briefing  # noqa: E402
+from pipeline.common import load_config  # noqa: E402
+
+KST = timezone(timedelta(hours=9))
+
+
+def test_last_kr_session_handles_late_and_weekend_runs():
+    f = data_mod.last_kr_session
+    assert f(datetime(2026, 10, 30, 21, 13, tzinfo=KST)) == date(2026, 10, 30)  # 금 저녁(정시)
+    assert f(datetime(2026, 10, 31, 3, 4, tzinfo=KST)) == date(2026, 10, 30)    # 토 새벽(지연 실행) → 금요일
+    assert f(datetime(2026, 10, 27, 3, 41, tzinfo=KST)) == date(2026, 10, 26)   # 화 새벽 → 월요일
+    assert f(datetime(2026, 10, 26, 6, 37, tzinfo=KST)) == date(2026, 10, 23)   # 월 아침 → 금요일
+    assert f(datetime(2026, 10, 30, 15, 0, tzinfo=KST)) == date(2026, 10, 29)   # 장중 → 전날
+
+
+def test_stale_tickers_with_expected_date_catches_whole_market_lag():
+    hist = {"^KS11": _df("2026-10-29"), "005930.KS": _df("2026-10-29"), "^GSPC": _df("2026-10-30"), "KRW=X": _df("2026-10-30")}
+    assert data_mod.stale_tickers(hist) == []  # 그룹 안 비교만으로는 못 잡음(실제 증상)
+    assert set(data_mod.stale_tickers(hist, {"kr": date(2026, 10, 30)})) == {"^KS11", "005930.KS"}
+
+
+def test_refresh_stale_stops_after_repeated_misses():
+    calls = []
+
+    class _NoNewYF:
+        def Ticker(self, t):
+            calls.append(t)
+            return _FakeTicker(t, {t: _df("2026-10-29")})
+
+    src = data_mod.LiveSource.__new__(data_mod.LiveSource)
+    src.yf = _NoNewYF()
+    out = {f"{i:06d}.KS": _df("2026-10-29") for i in range(20)}
+    assert src._refresh_stale(out, "2y", expect={"kr": date(2026, 10, 30)}, max_miss=5) == 0
+    assert len(calls) == 5  # 제공처에 아직 봉이 없으면 5번에서 멈춤
+
+
+def test_build_us_flags_stale_kr_close():
+    cfg = load_config()
+    q = lambda d: {"last": 5937.66, "chg_1d": -1.24, "date": d, "spark": [1, 2, 3]}  # noqa: E731
+    now = datetime(2026, 10, 30, 18, 4, tzinfo=timezone.utc)  # KST 10/31(토) 03:04
+    stale = briefing.build_us(cfg, {"^KS11": q("2026-10-29"), "^KQ11": q("2026-10-29")}, [], [], [], [], now)
+    assert stale["kr_stale"] is True and stale["review"][0].startswith("⚠ 국내장 데이터가 10/29 마감 기준")
+    assert stale["review"][1].startswith("코스피 5,937.66")
+    ok = briefing.build_us(cfg, {"^KS11": q("2026-10-30"), "^KQ11": q("2026-10-30")}, [], [], [], [], now)
+    assert ok["kr_stale"] is False and ok["review"][0].startswith("코스피")

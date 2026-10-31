@@ -31,7 +31,7 @@ from datetime import timezone
 
 from .common import DATA_DIR, STATE_DIR, load_config, market_of, now_kst, read_json, write_json
 from .calibrate import calibrate
-from .data import get_source
+from .data import get_source, last_kr_session
 from .indicators import technicals
 from .technical import chart_series
 from .valuation import HORIZON_LABEL, diagnose_drop, pick_top, score_universe
@@ -398,7 +398,8 @@ def run_evening(cfg: dict, src, meta: dict, push: bool = True):
              **{t: c["ko"] for t, c in companies.items() if c.get("ko")},
              **{w["ticker"]: w["name"] for w in cfg["watchlist"]}}
     extra = [i["ticker"] for i in b["indices"]] + [m["ticker"] for m in b["macro"]] + [f["ticker"] for f in bu.get("futures", [])]
-    hist = src.history(list(dict.fromkeys(kr_uni + watch + extra)), period="2y")
+    # 가장 최근 마감한 국내장 봉이 있어야 함(실행이 자정을 넘겨도) → 빠지면 개별 재조회
+    hist = src.history(list(dict.fromkeys(kr_uni + watch + extra)), period="2y", expect={"kr": last_kr_session(now)})
     tcfg = cfg.get("technical")
     tech_all = {t: technicals(h, tcfg, with_ta=False) for t, h in hist.items() if len(h) >= 30}
     kr_rows = [{"ticker": t, "market": "kr", "name": names.get(t, t), "tech": tech_all[t]} for t in kr_uni if t in tech_all]

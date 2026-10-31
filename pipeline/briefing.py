@@ -126,7 +126,15 @@ def build_us(cfg: dict, tech: dict, kr_rows: list[dict], watch_rows: list[dict],
     # 국내장 마감 리뷰
     review, breadth, movers = [], {}, {}
     ks, kq, krw = chg("^KS11"), chg("^KQ11"), chg("KRW=X")
+    kr_date = (by.get("^KS11") or {}).get("date")
+    # 실행이 자정을 넘겨도 '국내장 마감'은 가장 최근 마감한 평일 기준(토요일 새벽 실행 → 금요일)
+    from .data import last_kr_session
+    ref = last_kr_session(now_utc.astimezone(timezone(timedelta(hours=9))))
+    kr_stale = bool(kr_date) and kr_date < ref.isoformat()
     if ks is not None:
+        if kr_stale:
+            review.append(f"⚠ 국내장 데이터가 {kr_date[5:].replace('-', '/')} 마감 기준입니다 "
+                          f"({ref.month}/{ref.day} 데이터 미수신 또는 휴장) — 네이버 증권에서 확인하세요")
         review.append(f"코스피 {by['^KS11']['last']:,.2f} ({ks:+.2f}%)" + (f", 코스닥 {kq:+.2f}%" if kq is not None else "")
                       + (f" · 원/달러 {by['KRW=X']['last']:,.1f}원({krw:+.2f}%)" if krw is not None else ""))
     rows = [r for r in kr_rows if r.get("tech") and r["tech"].get("chg_1d") is not None]
@@ -173,7 +181,7 @@ def build_us(cfg: dict, tech: dict, kr_rows: list[dict], watch_rows: list[dict],
 
     diag = [{"ticker": w["ticker"], "name": w["name"], "chg_1d": w["tech"]["chg_1d"], **w["diag"]}
             for w in watch_rows if w.get("diag")]
-    data = {"futures": fut, "kr_indices": kr_idx, "us_prev": us_prev, "macro": macro, "breadth": breadth, "movers": movers,
+    data = {"kr_date": kr_date, "kr_stale": kr_stale, "futures": fut, "kr_indices": kr_idx, "us_prev": us_prev, "macro": macro, "breadth": breadth, "movers": movers,
             "review": review, "tonight": tonight, "earnings": earn, "diagnosis": diag, "news": news[:12],
             "us_open_kst": open_kst.strftime("%H:%M"), "dst": off == -4}
     data["ai_summary"] = _llm_summary(cfg, data, kind="us")
