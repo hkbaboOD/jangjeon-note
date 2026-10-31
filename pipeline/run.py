@@ -90,13 +90,20 @@ def _update_track_record(picks_all: dict, prices: dict):
     hist = read_json("track.json", default={"items": []}) or {"items": []}
     today = now_kst().strftime("%Y-%m-%d")
     have = {(i["date"], i["horizon"], i["ticker"]) for i in hist["items"]}
+    # 같은 종목·기간의 직전 추천과 진입가·지수 진입가가 모두 같으면(토요일 코드 반영 실행 → 월요일 장 전 실행 등)
+    # 새 정보가 없는 같은 예측이므로 다시 기록하지 않음 → 확정 승률이 중복으로 부풀거나 깎이지 않게
+    last_px = {}
+    for i in hist["items"]:
+        last_px[(i["horizon"], i["ticker"])] = (i.get("entry"), i.get("bench_entry"))
     for h, block in picks_all.items():
         if block.get("generated", "")[:10] != today:
             continue
         for p in block["all"]:
             key = (today, h, p["ticker"])
+            b = BENCH[market_of(p["ticker"])]
+            if last_px.get((h, p["ticker"])) == (p.get("price"), prices.get(b)):
+                continue
             if key not in have and p.get("price"):
-                b = BENCH[market_of(p["ticker"])]
                 hist["items"].append({"date": today, "horizon": h, "ticker": p["ticker"], "name": p["name"],
                                       "entry": p["price"], "score": p["score"], "setup": p.get("setup_label"),
                                       "bench": b, "bench_entry": prices.get(b)})

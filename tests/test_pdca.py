@@ -54,3 +54,19 @@ def test_pdca_report_structure():
     assert any("실전" in n for n in r["next"])
     r2 = pdca.build(model, ev, track, r, "2026-10-24")
     assert len(r2["history"]) == 2 and r2["check"]["win_delta"]["daily"] == 0.0
+
+
+def test_same_price_pick_is_not_recorded_twice(tmp_path, monkeypatch):
+    """2026-10-31 점검: 토요일 실행(10/24)과 월요일 장 전 실행(10/26)이 같은 진입가로 같은 추천을 두 번 기록 → 확정 결과 중복."""
+    monkeypatch.setattr(common, "DATA_DIR", tmp_path)
+    today = common.now_kst().strftime("%Y-%m-%d")
+    prev = {"date": "2026-10-24", "horizon": "daily", "ticker": "000660.KS", "name": "SK하이닉스", "entry": 100.0,
+            "score": 90, "setup": "x", "bench": "^KS11", "bench_entry": 5000.0}
+    (tmp_path / "track.json").write_text(json.dumps({"items": [prev]}))
+    pk = lambda px: {"daily": {"generated": today, "all": [{"ticker": "000660.KS", "name": "SK하이닉스", "price": px,  # noqa: E731
+                                                            "score": 91, "setup_label": "x"}]}}
+    R._update_track_record(pk(100.0), {"000660.KS": 100.0, "^KS11": 5000.0})   # 가격 변화 없음 → 건너뜀
+    assert len(json.loads((tmp_path / "track.json").read_text())["items"]) == 1
+    R._update_track_record(pk(103.0), {"000660.KS": 103.0, "^KS11": 5000.0})   # 새 가격 → 기록
+    items = json.loads((tmp_path / "track.json").read_text())["items"]
+    assert len(items) == 2 and items[-1]["date"] == today and items[-1]["entry"] == 103.0
