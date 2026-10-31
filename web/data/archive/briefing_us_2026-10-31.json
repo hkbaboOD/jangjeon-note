@@ -843,16 +843,16 @@
    "time": "2026-10-30T21:40:00+00:00"
   },
   {
-   "title": "미국 뉴욕증시 기술주 매도 확대…나스닥 2.9%↓·인텔 29%↓ 큰폭 하락",
-   "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFAtckluX1NmTTkyajZBNHI4X2VrZVVFTmQ5SjZHQkU1YW11SDk1WkZmV3ctNVJFLTJjbHlVMzkwd1RaY1NPTFRsNE1JUk1HMGw0cVd5ZnE4WE1uZFU?oc=5",
-   "publisher": "KBS 뉴스",
-   "time": "2026-10-30T21:36:00+00:00"
-  },
-  {
    "title": "AI 투자 우려와 어닝 쇼크에... 구글 주가 역대급 폭락",
    "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5pb0MtRHZ6dUtLbkZmS0JnUFBGYlJyVlM4UURiX3Rxc2dQZERDcko4NlVUU0tlVjZTY0VERXl0X0dqSVN6bk1NdUIxWHFkdnlDeHJuazVYZVY?oc=5",
    "publisher": "네이버페이 머니스토리",
    "time": "2026-10-31T01:25:51+00:00"
+  },
+  {
+   "title": "미국 뉴욕증시 기술주 매도 확대…나스닥 2.9%↓·인텔 29%↓ 큰폭 하락",
+   "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFAtckluX1NmTTkyajZBNHI4X2VrZVVFTmQ5SjZHQkU1YW11SDk1WkZmV3ctNVJFLTJjbHlVMzkwd1RaY1NPTFRsNE1JUk1HMGw0cVd5ZnE4WE1uZFU?oc=5",
+   "publisher": "KBS 뉴스",
+   "time": "2026-10-30T21:36:00+00:00"
   },
   {
    "title": "뉴욕증시, AI 투자 수익성 우려에 급락…인텔 29%↓",
@@ -971,14 +971,14 @@
     "ratio": 1.8,
     "level": "높음",
     "heat": 0.87,
-    "tone": 0.63,
-    "esc_n": 48,
-    "de_n": 11,
+    "tone": 0.62,
+    "esc_n": 52,
+    "de_n": 12,
     "confirm": -0.3,
     "moves": {
      "^TNX": -1.18
     },
-    "direction": 0.14,
+    "direction": 0.13,
     "intensity": 0.0,
     "stance": "방향 혼재",
     "up": [],
@@ -991,16 +991,65 @@
       "time": "2026-10-30T02:39:07+00:00"
      },
      {
-      "title": "물가 여전히 높다…연준서 잇따라 추가 금리 인상 요구",
-      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1YQXBvcnhKUUowamlZZWNWLVBpWnlWY2dXeTRiT0tFNGsxRW15UXNpc1k2dnVCdEtMb1FkblpRVnp1dms4eXJfM0xLQURvR0J3MngtUFpreG5zUQ?oc=5",
-      "publisher": "파이낸셜뉴스",
-      "time": "2026-10-30T20:35:55+00:00"
-     },
-     {
       "title": "美연준 금리 동결, 회의 횟수 줄여… 시장에선 \"물가 대응 의지 안 보여\"",
       "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNa3VDclZVWlpTeFNSVFF6Rm45WWkxcHFSUURzcGVId18wSXpYdko5akFadlp1UU1vYkFjUk5VVGNLbWtoNUJQNjB1ZC1DRlRRbDJNdU03TTBaYlc5OENKU2IzdkZEbkhzQzY2c2RKMFQwTFhUZHRsV2wzdVZsM2ZEdkJVbU9HLWRfakF1bElR?oc=5",
       "publisher": "조선일보",
       "time": "2026-10-29T22:01:09+00:00"
+     },
+     {
+      "title": "美 연준 금리 동결에도 매파 기조 유지…12월 인상론 확산",
+      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1VbXhncy1vX2xVMEFseDVGT3FFb0tCdzdkMkYzZnVPbWJpRTByUFhiZ0t0ZXFQYjFCS3dLejBhbXNrT1NRMkFqME9oYkozc3ktTms0bTdEdmU3bnVRTm5GTm1YMUJDNWRMUFRERWZjOA?oc=5",
+      "publisher": "조세일보",
+      "time": "2026-10-30T00:40:00+00:00"
+     }
+    ]
+   },
+   {
+    "key": "mideast",
+    "label": "중동 정세",
+    "n": 43,
+    "base": 44.0,
+    "ratio": 0.98,
+    "level": "보통",
+    "heat": 0.32,
+    "tone": 0.88,
+    "esc_n": 16,
+    "de_n": 1,
+    "confirm": -0.53,
+    "moves": {
+     "CL=F": -0.31,
+     "GC=F": -3.07
+    },
+    "direction": 0.37,
+    "intensity": 0.12,
+    "stance": "긴장 고조",
+    "up": [
+     "정유·에너지",
+     "방산",
+     "해운·조선"
+    ],
+    "down": [
+     "유가 원가 부담주",
+     "국내 상장주"
+    ],
+    "headlines": [
+     {
+      "title": "트럼프 “이란 전쟁 곧 끝날 것”…호르무즈는 여전히 일촉즉발",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9YZ0VROFlMZWtqY1A4RzlRWnp5MlNQRXUtVC1uc2F1c1VxV3F0bzRFX1FjWkduRWExV0tlZXA5Rm1Cc0JkMkd4amNsb2p5b0M1NWdkMGdUODJYTVk?oc=5",
+      "publisher": "KBS 뉴스",
+      "time": "2026-10-30T22:25:00+00:00"
+     },
+     {
+      "title": "이란 혁명수비대 “호르무즈 해협서 유조선 2척에 화재”",
+      "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5IRWozd1YwN2RObW5oTmdJNW14OWNSXzI2Q2tVVnd1NzZuNmxCNGtlTkxPVGhJdjlrOWJQUWZtNFVvZG1EWklnWVpoX2l5NGtKcDlPMmpJODkyRHpmcGtJ0gFfQVVfeXFMTkhFajN3VjA3ZE5tbmhOZ0k1bXg5Y1JfMjZDa1VWd3U3Nm42bEI0a2VOTE9UaEl2OWs5YlBRZm00VW9kbURaSWdZWmhfaXk0a0pwOU8yakk4OTJEemZwa0k?oc=5",
+      "publisher": "경향신문",
+      "time": "2026-10-30T12:32:00+00:00"
+     },
+     {
+      "title": "이란은 호르무즈 계속 때리는데…트럼프 “이란 전쟁 곧 마무리될 것”",
+      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOREw4VG5jdFR4WjlGZzh4WWx0UlFSV0dWOFowLTNlOVlfdDB3XzlGZVV1bjJtY2xTbDF4Z3hzWlVUNGQzLXc2OHpNYm9VUHJ1d2NRQUs5ZWpIdjdzQUpxRng2bEoyMkJ0cEViejRUeFhnMDI2MVZGZmlqSjlzM0k3UQ?oc=5",
+      "publisher": "이데일리",
+      "time": "2026-10-30T12:51:49+00:00"
      }
     ]
    },
@@ -1048,14 +1097,14 @@
    {
     "key": "fx",
     "label": "환율(원화)",
-    "n": 99,
+    "n": 71,
     "base": 100.0,
-    "ratio": 0.99,
+    "ratio": 0.71,
     "level": "보통",
-    "heat": 0.33,
-    "tone": -0.47,
-    "esc_n": 12,
-    "de_n": 33,
+    "heat": 0.14,
+    "tone": -0.45,
+    "esc_n": 9,
+    "de_n": 24,
     "confirm": 0.6,
     "moves": {
      "KRW=X": 0.9
@@ -1083,90 +1132,6 @@
       "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9URXY2X0tnNHZGckJsOWFUV2dNMU1Iel9kRHZ0Z2JLalp3cVYzQ2wzSVVTSTRWdWpkVWVQdGh4NGVpcE9SV3VTRWlkZ1J5clpfck9KS0t6OUJpNTVjV25v?oc=5",
       "publisher": "조세일보",
       "time": "2026-10-30T07:33:00+00:00"
-     }
-    ]
-   },
-   {
-    "key": "russia",
-    "label": "러시아·우크라이나",
-    "n": 11,
-    "base": 20.0,
-    "ratio": 0.55,
-    "level": "낮음",
-    "heat": 0.03,
-    "tone": -0.6,
-    "esc_n": 2,
-    "de_n": 8,
-    "confirm": -0.81,
-    "moves": {
-     "BZ=F": -3.76,
-     "GC=F": -3.07
-    },
-    "direction": -0.66,
-    "intensity": -0.02,
-    "stance": "휴전 기대",
-    "up": [],
-    "down": [],
-    "headlines": [
-     {
-      "title": "러, 드론으로 우크라 기차역 공습… 14명 숨져",
-      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxQRm9OaXhhU013alNxWUlHUHFkbml5TzdFeDQwX3NUNnFjMkN0SW5WaXV1dEFEMUFycTJKNEFZZ1JlWHFtb1VJdkRBeWZRbWd2dWVDQmRkeFFOYmJ3NzJsVEhUVm5TTHhIV0lOQkxyejRBdUdQS0cxRFZ6M0pOLUFqdUJsVDlROXAwNHZhXy1FeGQ5ekZYWFh6MEpLaU5JQQ?oc=5",
-      "publisher": "조선일보",
-      "time": "2026-10-30T15:45:00+00:00"
-     },
-     {
-      "title": "러·우크라 국지 휴전 나흘째, 올레시키 고립 주민들 대피 시작",
-      "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1ET2plMGZCdWxmNnpzNm9uNFhJbGlxSlZfc0lsell0UHB4aTJYeGxQTV9HSms0WnFEYjVBeW1zbWg4eWpqc3pkY0k5ZXdXa2NyUlNLYkgtOHFrZVBWSUhJ0gFfQVVfeXFMTURPamUwZkJ1bGY2enM2b240WElsaXFKVl9zSWx6WXRQcHhpMlh4bFBNX0dKazRacURiNUF5bXNtaDh5ampzemRjSTlld1drY3JSU0tiSC04cWtlUFZJSEk?oc=5",
-      "publisher": "경향신문",
-      "time": "2026-10-30T13:51:00+00:00"
-     },
-     {
-      "title": "[WIKI 이슈] 4년 넘은 우크라 전쟁, 왜 다시 휴전 논의인가...美 압박·경제 카드",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBCNUdFcl8zYS1WSlRFY0dPS1c2V1djVEFMYms1ZDBzVTFNV2RsWHBvNzdRMFVUUWY4X2FKdTlOaVJCTTcySnMzdFNwd0YxSEFhck5lMWlVbmFRODBLY1o4UEVtM1MzM1JZS0txYmplUUM?oc=5",
-      "publisher": "위키리크스한국",
-      "time": "2026-10-30T08:21:00+00:00"
-     }
-    ]
-   },
-   {
-    "key": "mideast",
-    "label": "중동 정세",
-    "n": 24,
-    "base": 44.0,
-    "ratio": 0.55,
-    "level": "낮음",
-    "heat": 0.03,
-    "tone": 0.8,
-    "esc_n": 9,
-    "de_n": 1,
-    "confirm": -0.53,
-    "moves": {
-     "CL=F": -0.31,
-     "GC=F": -3.07
-    },
-    "direction": 0.33,
-    "intensity": 0.01,
-    "stance": "긴장 고조",
-    "up": [],
-    "down": [],
-    "headlines": [
-     {
-      "title": "트럼프 “이란 전쟁 곧 끝날 것”…호르무즈는 여전히 일촉즉발",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9YZ0VROFlMZWtqY1A4RzlRWnp5MlNQRXUtVC1uc2F1c1VxV3F0bzRFX1FjWkduRWExV0tlZXA5Rm1Cc0JkMkd4amNsb2p5b0M1NWdkMGdUODJYTVk?oc=5",
-      "publisher": "KBS 뉴스",
-      "time": "2026-10-30T22:25:00+00:00"
-     },
-     {
-      "title": "이란 혁명수비대 “호르무즈 해협서 유조선 2척에 화재”",
-      "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5IRWozd1YwN2RObW5oTmdJNW14OWNSXzI2Q2tVVnd1NzZuNmxCNGtlTkxPVGhJdjlrOWJQUWZtNFVvZG1EWklnWVpoX2l5NGtKcDlPMmpJODkyRHpmcGtJ0gFfQVVfeXFMTkhFajN3VjA3ZE5tbmhOZ0k1bXg5Y1JfMjZDa1VWd3U3Nm42bEI0a2VOTE9UaEl2OWs5YlBRZm00VW9kbURaSWdZWmhfaXk0a0pwOU8yakk4OTJEemZwa0k?oc=5",
-      "publisher": "경향신문",
-      "time": "2026-10-30T12:32:00+00:00"
-     },
-     {
-      "title": "이란은 호르무즈 계속 때리는데…트럼프 “이란 전쟁 곧 마무리될 것”",
-      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOREw4VG5jdFR4WjlGZzh4WWx0UlFSV0dWOFowLTNlOVlfdDB3XzlGZVV1bjJtY2xTbDF4Z3hzWlVUNGQzLXc2OHpNYm9VUHJ1d2NRQUs5ZWpIdjdzQUpxRng2bEoyMkJ0cEViejRUeFhnMDI2MVZGZmlqSjlzM0k3UQ?oc=5",
-      "publisher": "이데일리",
-      "time": "2026-10-30T12:51:49+00:00"
      }
     ]
    },
@@ -1211,20 +1176,65 @@
       "time": "2026-10-29T22:44:00+00:00"
      }
     ]
+   },
+   {
+    "key": "russia",
+    "label": "러시아·우크라이나",
+    "n": 10,
+    "base": 20.0,
+    "ratio": 0.5,
+    "level": "낮음",
+    "heat": 0.0,
+    "tone": -0.78,
+    "esc_n": 1,
+    "de_n": 8,
+    "confirm": -0.81,
+    "moves": {
+     "BZ=F": -3.76,
+     "GC=F": -3.07
+    },
+    "direction": -0.79,
+    "intensity": -0.0,
+    "stance": "휴전 기대",
+    "up": [],
+    "down": [],
+    "headlines": [
+     {
+      "title": "러, 드론으로 우크라 기차역 공습… 14명 숨져",
+      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxQRm9OaXhhU013alNxWUlHUHFkbml5TzdFeDQwX3NUNnFjMkN0SW5WaXV1dEFEMUFycTJKNEFZZ1JlWHFtb1VJdkRBeWZRbWd2dWVDQmRkeFFOYmJ3NzJsVEhUVm5TTHhIV0lOQkxyejRBdUdQS0cxRFZ6M0pOLUFqdUJsVDlROXAwNHZhXy1FeGQ5ekZYWFh6MEpLaU5JQQ?oc=5",
+      "publisher": "조선일보",
+      "time": "2026-10-30T15:45:00+00:00"
+     },
+     {
+      "title": "러·우크라 국지 휴전 나흘째, 올레시키 고립 주민들 대피 시작",
+      "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1ET2plMGZCdWxmNnpzNm9uNFhJbGlxSlZfc0lsell0UHB4aTJYeGxQTV9HSms0WnFEYjVBeW1zbWg4eWpqc3pkY0k5ZXdXa2NyUlNLYkgtOHFrZVBWSUhJ0gFfQVVfeXFMTURPamUwZkJ1bGY2enM2b240WElsaXFKVl9zSWx6WXRQcHhpMlh4bFBNX0dKazRacURiNUF5bXNtaDh5ampzemRjSTlld1drY3JSU0tiSC04cWtlUFZJSEk?oc=5",
+      "publisher": "경향신문",
+      "time": "2026-10-30T13:51:00+00:00"
+     },
+     {
+      "title": "[WIKI 이슈] 4년 넘은 우크라 전쟁, 왜 다시 휴전 논의인가...美 압박·경제 카드",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBCNUdFcl8zYS1WSlRFY0dPS1c2V1djVEFMYms1ZDBzVTFNV2RsWHBvNzdRMFVUUWY4X2FKdTlOaVJCTTcySnMzdFNwd0YxSEFhck5lMWlVbmFRODBLY1o4UEVtM1MzM1JZS0txYmplUUM?oc=5",
+      "publisher": "위키리크스한국",
+      "time": "2026-10-30T08:21:00+00:00"
+     }
+    ]
    }
   ],
   "impact": {
    "china": -0.091,
    "semis": -0.146,
-   "defense": 0.389,
-   "korea": -0.354,
+   "defense": 0.475,
+   "oil_up": 0.12,
+   "oil_down": -0.12,
+   "shipping": 0.048,
+   "korea": -0.376,
    "ai": -0.055
   },
   "summary": [
    "북한·한반도: 48시간 기사 69건(평소 44건의 1.6배), 도발 · 5일 원달러 +0.9% → 유리: 방산 / 부담: 국내 상장주",
    "대만 해협: 48시간 기사 7건(평소 8건의 0.9배), 긴장 고조 · 5일 반도체지수 -0.8%, VIX -0.1% → 유리: 방산 / 부담: 반도체, 중국 노출, AI 인프라",
    "연준·금리: 48시간 기사 100건(평소 56건의 1.8배), 방향 혼재 · 5일 미 10년물 금리 -1.2%",
-   "미중 갈등·수출규제: 48시간 기사 4건(평소 4건의 1.1배), 방향 혼재 · 5일 반도체지수 -0.8%"
+   "중동 정세: 48시간 기사 43건(평소 44건의 1.0배), 긴장 고조 · 5일 WTI -0.3%, 금 -3.1% → 유리: 정유·에너지, 방산, 해운·조선 / 부담: 유가 원가 부담주, 국내 상장주"
   ]
  },
  "us_picks": [
@@ -1251,7 +1261,7 @@
   }
  ],
  "date": "2026-10-31",
- "generated": "2026-10-31T10:52+09:00",
+ "generated": "2026-10-31T10:56+09:00",
  "watch": [
   {
    "ticker": "005930.KS",

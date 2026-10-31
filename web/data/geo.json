@@ -4,20 +4,20 @@
   {
    "key": "nk",
    "label": "북한·한반도",
-   "n": 76,
+   "n": 69,
    "base": 44.5,
-   "ratio": 1.71,
+   "ratio": 1.55,
    "level": "높음",
-   "heat": 0.81,
-   "tone": 0.95,
-   "esc_n": 74,
+   "heat": 0.7,
+   "tone": 0.94,
+   "esc_n": 67,
    "de_n": 2,
    "confirm": 0.6,
    "moves": {
     "KRW=X": 0.9
    },
-   "direction": 0.85,
-   "intensity": 0.685,
+   "direction": 0.84,
+   "intensity": 0.587,
    "stance": "도발",
    "up": [
     "방산"
@@ -103,7 +103,7 @@
    "level": "높음",
    "heat": 0.87,
    "tone": 0.62,
-   "esc_n": 51,
+   "esc_n": 52,
    "de_n": 12,
    "confirm": -0.3,
    "moves": {
@@ -132,54 +132,6 @@
      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1VbXhncy1vX2xVMEFseDVGT3FFb0tCdzdkMkYzZnVPbWJpRTByUFhiZ0t0ZXFQYjFCS3dLejBhbXNrT1NRMkFqME9oYkozc3ktTms0bTdEdmU3bnVRTm5GTm1YMUJDNWRMUFRERWZjOA?oc=5",
      "publisher": "조세일보",
      "time": "2026-10-30T00:40:00+00:00"
-    }
-   ]
-  },
-  {
-   "key": "tariff",
-   "label": "관세·무역분쟁",
-   "n": 41,
-   "base": 38.5,
-   "ratio": 1.06,
-   "level": "보통",
-   "heat": 0.38,
-   "tone": 0.2,
-   "esc_n": 3,
-   "de_n": 2,
-   "confirm": 0.4,
-   "moves": {
-    "^GSPC": -0.57,
-    "KRW=X": 0.9
-   },
-   "direction": 0.28,
-   "intensity": 0.106,
-   "stance": "무역 긴장",
-   "up": [
-    "경기 방어"
-   ],
-   "down": [
-    "관세 민감",
-    "수출주",
-    "중국 노출"
-   ],
-   "headlines": [
-    {
-     "title": "EU, 수입 하이브리드차 세이프가드 조사…한국차 수출 촉각",
-     "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5zTUJmV1ZRc0twNzRNRThzZko3WWpDRjc2MWpyNE45d2lxX0VkeE1yTHJWVEdxb1JQVURmVDJKbk11d3VGVVpCcDZ5X1JVbVpxanlWX2RETm1MWUh3V01abjYxM0ZEQy11Q2NrSw?oc=5",
-     "publisher": "스페셜경제",
-     "time": "2026-10-31T01:24:16+00:00"
-    },
-    {
-     "title": "EU, 하이브리드차 세이프가드 착수...정부, 한국차 수출 영향 점검",
-     "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBhR1c1RC1OSDB6ZVphblZYaEc4UjZuektiWlIwemU5Nm5kc2RaeFIxeFBkajBGM0twWUZ6S1Jrcm85RF9EMnhZYzFwOTBQaTZpOHN1V1hGcnFUM05E?oc=5",
-     "publisher": "뉴스핌",
-     "time": "2026-10-30T11:15:00+00:00"
-    },
-    {
-     "title": "트럼프, 美 현지 생산에 관세 혜택…자동차업계 투자 압박",
-     "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1ObGdRbXhiOWhuZ3NIZmMtakFLZjJ3UGFLVFBtR1FabmIyaF8xVVhDUkFSN2VKQUthdnRJYUlCNFVRcEVlbnNWTDVfeG5OWlZnWk5NRTR5ZllIX2dLX3U3QndhUXc?oc=5",
-     "publisher": "매일일보",
-     "time": "2026-10-30T07:21:07+00:00"
     }
    ]
   },
@@ -276,14 +228,14 @@
   {
    "key": "fx",
    "label": "환율(원화)",
-   "n": 99,
+   "n": 71,
    "base": 100.0,
-   "ratio": 0.99,
+   "ratio": 0.71,
    "level": "보통",
-   "heat": 0.33,
-   "tone": -0.47,
-   "esc_n": 12,
-   "de_n": 33,
+   "heat": 0.14,
+   "tone": -0.45,
+   "esc_n": 9,
+   "de_n": 24,
    "confirm": 0.6,
    "moves": {
     "KRW=X": 0.9
@@ -315,23 +267,65 @@
    ]
   },
   {
+   "key": "tariff",
+   "label": "관세·무역분쟁",
+   "n": 17,
+   "base": 38.5,
+   "ratio": 0.44,
+   "level": "낮음",
+   "heat": 0.0,
+   "tone": 0.0,
+   "esc_n": 1,
+   "de_n": 1,
+   "confirm": 0.4,
+   "moves": {
+    "^GSPC": -0.57,
+    "KRW=X": 0.9
+   },
+   "direction": 0.08,
+   "intensity": 0.0,
+   "stance": "방향 혼재",
+   "up": [],
+   "down": [],
+   "headlines": [
+    {
+     "title": "EU, 수입 하이브리드차 세이프가드 조사…한국차 수출 촉각",
+     "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5zTUJmV1ZRc0twNzRNRThzZko3WWpDRjc2MWpyNE45d2lxX0VkeE1yTHJWVEdxb1JQVURmVDJKbk11d3VGVVpCcDZ5X1JVbVpxanlWX2RETm1MWUh3V01abjYxM0ZEQy11Q2NrSw?oc=5",
+     "publisher": "스페셜경제",
+     "time": "2026-10-31T01:24:16+00:00"
+    },
+    {
+     "title": "EU, 수입 하이브리드차 세이프가드 조사…韓 수출 영향 점검",
+     "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9QYzFpT0hyMnRicC0za3Y3RC1kNUdVeDJCYUJWVFRtZ1g2WmxEOVd3cTU2QXgxNzFYamwwZnZ4YzNpS25wMmMxMkNuazlaWnBJbFJfUWRDTjd5Q1huWVlGeHd4U20xRVktY1V5Y3pMWHU2b25abWtlSdIBeEFVX3lxTE9QYzFpT0hyMnRicC0za3Y3RC1kNUdVeDJCYUJWVFRtZ1g2WmxEOVd3cTU2QXgxNzFYamwwZnZ4YzNpS25wMmMxMkNuazlaWnBJbFJfUWRDTjd5Q1huWVlGeHd4U20xRVktY1V5Y3pMWHU2b25abWtlSQ?oc=5",
+     "publisher": "뉴시스",
+     "time": "2026-10-30T10:44:35+00:00"
+    },
+    {
+     "title": "트럼프 행정부 \"미국에 자동차 공장 건설하면 관세 완화\"",
+     "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1SWWVFcjRocDNLQWEtT3cyNHVLRGtOZkhHSkJJekJJUEJ4cVhiaXNKR3hhaHlIUEREQWp1cTRPcmJUQ21EQUVrNms4cTF1bUVET3g5VE1UdXcxYVR3UHNCOFFkVi1jUlRNUEF2OWRrYXF4TlHSAXNBVV95cUxNUlllRXI0aHAzS0FhLU93MjR1S0RrTmZIR0pCSXpCSVBCeHFYYmlzSkd4YWh5SFBEREFqdXE0T3JiVENtREFFazZrOHExdW1FRE94OVRNVHV3MWFUd1BzQjhRZFYtY1JUTVBBdjlka2FxeE5R?oc=5",
+     "publisher": "한국일보",
+     "time": "2026-10-29T22:44:00+00:00"
+    }
+   ]
+  },
+  {
    "key": "russia",
    "label": "러시아·우크라이나",
-   "n": 11,
+   "n": 10,
    "base": 20.0,
-   "ratio": 0.55,
+   "ratio": 0.5,
    "level": "낮음",
-   "heat": 0.03,
-   "tone": -0.6,
-   "esc_n": 2,
+   "heat": 0.0,
+   "tone": -0.78,
+   "esc_n": 1,
    "de_n": 8,
    "confirm": -0.81,
    "moves": {
     "BZ=F": -3.76,
     "GC=F": -3.07
    },
-   "direction": -0.66,
-   "intensity": -0.02,
+   "direction": -0.79,
+   "intensity": -0.0,
    "stance": "휴전 기대",
    "up": [],
    "down": [],
@@ -358,24 +352,21 @@
   }
  ],
  "impact": {
-  "china": -0.123,
+  "china": -0.091,
   "semis": -0.146,
-  "tariff": -0.106,
-  "defense": 0.504,
-  "export": -0.064,
-  "defensive": 0.032,
-  "oil_up": 0.112,
-  "oil_down": -0.112,
+  "defense": 0.475,
+  "oil_up": 0.12,
+  "oil_down": -0.12,
   "shipping": 0.048,
-  "korea": -0.435,
+  "korea": -0.376,
   "ai": -0.055
  },
- "generated": "2026-10-31T10:49+09:00",
+ "generated": "2026-10-31T10:56+09:00",
  "summary": [
-  "북한·한반도: 48시간 기사 76건(평소 44건의 1.7배), 도발 · 5일 원달러 +0.9% → 유리: 방산 / 부담: 국내 상장주",
+  "북한·한반도: 48시간 기사 69건(평소 44건의 1.6배), 도발 · 5일 원달러 +0.9% → 유리: 방산 / 부담: 국내 상장주",
   "대만 해협: 48시간 기사 7건(평소 8건의 0.9배), 긴장 고조 · 5일 반도체지수 -0.8%, VIX -0.1% → 유리: 방산 / 부담: 반도체, 중국 노출, AI 인프라",
   "연준·금리: 48시간 기사 100건(평소 56건의 1.8배), 방향 혼재 · 5일 미 10년물 금리 -1.2%",
-  "관세·무역분쟁: 48시간 기사 41건(평소 38건의 1.1배), 무역 긴장 · 5일 S&P500 -0.6%, 원달러 +0.9% → 유리: 경기 방어 / 부담: 관세 민감, 수출주, 중국 노출"
+  "중동 정세: 48시간 기사 43건(평소 44건의 1.0배), 긴장 고조 · 5일 WTI -0.3%, 금 -3.1% → 유리: 정유·에너지, 방산, 해운·조선 / 부담: 유가 원가 부담주, 국내 상장주"
  ],
  "tag_ko": {
   "semis": "반도체",

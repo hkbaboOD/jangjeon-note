@@ -793,12 +793,6 @@
    "time": "2026-10-30T14:05:00+00:00"
   },
   {
-   "title": "[K증시돋보기] '주주환원 카드' 삼전·닉스, 코스피 반등할까",
-   "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5mQjlXRmJfT3FWYzdpSmp2dXVCeFFpQndNWldpSS16RVdheHFxRUJoUzVRY3NPWUdVc0g5TW1BeERIVzNHQWZ2WkJXQ2JzUDBLTEpiejBSOGQ0eTJGS1JEQmJRZHBYZkgzenlPRDdxMndfWl9P0gF0QVVfeXFMTmZCOVdGYl9PcVZjN2lKanZ1dUJ4UWlCd01aV2lJLXpFV2F4cXFFQmhTNVFjc09ZR1VzSDlNbUF4REhXM0dBZnZaQldDYnNQMEtMSmJ6MFI4ZDR5MkZLUkRCYlFkcFhmSDN6eU9EN3Eyd19aX08?oc=5",
-   "publisher": "주간한국",
-   "time": "2026-10-31T00:26:59+00:00"
-  },
-  {
    "title": "“상장 첫날 던지라는 말이 맞나요”…한국증시 암울하게 하는 새내기주",
    "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5SNEVXY0toNDc0bDdscUZkWnlKV0RiMTJJV3FQLWRxVk1NY0VVUUpFODhwX3pCMWV5cVRBMXJ0RDJhMUJaR2pOcHYzTjBVZFEta1E?oc=5",
    "publisher": "매일경제",
@@ -821,6 +815,12 @@
    "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPdXJsM2xucERaUVRXSnBFODNURV9EY0Q3RkpOZ1ltdUJVUUpTSl9mNkx4eG1BdC1fSkNwU2ZEY3hQMnpSRVVBSlQ1bm9mSUJzbGM4VWs2S293aW9JdFA4aXZ4M01pR0NHT3NmNHYzbThVUzczZ1FtUHN3bWVqNUh0eFlTN3pkSXNhRm93?oc=5",
    "publisher": "조선일보",
    "time": "2026-10-30T15:44:00+00:00"
+  },
+  {
+   "title": "\"원화 강세에 실적 악화 우려\"…글로벌 IB, 코스피 목표치 하향 조정",
+   "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5CY213eHpOVmZ3NURLODdCaUlTczlCVWlqUEl4cFlidHoyZ0lRMzZGMHpIY1ZDN0ZLd0Q4UUl1RHJjVldZeHg5Q1pMVlBGc2ZMLWY3c3lzVThRVzI4bHE5SkxJSWw?oc=5",
+   "publisher": "서울경제TV",
+   "time": "2026-10-30T23:00:04+00:00"
   }
  ],
  "earnings": [
@@ -856,11 +856,11 @@
   }
  ],
  "geo": [
-  "북한·한반도: 48시간 기사 76건(평소 44건의 1.7배), 도발 · 5일 원달러 +0.9% → 유리: 방산 / 부담: 국내 상장주",
+  "북한·한반도: 48시간 기사 69건(평소 44건의 1.6배), 도발 · 5일 원달러 +0.9% → 유리: 방산 / 부담: 국내 상장주",
   "대만 해협: 48시간 기사 7건(평소 8건의 0.9배), 긴장 고조 · 5일 반도체지수 -0.8%, VIX -0.1% → 유리: 방산 / 부담: 반도체, 중국 노출, AI 인프라",
   "연준·금리: 48시간 기사 100건(평소 56건의 1.8배), 방향 혼재 · 5일 미 10년물 금리 -1.2%",
-  "관세·무역분쟁: 48시간 기사 41건(평소 38건의 1.1배), 무역 긴장 · 5일 S&P500 -0.6%, 원달러 +0.9% → 유리: 경기 방어 / 부담: 관세 민감, 수출주, 중국 노출"
+  "중동 정세: 48시간 기사 43건(평소 44건의 1.0배), 긴장 고조 · 5일 WTI -0.3%, 금 -3.1% → 유리: 정유·에너지, 방산, 해운·조선 / 부담: 유가 원가 부담주, 국내 상장주"
  ],
  "date": "2026-10-31",
- "generated": "2026-10-31T10:49+09:00"
+ "generated": "2026-10-31T10:56+09:00"
 }
