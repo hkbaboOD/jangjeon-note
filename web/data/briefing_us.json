@@ -1,15 +1,14 @@
 {
  "kr_date": "2026-10-30",
- "kr_stale": false,
+ "kr_stale": true,
  "futures": [
   {
    "ticker": "ES=F",
    "name": "S&P500 선물",
-   "last": 7614.5,
-   "chg": -1.8022374826707988,
-   "date": "2026-10-30",
+   "last": 7584.5,
+   "chg": -0.3874441817704244,
+   "date": "2026-11-02",
    "spark": [
-    7833.5,
     7831.75,
     7772.5,
     7767.0,
@@ -38,17 +37,17 @@
     7758.25,
     7783.25,
     7754.25,
-    7614.5
+    7614.0,
+    7584.5
    ]
   },
   {
    "ticker": "NQ=F",
    "name": "나스닥100 선물",
-   "last": 28543.0,
-   "chg": -3.44699276097693,
-   "date": "2026-10-30",
+   "last": 28207.5,
+   "chg": -1.1442489661456556,
+   "date": "2026-11-02",
    "spark": [
-    30784.75,
     31028.5,
     30764.75,
     30766.75,
@@ -77,17 +76,17 @@
     29812.0,
     29979.5,
     29562.0,
-    28543.0
+    28534.0,
+    28207.5
    ]
   },
   {
    "ticker": "YM=F",
    "name": "다우 선물",
-   "last": 51928.0,
-   "chg": -1.1121267519805023,
-   "date": "2026-10-30",
+   "last": 52158.0,
+   "chg": 0.46226742170345503,
+   "date": "2026-11-02",
    "spark": [
-    52475.0,
     52279.0,
     51873.0,
     51717.0,
@@ -116,7 +115,8 @@
     52579.0,
     52696.0,
     52512.0,
-    51928.0
+    51918.0,
+    52158.0
    ]
   }
  ],
@@ -204,11 +204,10 @@
   {
    "ticker": "^GSPC",
    "name": "S&P500",
-   "last": 7580.06982421875,
-   "chg": -1.8175287778868343,
-   "date": "2026-10-30",
+   "last": 7541.39990234375,
+   "chg": -0.5101525813317354,
+   "date": "2026-11-02",
    "spark": [
-    7764.7002,
     7764.6401,
     7706.0298,
     7704.1299,
@@ -237,17 +236,17 @@
     7722.6001,
     7743.98,
     7720.3901,
-    7580.0698
+    7580.0698,
+    7541.3999
    ]
   },
   {
    "ticker": "^IXIC",
    "name": "나스닥",
-   "last": 25436.998046875,
-   "chg": -2.8555685765277783,
-   "date": "2026-10-30",
+   "last": 25164.31640625,
+   "chg": -1.071995886897037,
+   "date": "2026-11-02",
    "spark": [
-    27122.0898,
     27244.2793,
     26936.0391,
     26939.3691,
@@ -276,17 +275,17 @@
     26477.8105,
     26549.8496,
     26184.7207,
-    25436.998
+    25437.0,
+    25164.3164
    ]
   },
   {
    "ticker": "^SOX",
    "name": "필라델피아반도체",
-   "last": 10688.7998046875,
-   "chg": -7.200781168593828,
-   "date": "2026-10-30",
+   "last": 10328.3291015625,
+   "chg": -3.372415142127727,
+   "date": "2026-11-02",
    "spark": [
-    12433.1699,
     12689.8203,
     12534.2803,
     12492.54,
@@ -315,7 +314,8 @@
     11482.5,
     11684.0,
     11518.2002,
-    10688.7998
+    10688.7998,
+    10328.3291
    ]
   }
  ],
@@ -323,11 +323,10 @@
   {
    "ticker": "^TNX",
    "name": "미 10년물(%)",
-   "last": 4.928999900817871,
-   "chg": -1.20264471157564,
-   "date": "2026-10-30",
+   "last": 4.894000053405762,
+   "chg": -0.7100800997440038,
+   "date": "2026-11-02",
    "spark": [
-    4.963,
     4.968,
     5.114,
     5.162,
@@ -356,18 +355,18 @@
     4.993,
     5.045,
     4.989,
-    4.929
+    4.929,
+    4.894
    ],
-   "chg_bp": -5.999994277954102
+   "chg_bp": -3.4999847412109375
   },
   {
    "ticker": "^VIX",
    "name": "VIX",
-   "last": 19.420000076293945,
-   "chg": 12.90697217954715,
-   "date": "2026-10-30",
+   "last": 21.149999618530273,
+   "chg": 8.908339523376952,
+   "date": "2026-11-02",
    "spark": [
-    14.87,
     14.21,
     15.18,
     15.67,
@@ -396,17 +395,17 @@
     17.52,
     16.91,
     17.2,
-    19.42
+    19.42,
+    21.15
    ]
   },
   {
    "ticker": "CL=F",
    "name": "WTI",
-   "last": 102.94999694824219,
-   "chg": 0.9313695571001812,
-   "date": "2026-10-30",
+   "last": 96.11000061035156,
+   "chg": -7.693048333590646,
+   "date": "2026-11-02",
    "spark": [
-    95.78,
     94.59,
     92.16,
     94.61,
@@ -435,17 +434,17 @@
     99.9,
     102.78,
     102.0,
-    102.95
+    104.12,
+    96.11
    ]
   },
   {
    "ticker": "BZ=F",
    "name": "브렌트",
-   "last": 112.33000183105469,
-   "chg": -2.2197035892490113,
-   "date": "2026-10-30",
+   "last": 104.1500015258789,
+   "chg": -11.46718627487222,
+   "date": "2026-11-02",
    "spark": [
-    100.34,
     99.25,
     103.08,
     106.6,
@@ -474,17 +473,17 @@
     113.88,
     115.32,
     114.88,
-    112.33
+    117.64,
+    104.15
    ]
   },
   {
    "ticker": "DX-Y.NYB",
    "name": "달러인덱스",
-   "last": 101.96399688720703,
-   "chg": -0.07448454296196116,
-   "date": "2026-10-30",
+   "last": 101.7760009765625,
+   "chg": -0.10207722777689776,
+   "date": "2026-11-02",
    "spark": [
-    100.43,
     100.6,
     101.1,
     101.29,
@@ -513,17 +512,17 @@
     102.32,
     102.19,
     102.04,
-    101.964
+    101.88,
+    101.776
    ]
   },
   {
    "ticker": "KRW=X",
    "name": "원달러",
-   "last": 1337.97998046875,
-   "chg": -0.17607363890833616,
-   "date": "2026-10-30",
+   "last": 1345.699951171875,
+   "chg": 0.5769870114514353,
+   "date": "2026-11-02",
    "spark": [
-    1384.86,
     1373.6801,
     1350.36,
     1362.5,
@@ -552,17 +551,17 @@
     1324.77,
     1326.8101,
     1340.34,
-    1337.98
+    1337.98,
+    1345.7
    ]
   },
   {
    "ticker": "GC=F",
    "name": "금",
-   "last": 3884.89990234375,
-   "chg": -3.633973397549295,
-   "date": "2026-10-30",
+   "last": 3954.89990234375,
+   "chg": 1.4363025828474596,
+   "date": "2026-11-02",
    "spark": [
-    4383.8999,
     4376.3999,
     4318.3999,
     4298.0,
@@ -591,7 +590,8 @@
     4074.6001,
     4051.6001,
     4031.3999,
-    3884.8999
+    3898.8999,
+    3954.8999
    ]
   }
  ],
@@ -661,33 +661,40 @@
   }
  },
  "review": [
-  "코스피 5,730.74 (-3.48%), 코스닥 -3.83% · 원/달러 1,338.0원(-0.18%)",
+  "⚠ 국내장 데이터가 10/30 마감 기준입니다 (11/2 데이터 미수신 또는 휴장) — 네이버 증권에서 확인하세요",
+  "코스피 5,730.74 (-3.48%), 코스닥 -3.83% · 원/달러 1,345.7원(+0.58%)",
   "국내 유니버스 상승 18 · 하락 22 — 강세 삼성바이오로직스 +8.9%, 약세 기아 -11.7%"
  ],
  "tonight": [
-  "미 지수 선물 약세: S&P500 선물 -1.80%, 나스닥100 선물 -3.45%",
-  "VIX 19.4 — 안정 구간(20 미만)",
-  "미 10년물 금리 -6bp — 성장주 우호적",
-  "실적 발표 — 오늘(미국 시간): 셰브론, 애브비, 엑슨모빌"
+  "미 지수 선물 약세: S&P500 선물 -0.39%, 나스닥100 선물 -1.14%",
+  "VIX 21.1 — 변동성 경계 구간(20~25)",
+  "WTI -7.7% — 에너지 약세·인플레 부담 완화",
+  "실적 발표 — 오늘(미국 시간): 애플 / 내일: AMD, 암젠, 화이자"
  ],
  "earnings": [
   {
-   "ticker": "CVX",
-   "name": "셰브론",
-   "date": "2026-10-30",
+   "ticker": "AAPL",
+   "name": "애플",
+   "date": "2026-11-02",
    "in_days": 0
   },
   {
-   "ticker": "ABBV",
-   "name": "애브비",
-   "date": "2026-10-30",
-   "in_days": 0
+   "ticker": "AMD",
+   "name": "AMD",
+   "date": "2026-11-03",
+   "in_days": 1
   },
   {
-   "ticker": "XOM",
-   "name": "엑슨모빌",
-   "date": "2026-10-30",
-   "in_days": 0
+   "ticker": "AMGN",
+   "name": "암젠",
+   "date": "2026-11-03",
+   "in_days": 1
+  },
+  {
+   "ticker": "PFE",
+   "name": "화이자",
+   "date": "2026-11-03",
+   "in_days": 1
   }
  ],
  "diagnosis": [
@@ -699,334 +706,173 @@
    "evidence": [
     "평균 목표가 +0.0%",
     "선행 EPS 추정치 +0.0%",
-    "투자의견 평균 1.35→1.34 (낮을수록 매수)",
+    "투자의견 평균 1.34→1.34 (낮을수록 매수)",
     "추정치 변화 없으나 밸류에이션 매력은 제한적"
    ]
   },
   {
    "ticker": "MU",
    "name": "마이크론",
-   "chg_1d": -5.3014683401406355,
-   "type": "수급·심리성(약)",
-   "evidence": [
-    "평균 목표가 +0.0%",
-    "선행 EPS 추정치 +0.0%",
-    "투자의견 평균 1.37→1.37 (낮을수록 매수)",
-    "추정치 변화 없으나 밸류에이션 매력은 제한적"
-   ]
-  },
-  {
-   "ticker": "NVDA",
-   "name": "엔비디아",
-   "chg_1d": -4.221662509528712,
-   "type": "수급·심리성(약)",
-   "evidence": [
-    "평균 목표가 +0.0%",
-    "선행 EPS 추정치 +0.0%",
-    "투자의견 평균 1.29→1.29 (낮을수록 매수)",
-    "추정치 변화 없으나 밸류에이션 매력은 제한적"
-   ]
-  },
-  {
-   "ticker": "TSM",
-   "name": "TSMC",
-   "chg_1d": -5.947058387015847,
+   "chg_1d": -5.781355420065982,
    "type": "수급·심리성(약)",
    "evidence": [
     "평균 목표가 +0.0%",
     "선행 EPS 추정치 -0.0%",
-    "투자의견 평균 1.38→1.38 (낮을수록 매수)",
+    "투자의견 평균 1.37→1.37 (낮을수록 매수)",
     "추정치 변화 없으나 밸류에이션 매력은 제한적"
    ]
   }
  ],
  "news": [
   {
-   "title": "Investors Have Poured a Record $2.24 Trillion Into ETFs This Year. Three Firms Collected Nearly Half of It",
-   "link": "https://finance.yahoo.com/markets/stocks/articles/investors-poured-record-2-24-000347530.html",
+   "title": "IDEXX Soars 20.2% on Earnings Beat: What It Means for Your S&P 500 Index Fund",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/idexx-soars-20-2-earnings-195439479.html",
    "publisher": "24/7 Wall St.",
-   "time": "2026-10-31T00:03:47Z"
+   "time": "2026-11-02T19:54:39Z"
   },
   {
-   "title": "5,500 ETFs and Counting: Where the Market Goes Next",
-   "link": "https://finance.yahoo.com/markets/stocks/articles/5-500-etfs-counting-where-203901351.html",
-   "publisher": "etf.com",
-   "time": "2026-10-30T20:39:01Z"
+   "title": "Ed Yardeni's Midterms Prediction: Democratic Sweep Could Be a 'Cold Shower' for Stock Market",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/ed-yardenis-midterms-prediction-democratic-173022387.html",
+   "publisher": "Benzinga Prediction Markets",
+   "time": "2026-11-02T17:30:22Z"
   },
   {
-   "title": "8 Months Ago, A Major Wall Street Bank Said Buy Marvell. It’s Up More Than 150%. Here’s Where We See the Stock Going",
-   "link": "https://finance.yahoo.com/markets/stocks/articles/8-months-ago-major-wall-201736681.html",
+   "title": "Only 37% of Wall Street’s Money Managers Think AI Will Pay Off Within 2 Years — Half Are Still Bullish",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/only-37-wall-street-money-165913273.html",
    "publisher": "24/7 Wall St.",
-   "time": "2026-10-30T20:17:36Z"
+   "time": "2026-11-02T16:59:13Z"
   },
   {
-   "title": "$1,000 in UPS Stock 10 Years Ago: Did the Dividends Offset the Decline?",
-   "link": "https://finance.yahoo.com/markets/stocks/articles/1-000-ups-stock-10-191724722.html",
+   "title": "AI Stocks Slide: Are Tech ETFs Worth Watching?",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/ai-stocks-slide-tech-etfs-152200828.html",
+   "publisher": "Zacks",
+   "time": "2026-11-02T15:22:00Z"
+  },
+  {
+   "title": "‘Marking Their Calendar Until November 3rd.’ Tom Lee Says Investors Waiting To Buy The Dip After The Nasdaq 100’s Worst Month Since March 2025",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/marking-calendar-until-november-3rd-150424721.html",
    "publisher": "24/7 Wall St.",
-   "time": "2026-10-30T19:17:24Z"
+   "time": "2026-11-02T15:04:24Z"
   },
   {
-   "title": "They Called This Stock a Winner in the AI Coding Boom. A Year Later, It’s Up 94%.",
-   "link": "https://finance.yahoo.com/markets/stocks/articles/called-stock-winner-ai-coding-164921139.html",
-   "publisher": "24/7 Wall St.",
-   "time": "2026-10-30T16:49:21Z"
+   "title": "Exchange-Traded Funds, Equity Futures Higher Pre-Bell Monday Ahead of Busy Corporate Earnings Week",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/exchange-traded-funds-equity-futures-140145920.html",
+   "publisher": "MT Newswires",
+   "time": "2026-11-02T14:01:45Z"
   },
   {
-   "title": "Intel’s Earnings Fallout Is Hitting Your Index Funds Too",
-   "link": "https://finance.yahoo.com/markets/stocks/articles/intel-earnings-fallout-hitting-index-162111051.html",
-   "publisher": "24/7 Wall St.",
-   "time": "2026-10-30T16:21:11Z"
+   "title": "Stock Market Today: Dow Jones, S&P 500, Nasdaq 100 Futures Rise Ahead of Apple, Palantir Earnings; RYAAY, USLM, INO in Focus (UPDATED)",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/stock-market-today-dow-jones-102928620.html",
+   "publisher": "Benzinga Prediction Markets",
+   "time": "2026-11-02T13:15:14Z"
   },
   {
-   "title": "Coinbase Tumbles 11% as Record Binance Hack Hits Crypto and Trading Revenue Slides; Strategy Sinks 12%, Robinhood Plunges 10%, Circle Drops 9%",
-   "link": "https://finance.yahoo.com/markets/crypto/articles/coinbase-tumbles-11-record-binance-135440656.html",
-   "publisher": "24/7 Wall St.",
-   "time": "2026-10-30T13:54:40Z"
-  },
-  {
-   "title": "Tom Lee Sees 'Big Beats' Ahead, Says Kevin Warsh-Led Fed Won't Slow AI Growth Despite Inflation: 'Good News Is Good News'",
-   "link": "https://finance.yahoo.com/technology/ai/articles/tom-lee-sees-big-beats-133007421.html",
-   "publisher": "Benzinga",
-   "time": "2026-10-30T13:30:07Z"
-  },
-  {
-   "title": "Oil's Latest Surge Threatens Another Shock to American Budgets",
-   "link": "https://finance.yahoo.com/energy/articles/oils-latest-surge-threatens-another-184050140.html",
+   "title": "SPDR S&P 500 ETF (SPY) Sells NVIDIA and Apple on Oct. 29",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/spdr-p-500-etf-spy-110412869.html",
    "publisher": "GuruFocus.com",
-   "time": "2026-10-30T18:40:50Z"
+   "time": "2026-11-02T11:04:12Z"
   },
   {
-   "title": "Analyst Drops Sharp Take on Fed Rate Hikes",
-   "link": "https://finance.yahoo.com/economy/policy/articles/analyst-drops-sharp-fed-rate-183724596.html",
+   "title": "Exchange-Traded Funds Higher as US Equities Rise After Midday",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/exchange-traded-funds-higher-us-182141612.html",
+   "publisher": "MT Newswires",
+   "time": "2026-11-02T18:21:41Z"
+  },
+  {
+   "title": "VGT vs. QQQ: Which Tech ETF Is the Better Long-Term Buy?",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/vgt-vs-qqq-tech-etf-140500753.html",
+   "publisher": "Motley Fool",
+   "time": "2026-11-02T14:05:00Z"
+  },
+  {
+   "title": "What ProShares Ultra QQQ (QLD) Bought: No Buys as NVIDIA Leads Sells on Oct. 29",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/proshares-ultra-qqq-qld-bought-110439317.html",
    "publisher": "GuruFocus.com",
-   "time": "2026-10-30T18:37:24Z"
+   "time": "2026-11-02T11:04:39Z"
   },
   {
-   "title": "Critical Metals Sinks 11% as European Lithium Deal Nears New Share Issuance; USA Rare Earth Tumbles 10%, MP Materials Falls 6%",
-   "link": "https://finance.yahoo.com/markets/stocks/articles/critical-metals-sinks-11-european-180824555.html",
-   "publisher": "24/7 Wall St.",
-   "time": "2026-10-30T18:08:24Z"
-  },
-  {
-   "title": "FuelCell Energy Sinks 12% Despite Completing $49 Million Export-Import Bank Financing; Bloom Energy Tumbles 10%, Plug Power Falls 4%",
-   "link": "https://finance.yahoo.com/markets/stocks/articles/fuelcell-energy-sinks-12-despite-180454738.html",
-   "publisher": "24/7 Wall St.",
-   "time": "2026-10-30T18:04:54Z"
+   "title": "INVESCO QQQ (QQQ) Sells NVIDIA and Apple on Oct. 29",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/invesco-qqq-qqq-sells-nvidia-110408798.html",
+   "publisher": "GuruFocus.com",
+   "time": "2026-11-02T11:04:08Z"
   }
  ],
- "us_open_kst": "22:30",
- "dst": true,
+ "us_open_kst": "23:30",
+ "dst": false,
  "ai_summary": null,
  "news_kr": [
   {
-   "title": "AI 투자 우려에 뉴욕증시 털썩…인텔 29% 급락에 나스닥 2.9%↓(종합)",
-   "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5PRlZwUXBMUGVHclo2UXBiWURuS0FaU2UtVzhaTGhoTi1DQnJOeHU3NW9qNlBGVm9NT2QzVEZHZ0xtUzJvaUJxZl9PQWV4RUJpZm1UanRESG1SZlXSAWBBVV95cUxQQ1ZyQWNtSVNHRzFKdFk2NjZ6WElOdUswZTN5SXBELVpKRm9RTzg0N01wZzNXS2FnQ2ROY1RaMmFlWlRZM19BWmRRTU9idDY2RWNmWUd2YUdBTGRNR2k4Rnk?oc=5",
-   "publisher": "연합뉴스",
-   "time": "2026-10-30T21:32:37+00:00"
-  },
-  {
-   "title": "뉴욕증시, 기술주 매도 확대…나스닥 2.9% 하락",
-   "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPTG41bDQta3lKRWJKbjdaQU9nNlpUUFVQUDlYNkFzZDV6V0Q2SUtHTjBxdVdZNWZDQzI1bW4zSTh5eXR1UlFSbmFLMTBlZzhYdEFUY2gwVEhzdUdRSE5wdkVGSWh4SUx3ZDd3RnhMMjhMZkZ3T1VwUkM3MW0tQWJQMVZ0MURwUkM0VWdWajkxaGYteG44c25BdGpDbnItUdIBsgFBVV95cUxQbkJHTzROWDJKUnk1b0R4WkdRakJISm96RV9RbVpwc3ZsYUZVX0M0eVlFLVZUMl9lTjdFTkU4M3dublAybWtFLWZzNzJlQnFaZEFwVkxCWmMyb2JlazlZZlBjZ3dtMVFramtMVlZOR0RqTGtlQnpsZG01am5CZE9UY0tIUnFPSXp6Wlllc1M0SnpSUjd3SGx2NFlxa09BdURuT0JYNmZEV0hpdFMyaUUzMHpR?oc=5",
-   "publisher": "Chosunbiz",
-   "time": "2026-10-30T21:45:00+00:00"
-  },
-  {
-   "title": "[뉴욕증시] '아마존 쇼크'에 전방위 기술주 투매…필리 7.20%↓",
-   "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBOQUM1b0Mzc09CY3J6TnFIODN5SzAteHVXd2duUW04U3JmMDRrbzdrRmFlaVgtdER3R2sxR0U0SzNkejlRbF9jTUV3ZXkxZVZsRzczSVg0ZXFBWTk0LTFqeVFKZm1KX3R5STBETnNIUzE?oc=5",
+   "title": "[뉴욕증시] 반등하기엔 근심거리가 많다…나스닥 1%↓",
+   "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1nTkhNWmpPNk9EZTVSTG5FZUZqdmxaNVNDc1FES2xfOC1jQ0txMjd1MXFzOEdPb1ExNzlQUEswY0JWWFlsNUNsV1hyWTNPcVZYcGhzcXhZdk0wcm16a0EySkk3WEp0SFBzOGlrMlZvMV8?oc=5",
    "publisher": "연합인포맥스",
-   "time": "2026-10-30T20:51:28+00:00"
+   "time": "2026-11-02T21:34:43+00:00"
   },
   {
-   "title": "뉴욕 증시 기술주 매도 확대에 일제히 급락 마감",
-   "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBZdDh2bk1SSWRiaE1YSmtGM3hJS3pHVG9mUHM3Q3ZOU0ZPcVllNzhJcHUzNlpxb3NvTkd2U1N5MVlLRWJXVXNOamRkMW1icGVWX3FEVUJxaFo4c0pIbGc?oc=5",
-   "publisher": "YTN",
-   "time": "2026-10-30T21:40:00+00:00"
+   "title": "뉴욕증시, 미-이란 합의 기대감에 상승 출발",
+   "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBQU3JOWGcweG5CemFfbzRyX2JpSVFta2p1OG0wclVFVlBrUFd4UkxlNmEtSmdtSGxVckhDSzhud0R6N2dVV3djTnNEWlRUb2xGaV9Za1I2TE1zbjjSAWBBVV95cUxPTGF0Z2FXVGdCM1JaV2VMU0piQUpacUJpNDZtWFBCb3pBWk4wWVBPV2NwQWw0TjVWWWdWVm9xMlNwaGpNY0ltOHBlR3NOVzk0UWxrLVJxeExzWDV1cjNpZnA?oc=5",
+   "publisher": "연합뉴스",
+   "time": "2026-11-02T14:44:29+00:00"
   },
   {
-   "title": "AI 투자 우려와 어닝 쇼크에... 구글 주가 역대급 폭락",
-   "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5pb0MtRHZ6dUtLbkZmS0JnUFBGYlJyVlM4UURiX3Rxc2dQZERDcko4NlVUU0tlVjZTY0VERXl0X0dqSVN6bk1NdUIxWHFkdnlDeHJuazVYZVY?oc=5",
-   "publisher": "네이버페이 머니스토리",
-   "time": "2026-10-31T01:25:51+00:00"
+   "title": "뉴욕증시, 혼조 마감…유가 급락에도 반도체 약세에 나스닥 1.07%↓",
+   "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5jaEVha0VKTnl5V1lmajF6OEpkZXVoWHlZcUZkOU5SM3ZYYjZ2b0xvSklKOXdOV0tzanF4Y2M0SnBna3VsNzN6MjVUc3YtVWlGSThoWkpoTWNaQV9G?oc=5",
+   "publisher": "뉴스핌",
+   "time": "2026-11-02T21:22:00+00:00"
   },
   {
-   "title": "미국 뉴욕증시 기술주 매도 확대…나스닥 2.9%↓·인텔 29%↓ 큰폭 하락",
-   "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFAtckluX1NmTTkyajZBNHI4X2VrZVVFTmQ5SjZHQkU1YW11SDk1WkZmV3ctNVJFLTJjbHlVMzkwd1RaY1NPTFRsNE1JUk1HMGw0cVd5ZnE4WE1uZFU?oc=5",
-   "publisher": "KBS 뉴스",
-   "time": "2026-10-30T21:36:00+00:00"
+   "title": "[속보]또 고개 숙인 나스닥 1.07%↓",
+   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5uZlRVMG9qZUtXZTJORk1xZldOLVJRWXhGYVRGUTF4NERjWXRhb3R5VEd1a0NaOVR6RzZhNEczMHRUSEVVQ1FuRnZJN0tmLS1N?oc=5",
+   "publisher": "문화일보",
+   "time": "2026-11-02T21:26:23+00:00"
   },
   {
-   "title": "뉴욕증시, AI 투자 수익성 우려에 급락…인텔 29%↓",
-   "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5LakFWNnFya0p6c2paRURMLTNuX2RISThTTjNuY3o1OUM4SUt3ZmtxcTFDdl9wRXRpUnI5d0dJblNTMGlFbHI4RWFrVWZaRVcxQ2NLZWhnemJ1ZUNwMHZ4S2tUdHg?oc=5",
-   "publisher": "서울경제TV",
-   "time": "2026-10-31T00:42:01+00:00"
+   "title": "뉴욕증시, 상승세로 전환…나스닥 0.12%↑",
+   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBINFZIM2tjZkxMYy04OTgwY1dISDFXYS12Z2FlUkw1dmJuVkpDWGROVUE2WjVyNFRwU3d1b3lUN0Z0RVBpb3V4dFd0dXNqUU1C?oc=5",
+   "publisher": "블루밍비트",
+   "time": "2026-11-02T18:43:31+00:00"
   },
   {
-   "title": "뉴욕증시, AI 투자 우려에 일제히 하락…인텔 29% 급락",
-   "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE03aWJ6YVZZbjBuREV6dXVweF9TUG03MGx0UEVoR3k2OWxMQ3hOZDQzYTVXR2YxZ09HMnJWd3ZhNXdpcVlaRzBaVXlFZjg0T2VUel9FRXB2SXZMX2d4S0FtcDB3VTk?oc=5",
-   "publisher": "디지털데일리",
-   "time": "2026-10-30T20:39:22+00:00"
+   "title": "[서울데이터랩] 미 증시 혼조 마감…다우 상승했지만 나스닥 1%대 하락",
+   "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBGdldWeFAzZEgyejZEZEg3Y2RaNnRYTG00WlUtbG40MmdTVm90T0dSTEFvcWE2Yk03UEhSZFhFb2lQME5KSmxYR1Nic0wzUnJpM21WX0tCdFNyMXU5bWJZcG9raHpDT2ZpZVdXS0sxNnFkNy1OQW15MjRHcUlvZw?oc=5",
+   "publisher": "서울신문",
+   "time": "2026-11-02T21:12:14+00:00"
+  },
+  {
+   "title": "Citi “공화당이 상원 지키면 미국 증시 상승 가능”",
+   "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9HTXNaMTFQUjdEaVRGTFdiSHgzUEZWbzJMQW94V2pjWUdreDNTSmhrT3V0QlNZaTFMS18wZHpiSGRYMHFoSUF2b1dJdnV1REZ1M2s3WTBfZ0JVV3NDRjBjejU5NFctdlVXdzNHd29ubnVGOUhHRHU0?oc=5",
+   "publisher": "Investing.com 한국어",
+   "time": "2026-11-02T09:43:00+00:00"
+  },
+  {
+   "title": "[뉴욕증시]선거 D-1 유가 급락…기술주 반등에 상승세",
+   "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE8xT2d0VW9TTTVTTlhUUjZfdVZkZEE3RTkyaXlNMUdWQlV0R0tZaTUzUEJDRzZOcVVZUTJrNzZpS2gtZXdlMGhYYnozMWI1YklUUENQWkpZLWZybTV4NnpsLQ?oc=5",
+   "publisher": "아시아경제",
+   "time": "2026-11-02T14:48:03+00:00"
   }
  ],
  "geo": {
-  "date": "2026-10-31",
+  "date": "2026-11-03",
   "themes": [
    {
-    "key": "nk",
-    "label": "북한·한반도",
-    "n": 69,
-    "base": 44.5,
-    "ratio": 1.55,
-    "level": "높음",
-    "heat": 0.7,
-    "tone": 0.94,
-    "esc_n": 67,
-    "de_n": 2,
-    "confirm": 0.6,
-    "moves": {
-     "KRW=X": 0.9
-    },
-    "direction": 0.84,
-    "intensity": 0.587,
-    "stance": "도발",
-    "up": [
-     "방산"
-    ],
-    "down": [
-     "국내 상장주"
-    ],
-    "headlines": [
-     {
-      "title": "北, 동해상으로 탄도미사일 10여발 발사…군사회담 제안 응답 없이 도발",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9TYWRMLUplbUU0N1NmUFBVVkd0Q21pblNpYzhITzJfOHlZRW5xajhjYV9lOXlVN2dncVBYRmw5UEttc2dReVBZekFlaC1idTB0a3J6TzZR?oc=5",
-      "publisher": "중앙일보",
-      "time": "2026-10-29T07:24:24+00:00"
-     },
-     {
-      "title": "북한, 단거리 탄도미사일 등 10여발 발사…군사회담 제의 6일만",
-      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFA1TTAwSl9BTFhOUTlOeklOUWp3clhZY3EyZjJJUWRJd21OMFlRVVU3cy1UMmdPa2FHU3lMUFgyUlhoM205RFRscHZZUklfdWxSUlp0RW56X08wQdIBX0FVX3lxTFBJTjNVSDd0dXlZMHNYcjVseEtmWEliQWUyMUhwUU5EVFEwNVVOXzI3QUFKYWpUU1pBaWQ3NWthNDRGdDEyT09FR1BvVWV4X05CMDVVOWFOVlljYkExRnZB?oc=5",
-      "publisher": "경향신문",
-      "time": "2026-10-29T04:11:00+00:00"
-     },
-     {
-      "title": "합참 “북, 동해상으로 단거리 탄도미사일 10여발 발사”",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBaR0ZZVmxZNjR6RGJGZVNVWGR0MzlvUzNnRDVDeVNpZkVqQkNkc2dwTjRLU1FIMGtLYUFYdVY3WVM5ZV9lMDNXLXBZWlNWQTkzQ1hBNThPekhHREQ1MEpLcm0zM0piQWl2?oc=5",
-      "publisher": "한겨레",
-      "time": "2026-10-29T03:42:00+00:00"
-     }
-    ]
-   },
-   {
-    "key": "taiwan",
-    "label": "대만 해협",
-    "n": 7,
-    "base": 7.5,
-    "ratio": 0.93,
+    "key": "fx",
+    "label": "환율(원화)",
+    "n": 75,
+    "base": 100.0,
+    "ratio": 0.75,
     "level": "보통",
-    "heat": 0.29,
-    "tone": 1.0,
-    "esc_n": 4,
-    "de_n": 0,
-    "confirm": 0.08,
+    "heat": 0.17,
+    "tone": 0.26,
+    "esc_n": 22,
+    "de_n": 13,
+    "confirm": 1.0,
     "moves": {
-     "^SOX": -0.84,
-     "^VIX": -0.15
+     "KRW=X": 1.81
     },
-    "direction": 0.63,
-    "intensity": 0.183,
-    "stance": "긴장 고조",
+    "direction": 0.85,
+    "intensity": 0.145,
+    "stance": "원화 약세",
     "up": [
-     "방산"
-    ],
-    "down": [
-     "반도체",
-     "중국 노출",
-     "AI 인프라"
-    ],
-    "headlines": [
-     {
-      "title": "대만, 미국 측 통보에 따라 아파치 헬기 비행 전면 중단",
-      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5kNDNSeGZFb1UxcHNrRlpGSjJ4WTZMSS1HUnZFSG1KOE15dGxlYWhKaVd5N1JGeU9oRjN2cnlZVzFDTlhqcndsX2FVTHZvUDRsSVp0RFFRSHpiUdIBX0FVX3lxTE0yVTB2b0Vhak8zQ182UWREaTRiZUVTQnhwV1EydExOWmtxT1ZzUzJQNmprLWtZT011NDJFblRWdzgtaGh4SzBvRlprcDNTbHpnelp2NjlPMGtwN0dLc2FZ?oc=5",
-      "publisher": "경향신문",
-      "time": "2026-10-30T05:46:00+00:00"
-     },
-     {
-      "title": "대만, 아파치 헬기 비행 전면 금지…美 '기술점검' 통보",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5XMngzSk9iVk9nb1d4UWd5VE5LbDk0RzF6TG1tX0V0LWhCcHkwSDRsV0Jrby1rb3BrQ3NBbWZSNTJUR1ItNXFxRVBVYThhbDhVdWVrcWpXaUxRTTTSAWBBVV95cUxNVEYxVGEwdDZraXpkV2p3eWFIR3FxM3Y4YTlkNUc1UFBuTlFqendoWmRHS3FENUdOSU1fdGlNUktQZkRlRlBKX2lyOHpTbzJDMEExeXloOGFWcmdUelRObXg?oc=5",
-      "publisher": "연합뉴스",
-      "time": "2026-10-30T02:45:19+00:00"
-     },
-     {
-      "title": "“항공모함까지 떴다”…코앞에 몰려든 중국 군함 53척에 대만이 발끈한 이유 [밀리터리노트]",
-      "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE43bVk3d0Z4NWNKaE5zclE5elhibVlwVHhUMmFJV1g2c29pLV9RMlYtQk13dzA3eGdIdlpKLW1TZ0daU3BaT3BtcXN1UC0xQm5jM2syTmtNa2JoYUh2TEl6MWhyaGd3cFF6ZGxUN3J4ZGRXSkRVNEdiT3dyOEd1Ukk?oc=5",
-      "publisher": "서울신문",
-      "time": "2026-10-29T06:38:11+00:00"
-     }
-    ]
-   },
-   {
-    "key": "fed",
-    "label": "연준·금리",
-    "n": 100,
-    "base": 55.5,
-    "ratio": 1.8,
-    "level": "높음",
-    "heat": 0.87,
-    "tone": 0.62,
-    "esc_n": 52,
-    "de_n": 12,
-    "confirm": -0.3,
-    "moves": {
-     "^TNX": -1.18
-    },
-    "direction": 0.13,
-    "intensity": 0.0,
-    "stance": "방향 혼재",
-    "up": [],
-    "down": [],
-    "headlines": [
-     {
-      "title": "\"연준 금리 결정 회의 축소, '선제 침묵' 시대 신호\" |",
-      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5ua3U3d2c1cHUxbUV6aUVySmpPVUFRNWp2dEN2TXVSQjZHSTFHemtoQzhETmtCRjRLS3JNeGlZSUY1UDV4WUVocmhMcVZITVhhS1g3QUlpdlNob29FeFR5cl9tRmJNVFFtTVVuSk1rbWljZVNB?oc=5",
-      "publisher": "연합인포맥스",
-      "time": "2026-10-30T02:39:07+00:00"
-     },
-     {
-      "title": "美연준 금리 동결, 회의 횟수 줄여… 시장에선 \"물가 대응 의지 안 보여\"",
-      "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNa3VDclZVWlpTeFNSVFF6Rm45WWkxcHFSUURzcGVId18wSXpYdko5akFadlp1UU1vYkFjUk5VVGNLbWtoNUJQNjB1ZC1DRlRRbDJNdU03TTBaYlc5OENKU2IzdkZEbkhzQzY2c2RKMFQwTFhUZHRsV2wzdVZsM2ZEdkJVbU9HLWRfakF1bElR?oc=5",
-      "publisher": "조선일보",
-      "time": "2026-10-29T22:01:09+00:00"
-     },
-     {
-      "title": "美 연준 금리 동결에도 매파 기조 유지…12월 인상론 확산",
-      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1VbXhncy1vX2xVMEFseDVGT3FFb0tCdzdkMkYzZnVPbWJpRTByUFhiZ0t0ZXFQYjFCS3dLejBhbXNrT1NRMkFqME9oYkozc3ktTms0bTdEdmU3bnVRTm5GTm1YMUJDNWRMUFRERWZjOA?oc=5",
-      "publisher": "조세일보",
-      "time": "2026-10-30T00:40:00+00:00"
-     }
-    ]
-   },
-   {
-    "key": "mideast",
-    "label": "중동 정세",
-    "n": 43,
-    "base": 44.0,
-    "ratio": 0.98,
-    "level": "보통",
-    "heat": 0.32,
-    "tone": 0.88,
-    "esc_n": 16,
-    "de_n": 1,
-    "confirm": -0.53,
-    "moves": {
-     "CL=F": -0.31,
-     "GC=F": -3.07
-    },
-    "direction": 0.37,
-    "intensity": 0.12,
-    "stance": "긴장 고조",
-    "up": [
-     "정유·에너지",
-     "방산",
-     "해운·조선"
+     "수출주"
     ],
     "down": [
      "유가 원가 부담주",
@@ -1034,146 +880,147 @@
     ],
     "headlines": [
      {
-      "title": "트럼프 “이란 전쟁 곧 끝날 것”…호르무즈는 여전히 일촉즉발",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9YZ0VROFlMZWtqY1A4RzlRWnp5MlNQRXUtVC1uc2F1c1VxV3F0bzRFX1FjWkduRWExV0tlZXA5Rm1Cc0JkMkd4amNsb2p5b0M1NWdkMGdUODJYTVk?oc=5",
-      "publisher": "KBS 뉴스",
-      "time": "2026-10-30T22:25:00+00:00"
+      "title": "원 달러 환율 1,340원대로 상승‥약 2주 만에 최고",
+      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBNZlIxakZ1UVR1WjZXaEpwMGlmb21Oc00wYU81dmxVX2pJX3pDell1LXZuam9reXBhTlV2eHZqOHVucDJyZE0tVmRaUWNPREEyWjZYcmh0N0ZuN0dqUmpJU3lUNTVjU2dDdEJpc0hzRnk3bl9Q0gF0QVVfeXFMT1c5RXV5RkNzWkpzd1NHbEZ6aEg1cTN2R3k2ajlPdEtqMThObDdQa0FNWmJ1UUExTm9XNTlTUnF1WHI0eDhfZnl4ai1TM3lWdldib3YxODN1QUFkazB3Tjc5SFp6R3FTRlNwQXM5cXNJckoxR3k?oc=5",
+      "publisher": "MBC 뉴스",
+      "time": "2026-11-02T10:53:41+00:00"
      },
      {
-      "title": "이란 혁명수비대 “호르무즈 해협서 유조선 2척에 화재”",
-      "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5IRWozd1YwN2RObW5oTmdJNW14OWNSXzI2Q2tVVnd1NzZuNmxCNGtlTkxPVGhJdjlrOWJQUWZtNFVvZG1EWklnWVpoX2l5NGtKcDlPMmpJODkyRHpmcGtJ0gFfQVVfeXFMTkhFajN3VjA3ZE5tbmhOZ0k1bXg5Y1JfMjZDa1VWd3U3Nm42bEI0a2VOTE9UaEl2OWs5YlBRZm00VW9kbURaSWdZWmhfaXk0a0pwOU8yakk4OTJEemZwa0k?oc=5",
-      "publisher": "경향신문",
-      "time": "2026-10-30T12:32:00+00:00"
+      "title": "\"제로금리·1100원 환율 시대 안 올 듯… 달러 쪼개사고 단기채 담아라\"",
+      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNa1VoNENFVkczTkpyaDF6TlFWLVRHUEN1d2RXYUE5dlJ6X19vZl9XaW5ITlllc19OMlFUU3BfdGEzWHVncWs0NUtnTG5mdk9CbHdUa1VLNXhlWjVDeFFoMGlIUUcyaXpHUHlZWGNBOHpLT18yeENMYXRDc28wVUI5ag?oc=5",
+      "publisher": "조선일보",
+      "time": "2026-11-02T15:37:00+00:00"
      },
      {
-      "title": "이란은 호르무즈 계속 때리는데…트럼프 “이란 전쟁 곧 마무리될 것”",
-      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOREw4VG5jdFR4WjlGZzh4WWx0UlFSV0dWOFowLTNlOVlfdDB3XzlGZVV1bjJtY2xTbDF4Z3hzWlVUNGQzLXc2OHpNYm9VUHJ1d2NRQUs5ZWpIdjdzQUpxRng2bEoyMkJ0cEViejRUeFhnMDI2MVZGZmlqSjlzM0k3UQ?oc=5",
-      "publisher": "이데일리",
-      "time": "2026-10-30T12:51:49+00:00"
-     }
-    ]
-   },
-   {
-    "key": "us_china",
-    "label": "미중 갈등·수출규제",
-    "n": 4,
-    "base": 3.5,
-    "ratio": 1.14,
-    "level": "보통",
-    "heat": 0.43,
-    "tone": 0.0,
-    "esc_n": 0,
-    "de_n": 0,
-    "confirm": 0.17,
-    "moves": {
-     "^SOX": -0.84
-    },
-    "direction": 0.03,
-    "intensity": 0.0,
-    "stance": "방향 혼재",
-    "up": [],
-    "down": [],
-    "headlines": [
-     {
-      "title": "칩 기술 빼돌렸나 … 젠슨 황 옆 中 스파이 의혹",
-      "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE1HQlBMZDdDTmdzRVNVbGFNODZzM09MYXZ0WlpIQXY0TWtfbXFYVVNwY1EyOHhiZERZM2k0bXU5SklkMnpGaWZFRVJ3d1lVUQ?oc=5",
-      "publisher": "매일경제",
-      "time": "2026-10-30T08:26:26+00:00"
-     },
-     {
-      "title": "젠슨 황 엔비디아 CEO 겨냥한 中 스파이 의혹, 핵심 인물은 측근 앨리스 황 씨? 🔍",
-      "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9BSlROMlVRemU5bEdKMU52dDBZZVphNWFsWFVpTGtvM0Z2VUdpQ3dnbklUNXROOUZpSFAwSnFleHNRM2U3b1JucklsZnFrMXhoTE1J?oc=5",
-      "publisher": "뉴닉",
-      "time": "2026-10-30T05:41:13+00:00"
-     },
-     {
-      "title": "\"젠슨 황 술자리 옆 그 여성, 中 스파이였다\"…백악관 초비상",
-      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE82clAwUTZCeUh2ckNDRmJIVWtQR3V1MlA0REE4ZUIyVjdZZUlfYTFYT0k0MHVQbGI0eGU1U09HWVNHRThHSlc5Z0ZuMXpOcnBCcl8xMDdsSUtkUQ?oc=5",
-      "publisher": "한국경제",
-      "time": "2026-10-29T21:46:40+00:00"
-     }
-    ]
-   },
-   {
-    "key": "fx",
-    "label": "환율(원화)",
-    "n": 71,
-    "base": 100.0,
-    "ratio": 0.71,
-    "level": "보통",
-    "heat": 0.14,
-    "tone": -0.45,
-    "esc_n": 9,
-    "de_n": 24,
-    "confirm": 0.6,
-    "moves": {
-     "KRW=X": 0.9
-    },
-    "direction": 0.03,
-    "intensity": 0.0,
-    "stance": "방향 혼재",
-    "up": [],
-    "down": [],
-    "headlines": [
-     {
-      "title": "원/달러 환율, 수출기업 달러 매도에 소폭 하락",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1MQW5FUXNINUFjTXo2QldZTm0weF84WUNpU2ZqdmhidWNhOGVWQnF4c1l2MVpkMkJzenFiYm0zWjdacFpVNFZNUHl1SDBXN2R5QkJSbGtYZ1RlZnPSAWBBVV95cUxORldxY3dHOUQ1aU5GQllUV2NjSl81VEMyeXdnYW9ZOGJTTkhqSVE2UmJRWVZYUl8yRlZ4YnZiU3hHZHdCb2t3OEdFTmNBYzEyd0Qzb1EwVWFoM3RKTHFJUEM?oc=5",
+      "title": "원/달러 환율 1,340원대로 상승…약 2주 만에 최고",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9GaGNqWloyTE5qWlZqRkNkby1JYWZiVndyeHF0eENuY3ZUMmhCMGUxQ1dfU0N0V2N1Umt2dGNTVDZtZmhPTUo0eUdxY2FjWW5oWTM4UGVSTDlIU1VGWXpnSNIBYEFVX3lxTE9GaGNqWloyTE5qWlZqRkNkby1JYWZiVndyeHF0eENuY3ZUMmhCMGUxQ1dfU0N0V2N1Umt2dGNTVDZtZmhPTUo0eUdxY2FjWW5oWTM4UGVSTDlIU1VGWXpnSA?oc=5",
       "publisher": "연합뉴스",
-      "time": "2026-10-30T07:50:27+00:00"
-     },
-     {
-      "title": "원·달러 환율, 2.5원 내린 1334.3원",
-      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNaUtoZEhuenYzd1ota0tTSUJtZEJFUjFHLW1pUEpabzA5MHhxcWlSV1J3OE5mVDlrY1l2RTZHcGVmUU1Vcm5STEVwTE9uVll5ZUZyUkJramZwMVhnWXd2cFZBNmstWVkwb2FCbEoxMGZMQXEyMmtiUWxfZUNuVnpYUlVSZHVmUdIBmgFBVV95cUxQalFGTGZHcEs3MWVhN1BFWWk4VTM3WXdMeWItTjFJSTQ5cWdCUWVUT25ldk5ZZGw1dzVlRjlLZUpYTzN1bi1vaGs3ODU1OTJXdDBQUzU4blY3cVBIMFI1WC1GS2tRNzdwY09fZ1dNbTVVS2V2NGd0ekRBbVZvcmhWN3Q2ZllNVTF2WHl0ZjZSVGpBdTA0ZDFsRTln?oc=5",
-      "publisher": "Chosunbiz",
-      "time": "2026-10-30T06:58:00+00:00"
-     },
-     {
-      "title": "원·달러 환율, 1334.3원 마감…증시 하락에도 원화 강세 보여",
-      "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9URXY2X0tnNHZGckJsOWFUV2dNMU1Iel9kRHZ0Z2JLalp3cVYzQ2wzSVVTSTRWdWpkVWVQdGh4NGVpcE9SV3VTRWlkZ1J5clpfck9KS0t6OUJpNTVjV25v?oc=5",
-      "publisher": "조세일보",
-      "time": "2026-10-30T07:33:00+00:00"
+      "time": "2026-11-02T07:42:27+00:00"
      }
     ]
    },
    {
     "key": "tariff",
     "label": "관세·무역분쟁",
-    "n": 17,
-    "base": 38.5,
-    "ratio": 0.44,
-    "level": "낮음",
-    "heat": 0.0,
-    "tone": 0.0,
-    "esc_n": 1,
-    "de_n": 1,
-    "confirm": 0.4,
+    "n": 43,
+    "base": 37.0,
+    "ratio": 1.16,
+    "level": "보통",
+    "heat": 0.44,
+    "tone": -0.2,
+    "esc_n": 2,
+    "de_n": 3,
+    "confirm": 0.79,
     "moves": {
-     "^GSPC": -0.57,
-     "KRW=X": 0.9
+     "^GSPC": -1.76,
+     "KRW=X": 1.81
     },
-    "direction": 0.08,
+    "direction": -0.04,
     "intensity": 0.0,
     "stance": "방향 혼재",
     "up": [],
     "down": [],
     "headlines": [
      {
-      "title": "EU, 수입 하이브리드차 세이프가드 조사…한국차 수출 촉각",
-      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5zTUJmV1ZRc0twNzRNRThzZko3WWpDRjc2MWpyNE45d2lxX0VkeE1yTHJWVEdxb1JQVURmVDJKbk11d3VGVVpCcDZ5X1JVbVpxanlWX2RETm1MWUh3V01abjYxM0ZEQy11Q2NrSw?oc=5",
-      "publisher": "스페셜경제",
-      "time": "2026-10-31T01:24:16+00:00"
+      "title": "민주당 승리 시, 트럼프 수입 관세 새로운 압력에 직면할 것",
+      "link": "https://news.google.com/rss/articles/CBMi9wJBVV95cUxQakZMTW44ek1JbmFHcEl1NGdCd2xsNlhMdWt0dWluQ3FxTUdCZnVNdGkwUGhfRzh0SXB2SExMWnZGZGVSbGg2R1dGS2dkYXMzSXpGZkttRzZ4d0V0UWlHSTBjRkxvZ19tcldFRUM2akdQdmIyTU1RRW9Wdk1WbGtpelFQSVdlWEZBNTFad3pmSjdvaHhpQXgzLVBWMm9xeHBvWjJrVTRZdnZnVi1BRzVieENYTUVQdkFaNTR5SkxkbWRwRmRpbTJnWVg5MFdyTl9sSnJqWjB6NWxLTWp1M21UbkIyMkd6QWJZZ3ZBVVNHQWhYR2FtaUhnLVpUVEFqMXZiX0RFQ0xteWp5QXZpb0kzeVRUTkh0bDdPSlozbUp6ZW1ETjQ2MEZ4aEJ3d25uYlRtWHExTDk4aFlOT3lpWGFiZW9lbm94LVpORDlHVWxtUFVyZXRiREhqMlFoUUJVSFF3eUdyaUk4UDNVSmoyRXhUZ0o0WUUza1U?oc=5",
+      "publisher": "IDNFinancials",
+      "time": "2026-11-02T14:40:00+00:00"
      },
      {
-      "title": "EU, 수입 하이브리드차 세이프가드 조사…韓 수출 영향 점검",
-      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9QYzFpT0hyMnRicC0za3Y3RC1kNUdVeDJCYUJWVFRtZ1g2WmxEOVd3cTU2QXgxNzFYamwwZnZ4YzNpS25wMmMxMkNuazlaWnBJbFJfUWRDTjd5Q1huWVlGeHd4U20xRVktY1V5Y3pMWHU2b25abWtlSdIBeEFVX3lxTE9QYzFpT0hyMnRicC0za3Y3RC1kNUdVeDJCYUJWVFRtZ1g2WmxEOVd3cTU2QXgxNzFYamwwZnZ4YzNpS25wMmMxMkNuazlaWnBJbFJfUWRDTjd5Q1huWVlGeHd4U20xRVktY1V5Y3pMWHU2b25abWtlSQ?oc=5",
+      "title": "칩 값 올라 갤럭시 폰 비싸졌는데…美 관세 폭탄 악재 덮치나",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE43RDlDVldaMF83ejJRTmNVVzc2Q1EzQkhhbHlpeEhlU1B4RjBhX1BBdkZnSWVXVTF3R05laUZIbzFjdUUxSmJLTGp6Q1ZrZVk4Rm10S0dqOUtvSE00c2w2OdIBeEFVX3lxTFBweHBrdzZSQlJ2YnRKRlFrb2h6RHBmS014UEtMdnJrNXZGT0lJRXVVdlMwckpvZlduRTFiQmNZenB4dnRNeGN3UkZtZ0ZrZVB4QVhlOG5KZGh6UHdPd28weUJVTFVxZ1pKVHhGVU1jX1ZkOEVZOXVKcQ?oc=5",
       "publisher": "뉴시스",
-      "time": "2026-10-30T10:44:35+00:00"
+      "time": "2026-11-02T21:00:00+00:00"
      },
      {
-      "title": "트럼프 행정부 \"미국에 자동차 공장 건설하면 관세 완화\"",
-      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1SWWVFcjRocDNLQWEtT3cyNHVLRGtOZkhHSkJJekJJUEJ4cVhiaXNKR3hhaHlIUEREQWp1cTRPcmJUQ21EQUVrNms4cTF1bUVET3g5VE1UdXcxYVR3UHNCOFFkVi1jUlRNUEF2OWRrYXF4TlHSAXNBVV95cUxNUlllRXI0aHAzS0FhLU93MjR1S0RrTmZIR0pCSXpCSVBCeHFYYmlzSkd4YWh5SFBEREFqdXE0T3JiVENtREFFazZrOHExdW1FRE94OVRNVHV3MWFUd1BzQjhRZFYtY1JUTVBBdjlka2FxeE5R?oc=5",
-      "publisher": "한국일보",
-      "time": "2026-10-29T22:44:00+00:00"
+      "title": "한국 기업의 가장 큰 위험은 관세가 아니라 공급망이다",
+      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5xZDNXUjNVT0tZZVROd2diOWlwdHVkY0RXaXFJT1VFWVpVZEF0OFhhSVcxOWhTX0RpQkFPRVQ5VVY0R1RGc3BjS2lmbGZPS0NVdmxzVEE2T01RLTJxSExFb0NIaVE?oc=5",
+      "publisher": "한국세정신문",
+      "time": "2026-11-01T22:37:59+00:00"
+     }
+    ]
+   },
+   {
+    "key": "fed",
+    "label": "연준·금리",
+    "n": 52,
+    "base": 55.5,
+    "ratio": 0.94,
+    "level": "보통",
+    "heat": 0.29,
+    "tone": 0.65,
+    "esc_n": 14,
+    "de_n": 3,
+    "confirm": -0.46,
+    "moves": {
+     "^TNX": -1.85
+    },
+    "direction": 0.11,
+    "intensity": 0.0,
+    "stance": "방향 혼재",
+    "up": [],
+    "down": [],
+    "headlines": [
+     {
+      "title": "\"워시 연준 의장의 12월 금리 인상 의지 의심스러워\"",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBWMHM2YUNVRFRnU2VMZWR0TWNvLVRJejlfU1M0VnVDdWcyM05yR0IzaFR6S0Q3WkRMS3JJeVpPSDFSQUVUY3BLMm1tQnR6RjZXZ2wyQzdaZW1QRTBnbHN1bTg3bWFvVHV1eGd5X0tpeWs?oc=5",
+      "publisher": "연합인포맥스",
+      "time": "2026-11-02T03:31:29+00:00"
+     },
+     {
+      "title": "워시 美 연준 의장 금리정책의 진짜 목표는 물가 아닌 '국가부채'?",
+      "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPbGpTbUlfTmZReTRRYnViUE10RXRycGVJQWxycVo4UE1pcVJoM0xJczJybXk3Z0ZPbmFuUG9HWkZXTU9NeXJNV1ZvVVRKSDVidmRvQThuNkRTYW45S2ViMG9KaUF0Ri1UMnFXS1g1QldCNGREdUpkNzBEeUNEZFVBUGtldXczZUE?oc=5",
+      "publisher": "글로벌이코노믹",
+      "time": "2026-11-02T17:00:00+00:00"
+     },
+     {
+      "title": "美 고용 회복 조짐에 연준 추가 금리 인상 가능성 부각",
+      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1pZ3Y4ODJxaDVZa1BXY2ZyVUsxWTBnVDNKekxYZzdMZTI3alctU3M1S3hIOGIzYnRNNGtlVWtjWUlYajdNS3lCeTdQZ1F2Q05ZWDVtWllURVJKODY2eEhWVThrUQ?oc=5",
+      "publisher": "더구루",
+      "time": "2026-11-02T06:23:36+00:00"
+     }
+    ]
+   },
+   {
+    "key": "mideast",
+    "label": "중동 정세",
+    "n": 25,
+    "base": 43.0,
+    "ratio": 0.58,
+    "level": "낮음",
+    "heat": 0.05,
+    "tone": 0.43,
+    "esc_n": 10,
+    "de_n": 4,
+    "confirm": -0.81,
+    "moves": {
+     "CL=F": -5.55,
+     "GC=F": -2.07
+    },
+    "direction": 0.11,
+    "intensity": 0.0,
+    "stance": "방향 혼재",
+    "up": [],
+    "down": [],
+    "headlines": [
+     {
+      "title": "미국·이란 전쟁 재격화 우려…국제 비료 공급망 다시 긴장",
+      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1fX0NKTGIwVHdLU3dEYlBrS2gyck1RNnJaTUJZcVV0M0dHSGtmZ2VhbVdUenkwRU9nd0ozbGJHd0huWW4wX2JQTnRNa2tiT3dMcS1WZGpFT2xBU0Z4VXhEeHhyMUg?oc=5",
+      "publisher": "돼지와사람",
+      "time": "2026-11-02T10:38:35+00:00"
+     },
+     {
+      "title": "이란 전쟁 종식 협상 기대에 국제유가 3% 하락…중동 정세 중대 변수",
+      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBWdHhFWVowRm1GTW1tNTVPcnRPdFU5ZWdKV1RDY0NOWEJmQVBJMkQxSTJxYzNoaUtuclJiUHAyeWhON2g1UzhYVVNrcTJvYzNvUXJ4MGFKOTVseFNqMWJVVDFR?oc=5",
+      "publisher": "시사매거진",
+      "time": "2026-11-02T04:46:34+00:00"
+     },
+     {
+      "title": "미국·이란 종전 협상 사흘째…호르무즈 해협 '이틀 내 재개방' 논의",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9pb1VhS0FKYXRRTER0Rk9JTTJrS3lJY1VJcjJWMk1NX2xLa0M4N0Nsa3FvdENSVVBDbTE2YVFyVXdkc3RnblE4eHBqZmNGbjN4WWRSSXVxOHM4UDdTcGVhMHhNTUUtZWNZZU9YQ1VFM0TSAXRBVV95cUxOY3hvQWdjT0o3cGVuaENxRXFKNWMxV1dBamJaN2QxdTZONEZaeEpKdVBfSGlVd1FVanlFVmVNSlVaUjkxUUtISDR0aVRacTBMaFZiWlE3RHZuT0phSzBJUlhPMEt3TFlzYmdDSWxHX29PcWZoTw?oc=5",
+      "publisher": "뉴스워커",
+      "time": "2026-11-02T05:53:58+00:00"
      }
     ]
    },
@@ -1181,60 +1028,166 @@
     "key": "russia",
     "label": "러시아·우크라이나",
     "n": 10,
-    "base": 20.0,
-    "ratio": 0.5,
+    "base": 19.5,
+    "ratio": 0.51,
     "level": "낮음",
-    "heat": 0.0,
-    "tone": -0.78,
-    "esc_n": 1,
-    "de_n": 8,
-    "confirm": -0.81,
+    "heat": 0.01,
+    "tone": 0.4,
+    "esc_n": 7,
+    "de_n": 3,
+    "confirm": -0.84,
     "moves": {
-     "BZ=F": -3.76,
-     "GC=F": -3.07
+     "BZ=F": -10.07,
+     "GC=F": -2.07
     },
-    "direction": -0.79,
-    "intensity": -0.0,
-    "stance": "휴전 기대",
+    "direction": 0.22,
+    "intensity": 0.002,
+    "stance": "전쟁 격화",
     "up": [],
     "down": [],
     "headlines": [
      {
-      "title": "러, 드론으로 우크라 기차역 공습… 14명 숨져",
-      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxQRm9OaXhhU013alNxWUlHUHFkbml5TzdFeDQwX3NUNnFjMkN0SW5WaXV1dEFEMUFycTJKNEFZZ1JlWHFtb1VJdkRBeWZRbWd2dWVDQmRkeFFOYmJ3NzJsVEhUVm5TTHhIV0lOQkxyejRBdUdQS0cxRFZ6M0pOLUFqdUJsVDlROXAwNHZhXy1FeGQ5ekZYWFh6MEpLaU5JQQ?oc=5",
+      "title": "러-우크라, 올레시키 국지 휴전 종료…공방 격화 우려",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5ZZXNxMFNQNzFURWJJUU1KQm40eWZ4V0J3d19RRGFWZzg4azNtX0k1WHMxbFM0T3ZxbGk0TTFtNHJYVlBlVHRlS2U1QTkxbkRUR2FydV8wWXdzN1U?oc=5",
+      "publisher": "연합뉴스",
+      "time": "2026-11-01T23:57:40+00:00"
+     },
+     {
+      "title": "러시아 공습에 우크라이나 수십만 가구 정전…에너지시설 공격 격화",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBVUTE1TU8teS1fYkYxWEkxelJPY1cwdEY3aVZ4aEJtbU5SOW1KN0pMOWhpWlhpd3l1OExOZXRLaFVwbElnaHdhVE8yalp1UnNqZjdrVmJqWEU0S3c1a1VmWUVaNUw2SVQ5V2lQX3JlWm7SAXRBVV95cUxNV3Z0TDRJYnA3SEx2Vi1VZ2pCTG9mS09RWThXcjBsNFczTVZrMDVkQUFaNWZFZmJfRlhPQzRlT3BKaDNnc1VnV3hRYjJBTEtBUm9mSGtfelJQQ1VXWHItQTk0RFdjOTVOMFlSMHV0QnJteFJ4Zg?oc=5",
+      "publisher": "뉴스워커",
+      "time": "2026-11-02T05:53:58+00:00"
+     },
+     {
+      "title": "[속보] 러시아, 휴전 종료 후 우크라 헤르손 공격 재개",
+      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1qQWc4WjZVdFV1Nzd4Wk03ZzB1dVd5VHJxSHZxdDY4bV9KUk82NGEtbHpyc0RlSXV2YVdrUUdXbG1JSVlWV3AyUm0yY1BJUi1rOVhrTldEX0xfNFluc3dMR3NoZjg3bFh4TTU5UlBn?oc=5",
+      "publisher": "국제뉴스",
+      "time": "2026-11-02T09:50:55+00:00"
+     }
+    ]
+   },
+   {
+    "key": "us_china",
+    "label": "미중 갈등·수출규제",
+    "n": 1,
+    "base": 3.0,
+    "ratio": 0.33,
+    "level": "낮음",
+    "heat": 0.0,
+    "tone": 0.0,
+    "esc_n": 0,
+    "de_n": 1,
+    "confirm": 1.0,
+    "moves": {
+     "^SOX": -6.81
+    },
+    "direction": 0.2,
+    "intensity": 0.0,
+    "stance": "갈등 고조",
+    "up": [],
+    "down": [],
+    "headlines": [
+     {
+      "title": "G20 외교장관 회의 공동성명 무산…美, 중국 공급망 견제도 합의 못 끌어내",
+      "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE43bFZGdzRuWnliRUNQSHZZWHpjMFdnbnFhS1Bkb1puM09OeFJtckdUZGdIQnNSRGtPN3lpV1hnOFZfcU55ZklVS243X0dlbVpTSVpoTEF6Mmwtdm80bUpZQl9nbXdWM1hkMXc?oc=5",
+      "publisher": "OBC 뉴스",
+      "time": "2026-11-01T03:51:57+00:00"
+     }
+    ]
+   },
+   {
+    "key": "nk",
+    "label": "북한·한반도",
+    "n": 22,
+    "base": 44.5,
+    "ratio": 0.49,
+    "level": "낮음",
+    "heat": 0.0,
+    "tone": 1.0,
+    "esc_n": 17,
+    "de_n": 0,
+    "confirm": 1.0,
+    "moves": {
+     "KRW=X": 1.81
+    },
+    "direction": 1.0,
+    "intensity": 0.0,
+    "stance": "도발",
+    "up": [],
+    "down": [],
+    "headlines": [
+     {
+      "title": "미국 전문가 “한미관계 경색에 북한 도발 공동대응도 다소 제약”",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5yNjVDTmVCTWVfcDdTdHlQQTU1TTRXVjBkM3RHcG93cmdOcU5fbnpydWkxbzk2S1NESEVXNEJDVzA4a2JrelRHT3Z4XzRpVFlJakR4YWwwUmpFTU0?oc=5",
+      "publisher": "KBS 뉴스",
+      "time": "2026-11-02T19:16:00+00:00"
+     },
+     {
+      "title": "미사일 도발 알고도… 軍, 올해 최소 3차례 발표 안해",
+      "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOMXJ6cGdicUg4WkNSQmxDZjJ3RUJJTlRoWmZrQWhSX1lrSzFfTXViODFjMTFwX3ZrQ2FPRlhRWVJBZnBoZVVoZkk3Q3o4anpSMEp2dHlKRk1fMXpHcXlSOXJSTWpxa1lqUFhaaF9qTkhRdUlLMG5LS2FlbzZEcFhLR09ZeFQ2aFZ1R1RnVWktcWFRUQ?oc=5",
       "publisher": "조선일보",
-      "time": "2026-10-30T15:45:00+00:00"
+      "time": "2026-11-01T15:54:53+00:00"
      },
      {
-      "title": "러·우크라 국지 휴전 나흘째, 올레시키 고립 주민들 대피 시작",
-      "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1ET2plMGZCdWxmNnpzNm9uNFhJbGlxSlZfc0lsell0UHB4aTJYeGxQTV9HSms0WnFEYjVBeW1zbWg4eWpqc3pkY0k5ZXdXa2NyUlNLYkgtOHFrZVBWSUhJ0gFfQVVfeXFMTURPamUwZkJ1bGY2enM2b240WElsaXFKVl9zSWx6WXRQcHhpMlh4bFBNX0dKazRacURiNUF5bXNtaDh5ampzemRjSTlld1drY3JSU0tiSC04cWtlUFZJSEk?oc=5",
-      "publisher": "경향신문",
-      "time": "2026-10-30T13:51:00+00:00"
+      "title": "합참 “북한 미사일 발사체, 모두 공지하지는 않아” [현장영상]",
+      "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5RTFpNc1B5cWcyOHhOa2lqLURQdzJzQVJfWEF0dFItbzFjdXd0TFhRYjFGbWxyQ0FoZElpTmdyTEJMeHVVSWdMZXkzYjNMRDJDTXFLMXpidG5NTlJ2c0HSAWNBVV95cUxNVW4wM2t5Q19kMS1fOHh6TGVfbnA5b2dUMklCcnhnU3JESUFsanNJUTB2RU5VY2VUWFJTTDJ2QXNsUjh4WS1fLWtlZWk0amVhbmlxMkN0dWdaUDZ2LVNVMzFaVjA?oc=5",
+      "publisher": "채널A",
+      "time": "2026-11-02T05:50:00+00:00"
+     }
+    ]
+   },
+   {
+    "key": "taiwan",
+    "label": "대만 해협",
+    "n": 3,
+    "base": 7.0,
+    "ratio": 0.43,
+    "level": "낮음",
+    "heat": 0.0,
+    "tone": 0.0,
+    "esc_n": 1,
+    "de_n": 0,
+    "confirm": 0.88,
+    "moves": {
+     "^SOX": -6.81,
+     "^VIX": 15.01
+    },
+    "direction": 0.18,
+    "intensity": 0.0,
+    "stance": "방향 혼재",
+    "up": [],
+    "down": [],
+    "headlines": [
+     {
+      "title": "[태평로] 북·중·러 앞의 ‘삶은 개구리’들",
+      "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOdERSX09PeXFQSzRHRVhQOS1Jd0hUOHlMRldqcWstaE0zdXJYaUJScFI4VnJMdjhib1RhVVdlOFk4TzNqUDhJM0swRUlwWDZFYldCMkRFNjFhcnBNbmtvb01wMGhjQXFyXzV0NUs4ZUQwZ0U2Q3pkWGxMVndpdXVKSzFxRzZ6MGZ5?oc=5",
+      "publisher": "조선일보",
+      "time": "2026-11-02T14:50:00+00:00"
      },
      {
-      "title": "[WIKI 이슈] 4년 넘은 우크라 전쟁, 왜 다시 휴전 논의인가...美 압박·경제 카드",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBCNUdFcl8zYS1WSlRFY0dPS1c2V1djVEFMYms1ZDBzVTFNV2RsWHBvNzdRMFVUUWY4X2FKdTlOaVJCTTcySnMzdFNwd0YxSEFhck5lMWlVbmFRODBLY1o4UEVtM1MzM1JZS0txYmplUUM?oc=5",
-      "publisher": "위키리크스한국",
-      "time": "2026-10-30T08:21:00+00:00"
+      "title": "대만, 中 반도체 수출통제 확대 추진… 칩·소재·장비까지 겨냥",
+      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPZ2pGMVBLNGRvQkR0cDR5TERPcHJzcDYzU1dVUjNnV1l3QU5jVGVnNnhYUXNYaEdrc1lWcDE5T0Q0NmhrQnFxU2FhMWt4VEJCMmc5MGNaQTN2b2lNQ1dkRjVnUTNvTjNJQXF1Z3JUbDZmdVZ1aEVicjY4OUZ4Z0stc2NwMnV2TUNjVDh4RGYxRU1lM0pLNU5BU0JTLWhmUdIBsgFBVV95cUxOMDlsZUhMbF9GUzJVZklld2ZneWtXVjRkWl9ubmZuZWlSRVlSazBRc1JYb3p5a01lbXppWDZPMXBDeHZobzlWNkpqNDB4Y1B6SXMzaDZqY3piTFdqZkpUbEJkRFNJNUJ1emllR2std3IxMmwwT09sRDA5N2xDckgxcDhwMjlzU3FxR1cyajUxRDFGQS1RNGY4eEJhZGdFbkRHTFE0RmlYOFpHWEctblVxTm5R?oc=5",
+      "publisher": "Chosunbiz",
+      "time": "2026-11-02T02:06:00+00:00"
+     },
+     {
+      "title": "일본에서 미국산 미사일 공동 생산으로, 미일 군사 일체화 가속 = 한국 네티즌 \"한국은 따돌림당하나\"",
+      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5WRnpBVWtSSkdHTHMzUjRFVFVIYW80eElhUVc4T2xXUkJsejRlazhkci1RY2lvZjlwZ1NXRVQzY2FyU252SVhPOFFrdC1Wa2haNE9TOWhhTUJKUUpKaHJpZW4xNGNSZ3pRRHVF?oc=5",
+      "publisher": "Record China",
+      "time": "2026-11-02T00:00:02+00:00"
      }
     ]
    }
   ],
   "impact": {
-   "china": -0.091,
-   "semis": -0.146,
-   "defense": 0.475,
-   "oil_up": 0.12,
-   "oil_down": -0.12,
-   "shipping": 0.048,
-   "korea": -0.376,
-   "ai": -0.055
+   "export": 0.087,
+   "oil_down": -0.059,
+   "korea": -0.043
   },
   "summary": [
-   "북한·한반도: 48시간 기사 69건(평소 44건의 1.6배), 도발 · 5일 원달러 +0.9% → 유리: 방산 / 부담: 국내 상장주",
-   "대만 해협: 48시간 기사 7건(평소 8건의 0.9배), 긴장 고조 · 5일 반도체지수 -0.8%, VIX -0.1% → 유리: 방산 / 부담: 반도체, 중국 노출, AI 인프라",
-   "연준·금리: 48시간 기사 100건(평소 56건의 1.8배), 방향 혼재 · 5일 미 10년물 금리 -1.2%",
-   "중동 정세: 48시간 기사 43건(평소 44건의 1.0배), 긴장 고조 · 5일 WTI -0.3%, 금 -3.1% → 유리: 정유·에너지, 방산, 해운·조선 / 부담: 유가 원가 부담주, 국내 상장주"
+   "환율(원화): 48시간 기사 75건(평소 100건의 0.8배), 원화 약세 · 5일 원달러 +1.8% → 유리: 수출주 / 부담: 유가 원가 부담주, 국내 상장주",
+   "관세·무역분쟁: 48시간 기사 43건(평소 37건의 1.2배), 방향 혼재 · 5일 S&P500 -1.8%, 원달러 +1.8%",
+   "연준·금리: 48시간 기사 52건(평소 56건의 0.9배), 방향 혼재 · 5일 미 10년물 금리 -1.9%"
   ]
  },
  "us_picks": [
@@ -1243,25 +1196,25 @@
    "name": "엔비디아",
    "score": 80.0,
    "setup_label": "상승추세 속 눌림목",
-   "summary": "선행 PER 12.7배(섹터 대비 -34%) · 목표가 상승여력 +61%의 저평가 종목. 차트는 '상승추세 속 눌림목' — 250일선 지지 확인, 50>120>250일선 장기 정배열 유지. 단, 20·50일선 데드크로스(단기, 오늘) 유의."
+   "summary": "선행 PER 12.9배(섹터 대비 -34%) · 목표가 상승여력 +61%의 저평가 종목. 차트는 '상승추세 속 눌림목' — 250일선 지지 확인, 50>120>250일선 장기 정배열 유지. 단, 20·50일선 데드크로스(단기, 오늘) 유의."
   },
   {
    "ticker": "META",
    "name": "메타 플랫폼스",
-   "score": 64.2,
+   "score": 64.1,
    "setup_label": "하락 후 반등 시도",
    "summary": "선행 PER 17.3배 · 목표가 상승여력 +38%의 저평가 종목. 차트는 '하락 후 반등 시도' — 볼린저 하단 이탈 후 밴드 안 재진입, 20일 이격도 89. 단, 주가 250일선 아래(-2.9%), 250일선 횡보 유의."
   },
   {
    "ticker": "BAC",
    "name": "뱅크오브아메리카",
-   "score": 63.5,
+   "score": 63.6,
    "setup_label": "하락 후 반등 시도",
    "summary": "선행 PER 9.6배(섹터 대비 -27%) · 목표가 상승여력 +26%의 저평가 종목. 차트는 '하락 후 반등 시도' — RSI 28, MACD 시그널 상향 돌파(4거래일 전, 0선 아래). 단, 주가 250일선 아래(-8.7%), 250일선 횡보 유의."
   }
  ],
- "date": "2026-10-31",
- "generated": "2026-10-31T10:56+09:00",
+ "date": "2026-11-03",
+ "generated": "2026-11-03T06:41+09:00",
  "watch": [
   {
    "ticker": "005930.KS",
@@ -1411,12 +1364,11 @@
    "ticker": "MU",
    "name": "마이크론",
    "market": "us",
-   "last": 884.739990234375,
-   "chg_1d": -5.3014683401406355,
-   "chg_5d": 0.8193268237048246,
-   "rsi14": 41.97760910276364,
+   "last": 833.5900268554688,
+   "chg_1d": -5.781355420065982,
+   "chg_5d": -7.758103840270925,
+   "rsi14": 37.41609227848959,
    "spark": [
-    877.57,
     861.0,
     868.52,
     911.29,
@@ -1475,7 +1427,8 @@
     928.76,
     983.23,
     934.27,
-    884.74
+    884.74,
+    833.59
    ],
    "setup_label": "상승추세 속 눌림목"
   },
@@ -1483,12 +1436,11 @@
    "ticker": "NVDA",
    "name": "엔비디아",
    "market": "us",
-   "last": 204.63999938964844,
-   "chg_1d": -4.221662509528712,
-   "chg_5d": -2.9958319696068325,
-   "rsi14": 35.05601474934153,
+   "last": 202.05999755859375,
+   "chg_1d": -1.2607514849246049,
+   "chg_5d": -6.453704833984375,
+   "rsi14": 33.30533201472031,
    "spark": [
-    223.96,
     217.55,
     217.5,
     224.09,
@@ -1547,7 +1499,8 @@
     217.94,
     215.38,
     213.66,
-    204.64
+    204.64,
+    202.06
    ],
    "setup_label": "상승추세 속 눌림목"
   },
@@ -1555,12 +1508,11 @@
    "ticker": "TSM",
    "name": "TSMC",
    "market": "us",
-   "last": 406.1300048828125,
-   "chg_1d": -5.947058387015847,
-   "chg_5d": -2.9581144044190433,
-   "rsi14": 38.343660014683444,
+   "last": 398.6300048828125,
+   "chg_1d": -1.846699310523514,
+   "chg_5d": -6.065459511874072,
+   "rsi14": 36.03572657181105,
    "spark": [
-    420.04,
     418.47,
     422.06,
     429.15,
@@ -1619,7 +1571,8 @@
     436.87,
     439.51,
     431.81,
-    406.13
+    406.13,
+    398.63
    ],
    "setup_label": "상승추세 속 눌림목"
   },
@@ -1627,12 +1580,11 @@
    "ticker": "SCHD",
    "name": "SCHD",
    "market": "us",
-   "last": 35.779998779296875,
-   "chg_1d": 0.4773888403020621,
-   "chg_5d": 1.4459833141877487,
-   "rsi14": 73.87730816475764,
+   "last": 35.900001525878906,
+   "chg_1d": 0.3353905832201187,
+   "chg_5d": 1.699723234521855,
+   "rsi14": 74.91343874101538,
    "spark": [
-    33.9,
     34.19,
     34.27,
     34.26,
@@ -1691,9 +1643,10 @@
     35.12,
     35.09,
     35.61,
-    35.78
+    35.78,
+    35.9
    ],
-   "setup_label": "신고가·돌파형"
+   "setup_label": "정배열 추세 지속"
   }
  ]
 }
