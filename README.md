@@ -176,7 +176,7 @@ GitHub 예약 실행은 수 분~수 시간 늦어질 수 있습니다(정각·30
 - **새 팩터는 기록부터**: ‘이익 추정치 변화(EPS 리비전)’와 ‘국제 정세’ 점수는 매일 예측 기록에 남기되 **가중치 0**으로 시작합니다. 실전 채점에서 IC t≥2로 유효성이 확인될 때만 자가 보정이 기존 안전장치(주당 ±0.05 등) 안에서 비중을 줍니다.
 
 ## 화면 디자인 (2026-11 개편)
-- 글꼴: 제목은 함렛(Hahmlet, 명조 계열), 화면 글자와 숫자는 프리텐다드(Pretendard). 둘 다 `web/fonts/`에 자체 호스팅(OFL 라이선스)해 오프라인에서도 같은 모양으로 보입니다.
+- 글꼴: IBM Plex Sans KR 하나로 통일(굵기로 제목·본문 구분). `web/fonts/`에 자체 호스팅(OFL 라이선스)해 오프라인에서도 같은 모양으로 보입니다. 바탕은 흰색.
 - 색은 두 가지 뜻만 씁니다: 빨강은 상승·유리, 파랑은 하락·부담. 노란 형광펜은 '내 추천 순위·내 배당 플랜' 표시에만 씁니다.
 - 브리핑 첫 화면은 시세판입니다. 0 기준선에서 오른쪽(상승)·왼쪽(하락)으로 막대가 뻗고, 눈금은 그날 가장 큰 변동을 담는 값(1·2·3·5·10·15·20%)으로 자동으로 바뀝니다.
 - 목록은 종이 위 괘선으로, 판정(강한 매수~강한 매도)은 인주 도장 모양으로 표시합니다. 이모지와 화살표 기호는 쓰지 않습니다.
@@ -224,7 +224,7 @@ pipeline/
   geo.py         국제 정세 테마(뉴스 관심도×어조×시장 반응) → 업종·종목 영향
   run.py         진입점 (morning / alerts / all / backtest)
 state/           캐시·알림 중복 방지 상태 (자동 생성)
-web/             PWA (index.html, app.js, chart.js, divplan.js(배당 플랜 계산기), fonts/(함렛·프리텐다드), styles.css, sw.js, manifest, icons, data/, data/charts/)
+web/             PWA (index.html, app.js, chart.js, divplan.js(배당 플랜 계산기), fonts/(IBM Plex Sans KR), styles.css, sw.js, manifest, icons, data/, data/charts/)
 tests/           차트 분석·백테스트·실전 채점·자가 보정 단위테스트 (48개, tests/js 포함)
 tools/           VAPID 키·아이콘 생성
 ```
