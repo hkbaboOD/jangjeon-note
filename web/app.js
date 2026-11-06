@@ -29,6 +29,8 @@ const isKR = (t) => /\.(KS|KQ)$/.test(t || "");
 const code = (t) => (t || "").replace(/\.(KS|KQ)$/, "");
 const nf = (v, d = 0) => (v == null || Number.isNaN(v) ? "-" : Number(v).toLocaleString("ko-KR", { minimumFractionDigits: d, maximumFractionDigits: d }));
 const price = (v, t) => (v == null ? "-" : isKR(t) ? nf(v, 0) + "원" : "$" + nf(v, 2));
+const SEP = '<i class="sep" aria-hidden="true"></i>';
+const mt = (...parts) => parts.filter((x) => x != null && x !== "").join(SEP);
 const cls = (v) => (v == null ? "flat" : v > 0.0001 ? "up" : v < -0.0001 ? "down" : "flat");
 const sgn = (v, d = 2, suf = "%") => (v == null ? "-" : (v > 0 ? "+" : "") + nf(v, d) + suf);
 const arrow = (v) => (v == null ? "" : v > 0 ? "▲" : v < 0 ? "▼" : "");
@@ -53,6 +55,22 @@ const SECTOR_KO = {
 };
 const sector = (s) => SECTOR_KO[s] || s || "";
 
+/* 시세판: 0 기준선에서 오른쪽(상승)·왼쪽(하락)으로 뻗는 막대. 눈금 = 가장 큰 변동을 담는 가까운 값 */
+const BOARD_STEPS = [1, 2, 3, 5, 10, 15, 20];
+function board(list) {
+  const qs = (list || []).filter((q) => q && q.chg != null && !Number.isNaN(q.chg));
+  if (!qs.length) return "";
+  const top = Math.max(...qs.map((q) => Math.abs(q.chg)));
+  const scale = BOARD_STEPS.find((v) => v >= top) || BOARD_STEPS[BOARD_STEPS.length - 1];
+  const rows = qs.map((q) => {
+    const w = Math.min(Math.abs(q.chg) / scale, 1) * 50;
+    const cut = Math.abs(q.chg) > scale ? " cut" : "";
+    return `<div class="brow"><span class="nm">${esc(q.name)}</span>
+      <span class="bar" aria-hidden="true">${q.chg ? `<i class="${q.chg > 0 ? "pos" : "neg"}${cut}" style="width:${w.toFixed(1)}%"></i>` : ""}</span>
+      <span class="ch ${cls(q.chg)}">${sgn(q.chg)}</span><span class="px">${nf(q.last, q.last >= 1000 ? 0 : 2)}</span></div>`;
+  }).join("");
+  return `<div class="board" aria-label="지수 등락률">${rows}<div class="board-scale" aria-hidden="true"><span>−${scale}%</span><span>0</span><span>+${scale}%</span></div></div>`;
+}
 function spark(arr, w = 64, h = 30) {
   if (!arr || arr.length < 2) return "";
   const lo = Math.min(...arr), hi = Math.max(...arr), rng = hi - lo || 1;
@@ -74,15 +92,15 @@ async function loadChart(t) {
   return state.charts[t];
 }
 const setupPill = (label, setup) => (label && setup !== "insufficient" ? `<span class="setup s-${esc(setup)}">${esc(label)}</span>` : "");
-const shortTxt = (t) => String(t).split(" — ")[0];
+const shortTxt = (t) => String(t).split(/ — |: /)[0];
 const lvTxt = (l, t) => (l ? `${price(l.price, t)}(${esc(l.label || "")}, ${sgn(l.dist, 1)})` : "-");
 function levelsRow(lv, t) {
   if (!lv) return "";
   const s = (lv.support || [])[0], r = (lv.resistance || [])[0];
-  const cell = (lab, l) => `<div><small>${lab}</small><b>${l ? price(l.price, t) : "-"}</b>${l ? `<em>${esc(l.label || "")} · ${sgn(l.dist, 1)}</em>` : ""}</div>`;
+  const cell = (lab, l) => `<div><small>${lab}</small><b>${l ? price(l.price, t) : "-"}</b>${l ? `<em>${esc(l.label || "")}${SEP}${sgn(l.dist, 1)}</em>` : ""}</div>`;
   return `<div class="levels">
     ${cell("1차 지지", s)}${cell("1차 저항", r)}
-    <div><small>손절 참고</small><b>${lv.stop ? price(lv.stop.price, t) : "-"}</b>${lv.stop ? `<em>${lv.stop.basis === "2ATR" ? "2×ATR" : "지지선 − 0.5×ATR"} · ${sgn(lv.stop.dist, 1)}</em>` : ""}</div>
+    <div><small>손절 참고</small><b>${lv.stop ? price(lv.stop.price, t) : "-"}</b>${lv.stop ? `<em>${lv.stop.basis === "2ATR" ? "2×ATR" : "지지선 − 0.5×ATR"}${SEP}${sgn(lv.stop.dist, 1)}</em>` : ""}</div>
     <div><small>손익비 <span class="sr">1차 저항까지 기대폭 ÷ 손절폭</span></small><b>${lv.rr == null ? "-" : nf(lv.rr, 2) + " : 1"}</b><em>1차 저항 ÷ 손절폭</em></div>
   </div>`;
 }
@@ -133,8 +151,8 @@ function autoBriefM() {
 function briefSeg() {
   const bu = state.data.briefing_us, bk = state.data.briefing;
   return `<div class="seg brief-seg" role="group" aria-label="브리핑 종류">
-    <button data-bm="kr" aria-pressed="${state.briefM === "kr"}">☀️ 국장 장전<small>${bk ? esc(when(bk.generated)) : "06:37"}</small></button>
-    <button data-bm="us" aria-pressed="${state.briefM === "us"}">🌙 미장 장전<small>${bu ? esc(when(bu.generated)) : "21:13"}</small></button></div>`;
+    <button data-bm="kr" aria-pressed="${state.briefM === "kr"}">국장 장전<small>${bk ? esc(when(bk.generated)) : "06:37"}</small></button>
+    <button data-bm="us" aria-pressed="${state.briefM === "us"}">미장 장전<small>${bu ? esc(when(bu.generated)) : "21:13"}</small></button></div>`;
 }
 const briefTick = (q) => `
     <div class="tick ${q.chg > 0 ? "up-bg" : q.chg < 0 ? "down-bg" : ""}">
@@ -147,7 +165,7 @@ const macroChips = (list) => (list || []).map((q) => {
   const v = q.chg_bp != null ? sgn(q.chg_bp, 0, "bp") : sgn(q.chg);
   return `<div class="chip">${esc(q.name)}<b>${nf(q.last, q.last > 100 ? 1 : 2)} <span class="${cls(q.chg)}">${v}</span></b></div>`;
 }).join("");
-const newsList = (title, list) => ((list || []).length ? `<div class="sec"><h2>${title}</h2><div class="panel news">${list.map((n) => `<a href="${esc(n.link)}" target="_blank" rel="noopener">${esc(n.title)}<small>${esc(n.publisher || "")} ${n.time ? "· " + esc(when(n.time)) : ""}</small></a>`).join("")}</div></div>` : "");
+const newsList = (title, list) => ((list || []).length ? `<div class="sec"><h2>${title}</h2><div class="panel news">${list.map((n) => `<a href="${esc(n.link)}" target="_blank" rel="noopener">${esc(n.title)}<small>${esc(n.publisher || "")}${n.time ? ", " + esc(when(n.time)) : ""}</small></a>`).join("")}</div></div>` : "");
 const earnRows = (list, title) => ((list || []).length ? `<div class="sec"><h2>${title}</h2><div class="panel">${list.map((e) => `
     <button class="row" data-t="${esc(e.ticker)}"><div><div class="t1">${esc(e.name)}</div><div class="t2">${esc(isKR(e.ticker) ? code(e.ticker) : e.ticker)}</div></div><span></span>
     <div class="num"><b>${e.in_days === 0 ? "오늘" : e.in_days === 1 ? "내일" : e.in_days + "일 후"}</b><span>${esc(e.date.slice(5).replace("-", "/"))}</span></div></button>`).join("")}</div></div>` : "");
@@ -165,21 +183,20 @@ function renderBriefUS(el) {
   const dow = "일월화수목금토"[d.getDay()];
   const watch = (b.watch || []).slice().sort((a, c) => (a.market === "us" ? 0 : 1) - (c.market === "us" ? 0 : 1)).map((r) => `
     <button class="row" data-t="${esc(r.ticker)}">
-      <div><div class="t1">${esc(r.name)}</div><div class="t2">${price(r.last, r.ticker)} · ${esc(r.setup_label || "")} · RSI ${nf(r.rsi14)}${r.market === "us" ? " · 전일 종가" : " · 오늘 종가"}</div></div>
+      <div><div class="t1">${esc(r.name)}</div><div class="t2">${price(r.last, r.ticker)}${SEP}${esc(r.setup_label || "")}${SEP}RSI ${nf(r.rsi14)}${SEP}${r.market === "us" ? "전일 종가" : "오늘 종가"}</div></div>
       ${spark(r.spark, 56, 26)}
       <div class="num"><b class="${cls(r.chg_1d)}">${sgn(r.chg_1d)}</b><span class="${cls(r.chg_5d)}">5일 ${sgn(r.chg_5d, 1)}</span></div>
     </button>`).join("");
   const br = b.breadth?.kr;
   el.innerHTML = `${briefSeg()}
-    <div class="dateline"><h1>${d.getMonth() + 1}월 ${d.getDate()}일 ${dow}요일 미장 장전</h1><p>미국 개장 ${esc(b.us_open_kst || "")} KST${b.dst ? "(서머타임)" : ""} · ${when(b.generated)} 생성 · 선물은 생성 시점 기준</p></div>
-    <div class="tape">${(b.futures || []).map(briefTick).join("")}${(b.kr_indices || []).map(briefTick).join("")}</div>
-    <div class="macro">${macroChips(b.macro)}</div>
-    ${b.ai_summary ? `<div class="sec"><h2>AI 시황 요약</h2><div class="ai">${esc(b.ai_summary)}</div></div>` : ""}
-    <div class="sec"><h2>오늘 밤 미국장 체크</h2><ul class="bullets">${(b.tonight || []).map((p) => `<li>${esc(p)}</li>`).join("")}</ul></div>
+    <div class="dateline"><h1>${d.getMonth() + 1}월 ${d.getDate()}일 ${dow}요일</h1><p>미장 장전 브리핑. 미국 개장 ${esc(b.us_open_kst || "")}${b.dst ? "(서머타임)" : ""}, 선물은 ${when(b.generated)} 기준</p></div>
+    <div class="board-wrap">${board([...(b.futures || []), ...(b.kr_indices || [])])}<div class="macro">${macroChips(b.macro)}</div></div>
+    ${b.ai_summary ? `<div class="sec"><h2>Claude 요약</h2><div class="ai">${esc(b.ai_summary)}</div></div>` : ""}
+    <div class="sec"><h2>오늘 밤 미국장에서 볼 것</h2><ul class="bullets">${(b.tonight || []).map((p) => `<li>${esc(p)}</li>`).join("")}</ul></div>
     <div class="sec"><h2>오늘 국내장 마감</h2><ul class="bullets">${(b.review || []).map((p) => `<li>${esc(p)}</li>`).join("") || "<li>데이터 없음</li>"}</ul>
-      ${br ? `<div class="panel pad breadth" style="margin-top:8px"><div><div class="bl"><span>한국 유니버스</span><span><span class="up">상승 ${br.up}</span> · <span class="down">하락 ${br.down}</span></span></div><div class="bar"><i style="width:${(br.up / br.total) * 100}%"></i></div></div></div>` : ""}</div>
-    ${earnRows(b.earnings, "실적 발표 <small>미국 유니버스 · 미국 시간 기준</small>")}
-    ${(b.us_picks || []).length ? `<div class="sec"><h2>오늘의 미국 추천 Top3 <small>아침 산출 · 추천 탭에서 근거 확인</small></h2><div class="panel">${b.us_picks.map((p, i) => `
+      ${br ? `<div class="panel pad breadth" style="margin-top:8px"><div><div class="bl"><span>한국 유니버스</span><span><span class="up">상승 ${br.up}</span>${SEP}<span class="down">하락 ${br.down}</span></span></div><div class="bar"><i style="width:${(br.up / br.total) * 100}%"></i></div></div></div>` : ""}</div>
+    ${earnRows(b.earnings, "실적 발표 <small>미국 종목, 미국 시간 기준</small>")}
+    ${(b.us_picks || []).length ? `<div class="sec"><h2>오늘의 미국 추천 <small>아침에 고른 3종목, 근거는 추천 탭</small></h2><div class="panel">${b.us_picks.map((p, i) => `
       <button class="row" data-t="${esc(p.ticker)}"><div><div class="t1">${i + 1}. ${esc(p.name)}</div><div class="t2">${esc(p.setup_label || "")}</div></div><span></span><div class="num"><b>${nf(p.score, 1)}</b><span class="t2">점</span></div></button>`).join("")}</div></div>` : ""}
     ${b.geo ? geoCard(b.geo, state.data.geo_weekly) : ""}
     <div class="sec"><h2>관심종목</h2><div class="panel">${watch || '<div class="empty">관심종목 없음</div>'}</div></div>
@@ -211,7 +228,7 @@ function renderBrief() {
   }).join("");
 
   const breadth = Object.entries(b.breadth || {}).map(([mk, v]) => `
-    <div><div class="bl"><span>${mk === "us" ? "미국 유니버스" : "한국 유니버스"}</span><span><span class="up">상승 ${v.up}</span> · <span class="down">하락 ${v.down}</span></span></div>
+    <div><div class="bl"><span>${mk === "us" ? "미국 유니버스" : "한국 유니버스"}</span><span><span class="up">상승 ${v.up}</span>, <span class="down">하락 ${v.down}</span></span></div>
     <div class="bar"><i style="width:${(v.up / v.total) * 100}%"></i></div></div>`).join("");
 
   const movers = Object.entries(b.movers || {}).map(([mk, v]) => `
@@ -222,7 +239,7 @@ function renderBrief() {
 
   const watch = (w?.rows || []).map((r) => `
     <button class="row" data-t="${esc(r.ticker)}">
-      <div><div class="t1">${esc(r.name)} ${verdict(r.verdict)}</div><div class="t2">${price(r.tech?.last, r.ticker)} · ${esc(r.tech?.ta?.setup_label || "")} · RSI ${nf(r.tech?.rsi14)}</div></div>
+      <div><div class="t1">${esc(r.name)} ${verdict(r.verdict)}</div><div class="t2 meta">${mt(price(r.tech?.last, r.ticker), esc(r.tech?.ta?.setup_label || ""), "RSI " + nf(r.tech?.rsi14))}</div></div>
       ${spark(r.tech?.spark?.slice(-60), 56, 26)}
       <div class="num"><b class="${cls(r.tech?.chg_1d)}">${sgn(r.tech?.chg_1d)}</b><span class="${cls(r.tech?.chg_5d)}">5일 ${sgn(r.tech?.chg_5d, 1)}</span></div>
     </button>`).join("");
@@ -234,20 +251,19 @@ function renderBrief() {
 
   el.innerHTML = `
     ${briefSeg()}
-    <div class="dateline"><h1>${d.getMonth() + 1}월 ${d.getDate()}일 ${dow}요일 국장 장전</h1><p>전일 종가 기준 · ${when(b.generated)} 생성</p></div>
-    <div class="tape">${idx.slice(0, 2).map((q) => tick(q, false)).join("")}${idx.slice(2).map((q) => tick(q, false)).join("")}</div>
-    <div class="macro">${macro}</div>
-    ${b.ai_summary ? `<div class="sec"><h2>AI 시황 요약</h2><div class="ai">${esc(b.ai_summary)}</div></div>` : ""}
-    <div class="sec"><h2>간밤 포인트</h2><ul class="bullets">${(b.points || []).map((p) => `<li>${esc(p)}</li>`).join("") || "<li>특이사항 없음</li>"}</ul></div>
-    <div class="sec"><h2>오늘 국내장 체크</h2><ul class="bullets">${(b.outlook || []).map((p) => `<li>${esc(p)}</li>`).join("")}</ul></div>
+    <div class="dateline"><h1>${d.getMonth() + 1}월 ${d.getDate()}일 ${dow}요일</h1><p>국장 장전 브리핑. 전일 종가 기준, ${when(b.generated)} 작성</p></div>
+    <div class="board-wrap">${board(idx)}<div class="macro">${macro}</div></div>
+    ${b.ai_summary ? `<div class="sec"><h2>Claude 요약</h2><div class="ai">${esc(b.ai_summary)}</div></div>` : ""}
+    <div class="sec"><h2>밤사이 시장</h2><ul class="bullets">${(b.points || []).map((p) => `<li>${esc(p)}</li>`).join("") || "<li>큰 변동 없음</li>"}</ul></div>
+    <div class="sec"><h2>오늘 국내장에서 볼 것</h2><ul class="bullets">${(b.outlook || []).map((p) => `<li>${esc(p)}</li>`).join("")}</ul></div>
     ${geoCard(state.data.geo, state.data.geo_weekly)}
-    ${earnRows(b.earnings, "실적 발표 예정 <small>국내 2일 · 미국 1일 이내</small>")}
+    ${earnRows(b.earnings, "실적 발표 <small>국내는 2일, 미국은 1일 안</small>")}
     ${diag ? `<div class="sec"><h2>관심종목 급락 진단</h2>${diag}</div>` : ""}
-    <div class="sec"><h2>관심종목 <small>${esc(when(w?.updated))}</small></h2><div class="panel">${watch || '<div class="empty">config/settings.yaml 의 watchlist 에 종목을 추가하세요.</div>'}</div></div>
-    ${breadth ? `<div class="sec"><h2>시장 폭</h2><div class="panel pad breadth">${breadth}</div></div>` : ""}
+    <div class="sec"><h2>관심종목 <small>${esc(when(w?.updated))}</small></h2><div class="panel">${watch || '<div class="empty">관심종목이 없습니다. config/settings.yaml의 watchlist에 종목을 넣으면 여기에 나옵니다.</div>'}</div></div>
+    ${breadth ? `<div class="sec"><h2>오른 종목과 내린 종목</h2><div class="panel pad breadth">${breadth}</div></div>` : ""}
     ${movers}
-    ${(b.news_kr || []).length ? `<div class="sec"><h2>국내 증시 헤드라인</h2><div class="panel news">${b.news_kr.map((n) => `<a href="${esc(n.link)}" target="_blank" rel="noopener">${esc(n.title)}<small>${esc(n.publisher || "")} ${n.time ? "· " + esc(when(n.time)) : ""}</small></a>`).join("")}</div></div>` : ""}
-    ${(b.news || []).length ? `<div class="sec"><h2>해외 헤드라인</h2><div class="panel news">${b.news.map((n) => `<a href="${esc(n.link)}" target="_blank" rel="noopener">${esc(n.title)}<small>${esc(n.publisher || "")} ${n.time ? "· " + esc(when(n.time)) : ""}</small></a>`).join("")}</div></div>` : ""}
+    ${(b.news_kr || []).length ? `<div class="sec"><h2>국내 증시 헤드라인</h2><div class="panel news">${b.news_kr.map((n) => `<a href="${esc(n.link)}" target="_blank" rel="noopener">${esc(n.title)}<small>${esc(n.publisher || "")}${n.time ? ", " + esc(when(n.time)) : ""}</small></a>`).join("")}</div></div>` : ""}
+    ${(b.news || []).length ? `<div class="sec"><h2>해외 헤드라인</h2><div class="panel news">${b.news.map((n) => `<a href="${esc(n.link)}" target="_blank" rel="noopener">${esc(n.title)}<small>${esc(n.publisher || "")}${n.time ? ", " + esc(when(n.time)) : ""}</small></a>`).join("")}</div></div>` : ""}
     <p class="note">${esc(state.data.meta?.disclaimer || "")}</p>`;
 }
 
@@ -257,22 +273,22 @@ function geoCard(g, gw) {
   if (!g?.themes?.length && !gw) return "";
   const th = (g?.themes || []).slice(0, 6).map((x) => {
     const dir = x.direction >= 0.2 ? "esc" : x.direction <= -0.2 ? "de" : "mix";
-    const mv = Object.entries(x.moves || {}).map(([k, v]) => `${esc(GEO_TK[k] || k)} <span class="${cls(v)}">${sgn(v, 1)}</span>`).join(" · ");
+    const mv = Object.entries(x.moves || {}).map(([k, v]) => `${esc(GEO_TK[k] || k)} <span class="${cls(v)}">${sgn(v, 1)}</span>`).join(", ");
     return `<details class="geo-t">
       <summary><div class="gh"><b>${esc(x.label)}</b><span class="gs ${dir}">${esc(x.stance)}</span></div>
         <div class="gm"><span class="heat ${GEO_LV[x.level] || ""}"><i style="width:${Math.round((x.heat || 0) * 100)}%"></i></span>
-        <small>관심 ${esc(x.level)} · 48시간 ${nf(x.n)}건${x.ratio ? ` (평소의 ${nf(x.ratio, 1)}배)` : ""}</small></div>
-        ${(x.up?.length || x.down?.length) && Math.abs(x.intensity) >= 0.1 ? `<div class="gi">${x.up?.length ? `<span class="up">유리 ${esc(x.up.join(", "))}</span>` : ""}${x.down?.length ? `<span class="down">부담 ${esc(x.down.join(", "))}</span>` : ""}</div>` : ""}
+        <small>기사 48시간 ${nf(x.n)}건${x.ratio ? `, 평소의 ${nf(x.ratio, 1)}배` : ""}</small></div>
+        ${(x.up?.length || x.down?.length) && Math.abs(x.intensity) >= 0.1 ? `<div class="gi">${x.up?.length ? `<span class="up">${esc(x.up.join(", "))}에 유리</span>` : ""}${x.down?.length ? `<span class="down">${esc(x.down.join(", "))}에 부담</span>` : ""}</div>` : ""}
       </summary>
-      <div class="gd">${mv ? `<p>시장 반응(5일): ${mv}</p>` : ""}<p>제목 어조: 고조 ${nf(x.esc_n)} · 완화 ${nf(x.de_n)}</p>
+      <div class="gd">${mv ? `<p>5일 가격 변화: ${mv}</p>` : ""}<p>기사 제목 어조: 고조 ${nf(x.esc_n)}건, 완화 ${nf(x.de_n)}건</p>
         ${(x.headlines || []).map((n) => `<a href="${esc(n.link)}" target="_blank" rel="noopener">${esc(n.title)}<small>${esc(n.publisher || "")}</small></a>`).join("")}</div>
     </details>`;
   }).join("");
-  const wk = gw?.items?.length ? `<div class="geo-wk"><h3>주간 정세 해설 <small>${esc(gw.week || "")} · 웹 검색 기반 자동 작성</small></h3>
-    <ul class="bullets">${gw.items.map((i) => `<li><b>${esc(i.title)}</b> ${esc(i.text || "")}${i.impact ? `<br><small>영향: ${esc(i.impact)}</small>` : ""}${(i.sources || []).length ? `<br><small>${i.sources.map((s) => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name || "출처")}</a>`).join(" · ")}</small>` : ""}</li>`).join("")}</ul></div>` : "";
-  return `<div class="sec"><h2>국제 정세 체크 <small>뉴스 관심도 × 어조 × 시장 반응</small></h2>
+  const wk = gw?.items?.length ? `<div class="geo-wk"><h3>이번 주 정세 해설 <small>${esc(gw.week || "")} 토요일 점검에서 웹 검색으로 작성</small></h3>
+    <ul class="bullets">${gw.items.map((i) => `<li><b>${esc(i.title)}</b> ${esc(i.text || "")}${i.impact ? `<br><small>영향: ${esc(i.impact)}</small>` : ""}${(i.sources || []).length ? `<br><small>${i.sources.map((s) => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name || "출처")}</a>`).join(", ")}</small>` : ""}</li>`).join("")}</ul></div>` : "";
+  return `<div class="sec"><h2>국제 정세 <small>기사량, 제목 어조, 가격 반응으로 자동 판정</small></h2>
     <div class="panel pad geo">${(g?.summary || []).length ? `<ul class="bullets">${g.summary.map((s) => `<li>${esc(s)}</li>`).join("")}</ul>` : ""}${th}${wk}
-    <p class="note" style="margin:8px 0 0">키워드·가격 반응 기반 자동 판정이라 기사 맥락을 완전히 반영하지 못합니다. 종목별 영향은 상세 화면 ‘국제 정세 영향’에서 볼 수 있습니다.</p></div></div>`;
+    <p class="note" style="margin:8px 0 0">키워드와 가격 움직임으로 판정해서 기사 맥락까지는 읽지 못합니다. 종목별 영향은 종목 상세 화면에 있습니다.</p></div></div>`;
 }
 const GEO_TK = { "^SOX": "반도체지수", "^GSPC": "S&P500", "KRW=X": "원달러", "CL=F": "WTI", "BZ=F": "브렌트", "GC=F": "금", "^KS11": "코스피", "^VIX": "VIX", "^TNX": "미 10년물" };
 
@@ -295,13 +311,13 @@ function renderPicks() {
     <article class="pick">
       <div class="rank">${i + 1}</div>
       <div>
-        <div class="head"><div><h3>${esc(x.name)}</h3><div class="sub">${esc(isKR(x.ticker) ? code(x.ticker) : x.ticker)} · ${esc(sector(x.sector))} · ${price(x.price, x.ticker)}</div>
-          <div class="pills">${verdict(x.verdict)}${setupPill(tx.setup_label, tx.setup)}${divOf(x.ticker) && divOf(x.ticker).yield >= 0.5 ? `<button class="tag div-tag" data-goto="div" title="배당 탭으로">💰 배당 ${nf(divOf(x.ticker).yield, 1)}%</button>` : ""}</div></div>
+        <div class="head"><div><h3>${esc(x.name)}</h3><div class="sub meta">${mt(esc(isKR(x.ticker) ? code(x.ticker) : x.ticker), esc(sector(x.sector)), price(x.price, x.ticker))}</div>
+          <div class="pills">${verdict(x.verdict)}${setupPill(tx.setup_label, tx.setup)}${divOf(x.ticker) && divOf(x.ticker).yield >= 0.5 ? `<button class="div-tag" data-goto="div" title="배당 탭에서 보기">배당 ${nf(divOf(x.ticker).yield, 1)}%</button>` : ""}</div></div>
         <div class="score"><b>${nf(x.score, 1)}</b><small>종합점수</small>${x.adj ? `<small class="adj ${x.adj > 0 ? "up" : "down"}">백테스트 ${sgn(x.adj, 1, "")}</small>` : ""}</div></div>
       </div>
       ${coDesc(x.ticker) ? `<p class="co-desc">${esc(coDesc(x.ticker))}</p>` : ""}
       <p class="summary">${esc(x.summary || "")}</p>
-      ${(x.geo_notes || []).length ? `<ul class="geo-notes">${x.geo_notes.map((n) => `<li class="${n.pol > 0 ? "pos" : "neg"}">${n.pol > 0 ? "🌐 " : "⚠️ "}${esc(n.text)}</li>`).join("")}</ul>` : ""}
+      ${(x.geo_notes || []).length ? `<ul class="geo-notes">${x.geo_notes.map((n) => `<li class="${n.pol > 0 ? "pos" : "neg"}">${esc(n.text)}</li>`).join("")}</ul>` : ""}
       <figure class="mini" data-mini="${esc(x.ticker)}" aria-label="${esc(x.name)} 미니 차트"></figure>
       <div class="metrics">
         <div class="metric"><small>선행 PER</small><b>${nf(x.fpe, 1)}</b></div>
@@ -313,13 +329,13 @@ function renderPicks() {
         <section><h4>왜 싼가 <small>펀더멘털</small></h4>
           <ul class="why">${(x.why || []).slice(0, 3).map((s) => `<li>${esc(s)}</li>`).join("") || "<li>-</li>"}</ul>
           ${(x.risk || []).length ? `<ul class="risk">${x.risk.slice(0, 2).map((s) => `<li>${esc(s)}</li>`).join("")}</ul>` : ""}</section>
-        <section><h4>왜 지금인가 <small>차트 · 추세 ${nf(sc.trend)} · 타이밍 ${nf(sc.timing)}</small></h4>
+        <section><h4>왜 지금인가 <small>차트, 추세 ${nf(sc.trend)}점, 타이밍 ${nf(sc.timing)}점</small></h4>
           <ul class="why">${(tx.pos || []).slice(0, 3).map((s) => `<li>${esc(s)}</li>`).join("") || "<li>뚜렷한 긍정 신호 없음</li>"}</ul>
           ${(tx.neg || []).length ? `<ul class="risk">${tx.neg.slice(0, 2).map((s) => `<li>${esc(s)}</li>`).join("")}</ul>` : ""}</section>
       </div>
       ${levelsRow(tx.levels, x.ticker)}
-      ${x.relaxed ? '<p class="note" style="grid-column:1/-1;margin:6px 0 0">차트 조건을 완화해 채운 후보입니다.</p>' : ""}
-      <div class="pick-btns"><button class="btn ghost more" data-t="${esc(x.ticker)}">차트·재무·근거 전체 보기</button>${linkBtns(x.links || linksOf(x.ticker))}</div>
+      ${x.relaxed ? '<p class="note" style="grid-column:1/-1;margin:6px 0 0">차트 조건을 낮춰서 채운 후보입니다.</p>' : ""}
+      <div class="pick-btns"><button class="btn ghost more" data-t="${esc(x.ticker)}">차트와 근거 보기</button>${linkBtns(x.links || linksOf(x.ticker))}</div>
     </article>`;
   };
 
@@ -327,23 +343,24 @@ function renderPicks() {
   const s = tr?.summary || {};
   const bySetup = Object.entries(tr?.by_setup || {});
   el.innerHTML = `
+    <div class="dateline"><h1>저평가 추천</h1><p>${DESC[state.picksH]}${block ? ` ${esc(when(block.generated))} 기준.` : ""}</p></div>
     <div class="seg" role="group" aria-label="기간">${H.map(([k, l]) => `<button data-h="${k}" aria-pressed="${state.picksH === k}">${l}</button>`).join("")}</div>
     <div class="seg sm" role="group" aria-label="시장">${M.map(([k, l]) => `<button data-m="${k}" aria-pressed="${state.picksM === k}">${l}</button>`).join("")}</div>
-    <p class="note" style="margin:0 2px 12px">${DESC[state.picksH]} ${block ? "· " + esc(when(block.generated)) + " 기준" : ""}</p>
-    ${list.length ? list.map(card).join("") : `<div class="empty">조건을 통과한 종목이 없습니다. 유니버스를 넓히거나 다음 갱신을 기다려 주세요.</div>`}
+    <div style="height:8px"></div>
+    ${list.length ? list.map(card).join("") : `<div class="empty">조건을 통과한 종목이 없습니다. 다음 갱신 때 다시 고릅니다.</div>`}
     <div class="sec"><h2>추천 성과 추적</h2>
       <div class="kpis"><div class="kpi"><small>추적 건수</small><b>${nf(s.count)}</b></div>
       <div class="kpi"><small>평균 수익률</small><b class="${cls(s.avg_ret)}">${sgn(s.avg_ret, 1)}</b></div>
       <div class="kpi"><small>플러스 비율</small><b>${s.hit_rate == null ? "-" : nf(s.hit_rate, 0) + "%"}</b></div></div>
       ${predVsActual(tr)}
-      ${bySetup.length ? `<div class="panel" style="margin-top:8px"><div class="row head-row"><span>차트 셋업별</span><span></span><span>평균 · 플러스 비율</span></div>${bySetup.map(([k, v]) => `
+      ${bySetup.length ? `<div class="panel" style="margin-top:8px"><div class="row head-row"><span>차트 셋업별</span><span></span><span>평균 수익률, 플러스 비율</span></div>${bySetup.map(([k, v]) => `
         <div class="row" style="cursor:default"><div><div class="t1">${esc(k)}</div><div class="t2">${nf(v.count)}건</div></div><span></span>
         <div class="num"><b class="${cls(v.avg_ret)}">${sgn(v.avg_ret, 1)}</b><span>${nf(v.hit_rate, 0)}%</span></div></div>`).join("")}</div>` : ""}
       <div class="panel" style="margin-top:8px">${items.map((i) => `
-        <button class="row" data-t="${esc(i.ticker)}"><div><div class="t1">${esc(i.name)}</div><div class="t2">${esc(i.date)} · ${{ daily: "오늘", weekly: "주간", monthly: "월간" }[i.horizon]}${i.setup ? " · " + esc(i.setup) : ""} · 추천가 ${price(i.entry, i.ticker)}</div></div><span></span>
+        <button class="row" data-t="${esc(i.ticker)}"><div><div class="t1">${esc(i.name)}</div><div class="t2 meta">${mt(esc(i.date), { daily: "오늘", weekly: "주간", monthly: "월간" }[i.horizon], i.setup ? esc(i.setup) : "", "추천가 " + price(i.entry, i.ticker))}</div></div><span></span>
         <div class="num"><b class="${cls(i.ret)}">${sgn(i.ret, 1)}</b></div></button>`).join("") || '<div class="empty">추천이 쌓이면 이후 수익률을 자동으로 추적합니다.</div>'}</div>
     </div>
-    <p class="note">점수는 같은 시장 안에서의 상대 순위(0~100)이고, 차트 점수는 이평선·RSI·MACD·볼린저·거래량 규칙 점수입니다. 지지·저항·손절 참고가는 기술적 기준선일 뿐 매매 지시가 아닙니다.</p>`;
+    <p class="note">종합점수는 같은 시장 안의 상대 순위(0~100)이고, 차트 점수는 이평선·RSI·MACD·볼린저·거래량 규칙으로 매긴 값입니다. 지지·저항·손절 참고가는 기술적 기준선이며 매매 지시가 아닙니다.</p>`;
   el.querySelectorAll("[data-mini]").forEach(async (fig) => {
     const d = await loadChart(fig.dataset.mini);
     if (!d || !fig.isConnected) { fig.remove(); return; }
@@ -369,6 +386,7 @@ function renderScreen() {
   const el = $("#view-screen"), rows = state.data.screen?.rows || [];
   if (!el.dataset.ready) {
     el.innerHTML = `
+      <div class="dateline"><h1>종목 스크리닝</h1><p>관심종목과 추천 후보 전체를 점수로 정렬하고 차트 조건으로 거릅니다.</p></div>
       <div class="tools"><input id="q" type="search" placeholder="종목명·티커 검색" aria-label="검색" autocomplete="off">
       <select id="sort" aria-label="정렬">${SORTS.map(([k, l]) => `<option value="${k}">${l}</option>`).join("")}</select></div>
       <div class="seg sm" role="group" aria-label="시장" id="scr-m"></div>
@@ -407,7 +425,7 @@ function drawScreenList() {
   };
   $("#scr-list").innerHTML = list.slice(0, 200).map((r) => `
     <button class="row" data-t="${esc(r.ticker)}">
-      <div><div class="t1">${esc(r.name)} ${verdict(r.verdict)}</div><div class="t2">${esc(isKR(r.ticker) ? code(r.ticker) : r.ticker)} · ${esc(r.setup_label || "")} · PER ${nf(r.fpe, 1)} · <span class="${cls(r.chg_1d)}">${sgn(r.chg_1d)}</span></div></div>
+      <div><div class="t1">${esc(r.name)} ${verdict(r.verdict)}</div><div class="t2">${esc(isKR(r.ticker) ? code(r.ticker) : r.ticker)}${SEP}${esc(r.setup_label || "")}${SEP}PER ${nf(r.fpe, 1)}${SEP}<span class="${cls(r.chg_1d)}">${sgn(r.chg_1d)}</span></div></div>
       ${spark(r.spark?.slice(-60), 56, 26)}
       <div class="num">${metric(r)}</div>
     </button>`).join("") || `<div class="empty">조건에 맞는 종목이 없습니다. 필터를 ‘전체’로 바꿔 보세요.</div>`;
@@ -526,13 +544,13 @@ function finSection(fin, cd) {
     <div class="sec"><h2>실적 자동 분석 <small>수집한 재무 숫자로만 작성</small></h2><div class="panel pad">
       ${an.length ? Object.entries(byCat).map(([k, v]) => `<div class="ck"><h4>${esc(k)}</h4><ul>${v.map((x) => `<li class="${x.pol > 0 ? "pos" : x.pol < 0 ? "neg" : "neu"}"><i aria-hidden="true">${x.pol > 0 ? "＋" : x.pol < 0 ? "－" : "·"}</i>${esc(x.text)}</li>`).join("")}</ul></div>`).join("") : '<p class="note" style="margin:0">분석할 데이터가 부족합니다.</p>'}
     </div></div>
-    <div class="sec"><h2>손익 추이 <small>${per === "q" ? "분기" : "연간"} · 기간 말 기준</small></h2>
+    <div class="sec"><h2>손익 추이 <small>${per === "q" ? "분기" : "연간"}, 기간 말 기준</small></h2>
       <div class="seg sm" role="group" aria-label="기간"><button data-fp="a" aria-pressed="${per === "a"}">연간</button><button data-fp="q" aria-pressed="${per === "q"}" ${fin.quarterly ? "" : "disabled"}>분기</button></div>
       <div class="panel pad">${incomeTable(per === "q" ? fin.quarterly : fin.annual, cur, per === "q") || '<p class="note" style="margin:0">손익 데이터 없음</p>'}</div></div>
-    ${cons || cal.next_earnings ? `<div class="sec"><h2>컨센서스 · 추정치 변화</h2><div class="panel pad">
-      ${cal.next_earnings ? `<p class="earn">다음 실적 발표 <b>${esc(cal.next_earnings)}</b>${cal.eps_avg != null ? ` · 예상 EPS ${epsFmt(cal.eps_avg, cur)}` : ""}${cal.rev_avg != null ? ` · 예상 매출 ${money(cal.rev_avg, cur)}` : ""}</p>` : ""}
+    ${cons || cal.next_earnings ? `<div class="sec"><h2>컨센서스, 추정치 변화</h2><div class="panel pad">
+      ${cal.next_earnings ? `<p class="earn">다음 실적 발표 <b>${esc(cal.next_earnings)}</b>${cal.eps_avg != null ? `${SEP}예상 EPS ${epsFmt(cal.eps_avg, cur)}` : ""}${cal.rev_avg != null ? `${SEP}예상 매출 ${money(cal.rev_avg, cur)}` : ""}</p>` : ""}
       ${cons}</div></div>` : ""}
-    ${sur ? `<div class="sec"><h2>실적 서프라이즈 <small>최근 분기 · EPS</small></h2><div class="panel pad">${sur}</div></div>` : ""}
+    ${sur ? `<div class="sec"><h2>실적 서프라이즈 <small>최근 분기, EPS</small></h2><div class="panel pad">${sur}</div></div>` : ""}
     ${bal ? `<div class="sec"><h2>재무상태</h2><div class="panel pad">${bal}</div></div>` : ""}
     ${cf ? `<div class="sec"><h2>현금흐름</h2><div class="panel pad">${cf}</div></div>` : ""}`;
 }
@@ -540,9 +558,9 @@ function geoSection(cd, r) {
   const notes = cd?.geo?.notes || r?.geo_notes || [];
   const score = cd?.geo?.score ?? r?.geo;
   if (score == null && !notes.length) return "";
-  return `<div class="sec"><h2>국제 정세 영향 <small>오늘 기준 · 50 = 중립</small></h2><div class="panel pad">
+  return `<div class="sec"><h2>국제 정세 영향 <small>오늘 기준, 50 = 중립</small></h2><div class="panel pad">
     <div class="factor"><span>정세 점수</span><div class="track"><i style="width:${score ?? 50}%"></i></div><b>${nf(score)}</b></div>
-    ${notes.length ? `<ul class="geo-notes">${notes.map((n) => `<li class="${n.pol > 0 ? "pos" : "neg"}">${n.pol > 0 ? "🌐 " : "⚠️ "}${esc(n.text)}</li>`).join("")}</ul>` : '<p class="note" style="margin:6px 0 0">지금 두드러진 정세 테마와 이 종목의 노출이 겹치지 않습니다.</p>'}
+    ${notes.length ? `<ul class="geo-notes">${notes.map((n) => `<li class="${n.pol > 0 ? "pos" : "neg"}">${esc(n.text)}</li>`).join("")}</ul>` : '<p class="note" style="margin:6px 0 0">지금 두드러진 정세 테마와 이 종목의 노출이 겹치지 않습니다.</p>'}
     <p class="note" style="margin:6px 0 0">점수는 아직 추천 순위에 반영하지 않고(가중치 0) 매일 기록만 합니다. 실전에서 예측력이 통계적으로 확인되면 자동 보정이 비중을 줍니다.</p>
   </div></div>`;
 }
@@ -562,11 +580,11 @@ function pickRanks(t) {
   return out;
 }
 const divOf = (t) => (state.data.dividend?.candidates || []).find((c) => c.ticker === t);
-const pickBadges = (t) => pickRanks(t).map((x) => `<span class="tag reco">⭐ ${H_KO[x.h]} ${x.rank}위</span>`).join("");
+const pickBadges = (t) => pickRanks(t).map((x) => `<span class="tag reco">${H_KO[x.h]} 추천 ${x.rank}위</span>`).join("");
 function recoBox(t) {
   const rk = pickRanks(t);
   if (!rk.length) return "";
-  return `<div class="reco-box"><div>⭐ ${rk.map((x) => `<b>${H_KO[x.h]} 추천 ${x.rank}위</b>${x.m !== "all" ? `(${M_KO[x.m]})` : ""}`).join(" · ")}</div>
+  return `<div class="reco-box"><div>${rk.map((x) => `<b>${H_KO[x.h]} 추천 ${x.rank}위</b>${x.m !== "all" ? `(${M_KO[x.m]})` : ""}`).join(", ")}</div>
     <button class="btn ghost sm" data-goto="picks" data-gh="${rk[0].h}" data-gm="${rk[0].m}">추천 근거 보기</button></div>`;
 }
 function divSection(t, cd) {
@@ -580,16 +598,16 @@ function divSection(t, cd) {
   const dps = c.dps || [], mx = Math.max(...dps, 0) || 1;
   const kv = (l, v) => `<div><small>${l}</small>${v}</div>`;
   const cur = isKR(t) ? "원" : "$";
-  return `<div class="sec"><h2>배당 정보 <small>최근 12개월 · ${esc(c.pool || "")}</small></h2><div class="panel pad">
+  return `<div class="sec"><h2>배당 정보 <small>최근 12개월, ${esc(c.pool || "")}</small></h2><div class="panel pad">
     <div class="kv">
       ${kv("배당수익률", `<b>${nf(c.yield, 2)}%</b>`)}${kv("주당배당금(연)", c.ttm_dps == null ? "-" : (isKR(t) ? nf(c.ttm_dps, 0) + "원" : "$" + nf(c.ttm_dps, 2)))}
       ${kv("5년 배당성장(연)", c.cagr5 == null ? "-" : `<span class="${cls(c.cagr5)}">${sgn(c.cagr5, 1)}</span>`)}${kv("배당성향", c.payout == null ? "-" : nf(c.payout, 0) + "%")}
       ${kv("지급 횟수", `연 ${nf(c.freq)}회`)}${kv("감배 이력(연간)", c.cuts ? `<span class="down">${c.cuts}회</span>` : "없음")}
-      ${kv("배당 점수", nf(c.score, 1) + "점")}${kv("내 플랜", inPlan ? `<b>${nf(inPlan.weight, 0)}%</b> · 연 세후 ${krw(inPlan.annual)}` : "미포함")}
+      ${kv("배당 점수", nf(c.score, 1) + "점")}${kv("내 플랜", inPlan ? `<b>${nf(inPlan.weight, 0)}%</b>${SEP}연 세후 ${krw(inPlan.annual)}` : "미포함")}
     </div>
     ${dps.length ? `<div class="dps-bars" aria-label="월별 주당배당금">${dps.map((v, i) => `<div><i style="height:${(v / mx) * 100}%"></i><span>${i + 1}</span></div>`).join("")}</div><p class="note" style="margin:2px 0 0">월별 주당배당금(배당락월 기준, ${cur === "원" ? "원" : "달러"})</p>` : ""}
     ${(c.notes || []).length ? `<ul class="bullets" style="margin-top:6px">${c.notes.map((n) => `<li>${esc(n)}</li>`).join("")}</ul>` : ""}
-    <div class="btns" style="margin-top:10px"><button class="btn ${pinned ? "ghost " : ""}sm" data-dvpin="${esc(t)}">${pinned ? (o.mode === "manual" ? "플랜에서 빼기" : "📌 고정 해제") : (o?.mode === "manual" ? "+ 플랜에 담기" : "📌 배당 플랜에 고정")}</button>
+    <div class="btns" style="margin-top:10px"><button class="btn ${pinned ? "ghost " : ""}sm" data-dvpin="${esc(t)}">${pinned ? (o.mode === "manual" ? "플랜에서 빼기" : "고정 해제") : (o?.mode === "manual" ? "+ 플랜에 담기" : "배당 플랜에 고정")}</button>
       <button class="btn ghost sm" data-goto="div">배당 탭에서 보기</button></div>
   </div></div>`;
 }
@@ -619,17 +637,17 @@ async function openDetail(t) {
     $("#sheet-in").innerHTML = `
       <div class="grip"></div>
       <div class="head" style="display:flex;justify-content:space-between;align-items:start;gap:10px">
-        <div><h2 style="margin:0;font-size:21px">${esc(name)}</h2><div class="t2" style="color:var(--muted);font-size:13px">${esc(isKR(t) ? code(t) : t)} · ${esc(sector(r?.sector || cd?.sector))}</div></div>
+        <div><h2 style="margin:0;font-size:21px">${esc(name)}</h2><div class="t2" style="color:var(--muted);font-size:13px">${esc(isKR(t) ? code(t) : t)}, ${esc(sector(r?.sector || cd?.sector))}</div></div>
         <div style="text-align:right"><div style="font-size:19px;font-weight:600">${price(r?.price ?? tech.last ?? cd?.price ?? dvc?.price, t)}</div><div class="${cls(r?.chg_1d ?? tech.chg_1d ?? cd?.chg_1d)}">${sgn(r?.chg_1d ?? tech.chg_1d ?? cd?.chg_1d)}</div></div>
       </div>
       <div class="pills" style="margin:10px 0">${verdict(r?.verdict || w?.verdict)}${setupPill(setupLabel, setup)}</div>
       ${recoBox(t)}
-      ${setupDesc ? `<div class="setup-box"><b>${esc(setupLabel)}</b> · 이평선 ${esc(ta.trend_label || r?.trend_label || "")}<p>${esc(setupDesc)}</p></div>` : ""}
-      <div class="sec"><h2>차트 ${cd ? `<small>최근 ${cd.d.length}거래일 · 일봉</small>` : ""}</h2>
+      ${setupDesc ? `<div class="setup-box"><b>${esc(setupLabel)}</b>${SEP}이평선 ${esc(ta.trend_label || r?.trend_label || "")}<p>${esc(setupDesc)}</p></div>` : ""}
+      <div class="sec"><h2>차트 ${cd ? `<small>최근 ${cd.d.length}거래일, 일봉</small>` : ""}</h2>
         ${cd ? `<div class="panel pad ta-wrap" id="ta-full"></div>` : `<div class="panel pad"><p class="note" style="margin:0">차트 데이터를 불러오는 중이거나 아직 생성되지 않았습니다(평일 아침 실행 후 생성). 신호 요약은 아래에서 확인하세요.</p></div>`}
       </div>
       <div class="sec"><h2>기술적 가격대 <small>스윙 고·저점 + 이평선, ATR 기준</small></h2>${levelsRow(lv, t) || '<div class="empty">-</div>'}
-        ${lv && (lv.support?.[1] || lv.resistance?.[1]) ? `<p class="note">2차 지지 ${lvTxt(lv.support?.[1], t)} · 2차 저항 ${lvTxt(lv.resistance?.[1], t)}</p>` : ""}</div>
+        ${lv && (lv.support?.[1] || lv.resistance?.[1]) ? `<p class="note">2차 지지 ${lvTxt(lv.support?.[1], t)}${SEP}2차 저항 ${lvTxt(lv.resistance?.[1], t)}</p>` : ""}</div>
       ${divSection(t, cd)}
       ${coSection(t, r, cd)}
       <div class="sec"><h2>차트 점수 <small>규칙 기반 0~100</small></h2><div class="panel pad">
@@ -705,18 +723,18 @@ function renderDiv() {
     if (o.mode === "manual") return `<button class="mini-btn ${inPlan.has(c.ticker) ? "on" : ""}" data-dva="${inPlan.has(c.ticker) ? "unselect" : "select"}" data-t2="${esc(c.ticker)}">${inPlan.has(c.ticker) ? "✓ 담김" : "+ 담기"}</button>`;
     const pin = o.pinned.includes(c.ticker), ex = o.excluded.includes(c.ticker);
     return ex ? `<button class="mini-btn" data-dva="unexclude" data-t2="${esc(c.ticker)}">제외 해제</button>`
-      : `<button class="mini-btn ${pin ? "on" : ""}" data-dva="${pin ? "unpin" : "pin"}" data-t2="${esc(c.ticker)}">${pin ? "📌 고정됨" : "📌 고정"}</button><button class="mini-btn" data-dva="exclude" data-t2="${esc(c.ticker)}">제외</button>`;
+      : `<button class="mini-btn ${pin ? "on" : ""}" data-dva="${pin ? "unpin" : "pin"}" data-t2="${esc(c.ticker)}">${pin ? "고정됨" : "고정"}</button><button class="mini-btn" data-dva="exclude" data-t2="${esc(c.ticker)}">제외</button>`;
   };
   el.innerHTML = `
-    <div class="dateline"><h1>배당 플랜</h1><p>${esc(when(d.generated))} 가격 기준 · 환율 ${nf(d.usdkrw, 1)}원 · 설정은 이 기기에 저장</p></div>
+    <div class="dateline"><h1>배당 플랜</h1><p>${esc(when(d.generated))} 가격 기준, 환율 ${nf(d.usdkrw, 1)}원, 설정은 이 기기에 저장</p></div>
     <div class="kpis">
       <div class="kpi"><small>연간 세후 배당</small><b>${krw(P.annual)}</b></div>
       <div class="kpi"><small>월 평균</small><b>${krw(P.annual / 12)}</b></div>
       <div class="kpi"><small>세후 수익률</small><b>${P.yieldNet == null ? "-" : nf(P.yieldNet, 2) + "%"}</b><small>지급월 ${P.covered.length}/12</small></div>
     </div>
-    ${o.target > 0 ? `<div class="panel pad goal">월 <b>${krw(o.target)}</b> 목표 → 이 구성(세후 ${P.yieldNet == null ? "-" : nf(P.yieldNet, 2) + "%"})이면 필요 투자금 <b>${P.need ? krw(P.need) : "-"}</b>${P.need ? ` <span class="${P.need > o.capital ? "down" : "up"}">(현재 투자금 대비 ${P.need > o.capital ? "+" + krw(P.need - o.capital) + " 부족" : "충족"})</span>` : ""}</div>` : ""}
+    ${o.target > 0 ? `<div class="panel pad goal">월 <b>${krw(o.target)}</b> 목표. 이 구성(세후 ${P.yieldNet == null ? "-" : nf(P.yieldNet, 2) + "%"})이면 필요 투자금 <b>${P.need ? krw(P.need) : "-"}</b>${P.need ? ` <span class="${P.need > o.capital ? "down" : "up"}">(현재 투자금 대비 ${P.need > o.capital ? "+" + krw(P.need - o.capital) + " 부족" : "충족"})</span>` : ""}</div>` : ""}
     <details class="panel pad dv-set" ${store.get("dvOpen", true) ? "open" : ""}>
-      <summary><b>플랜 설정</b> <small>${o.mode === "auto" ? `자동 ${o.n}종목` : `직접 ${o.selected.length}종목`} · ${{ score: "점수 비례", equal: "균등", yield: "배당률 비례", custom: "직접 입력" }[o.weighting]} · 단일 ≤${Math.round(o.singleCap * 100)}%</small></summary>
+      <summary><b>플랜 설정</b> <small>${o.mode === "auto" ? `자동 ${o.n}종목` : `직접 ${o.selected.length}종목`}, ${{ score: "점수 비례", equal: "균등", yield: "배당률 비례", custom: "직접 입력" }[o.weighting]}, 단일 ≤${Math.round(o.singleCap * 100)}%</small></summary>
       <div class="dv-grid">
         <label>투자금(원)<input data-dvi="capital" inputmode="numeric" value="${nf(o.capital)}"></label>
         <label>목표 월 배당(원, 선택)<input data-dvi="target" inputmode="numeric" value="${o.target ? nf(o.target) : ""}" placeholder="예: 1,000,000"></label>
@@ -738,27 +756,27 @@ function renderDiv() {
       <div class="btns"><button class="btn ghost sm" data-dva="reset">기본값으로</button>${o.mode === "manual" ? `<button class="btn ghost sm" data-dva="fromauto">자동 추천으로 채우기</button><button class="btn ghost sm" data-dva="clear">모두 빼기</button>` : ""}</div>
       <p class="note" style="margin:6px 0 0">연금저축·ISA도 미국 배당의 현지 원천징수 15%는 그대로 떼이고, 국내 배당소득세만 과세이연·비과세 됩니다(한도·요건 확인 필요).</p>
     </details>
-    ${P.warn.map((w) => `<p class="note warn">⚠️ ${esc(w)}</p>`).join("")}
-    <div class="sec"><h2>월별 예상 입금 <small>만원 · 배당락월 기준 · 세후</small></h2>
+    ${P.warn.map((w) => `<p class="note warn">${esc(w)}</p>`).join("")}
+    <div class="sec"><h2>월별 예상 입금 <small>만원, 배당락월 기준, 세후</small></h2>
       <div class="panel pad"><div class="months">${P.monthly.map((v, i) => `<div class="m ${i === nowM ? "now" : ""}" title="${i + 1}월 ${krw(v)}"><small>${v ? nf(v / 1e4, 0) : ""}</small><i style="height:${(v / max) * 100}%"></i><span>${i + 1}</span></div>`).join("")}</div>
-      ${P.missing.length ? `<p class="note" style="margin:6px 0 0">배당이 없는 달: ${P.missing.join("·")}월 — 해당 월에 지급하는 종목을 고정하면 채워집니다.</p>` : ""}</div>
+      ${P.missing.length ? `<p class="note" style="margin:6px 0 0">배당이 없는 달: ${P.missing.join("·")}월. 그 달에 배당하는 종목을 고정하면 채워집니다.</p>` : ""}</div>
     </div>
-    <div class="sec"><h2>플랜 구성 <small>${nf(P.rows.length)}종목 · 투자 ${krw(P.invested)}${P.cash > 1 ? ` · 현금 ${krw(P.cash)}` : ""}</small></h2><div class="panel">${P.rows.map((r) => `
-      <div class="row dv-r" data-t="${esc(r.ticker)}" role="button" tabindex="0"><div><div class="t1">${esc(r.name)}${r.pinned ? ' <span class="tag">📌</span>' : ""}${r.covered_call ? '<span class="tag">커버드콜</span>' : ""}${pickBadges(r.ticker)}</div>
-        <div class="t2">${esc(isKR(r.ticker) ? code(r.ticker) : r.ticker)} · 배당률 ${nf(r.yield, 2)}% · 5년 성장 ${r.cagr5 == null ? "-" : sgn(r.cagr5, 1)} ${dvDots(r.months)}</div>
-        <div class="t2">${shares(r)} × ${price(r.price, r.ticker)} · 연 세후 ${krw(r.annual)}</div></div><span></span>
+    <div class="sec"><h2>플랜 구성 <small>${nf(P.rows.length)}종목, 투자 ${krw(P.invested)}${P.cash > 1 ? `, 현금 ${krw(P.cash)}` : ""}</small></h2><div class="panel">${P.rows.map((r) => `
+      <div class="row dv-r" data-t="${esc(r.ticker)}" role="button" tabindex="0"><div><div class="t1">${esc(r.name)}${r.pinned ? '<span class="tag on">고정</span>' : ""}${r.covered_call ? '<span class="tag">커버드콜</span>' : ""}${pickBadges(r.ticker)}</div>
+        <div class="t2">${esc(isKR(r.ticker) ? code(r.ticker) : r.ticker)}${SEP}배당률 ${nf(r.yield, 2)}%${SEP}5년 성장 ${r.cagr5 == null ? "-" : sgn(r.cagr5, 1)} ${dvDots(r.months)}</div>
+        <div class="t2">${shares(r)} × ${price(r.price, r.ticker)}${SEP}연 세후 ${krw(r.annual)}</div></div><span></span>
         <div class="num">${o.weighting === "custom" ? `<label class="pct"><input data-dvw="${esc(r.ticker)}" inputmode="decimal" value="${nf(o.custom[r.ticker] ?? 100 / P.rows.length, 0)}">%</label><small class="t2">실제 ${nf(r.weight, 0)}%</small>` : `<b>${nf(r.weight, 0)}%</b>`}<span>${krw(r.alloc)}</span>
         <button class="mini-btn" data-dva="${o.mode === "manual" ? "unselect" : "exclude"}" data-t2="${esc(r.ticker)}" aria-label="${esc(r.name)} 빼기">빼기</button></div></div>`).join("") || '<div class="empty">담긴 종목이 없습니다. 아래 후보에서 담아 주세요.</div>'}</div>
       ${P.rows.some((r) => (r.notes || []).length) ? `<ul class="bullets" style="margin-top:8px">${P.rows.flatMap((r) => (r.notes || []).map((n) => `<li>${esc(r.name)}: ${esc(n)}</li>`)).join("")}</ul>` : ""}
     </div>
     ${P.upcoming.length ? `<div class="sec"><h2>다가오는 예상 배당락 <small>작년 일정 기준 추정</small></h2><div class="panel">${P.upcoming.map((u) => `<div class="row" style="cursor:default"><div class="t1">${esc(u.name)}</div><span></span><div class="num"><b>${u.date.getMonth() + 1}/${u.date.getDate()}</b><span>${u.days}일 후</span></div></div>`).join("")}</div></div>` : ""}
-    <div class="sec"><h2>후보 ${nf(d.candidates.length)}종목 <small>${o.mode === "manual" ? "담기로 직접 구성" : "📌 고정 = 반드시 포함 · 제외 = 빼고 계산"} · 종목을 누르면 차트</small></h2>
+    <div class="sec"><h2>후보 ${nf(d.candidates.length)}종목 <small>${o.mode === "manual" ? "담기로 직접 구성" : "고정하면 반드시 넣고, 제외하면 빼고 계산"}. 종목을 누르면 차트가 열립니다</small></h2>
       <div class="tools"><input id="dvq" type="search" placeholder="종목명·티커 검색" value="${esc(state.dvQ || "")}" autocomplete="off"></div>
-      <div class="chips">${[["all", "전체"], ["etf", "ETF"], ["stock", "개별주"], ["reit", "리츠·인프라"], ["monthly", "월배당"], ["reco", "⭐ 추천 종목"], ["us", "미국"], ["kr", "국내"]].map(([k, l]) => `<button data-dvf="${k}" aria-pressed="${ff === k}">${l}</button>`).join("")}</div>
+      <div class="chips">${[["all", "전체"], ["etf", "ETF"], ["stock", "개별주"], ["reit", "리츠·인프라"], ["monthly", "월배당"], ["reco", "추천 종목"], ["us", "미국"], ["kr", "국내"]].map(([k, l]) => `<button data-dvf="${k}" aria-pressed="${ff === k}">${l}</button>`).join("")}</div>
       <div class="panel">${cands.slice(0, 120).map((c) => `
       <div class="row dv-r ${o.excluded.includes(c.ticker) && o.mode === "auto" ? "dim" : ""}" data-t="${esc(c.ticker)}" role="button" tabindex="0"><div><div class="t1">${esc(c.name)}${c.covered_call ? '<span class="tag">커버드콜</span>' : ""}${inPlan.has(c.ticker) ? '<span class="tag on">플랜</span>' : ""}${pickBadges(c.ticker)}</div>
-      <div class="t2">${esc(isKR(c.ticker) ? code(c.ticker) : c.ticker)} · 배당률 ${nf(c.yield, 2)}% · 성향 ${c.payout == null ? "-" : nf(c.payout, 0) + "%"} · 연 ${c.freq}회 ${dvDots(c.months)}</div>
-      <div class="t2">${esc(c.pool || "")}${c.cagr5 != null ? ` · 5년 성장 ${sgn(c.cagr5, 1)}` : ""}${c.cuts ? ` · 감배 ${c.cuts}회` : ""}</div></div><span></span>
+      <div class="t2">${esc(isKR(c.ticker) ? code(c.ticker) : c.ticker)}${SEP}배당률 ${nf(c.yield, 2)}%${SEP}성향 ${c.payout == null ? "-" : nf(c.payout, 0) + "%"}${SEP}연 ${c.freq}회 ${dvDots(c.months)}</div>
+      <div class="t2">${esc(c.pool || "")}${c.cagr5 != null ? `${SEP}5년 성장 ${sgn(c.cagr5, 1)}` : ""}${c.cuts ? `${SEP}감배 ${c.cuts}회` : ""}</div></div><span></span>
       <div class="num"><b>${nf(c.score, 1)}</b><span class="t2">점</span>${candBtns(c)}</div></div>`).join("") || '<div class="empty">조건에 맞는 후보가 없습니다.</div>'}</div></div>
     <p class="note">${esc(d.method)} 앱 설정을 바꾸면 같은 규칙(점수 + 새로 채워지는 지급월 보너스, 상한 재분배)으로 이 기기에서 다시 계산합니다.</p>`;
 }
@@ -846,15 +864,15 @@ const sigBadge = (t) => (t == null ? "" : Math.abs(t) >= 2 ? `<span class="sigb"
 /* PDCA · 예측 vs 실제 */
 const HN = { daily: "오늘", weekly: "이번 주", monthly: "이번 달" };
 function winTiles(m) {
-  return `<div class="kpis">${["daily", "weekly", "monthly"].map((h) => { const v = m?.[h]; return `<div class="kpi"><small>${HN[h]} 추천 승률</small><b class="${v ? (v.win_rate >= 50 ? "up" : "down") : ""}">${v ? nf(v.win_rate, 0) + "%" : "-"}</b><small>${v ? `${nf(v.count)}건 확정 · 초과 ${sgn(v.avg_ex, 1)}` : "채점 대기"}</small></div>`; }).join("")}</div>`;
+  return `<div class="kpis">${["daily", "weekly", "monthly"].map((h) => { const v = m?.[h]; return `<div class="kpi"><small>${HN[h]} 추천 승률</small><b class="${v ? (v.win_rate >= 50 ? "up" : "down") : ""}">${v ? nf(v.win_rate, 0) + "%" : "-"}</b><small>${v ? `${nf(v.count)}건 확정${SEP}초과 ${sgn(v.avg_ex, 1)}` : "채점 대기"}</small></div>`; }).join("")}</div>`;
 }
 function predVsActual(tr) {
   const fin = (tr?.items || []).filter((i) => i.final).slice(-15).reverse();
-  return `<h2 style="font-size:15px;margin:16px 0 8px">예측 vs 실제 <small style="font-weight:400;color:var(--muted)">기간 도달 시 확정 · 지수 대비</small></h2>
+  return `<h2 style="font-size:15px;margin:16px 0 8px">예측 vs 실제 <small style="font-weight:400;color:var(--muted)">기간 도달 시 확정, 지수 대비</small></h2>
     ${winTiles(tr?.matured)}
     <div class="panel" style="margin-top:8px">${fin.map((i) => `
       <button class="row" data-t="${esc(i.ticker)}"><div><div class="t1">${i.final.win ? "✓" : "✗"} ${esc(i.name)}</div>
-      <div class="t2">${esc(i.date.slice(5).replace("-", "/"))} ${HN[i.horizon]} 추천 · 점수 ${nf(i.score, 1)} · ${nf(i.final.days)}거래일 보유${i.setup ? " · " + esc(i.setup) : ""}</div></div><span></span>
+      <div class="t2">${esc(i.date.slice(5).replace("-", "/"))} ${HN[i.horizon]} 추천${SEP}점수 ${nf(i.score, 1)}${SEP}${nf(i.final.days)}거래일 보유${i.setup ? SEP + esc(i.setup) : ""}</div></div><span></span>
       <div class="num"><b class="${cls(i.final.ex ?? i.final.ret)}">${sgn(i.final.ex ?? i.final.ret, 1)}</b><span>절대 ${sgn(i.final.ret, 1)}</span></div></button>`).join("") ||
       '<div class="empty">추천 후 5·20·60거래일이 지나면 여기서 예측이 맞았는지(✓/✗) 확정됩니다. 첫 결과는 다음 주에 나옵니다.</div>'}</div>`;
 }
@@ -865,7 +883,7 @@ function changelogBlock(cl) {
     <div class="panel">${items.map((c) => `<div class="alert"><i></i><div>
       <div><span class="cl ${CL_CLASS[c.type] || ""}">${esc(c.type || "")}</span> ${esc(c.title || "")}</div>
       ${c.detail ? `<div style="font-size:13.5px;color:var(--ink-2);margin-top:2px">${esc(c.detail)}</div>` : ""}
-      <small>${esc(c.date || "")}${c.evidence ? " · 근거: " + esc(c.evidence) : ""}${c.commit ? ` · <a href="https://github.com/hkbaboOD/jangjeon-note/commit/${esc(c.commit)}" target="_blank" rel="noopener">${esc(c.commit)}</a>` : ""}</small>
+      <small>${esc(c.date || "")}${c.evidence ? SEP + "근거: " + esc(c.evidence) : ""}${c.commit ? `${SEP}<a href="https://github.com/hkbaboOD/jangjeon-note/commit/${esc(c.commit)}" target="_blank" rel="noopener">${esc(c.commit)}</a>` : ""}</small>
     </div></div>`).join("") || '<div class="empty">아직 기록이 없습니다. 매주 토요일 점검 후 바뀐 내용(또는 유지 결정)이 여기 쌓입니다.</div>'}</div>
     ${(cl?.items || []).length > 12 ? `<p class="note">전체 이력: <a href="https://github.com/hkbaboOD/jangjeon-note/blob/main/docs/CHANGELOG.md" target="_blank" rel="noopener">docs/CHANGELOG.md</a></p>` : ""}</div>`;
 }
@@ -875,11 +893,11 @@ function pdcaBlock(p, rv, tr) {
   const wins = ["daily", "weekly", "monthly"].filter((h) => m[h]).map((h) => `${HN[h]} ${nf(m[h].win_rate, 0)}%${dw[h] ? ` <span class="dl ${cls(dw[h])}">${sgn(dw[h], 0, "%p")}</span>` : ""}`).join("<br>") || "채점 대기 중";
   const ch = p.act?.changes || [];
   return `
-    <div class="sec"><h2>이번 주 PDCA <small>${esc(p.week)} · 자동</small></h2>
+    <div class="sec"><h2>이번 주 PDCA <small>${esc(p.week)}, 자동</small></h2>
       <div class="pdca">
-        <div><b>P 계획</b><p>모델 v${nf(p.plan?.version ?? 0)}</p><small>${p.plan?.changed ? "가중치를 조정했습니다" : "근거 부족 → 현재 모델 유지"}</small></div>
-        <div><b>D 실행</b><p>예측 기록 ${nf(p.do?.days_recorded)}일</p><small>이번 주 신규 추천 ${nf(p.do?.new_picks)}건 · 진행 중 ${nf(p.do?.open_picks)}건</small></div>
-        <div><b>C 점검</b><p>${wins}</p><small>이번 주 확정 ${nf(p.check?.closed_this_week?.length || 0)}건 · 승률 = 지수 대비 플러스 비율</small></div>
+        <div><b>P 계획</b><p>모델 v${nf(p.plan?.version ?? 0)}</p><small>${p.plan?.changed ? "가중치를 조정했습니다" : "근거가 부족해 현재 모델 유지"}</small></div>
+        <div><b>D 실행</b><p>예측 기록 ${nf(p.do?.days_recorded)}일</p><small>이번 주 신규 추천 ${nf(p.do?.new_picks)}건${SEP}진행 중 ${nf(p.do?.open_picks)}건</small></div>
+        <div><b>C 점검</b><p>${wins}</p><small>이번 주 확정 ${nf(p.check?.closed_this_week?.length || 0)}건${SEP}승률 = 지수 대비 플러스 비율</small></div>
         <div><b>A 개선</b><p>${ch.length ? `${nf(ch.length)}건 조정` : "유지"}</p><small>${esc(ch[0] || "유의한 근거가 없어 바꾸지 않았습니다")}</small></div>
       </div>
       ${(p.next || []).length ? `<ul class="bullets" style="margin-top:8px">${p.next.map((n) => `<li>${esc(n)}</li>`).join("")}</ul>` : ""}
@@ -910,7 +928,7 @@ function icTrend(hist) {
     const [li, lv] = seg[seg.length - 1];
     ends.push({ k, x: x(li) + 8, y: y(lv) + 4, v: lv });
     return `<path d="${d}" fill="none" stroke="${LINE_C[k]}" stroke-width="2"/>
-      ${seg.map(([i, v]) => `<circle cx="${x(i)}" cy="${y(v)}" r="4" fill="${LINE_C[k]}" stroke="var(--surface)" stroke-width="2"><title>${pts[i].date} · ${HZ_KO[k]} IC ${v >= 0 ? "+" : ""}${v.toFixed(3)} · 모델 v${pts[i].version ?? "-"}</title></circle>`).join("")}`;
+      ${seg.map(([i, v]) => `<circle cx="${x(i)}" cy="${y(v)}" r="4" fill="${LINE_C[k]}" stroke="var(--surface)" stroke-width="2"><title>${pts[i].date}, ${HZ_KO[k]} IC ${v >= 0 ? "+" : ""}${v.toFixed(3)}, 모델 v${pts[i].version ?? "-"}</title></circle>`).join("")}`;
   }).join("");
   // 끝 라벨 겹침 방지: 위에서부터 13px 간격 확보
   ends.sort((a, b) => a.y - b.y).forEach((e, i, arr) => { if (i && e.y - arr[i - 1].y < 13) e.y = arr[i - 1].y + 13; });
@@ -931,7 +949,7 @@ function forwardBlock(fw, sc, md) {
   const comp = keys.map((k) => ({ k, c: fw?.recent?.[k] || fw?.composite?.[k], t3: fw?.top3?.[k] }));
   const facs = ["value", "quality", "target", "growth", "momentum", "trend", "timing"];
   return `
-    <div class="sec"><h2>예측력 추이 <small>앱이 매일 낸 예측을 실제 결과로 채점 · 주간</small></h2>
+    <div class="sec"><h2>예측력 추이 <small>앱이 매일 낸 예측을 실제 결과로 채점, 주간</small></h2>
       <div class="panel pad">${trend ? trend + `<div class="ta-keys">${keys.map((k) => `<span><i style="background:${LINE_C[k]}"></i>${HZ_KO[k]}</span>`).join("")}</div>` :
         `<p style="margin:0">예측 기록 <b>${nf(days)}일째</b>입니다. 매일 아침 전 종목의 점수를 기록하고, 기간이 지나면 실제 수익률로 채점합니다.</p>
          <ul class="bullets" style="margin-top:8px;padding:8px 8px 8px 26px;background:var(--surface-2)">
@@ -939,7 +957,7 @@ function forwardBlock(fw, sc, md) {
            <li>그 전까지는 10년 백테스트로 차트 비중만 조정합니다</li></ul>`}</div>
       <p class="note">선이 0보다 위에서 점점 올라가면 예측이 실제로 맞아 가고 있다는 뜻입니다. 점을 누르면 날짜·모델 버전이 보입니다.</p>
     </div>
-    <div class="sec"><h2>실전 채점 <small>최근 60일 · 종합점수 순위와 이후 수익률의 상관</small></h2>
+    <div class="sec"><h2>실전 채점 <small>최근 60일, 종합점수 순위와 이후 수익률의 상관</small></h2>
       <div class="panel ma-table"><div class="mrow mh"><span>추천</span><span>예측력 IC</span><span>Top3 초과수익</span><span>채점 일수</span></div>
       ${comp.map(({ k, c, t3 }) => `<div class="mrow"><span>${HZ_KO[k]}</span><span class="${c && Math.abs(c.t) >= 2 ? cls(c.ic) : ""}">${c ? (c.ic >= 0 ? "+" : "") + c.ic.toFixed(3) + ` <small>t ${c.t.toFixed(1)}</small>` : "-"}</span><span class="${cls(t3?.avg_ex)}">${t3 ? sgn(t3.avg_ex, 2) : "-"}</span><span>${nf(fw?.matured?.[{ daily: "5", weekly: "20", monthly: "60" }[k]] ?? 0)}일</span></div>`).join("")}</div>
       ${fw?.ic && Object.keys(fw.ic.value || {}).length ? `<div class="panel ma-table" style="margin-top:8px"><div class="mrow mh"><span>팩터(실전)</span><span>5일</span><span>20일</span><span>60일</span></div>
@@ -976,7 +994,7 @@ function renderLab() {
   const liveSetup = Object.entries(tr?.by_setup || {});
 
   el.innerHTML = `
-    <div class="dateline"><h1>규칙 검증</h1><p>${esc(bt.period?.[0] || "")} ~ ${esc(bt.period?.[1] || "")} · ${nf(bt.tickers)}종목 · 표본 ${nf(bt.samples)}개 · ${esc(when(bt.generated))} 실행</p></div>
+    <div class="dateline"><h1>규칙 검증</h1><p>${esc(bt.period?.[0] || "")} ~ ${esc(bt.period?.[1] || "")}, ${nf(bt.tickers)}종목, 표본 ${nf(bt.samples)}개, ${esc(when(bt.generated))} 실행</p></div>
     <div class="kpis">
       <div class="kpi"><small>모델 버전</small><b>v${nf(md?.version ?? 0)}</b></div>
       <div class="kpi"><small>최근 보정</small><b>${md?.log?.[0]?.date ? esc(md.log[0].date.slice(5).replace("-", "/")) : "-"}</b></div>
@@ -988,9 +1006,9 @@ function renderLab() {
     <div class="seg" role="group" aria-label="보유 기간">${[["5", "5일 후"], ["20", "20일 후"], ["60", "60일 후"]].map(([k, l]) => `<button data-lh="${k}" aria-pressed="${H === k}">${l}</button>`).join("")}</div>
     <div class="seg sm" role="group" aria-label="시장">${[["all", "전체"], ["us", "미국"], ["kr", "한국"]].map(([k, l]) => `<button data-lm="${k}" aria-pressed="${M === k}">${l}</button>`).join("")}</div>
 
-    <div class="sec"><h2>차트 셋업별 성과 <small>같은 날 전체 평균 대비 초과수익 · 비용 차감</small></h2>
+    <div class="sec"><h2>차트 셋업별 성과 <small>같은 날 전체 평균 대비 초과수익, 비용 차감</small></h2>
       <div class="panel lab-list">${setups.map((x) => `
-        <div class="lrow"><div class="ln"><b>${esc(SETUP_KO[x.k] || x.k)}</b><small>${nf(x.st.n)}건 · 승률 ${nf(x.st.win, 0)}% · t ${nf(x.st.t, 1)} ${sigBadge(x.st.t)}${adj[x.k] ? ` · 가감점 ${sgn(adj[x.k], 1, "")}` : ""}</small></div>
+        <div class="lrow"><div class="ln"><b>${esc(SETUP_KO[x.k] || x.k)}</b><small>${nf(x.st.n)}건${SEP}승률 ${nf(x.st.win, 0)}%${SEP}t ${nf(x.st.t, 1)} ${sigBadge(x.st.t)}${adj[x.k] ? `${SEP}가감점 ${sgn(adj[x.k], 1, "")}` : ""}</small></div>
         ${dbar(x.st.avg, maxS)}<div class="lv ${cls(x.st.avg)}">${sgn(x.st.avg, 2)}</div></div>`).join("") || '<div class="empty">표본이 30개 이상인 셋업이 없습니다.</div>'}</div>
       <p class="note">${base ? `참고: 같은 기간 표본 전체의 평균 절대수익률 ${sgn(base.avg, 2)}(${H}일). ` : ""}‘유의’는 중첩 표본을 보정한 t값 2 이상입니다. 자가 보정은 유의한 셋업에만 가감점을 줍니다.</p>
     </div>
@@ -1009,10 +1027,10 @@ function renderLab() {
 
     ${sigShow.length ? `<div class="sec"><h2>개별 신호 성과 <small>${H}일 초과수익 상·하위</small></h2>
       <div class="panel lab-list">${sigShow.map((x) => `
-        <div class="lrow"><div class="ln"><b>${esc(SIG_KO(x.k))}</b><small>${nf(x.st.n)}건 · 승률 ${nf(x.st.win, 0)}% · t ${nf(x.st.t, 1)} ${sigBadge(x.st.t)}</small></div>
+        <div class="lrow"><div class="ln"><b>${esc(SIG_KO(x.k))}</b><small>${nf(x.st.n)}건${SEP}승률 ${nf(x.st.win, 0)}%${SEP}t ${nf(x.st.t, 1)} ${sigBadge(x.st.t)}</small></div>
         ${dbar(x.st.avg, maxG)}<div class="lv ${cls(x.st.avg)}">${sgn(x.st.avg, 2)}</div></div>`).join("")}</div></div>` : ""}
 
-    <div class="sec"><h2>현재 추천 가중치 <small>${{ daily: "오늘", weekly: "이번 주", monthly: "이번 달" }[hz]} 추천 · 기본값 대비</small></h2>
+    <div class="sec"><h2>현재 추천 가중치 <small>${{ daily: "오늘", weekly: "이번 주", monthly: "이번 달" }[hz]} 추천, 기본값 대비</small></h2>
       <div class="panel ma-table"><div class="mrow mh w3"><span>팩터</span><span>기본</span><span>현재</span></div>
       ${keys.map((k) => { const d = D[k] || 0, w = W[k] ?? d; return `<div class="mrow w3"><span>${FACTOR_KO[k] || k}</span><span>${nf(d * 100)}%</span><span class="${w - d > 0.005 ? "up" : w - d < -0.005 ? "down" : ""}">${nf(w * 100)}%${Math.abs(w - d) > 0.005 ? ` <small>${sgn((w - d) * 100, 0, "%p")}</small>` : ""}</span></div>`; }).join("")}</div>
       <p class="note">${esc(md?.rules || "")}</p>
@@ -1021,7 +1039,7 @@ function renderLab() {
     <div class="sec"><h2>자가 보정 기록</h2><div class="panel">${(md?.log || []).slice(0, 15).map((c) => `<div class="alert"><i></i><div><div>${esc(c.text)}</div><small>${esc(c.date)}</small></div></div>`).join("") || '<div class="empty">아직 바뀐 가중치가 없습니다. 유의한 근거가 쌓이면 매주 조금씩 조정됩니다.</div>'}</div></div>
 
     ${liveSetup.length ? `<div class="sec"><h2>실제 추천 성과 <small>추천 후 지수 대비 초과수익</small></h2><div class="panel">${liveSetup.map(([k, v]) => `
-      <div class="row" style="cursor:default"><div><div class="t1">${esc(k)}</div><div class="t2">${nf(v.count)}건 · 플러스 ${nf(v.hit_rate, 0)}%</div></div><span></span>
+      <div class="row" style="cursor:default"><div><div class="t1">${esc(k)}</div><div class="t2">${nf(v.count)}건${SEP}플러스 ${nf(v.hit_rate, 0)}%</div></div><span></span>
       <div class="num"><b class="${cls(v.avg_ex)}">${sgn(v.avg_ex, 1)}</b><span>절대 ${sgn(v.avg_ret, 1)}</span></div></div>`).join("")}</div>
       <p class="note">셋업별 실추천이 30건 이상 쌓이면 백테스트 결과와 섞어 가감점에 반영합니다.</p></div>` : ""}
 
@@ -1053,9 +1071,10 @@ function renderAlerts() {
       <div id="sub-out"></div>`;
   }
   el.innerHTML = `
+    <div class="dateline"><h1>알림</h1><p>관심종목 신호를 장중 30분마다 확인해 아이폰으로 보냅니다.</p></div>
     <div class="sec" style="margin-top:6px"><h2>푸시 알림 설정</h2><div class="panel pad">${setup}</div></div>
     <div class="sec"><h2>신호 기록 <small>${esc(when(a?.updated))}</small></h2><div class="panel">
-      ${items.map((x) => `<div class="alert ${esc(x.level)}"><i></i><div><div>${esc(x.msg)}</div><small>${esc(when(x.time))} · ${price(x.price, x.ticker)}</small></div></div>`).join("") || '<div class="empty">아직 발생한 신호가 없습니다. 장중 30분마다 관심종목을 점검합니다.</div>'}
+      ${items.map((x) => `<div class="alert ${esc(x.level)}"><i></i><div><div>${esc(x.msg)}</div><small>${esc(when(x.time))}${SEP}${price(x.price, x.ticker)}</small></div></div>`).join("") || '<div class="empty">아직 발생한 신호가 없습니다. 장중 30분마다 관심종목을 점검합니다.</div>'}
     </div></div>
     <p class="note">규칙: 일간 ±5% 급변, RSI 30/70·30 상향 돌파, 20·50 / 50·120 / 50·250일선 크로스, 250일선 돌파·이탈, 볼린저 하단 재진입, 52주 신고가, RSI 다이버전스, 차트 셋업(눌림목·반등·돌파·추세 전환), 평균 목표가 도달, 5단계 판정 변경, 개별 가격 알림. config/settings.yaml에서 바꿀 수 있습니다.</p>`;
   $("#push-on")?.addEventListener("click", enablePush);
@@ -1081,7 +1100,7 @@ async function enablePush() {
     $("#sub-out").innerHTML = `<pre class="sub">${esc(json)}</pre><div class="btns"><button class="btn" id="copy-sub">구독 정보 복사</button></div>`;
     $("#copy-sub").onclick = async () => {
       try { await navigator.clipboard.writeText(json); toast("복사했습니다. GitHub Secret에 붙여넣으세요"); }
-      catch { toast("복사 실패 — 위 텍스트를 길게 눌러 복사하세요"); }
+      catch { toast("복사하지 못했습니다. 위 글자를 길게 눌러 복사하세요"); }
     };
   } catch (e) {
     toast("알림 설정 실패: " + e.message);
@@ -1092,7 +1111,7 @@ async function enablePush() {
 function renderAll() {
   const m = state.data.meta;
   const hm = (iso) => { const d = new Date(iso), n = new Date(); return d.toDateString() === n.toDateString() ? when(iso).split(" ")[1] : when(iso); };
-  $("#stamp").innerHTML = m?.morning ? `국장 ${esc(hm(m.morning))}${m.evening ? ` · 미장 ${esc(hm(m.evening))}` : ""}${m.alerts ? `<br>알림 ${esc(hm(m.alerts))}` : ""}` : "";
+  $("#stamp").innerHTML = m?.morning ? `국장 ${esc(hm(m.morning))}${m.evening ? `${SEP}미장 ${esc(hm(m.evening))}` : ""}${m.alerts ? `<br>알림 ${esc(hm(m.alerts))}` : ""}` : "";
   $("#banner").innerHTML = m?.demo ? `<div class="banner">데모 데이터로 표시 중입니다. GitHub Actions 첫 실행 후 실제 시세로 바뀝니다.</div>` :
     !m ? `<div class="banner">데이터를 불러오지 못했습니다. 인터넷 연결을 확인하거나 첫 데이터 생성을 기다려 주세요.</div>` : "";
   renderBrief(); renderPicks(); renderScreen(); renderDiv(); renderLab(); renderAlerts();

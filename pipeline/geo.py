@@ -169,7 +169,7 @@ def ticker_geo(ticker: str, companies: dict, res: dict) -> tuple[float | None, l
         if abs(eff) >= 0.08 and abs(th["direction"]) >= 0.2:  # 방향 혼재 테마는 종목 영향 표시 생략
             via = [TAG_KO.get(t, t) for t in tags if ex.get(t) and (ex[t] * th["intensity"] > 0) == (eff > 0)]
             notes.append({"pol": 1 if eff > 0 else -1, "theme": th["label"], "eff": round(eff, 2),
-                          "text": f"{th['label']}: {th['stance']}(관심 {th['level']}) → "
+                          "text": f"{th['label']} {th['stance']}(관심 {th['level']}). "
                                   f"{'·'.join(via)} 성격상 {'우호적' if eff > 0 else '부담'}"})
     notes.sort(key=lambda x: -abs(x["eff"]))
     return score, notes[:3]
@@ -183,11 +183,11 @@ def summary_lines(res: dict, names_by_tag: dict[str, list[str]] | None = None) -
         mv = ", ".join(f"{TK_KO.get(k, k)} {v:+.1f}%" for k, v in th["moves"].items())
         s = (f"{th['label']}: 48시간 기사 {th['n']}건"
              + (f"(평소 {th['base']:.0f}건의 {th['ratio']:.1f}배)" if th["ratio"] else "")
-             + f", {th['stance']}" + (f" · 5일 {mv}" if mv else ""))
+             + f", {th['stance']}" + (f". 5일 가격 변화 {mv}" if mv else ""))
         if abs(th["intensity"]) >= 0.1 and abs(th["direction"]) >= 0.2 and (th["up"] or th["down"]):
-            s += " → " + " / ".join(x for x in (
-                ("유리: " + ", ".join(th["up"])) if th["up"] else "",
-                ("부담: " + ", ".join(th["down"])) if th["down"] else "") if x)
+            s += ". " + ", ".join(x for x in (
+                ("·".join(th["up"]) + "에 유리") if th["up"] else "",
+                ("·".join(th["down"]) + "에 부담") if th["down"] else "") if x)
         out.append(s)
         if len(out) >= 4:
             break

@@ -118,7 +118,7 @@ const DivPlan = (() => {
     if (w._single && w._single > Math.max(o.singleCap, 1 / Math.max(1, picks.length)) + 1e-6 && o.weighting !== "custom")
       warn.push(`종목 수가 적어 100%를 채우도록 단일 종목 상한을 ${Math.round(w._single * 100)}%로 완화했습니다.`);
     const ccW = rows.filter((r) => r.covered_call).reduce((a, r) => a + r.weight, 0);
-    if (o.weighting === "custom" && ccW > o.ccCap * 100 + 0.5) warn.push(`커버드콜 비중 ${ccW.toFixed(0)}% — 상한 ${Math.round(o.ccCap * 100)}%를 넘습니다(직접 입력은 상한을 적용하지 않음).`);
+    if (o.weighting === "custom" && ccW > o.ccCap * 100 + 0.5) warn.push(`커버드콜 비중 ${ccW.toFixed(0)}%로 상한 ${Math.round(o.ccCap * 100)}%를 넘습니다(직접 입력은 상한을 적용하지 않음).`);
     const missing = Array.from({ length: 12 }, (_, i) => i + 1).filter((m) => !covered.includes(m));
     const cash = o.capital - invested;
     return { rows, monthly, annual, invested, cash, yieldNet, covered, missing, upcoming, warn,

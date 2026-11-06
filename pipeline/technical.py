@@ -26,14 +26,14 @@ import pandas as pd
 DEFAULT = {"ma": [20, 50, 120, 250], "rsi": 14, "macd": [12, 26, 9], "bb": [20, 2.0], "chart_days": 130}
 
 SETUPS = {
-    "breakout": ("신고가·돌파형", "정배열 상승추세에서 저항을 거래량과 함께 돌파 — 추세 추종 관점. 돌파 가격대 재이탈 여부 확인"),
-    "pullback": ("상승추세 속 눌림목", "장기 상승추세(120·250일선 위)를 유지한 채 단기 조정 — 지지선 근처 분할 접근 관점"),
-    "reversal": ("하락 후 반등 시도", "하락 추세에서 과매도 해소·반전 신호 출현 — 20일선 회복 등 추세 전환 확인 전까지 비중 제한"),
-    "turn": ("장기 추세 전환 초기", "50·250일선 골든크로스 또는 250일선 돌파 — 하락→상승 전환 초기, 250일선 재테스트(되돌림) 지지 여부 확인"),
-    "squeeze": ("변동성 수축(방향 대기)", "볼린저 밴드폭이 6개월 최저 수준 — 돌파 방향 확인 후 대응"),
-    "uptrend": ("정배열 추세 지속", "이평선 정배열 유지 — 단기 과열(RSI·이격도) 여부만 점검"),
-    "range": ("박스권 횡보", "추세 강도 약함(ADX 20 미만) — 지지·저항 구간 중심 접근"),
-    "downtrend": ("역배열 하락추세", "저평가라도 추세 반전 신호 전까지는 관망 — 가치 함정 주의"),
+    "breakout": ("신고가·돌파형", "정배열 상승추세에서 거래량을 동반해 저항을 넘은 상태. 돌파한 가격대를 다시 내주는지 확인"),
+    "pullback": ("상승추세 속 눌림목", "120·250일선 위 장기 상승추세는 유지하면서 단기 조정 중. 지지선 근처에서 나눠 접근하는 구간"),
+    "reversal": ("하락 후 반등 시도", "하락 추세 속에서 과매도가 풀리며 반전 신호가 나옴. 20일선 회복 같은 전환 확인 전에는 비중을 작게"),
+    "turn": ("장기 추세 전환 초기", "50·250일선 골든크로스 또는 250일선 돌파가 나온 상승 전환 초기. 250일선까지 되돌릴 때 지지되는지 확인"),
+    "squeeze": ("변동성 수축(방향 대기)", "볼린저 밴드폭이 6개월 최저 수준. 위아래 어느 쪽으로 벗어나는지 본 뒤 대응"),
+    "uptrend": ("정배열 추세 지속", "이평선 정배열 유지. RSI·이격도로 단기 과열만 점검"),
+    "range": ("박스권 횡보", "ADX 20 미만으로 추세가 약함. 지지·저항 구간을 기준으로 접근"),
+    "downtrend": ("역배열 하락추세", "싸 보여도 반전 신호가 나오기 전까지는 관망. 가치 함정 가능성"),
     "neutral": ("중립", "뚜렷한 차트 셋업 없음"),
     "insufficient": ("데이터 부족", "상장 기간이 짧아 장기 이평선 분석 불가"),
 }
@@ -192,24 +192,24 @@ def analyze(df: pd.DataFrame, cfg: dict | None = None) -> dict:
     above = [m for m in have if last >= ma[m]]
     if ordered == pairs and full_long:
         trend_label = "완전 정배열"
-        add("ma_aligned", "이평선", 1, 3, f"이평선 완전 정배열(주가>{names}일선) — 단·중·장기 모두 상승 추세")
+        add("ma_aligned", "이평선", 1, 3, f"이평선 완전 정배열(주가>{names}일선): 단·중·장기 모두 상승 추세")
     elif reversed_ == pairs and full_long:
         trend_label = "완전 역배열"
-        add("ma_reversed", "이평선", -1, 3, f"이평선 역배열(주가<{names}일선) — 단·중·장기 모두 하락 추세")
+        add("ma_reversed", "이평선", -1, 3, f"이평선 역배열(주가<{names}일선): 단·중·장기 모두 하락 추세")
     elif ma.get(s_mid) and ma.get(s_mid2) and ma.get(s_long) and ma[s_mid] > ma[s_mid2] > ma[s_long] and \
             (last < ma[s_short] or ma[s_short] < ma[s_mid]):
         trend_label = "장기 정배열 속 단기 조정"
         where = (f"{max(below)}일선 아래까지 조정, {min(above, key=lambda m: dist[m])}일선 위에서 지지 시도"
                  if below and above else f"{s_short}일선 부근으로 조정")
-        add("ma_long_aligned", "이평선", 1, 2, f"{s_mid}>{s_mid2}>{s_long}일선 장기 정배열 유지 — 주가는 {where}")
+        add("ma_long_aligned", "이평선", 1, 2, f"{s_mid}>{s_mid2}>{s_long}일선 장기 정배열 유지: 주가는 {where}")
     elif ma.get(s_short) and ma.get(s_mid) and last > ma[s_short] > ma[s_mid] and \
             ma.get(s_long) and last < max(ma[s_long], ma.get(s_mid2) or 0):
         trend_label = "단기 정배열 전환"
         add("ma_short_turn", "이평선", 1, 2,
-            f"단기 정배열(주가>{s_short}>{s_mid}일선) 전환, 아직 {s_mid2}·{s_long}일선 아래 — 추세 전환 초기")
+            f"단기 정배열(주가>{s_short}>{s_mid}일선) 전환, 아직 {s_mid2}·{s_long}일선 아래: 추세 전환 초기")
     else:
         trend_label = "혼조(수렴)"
-        add("ma_mixed", "이평선", 0, 1, "이평선 혼조 — 방향성 탐색 구간")
+        add("ma_mixed", "이평선", 0, 1, "이평선 혼조: 방향성 탐색 구간")
 
     if ma.get(s_long):
         side = "위" if last > ma[s_long] else "아래"
@@ -217,9 +217,9 @@ def analyze(df: pd.DataFrame, cfg: dict | None = None) -> dict:
         txt = f"주가 {s_long}일선 {side}({dist[s_long]:+.1f}%)"
         if sl_long is not None:
             if sl_long > 1:
-                txt += f", {s_long}일선 우상향(20일간 {sl_long:+.1f}%) — 장기 추세 상승"
+                txt += f", {s_long}일선 우상향(20일간 {sl_long:+.1f}%): 장기 추세 상승"
             elif sl_long < -1:
-                txt += f", {s_long}일선 우하향(20일간 {sl_long:+.1f}%) — 장기 추세 하락"
+                txt += f", {s_long}일선 우하향(20일간 {sl_long:+.1f}%): 장기 추세 하락"
                 pol = -1 if pol < 0 else 0
             else:
                 txt += f", {s_long}일선 횡보"
@@ -236,7 +236,7 @@ def analyze(df: pd.DataFrame, cfg: dict | None = None) -> dict:
             kind, ago = x
             when = "오늘" if ago == 0 else f"{ago}거래일 전"
             g = kind == "golden"
-            extra = (" — 장기 추세 상승 전환 신호" if g else " — 장기 추세 하락 전환 신호") if lab == "장기" else ""
+            extra = (": 장기 추세 상승 전환 신호" if g else ": 장기 추세 하락 전환 신호") if lab == "장기" else ""
             add(f"cross_{a}_{b}_{kind}", "이평선", 1 if g else -1, 3 if lab == "장기" else 2,
                 f"{a}·{b}일선 {'골든' if g else '데드'}크로스({lab}, {when}){extra}")
             crosses.append({"pair": [a, b], "kind": kind, "ago": ago})
@@ -260,41 +260,41 @@ def analyze(df: pd.DataFrame, cfg: dict | None = None) -> dict:
         touch_sup = any(l.iloc[i] <= mv.iloc[i] * 1.01 for i in recent) and last > ma[m]
         touch_res = any(h.iloc[i] >= mv.iloc[i] * 0.99 for i in recent) and last < ma[m]
         if touch_sup and prior_above >= 7:
-            add(f"ma_support_{m}", "이평선", 1, 3 if m >= s_mid else 2, f"{m}일선 지지 확인 — 저가가 이평선 터치 후 종가 회복")
+            add(f"ma_support_{m}", "이평선", 1, 3 if m >= s_mid else 2, f"{m}일선 지지 확인: 저가가 이평선 터치 후 종가 회복")
             tested = ("support", m)
             break
         if touch_res and prior_below >= 7:
-            add(f"ma_resist_{m}", "이평선", -1, 2, f"{m}일선 저항 — 고가가 이평선 터치 후 밀림")
+            add(f"ma_resist_{m}", "이평선", -1, 2, f"{m}일선 저항: 고가가 이평선 터치 후 밀림")
             tested = ("resist", m)
             break
 
     disp = (last / ma[s_short] * 100) if ma.get(s_short) else None
     if disp is not None:
         if disp >= 110:
-            add("disp_hot", "이평선", -1, 2, f"{s_short}일 이격도 {disp:.0f} — 단기 과열(평균 회귀 압력)")
+            add("disp_hot", "이평선", -1, 2, f"{s_short}일 이격도 {disp:.0f}: 단기 과열(평균 회귀 압력)")
         elif disp <= 90:
-            add("disp_cold", "이평선", 1, 1, f"{s_short}일 이격도 {disp:.0f} — 단기 침체(기술적 반등 여지)")
+            add("disp_cold", "이평선", 1, 1, f"{s_short}일 이격도 {disp:.0f}: 단기 침체(기술적 반등 여지)")
 
     # ── RSI ──
     rs = rsi_series(c, cfg["rsi"])
     r_now = _f(rs.iloc[-1])
     if r_now is not None:
         if r_now <= 30:
-            add("rsi_oversold", "모멘텀", 1, 2, f"RSI {r_now:.0f} — 과매도 구간")
+            add("rsi_oversold", "모멘텀", 1, 2, f"RSI {r_now:.0f}: 과매도 구간")
         elif r_now >= 70:
-            add("rsi_overbought", "모멘텀", -1, 2, f"RSI {r_now:.0f} — 과매수 구간(단기 추격 주의)")
+            add("rsi_overbought", "모멘텀", -1, 2, f"RSI {r_now:.0f}: 과매수 구간(단기 추격 주의)")
         elif r_now >= 50:
-            add("rsi_bull", "모멘텀", 1, 1, f"RSI {r_now:.0f} — 50 이상 강세 영역")
+            add("rsi_bull", "모멘텀", 1, 1, f"RSI {r_now:.0f}: 50 이상 강세 영역")
         elif r_now <= 40:
-            add("rsi_weak", "모멘텀", -1, 1, f"RSI {r_now:.0f} — 약세 영역")
+            add("rsi_weak", "모멘텀", -1, 1, f"RSI {r_now:.0f}: 약세 영역")
         else:
-            add("rsi_neutral", "모멘텀", 0, 1, f"RSI {r_now:.0f} — 중립")
+            add("rsi_neutral", "모멘텀", 0, 1, f"RSI {r_now:.0f}: 중립")
         x = last_cross(rs, pd.Series(30.0, index=rs.index), lookback=5)
         if x and x[0] == "golden":
-            add("rsi_reclaim30", "모멘텀", 1, 3, f"RSI 30 상향 돌파({'오늘' if x[1] == 0 else str(x[1]) + '거래일 전'}) — 과매도 탈출")
+            add("rsi_reclaim30", "모멘텀", 1, 3, f"RSI 30 상향 돌파({'오늘' if x[1] == 0 else str(x[1]) + '거래일 전'}): 과매도 탈출")
         x = last_cross(rs, pd.Series(70.0, index=rs.index), lookback=5)
         if x and x[0] == "dead":
-            add("rsi_lose70", "모멘텀", -1, 2, f"RSI 70 하향 이탈({'오늘' if x[1] == 0 else str(x[1]) + '거래일 전'}) — 과열 해소·탄력 둔화")
+            add("rsi_lose70", "모멘텀", -1, 2, f"RSI 70 하향 이탈({'오늘' if x[1] == 0 else str(x[1]) + '거래일 전'}): 과열 해소·탄력 둔화")
 
     # 다이버전스 (최근 60봉, 스윙 w=3, 두 번째 저/고점이 최근 15봉 이내)
     div = None
@@ -308,7 +308,7 @@ def analyze(df: pd.DataFrame, cfg: dict | None = None) -> dict:
             i1 = min(earlier, key=lambda i: lw[i])
             if lw[i2] < lw[i1] and not np.isnan(rw[i1]) and not np.isnan(rw[i2]) and rw[i2] > rw[i1] + 3 and rw[i1] < 40:
                 div = "bull"
-                add("div_bull", "모멘텀", 1, 3, f"RSI 상승 다이버전스 — 주가 저점은 낮아졌지만 RSI 저점은 상승({rw[i1]:.0f}→{rw[i2]:.0f}), 하락 탄력 약화")
+                add("div_bull", "모멘텀", 1, 3, f"RSI 상승 다이버전스: 주가 저점은 낮아졌지만 RSI 저점은 상승({rw[i1]:.0f}→{rw[i2]:.0f}), 하락 탄력 약화")
     if highs and div is None:
         i2 = highs[-1]
         earlier = [i for i in highs if i <= i2 - 5]
@@ -316,7 +316,7 @@ def analyze(df: pd.DataFrame, cfg: dict | None = None) -> dict:
             i1 = max(earlier, key=lambda i: hw[i])
             if hw[i2] > hw[i1] and not np.isnan(rw[i1]) and not np.isnan(rw[i2]) and rw[i2] < rw[i1] - 3 and rw[i1] > 60:
                 div = "bear"
-                add("div_bear", "모멘텀", -1, 3, f"RSI 하락 다이버전스 — 주가 고점은 높아졌지만 RSI 고점은 하락({rw[i1]:.0f}→{rw[i2]:.0f}), 상승 탄력 약화")
+                add("div_bear", "모멘텀", -1, 3, f"RSI 하락 다이버전스: 주가 고점은 높아졌지만 RSI 고점은 하락({rw[i1]:.0f}→{rw[i2]:.0f}), 상승 탄력 약화")
 
     # ── MACD ──
     f_, s_, g_ = cfg["macd"]
@@ -332,9 +332,9 @@ def analyze(df: pd.DataFrame, cfg: dict | None = None) -> dict:
         add("macd_state", "모멘텀", 1 if mv_ > sv_ else -1, 1, f"MACD {'시그널 위' if mv_ > sv_ else '시그널 아래'}, {'0선 위' if mv_ > 0 else '0선 아래'}")
     hh = m_hist.iloc[-4:].values
     if len(hh) == 4 and hh[-1] < 0 and all(hh[i] > hh[i - 1] for i in range(1, 4)):
-        add("macd_hist_improve", "모멘텀", 1, 1, "MACD 히스토그램 3일 연속 개선 — 하락 모멘텀 둔화")
+        add("macd_hist_improve", "모멘텀", 1, 1, "MACD 히스토그램 3일 연속 개선: 하락 모멘텀 둔화")
     elif len(hh) == 4 and hh[-1] > 0 and all(hh[i] < hh[i - 1] for i in range(1, 4)):
-        add("macd_hist_fade", "모멘텀", -1, 1, "MACD 히스토그램 3일 연속 축소 — 상승 모멘텀 둔화")
+        add("macd_hist_fade", "모멘텀", -1, 1, "MACD 히스토그램 3일 연속 축소: 상승 모멘텀 둔화")
 
     # ── ADX ──
     adx, pdi, mdi, atr = adx_series(h, l, c, 14)
@@ -343,9 +343,9 @@ def analyze(df: pd.DataFrame, cfg: dict | None = None) -> dict:
         if a_now >= 25:
             up = (p_now or 0) > (m_now or 0)
             add("adx_trend", "추세", 1 if up else -1, 2,
-                f"ADX {a_now:.0f} — 강한 {'상승' if up else '하락'} 추세(+DI {p_now:.0f} / −DI {m_now:.0f})")
+                f"ADX {a_now:.0f}: 강한 {'상승' if up else '하락'} 추세(+DI {p_now:.0f} / −DI {m_now:.0f})")
         elif a_now < 20:
-            add("adx_range", "추세", 0, 1, f"ADX {a_now:.0f} — 비추세(박스권), 오실레이터(RSI·볼린저) 신호 신뢰도 상대적으로 높음")
+            add("adx_range", "추세", 0, 1, f"ADX {a_now:.0f}: 비추세(박스권), 오실레이터(RSI·볼린저) 신호 신뢰도 상대적으로 높음")
 
     # ── 볼린저 ──
     bn, bk = cfg["bb"]
@@ -359,16 +359,16 @@ def analyze(df: pd.DataFrame, cfg: dict | None = None) -> dict:
     if pb is not None:
         recent_pb = pctb.iloc[-4:-1]
         if (recent_pb < 0).any() and pb > 0:
-            add("bb_reclaim", "변동성", 1, 2, "볼린저 하단 이탈 후 밴드 안 재진입 — 과매도 반등 신호")
+            add("bb_reclaim", "변동성", 1, 2, "볼린저 하단 이탈 후 밴드 안 재진입: 과매도 반등 신호")
         elif pb <= 0.05:
             add("bb_lower", "변동성", 1 if (a_now or 30) < 25 else 0, 1, f"볼린저 하단 접근(%B {pb:.2f})")
         elif pb >= 1:
             if breakout_regime or (vratio or 0) >= 1.5:
-                add("bb_break_up", "변동성", 1, 2, f"볼린저 상단 돌파(%B {pb:.2f}) — 추세 가속(밴드 워크)")
+                add("bb_break_up", "변동성", 1, 2, f"볼린저 상단 돌파(%B {pb:.2f}): 추세 가속(밴드 워크)")
             else:
-                add("bb_upper_hot", "변동성", -1, 1, f"볼린저 상단 이탈(%B {pb:.2f}) — 추세 약한 상태의 과열")
+                add("bb_upper_hot", "변동성", -1, 1, f"볼린저 상단 이탈(%B {pb:.2f}): 추세 약한 상태의 과열")
     if bw_pct is not None and bw_pct <= 10:
-        add("bb_squeeze", "변동성", 0, 2, f"볼린저 밴드폭 6개월 하위 {bw_pct:.0f}% — 변동성 수축(스퀴즈), 큰 움직임 임박 가능")
+        add("bb_squeeze", "변동성", 0, 2, f"볼린저 밴드폭 6개월 하위 {bw_pct:.0f}%: 변동성 수축(스퀴즈), 큰 움직임 임박 가능")
 
     # ── 거래량 ──
     chg1 = (last / c.iloc[-2] - 1) * 100
@@ -376,17 +376,17 @@ def analyze(df: pd.DataFrame, cfg: dict | None = None) -> dict:
     if v.iloc[-20:].sum() > 0:
         if vratio is not None and vratio >= 2:
             if chg1 > 0:
-                add("vol_up", "거래량", 1, 2, f"거래량 20일 평균의 {vratio:.1f}배 동반 상승 — 매수세 유입")
+                add("vol_up", "거래량", 1, 2, f"거래량 20일 평균의 {vratio:.1f}배 동반 상승: 매수세 유입")
             elif chg1 < 0:
-                add("vol_down", "거래량", -1, 2, f"거래량 20일 평균의 {vratio:.1f}배 동반 하락 — 매도 압력")
+                add("vol_down", "거래량", -1, 2, f"거래량 20일 평균의 {vratio:.1f}배 동반 하락: 매도 압력")
         dc = c.diff().iloc[-20:]
         uv, dv = v.iloc[-20:][dc > 0].sum(), v.iloc[-20:][dc < 0].sum()
         if dv > 0:
             updown = uv / dv
             if updown >= 1.5:
-                add("vol_accum", "거래량", 1, 1, f"최근 20일 상승일 거래량이 하락일의 {updown:.1f}배 — 매집 우위")
+                add("vol_accum", "거래량", 1, 1, f"최근 20일 상승일 거래량이 하락일의 {updown:.1f}배: 매집 우위")
             elif updown <= 0.67:
-                add("vol_distrib", "거래량", -1, 1, f"최근 20일 하락일 거래량이 상승일의 {1 / updown:.1f}배 — 매도(분산) 우위")
+                add("vol_distrib", "거래량", -1, 1, f"최근 20일 하락일 거래량이 상승일의 {1 / updown:.1f}배: 매도(분산) 우위")
 
     # ── 캔들 ──
     body = (c - o).abs()
@@ -400,30 +400,30 @@ def analyze(df: pd.DataFrame, cfg: dict | None = None) -> dict:
     candle = None
     if b_now > 0 and lower_sh >= 2 * b_now and upper_sh <= b_now and fell:
         candle = "hammer"
-        add("candle_hammer", "캔들", 1, 2, "망치형 캔들 — 하락 후 긴 아래꼬리, 저가 매수세 유입")
+        add("candle_hammer", "캔들", 1, 2, "망치형 캔들: 하락 후 긴 아래꼬리, 저가 매수세 유입")
     elif n > 2:
         po, pc = o.iloc[-2], c.iloc[-2]
         if pc < po and cb > ob and cb >= po and ob <= pc and fell:
             candle = "bull_engulf"
-            add("candle_bull_engulf", "캔들", 1, 2, "상승장악형 — 전일 음봉 몸통을 양봉이 감싸며 반전")
+            add("candle_bull_engulf", "캔들", 1, 2, "상승장악형: 전일 음봉 몸통을 양봉이 감싸며 반전")
         elif pc > po and cb < ob and cb <= po and ob >= pc and rose:
             candle = "bear_engulf"
-            add("candle_bear_engulf", "캔들", -1, 2, "하락장악형 — 전일 양봉 몸통을 음봉이 감싸며 반전")
+            add("candle_bear_engulf", "캔들", -1, 2, "하락장악형: 전일 양봉 몸통을 음봉이 감싸며 반전")
     if candle is None and avg_body and b_now >= 2 * avg_body and rng.iloc[-1] and b_now / rng.iloc[-1] >= 0.6:
         bull = cb > ob
         add("candle_long_bull" if bull else "candle_long_bear", "캔들", 1 if bull else -1, 1,
-            f"{'장대양봉' if bull else '장대음봉'} — 몸통이 20일 평균의 {b_now / avg_body:.1f}배")
+            f"{'장대양봉' if bull else '장대음봉'}: 몸통이 20일 평균의 {b_now / avg_body:.1f}배")
 
     # ── 52주 고·저 ──
     hi52 = float(h.iloc[-253:-1].max()) if n > 30 else None
     lo52 = float(l.iloc[-253:-1].min()) if n > 30 else None
     new_high = hi52 is not None and last >= hi52
     if new_high:
-        add("high52_new", "가격대", 1, 2, "52주 신고가 경신 — 매물 부담 없는 구간, 추세 추종 신호")
+        add("high52_new", "가격대", 1, 2, "52주 신고가 경신: 매물 부담 없는 구간, 추세 추종 신호")
     elif hi52 and last >= hi52 * 0.97:
-        add("high52_near", "가격대", 0, 1, f"52주 고점({_r(hi52):,}) 대비 {(last / hi52 - 1) * 100:.1f}% — 고점 저항 테스트")
+        add("high52_near", "가격대", 0, 1, f"52주 고점({_r(hi52):,}) 대비 {(last / hi52 - 1) * 100:.1f}%: 고점 저항 테스트")
     if lo52 is not None and last <= lo52:
-        add("low52_new", "가격대", -1, 2, "52주 신저가 — 하락 추세 진행")
+        add("low52_new", "가격대", -1, 2, "52주 신저가: 하락 추세 진행")
 
     # ── 지지·저항·손절 참고 ──
     swing_lo = [l.values[-120:][i] for i in pivots(l.values[-120:], 5, "low")]
@@ -506,7 +506,7 @@ def analyze(df: pd.DataFrame, cfg: dict | None = None) -> dict:
     knife = trend_label == "완전 역배열" and (sl_long or 0) < 0 and div != "bull" and "rsi_reclaim30" not in codes
     if knife:
         tim -= 12
-        add("falling_knife", "추세", -1, 2, "역배열 + 장기선 하락 중 반전 신호 없음 — '떨어지는 칼날' 주의")
+        add("falling_knife", "추세", -1, 2, "역배열에 장기선까지 하락 중인데 반전 신호 없음(떨어지는 칼날)")
 
     clip = lambda x: round(float(max(0.0, min(100.0, x))), 1)  # noqa: E731
     scores = {"trend": clip(trend), "momentum": clip(mom), "timing": clip(tim)}

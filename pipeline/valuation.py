@@ -10,6 +10,8 @@
 """
 from __future__ import annotations
 
+import re
+
 import math
 
 import pandas as pd
@@ -173,12 +175,12 @@ def explain_fund(r: dict) -> tuple[list[str], list[str]]:
     if r.get("de") is not None and r["de"] > 150:
         risk.append(f"부채비율(D/E) {_fmt(r['de'], 0)}%")
     if (r.get("analysts") or 0) < 5:
-        risk.append("애널리스트 커버리지 적음 → 목표가 신뢰도 낮음")
+        risk.append("애널리스트가 적어 목표가 신뢰도 낮음")
     return why, risk
 
 
 def _short(text: str) -> str:
-    return text.split(" — ")[0]
+    return re.split(r" — |: ", text, maxsplit=1)[0]
 
 
 def explain_tech(ta: dict) -> dict:
@@ -208,11 +210,11 @@ def summarize(r: dict, tx: dict) -> str:
         bits.append(f"목표가 상승여력 {r['upside']:+.0f}%")
     elif r.get("roe") is not None and r["roe"] >= 0.15:
         bits.append(f"ROE {r['roe'] * 100:.0f}%")
-    head = " · ".join(bits[:2])
-    s = f"{head}의 저평가 종목." if head else "가치 점수 상위 종목."
+    head = ", ".join(bits[:2])
+    s = f"{head}인 저평가 종목." if head else "가치 점수 상위 종목."
     if tx.get("setup_label") and tx["setup"] not in ("neutral", "insufficient"):
         ev = ", ".join(_short(t) for t in tx["pos"][:2])
-        s += f" 차트는 '{tx['setup_label']}'" + (f" — {ev}." if ev else ".")
+        s += f" 차트 셋업 '{tx['setup_label']}'" + (f"({ev})." if ev else ".")
     elif tx.get("pos"):
         s += f" 차트: {_short(tx['pos'][0])}."
     strong_neg = [t for t in tx.get("neg", [])][:1]
@@ -282,7 +284,7 @@ def diagnose_drop(fund: dict, prev: dict | None, row: dict) -> dict:
         kind = "펀더멘털성"
     elif (row.get("value") or 0) >= 50 and (row.get("upside") or 0) >= 10:
         kind = "수급·심리성"
-        evidence.append("이익 추정·목표가 유지 + 밸류에이션 저평가 구간 → 가격만 하락")
+        evidence.append("이익 추정치·목표가는 그대로인데 가격만 하락(밸류에이션 저평가 구간)")
     else:
         kind = "수급·심리성(약)"
         evidence.append("추정치 변화 없으나 밸류에이션 매력은 제한적")

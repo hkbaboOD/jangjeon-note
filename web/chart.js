@@ -212,7 +212,7 @@ window.TAChart = (() => {
     }
     out.push(`<path d="${linePath(d.macd.m, x, my)}" fill="none" stroke="var(--ink)" stroke-width="1.5"/>`);
     out.push(`<path d="${linePath(d.macd.s, x, my)}" fill="none" stroke="var(--ma20)" stroke-width="1.3" stroke-dasharray="4 2"/>`);
-    out.push(`<text x="${g.L + 2}" y="${g.m0 - 6}" class="pl">MACD 12·26·9 — 실선 MACD, 점선 시그널</text>`);
+    out.push(`<text x="${g.L + 2}" y="${g.m0 - 6}" class="pl">MACD 12·26·9: 실선 MACD, 점선 시그널</text>`);
 
     // 크로스헤어
     out.push(`<line class="xh" x1="0" x2="0" y1="${g.y0}" y2="${g.m1}" visibility="hidden"/>

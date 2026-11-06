@@ -326,9 +326,9 @@ def analyze(fin: dict, fund: dict | None) -> list[dict]:
         if ni and ni > 0 and ocf is not None:
             ratio = ocf / ni
             if ratio < 0.8:
-                add(-1, "이익의 질", f"영업현금흐름이 순이익의 {ratio:.1f}배 — 이익 대비 현금 유입이 적음")
+                add(-1, "이익의 질", f"영업현금흐름이 순이익의 {ratio:.1f}배: 이익 대비 현금 유입이 적음")
             elif ratio >= 1.2:
-                add(1, "이익의 질", f"영업현금흐름이 순이익의 {ratio:.1f}배 — 이익이 현금으로 뒷받침됨")
+                add(1, "이익의 질", f"영업현금흐름이 순이익의 {ratio:.1f}배: 이익이 현금으로 뒷받침됨")
     ret = sum(-(x or 0) for x in ((c.get("div") or [None])[-1:] + (c.get("buyback") or [None])[-1:]))
     if ret > 0:
         add(1, "주주환원", f"최근 연도 배당+자사주 매입 {money(ret, cur)}")
@@ -342,7 +342,7 @@ def analyze(fin: dict, fund: dict | None) -> list[dict]:
     if b.get("cur_assets") and b.get("cur_liab") and b["cur_assets"][-1] and b["cur_liab"][-1]:
         cr = b["cur_assets"][-1] / b["cur_liab"][-1] * 100
         if cr < 100:
-            add(-1, "재무안정성", f"유동비율 {cr:.0f}% — 단기 지급 여력 낮음")
+            add(-1, "재무안정성", f"유동비율 {cr:.0f}%: 단기 지급 여력 낮음")
     s = fin.get("surprises") or []
     sv = [x for x in s if x.get("surp") is not None]
     if sv:
@@ -356,7 +356,7 @@ def analyze(fin: dict, fund: dict | None) -> list[dict]:
     er = ((fin.get("eps_rev") or {}).get("0y") or {})
     up, dn = er.get("upLast30days"), er.get("downLast30days")
     if up is not None and dn is not None and (up + dn) > 0:
-        add(1 if up > dn else -1 if dn > up else 0, "컨센서스", f"최근 30일 추정치 상향 {up:.0f}건 · 하향 {dn:.0f}건")
+        add(1 if up > dn else -1 if dn > up else 0, "컨센서스", f"최근 30일 추정치 상향 {up:.0f}건, 하향 {dn:.0f}건")
     ee = (fin.get("eps_est") or {}).get("+1y") or {}
     if ee.get("growth") is not None:
         add(1 if ee["growth"] > 0.05 else -1 if ee["growth"] < 0 else 0, "컨센서스",
@@ -366,7 +366,7 @@ def analyze(fin: dict, fund: dict | None) -> list[dict]:
         try:
             dd = (date.fromisoformat(cal["next_earnings"]) - date.today()).days
             if 0 <= dd <= 14:
-                add(0, "실적 발표", f"{dd}일 뒤({cal['next_earnings']}) 실적 발표 예정 — 발표 전후 변동성 확대 가능")
+                add(0, "실적 발표", f"{dd}일 뒤({cal['next_earnings']}) 실적 발표 예정: 발표 전후 변동성 확대 가능")
         except ValueError:
             pass
     return out

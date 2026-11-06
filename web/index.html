@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>장전노트</title>
-  <meta name="description" content="나만의 장전 시황·저평가 추천·배당 플랜·신호 알림">
-  <meta name="theme-color" content="#eef1f5" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#0d1219" media="(prefers-color-scheme: dark)">
+  <meta name="description" content="국장·미장 장전 브리핑, 저평가 추천, 배당 플랜, 신호 알림">
+  <meta name="theme-color" content="#eceeec" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#14181e" media="(prefers-color-scheme: dark)">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
@@ -14,9 +14,7 @@
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="apple-touch-icon" href="icons/icon-180.png">
   <link rel="icon" href="icons/icon-192.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" href="fonts/fonts.css" as="style">
   <link rel="stylesheet" href="styles.css">
   <script src="config.js"></script>
 </head>
@@ -24,7 +22,7 @@
   <header class="top">
     <div class="top-row">
       <div class="brand">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="7" width="4" height="10" rx="1" fill="var(--up)"/><path d="M6 4v3M6 17v3" stroke="var(--up)" stroke-width="1.6"/><rect x="14" y="10" width="4" height="8" rx="1" fill="var(--down)"/><path d="M16 6v4M16 18v2" stroke="var(--down)" stroke-width="1.6"/></svg>
+        
         장전노트
       </div>
       <div class="stamp" id="stamp"></div>
@@ -48,7 +46,7 @@
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
   <nav class="tabbar" aria-label="메뉴">
-    <div class="brand side-brand" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="7" width="4" height="10" rx="1" fill="var(--up)"/><path d="M6 4v3M6 17v3" stroke="var(--up)" stroke-width="1.6"/><rect x="14" y="10" width="4" height="8" rx="1" fill="var(--down)"/><path d="M16 6v4M16 18v2" stroke="var(--down)" stroke-width="1.6"/></svg>장전노트</div>
+    <div class="brand side-brand" aria-hidden="true">장전노트</div>
     <a href="#brief" data-tab="brief"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="4"/><path d="M12 3v2M4.2 7.2l1.4 1.4M19.8 7.2l-1.4 1.4M2 17h20M6 21h12"/></svg>브리핑</a>
     <a href="#picks" data-tab="picks"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.4 6.7 19.4l1.2-6L3.4 9.3l6-.7z"/></svg>추천</a>
     <a href="#screen" data-tab="screen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 5h16M7 12h10M10 19h4"/></svg>스크리닝</a>

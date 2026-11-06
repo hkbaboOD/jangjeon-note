@@ -48,7 +48,7 @@ def test_build_us_brief():
     assert b["review"][0].startswith("코스피 3,610.50 (-1.20%)") and "원/달러 1,412.3원" in b["review"][0]
     assert b["breadth"]["kr"] == {"up": 2, "down": 2, "total": 4} and b["movers"]["kr"]["top"][0]["chg"] == 5
     t = " | ".join(b["tonight"])
-    assert "미 지수 선물 강세" in t and "VIX 26.4 — 변동성 높은 구간" in t and "+7bp" in t and "WTI +3.1%" in t
+    assert "미 지수 선물 강세" in t and "VIX 26.4, 변동성 높은 구간" in t and "+7bp" in t and "WTI +3.1%" in t
     assert "오늘(미국 시간): 넷플릭스" in t
     assert b["us_open_kst"] == "22:30" and b["dst"] is True
     b2 = briefing.build_us(cfg, tech, kr, [], [], [], datetime(2026, 12, 1, 12, tzinfo=timezone.utc))

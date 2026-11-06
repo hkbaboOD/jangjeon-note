@@ -54,24 +54,24 @@ def build(cfg: dict, tech: dict, universe_rows: list[dict], watch_rows: list[dic
     if sox is not None:
         if sox <= -2:
             points.append(f"반도체 약세(SOX {sox:+.2f}%)")
-            outlook.append("국내 반도체 대형주(삼성전자·SK하이닉스) 약세 출발 가능성 — 코스피 반도체 비중이 커 지수 영향 큼")
+            outlook.append("삼성전자·SK하이닉스 약세 출발 가능성. 코스피에서 반도체 비중이 커서 지수도 영향을 받음")
         elif sox >= 2:
             points.append(f"반도체 강세(SOX {sox:+.2f}%)")
             outlook.append("반도체 대형주 중심 강세 출발 기대")
     if tnx_bp is not None and abs(tnx_bp) >= 5:
         d = "상승" if tnx_bp > 0 else "하락"
         points.append(f"미 10년물 금리 {tnx_bp:+.0f}bp {d}")
-        outlook.append("금리 상승 → 성장주 밸류에이션 부담" if tnx_bp > 0 else "금리 하락 → 성장주·기술주 우호적")
+        outlook.append("금리 상승으로 성장주 밸류에이션 부담" if tnx_bp > 0 else "금리 하락은 성장주·기술주에 우호적")
     if wti is not None and abs(wti) >= 3:
         points.append(f"유가 급변(WTI {wti:+.1f}%)")
         outlook.append("유가 상승: 정유·에너지 상대 수혜, 항공·화학 부담" if wti > 0 else "유가 하락: 항공·화학 수혜, 정유 부담")
     if vix is not None and vix >= 10:
-        points.append(f"VIX {vix:+.1f}% 급등 — 위험회피 심리 확대")
+        points.append(f"VIX {vix:+.1f}% 급등, 위험회피 심리 확대")
         outlook.append("변동성 확대 국면: 분할 접근·현금 비중 점검")
     if krw is not None and abs(krw) >= 0.7:
-        outlook.append(f"원/달러 {krw:+.2f}% — " + ("외국인 수급 부담" if krw > 0 else "외국인 수급 개선 여지"))
+        outlook.append(f"원/달러 {krw:+.2f}%, " + ("외국인 수급 부담" if krw > 0 else "외국인 수급 개선 여지"))
     if not outlook:
-        outlook.append("뚜렷한 방향성 재료 부족 — 종목·업종별 차별화 장세 예상")
+        outlook.append("방향을 정할 재료가 부족해 종목·업종별로 갈리는 장 예상")
 
     # 관심종목 급락 진단
     diag = [{"ticker": w["ticker"], "name": w["name"], "chg_1d": w["tech"]["chg_1d"], **w["diag"]}
@@ -134,9 +134,9 @@ def build_us(cfg: dict, tech: dict, kr_rows: list[dict], watch_rows: list[dict],
     if ks is not None:
         if kr_stale:
             review.append(f"⚠ 국내장 데이터가 {kr_date[5:].replace('-', '/')} 마감 기준입니다 "
-                          f"({ref.month}/{ref.day} 데이터 미수신 또는 휴장) — 네이버 증권에서 확인하세요")
+                          f"({ref.month}/{ref.day} 데이터 미수신 또는 휴장). 네이버 증권에서 확인하세요")
         review.append(f"코스피 {by['^KS11']['last']:,.2f} ({ks:+.2f}%)" + (f", 코스닥 {kq:+.2f}%" if kq is not None else "")
-                      + (f" · 원/달러 {by['KRW=X']['last']:,.1f}원({krw:+.2f}%)" if krw is not None else ""))
+                      + (f", 원/달러 {by['KRW=X']['last']:,.1f}원({krw:+.2f}%)" if krw is not None else ""))
     rows = [r for r in kr_rows if r.get("tech") and r["tech"].get("chg_1d") is not None]
     if rows:
         up = sum(1 for r in rows if r["tech"]["chg_1d"] > 0)
@@ -144,7 +144,7 @@ def build_us(cfg: dict, tech: dict, kr_rows: list[dict], watch_rows: list[dict],
         srt = sorted(rows, key=lambda r: r["tech"]["chg_1d"])
         pick = lambda r: {"ticker": r["ticker"], "name": r.get("name") or r["ticker"], "chg": r["tech"]["chg_1d"]}  # noqa: E731
         movers["kr"] = {"top": [pick(r) for r in srt[::-1][:5]], "bottom": [pick(r) for r in srt[:5]]}
-        review.append(f"국내 유니버스 상승 {up} · 하락 {len(rows) - up} — 강세 {srt[-1].get('name')} {srt[-1]['tech']['chg_1d']:+.1f}%, "
+        review.append(f"국내 유니버스 상승 {up}, 하락 {len(rows) - up}. 강세 {srt[-1].get('name')} {srt[-1]['tech']['chg_1d']:+.1f}%, "
                       f"약세 {srt[0].get('name')} {srt[0]['tech']['chg_1d']:+.1f}%")
 
     # 오늘 밤 미국장 체크
@@ -157,13 +157,13 @@ def build_us(cfg: dict, tech: dict, kr_rows: list[dict], watch_rows: list[dict],
     vix = by.get("^VIX") or {}
     if vix.get("last") is not None:
         lv = vix["last"]
-        tonight.append(f"VIX {lv:.1f} — " + ("변동성 높은 구간(25 이상)" if lv >= 25 else "변동성 경계 구간(20~25)" if lv >= 20 else "안정 구간(20 미만)"))
+        tonight.append(f"VIX {lv:.1f}, " + ("변동성 높은 구간(25 이상)" if lv >= 25 else "변동성 경계 구간(20~25)" if lv >= 20 else "안정 구간(20 미만)"))
     tnx_bp = (by.get("^TNX") or {}).get("chg_bp")
     if tnx_bp is not None and abs(tnx_bp) >= 4:
-        tonight.append(f"미 10년물 금리 {tnx_bp:+.0f}bp — " + ("성장주 부담" if tnx_bp > 0 else "성장주 우호적"))
+        tonight.append(f"미 10년물 금리 {tnx_bp:+.0f}bp, " + ("성장주 부담" if tnx_bp > 0 else "성장주 우호적"))
     wti = chg("CL=F")
     if wti is not None and abs(wti) >= 2:
-        tonight.append(f"WTI {wti:+.1f}% — " + ("에너지 강세·인플레 우려" if wti > 0 else "에너지 약세·인플레 부담 완화"))
+        tonight.append(f"WTI {wti:+.1f}%, " + ("에너지 강세·인플레 우려" if wti > 0 else "에너지 약세·인플레 부담 완화"))
     dxy = chg("DX-Y.NYB")
     if dxy is not None and abs(dxy) >= 0.5:
         tonight.append(f"달러인덱스 {dxy:+.2f}%")
@@ -172,10 +172,10 @@ def build_us(cfg: dict, tech: dict, kr_rows: list[dict], watch_rows: list[dict],
     if earn:
         td = [e["name"] for e in earn if e["in_days"] == 0]
         tm = [e["name"] for e in earn if e["in_days"] == 1]
-        tonight.append("실적 발표 — " + " / ".join(x for x in (
+        tonight.append("실적 발표: " + " / ".join(x for x in (
             ("오늘(미국 시간): " + ", ".join(td[:6])) if td else "", ("내일: " + ", ".join(tm[:6])) if tm else "") if x))
     if not tonight:
-        tonight.append("뚜렷한 선행 신호 없음 — 개장 후 수급 확인")
+        tonight.append("뚜렷한 선행 신호 없음. 개장 후 수급 확인")
     open_kst = (datetime(now_utc.year, now_utc.month, now_utc.day, 13, 30, tzinfo=timezone.utc)
                 - timedelta(hours=off + 4)).astimezone(timezone(timedelta(hours=9)))
 

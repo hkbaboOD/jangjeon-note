@@ -37,7 +37,7 @@ def evaluate(cfg: dict, watch_rows: list[dict]) -> list[dict]:
 
         if c1 is not None and abs(c1) >= a["daily_move_pct"]:
             diag = w.get("diag")
-            extra = f" · {diag['type']} 추정" if diag and diag["type"] != "판단 보류" else ""
+            extra = f", {diag['type']}으로 추정" if diag and diag["type"] != "판단 보류" else ""
             add("move", f"{name} {c1:+.1f}% 급{'등' if c1 > 0 else '락'}{extra}", "warn" if c1 < 0 else "good")
         r = t.get("rsi14")
         if r is not None and r <= a["rsi_low"]:

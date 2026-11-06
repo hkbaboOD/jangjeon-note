@@ -61,9 +61,9 @@ def analyze(ticker: str, meta: dict, divs: pd.Series, price: float | None, fund:
 
     notes = []
     if meta.get("covered_call"):
-        notes.append("커버드콜 — 원금 잠식·상승 제한 구조, 소수 비중 권장")
+        notes.append("커버드콜: 상승 이익이 제한되고 원금이 줄 수 있는 구조")
     if pr and pr > 0.9 and meta.get("type") not in ("reit", "bdc", "fund"):
-        notes.append(f"배당성향 {pr * 100:.0f}% — 지속가능성 점검 필요")
+        notes.append(f"배당성향 {pr * 100:.0f}%: 배당 유지 여력 점검 필요")
     if cuts:
         notes.append(f"최근 연간 배당 감소 {cuts}회")
     if market_of(ticker) == "kr" and len(last12) == 1:

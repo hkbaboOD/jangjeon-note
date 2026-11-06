@@ -35,12 +35,12 @@ def build(model: dict, ev: dict, track: dict, prev: dict | None, today: str) -> 
     for h, need in NEED.items():
         if h not in contest:
             left = max(0, need - days)
-            nxt.append(f"{H_NAME[h]} 추천: 실전 기록 {days}일 — 실전 채점 기반 보정까지 약 {max(1, round(left / 5))}주")
+            nxt.append(f"{H_NAME[h]} 추천: 실전 기록 {days}일째, 실전 채점으로 보정하기까지 약 {max(1, round(left / 5))}주")
     for h, v in matured.items():
         if v["count"] >= 20 and v["recent_win"] < 45:
-            nxt.append(f"{H_NAME[h]} 추천 최근 승률 {v['recent_win']:.0f}%로 저조 → 다음 보정에서 새 후보·기본 모델 비교 결과를 우선 반영")
+            nxt.append(f"{H_NAME[h]} 추천 최근 승률 {v['recent_win']:.0f}%로 낮음. 다음 보정에서 새 후보·기본 모델 비교 결과를 우선 반영")
         elif v["count"] >= 20 and v["recent_win"] >= 60:
-            nxt.append(f"{H_NAME[h]} 추천 최근 승률 {v['recent_win']:.0f}% 양호 → 현재 모델 유지, 과최적화 여부만 감시")
+            nxt.append(f"{H_NAME[h]} 추천 최근 승률 {v['recent_win']:.0f}%. 현재 모델을 유지하고 과최적화 여부만 감시")
     if not act_today:
         nxt.append("이번 주 근거가 유의하지 않아 가중치 유지(억지로 바꾸지 않음)")
 

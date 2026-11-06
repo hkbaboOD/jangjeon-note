@@ -80,10 +80,10 @@ def _chart_proposal(base: dict, bt: dict, hz: str) -> tuple[dict, list[str]]:
     if tot:
         if tot["ic"] > 0 and tot["t"] >= 3:
             scale = _clip(1 + tot["ic"] * 5, 1.0, BLOCK_RANGE[1])
-            why.append(f"백테스트 차트 종합 IC {tot['ic']:+.3f}(t {tot['t']:.1f}) 유효 → 차트 비중 확대")
+            why.append(f"백테스트 차트 종합 IC {tot['ic']:+.3f}(t {tot['t']:.1f}) 유효해 차트 비중 확대")
         elif tot["ic"] <= 0 or tot["t"] < 1:
             scale = BLOCK_RANGE[0] if tot["ic"] <= 0 else 0.85
-            why.append(f"백테스트 차트 종합 IC {tot['ic']:+.3f}(t {tot['t']:.1f}) 약함 → 차트 비중 축소")
+            why.append(f"백테스트 차트 종합 IC {tot['ic']:+.3f}(t {tot['t']:.1f}) 약해 차트 비중 축소")
     block = block_def * scale
     default_split = {k: base.get(k, 0) / block_def for k in CHART}
     pos = {k: v["ic"] for k in CHART if (v := (bt.get("ic", {}).get(k) or {}).get(hz)) and v["ic"] > 0 and v["t"] >= T_MIN}
@@ -212,11 +212,11 @@ def calibrate(bt: dict, track: dict | None, prev: dict | None, live: pd.DataFram
                               "wins": wins, "chosen": chosen, "hold_dates": int(hold["date"].nunique()),
                               "train_dates": int(train["date"].nunique())}
             if chosen == "기본":
-                why = ["최근 검증 구간에서 기본 모델이 더 정확 → 자동 롤백"] + why
+                why = ["최근 검증 구간에서 기본 모델이 더 정확해 자동 롤백"] + why
             elif chosen == "현재":
-                why = ["새 후보가 최근 검증 구간에서 현재보다 낫지 않음 → 유지"] + why
+                why = ["새 후보가 최근 검증 구간에서 현재보다 낫지 않아 유지"] + why
             else:
-                why = [f"새 후보가 최근 {contest[hname]['hold_dates']}일 검증에서 IC {scores['새 후보']:+.3f} (현재 {cur_ic:+.3f}) → 채택"] + why
+                why = [f"새 후보가 최근 {contest[hname]['hold_dates']}일 검증에서 IC {scores['새 후보']:+.3f}로 현재({cur_ic:+.3f})보다 높아 채택"] + why
         else:
             target, why = _chart_proposal(base, bt, str(h))
         basis[hname] = why
@@ -224,7 +224,7 @@ def calibrate(bt: dict, track: dict | None, prev: dict | None, live: pd.DataFram
         moved = [(k, cur.get(k, 0), new.get(k, 0)) for k in sorted(set(new) | set(cur)) if abs(new.get(k, 0) - cur.get(k, 0)) >= 0.01]
         if moved:
             changes.append({"date": today, "text": f"[{H_NAME[hname]}] " + ", ".join(f"{NAME.get(k, k)} {a:.2f}→{b:.2f}" for k, a, b in moved)
-                            + (f" — {why[0]}" if why else "")})
+                            + (f" ({why[0]})" if why else "")})
         weights[hname] = new
 
         # 셋업 가감점: 백테스트 초과수익(유의할 때만) + 실제 추천 성과(30건 이상이면 혼합)
