@@ -81,8 +81,8 @@
   {
    "ticker": "^IXIC",
    "name": "나스닥",
-   "last": 24314.998046875,
-   "chg": -5.5233274896064,
+   "last": 24315.0,
+   "chg": -5.523319900679158,
    "date": "2026-11-05",
    "spark": [
     27068.7207,
@@ -114,14 +114,14 @@
     25164.3105,
     25372.0098,
     25736.5098,
-    24314.998
+    24315.0
    ]
   },
   {
    "ticker": "^SOX",
    "name": "필라델피아반도체",
-   "last": 9011.1376953125,
-   "chg": -12.246134082630522,
+   "last": 9011.1396484375,
+   "chg": -12.246115062360808,
    "date": "2026-11-05",
    "spark": [
     12668.9297,
@@ -153,17 +153,16 @@
     10328.3301,
     10600.4004,
     10268.6504,
-    9011.1377
+    9011.1396
    ]
   },
   {
    "ticker": "^KS11",
    "name": "코스피",
-   "last": 4968.7900390625,
-   "chg": -12.579784478603951,
+   "last": 5050.2900390625,
+   "chg": -6.194691068093283,
    "date": "2026-11-06",
    "spark": [
-    7007.7202,
     7017.9102,
     7080.9199,
     6889.7402,
@@ -192,17 +191,17 @@
     5859.0801,
     5648.79,
     5683.7998,
-    4968.79
+    5383.7998,
+    5050.29
    ]
   },
   {
    "ticker": "^KQ11",
    "name": "코스닥",
-   "last": 634.77001953125,
-   "chg": -11.214769047736329,
+   "last": 644.510009765625,
+   "chg": -4.996973028237617,
    "date": "2026-11-06",
    "spark": [
-    836.27,
     834.38,
     844.48,
     846.58,
@@ -231,7 +230,8 @@
     734.36,
     704.39,
     714.95,
-    634.77
+    678.41,
+    644.51
    ]
   }
  ],
@@ -318,11 +318,10 @@
   {
    "ticker": "CL=F",
    "name": "WTI",
-   "last": 91.1500015258789,
-   "chg": 3.438491471693017,
-   "date": "2026-11-05",
+   "last": 91.76000213623047,
+   "chg": 1.3698691329536716,
+   "date": "2026-11-06",
    "spark": [
-    92.41,
     92.6,
     89.38,
     90.42,
@@ -351,17 +350,17 @@
     96.46,
     96.09,
     88.12,
-    91.15
+    90.52,
+    91.76
    ]
   },
   {
    "ticker": "BZ=F",
    "name": "브렌트",
-   "last": 99.26000213623047,
-   "chg": 4.90382504223299,
-   "date": "2026-11-05",
+   "last": 100.02999877929688,
+   "chg": 1.7702694552469422,
+   "date": "2026-11-06",
    "spark": [
-    104.32,
     105.28,
     102.59,
     103.53,
@@ -390,17 +389,17 @@
     104.77,
     103.6,
     94.62,
-    99.26
+    98.29,
+    100.03
    ]
   },
   {
    "ticker": "DX-Y.NYB",
    "name": "달러인덱스",
-   "last": 101.62300109863281,
-   "chg": 0.11131805735822287,
-   "date": "2026-11-05",
+   "last": 101.81700134277344,
+   "chg": 0.2629229768506658,
+   "date": "2026-11-06",
    "spark": [
-    100.97,
     101.2,
     101.37,
     101.45,
@@ -429,14 +428,15 @@
     101.75,
     101.87,
     101.51,
-    101.623
+    101.55,
+    101.817
    ]
   },
   {
    "ticker": "KRW=X",
    "name": "원달러",
-   "last": 1355.3699951171875,
-   "chg": 1.1417350915520652,
+   "last": 1356.5799560546875,
+   "chg": 1.232025970834183,
    "date": "2026-11-06",
    "spark": [
     1354.51,
@@ -468,17 +468,16 @@
     1344.8101,
     1342.9,
     1340.0699,
-    1355.37
+    1356.58
    ]
   },
   {
    "ticker": "GC=F",
    "name": "금",
-   "last": 4082.60009765625,
-   "chg": 0.2357008999815946,
-   "date": "2026-11-05",
+   "last": 4057.89990234375,
+   "chg": -1.3516493899659698,
+   "date": "2026-11-06",
    "spark": [
-    4321.2002,
     4168.3999,
     4179.7002,
     4186.7002,
@@ -507,19 +506,20 @@
     3969.6001,
     3940.3999,
     4073.0,
-    4082.6001
+    4113.5,
+    4057.8999
    ]
   }
  ],
  "breadth": {
   "us": {
-   "up": 45,
-   "down": 21,
+   "up": 5,
+   "down": 61,
    "total": 66
   },
   "kr": {
-   "up": 2,
-   "down": 38,
+   "up": 4,
+   "down": 36,
    "total": 40
   }
  },
@@ -527,112 +527,112 @@
   "us": {
    "top": [
     {
-     "ticker": "MSFT",
-     "name": "마이크로소프트",
-     "chg": 6.681509858362911
+     "ticker": "COST",
+     "name": "코스트코",
+     "chg": 1.8270944845498738
     },
     {
-     "ticker": "MCD",
-     "name": "맥도날드",
-     "chg": 6.531323037440995
+     "ticker": "CVS",
+     "name": "CVS 헬스",
+     "chg": 1.7133601329018422
     },
     {
-     "ticker": "HD",
-     "name": "홈디포",
-     "chg": 6.527602511613306
+     "ticker": "DUK",
+     "name": "듀크 에너지",
+     "chg": 0.3781198449041012
     },
     {
-     "ticker": "AMZN",
-     "name": "아마존",
-     "chg": 6.119109732537509
+     "ticker": "SO",
+     "name": "서던 컴퍼니",
+     "chg": 0.2362474063787312
     },
     {
-     "ticker": "QCOM",
-     "name": "퀄컴",
-     "chg": 5.32750115904812
+     "ticker": "PEP",
+     "name": "펩시코",
+     "chg": 0.20362908906785826
     }
    ],
    "bottom": [
     {
-     "ticker": "CVS",
-     "name": "CVS 헬스",
-     "chg": -12.525986346046825
-    },
-    {
      "ticker": "MU",
      "name": "마이크론",
-     "chg": -7.001519918903398
+     "chg": -17.459096013768615
     },
     {
-     "ticker": "LMT",
-     "name": "록히드마틴",
-     "chg": -6.879502656127734
+     "ticker": "AMD",
+     "name": "AMD",
+     "chg": -17.263391524519676
     },
     {
-     "ticker": "CAT",
-     "name": "캐터필러",
-     "chg": -5.231274564977539
+     "ticker": "LRCX",
+     "name": "램리서치",
+     "chg": -16.3618285353905
     },
     {
-     "ticker": "COP",
-     "name": "코노코필립스",
-     "chg": -5.166199286979156
+     "ticker": "AMAT",
+     "name": "어플라이드 머티어리얼즈",
+     "chg": -13.576067873606334
+    },
+    {
+     "ticker": "KLAC",
+     "name": "KLA",
+     "chg": -13.345344235505497
     }
    ]
   },
   "kr": {
    "top": [
     {
-     "ticker": "207940.KS",
-     "name": "삼성바이오로직스",
-     "chg": 2.1052631578947434
-    },
-    {
-     "ticker": "033780.KS",
-     "name": "KT&G",
-     "chg": 0.3604531410916545
-    },
-    {
-     "ticker": "030200.KS",
-     "name": "KT",
-     "chg": 0.0
+     "ticker": "018260.KS",
+     "name": "삼성에스디에스",
+     "chg": 6.341463414634152
     },
     {
      "ticker": "035420.KS",
      "name": "NAVER",
-     "chg": -1.7306652244456489
+     "chg": 2.758247701460248
     },
     {
-     "ticker": "068270.KS",
-     "name": "셀트리온",
-     "chg": -1.8604651162790753
+     "ticker": "030200.KS",
+     "name": "KT",
+     "chg": 2.5096525096525157
+    },
+    {
+     "ticker": "017670.KS",
+     "name": "SK텔레콤",
+     "chg": 0.5161290322580614
+    },
+    {
+     "ticker": "024110.KS",
+     "name": "기업은행",
+     "chg": -0.20565552699228773
     }
    ],
    "bottom": [
     {
-     "ticker": "009150.KS",
-     "name": "삼성전기",
-     "chg": -13.453389830508478
-    },
-    {
      "ticker": "000660.KS",
      "name": "SK하이닉스",
-     "chg": -11.471518987341767
+     "chg": -10.759493670886078
     },
     {
      "ticker": "034020.KS",
      "name": "두산에너빌리티",
-     "chg": -10.851926977687631
+     "chg": -9.83772819472617
     },
     {
-     "ticker": "032830.KS",
-     "name": "삼성생명",
-     "chg": -9.40695296523517
+     "ticker": "009150.KS",
+     "name": "삼성전기",
+     "chg": -8.6864406779661
     },
     {
      "ticker": "006400.KS",
      "name": "삼성SDI",
-     "chg": -8.546168958742628
+     "chg": -8.447937131630646
+    },
+    {
+     "ticker": "247540.KQ",
+     "name": "에코프로비엠",
+     "chg": -7.803790412486067
     }
    ]
   }
@@ -641,67 +641,83 @@
   "미 증시 약세: S&P500 -4.36%, 나스닥 -5.52%",
   "반도체 약세(SOX -12.25%)",
   "미 10년물 금리 -6bp 하락",
-  "유가 급변(WTI +3.4%)",
-  "VIX +69.7% 급등 — 위험회피 심리 확대"
+  "VIX +69.7% 급등, 위험회피 심리 확대"
  ],
  "outlook": [
-  "국내 반도체 대형주(삼성전자·SK하이닉스) 약세 출발 가능성 — 코스피 반도체 비중이 커 지수 영향 큼",
-  "금리 하락 → 성장주·기술주 우호적",
-  "유가 상승: 정유·에너지 상대 수혜, 항공·화학 부담",
+  "삼성전자·SK하이닉스 약세 출발 가능성. 코스피에서 반도체 비중이 커서 지수도 영향을 받음",
+  "금리 하락은 성장주·기술주에 우호적",
   "변동성 확대 국면: 분할 접근·현금 비중 점검",
-  "원/달러 +1.14% — 외국인 수급 부담"
+  "원/달러 +1.23%, 외국인 수급 부담"
  ],
  "diagnosis": [
   {
    "ticker": "005930.KS",
    "name": "삼성전자",
-   "chg_1d": -8.0893300248139,
+   "chg_1d": -6.352357320099255,
    "type": "수급·심리성",
    "evidence": [
     "평균 목표가 +0.0%",
     "선행 EPS 추정치 +0.0%",
     "투자의견 평균 1.34→1.34 (낮을수록 매수)",
-    "이익 추정·목표가 유지 + 밸류에이션 저평가 구간 → 가격만 하락"
+    "이익 추정치·목표가는 그대로인데 가격만 하락(밸류에이션 저평가 구간)"
    ]
   },
   {
    "ticker": "000660.KS",
    "name": "SK하이닉스",
-   "chg_1d": -11.471518987341767,
+   "chg_1d": -10.759493670886078,
    "type": "수급·심리성",
    "evidence": [
     "평균 목표가 +0.0%",
     "선행 EPS 추정치 -0.0%",
     "투자의견 평균 1.34→1.34 (낮을수록 매수)",
-    "이익 추정·목표가 유지 + 밸류에이션 저평가 구간 → 가격만 하락"
+    "이익 추정치·목표가는 그대로인데 가격만 하락(밸류에이션 저평가 구간)"
    ]
   },
   {
    "ticker": "MU",
    "name": "마이크론",
-   "chg_1d": -7.001519918903398,
+   "chg_1d": -17.459096013768615,
    "type": "수급·심리성",
    "evidence": [
     "평균 목표가 +0.0%",
     "선행 EPS 추정치 -0.0%",
     "투자의견 평균 1.35→1.35 (낮을수록 매수)",
-    "이익 추정·목표가 유지 + 밸류에이션 저평가 구간 → 가격만 하락"
+    "이익 추정치·목표가는 그대로인데 가격만 하락(밸류에이션 저평가 구간)"
+   ]
+  },
+  {
+   "ticker": "NVDA",
+   "name": "엔비디아",
+   "chg_1d": -9.258980826062157,
+   "type": "수급·심리성",
+   "evidence": [
+    "평균 목표가 +0.0%",
+    "선행 EPS 추정치 -0.0%",
+    "투자의견 평균 1.29→1.29 (낮을수록 매수)",
+    "이익 추정치·목표가는 그대로인데 가격만 하락(밸류에이션 저평가 구간)"
    ]
   },
   {
    "ticker": "TSM",
    "name": "TSMC",
-   "chg_1d": -2.235668988606121,
+   "chg_1d": -10.777004143141976,
    "type": "수급·심리성",
    "evidence": [
     "평균 목표가 +0.0%",
     "선행 EPS 추정치 -0.0%",
     "투자의견 평균 1.38→1.38 (낮을수록 매수)",
-    "이익 추정·목표가 유지 + 밸류에이션 저평가 구간 → 가격만 하락"
+    "이익 추정치·목표가는 그대로인데 가격만 하락(밸류에이션 저평가 구간)"
    ]
   }
  ],
  "news": [
+  {
+   "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
+   "link": "https://www.benzinga.com/markets/prediction-markets/26/11/62966566/stock-market-will-sp-500-open-up-or-down-today-74?utm_source=yahooFinance&utm_campaign=partner_feed&utm_medium=referral",
+   "publisher": "Benzinga Prediction Markets",
+   "time": "2026-11-06T05:56:08Z"
+  },
   {
    "title": "Market Jitters? How Buffer ETFs Can Help Protect Your Portfolio",
    "link": "https://finance.yahoo.com/markets/options/articles/market-jitters-buffer-etfs-help-180400264.html",
@@ -745,12 +761,6 @@
    "time": "2026-11-05T15:11:24Z"
   },
   {
-   "title": "Berkshire Has Gained 16% in About 5 Weeks",
-   "link": "https://247wallst.com/investing/2026/11/05/berkshire-has-gained-16-in-about-5-weeks/",
-   "publisher": "24/7 Wall St.",
-   "time": "2026-11-05T14:47:19Z"
-  },
-  {
    "title": "QQQ and SMH sink as chip stocks have worst day since 2020",
    "link": "https://finance.yahoo.com/video/qqq-and-smh-sink-as-chip-stocks-have-worst-day-since-2020-215006209.html",
    "publisher": "Yahoo Finance Video",
@@ -778,80 +788,67 @@
  "ai_summary": null,
  "news_kr": [
   {
-   "title": "'블루 쓰나미' 증시 강타...코스피 '검은 금요일' [뉴스퀘어10]",
-   "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBDWjRsbkVkdFhSM1lKT2ZvMUE2NUdnZ0NSTnVpV04tU1BfUjRPRXE3RGJKLWJmQlY2aU5EbEZncnRkd3h3MHFBajVZcnFacnpXVzhFMG1NNGMyUjRJeFE?oc=5",
+   "title": "국내 증시 폭락에 개미들 '한숨'...\"이럴 줄 몰랐다\"",
+   "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTFAwRVhHMGppSUVwcXJlUkhhQ1VYLS1fY3lRZ0xPMnMtdy1Xd1lWLW5IQzZCY3dPd0NEYm13a19mdUJXbnRzQmNKbmlFMFNjUDlBS0NOdUZNeE5TWEtBcFZCMWt5c3NZMHhEckdFUFVnbw?oc=5",
    "publisher": "YTN",
-   "time": "2026-11-06T01:14:00+00:00"
+   "time": "2026-11-06T04:43:00+00:00"
   },
   {
-   "title": "증시 변동성이 달러선물로…주식시장 헤지 수요에 환율도 출렁",
-   "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFB2dk0xYnRmZlBMbFlJWFlMTUdrUkZ5cEJxXzhMQVVSX1ZCRnBEZ2cwUEItM2N3Q2xGMWpiRmRPVUVEUnhxY1doVGhlV1d3NlFVc25FOU1uNjByYnFJS1U5dlh2aUhTRzRQTG5kWHBnOWg?oc=5",
+   "title": "금융당국 “국내 증시 과민반응”…반대매매 방지 긴급처방",
+   "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBORmFfeTZ5cjAtNFJEcU1ObndseUd0aFk3SWN2a0VKaTdBd0F4VXRZSVdGUkhXR1lhaDJJT19ZWk4zM2VOeWluSVFjSjJ0LUJuaHh3dUxqQk15QWRnZFpMUDQ5a0RuQ1A4aXdWUWRnOGcyZTNacWfSAWZBVV95cUxNa0N1VFI2bzgyVndSWjJPR3NhWFZJSFJ2M21EaDNpMUNfTFNhSGFQRS0zc2tTNVlFVUZVaFhJQkFPUEZteU5zV1dySE96MGZKZGlmREJ0Zl9vRGdqdGlueFN0QmsxNGc?oc=5",
+   "publisher": "동아일보",
+   "time": "2026-11-06T03:09:00+00:00"
+  },
+  {
+   "title": "[블루쓰나미 긴급진단]美상장 한국 ETF 13% 폭락…코스피 추가 급락 우려",
+   "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9jUUdxZEtVemVUR1JPZWpIVERPSHdYUFBfVUJWa1k4czlvUHM2ZjRPRmtDdTNrcnlOazVHVi1pM01EczdPZUU0QW9mdFZ0Z1dFOTdqLWkybXJzb2tmRGNNMG5uUkJ0VjI0MGp4NDhzZEg?oc=5",
    "publisher": "연합인포맥스",
-   "time": "2026-11-06T01:04:12+00:00"
+   "time": "2026-11-05T22:44:00+00:00"
   },
   {
-   "title": "코스피 8% 급락에 5,000선 붕괴…서킷 브레이커 발동",
-   "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5YaXB3dkdSS3FEZ3pNU0FNb0NoVXVOYmM2WGhNWnhQLVhYMWJBcTJrRDlrTzY3WWJkNDd1MlpXY1NiX2VYdHFIQXRRbjlLX0FjNE9ZMDl1MnNsMDV5ZzFhZnVmMUJNakE?oc=5",
+   "title": "’블루 쓰나미’에 코스피 장중 5,000선 무너져",
+   "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE92UDJtMF9NOUFDQ05tNWlaSlQ3NmdXcG9WY18zUy1wWTQ4T3JwN0pRRFBCdTlDdVFHZTlTQWFrdm9HVGpZcHdpeUJuOC1yRlNjdmFzaExUTklJZFFQRFJVUjR4V0l5d1E?oc=5",
    "publisher": "연합뉴스TV",
-   "time": "2026-11-06T01:18:00+00:00"
+   "time": "2026-11-06T02:35:00+00:00"
   },
   {
-   "title": "[투매의 날] 코스피, 美 증시 폭락에 5000선 붕괴…개장 직후 서킷브레이커 발동 By EBN",
-   "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5zVmR2elFBbU5WYlNDbG1yM3lCQ1JnbWJFMUNaemRYTzBZM1dIU0ZWQzNvTTl1bnN3aDBRcHB6anRZNmpYcXh2YUtBeHlBMEpqVWhuMWhaWUNyNFhxWUc3WFd6b2NWM2JHMnd3LXZIY1o?oc=5",
-   "publisher": "Investing.com 한국어",
-   "time": "2026-11-06T00:39:00+00:00"
+   "title": "국내 증시 급락하자, 금융당국 '신용융자 담보비율 유지 의무' 3개월 면제 카드",
+   "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTFAtazR3QUp6WDRsak12alhTakxnSUUydmFEcHVWbmhyc2Q3Yks0bTc5bE1KNGhUOVFtWGFGT1RwUDZINEdBTkU3cTJ2cHNaRHhQU3MzODJQZ2hkYVlLZmZnM21QQmpZR2xXU21F?oc=5",
+   "publisher": "BBS불교방송",
+   "time": "2026-11-06T03:51:58+00:00"
   },
   {
-   "title": "'검은 금요일'...국내 증시의 높은 반도체 비중, 충격 증폭",
-   "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1NN3lRMXJuaTZadHBMRXJPeUdyTjUyUkZURXhVSUNiUlQyVjlfNXctNGZTRDhHaUY2UEdhQjduYzQzUTdEOW5hTF9qSHRndkV5bHhwSDI5cWNIRjd1SWRkdXBYRUVLQQ?oc=5",
-   "publisher": "이로운넷",
-   "time": "2026-11-06T00:39:43+00:00"
+   "title": "'블루웨이브 쇼크' 파랗게 질린 증시…장중 5천피 무너지며 폭락장세",
+   "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBvOFNSdDNjYmZvSEpROTNqZmZEdkFncGQzZElOeWdyQkJSdTgtdUFJZ1R3MVRKOXhES2dOTFNJVHV5RHEwejlkUUZSbWJUMVE5SHFnRUFCVHQ2YXfSAWBBVV95cUxQRWM1b0dCUU1wb0N4aFN1SC0xSGF1NUZJRmVfMF9wUnk4T3NrTGZXaXNmeGhQTjRLdEV4SlJLLXVpaXRMSEhWemVjalVzV3F5ODdYaXhVZ3lvbUJibzV1dTc?oc=5",
+   "publisher": "연합뉴스",
+   "time": "2026-11-06T02:27:28+00:00"
   },
   {
-   "title": "검은 금요일 맞은 국내 증시",
-   "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5JcnlBWXRkWEV4cXJfNUViOTdnVi1rUkVKbWVBOEY5NWJTTUtTczdUVEhQaHpPcUhJMEV3a0Y4UFlhMmVGLWlFZldVejd6b0M0SHd2dVdDNUFPdmxB?oc=5",
-   "publisher": "뉴스핌",
-   "time": "2026-11-06T01:36:00+00:00"
-  },
-  {
-   "title": "코스피 8%대 폭락에 개장 직후 서킷브레이커…5000선 붕괴",
-   "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFB6OHAwTkNPUXRETGJCZDI2SlgwRkhpTzU5S04xYS1fbVdKR1c4cEVIa1BmdmR0VDRPVl9lRlZ0VDdVVE1ma1NkNDZCa3RLY2pqZzFqQ05vNVZnc1ZnZXZ4VGtlWWREcFJXZEE?oc=5",
+   "title": "[AI패닉]\"국내증시 한동안 변동 지속, 11월 이후 반등 기회\"",
+   "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1rWGpYNDUtOF9CYzN6NHktYXdvR2p5QlRJbEV3dms0LUs1d0h2WVBDajlZZmlEZGlremJxaFVPREY2NUNSZGJ5WEI1d0JNenk1NTVYeVBsMURJMksteEJLYkxraF9OM3lLQ0E?oc=5",
    "publisher": "비즈워치",
-   "time": "2026-11-06T00:39:02+00:00"
+   "time": "2026-11-06T03:06:03+00:00"
   },
   {
-   "title": "코스피 5000선 붕괴…美 AI발 충격에 개장 3분 만에 서킷브레이커 [개장시황]",
-   "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9keGhzOGtsaWlsN3c1U3ZMSkstU3dMNUlOUjFyQWFBZW1oOXpUcXp3R2FELVNjOXdDOUZkcFJJWjhnN090SDZaUUJPdUg2WnpQMlRQdk9SSlFHYnM?oc=5",
-   "publisher": "에너지경제신문",
-   "time": "2026-11-06T00:21:36+00:00"
+   "title": "코스피 폭락…9개월 만에 5천선 아래로",
+   "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5tVVBoS1FnVnJoUU5KQ1c3YktNR3VNS3c2TVZOWmYwWl8xMWxnMlhDcDZOSGtZNnNFQVAzUVQ5Tk1iaHFoblpTdXBDN0llMVdfVWNXemlBU1U0QmM?oc=5",
+   "publisher": "KBS 뉴스",
+   "time": "2026-11-06T03:02:00+00:00"
   }
  ],
  "earnings": [
   {
-   "ticker": "DUK",
-   "name": "듀크 에너지",
-   "date": "2026-11-05",
-   "in_days": 0
-  },
-  {
-   "ticker": "SO",
-   "name": "서던 컴퍼니",
-   "date": "2026-11-05",
-   "in_days": 0
-  },
-  {
-   "ticker": "COP",
-   "name": "코노코필립스",
-   "date": "2026-11-05",
-   "in_days": 0
+   "ticker": "BRK-B",
+   "name": "버크셔 해서웨이",
+   "date": "2026-11-07",
+   "in_days": 1
   }
  ],
  "geo": [
-  "북한·한반도: 48시간 기사 55건(평소 45건의 1.2배), 도발 · 5일 원달러 +1.3% → 유리: 방산 / 부담: 국내 상장주",
-  "미중 갈등·수출규제: 48시간 기사 7건(평소 4건의 1.8배), 갈등 고조 · 5일 반도체지수 -21.8% → 유리: 방산 / 부담: 중국 노출, 반도체, 관세 민감",
-  "대만 해협: 48시간 기사 9건(평소 7건의 1.3배), 긴장 고조 · 5일 반도체지수 -21.8%, VIX +63.8% → 유리: 방산 / 부담: 반도체, 중국 노출, AI 인프라",
-  "환율(원화): 48시간 기사 85건(평소 100건의 0.8배), 원화 약세 · 5일 원달러 +1.3% → 유리: 수출주 / 부담: 유가 원가 부담주, 국내 상장주"
+  "대만 해협: 48시간 기사 14건(평소 7건의 2.0배), 긴장 고조. 5일 가격 변화 반도체지수 -21.8%, VIX +63.8%. 방산에 유리, 반도체·중국 노출·AI 인프라에 부담",
+  "미중 갈등·수출규제: 48시간 기사 6건(평소 4건의 1.5배), 갈등 고조. 5일 가격 변화 반도체지수 -21.8%. 방산에 유리, 중국 노출·반도체·관세 민감에 부담",
+  "환율(원화): 48시간 기사 87건(평소 100건의 0.9배), 원화 약세. 5일 가격 변화 원달러 +1.4%. 수출주에 유리, 유가 원가 부담주·국내 상장주에 부담"
  ],
  "date": "2026-11-06",
- "generated": "2026-11-06T10:46+09:00"
+ "generated": "2026-11-06T15:49+09:00"
 }
