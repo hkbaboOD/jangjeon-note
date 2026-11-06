@@ -99,20 +99,20 @@
   {
    "key": "fx",
    "label": "환율(원화)",
-   "n": 87,
+   "n": 86,
    "base": 100,
-   "ratio": 0.87,
+   "ratio": 0.86,
    "level": "보통",
-   "heat": 0.25,
+   "heat": 0.24,
    "tone": 0.17,
    "esc_n": 21,
    "de_n": 15,
-   "confirm": 0.93,
+   "confirm": 0.91,
    "moves": {
-    "KRW=X": 1.39
+    "KRW=X": 1.37
    },
-   "direction": 0.78,
-   "intensity": 0.194,
+   "direction": 0.76,
+   "intensity": 0.183,
    "stance": "원화 약세",
    "up": [
     "수출주"
@@ -135,10 +135,10 @@
      "time": "2026-11-06T00:41:57+00:00"
     },
     {
-     "title": "원·달러 환율 1340원대 공방 전망…반도체 수출 호조에도 외국인 이탈 변수",
-     "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1Rd09rRmR1WmMySjVXWExVQllzNTZ4NFZvRmpnWV8zU2FqNEJ2OTFkMUxFMzUwMW5MR3lDT3ZpcVFvMWN6SzVmdE1lY241R2UxTDROel9Mb1VVUjFLX1hF?oc=5",
-     "publisher": "조세일보",
-     "time": "2026-11-05T23:37:27+00:00"
+     "title": "원·달러 환율, 14.5원 오른 1356.6원(오후 3시30분)",
+     "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1SeU9iLXhCRzNUTEFaNDhFR2tDU0dzSS1TNlFsZGg5dWhYNDZoYzZXWmoyVXc3dGNKbmV4VmpVMVNIdjZUOEdEYUJlTzJnNE1ZeDdMTlhOZHl2NW9xRHYySA?oc=5",
+     "publisher": "아시아경제",
+     "time": "2026-11-06T06:36:26+00:00"
     }
    ]
   },
@@ -153,12 +153,12 @@
    "tone": 0.86,
    "esc_n": 26,
    "de_n": 2,
-   "confirm": 0.93,
+   "confirm": 0.91,
    "moves": {
-    "KRW=X": 1.39
+    "KRW=X": 1.37
    },
    "direction": 0.88,
-   "intensity": 0.097,
+   "intensity": 0.096,
    "stance": "도발",
    "up": [
     "방산"
@@ -190,21 +190,21 @@
   {
    "key": "tariff",
    "label": "관세·무역분쟁",
-   "n": 22,
+   "n": 21,
    "base": 34,
-   "ratio": 0.65,
+   "ratio": 0.62,
    "level": "낮음",
-   "heat": 0.1,
+   "heat": 0.08,
    "tone": 1.0,
    "esc_n": 6,
    "de_n": 0,
    "confirm": 0.96,
    "moves": {
     "^GSPC": -4.75,
-    "KRW=X": 1.39
+    "KRW=X": 1.37
    },
-   "direction": 0.99,
-   "intensity": 0.099,
+   "direction": 0.98,
+   "intensity": 0.079,
    "stance": "무역 긴장",
    "up": [
     "경기 방어"
@@ -216,6 +216,12 @@
    ],
    "headlines": [
     {
+     "title": "美 민주당, 트럼프 관세에 반격…캐나다 관세 철폐부터 추진",
+     "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE84c05NUmJzSE1PVndlU1pBVUo1Nk1OZzBYbktVVTdYRWkta2lKLXNOd1Z1YWZzRDZTRWxmVmQtOFNBWC12WC1naDl2SnFRNjBGeWROdHRnSHpRUU9JSU9GcG1hRHlyaVpSSFUzMDduY0FXTlg1ZGdFM9IBeEFVX3lxTE84c05NUmJzSE1PVndlU1pBVUo1Nk1OZzBYbktVVTdYRWkta2lKLXNOd1Z1YWZzRDZTRWxmVmQtOFNBWC12WC1naDl2SnFRNjBGeWROdHRnSHpRUU9JSU9GcG1hRHlyaVpSSFUzMDduY0FXTlg1ZGdFMw?oc=5",
+     "publisher": "뉴시스",
+     "time": "2026-11-06T04:43:15+00:00"
+    },
+    {
      "title": "선거 참패에도 관세 고집한 트럼프…\"美에 공장 안 지으면 300% 관세\"",
      "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQUG1DQ3V0WUhlVmlKYWdvZ0UwamtHY1hla1dRU2JxSF9iOElYaWJSSG1tUjFpQ1ZIZk9oVDAtaktrdXduRkdOc2N0VXJNU05MTWhDU21zT2liMlpncVliZ1J3V2NSYVRkOGRaX193cU43WUYyeEVZOTNRdnZpcE1zUTNB?oc=5",
      "publisher": "아시아경제",
@@ -226,31 +232,25 @@
      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE11YVVhTGFKUHlFRlNVTERsa3ZueERET2laZW9ncnd3VThZcGFlOGlkZzFqTENPMXZnbVVqWlhvdFNmamZ1YTFtRTZyNUxYZ3k2bVhDMFV4RGJQSXRPeTBxY2x4czk3ZWRZVFRDcmpEeng?oc=5",
      "publisher": "위키리크스한국",
      "time": "2026-11-06T02:14:00+00:00"
-    },
-    {
-     "title": "트럼프, 민주당 관세철폐 움직임에 \"미국 내 공장 건설 다 멈춰\"",
-     "link": "https://news.google.com/rss/articles/CBMiQkFVX3lxTE9sbFp4Zk9jN3o0Rm1jVldXOHJMeFM1TlhCZ1Nuc1J2dXpvTERnbmZfR3BqTEV0blROMVFfckZMM0dadw?oc=5",
-     "publisher": "브레이크뉴스",
-     "time": "2026-11-06T00:16:00+00:00"
     }
    ]
   },
   {
    "key": "fed",
    "label": "연준·금리",
-   "n": 37,
+   "n": 39,
    "base": 52,
-   "ratio": 0.71,
+   "ratio": 0.75,
    "level": "보통",
-   "heat": 0.14,
-   "tone": 0.28,
-   "esc_n": 16,
+   "heat": 0.17,
+   "tone": 0.33,
+   "esc_n": 18,
    "de_n": 9,
    "confirm": -0.76,
    "moves": {
     "^TNX": -3.05
    },
-   "direction": -0.05,
+   "direction": -0.03,
    "intensity": 0.0,
    "stance": "방향 혼재",
    "up": [],
@@ -289,8 +289,8 @@
    "de_n": 1,
    "confirm": 0.0,
    "moves": {
-    "CL=F": -11.87,
-    "GC=F": 4.08
+    "CL=F": -12.06,
+    "GC=F": 4.06
    },
    "direction": 0.35,
    "intensity": 0.0,
@@ -331,8 +331,8 @@
    "de_n": 3,
    "confirm": 0.0,
    "moves": {
-    "BZ=F": -14.97,
-    "GC=F": 4.08
+    "BZ=F": -15.15,
+    "GC=F": 4.06
    },
    "direction": -0.7,
    "intensity": -0.0,
@@ -362,21 +362,21 @@
   }
  ],
  "impact": {
-  "china": -0.514,
+  "china": -0.508,
   "semis": -0.64,
-  "tariff": -0.139,
-  "defense": 0.509,
-  "export": 0.057,
-  "defensive": 0.03,
-  "oil_down": -0.078,
-  "korea": -0.116,
+  "tariff": -0.119,
+  "defense": 0.508,
+  "export": 0.062,
+  "defensive": 0.024,
+  "oil_down": -0.073,
+  "korea": -0.112,
   "ai": -0.21
  },
- "generated": "2026-11-06T15:49+09:00",
+ "generated": "2026-11-06T16:00+09:00",
  "summary": [
   "대만 해협: 48시간 기사 14건(평소 7건의 2.0배), 긴장 고조. 5일 가격 변화 반도체지수 -21.8%, VIX +63.8%. 방산에 유리, 반도체·중국 노출·AI 인프라에 부담",
   "미중 갈등·수출규제: 48시간 기사 6건(평소 4건의 1.5배), 갈등 고조. 5일 가격 변화 반도체지수 -21.8%. 방산에 유리, 중국 노출·반도체·관세 민감에 부담",
-  "환율(원화): 48시간 기사 87건(평소 100건의 0.9배), 원화 약세. 5일 가격 변화 원달러 +1.4%. 수출주에 유리, 유가 원가 부담주·국내 상장주에 부담"
+  "환율(원화): 48시간 기사 86건(평소 100건의 0.9배), 원화 약세. 5일 가격 변화 원달러 +1.4%. 수출주에 유리, 유가 원가 부담주·국내 상장주에 부담"
  ],
  "tag_ko": {
   "semis": "반도체",

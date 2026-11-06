@@ -44,8 +44,8 @@
   {
    "ticker": "NQ=F",
    "name": "나스닥100 선물",
-   "last": 26964.75,
-   "chg": 0.7952676435406758,
+   "last": 26965.75,
+   "chg": 0.7990056818181879,
    "date": "2026-11-06",
    "spark": [
     30566.25,
@@ -77,14 +77,14 @@
     28305.75,
     28566.75,
     26752.0,
-    26964.75
+    26965.75
    ]
   },
   {
    "ticker": "YM=F",
    "name": "다우 선물",
-   "last": 51121.0,
-   "chg": -0.9570861183764379,
+   "last": 51139.0,
+   "chg": -0.9222125351157628,
    "date": "2026-11-06",
    "spark": [
     51837.0,
@@ -116,7 +116,7 @@
     51895.0,
     53503.0,
     51615.0,
-    51121.0
+    51139.0
    ]
   }
  ],
@@ -124,8 +124,8 @@
   {
    "ticker": "^KS11",
    "name": "코스피",
-   "last": 5059.64990234375,
-   "chg": -6.020838703205921,
+   "last": 5059.68994140625,
+   "chg": -6.020095007972959,
    "date": "2026-11-06",
    "spark": [
     7017.9102,
@@ -157,14 +157,14 @@
     5648.79,
     5683.7998,
     5383.7998,
-    5059.6499
+    5059.6899
    ]
   },
   {
    "ticker": "^KQ11",
    "name": "코스닥",
-   "last": 644.25,
-   "chg": -5.035299376009272,
+   "last": 644.27001953125,
+   "chg": -5.032348427166755,
    "date": "2026-11-06",
    "spark": [
     834.38,
@@ -196,7 +196,7 @@
     704.39,
     714.95,
     678.41,
-    644.25
+    644.27
    ]
   }
  ],
@@ -402,8 +402,8 @@
   {
    "ticker": "CL=F",
    "name": "WTI",
-   "last": 91.7300033569336,
-   "chg": 1.3367286331642525,
+   "last": 91.51000213623047,
+   "chg": 1.0936870634980167,
    "date": "2026-11-06",
    "spark": [
     92.6,
@@ -435,14 +435,14 @@
     96.09,
     88.12,
     90.52,
-    91.73
+    91.51
    ]
   },
   {
    "ticker": "BZ=F",
    "name": "브렌트",
-   "last": 99.97000122070312,
-   "chg": 1.709228089864001,
+   "last": 99.81999969482422,
+   "chg": 1.5566169142797959,
    "date": "2026-11-06",
    "spark": [
     105.28,
@@ -474,14 +474,14 @@
     103.6,
     94.62,
     98.29,
-    99.97
+    99.82
    ]
   },
   {
    "ticker": "DX-Y.NYB",
    "name": "달러인덱스",
-   "last": 101.85099792480469,
-   "chg": 0.29640065386651315,
+   "last": 101.87200164794922,
+   "chg": 0.31708378780381796,
    "date": "2026-11-06",
    "spark": [
     101.2,
@@ -513,14 +513,14 @@
     101.87,
     101.51,
     101.55,
-    101.851
+    101.872
    ]
   },
   {
    "ticker": "KRW=X",
    "name": "원달러",
-   "last": 1356.47998046875,
-   "chg": 1.2245654956392737,
+   "last": 1355.97998046875,
+   "chg": 1.1872540104153284,
    "date": "2026-11-06",
    "spark": [
     1354.51,
@@ -552,7 +552,7 @@
     1344.8101,
     1342.9,
     1340.0699,
-    1356.48
+    1355.98
    ]
   },
   {
@@ -661,7 +661,7 @@
   }
  },
  "review": [
-  "코스피 5,059.65 (-6.02%), 코스닥 -5.04%, 원/달러 1,356.5원(+1.22%)",
+  "코스피 5,059.69 (-6.02%), 코스닥 -5.03%, 원/달러 1,356.0원(+1.19%)",
   "국내 유니버스 상승 6, 하락 34. 강세 삼성에스디에스 +6.3%, 약세 SK하이닉스 -10.4%"
  ],
  "tonight": [
@@ -968,20 +968,20 @@
    {
     "key": "fx",
     "label": "환율(원화)",
-    "n": 85,
+    "n": 86,
     "base": 100,
-    "ratio": 0.85,
+    "ratio": 0.86,
     "level": "보통",
-    "heat": 0.23,
+    "heat": 0.24,
     "tone": 0.17,
     "esc_n": 21,
     "de_n": 15,
-    "confirm": 0.92,
+    "confirm": 0.9,
     "moves": {
-     "KRW=X": 1.38
+     "KRW=X": 1.35
     },
-    "direction": 0.77,
-    "intensity": 0.177,
+    "direction": 0.75,
+    "intensity": 0.18,
     "stance": "원화 약세",
     "up": [
      "수출주"
@@ -1004,10 +1004,10 @@
       "time": "2026-11-06T00:41:57+00:00"
      },
      {
-      "title": "원·달러 환율 1340원대 공방 전망…반도체 수출 호조에도 외국인 이탈 변수",
-      "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1Rd09rRmR1WmMySjVXWExVQllzNTZ4NFZvRmpnWV8zU2FqNEJ2OTFkMUxFMzUwMW5MR3lDT3ZpcVFvMWN6SzVmdE1lY241R2UxTDROel9Mb1VVUjFLX1hF?oc=5",
-      "publisher": "조세일보",
-      "time": "2026-11-05T23:37:27+00:00"
+      "title": "원·달러 환율, 14.5원 오른 1356.6원(오후 3시30분)",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1SeU9iLXhCRzNUTEFaNDhFR2tDU0dzSS1TNlFsZGg5dWhYNDZoYzZXWmoyVXc3dGNKbmV4VmpVMVNIdjZUOEdEYUJlTzJnNE1ZeDdMTlhOZHl2NW9xRHYySA?oc=5",
+      "publisher": "아시아경제",
+      "time": "2026-11-06T06:36:26+00:00"
      }
     ]
    },
@@ -1022,12 +1022,12 @@
     "tone": 0.86,
     "esc_n": 26,
     "de_n": 2,
-    "confirm": 0.92,
+    "confirm": 0.9,
     "moves": {
-     "KRW=X": 1.38
+     "KRW=X": 1.35
     },
-    "direction": 0.88,
-    "intensity": 0.097,
+    "direction": 0.87,
+    "intensity": 0.096,
     "stance": "도발",
     "up": [
      "방산"
@@ -1059,21 +1059,21 @@
    {
     "key": "tariff",
     "label": "관세·무역분쟁",
-    "n": 22,
+    "n": 21,
     "base": 34,
-    "ratio": 0.65,
+    "ratio": 0.62,
     "level": "낮음",
-    "heat": 0.1,
+    "heat": 0.08,
     "tone": 1.0,
     "esc_n": 6,
     "de_n": 0,
-    "confirm": 0.96,
+    "confirm": 0.95,
     "moves": {
      "^GSPC": -4.75,
-     "KRW=X": 1.38
+     "KRW=X": 1.35
     },
     "direction": 0.98,
-    "intensity": 0.098,
+    "intensity": 0.078,
     "stance": "무역 긴장",
     "up": [
      "경기 방어"
@@ -1085,6 +1085,12 @@
     ],
     "headlines": [
      {
+      "title": "美 민주당, 트럼프 관세에 반격…캐나다 관세 철폐부터 추진",
+      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE84c05NUmJzSE1PVndlU1pBVUo1Nk1OZzBYbktVVTdYRWkta2lKLXNOd1Z1YWZzRDZTRWxmVmQtOFNBWC12WC1naDl2SnFRNjBGeWROdHRnSHpRUU9JSU9GcG1hRHlyaVpSSFUzMDduY0FXTlg1ZGdFM9IBeEFVX3lxTE84c05NUmJzSE1PVndlU1pBVUo1Nk1OZzBYbktVVTdYRWkta2lKLXNOd1Z1YWZzRDZTRWxmVmQtOFNBWC12WC1naDl2SnFRNjBGeWROdHRnSHpRUU9JSU9GcG1hRHlyaVpSSFUzMDduY0FXTlg1ZGdFMw?oc=5",
+      "publisher": "뉴시스",
+      "time": "2026-11-06T04:43:15+00:00"
+     },
+     {
       "title": "선거 참패에도 관세 고집한 트럼프…\"美에 공장 안 지으면 300% 관세\"",
       "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQUG1DQ3V0WUhlVmlKYWdvZ0UwamtHY1hla1dRU2JxSF9iOElYaWJSSG1tUjFpQ1ZIZk9oVDAtaktrdXduRkdOc2N0VXJNU05MTWhDU21zT2liMlpncVliZ1J3V2NSYVRkOGRaX193cU43WUYyeEVZOTNRdnZpcE1zUTNB?oc=5",
       "publisher": "아시아경제",
@@ -1095,31 +1101,25 @@
       "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE11YVVhTGFKUHlFRlNVTERsa3ZueERET2laZW9ncnd3VThZcGFlOGlkZzFqTENPMXZnbVVqWlhvdFNmamZ1YTFtRTZyNUxYZ3k2bVhDMFV4RGJQSXRPeTBxY2x4czk3ZWRZVFRDcmpEeng?oc=5",
       "publisher": "위키리크스한국",
       "time": "2026-11-06T02:14:00+00:00"
-     },
-     {
-      "title": "트럼프, 민주당 관세철폐 움직임에 \"미국 내 공장 건설 다 멈춰\"",
-      "link": "https://news.google.com/rss/articles/CBMiQkFVX3lxTE9sbFp4Zk9jN3o0Rm1jVldXOHJMeFM1TlhCZ1Nuc1J2dXpvTERnbmZfR3BqTEV0blROMVFfckZMM0dadw?oc=5",
-      "publisher": "브레이크뉴스",
-      "time": "2026-11-06T00:16:00+00:00"
      }
     ]
    },
    {
     "key": "fed",
     "label": "연준·금리",
-    "n": 37,
+    "n": 39,
     "base": 52,
-    "ratio": 0.71,
+    "ratio": 0.75,
     "level": "보통",
-    "heat": 0.14,
-    "tone": 0.28,
-    "esc_n": 16,
+    "heat": 0.17,
+    "tone": 0.33,
+    "esc_n": 18,
     "de_n": 9,
     "confirm": -0.76,
     "moves": {
      "^TNX": -3.05
     },
-    "direction": -0.05,
+    "direction": -0.03,
     "intensity": 0.0,
     "stance": "방향 혼재",
     "up": [],
@@ -1158,7 +1158,7 @@
     "de_n": 1,
     "confirm": 0.0,
     "moves": {
-     "CL=F": -11.9,
+     "CL=F": -12.11,
      "GC=F": 4.05
     },
     "direction": 0.35,
@@ -1200,7 +1200,7 @@
     "de_n": 3,
     "confirm": 0.0,
     "moves": {
-     "BZ=F": -15.02,
+     "BZ=F": -15.15,
      "GC=F": 4.05
     },
     "direction": -0.7,
@@ -1231,20 +1231,20 @@
    }
   ],
   "impact": {
-   "china": -0.513,
+   "china": -0.507,
    "semis": -0.64,
-   "tariff": -0.138,
-   "defense": 0.509,
-   "export": 0.047,
-   "defensive": 0.029,
-   "oil_down": -0.071,
-   "korea": -0.111,
+   "tariff": -0.118,
+   "defense": 0.508,
+   "export": 0.061,
+   "defensive": 0.023,
+   "oil_down": -0.072,
+   "korea": -0.112,
    "ai": -0.21
   },
   "summary": [
    "대만 해협: 48시간 기사 14건(평소 7건의 2.0배), 긴장 고조. 5일 가격 변화 반도체지수 -21.8%, VIX +63.8%. 방산에 유리, 반도체·중국 노출·AI 인프라에 부담",
    "미중 갈등·수출규제: 48시간 기사 6건(평소 4건의 1.5배), 갈등 고조. 5일 가격 변화 반도체지수 -21.8%. 방산에 유리, 중국 노출·반도체·관세 민감에 부담",
-   "환율(원화): 48시간 기사 85건(평소 100건의 0.8배), 원화 약세. 5일 가격 변화 원달러 +1.4%. 수출주에 유리, 유가 원가 부담주·국내 상장주에 부담"
+   "환율(원화): 48시간 기사 86건(평소 100건의 0.9배), 원화 약세. 5일 가격 변화 원달러 +1.4%. 수출주에 유리, 유가 원가 부담주·국내 상장주에 부담"
   ]
  },
  "us_picks": [
@@ -1271,7 +1271,7 @@
   }
  ],
  "date": "2026-11-06",
- "generated": "2026-11-06T15:50+09:00",
+ "generated": "2026-11-06T16:01+09:00",
  "watch": [
   {
    "ticker": "005930.KS",
