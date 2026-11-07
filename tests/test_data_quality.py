@@ -116,3 +116,41 @@ def test_build_us_flags_stale_kr_close():
     assert stale["review"][1].startswith("코스피 5,937.66")
     ok = briefing.build_us(cfg, {"^KS11": q("2026-10-30"), "^KQ11": q("2026-10-30")}, [], [], [], [], now)
     assert ok["kr_stale"] is False and ok["review"][0].startswith("코스피")
+
+
+# ── 2026-11-07 주간 점검: 일봉 제공 지연(개별 재조회로도 안 채워짐) → 60분봉으로 마지막 일봉 보완 ──
+def _hourly(day, tz, closes):
+    idx = pd.date_range(f"{day} 09:30", periods=len(closes), freq="h", tz=tz)
+    c = np.array(closes, dtype=float)
+    return pd.DataFrame({"Open": c - 0.5, "High": c + 1, "Low": c - 1, "Close": c, "Volume": 10.0}, index=idx)
+
+
+def test_append_intraday_days_builds_missing_daily_bar():
+    daily = _df("2026-11-05")
+    intra = pd.concat([_hourly("2026-11-05", "America/New_York", [119, 120]),
+                       _hourly("2026-11-06", "America/New_York", [121, 125, 118, 122])])
+    merged, added = data_mod.append_intraday_days(daily, intra)
+    assert added == 1 and merged.index[-1] == pd.Timestamp("2026-11-06") and merged.index.tz is None
+    bar = merged.iloc[-1]
+    assert (bar.Open, bar.High, bar.Low, bar.Close, bar.Volume) == (120.5, 126.0, 117.0, 122.0, 40.0)
+    assert len(merged) == len(daily) + 1  # 이미 있는 11/05는 덮어쓰지 않음
+    same, n = data_mod.append_intraday_days(daily, _hourly("2026-11-05", "Asia/Seoul", [1, 2]))
+    assert n == 0 and same is daily
+
+
+def test_refresh_stale_falls_back_to_intraday_when_daily_lags():
+    class _LagYF:
+        def Ticker(self, t):
+            return _FakeTicker(t, {t: _df("2026-11-05")})  # 개별 일봉도 하루 늦음(실제 증상)
+
+        def download(self, chunk, **kw):
+            assert kw["interval"] == "60m"
+            frames = {t: _hourly("2026-11-06", "Asia/Seoul", [100, 101]) for t in chunk}
+            return pd.concat(frames, axis=1)
+
+    src = data_mod.LiveSource.__new__(data_mod.LiveSource)
+    src.yf = _LagYF()
+    out = {"^KS11": _df("2026-11-05"), "005930.KS": _df("2026-11-05"), "^GSPC": _df("2026-11-06")}
+    assert src._refresh_stale(out, "2y", expect={"kr": date(2026, 11, 6)}) == 2
+    assert out["^KS11"].index[-1] == pd.Timestamp("2026-11-06") and out["005930.KS"]["Close"].iloc[-1] == 101
+    assert data_mod.stale_tickers(out, {"kr": date(2026, 11, 6)}) == []

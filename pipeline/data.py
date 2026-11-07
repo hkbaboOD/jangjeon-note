@@ -119,6 +119,25 @@ def stale_tickers(hist: dict[str, pd.DataFrame], expect: dict | None = None) -> 
             and pd.Timestamp(df.index[-1]).normalize() < last[_quote_group(t)]]
 
 
+def append_intraday_days(daily: pd.DataFrame, intra: pd.DataFrame) -> tuple[pd.DataFrame, int]:
+    """60분봉(거래소 현지 시각)에서 일봉 마지막 날짜보다 뒤의 날짜만 일봉으로 묶어 붙임. (결과, 추가한 일수)."""
+    sub = intra[["Open", "High", "Low", "Close", "Volume"]].dropna(subset=["Close"])
+    if not len(sub):
+        return daily, 0
+    idx = pd.DatetimeIndex(sub.index)
+    if idx.tz is not None:
+        idx = idx.tz_localize(None)  # 거래소 현지 시각 유지
+    sub = sub.set_axis(idx.normalize())
+    last = pd.Timestamp(daily.index[-1]).normalize()
+    sub = sub[sub.index > last]
+    if not len(sub):
+        return daily, 0
+    g = sub.groupby(level=0)
+    bars = pd.DataFrame({"Open": g["Open"].first(), "High": g["High"].max(), "Low": g["Low"].min(),
+                         "Close": g["Close"].last(), "Volume": g["Volume"].sum()})
+    return pd.concat([daily, bars[daily.columns.intersection(bars.columns)]]), len(bars)
+
+
 # ──────────────────────────────────────────────────────────────
 class LiveSource:
     CACHE_FILE = "fundamentals_cache.json"
@@ -195,6 +214,38 @@ class LiveSource:
             else:
                 miss += 1
         log.info("마지막 봉 누락 %d종목 → 개별 재조회로 %d종목 보완", len(lag), fixed)
+        rest = stale_tickers(out, expect)
+        if rest:
+            fixed += self._fill_from_intraday(out, rest)
+        return fixed
+
+    def _fill_from_intraday(self, out: dict[str, pd.DataFrame], tickers: list[str]) -> int:
+        """일봉 제공이 늦는 날: 60분봉을 받아 빠진 날짜의 일봉(시가·고가·저가·종가·거래량)을 만들어 붙임.
+
+        실측(2026-11 주간 점검): 국장 장전(10시대)에 미국 종목 117개 일봉이 매일 하루 전에서 끊기고(지수는 정상),
+        미장 장전(새벽 4시대)에는 국내 종목·지수의 당일 일봉이 없었음. 개별 일봉 재조회로도 보완되지 않음.
+        """
+        fixed = 0
+        for i in range(0, len(tickers), 40):
+            chunk = tickers[i:i + 40]
+            try:
+                df = self.yf.download(chunk, period="5d", interval="60m", group_by="ticker",
+                                      auto_adjust=False, progress=False, threads=True)
+            except Exception as e:
+                log.warning("60분봉 보완 실패(%s): %s", chunk[:3], e)
+                continue
+            if df is None or getattr(df, "empty", True):
+                continue
+            for t in chunk:
+                try:
+                    sub = df[t] if isinstance(df.columns, pd.MultiIndex) else df
+                    merged, added = append_intraday_days(out[t], sub)
+                except Exception:
+                    continue
+                if added:
+                    out[t] = merged
+                    fixed += 1
+        log.info("60분봉으로 마지막 일봉 보완: %d/%d종목", fixed, len(tickers))
         return fixed
 
     # --- 펀더멘털 (캐시) ---
