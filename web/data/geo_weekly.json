@@ -1,7 +1,64 @@
-{"week":"2026-10-31","items":[
-{"title":"아마존·인텔 실적 뒤 AI 설비투자 우려 재점화 → 나스닥 3개월 만의 저점권","text":"10월 30일(현지) 인텔이 약한 PC 수요·생산 차질로 올해 현금 소진을 경고하며 장중 30% 넘게 급락했고, 아마존도 3분기 현금 유출과 내년 설비투자 확대 신호로 약 2% 내렸습니다. 같은 날 오전 나스닥은 -2.21%(25,606), 필라델피아 반도체지수는 -5.7%로 3대 지수 모두 주간 하락이 예상됐습니다.","impact":"반도체·AI 인프라(엔비디아·AMD·마이크론·삼성전자·SK하이닉스) 부담, 필수소비재·헬스케어는 상대 강세","sources":[{"name":"GV Wire(로이터)","url":"https://gvwire.com/2026/10/30/nasdaq-hits-near-three-month-low-as-amazon-intel-deepen-ai-capex-concerns/"},{"name":"Saxo","url":"https://www.home.saxo/en-mena/content/articles/macro/market-quick-take---now-amazon-and-intel-spook-us-tech---30-october-2026-30102026"}]},
-{"title":"코스피 3.48% 급락, 외국인 1.6조원 순매도","text":"10월 30일 코스피는 206.92포인트(-3.48%) 내린 5,730.74, 코스닥은 -3.83%(724.38)로 마감했고 외국인은 유가증권시장에서 1조 6,169억원을 순매도했습니다. 삼성전자 -3.66%, SK하이닉스 -6.88%, 전기전자 업종 -4.67%였고 제약(+4.9%)·삼성바이오로직스(+5.78%)는 올랐습니다.","impact":"반도체·운송장비·건설 부담, 제약·바이오 상대 강세","sources":[{"name":"아시아경제","url":"https://view.asiae.co.kr/article/2026103016084854064"},{"name":"아주경제","url":"https://www.ajunews.com/view/20261030153523944"}]},
-{"title":"연준 금리 동결(3.75~4.00%), 2명은 인상 주장 — 12월 인상 확률 상승","text":"10월 28일 FOMC는 기준금리를 3.75~4.00%로 동결했지만 쿡·해맥 이사 2명이 0.25%p 인상을 주장하며 반대했습니다(10대 2). CME FedWatch 기준 12월 0.25%p 인상 확률은 약 80%로 9월 회의 뒤 약 45%에서 높아졌습니다.","impact":"고금리 부담 → 성장·기술주 밸류에이션 압박, 은행·보험 등 금리 수혜 업종 관심","sources":[{"name":"Raisin","url":"https://www.raisin.com/en-us/news/post-fomc-policy-breakdown-navigating-rates-q4-2026/"},{"name":"GV Wire(로이터)","url":"https://gvwire.com/2026/10/30/nasdaq-hits-near-three-month-low-as-amazon-intel-deepen-ai-capex-concerns/"}]},
-{"title":"호르무즈 유조선 피격 · 미국의 이란 타격 우려 → 브렌트유 117달러대","text":"10월 30일 브렌트유는 2.37% 오른 배럴당 117.56달러, WTI는 104.17달러로 10월 한 달 각각 약 15%·12% 올라 4개월 연속 상승이 예상됐습니다. 호르무즈 해협에서 유조선이 기뢰·부착 폭발물에 피격됐고, 트럼프 대통령이 11월 3일 중간선거 전에는 이란을 타격하지 않겠다고 했던 만큼 선거 뒤 공격 가능성이 경계됐습니다.","impact":"정유·에너지 강세, 항공·해운·화학 등 유가 민감 업종과 인플레이션 경로 부담","sources":[{"name":"The National","url":"https://www.thenationalnews.com/business/markets/2026/10/30/oil-prices-set-for-sharp-monthly-rise-on-hormuz-strikes-and-us-threat-to-hit-iran/"},{"name":"Nation Thailand","url":"https://www.nationthailand.com/news/world/40072956"}]},
-{"title":"북한, 단거리 탄도미사일 약 10발 발사 — 비무장지대 지뢰 공방 속","text":"합동참모본부에 따르면 북한은 10월 29일 낮 원산 일대에서 동해상으로 단거리 탄도미사일 약 10발을 쐈습니다. 9월 21일 비무장지대 지뢰 폭발(한국군 3명 부상)을 두고 한국이 사과를 요구하고 북한은 조작이라고 맞서는 가운데, 한국이 군사회담을 제안한 지 일주일도 안 돼 나온 발사입니다.","impact":"방산주 관심, 원화·국내 상장주 심리 부담(이번 주 코스피 급락의 주원인은 반도체·외국인 매도)","sources":[{"name":"Al Jazeera","url":"https://www.aljazeera.com/news/2026/10/29/north-korea-fires-missiles-as-row-over-landmine-blast-intensifies"},{"name":"U.S. News(로이터)","url":"https://www.usnews.com/news/world/articles/2026-10-28/north-korea-fires-projectile-toward-sea-off-east-coast-south-korea-military-says"}]}
-]}
+{
+ "week": "2026-11-07",
+ "items": [
+  {
+   "title": "미국 중간선거 민주당 압승 뒤 AI·반도체 급락",
+   "text": "민주당이 의회를 장악하자 AI 데이터센터 건설 규제 우려로 11/5(현지) S&P500이 4.4%(7,353.73), 나스닥이 5.5%(24,315.00) 떨어졌고 필라델피아 반도체지수는 12.2% 급락해 약 6년 반 만에 최악의 하루였습니다. 엔비디아는 9.3% 내렸고 VIX는 약 70% 뛴 28.18이었습니다.",
+   "impact": "반도체·AI 인프라 종목(마이크론·엔비디아·SK하이닉스·삼성전자 등) 부담, 변동성 확대",
+   "sources": [
+    {
+     "name": "HNGN",
+     "url": "https://www.hngn.com/articles/273719/20261106/sp-500-drops-44-ai-stocks-sink-after-democratic-sweep.htm"
+    }
+   ]
+  },
+  {
+   "title": "코스피 이틀간 약 11% 하락, 서킷브레이커 발동",
+   "text": "코스피는 11/5 5.28%, 11/6 6.02%(5,059.69) 떨어졌고 11/6 개장 직후 8% 넘게 밀려 20분간 매매가 멈췄습니다. 외국인이 약 2.8조 원을 순매도했고 SK하이닉스(−10.44%)·삼성전자(−6.35%) 낙폭이 컸으며 코스닥도 5.03% 내린 644.27이었습니다.",
+   "impact": "국내 반도체·시가총액 상위주 부담, 외국인 수급 악화",
+   "sources": [
+    {
+     "name": "코리아중앙데일리",
+     "url": "https://www.koreajoongangdaily.com/business/kospi-falls-for-2nd-day-on-ai-rout-after-us-midterms/12960072"
+    },
+    {
+     "name": "아주경제(Aju Press)",
+     "url": "https://www.ajupress.com/view/20261106164850202"
+    }
+   ]
+  },
+  {
+   "title": "이란 협상 기대에 유가 급락, 호르무즈 피격은 계속",
+   "text": "브렌트유(1월물)는 10/30 113.43달러에서 11/3 103.60달러로 약 8% 내려 10/7 이후 최저 종가를 기록했습니다. 카타르 중재안·호르무즈 재개방 제안 등 협상 기대가 반영됐지만, 영국 해사무역기구(UKMTO)는 10/30~11/2 선박 피격 4건을 보고했습니다.",
+   "impact": "정유·에너지 종목(S-Oil·셰브론 등) 가격 변동 확대, 항공·화학 등 유가 원가 부담 업종 완화",
+   "sources": [
+    {
+     "name": "Global Oil Shock",
+     "url": "https://globaloilshock.com/en/news/oil-price-week-45-2026/"
+    }
+   ]
+  },
+  {
+   "title": "북한, 미 중간선거 당일 방공미사일 시험·화력 타격 훈련",
+   "text": "조선중앙통신은 11/4 신형 방공미사일 체계 시험과 화력 타격 훈련을 했다고 밝혔고, 합참은 같은 날 오전 선덕 일대에서 동해상으로 발사된 미사일 여러 발을 포착했습니다.",
+   "impact": "방산주 관심, 국내 상장주 투자심리 부담(이번 주 낙폭의 주 원인은 AI 매도)",
+   "sources": [
+    {
+     "name": "Stars and Stripes",
+     "url": "https://www.stripes.com/theaters/asia_pacific/2026-11-05/north-korea-missile-technology-diplomacy-23369224.html"
+    }
+   ]
+  },
+  {
+   "title": "미국 10월 고용 16.5만 명 증가, 예상 크게 상회",
+   "text": "10월 비농업 고용이 16만 5천 명 늘어 시장 예상(6만 5천 명)을 크게 웃돌았고 실업률은 4.1%로 낮아졌습니다. 11/6 장 초반 나스닥은 1.28% 반등했고 다우는 0.92% 내렸습니다.",
+   "impact": "금리 민감 업종·성장주 금리 부담, 경기 민감주에는 수요 확인",
+   "sources": [
+    {
+     "name": "Fox Business",
+     "url": "https://www.foxbusiness.com/markets/stocks-11-6-2026"
+    }
+   ]
+  }
+ ]
+}
