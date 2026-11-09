@@ -34,5 +34,8 @@
  "TSM|bb_reclaim": "2026-11-07",
  "TSM|setup_reversal": "2026-11-07",
  "SCHD|setup_pullback": "2026-11-07",
- "005930.KS|div_bull": "2026-11-09"
+ "005930.KS|div_bull": "2026-11-09",
+ "005930.KS|bb_reclaim": "2026-11-09",
+ "005930.KS|verdict": "2026-11-09",
+ "SCHD|verdict": "2026-11-09"
 }
