@@ -16,13 +16,15 @@ import math
 
 import pandas as pd
 
+# 2026-11-09 사용자 요청: 전통적 40주선(와인스타인 단계 분석) 점수 비중 신설 — 오늘 10%, 이번 주·달 20%
+# (기존 비중은 같은 비율로 줄임: 오늘 ×0.9, 이번 주·달 ×0.8)
 HORIZON_WEIGHTS = {
-    # 오늘: 저평가 + 차트 매수 타이밍(과매도 탈출·지지 확인·반전 캔들 등)
-    "daily":   {"value": .25, "quality": .15, "target": .15, "timing": .30, "trend": .15},
-    # 이번 주: 가치·퀄리티 + 추세·모멘텀
-    "weekly":  {"value": .30, "quality": .25, "target": .15, "momentum": .15, "trend": .15},
-    # 이번 달: 중장기 펀더멘털 + 장기 추세
-    "monthly": {"value": .30, "quality": .30, "target": .15, "growth": .15, "trend": .10},
+    # 오늘: 저평가 + 차트 매수 타이밍(과매도 탈출·지지 확인·반전 캔들 등) + 40주선
+    "daily":   {"value": .225, "quality": .135, "target": .135, "timing": .27, "trend": .135, "wma40": .10},
+    # 이번 주: 가치·퀄리티 + 추세·모멘텀 + 40주선
+    "weekly":  {"value": .24, "quality": .20, "target": .12, "momentum": .12, "trend": .12, "wma40": .20},
+    # 이번 달: 중장기 펀더멘털 + 장기 추세 + 40주선
+    "monthly": {"value": .24, "quality": .24, "target": .12, "growth": .12, "trend": .08, "wma40": .20},
 }
 HORIZON_LABEL = {"daily": "저평가 + 차트 매수 타이밍", "weekly": "가치·퀄리티 + 추세",
                  "monthly": "중장기 저평가 + 장기 추세"}
@@ -64,6 +66,7 @@ def score_universe(rows: list[dict], model: dict | None = None) -> pd.DataFrame:
             "chg_1d": t.get("chg_1d"), "chg_5d": t.get("chg_5d"), "chg_20d": t.get("chg_20d"),
             "chg_60d": t.get("chg_60d"), "spark": t.get("spark"),
             "t_trend": sc.get("trend"), "t_mom": sc.get("momentum"), "t_timing": sc.get("timing"),
+            "t_wma40": sc.get("wma40"), "stage40": (ta.get("wma40") or {}).get("stage"),
             "tech": sc.get("total"), "setup": ta.get("setup"), "setup_label": ta.get("setup_label"),
             "trend_label": ta.get("trend_label"), "tags": ta.get("tags") or [], "_ta": ta,
             "rev": r.get("revision"), "geo": r.get("geo"),
@@ -117,11 +120,12 @@ def score_universe(rows: list[dict], model: dict | None = None) -> pd.DataFrame:
         momentum = sum(mom_parts) / len(mom_parts) if mom_parts else None
         factors = {"value": value, "quality": quality, "target": upside, "growth": growth,
                    "momentum": momentum, "trend": val(r["t_trend"]), "timing": val(r["t_timing"]),
+                   "wma40": val(r["t_wma40"]),
                    # 실전 검증용(기본 가중치 0): EPS 리비전 · 국제 정세 노출
                    "revision": val(r["s_rev"]), "geo": val(r["geo"])}
         coverage = {"value": cv, "quality": cq, "target": cu}
         coverage.update({k: 1.0 if factors[k] is not None else 0.0
-                         for k in ("growth", "momentum", "trend", "timing", "revision", "geo")})
+                         for k in ("growth", "momentum", "trend", "timing", "wma40", "revision", "geo")})
         row = r.to_dict()
         row.update({k: (round(v, 1) if v is not None else None) for k, v in factors.items()})
         for h in HORIZON_WEIGHTS:
@@ -233,6 +237,8 @@ def pick_top(df: pd.DataFrame, horizon: str, market: str | None = None, n: int =
     d = d[d["fpe"].notna() & (d["value"].fillna(0) >= 50) & (d["upside"].isna() | (d["upside"] >= 0))]
     d = d[d[f"cov_{horizon}"] >= 0.6]
     d = d[d["setup"] != "downtrend"]  # 가치 함정 배제
+    if "stage40" in d:  # 40주선 4단계(내려가는 40주선 아래)는 추천하지 않음(와인스타인 원칙, 2026-11-09)
+        d = d[d["stage40"].fillna(0) != 4]
     if horizon == "monthly":
         d = d[(d["roe"].isna() | (d["roe"] >= 0.08)) & (d["analysts"] >= 3)]
     col, th = TECH_GATE[horizon]
@@ -249,7 +255,7 @@ def pick_top(df: pd.DataFrame, horizon: str, market: str | None = None, n: int =
         tx = explain_tech(rd["_ta"])
         picks.append({**{k: rd.get(k) for k in (
             "ticker", "name", "market", "sector", "price", "fpe", "peg", "roe", "upside", "analysts",
-            "rec_key", "rsi", "chg_5d", "chg_20d", "verdict", "value", "quality", "trend", "timing", "tech",
+            "rec_key", "rsi", "chg_5d", "chg_20d", "verdict", "value", "quality", "trend", "timing", "wma40", "stage40", "tech",
             "spark", "setup", "setup_label", "trend_label")},
             "score": rd[f"score_{horizon}"], "adj": rd.get(f"adj_{horizon}", 0.0), "why": why, "risk": risk, "techx": tx,
             "summary": summarize(rd, tx), "relaxed": bool(rd["_relaxed"])})

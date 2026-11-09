@@ -300,8 +300,8 @@ function renderPicks() {
   const block = p?.[state.picksH];
   const list = block?.[state.picksM] || [];
   const DESC = {
-    daily: "저평가 종목 중 차트 매수 타이밍(과매도 탈출·이평선 지지·반전 캔들·다이버전스)이 나온 후보입니다. 역배열 하락추세는 제외합니다.",
-    weekly: "가치·퀄리티에 이평선 추세와 모멘텀을 더한 주간 후보입니다. 매주 월요일 갱신.",
+    daily: "저평가 종목 중 차트 매수 타이밍(과매도 탈출·이평선 지지·반전 캔들·다이버전스)이 나온 후보입니다. 역배열 하락추세와 40주선 4단계(내려가는 40주선 아래) 종목은 제외합니다.",
+    weekly: "가치·퀄리티에 이평선 추세, 40주선, 모멘텀을 더한 주간 후보입니다. 매주 월요일 갱신.",
     monthly: "ROE 8% 이상·애널리스트 3명 이상 중 장기 추세(250일선)가 살아 있는 중장기 저평가 후보입니다. 매월 첫 평일 갱신.",
   };
   const card = (x, i) => {
@@ -329,7 +329,7 @@ function renderPicks() {
         <section><h4>왜 싼가 <small>펀더멘털</small></h4>
           <ul class="why">${(x.why || []).slice(0, 3).map((s) => `<li>${esc(s)}</li>`).join("") || "<li>-</li>"}</ul>
           ${(x.risk || []).length ? `<ul class="risk">${x.risk.slice(0, 2).map((s) => `<li>${esc(s)}</li>`).join("")}</ul>` : ""}</section>
-        <section><h4>왜 지금인가 <small>차트, 추세 ${nf(sc.trend)}점, 타이밍 ${nf(sc.timing)}점</small></h4>
+        <section><h4>왜 지금인가 <small>차트, 추세 ${nf(sc.trend)}점, 타이밍 ${nf(sc.timing)}점${x.wma40 != null ? `, 40주선 ${nf(x.wma40)}점` : ""}</small></h4>
           <ul class="why">${(tx.pos || []).slice(0, 3).map((s) => `<li>${esc(s)}</li>`).join("") || "<li>뚜렷한 긍정 신호 없음</li>"}</ul>
           ${(tx.neg || []).length ? `<ul class="risk">${tx.neg.slice(0, 2).map((s) => `<li>${esc(s)}</li>`).join("")}</ul>` : ""}</section>
       </div>
@@ -651,7 +651,8 @@ async function openDetail(t) {
       ${divSection(t, cd)}
       ${coSection(t, r, cd)}
       <div class="sec"><h2>차트 점수 <small>규칙 기반 0~100</small></h2><div class="panel pad">
-        ${bar("추세", sc.trend)}${bar("모멘텀", sc.momentum)}${bar("타이밍", sc.timing)}${bar("차트 종합", sc.total)}</div></div>
+        ${bar("추세", sc.trend)}${bar("모멘텀", sc.momentum)}${bar("타이밍", sc.timing)}${bar("40주선", sc.wma40)}${bar("차트 종합", sc.total)}
+        ${ta.wma40 ? `<p class="note" style="margin:8px 0 0">40주선 ${price(ta.wma40.ma, t)}${SEP}주가 위치 ${sgn(ta.wma40.dist, 1)}${SEP}4주 기울기 ${sgn(ta.wma40.slope, 2)}${SEP}<b>${esc(ta.wma40.label)}</b></p>` : ""}</div></div>
       ${tv.ma ? `<div class="sec"><h2>이동평균선</h2><div class="panel ma-table">
         <div class="mrow mh"><span>이평선</span><span>값</span><span>주가 위치</span><span>기울기</span></div>
         ${Object.keys(tv.ma).map((k) => `<div class="mrow"><span><i class="${k === "120" ? "dash" : ""}" style="--c:var(--ma${k});background:${k === "120" ? "none" : `var(--ma${k})`}"></i>${k}일</span><span>${price(tv.ma[k], t)}</span><span class="${cls(tv.dist?.[k])}">${tv.dist?.[k] == null ? "-" : (tv.dist[k] >= 0 ? "위 " : "아래 ") + sgn(tv.dist[k], 1)}</span><span class="${cls(slopes[k])}">${slopes[k] == null ? "-" : sgn(slopes[k], 1) + ` <small>${slopeTxt[k]}</small>`}</span></div>`).join("")}
@@ -834,7 +835,7 @@ function dvBind() {
 /* ── 규칙 검증 (백테스트 + 자가 보정) ── */
 const SETUP_KO = { breakout: "신고가·돌파형", pullback: "상승추세 속 눌림목", turn: "장기 추세 전환 초기", reversal: "하락 후 반등 시도",
   squeeze: "변동성 수축", uptrend: "정배열 추세 지속", range: "박스권 횡보", downtrend: "역배열 하락추세", neutral: "중립" };
-const FACTOR_KO = { total: "차트 종합", trend: "추세", momentum: "모멘텀", timing: "타이밍", value: "가치", quality: "퀄리티", target: "상승여력", growth: "성장", revision: "이익 추정치 변화", geo: "국제 정세" };
+const FACTOR_KO = { total: "차트 종합", trend: "추세", momentum: "모멘텀", timing: "타이밍", value: "가치", quality: "퀄리티", target: "상승여력", growth: "성장", revision: "이익 추정치 변화", geo: "국제 정세", wma40: "40주선" };
 const SIG_KO = (code) => {
   const m = {
     ma_aligned: "이평선 완전 정배열", ma_reversed: "이평선 역배열", ma_long_aligned: "장기 정배열 속 조정", ma_short_turn: "단기 정배열 전환",
@@ -947,7 +948,7 @@ function forwardBlock(fw, sc, md) {
   const cont = md?.contest || {};
   const keys = ["daily", "weekly", "monthly"];
   const comp = keys.map((k) => ({ k, c: fw?.recent?.[k] || fw?.composite?.[k], t3: fw?.top3?.[k] }));
-  const facs = ["value", "quality", "target", "growth", "momentum", "trend", "timing"];
+  const facs = ["value", "quality", "target", "growth", "momentum", "trend", "timing", "wma40"];
   return `
     <div class="sec"><h2>예측력 추이 <small>앱이 매일 낸 예측을 실제 결과로 채점, 주간</small></h2>
       <div class="panel pad">${trend ? trend + `<div class="ta-keys">${keys.map((k) => `<span><i style="background:${LINE_C[k]}"></i>${HZ_KO[k]}</span>`).join("")}</div>` :
@@ -1014,14 +1015,14 @@ function renderLab() {
     </div>
 
     <div class="sec"><h2>점수가 높을수록 더 올랐나 <small>날짜별 5분위, 초과수익</small></h2>
-      <div class="chips" role="group" aria-label="점수 종류">${["total", "trend", "momentum", "timing"].map((k) => `<button data-lf="${k}" aria-pressed="${state.labF === k}">${FACTOR_KO[k]}</button>`).join("")}</div>
+      <div class="chips" role="group" aria-label="점수 종류">${["total", "trend", "momentum", "timing", "wma40"].map((k) => `<button data-lf="${k}" aria-pressed="${state.labF === k}">${FACTOR_KO[k]}</button>`).join("")}</div>
       <div class="panel pad"><div class="qbars">${q.map((v, i) => `<div class="qb"><span class="${cls(v)}">${v == null ? "-" : sgn(v, 2)}</span><div class="qcol"><i class="${v >= 0 ? "pos" : "neg"}" style="height:${v == null ? 0 : (Math.abs(v) / maxQ) * 50}%;${v >= 0 ? "bottom:50%" : "top:50%"}"></i></div><small>${i === 0 ? "하위 20%" : i === 4 ? "상위 20%" : `${i + 1}분위`}</small></div>`).join("")}</div></div>
       <p class="note">왼쪽(낮은 점수)에서 오른쪽(높은 점수)으로 갈수록 막대가 올라가면 점수가 실제로 유효하다는 뜻입니다.</p>
     </div>
 
     <div class="sec"><h2>팩터 예측력(IC) <small>점수 순위와 이후 수익률 순위의 상관</small></h2>
       <div class="panel ma-table"><div class="mrow mh"><span>점수</span><span>5일</span><span>20일</span><span>60일</span></div>
-      ${["total", "trend", "momentum", "timing"].map((f) => `<div class="mrow"><span>${FACTOR_KO[f]}</span>${["5", "20", "60"].map((h) => { const v = bt.ic?.[f]?.[h]; return `<span class="${v && Math.abs(v.t) >= 2 ? cls(v.ic) : ""}">${v ? (v.ic >= 0 ? "+" : "") + v.ic.toFixed(3) + ` <small>t ${v.t.toFixed(1)}</small>` : "-"}</span>`; }).join("")}</div>`).join("")}</div>
+      ${["total", "trend", "momentum", "timing", "wma40"].map((f) => `<div class="mrow"><span>${FACTOR_KO[f]}</span>${["5", "20", "60"].map((h) => { const v = bt.ic?.[f]?.[h]; return `<span class="${v && Math.abs(v.t) >= 2 ? cls(v.ic) : ""}">${v ? (v.ic >= 0 ? "+" : "") + v.ic.toFixed(3) + ` <small>t ${v.t.toFixed(1)}</small>` : "-"}</span>`; }).join("")}</div>`).join("")}</div>
       <p class="note">주식에서 IC 0.02~0.05면 의미 있는 수준으로 봅니다. t 2 이상인 값만 색으로 표시했습니다.</p>
     </div>
 

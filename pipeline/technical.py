@@ -139,6 +139,47 @@ def _r(x):
 
 
 # ──────────────────────────── 분석 ────────────────────────────
+WMA_WEEKS, WMA_SLOPE_WEEKS = 40, 4
+STAGE_LABEL = {1: "1단계(바닥 다지기)", 2: "2단계(상승)", 3: "3단계(천장 형성)", 4: "4단계(하락)"}
+
+
+def wma40(c: pd.Series) -> dict | None:
+    """전통적 40주 이동평균선(와인스타인 단계 분석). 주봉 종가(주 마지막 거래일) 40주 평균.
+
+    단계: 2=주가가 오르는 40주선 위(상승), 4=주가가 내리는 40주선 아래(하락),
+          3=오르는 40주선 아래로 내려온 상태(천장 형성), 1=그 밖(평평하거나 내리던 40주선 근처, 바닥 다지기).
+          기울기 ±0.5%(4주) 이내는 평평한 것으로 봄.
+    점수(0~100): 50 + 40주선 대비 위치(±20) + 40주선 기울기(4주 변화율×5, ±20) + 단계 가감(2단계 +10, 4단계 −10)
+                 − 과열(40주선보다 30% 넘게 위면 초과분만큼 감점). 시점 t까지의 데이터만 사용.
+    """
+    c = c.dropna()
+    if len(c) < 30:
+        return None
+    idx = pd.DatetimeIndex(c.index)
+    wk = c.groupby(idx.to_period("W-FRI")).last()  # 진행 중인 주는 현재가를 그 주 종가로 사용
+    if len(wk) < WMA_WEEKS + WMA_SLOPE_WEEKS:
+        return None
+    m = wk.rolling(WMA_WEEKS).mean()
+    now, prev = float(m.iloc[-1]), float(m.iloc[-1 - WMA_SLOPE_WEEKS])
+    last = float(c.iloc[-1])
+    if not (now > 0 and prev > 0):
+        return None
+    dist = (last / now - 1) * 100
+    slope = (now / prev - 1) * 100
+    rising = slope > 0.5
+    falling = slope < -0.5
+    if last >= now:
+        stage = 2 if rising else 1
+    else:
+        stage = 4 if falling else 3 if rising else 1
+    sc = 50 + max(-20.0, min(20.0, dist)) + max(-20.0, min(20.0, slope * 5))
+    sc += 10 if stage == 2 else -10 if stage == 4 else 0
+    if dist > 30:
+        sc -= min(20.0, dist - 30)
+    return {"ma": now, "dist": round(dist, 1), "slope": round(slope, 2), "stage": stage,
+            "label": STAGE_LABEL[stage], "score": round(float(max(0.0, min(100.0, sc))), 1)}
+
+
 def analyze(df: pd.DataFrame, cfg: dict | None = None) -> dict:
     cfg = {**DEFAULT, **(cfg or {})}
     mas = list(cfg["ma"])
@@ -511,6 +552,13 @@ def analyze(df: pd.DataFrame, cfg: dict | None = None) -> dict:
     clip = lambda x: round(float(max(0.0, min(100.0, x))), 1)  # noqa: E731
     scores = {"trend": clip(trend), "momentum": clip(mom), "timing": clip(tim)}
     scores["total"] = clip(0.4 * scores["trend"] + 0.3 * scores["momentum"] + 0.3 * scores["timing"])
+    w40 = wma40(c)
+    if w40:
+        scores["wma40"] = w40["score"]
+        if w40["stage"] == 4:
+            add("wma40_stage4", "40주선", -1, 3, f"주가가 내려가는 40주선 아래(4단계 하락, 40주선 대비 {w40['dist']:+.1f}%)")
+        elif w40["stage"] == 2:
+            add("wma40_stage2", "40주선", 1, 2, f"주가가 올라가는 40주선 위(2단계 상승, 40주선 대비 {w40['dist']:+.1f}%)")
 
     # ── 셋업 분류 ──
     reversal_sig = div == "bull" or "rsi_reclaim30" in codes or "bb_reclaim" in codes or \
@@ -557,6 +605,7 @@ def analyze(df: pd.DataFrame, cfg: dict | None = None) -> dict:
         "scores": scores, "signals": sig, "tags": tags,
         "levels": {"support": supports, "resistance": resistances, "stop": stop, "rr": rr},
         "crosses": crosses,
+        "wma40": ({k: (_r(v) if k == "ma" else v) for k, v in w40.items()} if w40 else None),
         "values": {
             "ma": {str(m): _r(ma[m]) for m in mas}, "dist": {str(m): _f(dist.get(m), 1) for m in mas},
             "slope_long": _f(sl_long, 2), "slope_mid": _f(sl_mid, 2), "slope_mid2": _f(sl_mid2, 2),

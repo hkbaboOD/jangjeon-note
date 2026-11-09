@@ -154,3 +154,56 @@ def test_refresh_stale_falls_back_to_intraday_when_daily_lags():
     assert src._refresh_stale(out, "2y", expect={"kr": date(2026, 11, 6)}) == 2
     assert out["^KS11"].index[-1] == pd.Timestamp("2026-11-06") and out["005930.KS"]["Close"].iloc[-1] == 101
     assert data_mod.stale_tickers(out, {"kr": date(2026, 11, 6)}) == []
+
+
+# ── 2026-11-09 사용자 요청: 전통적 40주선(와인스타인 단계 분석) 점수 ──
+from pipeline import technical as tech_mod  # noqa: E402
+from pipeline import valuation as val_mod  # noqa: E402
+
+
+def _series(vals, end="2026-11-06"):
+    return pd.Series(np.asarray(vals, dtype=float), index=pd.bdate_range(end=end, periods=len(vals)))
+
+
+def test_wma40_stage_and_score():
+    up = tech_mod.wma40(_series(np.linspace(100, 200, 300)))
+    down = tech_mod.wma40(_series(np.linspace(200, 100, 300)))
+    assert up["stage"] == 2 and up["dist"] > 0 and up["slope"] > 0.5 and up["score"] >= 80
+    assert down["stage"] == 4 and down["score"] <= 20
+    # 오르는 40주선 아래로 급락 → 3단계(천장 형성)
+    top = tech_mod.wma40(_series(list(np.linspace(100, 200, 290)) + [150] * 10))
+    assert top["stage"] == 3
+    # 40주 평균은 주봉 종가 기준: 주 마지막 거래일 값만 사용(미래 데이터 미사용)
+    s = _series(np.linspace(100, 200, 300))
+    wk = s.groupby(s.index.to_period("W-FRI")).last()
+    assert abs(up["ma"] - wk.iloc[-40:].mean()) < 1e-6
+    assert tech_mod.wma40(_series(np.linspace(100, 120, 150))) is None  # 44주 미만이면 계산 안 함
+
+
+def test_analyze_exposes_wma40_and_stage4_signal():
+    c = np.linspace(200, 100, 320)
+    df = pd.DataFrame({"Open": c, "High": c + 1, "Low": c - 1, "Close": c, "Volume": 1000.0},
+                      index=pd.bdate_range(end="2026-11-06", periods=320))
+    ta = tech_mod.analyze(df)
+    assert ta["wma40"]["stage"] == 4 and "wma40" in ta["scores"]
+    assert any(s["code"] == "wma40_stage4" and s["pol"] < 0 for s in ta["signals"])
+
+
+def test_weights_include_wma40_within_guards():
+    for h, w in val_mod.HORIZON_WEIGHTS.items():
+        assert abs(sum(w.values()) - 1) < 1e-9
+        assert w["wma40"] > 0 and max(w.values()) <= 0.45 and w["value"] >= 0.10 and w["quality"] >= 0.08
+
+
+def test_pick_top_excludes_stage4():
+    def row(t, stage, sector):
+        ta = {"scores": {"trend": 60, "momentum": 60, "timing": 70, "total": 63, "wma40": 15 if stage == 4 else 80},
+              "setup": "neutral", "wma40": {"stage": stage}}
+        return {"ticker": t, "market": "us", "name": t, "tech": {"ta": ta, "last": 100.0},
+                "fund": {"forward_pe": 8 if stage == 4 else 12, "peg": 1, "pb": 1, "roe": 0.2, "op_margin": 0.2,
+                         "debt_to_equity": 50, "target_mean": 130, "analyst_count": 10, "sector": sector}}
+    rows = [row("AAA", 4, "S1"), row("BBB", 2, "S2")] + [row(f"Z{i}", 2, f"Z{i}") for i in range(6)]
+    df = val_mod.score_universe(rows)
+    assert df.loc[df.ticker == "AAA", "wma40"].iloc[0] == 15
+    picks = val_mod.pick_top(df, "daily", n=10)
+    assert "AAA" not in [p["ticker"] for p in picks] and all(p["stage40"] != 4 for p in picks)

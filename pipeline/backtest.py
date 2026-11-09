@@ -50,6 +50,7 @@ def _eval_ticker(args):
             continue
         entry = o[i + 1] if o[i + 1] > 0 and not math.isnan(o[i + 1]) else c[i]
         rec = {"date": df.index[i], "ticker": t, "market": mk, "setup": ta["setup"],
+               "stage40": (ta.get("wma40") or {}).get("stage"),
                "codes": [s["code"] for s in ta["signals"] if s["pol"] != 0], **{f"s_{k}": v for k, v in ta["scores"].items()}}
         for h in HORIZONS:
             rec[f"r{h}"] = (c[i + h] / entry - 1) * 100 - cost if i + h < n else np.nan
@@ -102,13 +103,19 @@ def run(hist: dict[str, pd.DataFrame], tcfg: dict | None = None, workers: int | 
             b[mk] = block(gm)
         by_setup[s] = b
 
+    # 40주선 단계별 성과(와인스타인 단계 분석 검증, 2026-11-09)
+    by_stage40 = {}
+    if "stage40" in df:
+        for st, g in df.dropna(subset=["stage40"]).groupby("stage40"):
+            by_stage40[str(int(st))] = {"all": block(g), **{mk: block(gm) for mk, gm in g.groupby("market")}}
+
     ex = df[["codes"] + [f"x{h}" for h in HORIZONS] + [f"r{h}" for h in HORIZONS]].explode("codes").dropna(subset=["codes"])
     by_signal = {}
     for code, g in ex.groupby("codes"):
         if len(g) >= MIN_N:
             by_signal[code] = block(g)
 
-    factors = ["s_total", "s_trend", "s_momentum", "s_timing"]
+    factors = [f for f in ["s_total", "s_trend", "s_momentum", "s_timing", "s_wma40"] if f in df]
     ic, quint = {}, {}
     for f in factors:
         ic[f[2:]], quint[f[2:]] = {}, {}
@@ -137,6 +144,6 @@ def run(hist: dict[str, pd.DataFrame], tcfg: dict | None = None, workers: int | 
         "ok": True, "period": period, "samples": int(len(df)), "tickers": int(df["ticker"].nunique()),
         "step": STEP, "horizons": list(HORIZONS), "cost": COST,
         "base": {mk: block(g) for mk, g in df.groupby("market")},
-        "by_setup": by_setup, "by_signal": by_signal, "ic": ic, "quintiles": quint,
+        "by_setup": by_setup, "by_stage40": by_stage40, "by_signal": by_signal, "ic": ic, "quintiles": quint,
         "setup_share": {k: round(v * 100, 1) for k, v in df["setup"].value_counts(normalize=True).items()},
     }
