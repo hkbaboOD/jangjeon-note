@@ -81,8 +81,8 @@
   {
    "ticker": "^IXIC",
    "name": "나스닥",
-   "last": 24579.423828125,
-   "chg": 1.0874926100143956,
+   "last": 24579.4296875,
+   "chg": 1.0875167077935455,
    "date": "2026-11-06",
    "spark": [
     26820.3809,
@@ -114,7 +114,7 @@
     25372.0098,
     25736.5098,
     24315.0,
-    24579.4238
+    24579.4297
    ]
   },
   {
@@ -159,11 +159,10 @@
   {
    "ticker": "^KS11",
    "name": "코스피",
-   "last": 5059.68994140625,
-   "chg": -6.020095007972959,
-   "date": "2026-11-06",
+   "last": 5072.31005859375,
+   "chg": 0.24942471443205605,
+   "date": "2026-11-09",
    "spark": [
-    7017.9102,
     7080.9199,
     6889.7402,
     6870.8101,
@@ -192,17 +191,17 @@
     5648.79,
     5683.7998,
     5383.7998,
-    5059.6899
+    5059.6899,
+    5072.3101
    ]
   },
   {
    "ticker": "^KQ11",
    "name": "코스닥",
-   "last": 649.9400024414062,
-   "chg": -4.196573138682269,
-   "date": "2026-11-06",
+   "last": 637.6300048828125,
+   "chg": -1.0306260491941832,
+   "date": "2026-11-09",
    "spark": [
-    834.38,
     844.48,
     846.58,
     849.8,
@@ -231,7 +230,8 @@
     704.39,
     714.95,
     678.41,
-    649.94
+    644.27,
+    637.63
    ]
   }
  ],
@@ -318,11 +318,10 @@
   {
    "ticker": "CL=F",
    "name": "WTI",
-   "last": 90.33999633789062,
-   "chg": -0.19885142714437531,
-   "date": "2026-11-06",
+   "last": 90.7300033569336,
+   "chg": -0.11009410118376639,
+   "date": "2026-11-08",
    "spark": [
-    92.6,
     89.38,
     90.42,
     92.87,
@@ -351,17 +350,17 @@
     96.09,
     88.12,
     90.52,
-    90.34
+    90.83,
+    90.73
    ]
   },
   {
    "ticker": "BZ=F",
    "name": "브렌트",
-   "last": 97.76000213623047,
-   "chg": -0.5392194265542494,
-   "date": "2026-11-06",
+   "last": 97.80000305175781,
+   "chg": -0.5288818599271994,
+   "date": "2026-11-08",
    "spark": [
-    105.28,
     102.59,
     103.53,
     102.31,
@@ -390,17 +389,17 @@
     103.6,
     94.62,
     98.29,
-    97.76
+    98.32,
+    97.8
    ]
   },
   {
    "ticker": "DX-Y.NYB",
    "name": "달러인덱스",
-   "last": 102.27899932861328,
-   "chg": 0.7178692810909215,
-   "date": "2026-11-06",
+   "last": 102.21099853515625,
+   "chg": -0.0870034349427451,
+   "date": "2026-11-08",
    "spark": [
-    101.2,
     101.37,
     101.45,
     102.1,
@@ -429,17 +428,17 @@
     101.87,
     101.51,
     101.55,
-    102.279
+    102.3,
+    102.211
    ]
   },
   {
    "ticker": "KRW=X",
    "name": "원달러",
-   "last": 1356.3399658203125,
-   "chg": 1.2141171866666411,
-   "date": "2026-11-06",
+   "last": 1360.0,
+   "chg": 0.2698463712579535,
+   "date": "2026-11-09",
    "spark": [
-    1354.51,
     1359.5601,
     1350.5,
     1356.84,
@@ -468,17 +467,17 @@
     1344.8101,
     1342.9,
     1340.0699,
-    1356.34
+    1356.34,
+    1360.0
    ]
   },
   {
    "ticker": "GC=F",
    "name": "금",
-   "last": 4079.5,
-   "chg": -0.8265467363559043,
-   "date": "2026-11-06",
+   "last": 4111.10009765625,
+   "chg": 0.8883701730115767,
+   "date": "2026-11-08",
    "spark": [
-    4168.3999,
     4179.7002,
     4186.7002,
     4202.2998,
@@ -507,7 +506,8 @@
     3940.3999,
     4073.0,
     4113.5,
-    4079.5
+    4074.8999,
+    4111.1001
    ]
   }
  ],
@@ -518,8 +518,8 @@
    "total": 66
   },
   "kr": {
-   "up": 6,
-   "down": 34,
+   "up": 7,
+   "down": 33,
    "total": 40
   }
  },
@@ -583,56 +583,56 @@
   "kr": {
    "top": [
     {
-     "ticker": "018260.KS",
-     "name": "삼성에스디에스",
-     "chg": 6.341463414634152
+     "ticker": "000660.KS",
+     "name": "SK하이닉스",
+     "chg": 2.2084805653710182
     },
     {
-     "ticker": "030200.KS",
-     "name": "KT",
-     "chg": 2.895752895752901
+     "ticker": "005930.KS",
+     "name": "삼성전자",
+     "chg": 1.5368309485956466
     },
     {
-     "ticker": "035420.KS",
-     "name": "NAVER",
-     "chg": 2.866414277988105
+     "ticker": "032830.KS",
+     "name": "삼성생명",
+     "chg": 1.279317697228155
     },
     {
-     "ticker": "035720.KS",
-     "name": "카카오",
-     "chg": 0.31055900621117516
+     "ticker": "207940.KS",
+     "name": "삼성바이오로직스",
+     "chg": 0.923482849604218
     },
     {
-     "ticker": "017670.KS",
-     "name": "SK텔레콤",
-     "chg": 0.2580645161290418
+     "ticker": "068270.KS",
+     "name": "셀트리온",
+     "chg": 0.7109004739336511
     }
    ],
    "bottom": [
     {
-     "ticker": "000660.KS",
-     "name": "SK하이닉스",
-     "chg": -10.443037974683545
-    },
-    {
-     "ticker": "034020.KS",
-     "name": "두산에너빌리티",
-     "chg": -9.330628803245434
-    },
-    {
      "ticker": "006400.KS",
      "name": "삼성SDI",
-     "chg": -8.055009823182713
+     "chg": -5.982905982905984
     },
     {
-     "ticker": "009150.KS",
-     "name": "삼성전기",
-     "chg": -7.8389830508474585
+     "ticker": "047810.KS",
+     "name": "한국항공우주",
+     "chg": -4.678362573099415
     },
     {
-     "ticker": "000810.KS",
-     "name": "삼성화재",
-     "chg": -7.361963190184051
+     "ticker": "012450.KS",
+     "name": "한화에어로스페이스",
+     "chg": -4.2424242424242475
+    },
+    {
+     "ticker": "247540.KQ",
+     "name": "에코프로비엠",
+     "chg": -4.211793020457277
+    },
+    {
+     "ticker": "329180.KS",
+     "name": "HD현대중공업",
+     "chg": -4.190476190476189
     }
    ]
   }
@@ -642,30 +642,29 @@
   "반도체 강세(SOX +4.21%)"
  ],
  "outlook": [
-  "반도체 대형주 중심 강세 출발 기대",
-  "원/달러 +1.21%, 외국인 수급 부담"
+  "반도체 대형주 중심 강세 출발 기대"
  ],
  "diagnosis": [
   {
    "ticker": "005930.KS",
    "name": "삼성전자",
-   "chg_1d": -6.352357320099255,
+   "chg_1d": 1.5368309485956466,
    "type": "수급·심리성",
    "evidence": [
-    "평균 목표가 +0.0%",
-    "선행 EPS 추정치 -0.0%",
-    "투자의견 평균 1.34→1.34 (낮을수록 매수)",
+    "평균 목표가 -0.7%",
+    "선행 EPS 추정치 +1.7%",
+    "투자의견 평균 1.34→1.33 (낮을수록 매수)",
     "이익 추정치·목표가는 그대로인데 가격만 하락(밸류에이션 저평가 구간)"
    ]
   },
   {
    "ticker": "000660.KS",
    "name": "SK하이닉스",
-   "chg_1d": -10.443037974683545,
+   "chg_1d": 2.2084805653710182,
    "type": "수급·심리성",
    "evidence": [
-    "평균 목표가 +0.0%",
-    "선행 EPS 추정치 +0.0%",
+    "평균 목표가 -1.0%",
+    "선행 EPS 추정치 +1.0%",
     "투자의견 평균 1.34→1.34 (낮을수록 매수)",
     "이익 추정치·목표가는 그대로인데 가격만 하락(밸류에이션 저평가 구간)"
    ]
@@ -677,7 +676,7 @@
    "type": "수급·심리성",
    "evidence": [
     "평균 목표가 +0.0%",
-    "선행 EPS 추정치 -0.0%",
+    "선행 EPS 추정치 +0.0%",
     "투자의견 평균 1.35→1.35 (낮을수록 매수)",
     "이익 추정치·목표가는 그대로인데 가격만 하락(밸류에이션 저평가 구간)"
    ]
@@ -697,143 +696,153 @@
  ],
  "news": [
   {
-   "title": "Dave Ramsey Says You’ll “Never Touch” Your Retirement Principal If You Withdraw Less Than 12%. Here’s the Catch",
-   "link": "https://247wallst.com/personal-finance/2026/11/06/dave-ramsey-says-youll-never-touch-your-retirement-principal-if-you-withdraw-less-than-12-heres-the-catch/",
+   "title": "Wall Street Just Set a Record That Could Signal Trouble for the Stock Market",
+   "link": "https://247wallst.com/investing/2026/11/08/wall-street-just-set-a-record-that-could-signal-trouble-for-the-stock-market/",
    "publisher": "24/7 Wall St.",
-   "time": "2026-11-06T23:08:35Z"
+   "time": "2026-11-08T16:47:47Z"
   },
   {
-   "title": "Charlie Bilello Says “Some Sanity Has Returned to the Market.” What That Means for Your Portfolio",
-   "link": "https://247wallst.com/investing/2026/11/06/charlie-bilello-says-some-sanity-has-returned-to-the-market-what-that-means-for-your-portfolio/",
+   "title": "Intel Stock Has Gone Nowhere in 8 Years. Why This Time Could Be Different",
+   "link": "https://247wallst.com/investing/2026/11/08/intel-stock-has-gone-nowhere-in-8-years-why-this-time-could-be-different/",
    "publisher": "24/7 Wall St.",
-   "time": "2026-11-06T22:07:28Z"
+   "time": "2026-11-08T16:29:58Z"
   },
   {
-   "title": "If You Invested $1,000 in PepsiCo 10 Years Ago, Here’s What You’d Have Now",
-   "link": "https://247wallst.com/investing/2026/11/06/if-you-invested-1000-in-pepsico-10-years-ago-heres-what-youd-have-now/",
+   "title": "The S&P 500 Just Had Its Worst Week Since the April 2025 Tariff Crash",
+   "link": "https://247wallst.com/investing/2026/11/07/the-sp-500-just-had-its-worst-week-since-the-april-2025-tariff-crash/",
    "publisher": "24/7 Wall St.",
-   "time": "2026-11-06T19:17:35Z"
+   "time": "2026-11-07T17:33:39Z"
   },
   {
-   "title": "Jobless Claims Just Matched a 57-Year Low on the Day Stocks Crashed",
-   "link": "https://247wallst.com/investing/2026/11/06/jobless-claims-just-matched-a-57-year-low-on-the-day-stocks-crashed/",
+   "title": "Odds of a December Rate Hike Jump to 77% After a Blowout Jobs Report",
+   "link": "https://247wallst.com/investing/2026/11/07/odds-of-a-december-rate-hike-jump-to-77-after-a-blowout-jobs-report/",
    "publisher": "24/7 Wall St.",
-   "time": "2026-11-06T15:08:50Z"
+   "time": "2026-11-07T17:33:01Z"
   },
   {
-   "title": "Exchange-Traded Funds Higher, Equity Futures Mixed as US October Jobs Rise More than Expected",
-   "link": "https://finance.yahoo.com/markets/stocks/articles/exchange-traded-funds-higher-equity-142316139.html",
-   "publisher": "MT Newswires",
-   "time": "2026-11-06T14:23:16Z"
-  },
-  {
-   "title": "George Kamel Says Skip the $250,000 Annuity. His Alternative Could Pay $676,000",
-   "link": "https://247wallst.com/investing/2026/11/06/george-kamel-says-skip-the-250000-annuity-his-alternative-could-pay-676000/",
+   "title": "Democrats Just Swept Congress — and 80 Years of Stock Market History Says This Happens Next",
+   "link": "https://247wallst.com/investing/2026/11/07/democrats-just-swept-congress-and-80-years-of-stock-market-history-says-this-happens-next/",
    "publisher": "24/7 Wall St.",
-   "time": "2026-11-06T14:17:10Z"
+   "time": "2026-11-07T15:22:56Z"
   },
   {
-   "title": "Stocks Just Had Their Worst Second Day After a Midterm in Nearly a Century",
-   "link": "https://247wallst.com/investing/2026/11/06/stocks-just-had-their-worst-second-day-after-a-midterm-in-nearly-a-century/",
+   "title": "Consumers Are Now Worried About an AI Bubble, Michigan Survey Says",
+   "link": "https://247wallst.com/investing/2026/11/07/consumers-are-now-worried-about-an-ai-bubble-michigan-survey-says/",
    "publisher": "24/7 Wall St.",
-   "time": "2026-11-06T13:57:07Z"
+   "time": "2026-11-07T13:26:41Z"
   },
   {
-   "title": "Rate Hikes Could Be Coming: History Likes These 4 Consumer Staples Stocks",
-   "link": "https://247wallst.com/investing/2026/11/06/rate-hikes-could-be-coming-history-likes-these-4-consumer-staples-stocks/",
+   "title": "Wall Street’s Fear Gauge Jumped More Than 11 Points In A Day. Buffett’s Most Famous Rule Says It Might Be Time To Get Greedy. Here’s Where The Market Has Historically Gone Over The Next 6 Months.",
+   "link": "https://247wallst.com/investing/2026/11/07/wall-streets-fear-gauge-jumped-more-than-11-points-in-a-day-buffetts-most-famous-rule-says-it-might-be-time-to-get-greedy-heres-where-the-market-has-historically-gone-over-the-next-6-months/",
    "publisher": "24/7 Wall St.",
-   "time": "2026-11-06T13:37:52Z"
+   "time": "2026-11-07T10:22:41Z"
   },
   {
-   "title": "Jim Cramer Says the AI Sell-Off “Is Not Like 2000.” Here’s His Case",
-   "link": "https://247wallst.com/investing/2026/11/06/jim-cramer-says-the-ai-sell-off-is-not-like-2000-heres-his-case/",
+   "title": "Investors Pulled $7 Billion From Three Cash Funds In A Month. Where Did It Go?",
+   "link": "https://www.trefis.com/stock/amd/articles/623130/investors-pulled-7-billion-from-three-cash-funds-in-a-month-where-did-it-go/2026-11-07",
+   "publisher": "Trefis",
+   "time": "2026-11-07T09:15:00Z"
+  },
+  {
+   "title": "Anthropic Could Postpone Its $1.5 Trillion IPO, Per One Investor, As Market Sours On AI Trade. Another Says It Could End Up Closer To $1 Trillion",
+   "link": "https://247wallst.com/investing/2026/11/07/anthropic-could-postpone-its-1-5-trillion-ipo-per-one-investor-as-market-sours-on-ai-trade-another-says-it-could-end-up-closer-to-1-trillion/",
    "publisher": "24/7 Wall St.",
-   "time": "2026-11-07T00:09:10Z"
+   "time": "2026-11-07T15:58:25Z"
   },
   {
-   "title": "Own a Semiconductor ETF? Lam Research’s Buyback Move Affects You",
-   "link": "https://247wallst.com/investing/etf/2026/11/06/own-a-semiconductor-etf-lam-researchs-buyback-move-affects-you/",
+   "title": "Eric Balchunas Calls It a “Five Alarm Fire” Sell-Off. Here’s What Record ETF Trading Tells You",
+   "link": "https://247wallst.com/investing/2026/11/07/eric-balchunas-calls-it-a-five-alarm-fire-sell-off-heres-what-record-etf-trading-tells-you/",
    "publisher": "24/7 Wall St.",
-   "time": "2026-11-06T20:03:09Z"
+   "time": "2026-11-07T14:17:05Z"
   },
   {
-   "title": "Cloudflare Just Surged on Earnings. Here’s What It Means for Your ETFs",
-   "link": "https://247wallst.com/investing/etf/2026/11/06/cloudflare-just-surged-on-earnings-heres-what-it-means-for-your-etfs/",
-   "publisher": "24/7 Wall St.",
-   "time": "2026-11-06T19:13:44Z"
+   "title": "October Payrolls Smash Estimates at 165K, Jobless Rate Falls to 4.1% (UPDATED)",
+   "link": "https://finance.yahoo.com/economy/articles/october-payrolls-smash-estimates-165k-114506271.html",
+   "publisher": "Benzinga",
+   "time": "2026-11-07T11:45:06Z"
   },
   {
-   "title": "Exchange-Traded Funds Higher as US Equities Advance After Midday",
-   "link": "https://finance.yahoo.com/markets/stocks/articles/exchange-traded-funds-higher-us-181230703.html",
-   "publisher": "MT Newswires",
-   "time": "2026-11-06T18:12:30Z"
+   "title": "This Semiconductor ETF Just Had Its Worst Day Since March 2020",
+   "link": "https://www.fool.com/investing/2026/11/08/this-semiconductor-etf-just-had-its-worst-day-sinc/",
+   "publisher": "Motley Fool",
+   "time": "2026-11-08T22:20:00Z"
   }
  ],
  "ai_summary": null,
  "news_kr": [
   {
-   "title": "서학개미, 국내증시 급락장속 11월 첫주 美주식 3조 폭풍 매수(종합)",
-   "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9ncjZDdFpRd2wtdDNjWEJFbHJFeHRHTEhjSXNnWkVNWlhsTVpkc3AxXzJSSFVoeUVOMUZTUDduSmYwYzMxbm5jbjJzY1JsNV9SVFNuWWg5SjBnLWvSAWBBVV95cUxPV2tsZFdnNDZFWlcxRWF3T0V1cGNjazI4enM5M3BrYmh6VWVlbmVIZTk5QjRRNERMMlQxNWdvMFV5d1JEZ3U1RzUwYWIzR2tBNmhHcUlneHRlZTlaY0NsRnM?oc=5",
+   "title": "코스피·코스닥 약세 출발...반도체주 보합세",
+   "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1jSXpWRmZxLXdwVks1WU5nOFVBb3BZeHFqckVmc0FSSE1kUWd0MkJQaUhWYWNMTEdFQ295R2d1ODF4RGJSWjg4Zmk4Tk9mblUxWFh2UE9TVzQ2OU5TZXVkR1hLRmdHVGpaU21EZVI0Yw?oc=5",
+   "publisher": "YTN",
+   "time": "2026-11-09T00:38:00+00:00"
+  },
+  {
+   "title": "SK증권 \"코스피, 이미 극악 상황…작은 촉매제에 전방위적 회복\"",
+   "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5tb2tMLVBiRVdCbG5oLURTY3ZjNFRmWEFjQXQ0SHdDRzg2ZUg4MU44cVRvS1lKMTFCUmhFTnVLeGtTQ2w3NHpNQW1lbmlxR19uUFI2UFpBbV93YW5sM21DU9IBYEFVX3lxTE5tb2tMLVBiRVdCbG5oLURTY3ZjNFRmWEFjQXQ0SHdDRzg2ZUg4MU44cVRvS1lKMTFCUmhFTnVLeGtTQ2w3NHpNQW1lbmlxR19uUFI2UFpBbV93YW5sM21DUw?oc=5",
    "publisher": "연합뉴스",
-   "time": "2026-11-07T00:21:36+00:00"
+   "time": "2026-11-08T23:45:41+00:00"
   },
   {
-   "title": "서학개미, 국내증시 급락장속 11월 일주일 새 3조원 사들여",
-   "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBJOGRWTlZfZ2ZkQ3JhMWVTc2txYnh3MEp0X01CQ0U1VkpFS0dIRldGajdrZ2otNlh5TTBFcGQ1X3lXbVZIaENPRXJyYWVhZGFBY2pBZWRCSHAyU1FYVzdMWGNSd082Z3c?oc=5",
-   "publisher": "강원도민일보",
-   "time": "2026-11-07T00:37:11+00:00"
+   "title": "[AI MY 증시전망] 美 반도체주 반등에 국내 증시 급락 딛나…외국인 수급이 관건",
+   "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBpVkhmdUs1Tm4tNFA0NW5pcnNXS2NZVU93Wkl3V2Y1NFdDdTRMSXpzY0lLNVdqR0dYcVJSMVJsUW1mR2lfVXNhbFhibjdYR3NCWnVibXJGVDlpcjdE?oc=5",
+   "publisher": "뉴스핌",
+   "time": "2026-11-08T23:31:00+00:00"
   },
   {
-   "title": "국내 증시 부진 속 美 주식 쓸어담는 서학개미…일주일 새 3조원 순매수",
-   "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9TbXRhbS04MVRTSkpQeUpIanBmWXc4N2NFSTFwN1N4ZWVsdDE1ODlPbHhEWUdwdmZZV3BqTm82NHp3OGFsaXhuSGlvMjJxbWd3TnRTNjJvZlZjXzFleFFxSWZ6QXRRWlhMVzRWNHRHZ9IBc0FVX3lxTE53QUM0ODRGbW9LRHVXTTFDSVk5ajZxdmY2X2Q2WXk2UGNQTFFzMDFCYkVMeXdhczBYT0paYTVaaDdfQUktN0R5R3hXYmxsTk5uWFcxSE53VzZoYzhLUWgzbmJTaHNzODlRd3VOQjRINjJwTEE?oc=5",
-   "publisher": "시사저널",
-   "time": "2026-11-07T01:15:05+00:00"
+   "title": "키움증권, 롯데쇼핑 목표가↓…\"국내증시 하락에 자산효과 악화\"",
+   "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5kY3BqM012ZW5LR0ZEMmxTYnNqcERfWmhheHdfWWJfdFp3NVZaaEc4NDdjOElNZjNUakRRQ09HQmhuQWRtZGRucjRSUWhFUlhkRWc?oc=5",
+   "publisher": "매일경제 마켓",
+   "time": "2026-11-08T23:28:29+00:00"
   },
   {
-   "title": "서학개미, 국내 증시 급락 속 美 주식 매수 폭 확대…이달 초에만 3조원 육박",
-   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9tRlFsSTZoME9SVDc4NEJOcnFFZWJGZGJkWk96bmtuVWU3TGxULVJCUEJUY0NBdVNXa0Z6eGhSdi1BM3phdTk2cFhFZ2dSMlE0UVhVbF80cmxIQQ?oc=5",
-   "publisher": "브릿지경제",
-   "time": "2026-11-07T01:10:00+00:00"
+   "title": "뉴욕증시 반도체주 반등에도 코스피 하락 개장‥5천 선에서 등락",
+   "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBSa3dDc2d5MW4xaDdjaXN3V2VibmxCSXBLVkthb1dka2JkM2NkTDZQNzVfWk9rN3VtYndxaXlCNjRtODU2TjJObl92NW5zdlZhWFY0d2RrdUhaMGhBUmNGS2xYVGpSU1pPUGM5OUN6cEZFenNn0gF0QVVfeXFMT19ENDBuU3ZxSkRES0tQcjhwZ1lhYlc3MnJRM1VZZ2Z5dFVvYl85Mk8wcEdscG9XMXRhb0R6QVZjazJIZkNhdUhuWnRYMFpvLWRfWmFMUmZ5MmhXc1dOLUpXZE82dkxuRTFqYWcwcjUxNG9BOG4?oc=5",
+   "publisher": "MBC 뉴스",
+   "time": "2026-11-09T00:26:49+00:00"
   },
   {
-   "title": "\"韓증시 바닥쳤나\"…코어위브·엔비디아 등 빅 이벤트 '주목'",
-   "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE12bGFtUEFjRUE3eXpBNVpTUThlTEpxUXN2cHMyU3gtcGZ3TExwWkdwZHN5YWV3S1NJcU1uWnd0YURGblFUM291UlFRTVlpbHk5ME05WENfSnQ0Y1h6WVI0R3FmNldJcUhONzZJS0xRNW9SUQ?oc=5",
-   "publisher": "KB Think",
-   "time": "2026-11-06T22:34:12+00:00"
+   "title": "美 증시 반등에도 코스피는 뒷걸음…장 초반 5000선 붕괴[개장시황]",
+   "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5vRk1jTVdsQjRtdnhmNzgxcGdQaXJ5YWJHbVJIRkJkaFBWM0JieXVQR2VSWGhEeVY4NVZ0QWdKbXF0MFFYREZUMDJmeWlfMWU0dVFrZFk5Y2tBbDQ?oc=5",
+   "publisher": "뉴스1",
+   "time": "2026-11-09T00:24:57+00:00"
   },
   {
-   "title": "외인 순매도 10조원의 72% ‘삼전닉스’… 국장 흔든 블루 웨이브 [주간 증시해설서]",
-   "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9pTzBmN0FtVjRMd2IyNF9VZUdoYWFORjZVdURRSW0yLV9NaVdfdzVYQ0hnbnNjaHJ5ZktDZnR6NW1QWldodUJNcTFPMTNmRU5kbDRwcUpzU3YzZWJYWDJtUTRkS05IejE5QzdQX0pn?oc=5",
-   "publisher": "더스쿠프",
-   "time": "2026-11-07T01:21:22+00:00"
+   "title": "최태원 \"코스피, 결국 '이렇게' 될 것\"…증시 붕괴 속 경고 재조명",
+   "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5wc1BHT1hMRm5qYWMzLUthRlQ2aEdfWkxmalVDVlJtNkZ0RU9sZk5zeHVLNWJVX3JyNmNQWWI1NkdJRHNXdTZ3NkZPdzZSbEE2YXEzS2NLRDI1anQ4dmxkLQ?oc=5",
+   "publisher": "아시아경제",
+   "time": "2026-11-08T23:41:53+00:00"
   },
   {
-   "title": "국내 증시 부진·환율 하락에 서학개미 美주식 '폭풍 매수'",
-   "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1tSlkzbnJJWE1IV3pob3A2UHZFUVo4cUY0bVR5V09idGo4THdHUzZOaGg0VWt0dUxjVUwxR3U4eHptZG50SXFfYW1NTDNBVkViLVgwM3BabjR4VUJDVkZJQnMteHRieERw?oc=5",
-   "publisher": "www.ebn.co.kr",
-   "time": "2026-11-06T23:29:23+00:00"
-  },
-  {
-   "title": "‘국장 폭락’에 서학개미, 다시 미국으로…11월 첫주 3조 ‘폭풍 매수’",
-   "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE94TTYzY1pOVW5JbGVSb082QTljaTEwdjBpUU9VNUJqQ2NOV0lzbUdfbjlEQkhNb09ndlh4U2VYTDN2UTdyeHFtOHN4QkJiQU4wa0dib19n?oc=5",
-   "publisher": "중앙일보",
-   "time": "2026-11-07T01:21:47+00:00"
+   "title": "美 AI·반도체주 반등 성공…필라델피아 반도체 지수 4.2%↑ S&P 500 0.31%↑·나스닥 1.09%↑…다우존스30은 0.46% 내려 韓증시 투자심리 지표 대부분 강세…코스피200 야간선물 1.6%↑ 변동성은 이어질 듯…앤트로픽 IPO도 반도체주 수급 영향 전망",
+   "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBtekpEUk02M2N0UG50dHpGVWEwWUlZTGhRUmVwMzNrd0F5Umh1aUlieXRaREZJQ2hHQWlSOUtyejY2blFSUDFQZG1pNTY2ZkFYbGIyajdPSGFvVzNJV2dvcDNOeGpfcEtCTkpTVg?oc=5",
+   "publisher": "세무사신문",
+   "time": "2026-11-09T00:47:37+00:00"
   }
  ],
  "earnings": [
   {
+   "ticker": "030200.KS",
+   "name": "KT",
+   "date": "2026-11-10",
+   "in_days": 1
+  },
+  {
+   "ticker": "011200.KS",
+   "name": "HMM",
+   "date": "2026-11-11",
+   "in_days": 2
+  },
+  {
    "ticker": "BRK-B",
    "name": "버크셔 해서웨이",
-   "date": "2026-11-07",
+   "date": "2026-11-09",
    "in_days": 1
   }
  ],
  "geo": [
-  "미중 갈등·수출규제: 48시간 기사 8건(평소 4건의 2.0배), 갈등 고조. 5일 가격 변화 반도체지수 -12.2%. 방산에 유리, 중국 노출·반도체·관세 민감에 부담",
-  "환율(원화): 48시간 기사 96건(평소 100건의 1.0배), 원화 약세. 5일 가격 변화 원달러 +1.4%. 수출주에 유리, 유가 원가 부담주·국내 상장주에 부담",
-  "대만 해협: 48시간 기사 7건(평소 7건의 1.0배), 긴장 고조. 5일 가격 변화 반도체지수 -12.2%, VIX +32.0%. 방산에 유리, 반도체·중국 노출·AI 인프라에 부담",
-  "러시아·우크라이나: 48시간 기사 20건(평소 20건의 1.0배), 휴전 기대. 5일 가격 변화 브렌트 -16.9%, 금 +4.6%. 유가 원가 부담주에 유리, 방산·정유·에너지에 부담"
+  "미중 갈등·수출규제: 48시간 기사 6건(평소 4건의 1.5배), 갈등 고조. 5일 가격 변화 반도체지수 -12.2%. 방산에 유리, 중국 노출·반도체·관세 민감에 부담",
+  "러시아·우크라이나: 48시간 기사 21건(평소 20건의 1.1배), 방향 혼재. 5일 가격 변화 브렌트 -6.7%, 금 +3.6%"
  ],
- "date": "2026-11-07",
- "generated": "2026-11-07T10:47+09:00"
+ "date": "2026-11-09",
+ "generated": "2026-11-09T10:10+09:00"
 }
