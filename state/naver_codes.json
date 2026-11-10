@@ -700,5 +700,23 @@
   "type": "stock",
   "ko": "버크셔 해서웨이 Class B",
   "checked": "2026-10-24"
+ },
+ "GM": {
+  "code": "GM",
+  "type": "stock",
+  "ko": "제너럴 모터스",
+  "checked": "2026-11-10"
+ },
+ "COF": {
+  "code": "COF",
+  "type": "stock",
+  "ko": "캐피털 원 파이낸셜",
+  "checked": "2026-11-10"
+ },
+ "DELL": {
+  "code": "DELL.K",
+  "type": "stock",
+  "ko": "델테크놀로지",
+  "checked": "2026-11-10"
  }
 }
