@@ -12,6 +12,7 @@ const state = {
   data: {},
   picksH: store.get("picksH", "daily"),
   picksM: store.get("picksM", "all"),
+  w40K: store.get("w40K", "up"),
   scrM: store.get("scrM", "all"),
   scrSort: store.get("scrSort", "score_weekly"),
   scrQ: "",
@@ -133,7 +134,7 @@ const pctOf = (a, b) => (a == null || b == null || !b ? null : (a / b) * 100);
 const yoy = (a, b) => (a == null || b == null || !b ? null : b > 0 ? (a / b - 1) * 100 : ((a - b) / Math.abs(b)) * 100);
 
 /* ── 데이터 ── */
-const FILES = ["meta", "briefing", "briefing_us", "watch", "picks", "track", "screen", "dividend", "alerts", "backtest", "model", "forward", "scorecard", "pdca", "pdca_review", "changelog", "geo", "geo_weekly"];
+const FILES = ["meta", "briefing", "briefing_us", "watch", "picks", "track", "screen", "dividend", "alerts", "backtest", "model", "forward", "scorecard", "pdca", "pdca_review", "changelog", "geo", "geo_weekly", "wma40"];
 async function load() {
   const btn = $("#refresh"); btn.classList.add("spin");
   const res = await Promise.allSettled(FILES.map((f) => fetch(`data/${f}.json?t=${Date.now()}`, { cache: "no-store" }).then((r) => (r.ok ? r.json() : null))));
@@ -348,6 +349,7 @@ function renderPicks() {
     <div class="seg sm" role="group" aria-label="시장">${M.map(([k, l]) => `<button data-m="${k}" aria-pressed="${state.picksM === k}">${l}</button>`).join("")}</div>
     <div style="height:8px"></div>
     ${list.length ? list.map(card).join("") : `<div class="empty">조건을 통과한 종목이 없습니다. 다음 갱신 때 다시 고릅니다.</div>`}
+    ${w40Section()}
     <div class="sec"><h2>추천 성과 추적</h2>
       <div class="kpis"><div class="kpi"><small>추적 건수</small><b>${nf(s.count)}</b></div>
       <div class="kpi"><small>평균 수익률</small><b class="${cls(s.avg_ret)}">${sgn(s.avg_ret, 1)}</b></div>
@@ -366,6 +368,31 @@ function renderPicks() {
     if (!d || !fig.isConnected) { fig.remove(); return; }
     fig.innerHTML = TAChart.mini(d, 320, 92) + TAChart.legendHTML(Object.keys(d.ma));
   });
+}
+
+/* ── 40주선 돌파·이탈: 유망 국내 100·미국 100 ── */
+function w40Section() {
+  const d = state.data.wma40;
+  if (!d?.markets) return "";
+  const mks = state.picksM === "all" ? ["kr", "us"] : [state.picksM];
+  const K = state.w40K;
+  const pool = (k) => mks.flatMap((m) => d.markets[m]?.[k] || []);
+  const list = pool(K).slice().sort((a, b) => (b.promise ?? 0) - (a.promise ?? 0));
+  const ago = (n) => (n === 0 ? "이번 주" : `${n}주 전`);
+  const ev = d.events?.[K] || {};
+  const row = (x) => `
+    <button class="row" data-t="${esc(x.ticker)}"><div><div class="t1">${esc(x.name)}<span class="tag${x.stage === 2 ? " on" : ""}">${esc(x.stage_label)}</span></div>
+      <div class="t2 meta">${mt(ago(x.weeks_ago) + (K === "up" ? " 돌파" : " 이탈"), "40주선 대비 " + sgn(x.dist, 1), ...(x.flags || []).map(esc))}</div>
+      ${x.desc ? `<div class="t2" style="margin-top:2px">${esc(x.desc)}</div>` : ""}</div><span></span>
+      <div class="num"><b>${nf(x.promise, 0)}</b><span class="t2">유망도</span></div></button>`;
+  const brd = mks.map((m) => `${m === "kr" ? "국내" : "미국"} 100개 중 40주선 위 <b>${d.markets[m]?.above_pct == null ? "-" : nf(d.markets[m].above_pct, 0) + "%"}</b>`).join(SEP);
+  return `<div class="sec"><h2>40주선 돌파·이탈 <small>유망 국내 100·미국 100, 최근 3주, ${esc(when(d.generated))}</small></h2>
+    <div class="seg sm" role="group" aria-label="40주선 신호">${[["up", "돌파"], ["down", "이탈"]].map(([k, l]) => `<button data-wk="${k}" aria-pressed="${K === k}">${l} ${pool(k).length}</button>`).join("")}</div>
+    <p class="note" style="margin:6px 0">${brd}</p>
+    <div class="panel">${list.map(row).join("") || `<div class="empty">최근 3주 안에 40주선을 ${K === "up" ? "돌파" : "이탈"}한 유망 종목이 없습니다.</div>`}</div>
+    <p class="note">${K === "up" ? "주봉 종가가 40주 이동평균선을 아래에서 위로 넘은 종목입니다. 40주선이 올라가고 거래량이 늘면서 넘을수록 전통적으로 신뢰도가 높다고 봅니다." : "주봉 종가가 40주 이동평균선 아래로 내려간 종목입니다. 기업 체력은 좋아도 추세가 꺾였을 수 있어 관찰이 필요한 목록입니다."}
+      유망도는 같은 시장 100개 안에서 퀄리티 35%·가치 30%·상승여력 20%·성장 15% 상대 점수이며 ${nf(d.rule?.promise_min, 0)}점 이상만 보여 줍니다.
+      신호 성과(${nf(d.rule?.score_days, 0)}거래일 뒤 지수 대비): ${ev.n ? `${nf(ev.n)}건 중 ${K === "up" ? "지수보다 더 오른" : "지수보다 덜 오른"} 비율 ${nf(ev.hit_rate, 0)}%, 평균 초과 ${sgn(ev.avg_ex, 2)}` : `아직 채점 전(대기 ${nf(ev.pending || 0)}건)`}. 매수 신호가 아닙니다.</p></div>`;
 }
 
 const coDesc = (t) => (state.data.screen?.rows || []).find((x) => x.ticker === t)?.desc || "";
@@ -1130,6 +1157,8 @@ document.addEventListener("click", (e) => {
   const h = e.target.closest("[data-h]"), m = e.target.closest("[data-m]"), sm = e.target.closest("[data-sm]");
   if (h) { state.picksH = h.dataset.h; store.set("picksH", state.picksH); renderPicks(); return; }
   if (m) { state.picksM = m.dataset.m; store.set("picksM", state.picksM); renderPicks(); return; }
+  const wk = e.target.closest("[data-wk]");
+  if (wk) { state.w40K = wk.dataset.wk; store.set("w40K", state.w40K); renderPicks(); return; }
   if (sm) { state.scrM = sm.dataset.sm; store.set("scrM", state.scrM); renderScreen(); return; }
   const lh = e.target.closest("[data-lh]"), lm = e.target.closest("[data-lm]"), lf = e.target.closest("[data-lf]");
   if (lh) { state.labH = lh.dataset.lh; store.set("labH", state.labH); renderLab(); return; }

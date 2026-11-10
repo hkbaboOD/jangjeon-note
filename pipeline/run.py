@@ -31,6 +31,7 @@ from datetime import timezone
 
 from .common import DATA_DIR, STATE_DIR, load_config, market_of, now_kst, read_json, write_json
 from .calibrate import calibrate
+from . import wma40scan as w40_mod
 from .data import get_source, last_kr_session
 from .indicators import technicals
 from .technical import chart_series
@@ -198,7 +199,11 @@ def run(job: str, demo: bool):
     div_c = [d["ticker"] for d in cfg["dividend_candidates"]]
     b = cfg["briefing"]
     extra = [i["ticker"] for i in b["indices"]] + [m["ticker"] for m in b["macro"]]
-    hist = src.history(list(dict.fromkeys(uni + watch + div_c + extra)), period="2y")
+    w40_cfg = cfg.get("wma40_universe") or {}
+    w40_lists = {mk: list(v) for mk, v in w40_cfg.items()}
+    w40_all = [t for v in w40_lists.values() for t in v]
+    names = {**{t: n for v in w40_cfg.values() for t, n in v.items()}, **names}
+    hist = src.history(list(dict.fromkeys(uni + watch + div_c + w40_all + extra)), period="2y")
     tcfg = cfg.get("technical")
     tech_all = {t: technicals(h, tcfg, with_ta=False) for t, h in hist.items() if len(h) >= 30}
 
@@ -297,6 +302,32 @@ def run(job: str, demo: bool):
                 p["name"] = names.get(p["ticker"], p["name"])
     write_json("picks.json", picks)
 
+    # 4-0) 40주선 돌파·이탈 — 유망 국내 100·미국 100 (기업 체력은 같은 200종목 안의 상대 점수)
+    w40_rows = []
+    try:
+        have = {r["ticker"]: r for r in uni_rows}
+        w40_rows = [have[t] for t in w40_all if t in have] + \
+            _rows(src, [t for t in w40_all if t not in have], hist, names, tcfg=tcfg)
+        w40_res = w40_mod.scan(hist, score_universe(w40_rows, model), names, w40_lists)
+        events = w40_mod.update_events(read_json("wma40_events.json", STATE_DIR, default=[]) or [], w40_res, hist, today)
+        write_json("wma40_events.json", events, STATE_DIR)
+        listed = [it for blk in w40_res["markets"].values() for k in ("up", "down") for it in blk[k]]
+        naver_w = co_mod.resolve_naver([it["ticker"] for it in listed]) if not demo else {}
+        for it in listed:
+            c = companies.get(it["ticker"]) or {}
+            it["desc"] = c.get("desc")
+            it["links"] = co_mod.links(it["ticker"], it["name"], naver_w.get(it["ticker"]) or naver.get(it["ticker"]))
+        write_json("wma40.json", {"generated": now.isoformat(timespec="minutes"), **w40_res,
+                                  "events": w40_mod.event_summary(events),
+                                  "recent": [e for e in events if e.get("final")][-20:][::-1],
+                                  "rule": {"lookback_weeks": w40_mod.LOOKBACK_WEEKS, "promise_min": w40_mod.PROMISE_MIN,
+                                           "promise_w": w40_mod.PROMISE_W, "score_days": w40_mod.SCORE_DAYS}})
+        log.info("40주선: " + ", ".join(f"{mk} 돌파 {len(b['up'])}/{b['n_cross_up']}·이탈 {len(b['down'])}/{b['n_cross_down']}"
+                                       f"·40주선 위 {b['above_pct']}%" for mk, b in w40_res["markets"].items()))
+    except Exception as e:  # 이 섹션 실패가 장전 전체를 막지 않도록
+        log.warning("40주선 스캔 실패: %s", e)
+        listed = []
+
     # 4-1) 배당 데이터 (매일 최신 가격으로 갱신 — 배당 이력은 주 1회 캐시) · 앱에서 구성 변경 가능
     usdkrw = (tech_all.get("KRW=X") or {}).get("last") or 1400.0
     cands = []
@@ -330,9 +361,9 @@ def run(job: str, demo: bool):
     for blk in picks.values():
         for m in ("all", "us", "kr"):
             fin_set |= {p["ticker"] for p in blk.get(m, [])}
-    chart_set = {r["ticker"] for r in uni_rows} | set(div_by) | fin_set
-    ta_map = {r["ticker"]: r["tech"].get("ta") for r in uni_rows + watch_rows}
-    fund_map = {r["ticker"]: r["fund"] for r in uni_rows + watch_rows}
+    chart_set = {r["ticker"] for r in uni_rows} | set(div_by) | fin_set | {it["ticker"] for it in listed}
+    ta_map = {r["ticker"]: r["tech"].get("ta") for r in w40_rows + uni_rows + watch_rows}
+    fund_map = {r["ticker"]: r["fund"] for r in w40_rows + uni_rows + watch_rows}
     written = set()
     for t in sorted(chart_set):
         h = hist.get(t)
