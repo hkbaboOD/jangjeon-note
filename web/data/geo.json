@@ -4,20 +4,20 @@
   {
    "key": "us_china",
    "label": "미중 갈등·수출규제",
-   "n": 14,
+   "n": 18,
    "base": 5,
-   "ratio": 2.8,
+   "ratio": 3.6,
    "level": "매우 높음",
    "heat": 1.0,
-   "tone": 0.71,
-   "esc_n": 6,
+   "tone": 0.78,
+   "esc_n": 8,
    "de_n": 1,
    "confirm": 1.0,
    "moves": {
-    "^SOX": -6.29
+    "^SOX": -5.68
    },
-   "direction": 0.83,
-   "intensity": 0.826,
+   "direction": 0.87,
+   "intensity": 0.868,
    "stance": "갈등 고조",
    "up": [
     "방산"
@@ -29,6 +29,12 @@
    ],
    "headlines": [
     {
+     "title": "제 발등 찍은 젠슨 황...미국 반도체 수출통제 강화 움직임",
+     "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBJRXhQSFBLcF8zNzhFTXpvYkRLT1hsUG82aEhRYmptek9SYnNzZGNzdll5ZVB2d3hLSTJqeWoyRjhUcVB3SVByb1pmbzNlTVVCcFAwUHBxZjBGSGVQcGNtN0lTaFEwcnMzR0HSAW5BVV95cUxPbVYxSS1rdU1QWUxhYlJTVDUtX3lEQ2tSMnhrOE5vOGtDblVWZ2dmV3lDYjJsNWZyTGNuWWdidmdzN1ZxUFRMX1ZjV09aSXQ3QXR5QVN6WUo0bjE1VzBKZVlGQ1NzMHV1RVY3d2lxUQ?oc=5",
+     "publisher": "주간조선",
+     "time": "2026-11-10T06:47:11+00:00"
+    },
+    {
      "title": "[마켓인사이드] 미중 반도체 갈등으로 번지는 엔비디아 젠슨 황 불륜 스캔들",
      "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5XcHdZN3h4MnN2dkFqdDl6NEl5TUh2TjIwaUFOQXYxcDBEZE9xT0VEd1hJa0R0Zjg5S0d3czJmZVFIREhoaGdza2ZHUkpYMFRSa3hYcTVxMzVIb3hJdGc?oc=5",
      "publisher": "뉴스투데이",
@@ -39,32 +45,26 @@
      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5OVTRoeDVTS05DTzJZQkI5SDlSdXJJQmJaVGFTVXFRQ1JXWGdtOU81YnYzb2ZOOFBSQlctQ042M3ltVUFjcWxnSkRKRWtCRTcwSFVJcmNidVJ3aXZoS0ZOZ9IBYEFVX3lxTE5OVTRoeDVTS05DTzJZQkI5SDlSdXJJQmJaVGFTVXFRQ1JXWGdtOU81YnYzb2ZOOFBSQlctQ042M3ltVUFjcWxnSkRKRWtCRTcwSFVJcmNidVJ3aXZoS0ZOZw?oc=5",
      "publisher": "연합뉴스",
      "time": "2026-11-09T20:53:03+00:00"
-    },
-    {
-     "title": "대중 AI반도체 수출규제 강화 될 듯…젠슨 황 사건 묵인 의혹 트럼프도 곤경",
-     "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE0wa0k3MWprNHpSVHdqNGJfX1NpWG9JWHltUmRsVjJnaUs0Sl81VUZxYjRaNUNPNzFCamFldVg4S2VWSHVpeGQxb3Z0UlBlaldpQ0c2N2lUMWhidw?oc=5",
-     "publisher": "파이낸셜뉴스",
-     "time": "2026-11-09T22:04:46+00:00"
     }
    ]
   },
   {
    "key": "fed",
    "label": "연준·금리",
-   "n": 70,
+   "n": 100,
    "base": 50,
-   "ratio": 1.4,
-   "level": "높음",
-   "heat": 0.6,
-   "tone": 0.88,
-   "esc_n": 49,
-   "de_n": 3,
-   "confirm": 0.18,
+   "ratio": 2.0,
+   "level": "매우 높음",
+   "heat": 1.0,
+   "tone": 0.65,
+   "esc_n": 70,
+   "de_n": 15,
+   "confirm": 0.16,
    "moves": {
-    "^TNX": 0.71
+    "^TNX": 0.63
    },
-   "direction": 0.39,
-   "intensity": 0.233,
+   "direction": 0.3,
+   "intensity": 0.305,
    "stance": "매파(금리 상승)",
    "up": [
     "금융(금리 수혜)"
@@ -75,22 +75,22 @@
    ],
    "headlines": [
     {
-     "title": "美연준 월러 이사 \"12월 50bp 인상도 고려\"…'빅스텝' 거론",
-     "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1HbTJoeVFuMkI3Tzg1SndmRDVwRldYWmFkUDc5MTlHeXlRT0JHSG9kSUpGSk9UMENXcV9ReW9oU3ZubTBQa3d0VnA0RzNHeGVwaWlxeDRPc2lSN2fSAWBBVV95cUxOVlpxSUhyZHZnbld5OU9NOFBZdkx2NDJHTUNza1pOVDZPUXFVRVptMTA2VFpGR2ljME56eHlrTlRMZXVJdFVVV0MzYjBHVHRZSGRwQmlPdV8zVC1qQ0s3ZHU?oc=5",
-     "publisher": "연합뉴스",
-     "time": "2026-11-10T16:00:40+00:00"
+     "title": "12월 연준 금리 인상 기대 강화에 금값 $4,035 근방서 안정 By Investing.com",
+     "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBWdnhBdVNCQjRqcnBZb25HLTk2cGNBa056Uk44bTdUOTE0dFRoeW4ybWF5djlWaUtramo0Z3FQWVQwNDJsa2U3S0ZRUFVKdW5uOE5KM1V0cWUtVzliRUdTZEY2dTZrQkZ5bVBMb1ktaw?oc=5",
+     "publisher": "Investing.com 한국어",
+     "time": "2026-11-11T00:57:00+00:00"
     },
     {
-     "title": "[종합] 美 물가 또 예상 웃돌았다…국채 금리 급등, 연준 '빅스텝' 가능성 부상",
-     "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9YcXV3bFRPbHNvcDNva2h1dVVjWHZaVXBDU2U5NDlWTTBsd0VkX0FqcnMxd0VqNXN6dlVSUVhOQnE4VHdRVHZsZWNyWDBKb1NqMW1wWXRld1VZRlhS?oc=5",
-     "publisher": "뉴스핌",
-     "time": "2026-11-10T14:06:00+00:00"
+     "title": "\"월러 50bp 언급, 12월 연준 금리 인상 사실상 굳히기\"",
+     "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5VMFdYUnU5WnVCLUVFMmpXZGpYTjdFb0RObTBfUi1WNU13dWpKSGZNZXdIZlFJeU5nY3VScTB5SUhJNHpFQUo4MW5pbm5tZTdUZm85eXFkaWJNZm11cE80WlBtMF9TcU1BYXdwaEZ5Wnc?oc=5",
+     "publisher": "연합인포맥스",
+     "time": "2026-11-11T00:54:43+00:00"
     },
     {
-     "title": "美 연준 월러, 12월 금리 0.5%P 인상 가능성 첫 거론",
-     "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOVG5fZWw5UHMwMkZtd1lma3h6Vll0NDdoTHVVNGxhN3hQYTYyRFRpdktNNE90aEpUNU9JN3JOYnpwcW91bl9naktZMlU3ZUVTdU9McE5XVGstYnJwWDhaMGZLOHdmbk5uMGJkczFQLWV2dEZDWHg1TU80UndCc083bmZqZ1NWdTVL?oc=5",
-     "publisher": "글로벌이코노믹",
-     "time": "2026-11-10T15:10:00+00:00"
+     "title": "\"美 CPI 상승세 지속시 연준 긴축 더 공격적…내년 금리 인상 사이클 전망\"",
+     "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE8zVDZMMllwTWNWckd3RDNEVkF6S1gyNExWZVRvb0tvVlNtTUdGMWgxVkdyZG5MZWdzZzk2YjJieDMyZkY2VHNRcVQ5aE1VLWpWNkxEdUpTdFJfZUQ2bkF0c25maFA2bHlsS29JUk1nNWVLZw?oc=5",
+     "publisher": "KB Think",
+     "time": "2026-11-10T23:03:49+00:00"
     }
    ]
   },
@@ -102,16 +102,16 @@
    "ratio": 1.0,
    "level": "보통",
    "heat": 0.33,
-   "tone": -0.71,
+   "tone": -0.6,
    "esc_n": 1,
-   "de_n": 6,
-   "confirm": 0.14,
+   "de_n": 4,
+   "confirm": -0.01,
    "moves": {
-    "^GSPC": -1.01,
-    "KRW=X": -0.07
+    "^GSPC": -0.63,
+    "KRW=X": -0.34
    },
-   "direction": -0.41,
-   "intensity": -0.136,
+   "direction": -0.36,
+   "intensity": -0.12,
    "stance": "협상 진전",
    "up": [
     "관세 민감",
@@ -123,6 +123,12 @@
    ],
    "headlines": [
     {
+     "title": "중국 자동차 수출 75% 성장 후 둔화 위협, 그 이유는?",
+     "link": "https://news.google.com/rss/articles/CBMivgJBVV95cUxPNEZEM2g2MmFtb2ttTmE5dDNLaE9tZVpmSmc0VGdwbl9GdG9QREEwWjVvYlZxV2t4Zy03LVh2dUoxR3Q5empEc2hxMUNwbXRhcWI4SVB2OHQ3a0FWNjc1UGh0czlZblFMYWMzTXZvU3ZNUVZtaFFuZ2I3MzdiaWQxUGZPYlZFUVZzbjYyakVhaFhmMWRJSDg3U0xIR0xoNFpmUUV0SmVoTkNrQ3Z4cXYzQUptV0VaNXNZOUlYczVBaWYzdlFfci02cGZTX0RMQ3BSMzJGNVlkTXpxNzhjZjlhVEcxdkNpZExyTF8wdTZVWkRNS1dTeEc0WF9Xa0dBRzEzTGh2Z1pEM19idWJmakc4VHgzUzVOWTdIbjY0WHJiSTVRMnQ3LTcxNWYtTXo5bjJiTm43VTNOZDhUQ1RIU2c?oc=5",
+     "publisher": "IDNFinancials",
+     "time": "2026-11-10T13:00:00+00:00"
+    },
+    {
      "title": "美 근원물가 0.3% 상승…Fed, 12월 추가 금리 인상 가능성",
      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBTYWNmTHphd3d4R25NSWpPSzJDclJ6cEVld0JMWGFQN2pJaEJDNXJPNlV0aEVMRU5MNlgzUlZNdkhPT3JmVl9CLWhNeVRGUUZrVktFWFg4Sk9Pdw?oc=5",
      "publisher": "한국경제",
@@ -133,12 +139,99 @@
      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1FbVZXNTAxZjh1ZDBtaEt6UkRWNXVKRlp4TGtHOFZrQlVzckk3VUZzNXhTNVgyNU5MQlhtZTF6b1pOUUhQVmpMWVlVaXdHejluWGMzX3NVRTZqSnpBZ1BWa2IzdThLdHJONGVPMnJR?oc=5",
      "publisher": "테크데일리",
      "time": "2026-11-09T17:44:34+00:00"
+    }
+   ]
+  },
+  {
+   "key": "fx",
+   "label": "환율(원화)",
+   "n": 93,
+   "base": 100,
+   "ratio": 0.93,
+   "level": "보통",
+   "heat": 0.29,
+   "tone": -0.51,
+   "esc_n": 10,
+   "de_n": 31,
+   "confirm": -0.23,
+   "moves": {
+    "KRW=X": -0.34
+   },
+   "direction": -0.29,
+   "intensity": -0.083,
+   "stance": "원화 강세",
+   "up": [
+    "유가 원가 부담주",
+    "국내 상장주"
+   ],
+   "down": [
+    "수출주"
+   ],
+   "headlines": [
+    {
+     "title": "원·달러 환율, 4.9원 오른 1342.4원",
+     "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOeTgtT09aWW5ITGRBZXRwSWtTT0x4MzJMVzVKMThuWEpNekNqN3cxUFBDRloyOUJ0dGgzWlYtMEY3dFZMOFpxeFFGRS13NG5oR2U3bXlnMFNyUU5GWlBYWldUdzBwRllXWVp5U2lqNzRXUjJfcmVKVXBZSjFkSXlKbjNBWXRrQdIBmgFBVV95cUxNLXJPRFA0Y0tpWm5VSjFxSzMyR2s0S2l1TTNObXc4amZxWjlsUUhJYkIzaE9vNjRnOTA4MEtwbHZPVEM3ZldoQVhuaEthbUF2cG1LQUsyNS1XRG5TZHgwSExuRFROc0dCUnpUTGRfSE5pb0ZMMXNOaWlOcUNULUZFRElydUFsUjQ4VE5YeG05SlkwQ2pIYlB4VWhR?oc=5",
+     "publisher": "Chosunbiz",
+     "time": "2026-11-11T00:33:00+00:00"
     },
     {
-     "title": "AI 열풍에 中 무역흑자 1400조원…美 관세에도 사상 최대 눈앞",
-     "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQai01V2drVHN3andTQXJHeFItcjM1M1ZKdGY0WndWbGJZNEZNLXp3Ymk0alo0UWI0UFhUVk5TVDEyT053azF5N1V4V0R4MXhCRDhEVlIzd2N5OTVsR3hycS1CMmplMVpwNzJUVXhheGRqaFdXWkNHdzhVMUNNTDNtMQ?oc=5",
-     "publisher": "이데일리",
-     "time": "2026-11-10T07:49:50+00:00"
+     "title": "원·달러 환율, 1344.5원…달러, 예상치 상회한 물가에 강세",
+     "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE02TU9SRUtvRF94a2ttbDEtaEtyTmlycXR4a01qOFNpZWJzNXJFOXNmQ1d4NmJGNDllRXlKWVhKWW1XeHpfbWJtSnp6TEZ6S1dUNm54MXB6Um9Fcmllc0pF?oc=5",
+     "publisher": "조세일보",
+     "time": "2026-11-10T22:46:43+00:00"
+    },
+    {
+     "title": "[외환] 끈적한 美 물가·금리 인상 기대로 상승…1.90원↑",
+     "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE0tLXZtLXgxS19PYW5Kd0MtakpvVVMycWtVeERBZHVXWUx6eWtEd2lud05kYUZPVWNnb1ZOdUZRbUJwZURHbF9YNE0wOFQ2eFh5ZmhmbmkyT0RaRS1mZlh4eWRJbWZvY2VMT3h0ZjFiRDd5dw?oc=5",
+     "publisher": "KB Think",
+     "time": "2026-11-11T00:28:45+00:00"
+    }
+   ]
+  },
+  {
+   "key": "mideast",
+   "label": "중동 정세",
+   "n": 28,
+   "base": 35,
+   "ratio": 0.8,
+   "level": "보통",
+   "heat": 0.2,
+   "tone": 0.43,
+   "esc_n": 10,
+   "de_n": 4,
+   "confirm": -0.1,
+   "moves": {
+    "CL=F": -9.91,
+    "GC=F": 2.4
+   },
+   "direction": 0.2,
+   "intensity": 0.04,
+   "stance": "긴장 고조",
+   "up": [
+    "정유·에너지",
+    "방산"
+   ],
+   "down": [
+    "유가 원가 부담주"
+   ],
+   "headlines": [
+    {
+     "title": "이란전 종식 기대 확산에 국제유가 하락세 가속",
+     "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE51Nkw0dkE0R2FjaFJ2MGJ6N0tzZ09uM1NmWlV3YjR6aVVaV0ozS2pSVUdpQV9wVUd4OVZYa2ZERXJzY3dCMGxKcmlvRklkOG4xOGg4Q0lhcGo4SUJRVklPWmg1RWZ1Y3BuTi1iQg?oc=5",
+     "publisher": "스페셜경제",
+     "time": "2026-11-11T01:12:38+00:00"
+    },
+    {
+     "title": "트럼프 \"이란戰 종식 긍정적 모멘텀…공격재개 가능성 작아\"(종합2보)",
+     "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE0zZWR1WTBHT3FXN0NFd3dJdWFGRG9ZME00Z24yMW5uckMtaGZCWFN0OEVXUnROMXhCd2hGZ0xhR3R4MWJqRjdRZzloTlJ6cjdxMnE4OFJEOHlXY3JabmRnMNIBYEFVX3lxTE0zZWR1WTBHT3FXN0NFd3dJdWFGRG9ZME00Z24yMW5uckMtaGZCWFN0OEVXUnROMXhCd2hGZ0xhR3R4MWJqRjdRZzloTlJ6cjdxMnE4OFJEOHlXY3JabmRnMA?oc=5",
+     "publisher": "연합뉴스",
+     "time": "2026-11-09T23:36:23+00:00"
+    },
+    {
+     "title": "트럼프 “이란 전쟁 종식 긍정적 흐름”",
+     "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1xLUJlS3NCNjRXVW9wUDBOQkw1S3p5N3VPSnZTN0RhOUFSVWtYQlNnanRFMGJpOS1oWEhDV2tCOVRtS2Rya0hWZ1BjSVRvbDJkMTJyb0VoTmVNOGdVaUhCZUhidF9XSVA0QnZwb2xEWV9uczE5?oc=5",
+     "publisher": "부산일보",
+     "time": "2026-11-10T08:59:58+00:00"
     }
    ]
   },
@@ -153,12 +246,12 @@
    "tone": 0.0,
    "esc_n": 1,
    "de_n": 1,
-   "confirm": 0.49,
+   "confirm": 0.34,
    "moves": {
-    "^SOX": -6.29,
-    "^VIX": -0.34
+    "^SOX": -5.68,
+    "^VIX": -6.58
    },
-   "direction": 0.1,
+   "direction": 0.07,
    "intensity": 0.0,
    "stance": "방향 혼재",
    "up": [],
@@ -171,104 +264,16 @@
      "time": "2026-11-10T07:09:41+00:00"
     },
     {
-     "title": "대만해협 흔든 서희함의 심장…한화오션 국산 리튬전지가 비대칭 잠항 열었다",
-     "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQb3lVR3ZFc29aRmhpcC1CWm9ldi0wbWlfeGpla244YUdvZ2swbVo4aERCOG1mRk8wNHFoM29hVmlJV0Y3Vjh4M2pDM3RzTWlzYzJyTVRjbTN2ZEk3OW40akZYV1pVM0REUmREM2hUb25fdFhQMjdSZmRVcFZxdGlnajRRQnB2T3hI?oc=5",
-     "publisher": "글로벌이코노믹",
-     "time": "2026-11-09T21:44:48+00:00"
-    },
-    {
      "title": "[동북아 정세 브리핑] 중국 함정 100척 서태평양 전개…대만 고립 압박 속 북중 밀착과 미중 군사대화 모색",
      "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBVdWRTU2FCLTFGeThqQ21aTERNR1diQ2pBQmhyZkFpWlBaOGZnSGJDT2VmQ2g4Ul9kZFVZc2tMUmN4MGgtcVhxYjVBaFBhVEU4enBz?oc=5",
      "publisher": "kor.theasian.asia",
      "time": "2026-11-09T07:47:28+00:00"
-    }
-   ]
-  },
-  {
-   "key": "fx",
-   "label": "환율(원화)",
-   "n": 99,
-   "base": 100,
-   "ratio": 0.99,
-   "level": "보통",
-   "heat": 0.33,
-   "tone": -0.2,
-   "esc_n": 18,
-   "de_n": 27,
-   "confirm": -0.05,
-   "moves": {
-    "KRW=X": -0.07
-   },
-   "direction": -0.08,
-   "intensity": 0.0,
-   "stance": "방향 혼재",
-   "up": [],
-   "down": [],
-   "headlines": [
-    {
-     "title": "원·달러 환율, 9.6원 내린 1337.5원",
-     "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQTWxzbkJZQ19xdjhzTEpsU0VDRzUtODZuZnFHUHpmLUZjbGJCVTl6RjNzUFlVYzR5NVJsNkhFX3lwYkVtRzhvVlBncFBob2JsQUo3RFhlMTBYMUFWWWNBYS1rcVJjX3hoYnIxdVpLcEJHMW1vc1drZXhuRWU0SjBDcVhQWDY2UdIBmgFBVV95cUxNSmR6UFZLNHN3a3RRUnBNeThVTk5fRFBuaElzRXFQQ3pJdkVJc1lLLUM4OE9LQUdsSkFUbUgtak1DODF6Q1RkNVhnMmJiVjE5Q3FrZzJ6bWtaV1FSYlk2bTBESkx1cVFvWEg5akk2X0ZqMEhUOU9KanplT0NmOHA3b01UQjVfbG5OU0p4TEIteG94amRRcDZwNEVR?oc=5",
-     "publisher": "Chosunbiz",
-     "time": "2026-11-10T08:54:00+00:00"
     },
     {
-     "title": "달러-원, 뉴욕장서 1,330원 후반대 거래",
-     "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE9aMk45LU5oRHNXejZWNFp3RGlNMmZNVDctSm9ZbWtkb1psMFhYeVRMMmk1aEpMTk1oSzlCMnFjZUlveVBseGVGNDFLWVloY0RpbmpqRS1TdjVla295dV90ZDJUSWtEVG94bG1xS2tDTlZ2QQ?oc=5",
-     "publisher": "KB Think",
-     "time": "2026-11-10T13:14:47+00:00"
-    },
-    {
-     "title": "환율, 美·이란 협상기대 위험선호↑…9.6원 하락한 1,337.5원",
-     "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBVejJ4VDBHbWdLYVJ0d2hhMzZRRnNyRGdUVjI2aHI2Y2k0cWk1Zkh2VmtwRFlzY1ZVeVNma0RqZWQ1c3lXc1FRb0ZnMDJ3dVNvTXJMTU5YWVlSWnfSAWBBVV95cUxNbTFGbmI2R24yWVMtM0U2U0IxSzhhS3phZ0lyT01NLXVyUHpIYXZtakhjdFRHeE5TeWw0Z3ZDWUNxYjh5VE9kenAxODdYZm84N24zbFBRcWZiUk5pa3dSWDc?oc=5",
+     "title": "대만, 중국 국적뿐 아니라 中자본 소유 요트도 입항 금지",
+     "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9aT1BMYW1ldnR6SG5VNWxWc2R6SGFVWXdkSDJTTUJpZTBISjBQd1hLWUFoZlhmVlBuQVVuZXZHc2hSUDMxMlJWRmpBa0dzaWw0YzV1WEFnaURrTW84cUctSdIBYEFVX3lxTE9aT1BMYW1ldnR6SG5VNWxWc2R6SGFVWXdkSDJTTUJpZTBISjBQd1hLWUFoZlhmVlBuQVVuZXZHc2hSUDMxMlJWRmpBa0dzaWw0YzV1WEFnaURrTW84cUctSQ?oc=5",
      "publisher": "연합뉴스",
-     "time": "2026-11-10T07:29:29+00:00"
-    }
-   ]
-  },
-  {
-   "key": "mideast",
-   "label": "중동 정세",
-   "n": 25,
-   "base": 35,
-   "ratio": 0.71,
-   "level": "보통",
-   "heat": 0.14,
-   "tone": 0.6,
-   "esc_n": 8,
-   "de_n": 2,
-   "confirm": -0.04,
-   "moves": {
-    "CL=F": -10.66,
-    "GC=F": 2.74
-   },
-   "direction": 0.29,
-   "intensity": 0.041,
-   "stance": "긴장 고조",
-   "up": [
-    "정유·에너지",
-    "방산"
-   ],
-   "down": [
-    "유가 원가 부담주"
-   ],
-   "headlines": [
-    {
-     "title": "트럼프 \"이란戰 종식 긍정적 모멘텀…공격재개 가능성 작아\"(종합2보)",
-     "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE0zZWR1WTBHT3FXN0NFd3dJdWFGRG9ZME00Z24yMW5uckMtaGZCWFN0OEVXUnROMXhCd2hGZ0xhR3R4MWJqRjdRZzloTlJ6cjdxMnE4OFJEOHlXY3JabmRnMNIBYEFVX3lxTE0zZWR1WTBHT3FXN0NFd3dJdWFGRG9ZME00Z24yMW5uckMtaGZCWFN0OEVXUnROMXhCd2hGZ0xhR3R4MWJqRjdRZzloTlJ6cjdxMnE4OFJEOHlXY3JabmRnMA?oc=5",
-     "publisher": "연합뉴스",
-     "time": "2026-11-09T23:36:23+00:00"
-    },
-    {
-     "title": "트럼프 “이란 전쟁 종식 긍정적 흐름”",
-     "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1xLUJlS3NCNjRXVW9wUDBOQkw1S3p5N3VPSnZTN0RhOUFSVWtYQlNnanRFMGJpOS1oWEhDV2tCOVRtS2Rya0hWZ1BjSVRvbDJkMTJyb0VoTmVNOGdVaUhCZUhidF9XSVA0QnZwb2xEWV9uczE5?oc=5",
-     "publisher": "부산일보",
-     "time": "2026-11-10T08:59:58+00:00"
-    },
-    {
-     "title": "이란 외무부 \"한국 호르무즈 파병 자제해야…상황 악화 우려\"",
-     "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9qd3VoX2VrUnRuaVdmN0VFTEdtM21NaHcxMmlCa1o3WHNnS25yZnYteS1sYzRzTThQM3paMzdQVEEtaVpXZk82clBCOS1qWXJMaUdtejd3aWMyc3ozZjl6Q0R5MGZwNjNHdkpGX2xqNEpzOHBE?oc=5",
-     "publisher": "연합뉴스 한민족센터",
-     "time": "2026-11-09T10:07:33+00:00"
+     "time": "2026-11-09T07:42:33+00:00"
     }
    ]
   },
@@ -280,28 +285,31 @@
    "ratio": 0.6,
    "level": "낮음",
    "heat": 0.07,
-   "tone": -1.0,
-   "esc_n": 0,
-   "de_n": 8,
-   "confirm": -0.04,
+   "tone": -0.75,
+   "esc_n": 1,
+   "de_n": 7,
+   "confirm": -0.1,
    "moves": {
-    "BZ=F": -12.35,
-    "GC=F": 2.74
+    "BZ=F": -10.95,
+    "GC=F": 2.4
    },
-   "direction": -0.71,
-   "intensity": -0.05,
+   "direction": -0.56,
+   "intensity": -0.039,
    "stance": "휴전 기대",
-   "up": [
-    "유가 원가 부담주"
-   ],
+   "up": [],
    "down": [
-    "방산",
-    "정유·에너지"
+    "방산"
    ],
    "headlines": [
     {
+     "title": "우크라 종전협상 첫날부터 파열음… 유럽 “휴전부터”vs 러시아 “안보부터”",
+     "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5sdWVXalhiTUJET0taMS1PWklWMy1OWUttX2J0Sy1iRVp2Yzh2NUV5dm9SakxaY20xdXJVVE5qWG5wZ2FIWTd6TXN4Y2hicW55cTRWUElDOTJsSXhDdXhOR3ZrdlBVSEIteFE?oc=5",
+     "publisher": "천지일보",
+     "time": "2026-11-10T15:50:00+00:00"
+    },
+    {
      "title": "러, '휴전 후 안보 논의' 유럽 구상 거부‥종전협상 난항 예고",
-     "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1NQjFMYVZRRVFQSnNDTkZScXdKcldDZHMyelVXZXZIdmFGNmktTV9xUUlUeFREUm9ibzVTYy13YTVSeHd0QmxOT3lkSUd4R3JoUWVjLWhobzUyZHc4VDExZzNNY3l5ZW4wMWM3OTNIOVNHRUoy0gF0QVVfeXFMUFMxdkpYYk9oR2pQcXRmdS04STdXdmRhS1lVTlQwNHVibk1BcmQ1Z0ZvaWhxMHFlWnRMQ01HYzI3ZFJtZ3BLOFZEMjRqNmxpQ0p6U1pRQS13VE53OFpuSURiaGE1Ym91UGVTMzFwcXVwYmljQkY?oc=5",
+     "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBTMXZKWGJPaEdqUHF0ZnUtOEk3V3ZkYUtZVU5UMDR1Ym5NQXJkNWdGb2locTBxZVp0TENNR2MyN2RSbWdwSzhWRDI0ajZsaUNKelNaUUEtd1ROdzhabklEYmhhNWJvdVBlUzMxcHF1cGJpY0JG0gF0QVVfeXFMUFMxdkpYYk9oR2pQcXRmdS04STdXdmRhS1lVTlQwNHVibk1BcmQ1Z0ZvaWhxMHFlWnRMQ01HYzI3ZFJtZ3BLOFZEMjRqNmxpQ0p6U1pRQS13VE53OFpuSURiaGE1Ym91UGVTMzFwcXVwYmljQkY?oc=5",
      "publisher": "MBC 뉴스",
      "time": "2026-11-10T14:26:34+00:00"
     },
@@ -310,41 +318,35 @@
      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBDeUg3aDBPcG1WSExBYUU3X1J3bVQzVlB2aGl2STBkMzFPWFZCYVZjUE1VZUlYbVVUeW51YUw1Tkg0UTFGekN0MlVxUmhPN09EMG9SZTlzUmdxRjRuZUdPYUc4TE5uTWVySkM1dU5BZW56dFXSAWZBVV95cUxPa2tCX0hxNE42NEtEOFF4N1RFcUhGd3JvRUdFOGZNcktoU1g5V280c2d2NXhDZldPd3lEUmNSSkZ1eHJsek5IX2FRMG1pdDNOdTFsODB1N0ZfWlVkc1NycXVwQ0RXQ0E?oc=5",
      "publisher": "동아일보",
      "time": "2026-11-10T10:27:00+00:00"
-    },
-    {
-     "title": "우크라 종전협상 첫날부터 파열음… 유럽 “휴전부터”vs 러시아 “안보부터”",
-     "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5sdWVXalhiTUJET0taMS1PWklWMy1OWUttX2J0Sy1iRVp2Yzh2NUV5dm9SakxaY20xdXJVVE5qWG5wZ2FIWTd6TXN4Y2hicW55cTRWUElDOTJsSXhDdXhOR3ZrdlBVSEIteFE?oc=5",
-     "publisher": "천지일보",
-     "time": "2026-11-10T15:50:00+00:00"
     }
    ]
   },
   {
    "key": "nk",
    "label": "북한·한반도",
-   "n": 21,
+   "n": 23,
    "base": 43,
-   "ratio": 0.49,
+   "ratio": 0.53,
    "level": "낮음",
-   "heat": 0.0,
-   "tone": 0.27,
+   "heat": 0.02,
+   "tone": 0.17,
    "esc_n": 7,
-   "de_n": 4,
-   "confirm": -0.05,
+   "de_n": 5,
+   "confirm": -0.23,
    "moves": {
-    "KRW=X": -0.07
+    "KRW=X": -0.34
    },
-   "direction": 0.19,
+   "direction": 0.1,
    "intensity": 0.0,
    "stance": "방향 혼재",
    "up": [],
    "down": [],
    "headlines": [
     {
-     "title": "[뉴스분석] 미 중간선거 결과 침묵하는 北...김정은 고심 깊어지나",
-     "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1saGxYbWlRT1RFRFpWUUFRR2ppcVpfa0FicEY3SkR4Q0N1dy05VTRwN0RTVVNLOFVCYm9TZXNqLTNmVC1tWFgyVWN0d21iXzdlcE5FMnJTaUpxVnlB?oc=5",
-     "publisher": "뉴스핌",
-     "time": "2026-11-09T23:52:00+00:00"
+     "title": "[북한 도발] 김여정, 유엔 대화 촉구에 반발…DMZ 지뢰 책임 부인",
+     "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9yVW00YXRzcnJ4bDZmQUNNSjZFdlhVNnlTbW4zUFJFb28wMUgtWmdwbTltRm1Ra0ppSGZsbTRReGFqMUl6VDFkcV9nSmxpX3lCNUtvN1FEM01HMDZfMnhzb20wOFhiX3hqRWZB?oc=5",
+     "publisher": "독립신문",
+     "time": "2026-11-11T01:10:46+00:00"
     },
     {
      "title": "[외안구단] \"미사일은 미사일이라고 부르겠다\"…오락가락 군의 속내는",
@@ -353,35 +355,35 @@
      "time": "2026-11-09T13:00:54+00:00"
     },
     {
-     "title": "김여정, 유엔 사무총장 대화 촉구에 반발…\"한국 군사도발 비호\"",
-     "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9Pd0hvWTFqVWs1RjEzYVBaaW5qRExMQ3RFRDF5RWJZVGFRVEdYNWFiYWxYNkNteE5tMmw4ZFNfOFdSUmRWSGxCRV9XVG40aU83NDBneXYzckc0R1hwNWZzUS1QRm05NS1sa0trcnlBSWl6RUnSAXNBVV95cUxPT3dIb1kxalVrNUYxM2FQWmluakRMTEN0RUQxeUViWVRhUVRHWDVhYmFsWDZDbXhObTJsOGRTXzhXUlJkVkhsQkVfV1RuNGlPNzQwZ3l2M3JHNEdYcDVmc1EtUEZtOTUtbGtLa3J5QUlpekVJ?oc=5",
-     "publisher": "한국일보",
-     "time": "2026-11-10T06:31:00+00:00"
+     "title": "[뉴스분석] 미 중간선거 결과 침묵하는 北...김정은 고심 깊어지나",
+     "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1saGxYbWlRT1RFRFpWUUFRR2ppcVpfa0FicEY3SkR4Q0N1dy05VTRwN0RTVVNLOFVCYm9TZXNqLTNmVC1tWFgyVWN0d21iXzdlcE5FMnJTaUpxVnlB?oc=5",
+     "publisher": "뉴스핌",
+     "time": "2026-11-09T23:52:00+00:00"
     }
    ]
   }
  ],
  "impact": {
-  "china": -0.785,
-  "semis": -0.496,
-  "tariff": -0.112,
-  "defense": 0.222,
-  "export": 0.082,
-  "defensive": -0.041,
-  "oil_up": 0.021,
-  "oil_down": -0.021,
+  "china": -0.832,
+  "semis": -0.521,
+  "tariff": -0.14,
+  "defense": 0.245,
+  "export": 0.022,
+  "defensive": -0.036,
+  "oil_up": 0.024,
+  "oil_down": 0.009,
   "shipping": 0.016,
-  "korea": -0.008,
-  "ai": -0.07,
-  "rate_sensitive": -0.233,
-  "bank": 0.14
+  "korea": 0.017,
+  "ai": -0.091,
+  "rate_sensitive": -0.305,
+  "bank": 0.183
  },
- "generated": "2026-11-11T01:21+09:00",
+ "generated": "2026-11-11T10:27+09:00",
  "summary": [
-  "미중 갈등·수출규제: 48시간 기사 14건(평소 5건의 2.8배), 갈등 고조. 5일 가격 변화 반도체지수 -6.3%. 방산에 유리, 중국 노출·반도체·관세 민감에 부담",
-  "연준·금리: 48시간 기사 70건(평소 50건의 1.4배), 매파(금리 상승). 5일 가격 변화 미 10년물 금리 +0.7%. 금융(금리 수혜)에 유리, 금리 민감·AI 인프라에 부담",
-  "관세·무역분쟁: 48시간 기사 25건(평소 25건의 1.0배), 협상 진전. 5일 가격 변화 S&P500 -1.0%, 원달러 -0.1%. 관세 민감·수출주·중국 노출에 유리, 경기 방어에 부담",
-  "대만 해협: 48시간 기사 7건(평소 7건의 1.0배), 방향 혼재. 5일 가격 변화 반도체지수 -6.3%, VIX -0.3%"
+  "미중 갈등·수출규제: 48시간 기사 18건(평소 5건의 3.6배), 갈등 고조. 5일 가격 변화 반도체지수 -5.7%. 방산에 유리, 중국 노출·반도체·관세 민감에 부담",
+  "연준·금리: 48시간 기사 100건(평소 50건의 2.0배), 매파(금리 상승). 5일 가격 변화 미 10년물 금리 +0.6%. 금융(금리 수혜)에 유리, 금리 민감·AI 인프라에 부담",
+  "관세·무역분쟁: 48시간 기사 25건(평소 25건의 1.0배), 협상 진전. 5일 가격 변화 S&P500 -0.6%, 원달러 -0.3%. 관세 민감·수출주·중국 노출에 유리, 경기 방어에 부담",
+  "환율(원화): 48시간 기사 93건(평소 100건의 0.9배), 원화 강세. 5일 가격 변화 원달러 -0.3%"
  ],
  "tag_ko": {
   "semis": "반도체",

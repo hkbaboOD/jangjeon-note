@@ -180,5 +180,44 @@
   "promise": 55.9,
   "vol_ratio": 1.05,
   "slope": 1.05
+ },
+ {
+  "date": "2026-11-11",
+  "ticker": "033780.KS",
+  "name": "KT&G",
+  "market": "kr",
+  "kind": "down",
+  "week": "2026-11-11",
+  "entry": 175400.0,
+  "bench_entry": 5252.580078125,
+  "promise": 58.2,
+  "vol_ratio": 1.29,
+  "slope": 2.13
+ },
+ {
+  "date": "2026-11-11",
+  "ticker": "005830.KS",
+  "name": "DB손해보험",
+  "market": "kr",
+  "kind": "down",
+  "week": "2026-11-11",
+  "entry": 166700.0,
+  "bench_entry": 5252.580078125,
+  "promise": 55.5,
+  "vol_ratio": 0.45,
+  "slope": 2.18
+ },
+ {
+  "date": "2026-11-11",
+  "ticker": "QCOM",
+  "name": "퀄컴",
+  "market": "us",
+  "kind": "up",
+  "week": "2026-11-10",
+  "entry": 173.52000427246094,
+  "bench_entry": 7520.93017578125,
+  "promise": 55.8,
+  "vol_ratio": 0.83,
+  "slope": 1.11
  }
 ]

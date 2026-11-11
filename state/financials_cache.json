@@ -8039,8 +8039,8 @@
   },
   "eps_rev": {
    "0q": {
-    "upLast7days": 1.0,
-    "upLast30days": 0.0,
+    "upLast7days": 3.0,
+    "upLast30days": 2.0,
     "downLast30days": 1.0,
     "downLast7Days": 0.0,
     "currency": null,
@@ -8055,10 +8055,10 @@
     "methodology": null
    },
    "0y": {
-    "upLast7days": 3.0,
+    "upLast7days": 4.0,
     "upLast30days": 3.0,
     "downLast30days": 6.0,
-    "downLast7Days": 2.0,
+    "downLast7Days": 4.0,
     "currency": null,
     "methodology": null
    },
@@ -8071,7 +8071,7 @@
     "methodology": null
    }
   },
-  "_fetched": "2026-11-07T01:49:57.608308"
+  "_fetched": "2026-11-11T01:29:54.886530"
  },
  "030200.KS": {
   "ok": true,
