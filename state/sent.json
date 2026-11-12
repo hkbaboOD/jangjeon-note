@@ -14,7 +14,7 @@
  "SCHD|high52": "2026-11-05",
  "005930.KS|setup_reversal": "2026-11-11",
  "000660.KS|setup_turn": "2026-11-04",
- "NVDA|move": "2026-11-11",
+ "NVDA|move": "2026-11-12",
  "NVDA|cross_20_50": "2026-11-02",
  "TSM|move": "2026-11-09",
  "SCHD|cross_20_50": "2026-11-02",
@@ -39,7 +39,7 @@
  "005930.KS|verdict": "2026-11-09",
  "SCHD|verdict": "2026-11-11",
  "MU|bb_reclaim": "2026-11-10",
- "MU|cross_50_120": "2026-11-11",
+ "MU|cross_50_120": "2026-11-12",
  "SCHD|div_bear": "2026-11-11",
  "000660.KS|setup_reversal": "2026-11-11",
  "NVDA|bb_reclaim": "2026-11-12"
