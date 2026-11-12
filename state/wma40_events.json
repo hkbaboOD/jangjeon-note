@@ -219,5 +219,83 @@
   "promise": 55.8,
   "vol_ratio": 0.83,
   "slope": 1.11
+ },
+ {
+  "date": "2026-11-12",
+  "ticker": "033780.KS",
+  "name": "KT&G",
+  "market": "kr",
+  "kind": "down",
+  "week": "2026-11-12",
+  "entry": 171400.0,
+  "bench_entry": 5428.66015625,
+  "promise": 58.7,
+  "vol_ratio": 1.3,
+  "slope": 2.07
+ },
+ {
+  "date": "2026-11-12",
+  "ticker": "138040.KS",
+  "name": "메리츠금융지주",
+  "market": "kr",
+  "kind": "down",
+  "week": "2026-11-12",
+  "entry": 111100.0,
+  "bench_entry": 5428.66015625,
+  "promise": 56.4,
+  "vol_ratio": 1.12,
+  "slope": 1.11
+ },
+ {
+  "date": "2026-11-12",
+  "ticker": "MU",
+  "name": "마이크론",
+  "market": "us",
+  "kind": "up",
+  "week": "2026-11-11",
+  "entry": 812.0,
+  "bench_entry": 7619.3798828125,
+  "promise": 93.5,
+  "vol_ratio": 1.13,
+  "slope": 5.76
+ },
+ {
+  "date": "2026-11-12",
+  "ticker": "META",
+  "name": "메타 플랫폼스",
+  "market": "us",
+  "kind": "up",
+  "week": "2026-11-11",
+  "entry": 628.7550048828125,
+  "bench_entry": 7619.3798828125,
+  "promise": 68.9,
+  "vol_ratio": 0.66,
+  "slope": -0.64
+ },
+ {
+  "date": "2026-11-12",
+  "ticker": "DELL",
+  "name": "델 테크놀로지스",
+  "market": "us",
+  "kind": "up",
+  "week": "2026-11-11",
+  "entry": 373.75,
+  "bench_entry": 7619.3798828125,
+  "promise": 60.0,
+  "vol_ratio": 0.83,
+  "slope": 8.54
+ },
+ {
+  "date": "2026-11-12",
+  "ticker": "COF",
+  "name": "캐피털 원",
+  "market": "us",
+  "kind": "down",
+  "week": "2026-11-11",
+  "entry": 197.1199951171875,
+  "bench_entry": 7619.3798828125,
+  "promise": 63.5,
+  "vol_ratio": 1.31,
+  "slope": -1.15
  }
 ]
