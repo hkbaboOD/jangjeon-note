@@ -4584,96 +4584,90 @@
     "est": 3505.01,
     "act": 3926.0,
     "surp": 12.0
-   },
-   {
-    "q": "26.06",
-    "est": 4122.93,
-    "act": 4670.0,
-    "surp": 13.3
    }
   ],
   "calendar": {
    "next_earnings": null,
    "eps_avg": 3466.96,
-   "rev_avg": 1079339099999.0
+   "rev_avg": 998799520000.0
   },
   "eps_est": {
    "0q": {
     "avg": 3466.96,
     "low": 3466.96,
     "high": 3466.96,
-    "yearAgoEps": 3712.0,
+    "yearAgoEps": 1801.0,
     "numberOfAnalysts": 1.0,
-    "growth": -0.066,
+    "growth": 0.925,
     "currency": null,
     "methodology": null
    },
    "+1q": {
-    "avg": 3212.99,
-    "low": 3212.99,
-    "high": 3212.99,
+    "avg": 4015.84,
+    "low": 4015.84,
+    "high": 4015.84,
     "yearAgoEps": 1801.0,
     "numberOfAnalysts": 1.0,
-    "growth": 0.78400004,
+    "growth": 1.2298,
     "currency": null,
     "methodology": null
    },
    "0y": {
-    "avg": 15747.115,
-    "low": 15264.74,
-    "high": 16225.0,
+    "avg": 14783.7,
+    "low": 14354.77,
+    "high": 15212.63,
     "yearAgoEps": 12903.0,
-    "numberOfAnalysts": 4.0,
-    "growth": 0.2204,
+    "numberOfAnalysts": 2.0,
+    "growth": 0.1458,
     "currency": null,
     "methodology": null
    },
    "+1y": {
-    "avg": 17508.355,
+    "avg": 17131.523,
     "low": 15100.0,
     "high": 19209.0,
-    "yearAgoEps": 15747.115,
+    "yearAgoEps": 14783.7,
     "numberOfAnalysts": 5.0,
-    "growth": 0.1118,
+    "growth": 0.1588,
     "currency": null,
     "methodology": null
    }
   },
   "rev_est": {
    "0q": {
-    "avg": 1079339099999.0,
-    "low": 1031878200000.0,
-    "high": 1126800000000.0,
-    "numberOfAnalysts": 2.0,
-    "yearAgoRevenue": 1093004490000.0,
-    "growth": -0.0125,
+    "avg": 998799520000.0,
+    "low": 998799520000.0,
+    "high": 998799520000.0,
+    "numberOfAnalysts": 1.0,
+    "yearAgoRevenue": 654399480000.0,
+    "growth": 0.5263,
     "currency": null
    },
    "+1q": {
-    "avg": 902204620000.0,
-    "low": 798400000000.0,
-    "high": 1006009230000.0,
-    "numberOfAnalysts": 2.0,
-    "yearAgoRevenue": 654399480000.0,
-    "growth": 0.3787,
+    "avg": 1193141890000.0,
+    "low": 1193141890000.0,
+    "high": 1193141890000.0,
+    "numberOfAnalysts": 1.0,
+    "yearAgoRevenue": 1150012830000.0,
+    "growth": 0.0375,
     "currency": null
    },
    "0y": {
-    "avg": 4416968620000.0,
-    "low": 4360399999999.0,
-    "high": 4473118460000.0,
+    "avg": 4361924680000.0,
+    "low": 4347157760000.0,
+    "high": 4378216279999.0,
     "numberOfAnalysts": 3.0,
     "yearAgoRevenue": 3876691080000.0,
-    "growth": 0.13939999,
+    "growth": 0.1252,
     "currency": null
    },
    "+1y": {
-    "avg": 4769346440000.0,
-    "low": 4626834640000.0,
-    "high": 5046004670000.0,
+    "avg": 4713834030000.0,
+    "low": 4635200000000.0,
+    "high": 4804401740000.0,
     "numberOfAnalysts": 3.0,
-    "yearAgoRevenue": 4416968620000.0,
-    "growth": 0.0798,
+    "yearAgoRevenue": 4361924680000.0,
+    "growth": 0.080699995,
     "currency": null
    }
   },
@@ -4688,29 +4682,29 @@
     "methodology": null
    },
    "+1q": {
-    "current": 3212.99,
-    "7daysAgo": 3588.52,
-    "30daysAgo": 3588.52,
-    "60daysAgo": 3588.52,
-    "90daysAgo": 3532.41,
+    "current": 4015.84,
+    "7daysAgo": 4238.87,
+    "30daysAgo": 4238.87,
+    "60daysAgo": 4238.87,
+    "90daysAgo": 4238.87,
     "currency": null,
     "methodology": null
    },
    "0y": {
-    "current": 15747.115,
-    "7daysAgo": 16100.71,
+    "current": 14783.7,
+    "7daysAgo": 15747.115,
     "30daysAgo": 16100.71,
-    "60daysAgo": 16100.568,
-    "90daysAgo": 15644.215,
+    "60daysAgo": 16100.71,
+    "90daysAgo": 16100.568,
     "currency": null,
     "methodology": null
    },
    "+1y": {
-    "current": 17508.355,
-    "7daysAgo": 18135.312,
+    "current": 17131.523,
+    "7daysAgo": 17508.355,
     "30daysAgo": 18135.312,
-    "60daysAgo": 18063.26,
-    "90daysAgo": 18228.008,
+    "60daysAgo": 18135.312,
+    "90daysAgo": 18063.26,
     "currency": null,
     "methodology": null
    }
@@ -4725,10 +4719,10 @@
     "methodology": null
    },
    "+1q": {
-    "upLast7days": 0.0,
-    "upLast30days": 0.0,
-    "downLast30days": 1.0,
-    "downLast7Days": 1.0,
+    "upLast7days": 1.0,
+    "upLast30days": 1.0,
+    "downLast30days": 0.0,
+    "downLast7Days": 0.0,
     "currency": null,
     "methodology": null
    },
@@ -4749,7 +4743,7 @@
     "methodology": null
    }
   },
-  "_fetched": "2026-11-09T05:50:32.165168"
+  "_fetched": "2026-11-13T02:08:10.363789"
  },
  "009540.KS": {
   "ok": true,
@@ -9777,28 +9771,28 @@
     113215000000.0,
     111721000000.0,
     112032000000.0,
-    null
+    112694000000.0
    ],
    "gross": [
     20637000000.0,
     18494000000.0,
     25409000000.0,
     23299000000.0,
-    null
+    22005000000.0
    ],
    "op": [
     4315000000.0,
     380000000.0,
     8990000000.0,
     7991000000.0,
-    null
+    6563000000.0
    ],
    "net": [
     2348000000.0,
     10000000.0,
     6280000000.0,
     5484000000.0,
-    null
+    4110000000.0
    ],
    "eps": [
     2.59,
@@ -9908,18 +9902,19 @@
   ],
   "calendar": {
    "next_earnings": "2027-01-12",
-   "eps_avg": 2.26306,
-   "rev_avg": 112467323970.0
+   "eps_avg": 2.27275,
+   "rev_avg": 112422931260.0
   },
   "eps_est": {
    "0q": {
-    "avg": 2.26306,
-    "low": 2.05,
+    "avg": 2.27275,
+    "low": 2.15,
     "high": 2.62,
     "yearAgoEps": 2.11,
-    "numberOfAnalysts": 23.0,
-    "growth": 0.0725,
-    "currency": null
+    "numberOfAnalysts": 22.0,
+    "growth": 0.0771,
+    "currency": null,
+    "methodology": null
    },
    "+1q": {
     "avg": 8.16815,
@@ -9928,35 +9923,38 @@
     "yearAgoEps": 7.23,
     "numberOfAnalysts": 16.0,
     "growth": 0.12979999,
-    "currency": null
+    "currency": null,
+    "methodology": null
    },
    "0y": {
-    "avg": 20.59138,
-    "low": 20.11,
+    "avg": 20.51936,
+    "low": 18.32886,
     "high": 20.95,
     "yearAgoEps": 16.35,
-    "numberOfAnalysts": 25.0,
-    "growth": 0.2594,
-    "currency": null
+    "numberOfAnalysts": 26.0,
+    "growth": 0.255,
+    "currency": null,
+    "methodology": null
    },
    "+1y": {
-    "avg": 23.28611,
+    "avg": 23.33072,
     "low": 20.37812,
     "high": 24.32,
-    "yearAgoEps": 20.59138,
+    "yearAgoEps": 20.51936,
     "numberOfAnalysts": 26.0,
-    "growth": 0.1309,
-    "currency": null
+    "growth": 0.137,
+    "currency": null,
+    "methodology": null
    }
   },
   "rev_est": {
    "0q": {
-    "avg": 112467323970.0,
+    "avg": 112422931260.0,
     "low": 109122000000.0,
     "high": 115398000000.0,
-    "numberOfAnalysts": 18.0,
+    "numberOfAnalysts": 17.0,
     "yearAgoRevenue": 113215000000.0,
-    "growth": -0.0066000004,
+    "growth": -0.0069999998,
     "currency": null
    },
    "+1q": {
@@ -9969,32 +9967,33 @@
     "currency": null
    },
    "0y": {
-    "avg": 449095955520.0,
+    "avg": 449048155520.0,
     "low": 445569000000.0,
     "high": 451844000000.0,
     "numberOfAnalysts": 20.0,
     "yearAgoRevenue": 447567000000.0,
-    "growth": 0.0034,
+    "growth": 0.0033000002,
     "currency": null
    },
    "+1y": {
-    "avg": 463100975590.0,
+    "avg": 462928793780.0,
     "low": 452553000000.0,
     "high": 475215000000.0,
     "numberOfAnalysts": 22.0,
-    "yearAgoRevenue": 449095955520.0,
-    "growth": 0.0312,
+    "yearAgoRevenue": 449048155520.0,
+    "growth": 0.0309,
     "currency": null
    }
   },
   "eps_trend": {
    "0q": {
-    "current": 2.26306,
-    "7daysAgo": 2.26383,
-    "30daysAgo": 2.10279,
+    "current": 2.27275,
+    "7daysAgo": 2.26306,
+    "30daysAgo": 2.10253,
     "60daysAgo": 2.13627,
-    "90daysAgo": 2.1721,
-    "currency": null
+    "90daysAgo": 2.13601,
+    "currency": null,
+    "methodology": null
    },
    "+1q": {
     "current": 8.16815,
@@ -10002,56 +10001,63 @@
     "30daysAgo": 8.11654,
     "60daysAgo": 8.12298,
     "90daysAgo": 8.12487,
-    "currency": null
+    "currency": null,
+    "methodology": null
    },
    "0y": {
-    "current": 20.59138,
-    "7daysAgo": 20.59281,
-    "30daysAgo": 19.86706,
+    "current": 20.51936,
+    "7daysAgo": 20.59138,
+    "30daysAgo": 19.86728,
     "60daysAgo": 19.81226,
     "90daysAgo": 19.8121,
-    "currency": null
+    "currency": null,
+    "methodology": null
    },
    "+1y": {
-    "current": 23.28611,
-    "7daysAgo": 23.25918,
-    "30daysAgo": 22.61019,
+    "current": 23.33072,
+    "7daysAgo": 23.28611,
+    "30daysAgo": 22.61016,
     "60daysAgo": 22.43537,
     "90daysAgo": 22.43544,
-    "currency": null
+    "currency": null,
+    "methodology": null
    }
   },
   "eps_rev": {
    "0q": {
     "upLast7days": 0.0,
-    "upLast30days": 0.0,
-    "downLast30days": 3.0,
-    "downLast7Days": 1.0,
-    "currency": null
+    "upLast30days": 16.0,
+    "downLast30days": 6.0,
+    "downLast7Days": 0.0,
+    "currency": null,
+    "methodology": null
    },
    "+1q": {
     "upLast7days": 1.0,
-    "upLast30days": 1.0,
-    "downLast30days": 0.0,
-    "downLast7Days": 0.0,
-    "currency": null
+    "upLast30days": 9.0,
+    "downLast30days": 5.0,
+    "downLast7Days": 1.0,
+    "currency": null,
+    "methodology": null
    },
    "0y": {
-    "upLast7days": 1.0,
-    "upLast30days": 2.0,
+    "upLast7days": 0.0,
+    "upLast30days": 24.0,
     "downLast30days": 0.0,
     "downLast7Days": 0.0,
-    "currency": null
+    "currency": null,
+    "methodology": null
    },
    "+1y": {
     "upLast7days": 2.0,
-    "upLast30days": 2.0,
+    "upLast30days": 22.0,
     "downLast30days": 1.0,
     "downLast7Days": 0.0,
-    "currency": null
+    "currency": null,
+    "methodology": null
    }
   },
-  "_fetched": "2026-11-03T03:06:07.267338"
+  "_fetched": "2026-11-13T02:08:15.035727"
  },
  "JPM": {
   "ok": true,
@@ -11043,7 +11049,7 @@
     "methodology": null
    }
   },
-  "_fetched": "2026-11-09T05:50:28.878279"
+  "_fetched": "2026-11-13T02:08:03.852084"
  },
  "011200.KS": {
   "ok": true,
@@ -13059,5 +13065,340 @@
    }
   },
   "_fetched": "2026-11-12T02:33:10.937682"
+ },
+ "028260.KS": {
+  "ok": true,
+  "annual": {
+   "periods": [
+    "2022.12",
+    "2023.12",
+    "2024.12",
+    "2025.12"
+   ],
+   "revenue": [
+    43161653399530.0,
+    41895681215730.0,
+    42103238027330.0,
+    40742240967140.0
+   ],
+   "gross": [
+    6039149824030.0,
+    6566946726530.0,
+    7107601726440.0,
+    7687587042650.0
+   ],
+   "op": [
+    2553628414030.0,
+    2880293816530.0,
+    3077521694440.0,
+    3307955495650.0
+   ],
+   "net": [
+    2044080219090.0,
+    2218290399860.0,
+    2230258255120.0,
+    2439114193250.0
+   ],
+   "eps": [
+    12460.0,
+    13556.0,
+    13629.0,
+    14905.0
+   ]
+  },
+  "quarterly": {
+   "periods": [
+    "25.06",
+    "25.09",
+    "25.12",
+    "26.03",
+    "26.06"
+   ],
+   "revenue": [
+    10022075966800.0,
+    10150950935080.0,
+    10832433157320.0,
+    10465823172860.0,
+    11995055624410.0
+   ],
+   "gross": [
+    1801244558790.0,
+    2050670042450.0,
+    2082638054770.0,
+    1869710555690.0,
+    2213952893600.0
+   ],
+   "op": [
+    773419344790.0,
+    989710496450.0,
+    820055617770.0,
+    714214283690.0,
+    1037886010600.0
+   ],
+   "net": [
+    352685751720.0,
+    566477348410.0,
+    787186046030.0,
+    844219970300.0,
+    595464029790.0
+   ],
+   "eps": [
+    2155.0,
+    3462.0,
+    null,
+    5159.0,
+    3639.0
+   ]
+  },
+  "balance": {
+   "periods": [
+    "2024.12",
+    "2025.12"
+   ],
+   "assets": [
+    61990426835540.0,
+    86532745699420.0
+   ],
+   "liab": [
+    24731886937010.0,
+    29035796293980.0
+   ],
+   "equity": [
+    31068664773790.0,
+    49911892454120.0
+   ],
+   "debt": [
+    4583585534760.0,
+    3953729637180.0
+   ],
+   "cash": [
+    5130102151580.0,
+    5526835773590.0
+   ],
+   "cur_assets": [
+    20180976210720.0,
+    21356404512530.0
+   ],
+   "cur_liab": [
+    14747260718480.0,
+    13871980126880.0
+   ]
+  },
+  "cashflow": {
+   "periods": [
+    "2022.12",
+    "2023.12",
+    "2024.12",
+    "2025.12"
+   ],
+   "ocf": [
+    2618286420040.0,
+    2798653381130.0,
+    3306879187570.0,
+    3023741373860.0
+   ],
+   "capex": [
+    -1251936962350.0,
+    -1426163056740.0,
+    -1793875003030.0,
+    -1905529722690.0
+   ],
+   "fcf": [
+    1366349457690.0,
+    1372490324390.0,
+    1513004184540.0,
+    1118211651170.0
+   ],
+   "div": [
+    -723747605080.0,
+    -378468059400.0,
+    -419470309370.0,
+    -425524824100.0
+   ],
+   "buyback": [
+    -198680080000.0,
+    null,
+    null,
+    null
+   ]
+  },
+  "surprises": [
+   {
+    "q": "25.12",
+    "est": 3419.965,
+    "act": 4823.0,
+    "surp": 41.0
+   },
+   {
+    "q": "26.03",
+    "est": 3768.89,
+    "act": 5159.0,
+    "surp": 36.9
+   },
+   {
+    "q": "26.06",
+    "est": 3136.2456,
+    "act": 3651.0,
+    "surp": 16.4
+   }
+  ],
+  "calendar": {
+   "next_earnings": "2027-01-27",
+   "eps_avg": 8843.354,
+   "rev_avg": 12435100030000.0
+  },
+  "eps_est": {
+   "0q": {
+    "avg": 8843.354,
+    "low": 8652.361,
+    "high": 9034.346,
+    "yearAgoEps": 4823.0,
+    "numberOfAnalysts": 2.0,
+    "growth": 0.8336,
+    "currency": null,
+    "methodology": null
+   },
+   "+1q": {
+    "avg": 9896.66,
+    "low": 7609.15,
+    "high": 12515.0,
+    "yearAgoEps": 5159.0,
+    "numberOfAnalysts": 3.0,
+    "growth": 0.91830003,
+    "currency": null,
+    "methodology": null
+   },
+   "0y": {
+    "avg": 17839.412,
+    "low": 15430.0,
+    "high": 20860.746,
+    "yearAgoEps": 14955.0,
+    "numberOfAnalysts": 16.0,
+    "growth": 0.1929,
+    "currency": null,
+    "methodology": null
+   },
+   "+1y": {
+    "avg": 22826.91,
+    "low": 14339.0,
+    "high": 41250.92,
+    "yearAgoEps": 17839.412,
+    "numberOfAnalysts": 16.0,
+    "growth": 0.2796,
+    "currency": null,
+    "methodology": null
+   }
+  },
+  "rev_est": {
+   "0q": {
+    "avg": 12435100030000.0,
+    "low": 12014000000000.0,
+    "high": 12761000000000.0,
+    "numberOfAnalysts": 9.0,
+    "yearAgoRevenue": 10832433000000.0,
+    "growth": 0.148,
+    "currency": null
+   },
+   "+1q": {
+    "avg": 12293210450000.0,
+    "low": 12185420900000.0,
+    "high": 12401000000000.0,
+    "numberOfAnalysts": 2.0,
+    "yearAgoRevenue": 10465823000000.0,
+    "growth": 0.17459999,
+    "currency": null
+   },
+   "0y": {
+    "avg": 46874733460000.0,
+    "low": 46140634740000.0,
+    "high": 47980722880000.0,
+    "numberOfAnalysts": 15.0,
+    "yearAgoRevenue": 40742241000000.0,
+    "growth": 0.1505,
+    "currency": null
+   },
+   "+1y": {
+    "avg": 50374670950000.0,
+    "low": 45246200000000.0,
+    "high": 54248000000000.0,
+    "numberOfAnalysts": 20.0,
+    "yearAgoRevenue": 46874733460000.0,
+    "growth": 0.0747,
+    "currency": null
+   }
+  },
+  "eps_trend": {
+   "0q": {
+    "current": 8843.354,
+    "7daysAgo": 4664.519,
+    "30daysAgo": 4664.519,
+    "60daysAgo": 3655.7244,
+    "90daysAgo": 3655.7244,
+    "currency": null,
+    "methodology": null
+   },
+   "+1q": {
+    "current": 9896.66,
+    "7daysAgo": 11668.973,
+    "30daysAgo": 11668.973,
+    "60daysAgo": 11250.308,
+    "90daysAgo": 11250.308,
+    "currency": null,
+    "methodology": null
+   },
+   "0y": {
+    "current": 17839.412,
+    "7daysAgo": 17839.412,
+    "30daysAgo": 16569.572,
+    "60daysAgo": 16584.6,
+    "90daysAgo": 16620.215,
+    "currency": null,
+    "methodology": null
+   },
+   "+1y": {
+    "current": 22826.91,
+    "7daysAgo": 22826.912,
+    "30daysAgo": 18036.111,
+    "60daysAgo": 18109.05,
+    "90daysAgo": 18028.3,
+    "currency": null,
+    "methodology": null
+   }
+  },
+  "eps_rev": {
+   "0q": {
+    "upLast7days": 1.0,
+    "upLast30days": 1.0,
+    "downLast30days": 0.0,
+    "downLast7Days": 0.0,
+    "currency": null,
+    "methodology": null
+   },
+   "+1q": {
+    "upLast7days": 0.0,
+    "upLast30days": 1.0,
+    "downLast30days": 1.0,
+    "downLast7Days": 1.0,
+    "currency": null,
+    "methodology": null
+   },
+   "0y": {
+    "upLast7days": 4.0,
+    "upLast30days": 4.0,
+    "downLast30days": 1.0,
+    "downLast7Days": 1.0,
+    "currency": null,
+    "methodology": null
+   },
+   "+1y": {
+    "upLast7days": 3.0,
+    "upLast30days": 3.0,
+    "downLast30days": 1.0,
+    "downLast7Days": 1.0,
+    "currency": null,
+    "methodology": null
+   }
+  },
+  "_fetched": "2026-11-13T02:08:07.064790"
  }
 }
