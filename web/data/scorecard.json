@@ -28,6 +28,13 @@
    "days": 19,
    "ic_daily": -0.1053,
    "top3_daily": -2.05
+  },
+  {
+   "date": "2026-11-14",
+   "version": 5,
+   "days": 25,
+   "ic_daily": -0.061,
+   "top3_daily": -2.04
   }
  ],
  "window": 60

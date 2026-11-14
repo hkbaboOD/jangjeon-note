@@ -1,270 +1,282 @@
 {
- "week": "2026-11-07",
+ "week": "2026-11-14",
  "plan": {
-  "version": 3,
+  "version": 5,
   "weights": {
    "daily": {
-    "target": 0.187,
-    "quality": 0.187,
-    "timing": 0.21,
-    "trend": 0.105,
-    "value": 0.311
+    "timing": 0.189,
+    "value": 0.271,
+    "trend": 0.094,
+    "quality": 0.163,
+    "target": 0.163,
+    "wma40": 0.12
    },
    "weekly": {
-    "momentum": 0.105,
-    "target": 0.169,
-    "quality": 0.282,
-    "trend": 0.105,
-    "value": 0.339
+    "value": 0.263,
+    "trend": 0.084,
+    "quality": 0.219,
+    "target": 0.131,
+    "wma40": 0.219,
+    "momentum": 0.084
    },
    "monthly": {
-    "growth": 0.155,
-    "target": 0.155,
-    "quality": 0.31,
-    "trend": 0.07,
-    "value": 0.31
+    "value": 0.246,
+    "trend": 0.056,
+    "quality": 0.246,
+    "growth": 0.123,
+    "target": 0.123,
+    "wma40": 0.205
    }
   },
   "basis": {
    "daily": [
-    "백테스트 차트 종합 IC -0.009(t -1.0) 약해 차트 비중 축소"
+    "백테스트 차트 종합 IC -0.009(t -1.1) 약해 차트 비중 축소"
    ],
    "weekly": [
-    "백테스트 차트 종합 IC -0.009(t -0.6) 약해 차트 비중 축소"
+    "백테스트 차트 종합 IC -0.011(t -0.7) 약해 차트 비중 축소"
    ],
    "monthly": [
     "백테스트 차트 종합 IC -0.004(t -0.2) 약해 차트 비중 축소"
    ]
   },
-  "changed": false
+  "changed": true
  },
  "do": {
-  "days_recorded": 19,
-  "new_picks": 37,
-  "open_picks": 71
+  "days_recorded": 25,
+  "new_picks": 34,
+  "open_picks": 76
  },
  "check": {
   "matured": {
    "daily": {
-    "count": 47,
-    "win_rate": 36.17021276595745,
-    "avg_ex": -1.4661702127659577,
+    "count": 66,
+    "win_rate": 36.36363636363637,
+    "avg_ex": -1.709848484848485,
     "recent_win": 40.0,
     "recent_n": 20
+   },
+   "weekly": {
+    "count": 10,
+    "win_rate": 30.0,
+    "avg_ex": -4.004,
+    "recent_win": 30.0,
+    "recent_n": 10
    }
   },
   "ic": {
    "daily": {
-    "ic": -0.1053,
-    "t": -0.91,
-    "dates": 12,
-    "n_eff": 2.4
+    "ic": -0.061,
+    "t": -0.62,
+    "dates": 18,
+    "n_eff": 3.6
    }
   },
   "top3": {
    "daily": {
-    "avg_ex": -2.05,
-    "dates": 13,
-    "t": -0.58,
-    "win": 30.8
+    "avg_ex": -2.04,
+    "dates": 19,
+    "t": -0.72,
+    "win": 36.8
    }
   },
   "closed_this_week": [
    {
-    "name": "SK하이닉스",
+    "name": "HD현대중공업",
     "horizon": "daily",
-    "date": "2026-10-28",
-    "score": 84.8,
-    "setup": "상승추세 속 눌림목",
-    "ret": 0.0,
-    "ex": 3.67,
-    "days": 5,
-    "win": true,
-    "closed": "2026-11-04"
-   },
-   {
-    "name": "S-Oil",
-    "horizon": "daily",
-    "date": "2026-10-28",
-    "score": 67.1,
-    "setup": "상승추세 속 눌림목",
-    "ret": -4.79,
-    "ex": -1.13,
-    "days": 5,
-    "win": false,
-    "closed": "2026-11-04"
-   },
-   {
-    "name": "기아",
-    "horizon": "daily",
-    "date": "2026-10-28",
-    "score": 66.6,
+    "date": "2026-11-04",
+    "score": 73.6,
     "setup": "하락 후 반등 시도",
-    "ret": -12.88,
-    "ex": -9.21,
-    "days": 5,
-    "win": false,
-    "closed": "2026-11-04"
-   },
-   {
-    "name": "SK하이닉스",
-    "horizon": "daily",
-    "date": "2026-10-29",
-    "score": 85.0,
-    "setup": "장기 추세 전환 초기",
-    "ret": -18.15,
-    "ex": -8.03,
-    "days": 5,
-    "win": false,
-    "closed": "2026-11-05"
-   },
-   {
-    "name": "하나금융지주",
-    "horizon": "daily",
-    "date": "2026-10-29",
-    "score": 69.4,
-    "setup": "상승추세 속 눌림목",
-    "ret": 4.0,
-    "ex": 14.12,
+    "ret": -5.15,
+    "ex": 1.58,
     "days": 5,
     "win": true,
-    "closed": "2026-11-05"
-   },
-   {
-    "name": "S-Oil",
-    "horizon": "daily",
-    "date": "2026-10-29",
-    "score": 67.1,
-    "setup": "상승추세 속 눌림목",
-    "ret": -8.52,
-    "ex": 1.6,
-    "days": 5,
-    "win": true,
-    "closed": "2026-11-05"
-   },
-   {
-    "name": "삼성전자",
-    "horizon": "daily",
-    "date": "2026-10-30",
-    "score": 79.9,
-    "setup": "상승추세 속 눌림목",
-    "ret": -16.29,
-    "ex": -3.69,
-    "days": 5,
-    "win": false,
-    "closed": "2026-11-06"
-   },
-   {
-    "name": "S-Oil",
-    "horizon": "daily",
-    "date": "2026-10-30",
-    "score": 68.2,
-    "setup": "상승추세 속 눌림목",
-    "ret": -16.56,
-    "ex": -3.95,
-    "days": 5,
-    "win": false,
-    "closed": "2026-11-06"
+    "closed": "2026-11-11"
    },
    {
     "name": "신한지주",
     "horizon": "daily",
-    "date": "2026-10-30",
-    "score": 65.0,
+    "date": "2026-11-04",
+    "score": 64.7,
     "setup": "중립",
-    "ret": -4.86,
-    "ex": 7.75,
+    "ret": -0.35,
+    "ex": 6.38,
     "days": 5,
     "win": true,
-    "closed": "2026-11-06"
+    "closed": "2026-11-11"
    },
    {
     "name": "엔비디아",
     "horizon": "daily",
-    "date": "2026-10-31",
-    "score": 80.0,
+    "date": "2026-11-05",
+    "score": 80.1,
     "setup": "상승추세 속 눌림목",
-    "ret": -8.8,
-    "ex": -6.12,
+    "ret": -15.89,
+    "ex": -14.99,
     "days": 5,
     "win": false,
-    "closed": "2026-11-07"
+    "closed": "2026-11-12"
+   },
+   {
+    "name": "현대로템",
+    "horizon": "daily",
+    "date": "2026-11-05",
+    "score": 75.6,
+    "setup": "하락 후 반등 시도",
+    "ret": -2.64,
+    "ex": -2.89,
+    "days": 5,
+    "win": false,
+    "closed": "2026-11-12"
+   },
+   {
+    "name": "신한지주",
+    "horizon": "daily",
+    "date": "2026-11-05",
+    "score": 68.9,
+    "setup": "하락 후 반등 시도",
+    "ret": -4.07,
+    "ex": -4.33,
+    "days": 5,
+    "win": false,
+    "closed": "2026-11-12"
+   },
+   {
+    "name": "마이크론",
+    "horizon": "daily",
+    "date": "2026-11-06",
+    "score": 85.8,
+    "setup": "상승추세 속 눌림목",
+    "ret": 0.46,
+    "ex": -2.78,
+    "days": 5,
+    "win": false,
+    "closed": "2026-11-13"
+   },
+   {
+    "name": "현대로템",
+    "horizon": "daily",
+    "date": "2026-11-06",
+    "score": 71.9,
+    "setup": "하락 후 반등 시도",
+    "ret": 6.52,
+    "ex": -3.17,
+    "days": 5,
+    "win": false,
+    "closed": "2026-11-13"
    },
    {
     "name": "S-Oil",
     "horizon": "daily",
-    "date": "2026-10-31",
-    "score": 69.2,
-    "setup": "상승추세 속 눌림목",
-    "ret": -13.66,
-    "ex": -1.95,
+    "date": "2026-11-06",
+    "score": 70.8,
+    "setup": "중립",
+    "ret": 2.16,
+    "ex": -7.53,
     "days": 5,
     "win": false,
-    "closed": "2026-11-07"
+    "closed": "2026-11-13"
    },
    {
-    "name": "기업은행",
+    "name": "HD현대중공업",
     "horizon": "daily",
-    "date": "2026-10-31",
-    "score": 68.9,
+    "date": "2026-11-06",
+    "score": 72.9,
     "setup": "하락 후 반등 시도",
-    "ret": 0.57,
-    "ex": 12.28,
-    "days": 5,
-    "win": true,
-    "closed": "2026-11-07"
-   },
-   {
-    "name": "삼성전자",
-    "horizon": "daily",
-    "date": "2026-11-02",
-    "score": 80.9,
-    "setup": "상승추세 속 눌림목",
-    "ret": -15.1,
-    "ex": -3.26,
+    "ret": 5.33,
+    "ex": -2.59,
     "days": 5,
     "win": false,
-    "closed": "2026-11-07"
+    "closed": "2026-11-13"
    },
    {
-    "name": "HD한국조선해양",
+    "name": "마이크론",
     "horizon": "daily",
-    "date": "2026-11-02",
-    "score": 72.4,
-    "setup": "하락 후 반등 시도",
-    "ret": -1.23,
-    "ex": 10.6,
+    "date": "2026-11-07",
+    "score": 92.3,
+    "setup": "상승추세 속 눌림목",
+    "ret": 12.8,
+    "ex": 10.29,
     "days": 5,
     "win": true,
-    "closed": "2026-11-07"
+    "closed": "2026-11-14"
    },
    {
-    "name": "기업은행",
+    "name": "HD현대중공업",
     "horizon": "daily",
-    "date": "2026-11-02",
-    "score": 71.1,
+    "date": "2026-11-07",
+    "score": 72.9,
     "setup": "하락 후 반등 시도",
-    "ret": 1.67,
-    "ex": 13.5,
+    "ret": 3.24,
+    "ex": -1.32,
+    "days": 5,
+    "win": false,
+    "closed": "2026-11-14"
+   },
+   {
+    "name": "CVS 헬스",
+    "horizon": "daily",
+    "date": "2026-11-07",
+    "score": 68.8,
+    "setup": "하락 후 반등 시도",
+    "ret": 6.56,
+    "ex": 4.05,
     "days": 5,
     "win": true,
-    "closed": "2026-11-07"
+    "closed": "2026-11-14"
+   },
+   {
+    "name": "HD현대중공업",
+    "horizon": "daily",
+    "date": "2026-11-09",
+    "score": 72.8,
+    "setup": "하락 후 반등 시도",
+    "ret": 7.75,
+    "ex": 3.45,
+    "days": 5,
+    "win": true,
+    "closed": "2026-11-14"
+   },
+   {
+    "name": "S-Oil",
+    "horizon": "daily",
+    "date": "2026-11-09",
+    "score": 69.4,
+    "setup": "중립",
+    "ret": 0.19,
+    "ex": -4.11,
+    "days": 5,
+    "win": false,
+    "closed": "2026-11-14"
+   },
+   {
+    "name": "신한지주",
+    "horizon": "daily",
+    "date": "2026-11-09",
+    "score": 65.9,
+    "setup": "하락 후 반등 시도",
+    "ret": 4.54,
+    "ex": 0.42,
+    "days": 5,
+    "win": true,
+    "closed": "2026-11-14"
    }
   ],
   "win_delta": {
-   "daily": 5.1
+   "daily": 0.2
   }
  },
  "act": {
-  "changes": [],
+  "changes": [
+   "[오늘] 40주선 0.10→0.12 (백테스트 차트 종합 IC -0.009(t -1.1) 약해 차트 비중 축소)",
+   "[이번 주] 40주선 0.20→0.22 (백테스트 차트 종합 IC -0.011(t -0.7) 약해 차트 비중 축소)"
+  ],
   "contest": {}
  },
  "next": [
-  "오늘 추천: 실전 기록 19일째, 실전 채점으로 보정하기까지 약 5주",
-  "이번 주 추천: 실전 기록 19일째, 실전 채점으로 보정하기까지 약 8주",
-  "이번 달 추천: 실전 기록 19일째, 실전 채점으로 보정하기까지 약 32주",
-  "오늘 추천 최근 승률 40%로 낮음. 다음 보정에서 새 후보·기본 모델 비교 결과를 우선 반영",
-  "이번 주 근거가 유의하지 않아 가중치 유지(억지로 바꾸지 않음)"
+  "오늘 추천: 실전 기록 25일째, 실전 채점으로 보정하기까지 약 4주",
+  "이번 주 추천: 실전 기록 25일째, 실전 채점으로 보정하기까지 약 7주",
+  "이번 달 추천: 실전 기록 25일째, 실전 채점으로 보정하기까지 약 31주",
+  "오늘 추천 최근 승률 40%로 낮음. 다음 보정에서 새 후보·기본 모델 비교 결과를 우선 반영"
  ],
  "history": [
   {
@@ -291,6 +303,13 @@
    "version": 3,
    "win_daily": 36.2,
    "ic_daily": -0.1053
+  },
+  {
+   "week": "2026-11-14",
+   "version": 5,
+   "win_daily": 36.4,
+   "win_weekly": 30.0,
+   "ic_daily": -0.061
   }
  ]
 }
