@@ -201,7 +201,7 @@ function renderBriefUS(el) {
       <button class="row" data-t="${esc(p.ticker)}"><div><div class="t1">${i + 1}. ${esc(p.name)}</div><div class="t2">${esc(p.setup_label || "")}</div></div><span></span><div class="num"><b>${nf(p.score, 1)}</b><span class="t2">점</span></div></button>`).join("")}</div></div>` : ""}
     ${b.geo ? geoCard(b.geo, state.data.geo_weekly) : ""}
     <div class="sec"><h2>관심종목</h2><div class="panel">${watch || '<div class="empty">관심종목 없음</div>'}</div></div>
-    ${(b.us_prev || []).length ? `<div class="sec"><h2>전일 미 증시 마감</h2><div class="macro">${macroChips(b.us_prev)}</div></div>` : ""}
+    ${(b.us_prev || []).length ? `<div class="sec"><h2>${b.us_live ? `미 증시 장중 <small>${when(b.generated)} 기준, 마감 전 값</small>` : "전일 미 증시 마감"}</h2><div class="macro">${macroChips(b.us_prev)}</div></div>` : ""}
     ${moversBlock(b.movers, "오늘 한국")}
     ${newsList("뉴욕증시 헤드라인", b.news_kr)}
     ${newsList("해외 헤드라인", b.news)}

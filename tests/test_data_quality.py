@@ -207,3 +207,19 @@ def test_pick_top_excludes_stage4():
     assert df.loc[df.ticker == "AAA", "wma40"].iloc[0] == 15
     picks = val_mod.pick_top(df, "daily", n=10)
     assert "AAA" not in [p["ticker"] for p in picks] and all(p["stage40"] != 4 for p in picks)
+
+
+def test_build_us_flags_us_session_live():
+    """미장 장전이 늦게 실행돼 미국 정규장 중에 생성되면 장중 값임을 표시(11/14 04:36 KST 실행 = 미 동부 14:36)."""
+    cfg = load_config()
+    q = lambda d: {"last": 7552.31, "chg_1d": -0.53, "date": d, "spark": [1, 2, 3]}  # noqa: E731
+    tech = {"^KS11": q("2026-11-13"), "^GSPC": q("2026-11-13"), "ES=F": q("2026-11-13")}
+    live = briefing.build_us(cfg, tech, [], [], [], [], datetime(2026, 11, 13, 19, 36, tzinfo=timezone.utc))
+    assert live["us_live"] is True and live["tonight"][0].startswith("⚠ 예약 실행이 늦어 미국장 개장 뒤")
+    on_time = briefing.build_us(cfg, tech, [], [], [], [], datetime(2026, 11, 13, 12, 13, tzinfo=timezone.utc))
+    assert on_time["us_live"] is False and not on_time["tonight"][0].startswith("⚠")
+    # 서머타임 기간(10월): 동부 09:30 = 13:30 UTC 개장, 16:00 = 20:00 UTC 마감
+    assert briefing.us_session_live(datetime(2026, 10, 20, 13, 29, tzinfo=timezone.utc)) is False
+    assert briefing.us_session_live(datetime(2026, 10, 20, 13, 30, tzinfo=timezone.utc)) is True
+    assert briefing.us_session_live(datetime(2026, 10, 20, 20, 0, tzinfo=timezone.utc)) is False
+    assert briefing.us_session_live(datetime(2026, 11, 14, 16, 0, tzinfo=timezone.utc)) is False  # 토요일

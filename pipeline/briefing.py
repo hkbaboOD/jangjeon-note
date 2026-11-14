@@ -109,6 +109,16 @@ def us_eastern_offset(now_utc: datetime) -> int:
     return -4 if start <= now_utc < end else -5
 
 
+def us_session_live(now_utc: datetime) -> bool:
+    """미국 정규장(동부 09:30~16:00, 평일) 진행 중인지. 예약 실행이 늦어 개장 뒤 생성되면 지수·선물이 장중 값."""
+    off = us_eastern_offset(now_utc)
+    et = now_utc.astimezone(timezone(timedelta(hours=off)))
+    if et.weekday() >= 5:
+        return False
+    mins = et.hour * 60 + et.minute
+    return 9 * 60 + 30 <= mins < 16 * 60
+
+
 def build_us(cfg: dict, tech: dict, kr_rows: list[dict], watch_rows: list[dict], us_rows: list[dict],
              news: list[dict], now_utc: datetime) -> dict:
     """미장 장전 브리핑: 국내장 마감 리뷰 + 미 지수 선물·매크로 + 오늘 밤 체크(실적 발표 등)."""
@@ -149,6 +159,9 @@ def build_us(cfg: dict, tech: dict, kr_rows: list[dict], watch_rows: list[dict],
 
     # 오늘 밤 미국장 체크
     tonight = []
+    us_live = us_session_live(now_utc)
+    if us_live:
+        tonight.append("⚠ 예약 실행이 늦어 미국장 개장 뒤 생성됐습니다. 선물·미 지수는 장 마감 값이 아니라 생성 시각의 장중 값입니다")
     es, nq = chg("ES=F"), chg("NQ=F")
     if es is not None:
         avg = (es + nq) / 2 if nq is not None else es
@@ -181,7 +194,7 @@ def build_us(cfg: dict, tech: dict, kr_rows: list[dict], watch_rows: list[dict],
 
     diag = [{"ticker": w["ticker"], "name": w["name"], "chg_1d": w["tech"]["chg_1d"], **w["diag"]}
             for w in watch_rows if w.get("diag")]
-    data = {"kr_date": kr_date, "kr_stale": kr_stale, "futures": fut, "kr_indices": kr_idx, "us_prev": us_prev, "macro": macro, "breadth": breadth, "movers": movers,
+    data = {"kr_date": kr_date, "kr_stale": kr_stale, "futures": fut, "kr_indices": kr_idx, "us_prev": us_prev, "us_live": us_live, "macro": macro, "breadth": breadth, "movers": movers,
             "review": review, "tonight": tonight, "earnings": earn, "diagnosis": diag, "news": news[:12],
             "us_open_kst": open_kst.strftime("%H:%M"), "dst": off == -4}
     data["ai_summary"] = _llm_summary(cfg, data, kind="us")
