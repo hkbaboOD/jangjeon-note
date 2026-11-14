@@ -388,5 +388,57 @@
   "promise": 63.7,
   "vol_ratio": 1.42,
   "slope": -1.2
+ },
+ {
+  "date": "2026-11-14",
+  "ticker": "MU",
+  "name": "마이크론",
+  "market": "us",
+  "kind": "up",
+  "week": "2026-11-13",
+  "entry": 778.3099975585938,
+  "bench_entry": 7561.669921875,
+  "promise": 93.1,
+  "vol_ratio": 1.11,
+  "slope": 5.65
+ },
+ {
+  "date": "2026-11-14",
+  "ticker": "META",
+  "name": "메타 플랫폼스",
+  "market": "us",
+  "kind": "up",
+  "week": "2026-11-13",
+  "entry": 641.989990234375,
+  "bench_entry": 7561.669921875,
+  "promise": 68.2,
+  "vol_ratio": 0.7,
+  "slope": -0.59
+ },
+ {
+  "date": "2026-11-14",
+  "ticker": "QCOM",
+  "name": "퀄컴",
+  "market": "us",
+  "kind": "up",
+  "week": "2026-11-13",
+  "entry": 172.47000122070312,
+  "bench_entry": 7561.669921875,
+  "promise": 56.1,
+  "vol_ratio": 0.89,
+  "slope": 1.09
+ },
+ {
+  "date": "2026-11-14",
+  "ticker": "COF",
+  "name": "캐피털 원",
+  "market": "us",
+  "kind": "down",
+  "week": "2026-11-13",
+  "entry": 195.0800018310547,
+  "bench_entry": 7561.669921875,
+  "promise": 63.4,
+  "vol_ratio": 1.19,
+  "slope": -1.18
  }
 ]
