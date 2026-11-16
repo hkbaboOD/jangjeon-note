@@ -440,5 +440,18 @@
   "promise": 63.4,
   "vol_ratio": 1.19,
   "slope": -1.18
+ },
+ {
+  "date": "2026-11-16",
+  "ticker": "003230.KS",
+  "name": "삼양식품",
+  "market": "kr",
+  "kind": "up",
+  "week": "2026-11-16",
+  "entry": 1284000.0,
+  "bench_entry": 5241.66015625,
+  "promise": 59.1,
+  "vol_ratio": 0.4,
+  "slope": 0.38
  }
 ]
