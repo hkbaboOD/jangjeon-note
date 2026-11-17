@@ -718,5 +718,11 @@
   "type": "stock",
   "ko": "델테크놀로지",
   "checked": "2026-11-10"
+ },
+ "INTU": {
+  "code": "INTU.O",
+  "type": "stock",
+  "ko": "인튜이트",
+  "checked": "2026-11-17"
  }
 }

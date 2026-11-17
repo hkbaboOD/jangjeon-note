@@ -453,5 +453,83 @@
   "promise": 59.1,
   "vol_ratio": 0.4,
   "slope": 0.38
+ },
+ {
+  "date": "2026-11-17",
+  "ticker": "326030.KS",
+  "name": "SK바이오팜",
+  "market": "kr",
+  "kind": "up",
+  "week": "2026-11-17",
+  "entry": 90400.0,
+  "bench_entry": 5028.72998046875,
+  "promise": 76.8,
+  "vol_ratio": 0.76,
+  "slope": -3.02
+ },
+ {
+  "date": "2026-11-17",
+  "ticker": "003230.KS",
+  "name": "삼양식품",
+  "market": "kr",
+  "kind": "up",
+  "week": "2026-11-17",
+  "entry": 1279000.0,
+  "bench_entry": 5028.72998046875,
+  "promise": 59.0,
+  "vol_ratio": 0.87,
+  "slope": 0.37
+ },
+ {
+  "date": "2026-11-17",
+  "ticker": "ADBE",
+  "name": "어도비",
+  "market": "us",
+  "kind": "up",
+  "week": "2026-11-16",
+  "entry": 246.0,
+  "bench_entry": 7416.58984375,
+  "promise": 63.6,
+  "vol_ratio": 0.81,
+  "slope": -1.48
+ },
+ {
+  "date": "2026-11-17",
+  "ticker": "INTU",
+  "name": "인튜이트",
+  "market": "us",
+  "kind": "up",
+  "week": "2026-11-16",
+  "entry": 345.55999755859375,
+  "bench_entry": 7416.58984375,
+  "promise": 56.7,
+  "vol_ratio": 0.68,
+  "slope": -3.74
+ },
+ {
+  "date": "2026-11-17",
+  "ticker": "MU",
+  "name": "마이크론",
+  "market": "us",
+  "kind": "down",
+  "week": "2026-11-16",
+  "entry": 719.02001953125,
+  "bench_entry": 7416.58984375,
+  "promise": 93.5,
+  "vol_ratio": 0.95,
+  "slope": 4.86
+ },
+ {
+  "date": "2026-11-17",
+  "ticker": "QCOM",
+  "name": "퀄컴",
+  "market": "us",
+  "kind": "down",
+  "week": "2026-11-16",
+  "entry": 168.52000427246094,
+  "bench_entry": 7416.58984375,
+  "promise": 58.2,
+  "vol_ratio": 0.86,
+  "slope": 1.26
  }
 ]
