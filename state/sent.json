@@ -8,7 +8,7 @@
  "005930.KS|setup_reversal": "2026-11-17",
  "NVDA|move": "2026-11-13",
  "TSM|move": "2026-11-17",
- "NVDA|rsi_low": "2026-11-16",
+ "NVDA|rsi_low": "2026-11-19",
  "TSM|cross_price_250": "2026-11-17",
  "MU|cross_price_250": "2026-11-09",
  "MU|rsi_reclaim": "2026-11-09",
@@ -16,7 +16,7 @@
  "NVDA|setup_reversal": "2026-11-13",
  "TSM|rsi_reclaim": "2026-11-09",
  "TSM|bb_reclaim": "2026-11-11",
- "SCHD|setup_pullback": "2026-11-13",
+ "SCHD|setup_pullback": "2026-11-19",
  "005930.KS|div_bull": "2026-11-09",
  "005930.KS|bb_reclaim": "2026-11-13",
  "005930.KS|verdict": "2026-11-09",
@@ -26,5 +26,6 @@
  "SCHD|div_bear": "2026-11-11",
  "000660.KS|setup_reversal": "2026-11-17",
  "NVDA|bb_reclaim": "2026-11-16",
- "000660.KS|verdict": "2026-11-16"
+ "000660.KS|verdict": "2026-11-16",
+ "NVDA|cross_50_120": "2026-11-19"
 }
