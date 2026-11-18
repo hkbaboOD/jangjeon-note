@@ -531,5 +531,83 @@
   "promise": 58.2,
   "vol_ratio": 0.86,
   "slope": 1.26
+ },
+ {
+  "date": "2026-11-18",
+  "ticker": "003230.KS",
+  "name": "삼양식품",
+  "market": "kr",
+  "kind": "up",
+  "week": "2026-11-18",
+  "entry": 1271000.0,
+  "bench_entry": 4955.68017578125,
+  "promise": 58.7,
+  "vol_ratio": 0.8,
+  "slope": 0.35
+ },
+ {
+  "date": "2026-11-18",
+  "ticker": "086790.KS",
+  "name": "하나금융지주",
+  "market": "kr",
+  "kind": "down",
+  "week": "2026-11-18",
+  "entry": 123700.0,
+  "bench_entry": 4955.68017578125,
+  "promise": 57.0,
+  "vol_ratio": 0.77,
+  "slope": 0.89
+ },
+ {
+  "date": "2026-11-18",
+  "ticker": "MU",
+  "name": "마이크론",
+  "market": "us",
+  "kind": "down",
+  "week": "2026-11-17",
+  "entry": 712.4199829101562,
+  "bench_entry": 7340.52978515625,
+  "promise": 93.4,
+  "vol_ratio": 1.07,
+  "slope": 4.84
+ },
+ {
+  "date": "2026-11-18",
+  "ticker": "META",
+  "name": "메타 플랫폼스",
+  "market": "us",
+  "kind": "down",
+  "week": "2026-11-17",
+  "entry": 618.8699951171875,
+  "bench_entry": 7340.52978515625,
+  "promise": 68.0,
+  "vol_ratio": 0.54,
+  "slope": -0.76
+ },
+ {
+  "date": "2026-11-18",
+  "ticker": "CRM",
+  "name": "세일즈포스",
+  "market": "us",
+  "kind": "down",
+  "week": "2026-11-17",
+  "entry": 194.52000427246094,
+  "bench_entry": 7340.52978515625,
+  "promise": 67.8,
+  "vol_ratio": 1.07,
+  "slope": 0.43
+ },
+ {
+  "date": "2026-11-18",
+  "ticker": "QCOM",
+  "name": "퀄컴",
+  "market": "us",
+  "kind": "down",
+  "week": "2026-11-17",
+  "entry": 166.6699981689453,
+  "bench_entry": 7340.52978515625,
+  "promise": 57.4,
+  "vol_ratio": 0.83,
+  "slope": 1.23
  }
 ]
