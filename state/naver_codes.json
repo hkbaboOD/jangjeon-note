@@ -724,5 +724,11 @@
   "type": "stock",
   "ko": "인튜이트",
   "checked": "2026-11-17"
+ },
+ "PLTR": {
+  "code": "PLTR.O",
+  "type": "stock",
+  "ko": "팔란티어 테크놀로지스",
+  "checked": "2026-11-20"
  }
 }
