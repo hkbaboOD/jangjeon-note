@@ -4,10 +4,10 @@
  "TSM|setup_pullback": "2026-11-16",
  "005930.KS|move": "2026-11-20",
  "000660.KS|move": "2026-11-20",
- "MU|move": "2026-11-17",
+ "MU|move": "2026-11-21",
  "005930.KS|setup_reversal": "2026-11-17",
- "NVDA|move": "2026-11-13",
- "TSM|move": "2026-11-17",
+ "NVDA|move": "2026-11-21",
+ "TSM|move": "2026-11-21",
  "NVDA|rsi_low": "2026-11-19",
  "TSM|cross_price_250": "2026-11-17",
  "NVDA|setup_reversal": "2026-11-13",
@@ -15,7 +15,6 @@
  "SCHD|setup_pullback": "2026-11-19",
  "005930.KS|bb_reclaim": "2026-11-13",
  "SCHD|verdict": "2026-11-18",
- "MU|bb_reclaim": "2026-11-10",
  "MU|cross_50_120": "2026-11-12",
  "SCHD|div_bear": "2026-11-11",
  "000660.KS|setup_reversal": "2026-11-17",
@@ -24,5 +23,8 @@
  "NVDA|cross_50_120": "2026-11-19",
  "NVDA|verdict": "2026-11-19",
  "TSM|cross_50_120": "2026-11-20",
- "TSM|verdict": "2026-11-20"
+ "TSM|verdict": "2026-11-20",
+ "MU|rsi_low": "2026-11-21",
+ "MU|cross_price_250": "2026-11-21",
+ "TSM|rsi_low": "2026-11-21"
 }
