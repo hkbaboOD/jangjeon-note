@@ -1,66 +1,78 @@
 {
- "week": "2026-11-14",
+ "week": "2026-11-21",
  "items": [
   {
-   "title": "젠슨 황 엔비디아 CEO 사임, AI·반도체주 약세",
-   "text": "젠슨 황이 중국 스파이 의혹이 제기된 인물과의 관계 문제로 11/12(현지) CEO에서 물러났고 콜레트 크레스가 임시 CEO를 맡았습니다. 엔비디아는 11/12 4% 넘게, 11/13 2% 떨어졌고 11/13 AMD −8.8%·브로드컴 −4.8%, 나스닥은 −0.9%(25,136.27)로 마감했습니다(S&P500은 주간 +2.5%).",
-   "impact": "엔비디아·마이크론·TSMC 등 AI 반도체 관심종목과 SK하이닉스·삼성전자에 부담. 엔비디아 실적 발표 11/17(현지) 장 마감 후",
+   "title": "AI주 급락으로 미 증시 조정 진입, 나스닥 올해 상승분 반납",
+   "text": "11/20(현지) 나스닥은 5.3% 내린 22,617.73, 다우는 1.9% 내린 48,147.33으로 마감했고 S&P500은 3.59% 내린 6,918.45로 7거래일 연속 하락하며 10월 6일 고점 대비 10% 넘게 빠졌습니다. 마이크론·브로드컴·엔비디아·AMD가 12~14% 떨어지고 VIX가 3월 이후 처음 30을 넘었으며, 주간으로 나스닥 −10%·S&P500 −8.6%였습니다.",
+   "impact": "마이크론·엔비디아·TSMC 등 AI 반도체 관심종목과 AI 인프라 노출 종목에 직접 부담",
    "sources": [
     {
-     "name": "WHDH(AP)",
-     "url": "https://whdh.com/news/stocks-fall-but-wall-street-notches-a-winning-week-after-several-turbulent-days/"
+     "name": "Fortune",
+     "url": "https://fortune.com/2026/11/20/sp-500-correction-panic-selling-ai-selloff-nasdaq-2026-gains-bnp-paribas/"
     },
     {
-     "name": "Forbes",
-     "url": "https://www.forbes.com/sites/fionariley/2026/11/13/ai-and-chip-stocks-finish-down-on-friday-as-markets-digest-nvidia-turmoil/"
-    }
-   ]
-  },
-  {
-   "title": "미중 무역 휴전 2개월 연장, 의회는 반도체 수출 통제 강화 추진",
-   "text": "미중은 11/10 만료 예정이던 무역 휴전을 2027년 1월 10일까지 2개월 연장했습니다(미국 펜타닐 관세 10% 유지, 중국의 24% 보복관세 유예 연장). 반면 엔비디아 사태 뒤 미 하원의장이 반도체 수출 통제 강화에 공감대가 커지고 있다고 했고, 중국 외교부는 11/13 추가 통제에 반대한다고 경고했습니다.",
-   "impact": "관세 부담은 당분간 동결, 반도체 장비·중국 노출 종목은 수출 통제 강화 여부가 변수",
-   "sources": [
-    {
-     "name": "Yahoo Finance",
-     "url": "https://finance.yahoo.com/economy/policy/articles/us-china-officially-extend-trade-140000886.html"
+     "name": "FINChannel(AP 인용)",
+     "url": "https://finchannel.com/nasdaq-falls-5-3-as-sp-500-and-dow-enter-corrections/142573/american-business-trends/stock-prices/2026/11/"
     },
     {
-     "name": "CBS News",
-     "url": "https://www.cbsnews.com/news/china-us-export-controls-chips-nvidia-huang-scandal/"
+     "name": "StockTitan",
+     "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-20-2026"
     }
    ]
   },
   {
-   "title": "미 10월 CPI 전월 대비 0.4% 상승, 12월 금리 인상 기정사실화",
-   "text": "11/10 발표된 10월 소비자물가는 전월 대비 0.4% 올라 예상(0.3%)을 웃돌았고, 클리블랜드 연은은 전년 대비 약 3.8%로 추정했습니다. 선물시장은 12월 인상을 사실상 확실시(0.25%p 약 85%, 0.5%p 약 15%)하고 있고 월러 이사는 0.25%p 인상 쪽으로 기운다고 밝혔습니다.",
-   "impact": "금리 민감 성장주·AI 인프라에 부담, 은행·금융지주에 상대적으로 유리",
+   "title": "코스피 5.21% 폭락, 10개월 만의 최저·양 시장 매도 사이드카",
+   "text": "11/20 코스피는 267.93포인트(−5.21%) 내린 4,869.96, 코스닥은 5.72% 내린 645.66으로 마감했고 두 시장 모두 매도 사이드카가 발동됐습니다. 외국인은 6거래일 연속 순매도했고 삼성전자 −7.01%, SK하이닉스 −5.92%, 원·달러 환율은 1,336.2원(+6.2원)이었습니다.",
+   "impact": "삼성전자·SK하이닉스 등 반도체 대형주와 외국인 수급 민감 종목에 부담",
    "sources": [
     {
-     "name": "Yahoo Finance",
-     "url": "https://finance.yahoo.com/economy/policy/articles/us-inflation-slows-less-expected-152634543.html"
+     "name": "한국경제",
+     "url": "https://www.hankyung.com/article/202611200429i"
+    },
+    {
+     "name": "BusinessKorea",
+     "url": "https://www.businesskorea.co.kr/news/articleView.html?idxno=281841"
     }
    ]
   },
   {
-   "title": "이란 봉쇄 유지 속 유가 2주 연속 하락",
-   "text": "트럼프 대통령이 이란과의 합의 없이 봉쇄를 유지하겠다는 뜻을 밝히면서 군사 충돌 재개 우려가 줄어 브렌트유는 이번 주 약 2.3%, WTI는 약 2.4% 하락할 흐름이었습니다(지난주 각각 16%·13% 급락). 11/13 브렌트유는 95.84달러에 마감했고, 호르무즈 해협 유조선 공격·후티 반군 공격 위험은 남아 있습니다.",
-   "impact": "S-Oil·ConocoPhillips 등 정유·에너지주 부담, 항공·화학 등 원가 부담 업종에 우호적",
+   "title": "미국, AI 칩 수출 통제 확대(우회 접근 차단)… 중국 '경제적 강압' 반발",
+   "text": "미 상무부 산업안보국(BIS)이 11/16 중국 기업에 연산 능력을 제공하는 데이터센터에도 허가를 요구하고 싱가포르·말레이시아·태국·인도네시아·브라질로의 첨단 칩 수출에 사전 허가를 요구하는 규정을 발표했습니다(11/19 발효). 중국 외교부는 '경제적 강압'이라며 필요한 조치를 하겠다고 밝혔고, 엔비디아는 중국향 허가 호퍼 제품 출하를 더 이상 하지 않는다고 밝혔습니다.",
+   "impact": "엔비디아 등 중국 매출 비중이 있는 반도체 종목·중국 노출 종목에 부담",
    "sources": [
     {
-     "name": "RTÉ(Reuters)",
-     "url": "https://www.rte.ie/news/business/2026/1113/1599081-world-oil-prices/"
+     "name": "Seoul Economic Daily",
+     "url": "https://en.sedaily.com/society/2026/11/18/us-tightens-ai-chip-export-controls-blocks-chinas"
+    },
+    {
+     "name": "Tech Times",
+     "url": "https://www.techtimes.com/articles/330982/20261118/beijing-calls-us-chip-export-rule-economic-coercion-malaysia-tells-data-centers-comply.htm"
     }
    ]
   },
   {
-   "title": "코스피 장중 5,500 돌파 뒤 외국인 매도로 하락 반전",
-   "text": "11/13 코스피는 2.05% 오른 5,452.41로 출발해 장중 5,504.44까지 올랐지만 외국인이 7,034억 원을 순매도(SK하이닉스 4,716억 원)하면서 0.98% 내린 5,290.53에 마감했습니다. SK하이닉스 −3.03%·삼성전자 −0.96%였고 신한지주 +5.65%·KB금융 +4.74%는 올랐습니다.",
-   "impact": "반도체 대형주 수급 부담, 금융지주 강세",
+   "title": "트럼프, APEC 계기 선전에서 시진핑과 회담",
+   "text": "트럼프 대통령이 11/18 선전에 도착해 휴전 이후 세 번째 시진핑 주석 대면 회담에 나섰고, 분석가들은 구체적 성과 기대가 낮다고 봤습니다. 미중 무역 휴전은 2027년 1월 10일까지 연장된 상태입니다.",
+   "impact": "관세 민감·중국 노출 종목(휴전 유지 여부에 따라 변동성)",
    "sources": [
     {
-     "name": "파이낸셜뉴스",
-     "url": "https://www.fnnews.com/news/202611131625181132"
+     "name": "Al Jazeera",
+     "url": "https://www.aljazeera.com/economy/2026/11/18/as-trump-arrives-in-china-low-expectations-for-breakthroughs-in-rivalry"
+    }
+   ]
+  },
+  {
+   "title": "연준 12월 금리 인상 확률 95%대, 미 10년물 5% 부근",
+   "text": "11/19 CME FedWatch 기준 12월 FOMC 0.25%p 인상 확률은 95.7%였고, 10월 근원 CPI는 전월 대비 0.4% 올랐습니다. 11/20에도 선물 시장의 12월 인상 확률은 약 95%, 미 10년물 금리는 5% 부근이었습니다(FOMC 12/9).",
+   "impact": "금리 민감·고평가 성장주에 부담, 금융(금리 수혜)에는 상대적 우호",
+   "sources": [
+    {
+     "name": "Seoul Economic Daily",
+     "url": "https://en.sedaily.com/society/2026/11/19/us-dec-rate-hike-odds-at-957-percent-as-fed-resists-bigger"
+    },
+    {
+     "name": "Fortune",
+     "url": "https://fortune.com/2026/11/20/sp-500-correction-panic-selling-ai-selloff-nasdaq-2026-gains-bnp-paribas/"
     }
    ]
   }
