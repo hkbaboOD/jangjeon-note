@@ -49,23 +49,71 @@
    ]
   },
   {
+   "key": "tariff",
+   "label": "관세·무역분쟁",
+   "n": 19,
+   "base": 25.0,
+   "ratio": 0.76,
+   "level": "보통",
+   "heat": 0.17,
+   "tone": 1.0,
+   "esc_n": 3,
+   "de_n": 0,
+   "confirm": 0.85,
+   "moves": {
+    "^GSPC": -8.61,
+    "KRW=X": 1.04
+   },
+   "direction": 0.94,
+   "intensity": 0.16,
+   "stance": "무역 긴장",
+   "up": [
+    "경기 방어"
+   ],
+   "down": [
+    "관세 민감",
+    "수출주",
+    "중국 노출"
+   ],
+   "headlines": [
+    {
+     "title": "수고했어, 트럼프와 싸우느라 [세상읽기]",
+     "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9vdldVVWlMUnpJeE1QU2lRbmZ4UndVbURHQXVhamd4alVZU3ZxTWtZdjZiYkxuaTJhM3RSTXFxRFBBcDZ2aUloNnk5d3V2YlBzZmM3VkJ4dEJwT1Z3eTNsNWxnZlNXUQ?oc=5",
+     "publisher": "한겨레",
+     "time": "2026-11-22T22:02:00+00:00"
+    },
+    {
+     "title": "[논단] 미국의 ‘블루웨이브’가 한국경제에 미칠 영향",
+     "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1TWENNR2VVM1p5elVWZ1RBa0pvaTZBcDd4TmRPQm9ub0xTNWgxaWdzMGtFVTUtTzlnWDBoQlpHaXpma0VkRHFhSHFVcXpQNDJFTnFwakxWZkU5dmF4dmFrZnRzcDRCQXQ00gFsQVVfeXFMTmgycTlzU3JSOENrcjMtT2FBZUtXeXYtMlJ1dm1iUmc0bWhMdFNjR2V0aTdpNTMwVWVha012dUQyWlJMazJCRWlDOFJtS3BnbEJsLXBSZGJ6YzRudEZTN0hLeW9qeWc5Y3FVX2s2?oc=5",
+     "publisher": "대한전문건설신문",
+     "time": "2026-11-22T23:00:00+00:00"
+    },
+    {
+     "title": "中 태양광 수출 급등…美 관세 부과 막판 사재기",
+     "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBUTllaVjllNTZqZDdFNU54QWNBUFItMExkc3dfZFdVRUMwUFBJMUxCWWo0eDZnNllqMnB6TE1fYTdsNzd4d2NIc1FrTG5WZVhzMF9VOTZB?oc=5",
+     "publisher": "지디넷코리아",
+     "time": "2026-11-22T02:31:19+00:00"
+    }
+   ]
+  },
+  {
    "key": "mideast",
    "label": "중동 정세",
-   "n": 22,
+   "n": 23,
    "base": 24.0,
-   "ratio": 0.92,
+   "ratio": 0.96,
    "level": "보통",
-   "heat": 0.28,
+   "heat": 0.31,
    "tone": 0.78,
    "esc_n": 16,
    "de_n": 2,
    "confirm": -0.75,
    "moves": {
     "CL=F": -2.96,
-    "GC=F": -6.36
+    "GC=F": -6.31
    },
    "direction": 0.3,
-   "intensity": 0.083,
+   "intensity": 0.092,
    "stance": "긴장 고조",
    "up": [
     "정유·에너지",
@@ -185,64 +233,22 @@
    ]
   },
   {
-   "key": "tariff",
-   "label": "관세·무역분쟁",
-   "n": 19,
-   "base": 25.0,
-   "ratio": 0.76,
-   "level": "보통",
-   "heat": 0.17,
-   "tone": 0.0,
-   "esc_n": 2,
-   "de_n": 0,
-   "confirm": 0.81,
-   "moves": {
-    "^GSPC": -8.61,
-    "KRW=X": 0.93
-   },
-   "direction": 0.16,
-   "intensity": 0.0,
-   "stance": "방향 혼재",
-   "up": [],
-   "down": [],
-   "headlines": [
-    {
-     "title": "수고했어, 트럼프와 싸우느라 [세상읽기]",
-     "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9vdldVVWlMUnpJeE1QU2lRbmZ4UndVbURHQXVhamd4alVZU3ZxTWtZdjZiYkxuaTJhM3RSTXFxRFBBcDZ2aUloNnk5d3V2YlBzZmM3VkJ4dEJwT1Z3eTNsNWxnZlNXUQ?oc=5",
-     "publisher": "한겨레",
-     "time": "2026-11-22T22:02:00+00:00"
-    },
-    {
-     "title": "CEO가 관세와 공급망을 알아야 하는 시대가 왔다",
-     "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1ZMTVnOEg1Ni1YRXNYcUk0dGdfTFlVZDFYYXVkSlp1b21kN0hYUHpsdWZWcks3VTM2enBfemZLOUo2MmpmcXRiZE9WbU5tRXZVdTRIM1pqRzFlUUZrRmVQekVjX1o?oc=5",
-     "publisher": "한국세정신문",
-     "time": "2026-11-22T23:00:00+00:00"
-    },
-    {
-     "title": "中 태양광 수출 급등…美 관세 부과 막판 사재기",
-     "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBUTllaVjllNTZqZDdFNU54QWNBUFItMExkc3dfZFdVRUMwUFBJMUxCWWo0eDZnNllqMnB6TE1fYTdsNzd4d2NIc1FrTG5WZVhzMF9VOTZB?oc=5",
-     "publisher": "지디넷코리아",
-     "time": "2026-11-22T02:31:19+00:00"
-    }
-   ]
-  },
-  {
    "key": "nk",
    "label": "북한·한반도",
-   "n": 19,
+   "n": 20,
    "base": 36.0,
-   "ratio": 0.53,
+   "ratio": 0.56,
    "level": "낮음",
-   "heat": 0.02,
-   "tone": 0.6,
-   "esc_n": 8,
+   "heat": 0.04,
+   "tone": 0.64,
+   "esc_n": 9,
    "de_n": 2,
-   "confirm": 0.62,
+   "confirm": 0.69,
    "moves": {
-    "KRW=X": 0.93
+    "KRW=X": 1.04
    },
-   "direction": 0.61,
-   "intensity": 0.012,
+   "direction": 0.66,
+   "intensity": 0.026,
    "stance": "도발",
    "up": [],
    "down": [],
@@ -254,10 +260,10 @@
      "time": "2026-11-23T01:07:57+00:00"
     },
     {
-     "title": "국민의힘 \"연평도 포격 도발 16주기…평화는 말 아닌 힘으로 지켜야\"",
-     "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBXWUctdWl5dEcxVDdIVVQyMXMzU1A5eW9zNjJyZ0syQ1pfUThiOW9QUU1kV0JZM0NVZVBrMXFWZEY5dWJyOFp1QzZYNUhVbWV4bmY1RlhNR1NldktN?oc=5",
+     "title": "민주당, 연평도 포격 16주기 추모...\"북한 도발 단호히 대응할 것\"",
+     "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5uUHl3S2JIQ250QjctV0VKQjhoU2FNbDBVR0xVRldwdWZfcklGUjlXbWVETEpwd0hoT3RPNUItc3lMZ2x0R3VjdlhiZkFrN2xhbXFDZzJFbkhLR0NJ?oc=5",
      "publisher": "뉴스핌",
-     "time": "2026-11-23T00:17:00+00:00"
+     "time": "2026-11-23T00:57:00+00:00"
     },
     {
      "title": "여야, 연평도 포격 16주기 추모 한목소리…\"北 도발 단호히 대응\"",
@@ -275,26 +281,20 @@
    "ratio": 0.5,
    "level": "낮음",
    "heat": 0.0,
-   "tone": -1.0,
-   "esc_n": 0,
-   "de_n": 4,
+   "tone": -0.5,
+   "esc_n": 1,
+   "de_n": 3,
    "confirm": -0.75,
    "moves": {
-    "BZ=F": -3.02,
-    "GC=F": -6.36
+    "BZ=F": -3.0,
+    "GC=F": -6.31
    },
-   "direction": -0.93,
+   "direction": -0.57,
    "intensity": -0.0,
    "stance": "휴전 기대",
    "up": [],
    "down": [],
    "headlines": [
-    {
-     "title": "트럼프는 ‘사진’, 시진핑은 ‘위상’, 푸틴은 ‘시간’ 챙겼다…‘강대국 외교’의 귀환",
-     "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOMEkzQTRlMVF1RnRiczRXbEp0VE9DYWhxTlRLQlhjTGVCUmVKMmVEQ25fT0R2MTlUSXZXaHZEbHUtRHlSM1BSMUd2enRtdFdxblk0NFVkSW9JalBrMFVuVnFSUTBvM1hmOHFiUGFyMjJ4Rm0wLXJFUUcyWHVFZExWRg?oc=5",
-     "publisher": "이데일리",
-     "time": "2026-11-22T09:27:59+00:00"
-    },
     {
      "title": "[WIKI 이슈] 성탄절 전 우크라 '종전' 서두르는 트럼프…푸틴은 느긋, '정전'조차 불투명",
      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBkdjRaRUJRLVpyNE5lWS1nc01pbllwaVVVRV9kX25qeXRhcTVIbm9RaGEzZnQtZzNWLW9vQUUyNzQzUFhNMUNGd1ZxTVFlUHo1Y0lPMUdua2xJNjVsTi1jYTJMNEVoUE53S2cyYV9wOA?oc=5",
@@ -302,29 +302,35 @@
      "time": "2026-11-23T01:01:00+00:00"
     },
     {
-     "title": "9개월 만에 다시 마주 앉았다. 미·러·우크라이나, 종전 협상 재가동에 세계의 시선 집중",
-     "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE8zWkt1LVY5bmpZZzY1d1JLUENVbFpYMl9TNkJUSFRKZWdPTHpwOE1LSXRIUGFkZDNISzc0VS0yTzNqVl9GQ1VRbThPXzE0WDA?oc=5",
-     "publisher": "뉴스N연합",
-     "time": "2026-11-22T09:25:49+00:00"
+     "title": "전쟁에 광섬유값 7배 폭등, 미·중 갈등까지… AI 핵심 소재 공급망 비상",
+     "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQWW1YclRfWHluTWlPRnRHVk01MnR6Um5nZk56MjZRWWMtcWt1ck05VnVGZFpUeHhaZnNEODRtQTgzU3F2bnlfelBfSEdhQ040cEZWS1hUNFRCV2cxUzdvNXNUdFI0Y0dvZnhaZzRvRjdDY3djY0hyLW5QNjVSRURhdjllOA?oc=5",
+     "publisher": "조선일보",
+     "time": "2026-11-22T21:36:41+00:00"
+    },
+    {
+     "title": "우크라 전쟁, 북아프리카로 전선 확대…리비아서 드론 공격에 러 군함 침몰",
+     "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOSFVfV3Y2SVNZaXNEWm9CNnJZUUIzRXlTbWdXenlTanA2RTVWR3dzZVg5dzEwOU95OEV1U3NjSDBfSzJoZ2NtVzhRbGRyZUhfY0dZZnpZeTRSMnJTa20zdVFZek9MSlBBa1EzcHRxdUxNYlRzN05lTm5WaFlQMG42MFlB?oc=5",
+     "publisher": "한겨레",
+     "time": "2026-11-22T23:07:00+00:00"
     }
    ]
   },
   {
    "key": "fx",
    "label": "환율(원화)",
-   "n": 35,
+   "n": 36,
    "base": 98.0,
-   "ratio": 0.36,
+   "ratio": 0.37,
    "level": "낮음",
    "heat": 0.0,
    "tone": 0.2,
    "esc_n": 9,
    "de_n": 6,
-   "confirm": 0.62,
+   "confirm": 0.69,
    "moves": {
-    "KRW=X": 0.93
+    "KRW=X": 1.04
    },
-   "direction": 0.54,
+   "direction": 0.59,
    "intensity": 0.0,
    "stance": "원화 약세",
    "up": [],
@@ -352,20 +358,23 @@
   }
  ],
  "impact": {
-  "china": -0.584,
+  "china": -0.632,
   "semis": -0.374,
-  "tariff": -0.168,
-  "defense": 0.253,
-  "oil_up": 0.083,
-  "oil_down": -0.083,
-  "shipping": 0.033,
-  "korea": -0.024,
+  "tariff": -0.328,
+  "defense": 0.265,
+  "export": -0.096,
+  "defensive": 0.048,
+  "oil_up": 0.092,
+  "oil_down": -0.092,
+  "shipping": 0.037,
+  "korea": -0.034,
   "ai": -0.014
  },
- "generated": "2026-11-23T10:49+09:00",
+ "generated": "2026-11-23T10:56+09:00",
  "summary": [
   "미중 갈등·수출규제: 48시간 기사 8건(평소 6건의 1.3배), 갈등 고조. 5일 가격 변화 반도체지수 -17.1%. 방산에 유리, 중국 노출·반도체·관세 민감에 부담",
-  "중동 정세: 48시간 기사 22건(평소 24건의 0.9배), 긴장 고조. 5일 가격 변화 WTI -3.0%, 금 -6.4%",
+  "관세·무역분쟁: 48시간 기사 19건(평소 25건의 0.8배), 무역 긴장. 5일 가격 변화 S&P500 -8.6%, 원달러 +1.0%. 경기 방어에 유리, 관세 민감·수출주·중국 노출에 부담",
+  "중동 정세: 48시간 기사 23건(평소 24건의 1.0배), 긴장 고조. 5일 가격 변화 WTI -3.0%, 금 -6.3%",
   "연준·금리: 48시간 기사 56건(평소 60건의 0.9배), 방향 혼재. 5일 가격 변화 미 10년물 금리 -4.7%"
  ],
  "tag_ko": {

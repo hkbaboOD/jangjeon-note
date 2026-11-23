@@ -986,5 +986,18 @@
   "promise": 59.6,
   "vol_ratio": 1.14,
   "slope": 2.78
+ },
+ {
+  "date": "2026-11-23",
+  "ticker": "AMD",
+  "name": "AMD",
+  "market": "us",
+  "kind": "down",
+  "week": "2026-11-20",
+  "entry": 424.3900146484375,
+  "bench_entry": 6910.39013671875,
+  "promise": 57.5,
+  "vol_ratio": 1.84,
+  "slope": 6.09
  }
 ]
