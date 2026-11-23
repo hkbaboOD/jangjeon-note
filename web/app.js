@@ -134,7 +134,7 @@ const pctOf = (a, b) => (a == null || b == null || !b ? null : (a / b) * 100);
 const yoy = (a, b) => (a == null || b == null || !b ? null : b > 0 ? (a / b - 1) * 100 : ((a - b) / Math.abs(b)) * 100);
 
 /* ── 데이터 ── */
-const FILES = ["meta", "briefing", "briefing_us", "watch", "picks", "track", "screen", "dividend", "alerts", "backtest", "model", "forward", "scorecard", "pdca", "pdca_review", "changelog", "geo", "geo_weekly", "wma40"];
+const FILES = ["meta", "briefing", "briefing_us", "watch", "picks", "track", "screen", "dividend", "alerts", "backtest", "model", "forward", "scorecard", "pdca", "pdca_review", "changelog", "geo", "geo_weekly", "wma40", "divtest", "snowball"];
 async function load() {
   const btn = $("#refresh"); btn.classList.add("spin");
   const res = await Promise.allSettled(FILES.map((f) => fetch(`data/${f}.json?t=${Date.now()}`, { cache: "no-store" }).then((r) => (r.ok ? r.json() : null))));
@@ -614,6 +614,65 @@ function recoBox(t) {
   return `<div class="reco-box"><div>${rk.map((x) => `<b>${H_KO[x.h]} 추천 ${x.rank}위</b>${x.m !== "all" ? `(${M_KO[x.m]})` : ""}`).join(", ")}</div>
     <button class="btn ghost sm" data-goto="picks" data-gh="${rk[0].h}" data-gm="${rk[0].m}">추천 근거 보기</button></div>`;
 }
+/* 배당 재투자 백테스트(스노우볼 방식) — divtest.json */
+const SB_BASE = "https://mysnowball.kr/dividend-history/";
+function snowballLink(t) {
+  const sb = state.data.snowball;
+  const key = (isKR(t) ? code(t) : t).toLowerCase();
+  if (!sb?.supported?.includes(key)) return "";
+  return `<a class="btn ghost sm" href="${SB_BASE}${encodeURIComponent(key)}" target="_blank" rel="noopener">스노우볼 배당 이력</a>`;
+}
+function dtBlock(t) {
+  const x = state.data.divtest?.tickers?.[t];
+  if (!x) return "";
+  const H = [["1y", "1년"], ["3y", "3년"], ["5y", "5년"], ["10y", "10년"]].filter(([k]) => x.hold?.[k]);
+  const bm = state.data.divtest?.bench?.[isKR(t) ? "kr" : "us"];
+  const pc = (v) => (v == null ? "-" : `<span class="${cls(v)}">${sgn(v, 1)}</span>`);
+  const tbl = H.length ? ftable(H.map(([, l]) => l + " 전 매수"), [
+    ["총수익(세후 재투자)", H.map(([k]) => pc(x.hold[k].total))],
+    ["연환산", H.map(([k]) => pc(x.hold[k].cagr)), "sub"],
+    ["주가 몫", H.map(([k]) => pc(x.hold[k].price)), "sub"],
+    ["배당 몫", H.map(([k]) => pc(x.hold[k].div)), "sub"],
+    ["최대낙폭", H.map(([k]) => (x.hold[k].mdd == null ? "-" : nf(x.hold[k].mdd, 1) + "%")), "sub"],
+    ...(bm ? [[`${esc(bm.name)}`, H.map(([k]) => pc(bm.hold?.[k]?.total))]] : []),
+  ]) : "";
+  const r = x.roll;
+  return `<div class="sec"><h2>배당 재투자 백테스트 <small>스노우볼과 같은 방식, ${esc(when(state.data.divtest.generated))} 계산</small></h2><div class="panel pad">
+    ${tbl}
+    ${r ? `<p class="earn" style="margin-top:10px">매월 시작한 1년 보유 ${nf(r.n)}번 중 플러스 <b>${nf(r.pos_rate, 0)}%</b>${r.win_rate != null ? `, ${esc(x.bench)}(배당 재투자)보다 나았던 비율 <b>${nf(r.win_rate, 0)}%</b>, 평균 차이 <span class="${cls(r.avg_excess)}">${sgn(r.avg_excess, 1, "%p")}</span>` : ""}</p>` : ""}
+    <p class="note">세후 배당을 배당락일 종가로 같은 종목에 다시 산 경우입니다. 수수료·양도세는 빼지 않았고, 과거 성과가 앞으로를 보장하지 않습니다.</p>
+  </div></div>`;
+}
+function dtMeta(t) {
+  const x = state.data.divtest?.tickers?.[t];
+  const h = x?.hold?.["5y"] || x?.hold?.["3y"];
+  if (!h) return "";
+  return `${SEP}${x.hold["5y"] ? "5년" : "3년"} 재투자 연 ${sgn(h.cagr, 1)}${x.roll?.win_rate != null ? `${SEP}지수 대비 승률 ${nf(x.roll.win_rate, 0)}%` : ""}`;
+}
+function divLabBlock() {
+  const dt = state.data.divtest, sb = state.data.snowball;
+  if (!dt?.model && !sb) return "";
+  const m = dt?.model || {}, c = m.contest, W = m.weights || {}, D = m.default || {};
+  const NM = { yield: "배당수익률", growth: "배당성장", stability: "무삭감" };
+  const label = (k, w) => {
+    if (!k.startsWith("후보") || !w) return k;
+    const d = Object.keys(NM).map((n) => [n, Math.round(((w[n] || 0) - (W[n] || 0)) * 100)]).filter(([, v]) => v);
+    return d.map(([n, v]) => `${NM[n]} ${v > 0 ? "+" : "−"}${Math.abs(v)}`).join(", ");
+  };
+  const row = (k, st, w) => st ? `<div class="mrow w3"><span${k === c?.chosen ? ' class="chosen"' : ""} style="white-space:normal">${esc(label(k, w))}</span><span>${sgn(st.excess, 1, "%p")}</span><span>${nf(st.win_rate, 0)}%</span></div>` : "";
+  const cands = c ? Object.entries(c.scores).filter(([k]) => k.startsWith("후보")).sort((a, b) => (b[1].hold?.excess ?? -99) - (a[1].hold?.excess ?? -99)) : [];
+  const sbRows = (sb?.mismatches || []).slice(0, 8).map((x) => `<li><b>${esc(x.name || x.ticker)}</b> ${esc(x.field)}: 장전노트 ${esc(String(x.ours))}, 스노우볼 ${esc(String(x.snowball))}${x.action ? `<br><small>${esc(x.action)}</small>` : ""}</li>`).join("");
+  return `<div class="sec"><h2>배당 전략 검증 <small>매주 토요일, 과거 매월 말 시점 점수로 상위 ${m.rules?.top_n || 6}종목을 골라 1년 뒤 채점</small></h2><div class="panel pad">
+    ${dt?.model ? `<div class="kv">${Object.keys(NM).map((k) => `<div><small>${NM[k]} 비중</small><b>${nf((W[k] || 0) * 100, 0)}%</b>${D[k] != null && Math.abs(W[k] - D[k]) > 1e-9 ? ` <small style="display:inline">(기본 ${nf(D[k] * 100, 0)}%)</small>` : ""}</div>`).join("")}<div><small>배당성향 비중</small><b>20%</b> <small style="display:inline">(고정)</small></div></div>
+    ${c ? `<div class="ma-table" style="margin-top:10px"><div class="mrow w3 mh"><span>검증 구간 ${esc(c.cut)}~ (비중 %p)</span><span>후보 평균 대비</span><span>승률</span></div>
+      ${row("현재", c.scores["현재"]?.hold)}${JSON.stringify(W) !== JSON.stringify(D) ? row("기본", c.scores["기본"]?.hold) : ""}${cands.slice(0, 3).map(([k, v]) => row(k, v.hold, v.weights)).join("")}</div>
+      <p class="earn" style="margin-top:8px">${esc(c.why)}</p>` : `<p class="note">${esc(m.note || "")}</p>`}
+    ${(m.log || []).length ? `<ul class="bullets">${m.log.slice(0, 4).map((l) => `<li>${esc(l.date)} ${esc(l.text)}</li>`).join("")}</ul>` : ""}` : ""}
+    ${sb ? `<h4 style="margin:14px 0 2px;font-size:13.5px">스노우볼 대조 <small style="font-weight:400;color:var(--muted)">${esc(sb.date || "")}, ${nf(sb.checked || 0)}종목 확인, 불일치 ${nf((sb.mismatches || []).length)}건</small></h4>
+      ${sbRows ? `<ul class="bullets">${sbRows}</ul>` : `<p class="note" style="margin-top:4px">연간 배당·배당월·성장률이 스노우볼(mysnowball.kr)과 일치했습니다.</p>`}` : ""}
+    <p class="note">현재 후보 목록으로 과거를 보기 때문에 생존 편향이 있고, 과거 시점 배당성향 자료가 없어 그 항목은 고정입니다. 비중은 학습·검증 두 구간 모두 확실히 나을 때만 주당 5%p씩 움직입니다.</p>
+  </div></div>`;
+}
 function divSection(t, cd) {
   const c = divOf(t) || (cd?.div ? { ...cd.div, ticker: t } : null);
   if (!c) return "";
@@ -635,8 +694,8 @@ function divSection(t, cd) {
     ${dps.length ? `<div class="dps-bars" aria-label="월별 주당배당금">${dps.map((v, i) => `<div><i style="height:${(v / mx) * 100}%"></i><span>${i + 1}</span></div>`).join("")}</div><p class="note" style="margin:2px 0 0">월별 주당배당금(배당락월 기준, ${cur === "원" ? "원" : "달러"})</p>` : ""}
     ${(c.notes || []).length ? `<ul class="bullets" style="margin-top:6px">${c.notes.map((n) => `<li>${esc(n)}</li>`).join("")}</ul>` : ""}
     <div class="btns" style="margin-top:10px"><button class="btn ${pinned ? "ghost " : ""}sm" data-dvpin="${esc(t)}">${pinned ? (o.mode === "manual" ? "플랜에서 빼기" : "고정 해제") : (o?.mode === "manual" ? "+ 플랜에 담기" : "배당 플랜에 고정")}</button>
-      <button class="btn ghost sm" data-goto="div">배당 탭에서 보기</button></div>
-  </div></div>`;
+      <button class="btn ghost sm" data-goto="div">배당 탭에서 보기</button>${snowballLink(t)}</div>
+  </div></div>${dtBlock(t)}`;
 }
 async function openDetail(t) {
   const r = (state.data.screen?.rows || []).find((x) => x.ticker === t);
@@ -804,7 +863,7 @@ function renderDiv() {
       <div class="panel">${cands.slice(0, 120).map((c) => `
       <div class="row dv-r ${o.excluded.includes(c.ticker) && o.mode === "auto" ? "dim" : ""}" data-t="${esc(c.ticker)}" role="button" tabindex="0"><div><div class="t1">${esc(c.name)}${c.covered_call ? '<span class="tag">커버드콜</span>' : ""}${inPlan.has(c.ticker) ? '<span class="tag on">플랜</span>' : ""}${pickBadges(c.ticker)}</div>
       <div class="t2">${esc(isKR(c.ticker) ? code(c.ticker) : c.ticker)}${SEP}배당률 ${nf(c.yield, 2)}%${SEP}성향 ${c.payout == null ? "-" : nf(c.payout, 0) + "%"}${SEP}연 ${c.freq}회 ${dvDots(c.months)}</div>
-      <div class="t2">${esc(c.pool || "")}${c.cagr5 != null ? `${SEP}5년 성장 ${sgn(c.cagr5, 1)}` : ""}${c.cuts ? `${SEP}감배 ${c.cuts}회` : ""}</div></div><span></span>
+      <div class="t2">${esc(c.pool || "")}${c.cagr5 != null ? `${SEP}5년 성장 ${sgn(c.cagr5, 1)}` : ""}${c.cuts ? `${SEP}감배 ${c.cuts}회` : ""}${dtMeta(c.ticker)}</div></div><span></span>
       <div class="num"><b>${nf(c.score, 1)}</b><span class="t2">점</span>${candBtns(c)}</div></div>`).join("") || '<div class="empty">조건에 맞는 후보가 없습니다.</div>'}</div></div>
     <p class="note">${esc(d.method)} 앱 설정을 바꾸면 같은 규칙(점수 + 새로 채워지는 지급월 보너스, 상한 재분배)으로 이 기기에서 다시 계산합니다.</p>`;
 }
@@ -1030,6 +1089,7 @@ function renderLab() {
     </div>
     ${pdcaBlock(state.data.pdca, state.data.pdca_review, tr)}
     ${changelogBlock(state.data.changelog)}
+    ${divLabBlock()}
     ${forwardBlock(fw, sc, md)}
     <div class="seg" role="group" aria-label="보유 기간">${[["5", "5일 후"], ["20", "20일 후"], ["60", "60일 후"]].map(([k, l]) => `<button data-lh="${k}" aria-pressed="${H === k}">${l}</button>`).join("")}</div>
     <div class="seg sm" role="group" aria-label="시장">${[["all", "전체"], ["us", "미국"], ["kr", "한국"]].map(([k, l]) => `<button data-lm="${k}" aria-pressed="${M === k}">${l}</button>`).join("")}</div>

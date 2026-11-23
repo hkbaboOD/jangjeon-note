@@ -318,7 +318,7 @@ class LiveSource:
         if not hasattr(self, "_div"):
             self._div = read_json(self.DIV_CACHE, STATE_DIR, default={}) or {}
         hit = self._div.get(ticker)
-        if hit and datetime.utcnow() - datetime.fromisoformat(hit["_fetched"]) < timedelta(days=self.DIV_DAYS):
+        if hit and hit.get("v") == 2 and datetime.utcnow() - datetime.fromisoformat(hit["_fetched"]) < timedelta(days=self.DIV_DAYS):
             s = pd.Series(hit["s"], dtype=float)
             s.index = pd.DatetimeIndex(pd.to_datetime(list(s.index)))
             return s.sort_index()
@@ -332,8 +332,8 @@ class LiveSource:
         else:
             s.index = pd.to_datetime(s.index).tz_localize(None)
             s = s.astype(float)
-            keep = s[s.index > pd.Timestamp.now() - pd.Timedelta(days=365 * 7)]
-        self._div[ticker] = {"_fetched": datetime.utcnow().isoformat(),
+            keep = s[s.index > pd.Timestamp.now() - pd.Timedelta(days=365 * 12)]  # 배당 백테스트(10년)용으로 12년 보관
+        self._div[ticker] = {"_fetched": datetime.utcnow().isoformat(), "v": 2,
                              "s": {d.strftime("%Y-%m-%d"): round(float(v), 6) for d, v in keep.items()}}
         self._div_dirty = True
         time.sleep(0.2)

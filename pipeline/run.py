@@ -22,6 +22,7 @@ from . import alerts as alert_mod
 from . import backtest as bt_mod
 from . import briefing as briefing_mod
 from . import dividend as div_mod
+from . import divtest as divtest_mod
 from . import company as co_mod
 from . import financials as fin_mod
 from . import forward as fwd
@@ -172,6 +173,12 @@ def run(job: str, demo: bool):
         write_json("meta.json", meta)
         src.flush()
         log.info("알림 %d건", len(fresh))
+        return
+
+    if job == "divtest":  # 배당 백테스트만 따로(점검·수동 실행용)
+        run_divtest(cfg, src, now_kst())
+        meta["divtest"] = now_kst().isoformat(timespec="minutes")
+        write_json("meta.json", meta)
         return
 
     if job == "evening":
@@ -330,6 +337,7 @@ def run(job: str, demo: bool):
 
     # 4-1) 배당 데이터 (매일 최신 가격으로 갱신 — 배당 이력은 주 1회 캐시) · 앱에서 구성 변경 가능
     usdkrw = (tech_all.get("KRW=X") or {}).get("last") or 1400.0
+    div_w = ((read_json("divtest.json") or {}).get("model") or {}).get("weights")  # 주간 배당 백테스트가 보정한 가중치
     cands = []
     pool = [dict(d, pool="배당 후보") for d in cfg["dividend_candidates"]]
     have = {d["ticker"] for d in pool}
@@ -340,13 +348,13 @@ def run(job: str, demo: bool):
         d = {**d, "name": names.get(t) or d.get("name") or t}
         price = (tech_all.get(t) or {}).get("last")
         try:
-            c = div_mod.analyze(t, d, src.dividends(t), price, src.fundamentals(t), cfg["dividend_plan"])
+            c = div_mod.analyze(t, d, src.dividends(t), price, src.fundamentals(t), cfg["dividend_plan"], div_w)
         except Exception as e:  # 한 종목 오류가 배당 플랜·장전 전체를 막지 않도록
             log.warning("배당 분석 실패 %s: %s", t, e)
             continue
         if c and (d["pool"] == "배당 후보" or c["yield"] >= 0.5):  # 유니버스는 배당률 0.5% 이상만
             cands.append(c)
-    plan = div_mod.build_plan(cands, cfg["dividend_plan"], usdkrw)
+    plan = div_mod.build_plan(cands, cfg["dividend_plan"], usdkrw, div_w)
     plan["generated"] = now.isoformat(timespec="minutes")
     plan["month"] = now.strftime("%Y-%m")
     write_json("dividend.json", plan)
@@ -480,6 +488,25 @@ def run_evening(cfg: dict, src, meta: dict, push: bool = True):
     log.info("미장 브리핑 완료: 선물 %s, 실적 %d건", [q.get("chg") for q in brief["futures"]], len(brief["earnings"]))
 
 
+def run_divtest(cfg: dict, src, now) -> dict:
+    """배당 후보 전 종목 10년 배당 재투자 백테스트 → divtest.json."""
+    cands = (read_json("dividend.json") or {}).get("candidates") or []
+    if not cands:
+        cands = [{"ticker": d["ticker"], "type": d.get("type"), "covered_call": d.get("covered_call")}
+                 for d in cfg["dividend_candidates"]]
+    bench = [b for b, _ in divtest_mod.BENCH.values()]
+    tick = list(dict.fromkeys([c["ticker"] for c in cands] + bench))
+    hist = src.history(tick, period="10y")
+    close_map = {t: h["Close"] for t, h in hist.items() if h is not None and len(h)}
+    div_map = {t: src.dividends(t) for t in close_map}
+    prev = (read_json("divtest.json") or {}).get("model")
+    out = divtest_mod.run(close_map, div_map, cands, cfg["dividend_plan"], prev, now.strftime("%Y-%m-%d"))
+    out["generated"] = now.isoformat(timespec="minutes")
+    write_json("divtest.json", out)
+    src.flush()
+    return out
+
+
 def run_backtest(cfg: dict, src, meta: dict):
     """5년 일봉 백테스트 → backtest.json, 자가 보정 → model.json."""
     now = now_kst()
@@ -511,6 +538,18 @@ def run_backtest(cfg: dict, src, meta: dict):
     fwd.update_scorecard(ev, model["version"], now.strftime("%Y-%m-%d"))
     write_json("pdca.json", pdca_mod.build(model, ev, read_json("track.json") or {}, read_json("pdca.json"),
                                            now.strftime("%Y-%m-%d")))
+    # 배당주 백테스트(스노우볼 방식 배당 재투자) + 배당 점수 가중치 자가 보정
+    try:
+        div_res = run_divtest(cfg, src, now)
+        pd_ = read_json("pdca.json") or {}
+        dm = div_res["model"]
+        pd_["div"] = {"weights": dm["weights"], "changed": dm["changed"], "contest": dm.get("contest"),
+                      "log": dm["log"][:3]}
+        write_json("pdca.json", pd_)
+        if dm["changed"]:
+            alert_mod.push({"title": "배당 점수 가중치 자가 보정", "body": dm["log"][0]["text"][:180], "url": "./#lab"})
+    except Exception as e:  # 배당 검증 실패가 주간 보정 전체를 막지 않도록
+        log.warning("배당 백테스트 실패: %s", e)
     meta["backtest"] = res["generated"]
     log.info("백테스트 완료: 표본 %s, 실전 기록 %s일, 모델 v%s (변경 %s)", res.get("samples"), ev.get("days", 0),
              model["version"], model["changed"])
@@ -521,7 +560,7 @@ def run_backtest(cfg: dict, src, meta: dict):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("job", choices=["morning", "evening", "alerts", "all", "backtest"])
+    ap.add_argument("job", choices=["morning", "evening", "alerts", "all", "backtest", "divtest"])
     ap.add_argument("--demo", action="store_true", help="합성 데이터 사용")
     a = ap.parse_args()
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s: %(message)s")

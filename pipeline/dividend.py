@@ -1,7 +1,8 @@
 """배당주 분석 · 월간 배당 플랜.
 
 - 후보별: TTM 배당수익률, 5년 DPS CAGR, 배당 성향, 배당 삭감 이력, 지급 월(배당락월) 패턴
-- 점수: 수익률 40% · 성장 30% · 지속가능성(배당성향) 20% · 안정성(삭감 없음) 10%
+- 점수: 수익률 40% · 성장 30% · 지속가능성(배당성향) 20% · 안정성(삭감 없음) 10% (기본값)
+  수익률·성장·안정성 비중은 매주 배당 백테스트(divtest.py)가 검증해 안전장치 안에서 조정(model.json "div")
 - 플랜: 점수 + '월 커버리지'를 함께 고려해 종목 선택 → 매월 고르게 현금흐름이 들어오도록 구성
 - 커버드콜 ETF(JEPI/JEPQ 등)는 원금 잠식·상승 제한 리스크로 합산 비중 상한 적용
 """
@@ -13,8 +14,34 @@ import pandas as pd
 
 from .common import market_of
 
+DEFAULT_WEIGHTS = {"yield": 0.40, "growth": 0.30, "stability": 0.10}  # + 지속가능성 0.20 (고정)
+SUST_W = 0.20
 
-def analyze(ticker: str, meta: dict, divs: pd.Series, price: float | None, fund: dict, cfg: dict) -> dict | None:
+
+def components(yld: float, cagr: float | None, cuts: int, pr: float | None, meta: dict, cap: float) -> dict:
+    """점수 항목(0~100). 백테스트가 과거 시점 값으로 같은 함수를 써서 계산 방식이 어긋나지 않게 함."""
+    s_yield = min(yld, cap) / cap * 100
+    s_growth = 30 if cagr is None else max(0.0, min(100.0, 30 + cagr * 700))  # 0%→30, 10%→100
+    if meta.get("type") in ("etf", "reit", "bdc", "fund") or pr is None:  # 리츠·BDC는 법상 이익 대부분을 배당 → 배당성향 평가 제외
+        s_sust = 70
+    elif pr <= 0.6:
+        s_sust = 100
+    elif pr <= 0.9:
+        s_sust = 100 - (pr - 0.6) / 0.3 * 70
+    else:
+        s_sust = 10
+    s_stab = max(0, 100 - cuts * 35)
+    return {"s_yield": s_yield, "s_growth": s_growth, "s_sust": s_sust, "s_stability": s_stab, "over_cap": yld > cap}
+
+
+def weighted(comp: dict, weights: dict | None = None) -> float:
+    w = {**DEFAULT_WEIGHTS, **(weights or {})}
+    s = w["yield"] * comp["s_yield"] + w["growth"] * comp["s_growth"] + SUST_W * comp["s_sust"] + w["stability"] * comp["s_stability"]
+    return s - (10 if comp["over_cap"] else 0)  # 과도한 고배당은 지속가능성 의심
+
+
+def analyze(ticker: str, meta: dict, divs: pd.Series, price: float | None, fund: dict, cfg: dict,
+            weights: dict | None = None) -> dict | None:
     if not price or divs is None or len(divs) == 0:
         return None
     today = pd.Timestamp(date.today())
@@ -43,21 +70,7 @@ def analyze(ticker: str, meta: dict, divs: pd.Series, price: float | None, fund:
         ex_days[d.month] = d.day
 
     pr = fund.get("payout_ratio")
-    cap = cfg["max_yield_cap"]
-    s_yield = min(yld, cap) / cap * 100
-    s_growth = 30 if cagr is None else max(0.0, min(100.0, 30 + cagr * 700))  # 0%→30, 10%→100
-    if meta.get("type") in ("etf", "reit", "bdc", "fund") or pr is None:  # 리츠·BDC는 법상 이익 대부분을 배당 → 배당성향 평가 제외
-        s_sust = 70
-    elif pr <= 0.6:
-        s_sust = 100
-    elif pr <= 0.9:
-        s_sust = 100 - (pr - 0.6) / 0.3 * 70
-    else:
-        s_sust = 10
-    s_stab = max(0, 100 - cuts * 35)
-    score = 0.40 * s_yield + 0.30 * s_growth + 0.20 * s_sust + 0.10 * s_stab
-    if yld > cap:
-        score -= 10  # 과도한 고배당은 지속가능성 의심
+    score = weighted(components(yld, cagr, cuts, pr, meta, cfg["max_yield_cap"]), weights)
 
     notes = []
     if meta.get("covered_call"):
@@ -80,7 +93,8 @@ def analyze(ticker: str, meta: dict, divs: pd.Series, price: float | None, fund:
     }
 
 
-def build_plan(cands: list[dict], cfg: dict, usdkrw: float) -> dict:
+def build_plan(cands: list[dict], cfg: dict, usdkrw: float, weights: dict | None = None) -> dict:
+    sw = {**DEFAULT_WEIGHTS, **(weights or {})}
     ranked = sorted([c for c in cands if c], key=lambda c: c["score"], reverse=True)
     picks, covered = [], set()
     pool = ranked[:]
@@ -163,7 +177,8 @@ def build_plan(cands: list[dict], cfg: dict, usdkrw: float) -> dict:
         "defaults": {"capital": capital, "max_picks": cfg["max_picks"], "single_cap": 0.35, "month_bonus": 4,
                      "covered_call_max_weight": cfg["covered_call_max_weight"], "covered_call_max_count": 1,
                      "tax_us": cfg["tax"]["us"], "tax_kr": cfg["tax"]["kr"]},
-        "method": "점수 = 배당수익률 40% + 5년 배당성장 30% + 배당성향 지속가능성 20% + 무삭감 안정성 10%. "
+        "method": f"점수 = 배당수익률 {sw['yield'] * 100:.0f}% + 5년 배당성장 {sw['growth'] * 100:.0f}% + 배당성향 지속가능성 20% + 무삭감 안정성 {sw['stability'] * 100:.0f}%"
+                  + (" (매주 배당 백테스트로 조정된 값)" if sw != DEFAULT_WEIGHTS else "") + ". "
                   "플랜은 점수와 '새로 채워지는 지급월'을 함께 고려해 선택, 단일 종목 35%·커버드콜 합산 "
                   f"{cfg['covered_call_max_weight'] * 100:.0f}% 상한. 월별 금액은 최근 12개월 배당락월 기준 세후 추정치이며 "
                   "실제 입금은 미국 통상 2~4주, 국내 결산배당은 수개월 뒤입니다.",
