@@ -134,13 +134,8 @@ def pit_components(close: pd.Series, divs: pd.Series, t: pd.Timestamp, meta: dic
     if ttm <= 0:
         return None
     yld = ttm / float(c.iloc[-1])
-    annual = d.groupby(d.index.year).sum()
-    full = annual[annual.index < t.year]
-    cagr = None
-    if len(full) >= 4:
-        y_end, y_start = full.index[-1], full.index[max(0, len(full) - 6)]
-        if y_end > y_start and full[y_start] > 0:
-            cagr = (full[y_end] / full[y_start]) ** (1 / (y_end - y_start)) - 1
+    full = div_mod.full_years(d, t.year)
+    cagr = div_mod.growth_rate(full)
     cuts = int(sum(1 for a, b in zip(full.values[:-1], full.values[1:]) if b < a * 0.95)) if len(full) > 1 else 0
     return div_mod.components(yld, cagr, cuts, None, meta, cap)
 

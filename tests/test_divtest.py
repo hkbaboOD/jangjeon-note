@@ -106,3 +106,14 @@ def test_run_end_to_end_small():
     assert len(out["tickers"]) == 14 and out["samples"] > 500 and out["bench"]["us"]["hold"]["5y"]["total"] > 0
     r = out["tickers"]["D0"]["roll"]
     assert r["n"] > 100 and 0 <= r["win_rate"] <= 100
+
+
+def test_partial_first_year_excluded_from_growth():
+    """스노우볼 대조에서 발견: 2020년 7월 상장 ETF(월배당)의 2020년(7회)을 1년치로 보면 성장률이 부풀려짐."""
+    idx = pd.date_range("2020-06-01", "2025-12-31", freq="MS")
+    divs = pd.Series(0.35, index=idx)  # 매월 같은 배당 → 실제 성장률 0%
+    full = dividend.full_years(divs, 2026)
+    assert full.index[0] == 2021 and abs(dividend.growth_rate(full)) < 1e-12
+    # 완결 연도만 있으면 첫해도 그대로 사용
+    q = pd.Series(1.0, index=pd.date_range("2018-03-15", "2025-12-15", freq="QS-MAR"))
+    assert dividend.full_years(q, 2026).index[0] == 2018

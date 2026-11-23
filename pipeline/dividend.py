@@ -18,6 +18,31 @@ DEFAULT_WEIGHTS = {"yield": 0.40, "growth": 0.30, "stability": 0.10}  # + 지속
 SUST_W = 0.20
 
 
+def full_years(divs: pd.Series, before_year: int) -> pd.Series:
+    """before_year 이전의 완결 연도별 주당배당 합계. 상장·편입 첫해처럼 지급 횟수가 모자란 첫 연도는 제외
+    (예: 2020년 중간 상장 ETF의 2020년 합계를 1년치로 보면 성장률이 부풀려짐 — 스노우볼 대조에서 발견)."""
+    d = divs[divs.index.year < before_year]
+    if len(d) == 0:
+        return pd.Series(dtype=float)
+    annual = d.groupby(d.index.year).sum()
+    counts = d.groupby(d.index.year).size()
+    if len(counts) >= 2:
+        typical = counts.iloc[1:].median()
+        if counts.iloc[0] < typical * 0.75:
+            annual = annual.iloc[1:]
+    return annual
+
+
+def growth_rate(full: pd.Series) -> float | None:
+    """최근 최대 5년(완결 연도 4개 이상일 때) 연평균 배당성장률."""
+    if len(full) < 4:
+        return None
+    y_end, y_start = full.index[-1], full.index[max(0, len(full) - 6)]
+    if y_end <= y_start or full[y_start] <= 0:
+        return None
+    return (full[y_end] / full[y_start]) ** (1 / (y_end - y_start)) - 1
+
+
 def components(yld: float, cagr: float | None, cuts: int, pr: float | None, meta: dict, cap: float) -> dict:
     """점수 항목(0~100). 백테스트가 과거 시점 값으로 같은 함수를 써서 계산 방식이 어긋나지 않게 함."""
     s_yield = min(yld, cap) / cap * 100
@@ -51,15 +76,9 @@ def analyze(ticker: str, meta: dict, divs: pd.Series, price: float | None, fund:
     ttm = float(last12.sum())
     yld = ttm / price
 
-    # 연도별 합계 → CAGR · 삭감 이력 (완결된 연도만)
-    annual = divs.groupby(divs.index.year).sum()
-    full = annual[annual.index < today.year]
-    cagr = None
-    if len(full) >= 4:
-        y_end, y_start = full.index[-1], full.index[max(0, len(full) - 6)]
-        n = y_end - y_start
-        if n > 0 and full[y_start] > 0:
-            cagr = (full[y_end] / full[y_start]) ** (1 / n) - 1
+    # 연도별 합계 → CAGR · 삭감 이력 (완결된 연도만, 지급 횟수가 모자란 첫 연도 제외)
+    full = full_years(divs, today.year)
+    cagr = growth_rate(full)
     cuts = int(sum(1 for a, b in zip(full.values[:-1], full.values[1:]) if b < a * 0.95)) if len(full) > 1 else 0
 
     # 최근 12개월 배당락월 → 월별 주당배당금
