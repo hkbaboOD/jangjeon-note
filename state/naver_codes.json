@@ -730,5 +730,11 @@
   "type": "stock",
   "ko": "팔란티어 테크놀로지스",
   "checked": "2026-11-20"
+ },
+ "ANET": {
+  "code": "ANET.K",
+  "type": "stock",
+  "ko": "아리스타 네트웍스",
+  "checked": "2026-11-23"
  }
 }
