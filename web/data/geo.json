@@ -12,13 +12,13 @@
    "tone": 0.33,
    "esc_n": 2,
    "de_n": 1,
-   "confirm": 0.49,
+   "confirm": 0.53,
    "moves": {
-    "^GSPC": -1.88,
+    "^GSPC": -2.1,
     "KRW=X": 0.54
    },
-   "direction": 0.4,
-   "intensity": 0.383,
+   "direction": 0.41,
+   "intensity": 0.397,
    "stance": "무역 긴장",
    "up": [
     "경기 방어"
@@ -52,20 +52,20 @@
   {
    "key": "nk",
    "label": "북한·한반도",
-   "n": 38,
+   "n": 39,
    "base": 26.5,
-   "ratio": 1.43,
+   "ratio": 1.47,
    "level": "높음",
-   "heat": 0.62,
-   "tone": 0.78,
-   "esc_n": 16,
+   "heat": 0.65,
+   "tone": 0.79,
+   "esc_n": 17,
    "de_n": 2,
    "confirm": 0.36,
    "moves": {
     "KRW=X": 0.54
    },
-   "direction": 0.65,
-   "intensity": 0.405,
+   "direction": 0.66,
+   "intensity": 0.429,
    "stance": "도발",
    "up": [
     "방산"
@@ -81,16 +81,16 @@
      "time": "2026-11-24T15:21:23+00:00"
     },
     {
-     "title": "“실제 경계경보” 놀란 울릉도…경북도 ‘북 항공기’ 오발송까지",
-     "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBHLUlfS3JXMDBGS0ZQUGpibFRaSUN0YWFELU9RZV9LUjVBTWg5Qzd2VXhuNXYwXzkyQ2JxSzl0YlZydFRWMnNtUmZtb1Fxb3NCV201akpCa0pVT1BlakJLajNrNXE?oc=5",
-     "publisher": "한겨레",
-     "time": "2026-11-24T08:24:00+00:00"
-    },
-    {
      "title": "여야, 연평도 포격 16주기 추모...“북한 도발에 단호히 대응”",
      "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9WUm9PRDBMNTlPWTRBaUsxX1dpVmtSenJlZl90Q1JaYmVfeDRFQU50a1JvNnliUDlMYVpCYmMtQmhqR3ROQzlGZHF0b0ZYSzZhM21TRGY3d1pzaTlfbUNuUGdJNTREbUk?oc=5",
      "publisher": "M이코노미뉴스",
      "time": "2026-11-23T01:07:57+00:00"
+    },
+    {
+     "title": "\"러시아→북한→러시아\"...울릉군 경계경보 원인 혼선, 왜? [Y녹취록]",
+     "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFA0dWlfLUdwejM4b3N4OWh6cHI3Q0hheUtBRkhIQzRpcnZ4YnNaYU42UXM2aDVIV3Ftd1VxU0xWQVF0WXFnTEx4cUlTZ1ZETEtzTnkyVExNZm9Gd2tQTTlOa2JDdw?oc=5",
+     "publisher": "YTN",
+     "time": "2026-11-23T23:15:00+00:00"
     }
    ]
   },
@@ -107,7 +107,7 @@
    "de_n": 6,
    "confirm": 1.0,
    "moves": {
-    "^SOX": -7.65
+    "^SOX": -8.2
    },
    "direction": 0.2,
    "intensity": 0.2,
@@ -150,11 +150,11 @@
    "level": "높음",
    "heat": 0.77,
    "tone": 0.61,
-   "esc_n": 53,
+   "esc_n": 54,
    "de_n": 13,
    "confirm": -0.97,
    "moves": {
-    "^TNX": -3.86
+    "^TNX": -3.9
    },
    "direction": 0.01,
    "intensity": 0.0,
@@ -198,7 +198,7 @@
     "KRW=X": 0.54
    },
    "direction": 0.31,
-   "intensity": 0.11,
+   "intensity": 0.109,
    "stance": "원화 약세",
    "up": [
     "수출주"
@@ -241,8 +241,8 @@
    "de_n": 6,
    "confirm": -0.9,
    "moves": {
-    "CL=F": -4.8,
-    "GC=F": -7.84
+    "CL=F": -4.74,
+    "GC=F": -7.99
    },
    "direction": 0.07,
    "intensity": 0.0,
@@ -273,18 +273,18 @@
   {
    "key": "taiwan",
    "label": "대만 해협",
-   "n": 6,
+   "n": 7,
    "base": 7.0,
-   "ratio": 0.86,
+   "ratio": 1.0,
    "level": "보통",
-   "heat": 0.24,
+   "heat": 0.33,
    "tone": 0.0,
    "esc_n": 2,
    "de_n": 2,
-   "confirm": 0.59,
+   "confirm": 0.61,
    "moves": {
-    "^SOX": -7.65,
-    "^VIX": 3.57
+    "^SOX": -8.2,
+    "^VIX": 4.24
    },
    "direction": 0.12,
    "intensity": 0.0,
@@ -325,8 +325,8 @@
    "de_n": 3,
    "confirm": -0.92,
    "moves": {
-    "BZ=F": -5.08,
-    "GC=F": -7.84
+    "BZ=F": -5.0,
+    "GC=F": -7.99
    },
    "direction": -0.98,
    "intensity": -0.0,
@@ -356,20 +356,20 @@
   }
  ],
  "impact": {
-  "china": -0.315,
+  "china": -0.319,
   "semis": -0.12,
-  "tariff": -0.443,
-  "defense": 0.263,
-  "export": -0.164,
-  "defensive": 0.115,
+  "tariff": -0.457,
+  "defense": 0.274,
+  "export": -0.173,
+  "defensive": 0.119,
   "oil_down": -0.044,
-  "korea": -0.276
+  "korea": -0.29
  },
- "generated": "2026-11-25T03:47+09:00",
+ "generated": "2026-11-25T04:05+09:00",
  "summary": [
-  "관세·무역분쟁: 48시간 기사 48건(평소 24건의 2.0배), 무역 긴장. 5일 가격 변화 S&P500 -1.9%, 원달러 +0.5%. 경기 방어에 유리, 관세 민감·수출주·중국 노출에 부담",
-  "북한·한반도: 48시간 기사 38건(평소 26건의 1.4배), 도발. 5일 가격 변화 원달러 +0.5%. 방산에 유리, 국내 상장주에 부담",
-  "미중 갈등·수출규제: 48시간 기사 26건(평소 6건의 4.0배), 갈등 고조. 5일 가격 변화 반도체지수 -7.7%. 방산에 유리, 중국 노출·반도체·관세 민감에 부담",
+  "관세·무역분쟁: 48시간 기사 48건(평소 24건의 2.0배), 무역 긴장. 5일 가격 변화 S&P500 -2.1%, 원달러 +0.5%. 경기 방어에 유리, 관세 민감·수출주·중국 노출에 부담",
+  "북한·한반도: 48시간 기사 39건(평소 26건의 1.5배), 도발. 5일 가격 변화 원달러 +0.5%. 방산에 유리, 국내 상장주에 부담",
+  "미중 갈등·수출규제: 48시간 기사 26건(평소 6건의 4.0배), 갈등 고조. 5일 가격 변화 반도체지수 -8.2%. 방산에 유리, 중국 노출·반도체·관세 민감에 부담",
   "연준·금리: 48시간 기사 100건(평소 60건의 1.6배), 방향 혼재. 5일 가격 변화 미 10년물 금리 -3.9%"
  ],
  "tag_ko": {
