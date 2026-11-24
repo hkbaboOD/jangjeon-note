@@ -1,0 +1,789 @@
+{
+ "indices": [
+  {
+   "ticker": "^DJI",
+   "name": "다우",
+   "last": 49595.30859375,
+   "chg": 3.0073952701814566,
+   "date": "2026-11-23",
+   "spark": [
+    51670.1016,
+    51621.4805,
+    52177.6914,
+    52002.4102,
+    51966.0312,
+    52495.8789,
+    52856.0898,
+    52867.9805,
+    52215.1602,
+    52361.5781,
+    52377.5703,
+    52475.1016,
+    52342.5586,
+    51770.3086,
+    51983.9805,
+    51786.7188,
+    53356.1211,
+    51523.0586,
+    51285.7305,
+    52389.75,
+    52231.8906,
+    52486.4883,
+    52297.0898,
+    52347.5508,
+    51608.1719,
+    50759.4219,
+    50198.1719,
+    49097.0586,
+    48147.3281,
+    49595.3086
+   ]
+  },
+  {
+   "ticker": "^GSPC",
+   "name": "S&P500",
+   "last": 7237.169921875,
+   "chg": 4.728818180899608,
+   "date": "2026-11-23",
+   "spark": [
+    7805.4502,
+    7718.9399,
+    7744.0601,
+    7659.4399,
+    7690.73,
+    7712.5698,
+    7757.1699,
+    7663.4302,
+    7623.6802,
+    7676.77,
+    7722.6001,
+    7743.98,
+    7720.3901,
+    7580.0698,
+    7541.3999,
+    7568.9199,
+    7688.6201,
+    7353.73,
+    7376.8599,
+    7549.9399,
+    7520.9302,
+    7619.3799,
+    7592.3999,
+    7561.6699,
+    7416.5898,
+    7340.5298,
+    7323.6299,
+    7175.8301,
+    6910.3901,
+    7237.1699
+   ]
+  },
+  {
+   "ticker": "^IXIC",
+   "name": "나스닥",
+   "last": 24089.560546875,
+   "chg": 6.507417179449404,
+   "date": "2026-11-23",
+   "spark": [
+    27204.3809,
+    26692.8691,
+    26713.0293,
+    26140.0293,
+    26430.8906,
+    26424.8203,
+    26702.8594,
+    26008.8594,
+    25955.3398,
+    26169.3809,
+    26477.8105,
+    26549.8496,
+    26184.7207,
+    25437.0,
+    25164.3105,
+    25372.0098,
+    25736.5098,
+    24315.0,
+    24579.4297,
+    25253.1406,
+    25065.8691,
+    25466.1895,
+    25366.0898,
+    25136.2695,
+    24509.7598,
+    24328.3809,
+    24429.8809,
+    23879.1992,
+    22617.7305,
+    24089.5605
+   ]
+  },
+  {
+   "ticker": "^SOX",
+   "name": "필라델피아반도체",
+   "last": 9588.0498046875,
+   "chg": 14.026846152023676,
+   "date": "2026-11-23",
+   "spark": [
+    12208.79,
+    11684.3799,
+    11581.21,
+    11137.29,
+    11316.3398,
+    11283.8096,
+    11505.5596,
+    10731.9805,
+    10779.46,
+    11083.4697,
+    11482.5,
+    11684.0,
+    11518.2002,
+    10688.7998,
+    10328.3301,
+    10600.4004,
+    10268.6504,
+    9011.1396,
+    9390.25,
+    10033.9297,
+    9998.3301,
+    10564.1104,
+    10506.6699,
+    10146.3203,
+    9610.6504,
+    9642.8799,
+    9652.7998,
+    9419.7197,
+    8408.5898,
+    9588.0498
+   ]
+  },
+  {
+   "ticker": "^KS11",
+   "name": "코스피",
+   "last": 5050.25,
+   "chg": 7.257238084472917,
+   "date": "2026-11-24",
+   "spark": [
+    6008.8101,
+    5554.2202,
+    5668.0498,
+    5768.0098,
+    5552.7402,
+    5735.6602,
+    5533.77,
+    5550.2998,
+    5469.4702,
+    5638.3398,
+    6012.4399,
+    5937.6602,
+    5730.7402,
+    5859.0801,
+    5648.79,
+    5683.7998,
+    5383.7998,
+    5059.6899,
+    5018.8501,
+    5239.1299,
+    5375.3599,
+    5342.73,
+    5290.5298,
+    5100.5,
+    4968.48,
+    5067.4399,
+    5137.8901,
+    4869.96,
+    4708.54,
+    5050.25
+   ]
+  },
+  {
+   "ticker": "^KQ11",
+   "name": "코스닥",
+   "last": 668.780029296875,
+   "chg": 5.245104484943308,
+   "date": "2026-11-24",
+   "spark": [
+    823.88,
+    760.82,
+    794.78,
+    808.89,
+    781.97,
+    792.76,
+    764.1,
+    751.69,
+    727.21,
+    743.83,
+    771.28,
+    753.23,
+    724.38,
+    734.36,
+    704.39,
+    714.95,
+    678.41,
+    644.27,
+    638.97,
+    667.61,
+    705.1,
+    696.53,
+    699.66,
+    665.65,
+    650.06,
+    662.81,
+    684.81,
+    645.68,
+    635.45,
+    668.78
+   ]
+  }
+ ],
+ "macro": [
+  {
+   "ticker": "^TNX",
+   "name": "미 10년물(%)",
+   "last": 4.918000221252441,
+   "chg": 0.12215068694350073,
+   "date": "2026-11-23",
+   "spark": [
+    5.217,
+    5.19,
+    5.089,
+    5.098,
+    5.136,
+    5.117,
+    5.146,
+    4.953,
+    4.988,
+    4.986,
+    4.993,
+    5.045,
+    4.989,
+    4.929,
+    4.894,
+    4.952,
+    4.894,
+    4.837,
+    4.859,
+    4.864,
+    4.983,
+    4.998,
+    5.103,
+    5.154,
+    5.121,
+    5.103,
+    5.066,
+    5.052,
+    4.912,
+    4.918
+   ],
+   "chg_bp": 0.6000041961669922
+  },
+  {
+   "ticker": "^VIX",
+   "name": "VIX",
+   "last": 26.6200008392334,
+   "chg": -25.828918105495248,
+   "date": "2026-11-23",
+   "spark": [
+    15.27,
+    16.87,
+    16.46,
+    19.99,
+    18.44,
+    17.31,
+    16.68,
+    19.03,
+    19.45,
+    18.39,
+    17.52,
+    16.91,
+    17.2,
+    19.42,
+    21.15,
+    20.83,
+    16.61,
+    28.18,
+    25.64,
+    19.92,
+    19.46,
+    17.49,
+    18.7,
+    19.3,
+    22.91,
+    25.46,
+    24.56,
+    28.44,
+    35.89,
+    26.62
+   ]
+  },
+  {
+   "ticker": "CL=F",
+   "name": "WTI",
+   "last": 79.41000366210938,
+   "chg": -0.9479787005038598,
+   "date": "2026-11-24",
+   "spark": [
+    95.09,
+    97.97,
+    101.41,
+    103.66,
+    101.79,
+    97.15,
+    99.47,
+    103.27,
+    101.76,
+    99.9,
+    102.78,
+    102.0,
+    104.12,
+    96.46,
+    96.09,
+    88.12,
+    90.52,
+    90.83,
+    86.85,
+    86.04,
+    86.53,
+    88.74,
+    88.56,
+    85.72,
+    86.01,
+    83.26,
+    83.21,
+    83.98,
+    80.17,
+    79.41
+   ]
+  },
+  {
+   "ticker": "BZ=F",
+   "name": "브렌트",
+   "last": 85.95999908447266,
+   "chg": -3.8156020558473003,
+   "date": "2026-11-24",
+   "spark": [
+    106.06,
+    105.92,
+    109.86,
+    109.55,
+    108.79,
+    108.82,
+    113.17,
+    116.72,
+    115.81,
+    113.88,
+    115.32,
+    114.88,
+    117.64,
+    104.77,
+    103.6,
+    94.62,
+    98.29,
+    98.32,
+    92.57,
+    91.49,
+    92.76,
+    95.82,
+    95.84,
+    92.44,
+    93.14,
+    91.95,
+    91.98,
+    92.57,
+    89.37,
+    85.96
+   ]
+  },
+  {
+   "ticker": "DX-Y.NYB",
+   "name": "달러인덱스",
+   "last": 104.30599975585938,
+   "chg": -0.013420186930401812,
+   "date": "2026-11-24",
+   "spark": [
+    102.55,
+    102.0,
+    101.84,
+    101.98,
+    101.73,
+    101.78,
+    101.61,
+    101.81,
+    101.96,
+    102.32,
+    102.19,
+    102.04,
+    101.88,
+    101.75,
+    101.87,
+    101.51,
+    101.55,
+    102.3,
+    101.65,
+    102.23,
+    102.91,
+    103.17,
+    103.41,
+    103.55,
+    103.49,
+    103.86,
+    103.9,
+    103.81,
+    104.32,
+    104.306
+   ]
+  },
+  {
+   "ticker": "KRW=X",
+   "name": "원달러",
+   "last": 1342.6500244140625,
+   "chg": -0.1234859598851834,
+   "date": "2026-11-24",
+   "spark": [
+    1340.3101,
+    1339.35,
+    1340.95,
+    1333.4301,
+    1330.0,
+    1323.9399,
+    1325.59,
+    1325.99,
+    1321.76,
+    1324.77,
+    1326.8101,
+    1340.34,
+    1337.98,
+    1325.52,
+    1344.8101,
+    1342.9,
+    1340.0699,
+    1356.34,
+    1362.7,
+    1343.84,
+    1341.91,
+    1336.26,
+    1333.78,
+    1333.25,
+    1335.67,
+    1333.01,
+    1330.4,
+    1334.79,
+    1344.3101,
+    1342.65
+   ]
+  },
+  {
+   "ticker": "GC=F",
+   "name": "금",
+   "last": 3634.699951171875,
+   "chg": -0.45735749626206745,
+   "date": "2026-11-24",
+   "spark": [
+    4107.8999,
+    4170.1001,
+    4181.1001,
+    4160.1001,
+    4142.6001,
+    4150.0,
+    4060.3999,
+    4007.8999,
+    4038.3999,
+    4074.6001,
+    4051.6001,
+    4031.3999,
+    3898.8999,
+    3969.6001,
+    3940.3999,
+    4073.0,
+    4113.5,
+    4074.8999,
+    4114.5,
+    4030.2,
+    4000.5,
+    3885.3,
+    3886.3,
+    3853.0,
+    3864.2,
+    3741.8999,
+    3685.5,
+    3515.3999,
+    3651.3999,
+    3634.7
+   ]
+  }
+ ],
+ "breadth": {
+  "us": {
+   "up": 52,
+   "down": 14,
+   "total": 66
+  },
+  "kr": {
+   "up": 40,
+   "down": 0,
+   "total": 40
+  }
+ },
+ "movers": {
+  "us": {
+   "top": [
+    {
+     "ticker": "NVDA",
+     "name": "엔비디아",
+     "chg": 31.48251784973235
+    },
+    {
+     "ticker": "MU",
+     "name": "마이크론",
+     "chg": 19.039208858069422
+    },
+    {
+     "ticker": "INTC",
+     "name": "인텔",
+     "chg": 16.341656138062287
+    },
+    {
+     "ticker": "KLAC",
+     "name": "KLA",
+     "chg": 14.960197797776843
+    },
+    {
+     "ticker": "AMAT",
+     "name": "어플라이드 머티어리얼즈",
+     "chg": 14.61850759031844
+    }
+   ],
+   "bottom": [
+    {
+     "ticker": "COP",
+     "name": "코노코필립스",
+     "chg": -2.887153112515073
+    },
+    {
+     "ticker": "XOM",
+     "name": "엑슨모빌",
+     "chg": -1.9313778927344982
+    },
+    {
+     "ticker": "CVS",
+     "name": "CVS 헬스",
+     "chg": -1.4720371918843789
+    },
+    {
+     "ticker": "KO",
+     "name": "코카콜라",
+     "chg": -1.14444853572494
+    },
+    {
+     "ticker": "UNH",
+     "name": "유나이티드헬스",
+     "chg": -1.1093186592739612
+    }
+   ]
+  },
+  "kr": {
+   "top": [
+    {
+     "ticker": "066570.KS",
+     "name": "LG전자",
+     "chg": 16.34304207119741
+    },
+    {
+     "ticker": "012330.KS",
+     "name": "현대모비스",
+     "chg": 14.673046251993615
+    },
+    {
+     "ticker": "006400.KS",
+     "name": "삼성SDI",
+     "chg": 14.52020202020201
+    },
+    {
+     "ticker": "005380.KS",
+     "name": "현대차",
+     "chg": 11.91919191919193
+    },
+    {
+     "ticker": "009150.KS",
+     "name": "삼성전기",
+     "chg": 11.18251928020566
+    }
+   ],
+   "bottom": [
+    {
+     "ticker": "207940.KS",
+     "name": "삼성바이오로직스",
+     "chg": 0.6211180124223503
+    },
+    {
+     "ticker": "096770.KS",
+     "name": "SK이노베이션",
+     "chg": 1.1013215859030812
+    },
+    {
+     "ticker": "138040.KS",
+     "name": "메리츠금융지주",
+     "chg": 1.2376237623762387
+    },
+    {
+     "ticker": "010950.KS",
+     "name": "S-Oil",
+     "chg": 1.5005359056806
+    },
+    {
+     "ticker": "015760.KS",
+     "name": "한국전력",
+     "chg": 2.012072434607637
+    }
+   ]
+  }
+ },
+ "points": [
+  "미 증시 강세: S&P500 +4.73%, 나스닥 +6.51%",
+  "반도체 강세(SOX +14.03%)"
+ ],
+ "outlook": [
+  "반도체 대형주 중심 강세 출발 기대"
+ ],
+ "diagnosis": [],
+ "news": [
+  {
+   "title": "Why stocks had their best Monday since 2020",
+   "link": "https://finance.yahoo.com/markets/article/why-stocks-are-having-their-wildest-morning-since-2008-184837610.html",
+   "publisher": "Yahoo Finance",
+   "time": "2026-11-23T15:31:00Z"
+  },
+  {
+   "title": "The 10-Year Topped 5% For The First Time Since 2007. What Happened Next?",
+   "link": "https://www.trefis.com/stock/spy/articles/627401/the-10-year-topped-5-for-the-first-time-since-2007-what-happened-next/2026-11-23",
+   "publisher": "Trefis",
+   "time": "2026-11-24T05:06:42Z"
+  },
+  {
+   "title": "Stocks Opened Up, Then Fell 3% By The Close. What Happened The Last 45 Times?",
+   "link": "https://www.trefis.com/stock/spy/articles/627441/stocks-opened-up-then-fell-3-by-the-close-what-happened-the-last-45-times/2026-11-23",
+   "publisher": "Trefis",
+   "time": "2026-11-24T05:06:42Z"
+  },
+  {
+   "title": "1966 Or 1995: Which Way Does America's $2.1 Trillion Deficit Go?",
+   "link": "https://www.trefis.com/stock/spy/articles/627413/1966-or-1995-which-way-does-america-s-2-1-trillion-deficit-go/2026-11-23",
+   "publisher": "Trefis",
+   "time": "2026-11-24T05:06:42Z"
+  },
+  {
+   "title": "The Inflation Math, Updated: The Fed Is Fighting Oil",
+   "link": "https://www.trefis.com/stock/spy/articles/627433/the-inflation-math-updated-the-fed-is-fighting-oil/2026-11-23",
+   "publisher": "Trefis",
+   "time": "2026-11-24T05:06:42Z"
+  },
+  {
+   "title": "S&P 500, Nasdaq End Best Session Since April Last Year On Optimism Led By Jensen Huang’s Reinstatement — NVDA, NASA, TTWO, AMZN In Focus",
+   "link": "https://stocktwits.com/news-articles/markets/equity/s-and-p-500-nasdaq-end-best-session-since-april-on-optimism-led-by-jensen-huang-s-reinstatement-nvda-nasa-ttwo-amzn-in-focus/cNbpKSnR9jY",
+   "publisher": "Stocktwits",
+   "time": "2026-11-23T23:33:25Z"
+  },
+  {
+   "title": "EEM Now Moves Like A Chip Fund",
+   "link": "https://www.trefis.com/stock/eem/articles/627624/eem-near-54-now-moves-like-a-chip-fund/2026-11-23",
+   "publisher": "Trefis",
+   "time": "2026-11-23T22:43:10Z"
+  },
+  {
+   "title": "Own Gold As A Hedge? BND Rose More Often",
+   "link": "https://www.trefis.com/stock/bnd/articles/627661/own-gold-as-a-hedge-bnd-rose-more-often/2026-11-23",
+   "publisher": "Trefis",
+   "time": "2026-11-23T22:38:05Z"
+  },
+  {
+   "title": "QQQ Paid a $300,000 Holder $1,524 in Dividends Over the Past Year While VYM Paid $7,164",
+   "link": "https://247wallst.com/investing/etf/2026/11/23/qqq-paid-a-300000-holder-1524-in-dividends-over-the-past-year-while-vym-paid-7164/",
+   "publisher": "24/7 Wall St.",
+   "time": "2026-11-24T02:03:39Z"
+  },
+  {
+   "title": "QQQ Is Almost Half In 10 Stocks. This Nasdaq ETF Caps Every One at 1%",
+   "link": "https://247wallst.com/investing/etf/2026/11/23/qqq-is-almost-half-in-10-stocks-this-nasdaq-etf-caps-every-one-at-1/",
+   "publisher": "24/7 Wall St.",
+   "time": "2026-11-24T02:01:04Z"
+  },
+  {
+   "title": "Retiring On $2 Million? Sell BND Before SCHD",
+   "link": "https://www.trefis.com/stock/voo/articles/627666/retiring-on-2-million-sell-bnd-before-schd/2026-11-23",
+   "publisher": "Trefis",
+   "time": "2026-11-23T22:14:27Z"
+  },
+  {
+   "title": "Should You Swap Tech For Johnson & Johnson Stock?",
+   "link": "https://www.trefis.com/stock/jnj/articles/627623/should-you-swap-tech-for-johnson-johnson-stock/2026-11-23",
+   "publisher": "Trefis",
+   "time": "2026-11-23T22:02:04Z"
+  }
+ ],
+ "ai_summary": null,
+ "news_kr": [
+  {
+   "title": "젠슨 황 복귀에 국내 증시 급등‥5천 선 회복",
+   "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1TbEdQalo2WE9xc1ZDclIza0VyUFBtTk9qYUYyOW1YUFhvMU1oVzh0WTlQYW9ObXBXZFVMSlVFVjhLLVVDRjlSaDJHcU9tNVFwaVozRkdzdElkRGF4RFVKYTNOdndBR2h2M3RDTV9HQWotT3hyeEhySNIBeEFVX3lxTFBEUm81R2RySWVXQ0dadElwOE85eW5Qc1g5eHlCZjQwdjhXZlhzcld4dlNoTDc0b2NfRWs5aDlCTmthbVJzRW5JaTUxRHV2Tzd2U1pmZVNRcFlOSGMxdnl5ZVZReXlyWUxVQzdxMDFaeG1oV1RmbE9wLQ?oc=5",
+   "publisher": "MBC 뉴스",
+   "time": "2026-11-24T03:07:35+00:00"
+  },
+  {
+   "title": "코스피 급등에 5천 선 회복...장 초반 매수 사이드카",
+   "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9Oc29PbE1SbGhiMU1SQXJMenZudURCdkRzSmdUYWdSY1pTS0FTNnRpc2Q5QnRoVzF2ZzRfeExHbmRVeEZjM3dqbWlZb2VZSkpvSEdLYzdQd3YwUFlNV3Rtem5MekRGV3JwbHp6Z2F1VQ?oc=5",
+   "publisher": "YTN",
+   "time": "2026-11-24T02:31:00+00:00"
+  },
+  {
+   "title": "“증시 안전판 작동하는 거 맞나”…사이드카 올해만 101번 발동",
+   "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1DQlNHTlktb3dob0lLNWtlcV9HVWlBdGJqX2pMLU5PTklkZy11TVBaZjNKSGVFRmpHb3FUMElRWVZlOUlJOGwxeEtaUkhsY2h0S0E?oc=5",
+   "publisher": "매일경제 마켓",
+   "time": "2026-11-24T02:05:17+00:00"
+  },
+  {
+   "title": "국내 증시, 올해 '100번' 째 사이드카 발동...'젠슨 황 복귀'에 한·미 증시 폭등",
+   "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE0wSmRXUnY1aUNIcHVFWEtaZjFvQkVET01MeEtwekN1ZGZqSkpOakRXQ1FiZWpORjdzYzlSRWpIcnlNbWRLWG5OdERRUGFKMGN1QWl0ZUZuSnEzVE1TNHpidG9kQjZzZlprMU9ZNWVDR0jSAXBBVV95cUxNMEpkV1J2NWlDSHB1RVhLWmYxb0JFRE9NTHhLcHpDdWRmakpKTmpEV0NRYmVqTkY3c2M5UkVqSHJ5TW1kS1huTnREUVBhSjBjdUFpdGVGbkpxM1RNUzR6YnRvZEI2c2ZaazFPWTVlQ0dI?oc=5",
+   "publisher": "반론보도닷컴",
+   "time": "2026-11-24T02:22:03+00:00"
+  },
+  {
+   "title": "장초반 급등세…코스피·코스닥 매수 사이드카",
+   "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE02WXNvWmdMY3dGV2tvV2UwdC1nQ29LM0xFbko1U3hrcmRKOG9tTndEc2ppdDFtbktKQko0WTBYaVVJckFfM0JvWXZoV2ZwZzVIUzgyN2J0TThGV0VJcWhmbmpCU2xwdw?oc=5",
+   "publisher": "KBS 뉴스",
+   "time": "2026-11-24T00:20:00+00:00"
+  },
+  {
+   "title": "\"젠슨 황 복귀에 국내 증시 반등 전망…AI 인프라주 주목\"",
+   "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE56NTN2V29YYlBzU25sODdhX1A5VFhuLXB4akVVREJmdDRodmxZYzdwdGlIRVhuMjZ1UGJ1X1JNZElBV1NTUjZxTV9RYUF5amlmeWRVbmQxaURFby03YWF4TlVlaHUwS3lNZzRrTFRSS0dQZw?oc=5",
+   "publisher": "KB Think",
+   "time": "2026-11-23T22:47:54+00:00"
+  },
+  {
+   "title": "코스피 5개월 만에 반토막, 3589조원 증발…4천대 초반까지 가나",
+   "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBqNVkwS24zSWRKQ3VxV29FQXZVYXVBT252VkxBTzB0UDFsUkhDUjl2N0FvVWdfMDR3My1qdUlPakNZX1h3Y2t0VEVOYVFBUHJhM2hKSkY1REJ3Y0lxQ1E0SWtkQTFnNGM?oc=5",
+   "publisher": "한겨레",
+   "time": "2026-11-24T03:57:00+00:00"
+  },
+  {
+   "title": "[마켓뷰] '젠슨황 복귀'에 美증시 급등…코스피도 반등하나",
+   "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBVaEsyMFpST0ZzS1VKRWdTcERtSkFmUVZJNmxWN18takRfTEo4SHhZcEdMWTlyRXljWUJLWFo5aGlCUVp3ZVpJd1dYZlUwU1pXcnIta3F1bUVqTEnSAWBBVV95cUxOMlRFcmszRzNyUGNBVUxKdVlIbEcyVkUwbWZnZHRWZEhOTHRiMFdDU1lJbERkVmhCS3M4aFZKby1GNGVfVjhwRXVlWTFoQWNsRm5pNWRpbzFTZ2VPUnFxSWQ?oc=5",
+   "publisher": "연합뉴스",
+   "time": "2026-11-23T23:09:27+00:00"
+  }
+ ],
+ "earnings": [
+  {
+   "ticker": "DE",
+   "name": "디어(존디어)",
+   "date": "2026-11-25",
+   "in_days": 1
+  }
+ ],
+ "geo": [
+  "미중 갈등·수출규제: 48시간 기사 17건(평소 6건의 2.8배), 갈등 고조. 5일 가격 변화 반도체지수 -0.2%. 방산에 유리, 중국 노출·반도체·관세 민감에 부담",
+  "중동 정세: 48시간 기사 45건(평소 24건의 1.9배), 긴장 고조. 5일 가격 변화 WTI -7.7%, 금 -5.9%. 정유·에너지·방산·해운·조선에 유리, 유가 원가 부담주·국내 상장주에 부담",
+  "관세·무역분쟁: 48시간 기사 29건(평소 24건의 1.2배), 무역 긴장. 5일 가격 변화 S&P500 -2.4%, 원달러 +0.5%. 경기 방어에 유리, 관세 민감·수출주·중국 노출에 부담",
+  "환율(원화): 48시간 기사 100건(평소 98건의 1.0배), 원화 약세. 5일 가격 변화 원달러 +0.5%. 수출주에 유리, 유가 원가 부담주·국내 상장주에 부담"
+ ],
+ "date": "2026-11-24",
+ "generated": "2026-11-24T14:28+09:00"
+}

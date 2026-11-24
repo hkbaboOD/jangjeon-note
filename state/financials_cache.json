@@ -5620,7 +5620,7 @@
   "calendar": {
    "next_earnings": "2026-10-28",
    "eps_avg": 0.73,
-   "rev_avg": 1071351940.0
+   "rev_avg": 1072699670.0
   },
   "eps_est": {
    "0q": {
@@ -5644,61 +5644,61 @@
     "methodology": null
    },
    "0y": {
-    "avg": 2.75,
-    "low": 2.75,
-    "high": 2.75,
+    "avg": 2.34,
+    "low": 2.34,
+    "high": 2.34,
     "yearAgoEps": 2.619,
     "numberOfAnalysts": 1.0,
-    "growth": 0.05,
+    "growth": -0.1065,
     "currency": null,
     "methodology": null
    },
    "+1y": {
-    "avg": 2.99,
-    "low": 2.99,
-    "high": 2.99,
-    "yearAgoEps": 2.75,
+    "avg": 2.97,
+    "low": 2.97,
+    "high": 2.97,
+    "yearAgoEps": 2.34,
     "numberOfAnalysts": 1.0,
-    "growth": 0.087299995,
+    "growth": 0.2692,
     "currency": null,
     "methodology": null
    }
   },
   "rev_est": {
    "0q": {
-    "avg": 1071351940.0,
+    "avg": 1072699670.0,
     "low": 1054395000.0,
     "high": 1081863900.0,
     "numberOfAnalysts": 11.0,
     "yearAgoRevenue": 1013090000.0,
-    "growth": 0.0575,
+    "growth": 0.0588,
     "currency": null
    },
    "+1q": {
-    "avg": 1077787950.0,
+    "avg": 1078477520.0,
     "low": 1062718000.0,
     "high": 1094780210.0,
     "numberOfAnalysts": 7.0,
     "yearAgoRevenue": 1018521000.0,
-    "growth": 0.0582,
+    "growth": 0.0589,
     "currency": null
    },
    "0y": {
-    "avg": 4212779410.0,
+    "avg": 4215069100.0,
     "low": 4196905000.0,
     "high": 4224374000.0,
     "numberOfAnalysts": 13.0,
     "yearAgoRevenue": 4006116000.0,
-    "growth": 0.051599998,
+    "growth": 0.052199997,
     "currency": null
    },
    "+1y": {
-    "avg": 4351636730.0,
+    "avg": 4357329570.0,
     "low": 4256594000.0,
     "high": 4402044000.0,
     "numberOfAnalysts": 13.0,
-    "yearAgoRevenue": 4212779410.0,
-    "growth": 0.033,
+    "yearAgoRevenue": 4215069100.0,
+    "growth": 0.033800002,
     "currency": null
    }
   },
@@ -5722,7 +5722,7 @@
     "methodology": null
    },
    "0y": {
-    "current": 2.75,
+    "current": 2.34,
     "7daysAgo": 2.75,
     "30daysAgo": 2.75,
     "60daysAgo": 2.75,
@@ -5731,7 +5731,7 @@
     "methodology": null
    },
    "+1y": {
-    "current": 2.99,
+    "current": 2.97,
     "7daysAgo": 2.99,
     "30daysAgo": 2.99,
     "60daysAgo": 2.99,
@@ -5774,7 +5774,7 @@
     "methodology": null
    }
   },
-  "_fetched": "2026-11-05T01:47:38.737031"
+  "_fetched": "2026-11-24T05:32:46.729344"
  },
  "175330.KS": {
   "ok": true,
