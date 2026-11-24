@@ -99,6 +99,58 @@ async function loadChart(t) {
 const setupPill = (label, setup) => (label && setup !== "insufficient" ? `<span class="setup s-${esc(setup)}">${esc(label)}</span>` : "");
 const shortTxt = (t) => String(t).split(/ — |: /)[0];
 const lvTxt = (l, t) => (l ? `${price(l.price, t)}(${esc(l.label || "")}, ${sgn(l.dist, 1)})` : "-");
+/* 매매 판단(지금 매수 / 기다렸다 매수 / 보류) — pipeline/trade.py */
+const ACT_KO = { buy: "지금 매수", wait: "기다렸다 매수", skip: "보류" };
+const TST_KO = { pending: "다음 거래일 시가 매수 대기", waiting: "지정가 체결 대기", open: "보유 중", closed: "청산", unfilled: "미체결(거래 없음)", skipped: "사지 않음", data_mismatch: "자료 불일치로 채점 제외" };
+function tradeOf(t, h, date) {
+  const its = (state.data.track?.items || []).filter((i) => i.ticker === t && i.horizon === h && (!date || i.date === date));
+  return its.length ? its[its.length - 1] : null;
+}
+function planRow(pl, t, h, gen) {
+  if (!pl) return "";
+  const tr = tradeOf(t, h, (gen || "").slice(0, 10))?.trade;
+  const st = tr ? `${SEP}${TST_KO[tr.status] || tr.status}${tr.status === "open" ? ` ${sgn(tr.cur, 1)}` : ""}${tr.status === "closed" ? ` ${esc(tr.why)} ${sgn(tr.ret, 1)}` : ""}` : "";
+  const body = pl.action === "buy" ? `다음 거래일 시가에 매수${SEP}손절 ${price(pl.stop, t)}${SEP}목표 ${price(pl.target, t)}(${esc(pl.target_label || "")})${SEP}손익비 ${nf(pl.rr, 1)}`
+    : pl.action === "wait" ? `${esc(pl.limit_label || "지지선")} ${price(pl.limit, t)} 지정가, ${nf(pl.wait_days)}거래일 안에 안 오면 포기${SEP}손절 ${price(pl.stop, t)}${SEP}목표 ${price(pl.target, t)}${SEP}손익비 ${nf(pl.rr, 1)}`
+    : "사지 않으므로 매매 승률 채점에서 뺍니다";
+  return `<div class="plan plan-${pl.action}"><div class="plan-h"><b>${ACT_KO[pl.action] || pl.action}</b><small>내 매매 판단${st}</small></div>
+    <p>${esc(pl.reason || "")}</p><p class="plan-d">${body}</p></div>`;
+}
+function tradeSection(tr) {
+  const T = tr?.trades || {};
+  if (!Object.keys(T).length) return "";
+  const tile = (h) => { const v = T[h]; if (!v) return `<div class="kpi"><small>${HN[h]}</small><b>-</b><small>계획 없음</small></div>`;
+    return `<div class="kpi"><small>${HN[h]} 매매 승률</small><b class="${v.win_rate == null ? "" : v.win_rate >= 50 ? "up" : "down"}">${v.win_rate == null ? "-" : nf(v.win_rate, 0) + "%"}</b><small>${v.closed ? `${nf(v.closed)}건 청산${SEP}평균 ${sgn(v.avg_ret, 1)}` : "청산 대기"}</small></div>`; };
+  const line = (h) => { const v = T[h]; if (!v) return "";
+    const ap = v.all_picks;
+    return `<div class="lrow"><div class="ln"><b>${HN[h]}</b><small>추천 ${nf(v.plans)}건 중 지금 매수 ${nf(v.buy)}${SEP}기다림 ${nf(v.wait)}${v.fill_rate != null ? `(체결 ${nf(v.fill_rate, 0)}%)` : ""}${SEP}보류 ${nf(v.skip)}(채점 제외)${v.open ? `${SEP}보유 중 ${nf(v.open)}` : ""}</small>
+      <small>${v.closed ? `지수 대비 ${sgn(v.avg_ex, 1)}${v.ex_win != null ? `(이긴 비율 ${nf(v.ex_win, 0)}%)` : ""}${v.avg_r != null ? `${SEP}평균 ${nf(v.avg_r, 2)}R` : ""}${v.by_exit ? `${SEP}목표가 ${nf(v.by_exit["목표가"])}·손절 ${nf(v.by_exit["손절"])}·기간 만료 ${nf(v.by_exit["보유 기간"])}` : ""}` : "아직 청산된 거래 없음"}</small>
+      ${ap ? `<small>비교: 추천을 전부 다음 날 사서 기간 끝까지 들고 있었다면 ${nf(ap.n)}건 승률 ${nf(ap.win_rate, 0)}%${SEP}지수 대비 ${sgn(ap.avg_ex, 1)}</small>` : ""}</div></div>`; };
+  const rows = (tr.items || []).filter((i) => i.plan && i.trade && ["closed", "open", "unfilled"].includes(i.trade.status)).slice(-15).reverse();
+  return `<h2 style="font-size:15px;margin:16px 0 8px">내가 사고팔았다면 <small style="font-weight:400;color:var(--muted)">보류한 추천은 빼고, 계획대로 매수·손절·목표가·기간 청산</small></h2>
+    <div class="kpis">${["daily", "weekly", "monthly"].map(tile).join("")}</div>
+    <div class="panel lab-list" style="margin-top:8px">${["daily", "weekly", "monthly"].map(line).join("")}</div>
+    <div class="panel" style="margin-top:8px">${rows.map((i) => { const t = i.trade, ok = t.status === "closed" ? (t.win ? "✓" : "✗") : t.status === "open" ? "…" : "–";
+      return `<button class="row" data-t="${esc(i.ticker)}"><div><div class="t1">${ok} ${esc(i.name)}</div>
+      <div class="t2">${esc(i.date.slice(5).replace("-", "/"))} ${HN[i.horizon]}${SEP}${ACT_KO[i.plan.action]}${t.fill ? `${SEP}${esc((t.fill_date || "").slice(5).replace("-", "/"))} ${price(t.fill, i.ticker)} 매수` : ""}${SEP}${t.status === "closed" ? esc(t.why) + ` ${nf(t.days)}일` : TST_KO[t.status]}</div></div><span></span>
+      <div class="num">${t.status === "closed" ? `<b class="${cls(t.ret)}">${sgn(t.ret, 1)}</b><span>${t.ex != null ? "지수 대비 " + sgn(t.ex, 1) : ""}</span>` : t.status === "open" ? `<b class="${cls(t.cur)}">${sgn(t.cur, 1)}</b><span>보유 ${nf(t.days)}일</span>` : "<b>-</b>"}</div></button>`; }).join("") ||
+      '<div class="empty">계획대로 체결·청산된 거래가 생기면 여기에 쌓입니다.</div>'}</div>
+    <p class="note">${esc(tr.trade_rule || "")}. 같은 날 손절가와 목표가가 모두 닿으면 손절로 봅니다. 11/25 이전 추천은 그때의 추천 자료로 계획을 다시 세워 채점했습니다.</p>`;
+}
+function tradeRulesLab(bt) {
+  const R = bt?.trade_rules;
+  if (!R || !Object.keys(R).length) return "";
+  const st = (x) => (x ? `${nf(x.n)}건${SEP}승률 ${nf(x.win, 0)}%${SEP}평균 ${sgn(x.avg, 2)}${SEP}t ${nf(x.t, 1)} ${sigBadge(x.t)}` : "표본 부족");
+  return `<div class="sec"><h2>매매 판단 규칙 백테스트 <small>같은 시점 차트만으로 지금 매수·기다림·보류를 정하고 사고팔았을 때</small></h2>
+    <div class="panel lab-list">${["daily", "weekly", "monthly"].filter((h) => R[h]).map((h) => { const r = R[h];
+      return `<div class="lrow"><div class="ln"><b>${HN[h]} (${{ daily: 5, weekly: 20, monthly: 60 }[h]}거래일)</b>
+        <small>판단 비율: 지금 매수 ${nf(r.share.buy, 0)}%${SEP}기다림 ${nf(r.share.wait, 0)}%${r.fill_rate != null ? `(체결 ${nf(r.fill_rate, 0)}%)` : ""}${SEP}보류 ${nf(r.share.skip, 0)}%</small>
+        <small>규칙대로 매매: ${st(r.trades)}</small>
+        <small>같은 날 전 표본 대비: ${st(r.trades_ex)}</small>
+        <small>참고(전부 다음 날 사서 보유): ${st(r.all)}</small>
+        <small>보류한 표본을 샀다면: ${st(r.skipped_all)}</small></div></div>`; }).join("")}</div>
+    <p class="note">${esc(bt.trade_rule_text || "")}. 백테스트는 차트 규칙만 보는 것이라(펀더멘털 제외) 실제 추천보다 표본이 훨씬 많습니다. 규칙의 숫자는 미리 정한 값이며, 결과를 보고 맞추지 않습니다.</p></div>`;
+}
 function levelsRow(lv, t) {
   if (!lv) return "";
   const s = (lv.support || [])[0], r = (lv.resistance || [])[0];
@@ -353,6 +405,7 @@ function renderPicks() {
           ${(tx.neg || []).length ? `<ul class="risk">${tx.neg.slice(0, 2).map((s) => `<li>${esc(s)}</li>`).join("")}</ul>` : ""}</section>
       </div>
       ${levelsRow(tx.levels, x.ticker)}
+      ${planRow(x.plan, x.ticker, state.picksH, block?.generated)}
       ${x.relaxed ? '<p class="note" style="grid-column:1/-1;margin:6px 0 0">차트 조건을 낮춰서 채운 후보입니다.</p>' : ""}
       <div class="pick-btns"><button class="btn ghost more" data-t="${esc(x.ticker)}">차트와 근거 보기</button>${linkBtns(x.links || linksOf(x.ticker), undefined, x.ticker)}</div>
     </article>`;
@@ -372,6 +425,7 @@ function renderPicks() {
       <div class="kpis"><div class="kpi"><small>추적 건수</small><b>${nf(s.count)}</b></div>
       <div class="kpi"><small>평균 수익률</small><b class="${cls(s.avg_ret)}">${sgn(s.avg_ret, 1)}</b></div>
       <div class="kpi"><small>플러스 비율</small><b>${s.hit_rate == null ? "-" : nf(s.hit_rate, 0) + "%"}</b></div></div>
+      ${tradeSection(tr)}
       ${predVsActual(tr)}
       ${bySetup.length ? `<div class="panel" style="margin-top:8px"><div class="row head-row"><span>차트 셋업별</span><span></span><span>평균 수익률, 플러스 비율</span></div>${bySetup.map(([k, v]) => `
         <div class="row" style="cursor:default"><div><div class="t1">${esc(k)}</div><div class="t2">${nf(v.count)}건</div></div><span></span>
@@ -1109,6 +1163,7 @@ function renderLab() {
     ${changelogBlock(state.data.changelog)}
     ${divLabBlock()}
     ${forwardBlock(fw, sc, md)}
+    ${tradeRulesLab(bt)}
     <div class="seg" role="group" aria-label="보유 기간">${[["5", "5일 후"], ["20", "20일 후"], ["60", "60일 후"]].map(([k, l]) => `<button data-lh="${k}" aria-pressed="${H === k}">${l}</button>`).join("")}</div>
     <div class="seg sm" role="group" aria-label="시장">${[["all", "전체"], ["us", "미국"], ["kr", "한국"]].map(([k, l]) => `<button data-lm="${k}" aria-pressed="${M === k}">${l}</button>`).join("")}</div>
 

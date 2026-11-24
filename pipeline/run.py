@@ -28,6 +28,7 @@ from . import financials as fin_mod
 from . import forward as fwd
 from . import geo as geo_mod
 from . import pdca as pdca_mod
+from . import trade as trade_mod
 from datetime import timezone
 
 from .common import DATA_DIR, STATE_DIR, load_config, market_of, now_kst, read_json, write_json
@@ -87,8 +88,9 @@ BENCH = {"kr": "^KS11", "us": "^GSPC"}
 HOLD = {"daily": 5, "weekly": 20, "monthly": 60}  # 추천별 채점 기간(거래일)
 
 
-def _update_track_record(picks_all: dict, prices: dict):
-    """추천 이력 저장 + 추천 이후 수익률·지수 대비 초과수익 갱신."""
+def _update_track_record(picks_all: dict, prices: dict, hist: dict | None = None):
+    """추천 이력 저장 + 추천 이후 수익률·지수 대비 초과수익 갱신 + 매매 계획대로 사고팔았을 때 결과(trade)."""
+    ohlc = hist
     hist = read_json("track.json", default={"items": []}) or {"items": []}
     today = now_kst().strftime("%Y-%m-%d")
     have = {(i["date"], i["horizon"], i["ticker"]) for i in hist["items"]}
@@ -106,9 +108,13 @@ def _update_track_record(picks_all: dict, prices: dict):
             if last_px.get((h, p["ticker"])) == (p.get("price"), prices.get(b)):
                 continue
             if key not in have and p.get("price"):
+                hp = (ohlc or {}).get(p["ticker"])
+                asof = hp.index[-1].strftime("%Y-%m-%d") if hp is not None and len(hp) else None
                 hist["items"].append({"date": today, "horizon": h, "ticker": p["ticker"], "name": p["name"],
                                       "entry": p["price"], "score": p["score"], "setup": p.get("setup_label"),
-                                      "bench": b, "bench_entry": prices.get(b)})
+                                      "bench": b, "bench_entry": prices.get(b),
+                                      "plan": p.get("plan") or trade_mod.plan(p.get("techx"), p["price"], h,
+                                                                              bool(p.get("relaxed")), p.get("stage40"), asof)})
     for i in hist["items"]:
         px = prices.get(i["ticker"])
         if px:
@@ -124,6 +130,12 @@ def _update_track_record(picks_all: dict, prices: dict):
             ex = i.get("ex_ret")
             i["final"] = {"ret": round(i["ret"], 2), "ex": None if ex is None else round(ex, 2), "days": elapsed,
                           "win": bool((ex if ex is not None else i["ret"]) > 0), "closed": today}
+    # 매매 계획대로 사고팔았을 때(체결·손절·목표가·기간 만료) — 끝난 거래는 고정, 진행 중만 다시 계산
+    if ohlc:
+        try:
+            trade_mod.score_items(hist["items"], ohlc, now_kst(), market_of)
+        except Exception as e:  # 매매 채점 오류가 추천 기록 전체를 막지 않도록
+            log.warning("매매 채점 실패: %s", e)
     hist["items"] = hist["items"][-600:]
     rets = [i["ret"] for i in hist["items"] if i.get("ret") is not None]
     exs = [i["ex_ret"] for i in hist["items"] if i.get("ex_ret") is not None]
@@ -150,6 +162,8 @@ def _update_track_record(picks_all: dict, prices: dict):
             hist["matured"][h] = {"count": len(fin), "win_rate": sum(f["win"] for f in fin) / len(fin) * 100,
                                   "avg_ex": sum(ex) / len(ex) if ex else None,
                                   "recent_win": sum(f["win"] for f in last) / len(last) * 100, "recent_n": len(last)}
+    hist["trades"] = trade_mod.summarize(hist["items"])
+    hist["trade_rule"] = trade_mod.RULE_TEXT
     write_json("track.json", hist)
 
 
@@ -178,6 +192,12 @@ def run(job: str, demo: bool):
     if job == "divtest":  # 배당 백테스트만 따로(점검·수동 실행용)
         run_divtest(cfg, src, now_kst())
         meta["divtest"] = now_kst().isoformat(timespec="minutes")
+        write_json("meta.json", meta)
+        return
+
+    if job == "trades":  # 추천 매매 계획 채점만 따로(점검·수동 실행용)
+        run_trades(cfg, src, now_kst())
+        meta["trades"] = now_kst().isoformat(timespec="minutes")
         write_json("meta.json", meta)
         return
 
@@ -301,6 +321,11 @@ def run(job: str, demo: bool):
     for h in horizons:
         picks[h] = {"label": HORIZON_LABEL[h], "generated": now.isoformat(timespec="minutes"),
                     "all": pick_top(scored, h), "us": pick_top(scored, h, "us"), "kr": pick_top(scored, h, "kr")}
+        for m in ("all", "us", "kr"):  # 내 매매 판단(지금 매수/기다렸다 매수/보류) — 추천 시점 자료만 사용
+            for p in picks[h][m]:
+                hp = hist.get(p["ticker"])
+                p["plan"] = trade_mod.plan(p.get("techx"), p.get("price"), h, bool(p.get("relaxed")), p.get("stage40"),
+                                           hp.index[-1].strftime("%Y-%m-%d") if hp is not None and len(hp) else None)
     for blk in picks.values():  # 정세 영향·한국어 링크는 매일 최신으로 덧붙임
         for m in ("all", "us", "kr"):
             for p in blk.get(m, []):
@@ -411,7 +436,7 @@ def run(job: str, demo: bool):
 
     write_json("geo.json", {**geo_res, "generated": now.isoformat(timespec="minutes"),
                             "summary": brief["geo"], "tag_ko": co_mod.TAG_KO})
-    _update_track_record(picks, {t: v["last"] for t, v in tech_all.items()})
+    _update_track_record(picks, {t: v["last"] for t, v in tech_all.items()}, hist)
 
     # 6) 알림 (판정 변경 포함) + 브리핑 도착 푸시
     head = " / ".join(f"{q['name']} {q['chg']:+.2f}%" for q in brief["indices"][:3] if q.get("chg") is not None)
@@ -488,6 +513,19 @@ def run_evening(cfg: dict, src, meta: dict, push: bool = True):
     log.info("미장 브리핑 완료: 선물 %s, 실적 %d건", [q.get("chg") for q in brief["futures"]], len(brief["earnings"]))
 
 
+def run_trades(cfg: dict, src, now) -> dict:
+    """추천 매매 계획 채점만 따로(새 추천·예측 기록 없음)."""
+    t = read_json("track.json", default={"items": []}) or {"items": []}
+    tick = sorted({i["ticker"] for i in t["items"] if i.get("plan")} | {i.get("bench") for i in t["items"] if i.get("bench")})
+    hist = src.history([x for x in tick if x], period="1y")
+    n = trade_mod.score_items(t["items"], hist, now, market_of)
+    t["trades"] = trade_mod.summarize(t["items"])
+    t["trade_rule"] = trade_mod.RULE_TEXT
+    write_json("track.json", t)
+    log.info("매매 채점 %d건", n)
+    return t["trades"]
+
+
 def run_divtest(cfg: dict, src, now) -> dict:
     """배당 후보 전 종목 10년 배당 재투자 백테스트 → divtest.json."""
     cands = (read_json("dividend.json") or {}).get("candidates") or []
@@ -560,7 +598,7 @@ def run_backtest(cfg: dict, src, meta: dict):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("job", choices=["morning", "evening", "alerts", "all", "backtest", "divtest"])
+    ap.add_argument("job", choices=["morning", "evening", "alerts", "all", "backtest", "divtest", "trades"])
     ap.add_argument("--demo", action="store_true", help="합성 데이터 사용")
     a = ap.parse_args()
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s: %(message)s")

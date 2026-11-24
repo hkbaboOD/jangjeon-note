@@ -24,6 +24,7 @@ import pandas as pd
 
 from .common import market_of
 from .technical import analyze
+from . import trade as trade_mod
 
 log = logging.getLogger(__name__)
 HORIZONS = (5, 20, 60)
@@ -54,6 +55,9 @@ def _eval_ticker(args):
                "codes": [s["code"] for s in ta["signals"] if s["pol"] != 0], **{f"s_{k}": v for k, v in ta["scores"].items()}}
         for h in HORIZONS:
             rec[f"r{h}"] = (c[i + h] / entry - 1) * 100 - cost if i + h < n else np.nan
+        # 매매 판단 규칙(지금 매수/기다렸다 매수/보류)을 같은 시점 분석에 적용 (2026-11-25)
+        for hz, (act, st, ret) in trade_mod.backtest_block(df, i, ta, mk).items():
+            rec[f"ta_{hz}"], rec[f"ts_{hz}"], rec[f"tr_{hz}"] = act, st, (np.nan if ret is None else ret)
         out.append(rec)
     return out
 
@@ -139,11 +143,31 @@ def run(hist: dict[str, pd.DataFrame], tcfg: dict | None = None, workers: int | 
             quint[f[2:]][str(h)] = [round(float(sub[sub.q == k]["x"].mean()), 2) if (sub.q == k).any() else None
                                     for k in range(5)]
 
+    trade_rules = {}
+    for hz, hd in trade_mod.HOLD.items():
+        if f"ta_{hz}" not in df or hd not in HORIZONS:
+            continue
+        base = df[f"r{hd}"]
+        coh = df.groupby(["date", "market"])[f"r{hd}"].transform("mean")  # 같은 날·시장 전 표본 평균(전부 샀을 때)
+        closed = df[df[f"ts_{hz}"] == "closed"]
+        tr = closed[f"tr_{hz}"]
+        waits = df[df[f"ta_{hz}"] == "wait"]
+        wdone = waits[waits[f"ts_{hz}"].isin(["closed", "open", "unfilled"])]
+        blk = {"samples": int(base.notna().sum()),
+               "share": {a: round(float((df[f"ta_{hz}"] == a).mean() * 100), 1) for a in ("buy", "wait", "skip")},
+               "fill_rate": round(float((wdone[f"ts_{hz}"] != "unfilled").mean() * 100), 1) if len(wdone) else None,
+               "all": _stats(base, hd), "trades": _stats(tr, hd),
+               "trades_ex": _stats(tr - coh[closed.index], hd),
+               "by_action": {a: _stats(closed[closed[f"ta_{hz}"] == a][f"tr_{hz}"], hd) for a in ("buy", "wait")},
+               "skipped_all": _stats(df[df[f"ta_{hz}"] == "skip"][f"r{hd}"], hd)}
+        trade_rules[hz] = blk
+
     period = [df["date"].min().strftime("%Y-%m-%d"), df["date"].max().strftime("%Y-%m-%d")]
     return {
         "ok": True, "period": period, "samples": int(len(df)), "tickers": int(df["ticker"].nunique()),
         "step": STEP, "horizons": list(HORIZONS), "cost": COST,
         "base": {mk: block(g) for mk, g in df.groupby("market")},
         "by_setup": by_setup, "by_stage40": by_stage40, "by_signal": by_signal, "ic": ic, "quintiles": quint,
+        "trade_rules": trade_rules, "trade_rule_text": trade_mod.RULE_TEXT,
         "setup_share": {k: round(v * 100, 1) for k, v in df["setup"].value_counts(normalize=True).items()},
     }

@@ -563,3 +563,15 @@ ol.steps li { margin: 4px 0; }
   #view-picks.active { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 .sep { display: inline-block; width: 1px; height: .78em; background: var(--muted); opacity: .55; margin: 0 7px; vertical-align: -0.05em; }
+
+/* 매매 판단 (2026-11-25) */
+.plan { grid-column: 1 / -1; margin: 10px 0 0; padding: 10px 12px; border-radius: 10px; background: var(--sheet-2); border-left: 3px solid var(--rule); }
+.plan-buy { border-left-color: var(--up, #d6336c); }
+.plan-wait { border-left-color: #c99a06; }
+.plan-skip { border-left-color: var(--muted, #8a94a3); }
+.plan-h { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+.plan-h b { font-size: 15px; }
+.plan-h small { color: var(--muted); font-size: 12.5px; }
+.plan p { margin: 4px 0 0; font-size: 13.5px; color: var(--ink-2); }
+.plan .plan-d { font-size: 12.5px; color: var(--muted); }
+.lrow .ln small + small { display: block; margin-top: 2px; }

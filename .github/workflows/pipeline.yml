@@ -14,7 +14,7 @@ on:
       job:
         description: "실행 작업"
         type: choice
-        options: [all, morning, evening, alerts, backtest, divtest]
+        options: [all, morning, evening, alerts, backtest, divtest, trades]
         default: all
       demo:
         description: "데모(합성) 데이터 사용"
