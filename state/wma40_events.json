@@ -1142,5 +1142,44 @@
   "promise": 55.6,
   "vol_ratio": 0.84,
   "slope": 0.03
+ },
+ {
+  "date": "2026-11-25",
+  "ticker": "PLTR",
+  "name": "팔란티어",
+  "market": "us",
+  "kind": "up",
+  "week": "2026-11-24",
+  "entry": 162.38540649414062,
+  "bench_entry": 7202.60009765625,
+  "promise": 63.0,
+  "vol_ratio": 0.91,
+  "slope": 1.4
+ },
+ {
+  "date": "2026-11-25",
+  "ticker": "GM",
+  "name": "제너럴 모터스",
+  "market": "us",
+  "kind": "up",
+  "week": "2026-11-24",
+  "entry": 81.79000091552734,
+  "bench_entry": 7202.60009765625,
+  "promise": 59.6,
+  "vol_ratio": 0.46,
+  "slope": 0.06
+ },
+ {
+  "date": "2026-11-25",
+  "ticker": "MCD",
+  "name": "맥도날드",
+  "market": "us",
+  "kind": "up",
+  "week": "2026-11-24",
+  "entry": 280.1025085449219,
+  "bench_entry": 7202.60009765625,
+  "promise": 56.6,
+  "vol_ratio": 0.44,
+  "slope": -1.74
  }
 ]
