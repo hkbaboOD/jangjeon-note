@@ -80,8 +80,12 @@ function spark(arr, w = 64, h = 30) {
   return `<svg class="spark" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" aria-hidden="true"><polyline fill="none" stroke="${c}" stroke-width="1.6" stroke-linejoin="round" points="${pts}"/></svg>`;
 }
 function toast(msg) {
-  const t = $("#toast"); t.textContent = msg; t.classList.add("show");
-  clearTimeout(toast._t); toast._t = setTimeout(() => t.classList.remove("show"), 2200);
+  const t = $("#toast"), dlg = $("#sheet");
+  // 상세 시트(모달)가 열려 있으면 최상위 레이어 안에 있어야 보임
+  const host = dlg?.open ? dlg : document.body;
+  if (t.parentNode !== host) host.appendChild(t);
+  t.textContent = msg; t.classList.add("show");
+  clearTimeout(toast._t); toast._t = setTimeout(() => t.classList.remove("show"), msg.length > 30 ? 3800 : 2200);
 }
 const chartFile = (t) => t.replace(/[^A-Za-z0-9.\-]/g, "_") + ".json";
 async function loadChart(t) {
@@ -117,10 +121,24 @@ function linksOf(t) {
     : { naver: `https://search.naver.com/search.naver?query=${encodeURIComponent(nm + " 주가")}`, news };
 }
 const extLink = (t) => linksOf(t).naver;
-function linkBtns(L, cls = "btn ghost sm") {
+/* 카카오페이증권: 종목별 웹 페이지·공개 딥링크가 없어 검색어(국내=종목명, 해외=티커)를 복사해 앱 검색에 붙여넣게 함 */
+function kpQuery(t) {
+  if (!isKR(t)) return t.split(".")[0];
+  const r = (state.data.screen?.rows || []).find((x) => x.ticker === t) || (state.data.watch?.rows || []).find((x) => x.ticker === t);
+  return r?.name || divOf(t)?.name || state.charts[t]?.name || code(t);
+}
+const kpBtn = (t, cls = "btn ghost sm") => (t ? `<button type="button" class="${cls}" data-kp="${esc(t)}">카카오페이증권</button>` : "");
+async function copyText(v) {
+  try { await navigator.clipboard.writeText(v); return true; } catch { /* 아래 대체 방식 */ }
+  try {
+    const ta = document.createElement("textarea"); ta.value = v; ta.setAttribute("readonly", ""); ta.style.position = "fixed"; ta.style.opacity = "0";
+    document.body.appendChild(ta); ta.select(); const ok = document.execCommand("copy"); ta.remove(); return ok;
+  } catch { return false; }
+}
+function linkBtns(L, cls = "btn ghost sm", t = null) {
   if (!L) return "";
   const a = (href, label) => (href ? `<a class="${cls}" href="${esc(href)}" target="_blank" rel="noopener">${label}</a>` : "");
-  return a(L.naver, "네이버 증권") + a(L.news, "관련 뉴스") + a(L.fnguide, "FnGuide 재무");
+  return kpBtn(t, cls) + a(L.naver, "네이버 증권") + a(L.news, "관련 뉴스") + a(L.fnguide, "FnGuide 재무");
 }
 /* 재무 숫자 포맷 */
 const money = (v, cur) => {
@@ -336,7 +354,7 @@ function renderPicks() {
       </div>
       ${levelsRow(tx.levels, x.ticker)}
       ${x.relaxed ? '<p class="note" style="grid-column:1/-1;margin:6px 0 0">차트 조건을 낮춰서 채운 후보입니다.</p>' : ""}
-      <div class="pick-btns"><button class="btn ghost more" data-t="${esc(x.ticker)}">차트와 근거 보기</button>${linkBtns(x.links || linksOf(x.ticker))}</div>
+      <div class="pick-btns"><button class="btn ghost more" data-t="${esc(x.ticker)}">차트와 근거 보기</button>${linkBtns(x.links || linksOf(x.ticker), undefined, x.ticker)}</div>
     </article>`;
   };
 
@@ -483,7 +501,7 @@ function coSection(t, r, cd) {
     ${tags.length ? `<div class="tagrow">${tags.map((x) => `<span class="tag">${esc(x)}</span>`).join("")}</div>` : ""}
     ${facts.length ? `<div class="co-f">${facts.map(([k, v]) => `<div><small>${k}</small>${v}</div>`).join("")}</div>` : ""}
     ${co.website ? `<p class="note" style="margin:8px 0 0">홈페이지: <a href="${esc(co.website)}" target="_blank" rel="noopener">${esc(co.website.replace(/^https?:\/\//, ""))}</a></p>` : ""}
-    <div class="btns" style="margin-top:10px">${linkBtns(co.links || r?.links || linksOf(t))}</div>
+    <div class="btns" style="margin-top:10px">${linkBtns(co.links || r?.links || linksOf(t), undefined, t)}</div>
   </div></div>`;
 }
 function ftable(head, rows) {
@@ -763,7 +781,7 @@ async function openDetail(t) {
       ${finSection(cd?.fin, cd)}
       ${geoSection(cd, r)}
       ${w?.diag ? `<div class="sec"><h2>급락 성격 진단</h2><div class="diag"><span class="kind">${esc(w.diag.type)}</span><ul>${w.diag.evidence.map((e) => `<li>${esc(e)}</li>`).join("")}</ul></div></div>` : ""}
-      <div class="btns"><a class="btn" href="${esc(extLink(t))}" target="_blank" rel="noopener">네이버 증권에서 보기</a><button class="btn ghost" id="sheet-close">닫기</button></div>`;
+      <div class="btns">${kpBtn(t, "btn")}<a class="btn ghost" href="${esc(extLink(t))}" target="_blank" rel="noopener">네이버 증권</a><button class="btn ghost" id="sheet-close">닫기</button></div>`;
     $("#sheet-close").onclick = () => dlg.close();
     $("#sheet-in").querySelectorAll("[data-fp]").forEach((b) => (b.onclick = () => { state.finP = b.dataset.fp; store.set("finP", state.finP); const el = $("#sheet-in"), y = el.scrollTop; paint(cd); el.scrollTop = y; }));
     if (cd) TAChart.full($("#ta-full"), cd, lv);
@@ -1213,7 +1231,14 @@ function route() {
   window.scrollTo(0, 0);
 }
 
-document.addEventListener("click", (e) => {
+document.addEventListener("click", async (e) => {
+  const kp = e.target.closest("[data-kp]");
+  if (kp) {
+    e.preventDefault(); e.stopPropagation();
+    const q = kpQuery(kp.dataset.kp);
+    toast(await copyText(q) ? `'${q}' 복사함 · 카카오페이 앱 > 증권 > 검색에 붙여넣으세요` : `카카오페이 앱 > 증권 > 검색에서 '${q}'를 찾으세요`);
+    return;
+  }
   const h = e.target.closest("[data-h]"), m = e.target.closest("[data-m]"), sm = e.target.closest("[data-sm]");
   if (h) { state.picksH = h.dataset.h; store.set("picksH", state.picksH); renderPicks(); return; }
   if (m) { state.picksM = m.dataset.m; store.set("picksM", state.picksM); renderPicks(); return; }
