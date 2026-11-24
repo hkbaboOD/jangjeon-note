@@ -3,8 +3,8 @@
   {
    "ticker": "^DJI",
    "name": "다우",
-   "last": 49924.23046875,
-   "chg": 0.663211671277808,
+   "last": 49971.19140625,
+   "chg": 0.757899936824602,
    "date": "2026-11-24",
    "spark": [
     51621.4805,
@@ -36,14 +36,14 @@
     49097.0586,
     48147.3281,
     49595.3086,
-    49924.2305
+    49971.1914
    ]
   },
   {
    "ticker": "^GSPC",
    "name": "S&P500",
-   "last": 7186.41015625,
-   "chg": -0.7013758993218322,
+   "last": 7192.8701171875,
+   "chg": -0.6121150279144283,
    "date": "2026-11-24",
    "spark": [
     7718.9399,
@@ -75,14 +75,14 @@
     7175.8301,
     6910.3901,
     7237.1699,
-    7186.4102
+    7192.8701
    ]
   },
   {
    "ticker": "^IXIC",
    "name": "나스닥",
-   "last": 23667.115234375,
-   "chg": -1.753644744485805,
+   "last": 23692.845703125,
+   "chg": -1.6468330461157477,
    "date": "2026-11-24",
    "spark": [
     26692.8691,
@@ -114,14 +114,14 @@
     23879.1992,
     22617.7305,
     24089.5605,
-    23667.1152
+    23692.8457
    ]
   },
   {
    "ticker": "^SOX",
    "name": "필라델피아반도체",
-   "last": 8851.923828125,
-   "chg": -7.677536011573649,
+   "last": 8872.0732421875,
+   "chg": -7.467384682857681,
    "date": "2026-11-24",
    "spark": [
     11684.3799,
@@ -153,7 +153,7 @@
     9419.7197,
     8408.5898,
     9588.0498,
-    8851.9238
+    8872.0732
    ]
   },
   {
@@ -239,8 +239,8 @@
   {
    "ticker": "^TNX",
    "name": "미 10년물(%)",
-   "last": 4.904000282287598,
-   "chg": -0.28466731059394457,
+   "last": 4.906000137329102,
+   "chg": -0.24400332215284148,
    "date": "2026-11-24",
    "spark": [
     5.19,
@@ -272,15 +272,15 @@
     5.052,
     4.912,
     4.918,
-    4.904
+    4.906
    ],
-   "chg_bp": -1.399993896484375
+   "chg_bp": -1.2000083923339844
   },
   {
    "ticker": "^VIX",
    "name": "VIX",
-   "last": 26.540000915527344,
-   "chg": -0.30052562428227736,
+   "last": 26.610000610351562,
+   "chg": -0.03756659867228951,
    "date": "2026-11-24",
    "spark": [
     16.87,
@@ -312,14 +312,14 @@
     28.44,
     35.89,
     26.62,
-    26.54
+    26.61
    ]
   },
   {
    "ticker": "CL=F",
    "name": "WTI",
-   "last": 81.93000030517578,
-   "chg": 2.195337628075711,
+   "last": 81.9000015258789,
+   "chg": 2.157918668387504,
    "date": "2026-11-24",
    "spark": [
     95.09,
@@ -351,14 +351,14 @@
     83.21,
     83.98,
     80.17,
-    81.93
+    81.9
    ]
   },
   {
    "ticker": "BZ=F",
    "name": "브렌트",
-   "last": 88.4800033569336,
-   "chg": -0.9958591946921169,
+   "last": 88.43000030517578,
+   "chg": -1.0518097935743875,
    "date": "2026-11-24",
    "spark": [
     106.06,
@@ -390,14 +390,14 @@
     91.98,
     92.57,
     89.37,
-    88.48
+    88.43
    ]
   },
   {
    "ticker": "DX-Y.NYB",
    "name": "달러인덱스",
-   "last": 103.81300354003906,
-   "chg": -0.48600091666824996,
+   "last": 103.8270034790039,
+   "chg": -0.47258072973783705,
    "date": "2026-11-24",
    "spark": [
     102.55,
@@ -429,14 +429,14 @@
     103.9,
     103.81,
     104.32,
-    103.813
+    103.827
    ]
   },
   {
    "ticker": "KRW=X",
    "name": "원달러",
-   "last": 1342.8199462890625,
-   "chg": -0.11084587927924217,
+   "last": 1342.93994140625,
+   "chg": -0.10191973040306612,
    "date": "2026-11-24",
    "spark": [
     1340.3101,
@@ -468,7 +468,7 @@
     1330.4,
     1334.79,
     1344.3101,
-    1342.8199
+    1342.9399
    ]
   },
   {
@@ -514,8 +514,8 @@
  "breadth": {
   "us": {
    "up": 43,
-   "down": 22,
-   "total": 65
+   "down": 23,
+   "total": 66
   },
   "kr": {
    "up": 40,
@@ -529,54 +529,54 @@
     {
      "ticker": "NKE",
      "name": "나이키",
-     "chg": 5.95527832206646
+     "chg": 6.057470631857864
     },
     {
      "ticker": "AMGN",
      "name": "암젠",
-     "chg": 5.277922064506235
+     "chg": 5.320235096260784
     },
     {
      "ticker": "MRK",
      "name": "머크",
-     "chg": 4.480690935804055
+     "chg": 4.6467838726078625
     },
     {
      "ticker": "ABBV",
      "name": "애브비",
-     "chg": 4.283231043818558
+     "chg": 4.264166154425597
     },
     {
      "ticker": "PFE",
      "name": "화이자",
-     "chg": 4.124091546888309
+     "chg": 4.197078958178313
     }
    ],
    "bottom": [
     {
      "ticker": "MU",
      "name": "마이크론",
-     "chg": -11.136091319700448
+     "chg": -11.001136097356811
     },
     {
      "ticker": "TXN",
      "name": "텍사스 인스트루먼트",
-     "chg": -9.557339488481842
+     "chg": -9.504099577916502
     },
     {
      "ticker": "AMD",
      "name": "AMD",
-     "chg": -8.778060562311929
+     "chg": -8.499138265036688
     },
     {
      "ticker": "KLAC",
      "name": "KLA",
-     "chg": -8.337335038216542
+     "chg": -8.30648267821501
     },
     {
-     "ticker": "INTC",
-     "name": "인텔",
-     "chg": -7.509218159058806
+     "ticker": "NVDA",
+     "name": "엔비디아",
+     "chg": -7.439198048724027
     }
    ]
   },
@@ -638,8 +638,8 @@
   }
  },
  "points": [
-  "미 증시 약세: S&P500 -0.70%, 나스닥 -1.75%",
-  "반도체 약세(SOX -7.68%)"
+  "미 증시 약세: S&P500 -0.61%, 나스닥 -1.65%",
+  "반도체 약세(SOX -7.47%)"
  ],
  "outlook": [
   "삼성전자·SK하이닉스 약세 출발 가능성. 코스피에서 반도체 비중이 커서 지수도 영향을 받음"
@@ -648,7 +648,7 @@
   {
    "ticker": "MU",
    "name": "마이크론",
-   "chg_1d": -11.136091319700448,
+   "chg_1d": -11.001136097356811,
    "type": "수급·심리성",
    "evidence": [
     "평균 목표가 -1.3%",
@@ -660,7 +660,7 @@
   {
    "ticker": "NVDA",
    "name": "엔비디아",
-   "chg_1d": -7.343170760592144,
+   "chg_1d": -7.439198048724027,
    "type": "수급·심리성",
    "evidence": [
     "평균 목표가 +0.1%",
@@ -672,7 +672,7 @@
   {
    "ticker": "TSM",
    "name": "TSMC",
-   "chg_1d": -4.183165896523089,
+   "chg_1d": -4.216176246564574,
    "type": "수급·심리성",
    "evidence": [
     "평균 목표가 +0.0%",
@@ -765,10 +765,10 @@
    "time": "2026-11-24T16:16:11+00:00"
   },
   {
-   "title": "빗장 풀린 자사주 매입, 증시 ‘구원 투수’ 될까",
-   "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOSW1HR0N4a0JPR3AyMVBBSjE2TWRLcjZhQkplNWhvX2FWdEFNYy1NMHdrcHJQM09TaU1tYjU1LUJIY3ZpUGl3ZDVCSVNLVm00Z2FqXzhUTndoSzh0djZ2R0N5cWdQQXZZR1hiWDM2YnJVQUUtUm5WTWl4Q0FUcEpyeHRvUnE2TEdH0gGcAUFVX3lxTE56cmh4UkVmNHJsZWNReVRTd3VTaEVEaHc4RWFGb05ZRU9XcF9LNkoybHBzckYxMzVaV1FOSUMwSzJzVUtMY0lBa0NMU0RVQzVIdUtXblJBVEFad1pDV0xwZGhYcTcxNzJCUnI2MnBpZ1dWUjRmeWdYaFg3ekVzR0lkU1VTaVRXYWFlR2pPbDRmVGxTMUwwX0xJNjRTdQ?oc=5",
-   "publisher": "Chosunbiz",
-   "time": "2026-11-24T15:35:00+00:00"
+   "title": "증안 펀드보다 강력했던 ‘젠슨 황 효과’",
+   "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQeVVPMkx0Y0N0bjQwOGRPY2ZLbTJZSnF2WDg5OGtfaHlhc1IwUmtXWjBBQXByTzlrcDZfUUhRX2Z0TmlYQXhQUjhSbFBfUUwzVC1UU0c1RnFkSFhibklmcHJfR2RmOE9XejNpNlhEWlBuRndIb3ROM0w2Y3hTcWtTdQ?oc=5",
+   "publisher": "조선일보",
+   "time": "2026-11-24T15:43:00+00:00"
   },
   {
    "title": "사흘 만에 코스피 5000선 탈환…불안 요인 해소는 아직",
@@ -783,12 +783,6 @@
    "time": "2026-11-24T08:42:19+00:00"
   },
   {
-   "title": "'젠슨 황 엔비디아 복귀'에 5천피 회복...추세 반등?",
-   "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9HT2xrb1pVcWlEbkgydU1BOTgwbHZBbFFEeS1aZ2lQOHJkRVFkTXJHUS1EbmdzNmtNVk5VRkdESllKZjJIUGMtWkU3RXFacmVLUUMzVUs5ZGREM0VLdEN2aEFTdWhBVGVpdGt3aVctMjFySHdtWkE?oc=5",
-   "publisher": "YTN",
-   "time": "2026-11-24T12:58:00+00:00"
-  },
-  {
    "title": "[증시-마감] 젠슨 황 깜짝 복귀에 코스피 5천선 회복…3영업일 만에 반등",
    "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9nWlpiTkNHYnFTOEFPeGMySF9rNnIyNzJNU3gxZk8yVTN1OFpIeGNqTTBGR3RQSDhFMC1xRTRfeHY1cnFXTjJTMUs1QzdlTUVlYTJHdHI0Nk5nSTdEZGczbDhfNzNQVHM4SXdGWWZvb00?oc=5",
    "publisher": "연합인포맥스",
@@ -801,10 +795,16 @@
    "time": "2026-11-24T15:39:00+00:00"
   },
   {
-   "title": "24년간 '사이드카' 60번인데, 올해만 61번...널뛰기 코스피에 개미들 '불안'",
-   "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1iS1hyUFFFTGdROWVpTURXR3RaUU95eTFXT0FGaWVzQ0dtekNZN2stazI0QUFPRVpybEZOcjBnc2oyNkxyRGFrbnpxVFNSU2lUSkM2Tlo3Ny1KbE9wZDlDbA?oc=5",
-   "publisher": "KBC광주방송",
-   "time": "2026-11-24T05:45:01+00:00"
+   "title": "'젠슨 황 엔비디아 복귀'에 5천피 회복...추세 반등?",
+   "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE90SkR3MEtpS2VsMUU0LTFBUmk3M1RSeHhwcG5ZMUcxeW9qZzhzVnNBb2FPU05lbUplWUN2LTlpMmxidVNLUXpRV01wXzg3Mi1WWjh1cy1JWXFGQ1NVQlE?oc=5",
+   "publisher": "YTN",
+   "time": "2026-11-24T12:58:00+00:00"
+  },
+  {
+   "title": "젠슨 황 복귀에 국내 증시 급등‥5천 선 회복",
+   "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1TbEdQalo2WE9xc1ZDclIza0VyUFBtTk9qYUYyOW1YUFhvMU1oVzh0WTlQYW9ObXBXZFVMSlVFVjhLLVVDRjlSaDJHcU9tNVFwaVozRkdzdElkRGF4RFVKYTNOdndBR2h2M3RDTV9HQWotT3hyeEhySNIBeEFVX3lxTFBEUm81R2RySWVXQ0dadElwOE85eW5Qc1g5eHlCZjQwdjhXZlhzcld4dlNoTDc0b2NfRWs5aDlCTmthbVJzRW5JaTUxRHV2Tzd2U1pmZVNRcFlOSGMxdnl5ZVZReXlyWUxVQzdxMDFaeG1oV1RmbE9wLQ?oc=5",
+   "publisher": "MBC 뉴스",
+   "time": "2026-11-24T03:07:35+00:00"
   }
  ],
  "earnings": [
@@ -816,11 +816,11 @@
   }
  ],
  "geo": [
-  "관세·무역분쟁: 48시간 기사 48건(평소 24건의 2.0배), 무역 긴장. 5일 가격 변화 S&P500 -2.1%, 원달러 +0.5%. 경기 방어에 유리, 관세 민감·수출주·중국 노출에 부담",
-  "북한·한반도: 48시간 기사 39건(평소 26건의 1.5배), 도발. 5일 가격 변화 원달러 +0.5%. 방산에 유리, 국내 상장주에 부담",
-  "미중 갈등·수출규제: 48시간 기사 26건(평소 6건의 4.0배), 갈등 고조. 5일 가격 변화 반도체지수 -8.2%. 방산에 유리, 중국 노출·반도체·관세 민감에 부담",
-  "연준·금리: 48시간 기사 100건(평소 60건의 1.6배), 방향 혼재. 5일 가격 변화 미 10년물 금리 -3.9%"
+  "관세·무역분쟁: 48시간 기사 49건(평소 24건의 2.0배), 무역 긴장. 5일 가격 변화 S&P500 -2.0%, 원달러 +0.5%. 경기 방어에 유리, 관세 민감·수출주·중국 노출에 부담",
+  "북한·한반도: 48시간 기사 37건(평소 26건의 1.4배), 도발. 5일 가격 변화 원달러 +0.5%. 방산에 유리, 국내 상장주에 부담",
+  "미중 갈등·수출규제: 48시간 기사 17건(평소 6건의 2.6배), 방향 혼재. 5일 가격 변화 반도체지수 -8.0%",
+  "연준·금리: 48시간 기사 96건(평소 60건의 1.6배), 방향 혼재. 5일 가격 변화 미 10년물 금리 -3.9%"
  ],
  "date": "2026-11-25",
- "generated": "2026-11-25T04:05+09:00"
+ "generated": "2026-11-25T04:09+09:00"
 }
