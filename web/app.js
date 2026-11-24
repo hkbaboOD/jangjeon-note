@@ -120,16 +120,17 @@ function tradeSection(tr) {
   const T = tr?.trades || {};
   if (!Object.keys(T).length) return "";
   const tile = (h) => { const v = T[h]; if (!v) return `<div class="kpi"><small>${HN[h]}</small><b>-</b><small>계획 없음</small></div>`;
-    return `<div class="kpi"><small>${HN[h]} 매매 승률</small><b class="${v.win_rate == null ? "" : v.win_rate >= 50 ? "up" : "down"}">${v.win_rate == null ? "-" : nf(v.win_rate, 0) + "%"}</b><small>${v.closed ? `${nf(v.closed)}건 청산${SEP}평균 ${sgn(v.avg_ret, 1)}` : "청산 대기"}</small></div>`; };
+    return `<div class="kpi"><small>${HN[h]} 매매 승률(수익 낸 비율)</small><b class="${v.win_rate == null ? "" : v.win_rate >= 50 ? "up" : "down"}">${v.win_rate == null ? "-" : nf(v.win_rate, 0) + "%"}</b><small>${v.closed ? `${nf(v.closed)}건 청산${SEP}평균 ${sgn(v.avg_ret, 1)}` : "청산 대기"}</small></div>`; };
   const line = (h) => { const v = T[h]; if (!v) return "";
     const ap = v.all_picks;
     return `<div class="lrow"><div class="ln"><b>${HN[h]}</b><small>추천 ${nf(v.plans)}건 중 지금 매수 ${nf(v.buy)}${SEP}기다림 ${nf(v.wait)}${v.fill_rate != null ? `(체결 ${nf(v.fill_rate, 0)}%)` : ""}${SEP}보류 ${nf(v.skip)}(채점 제외)${v.open ? `${SEP}보유 중 ${nf(v.open)}` : ""}</small>
       <small>${v.closed ? `지수 대비 ${sgn(v.avg_ex, 1)}${v.ex_win != null ? `(이긴 비율 ${nf(v.ex_win, 0)}%)` : ""}${v.avg_r != null ? `${SEP}평균 ${nf(v.avg_r, 2)}R` : ""}${v.by_exit ? `${SEP}목표가 ${nf(v.by_exit["목표가"])}·손절 ${nf(v.by_exit["손절"])}·기간 만료 ${nf(v.by_exit["보유 기간"])}` : ""}` : "아직 청산된 거래 없음"}</small>
-      ${ap ? `<small>비교: 추천을 전부 다음 날 사서 기간 끝까지 들고 있었다면 ${nf(ap.n)}건 승률 ${nf(ap.win_rate, 0)}%${SEP}지수 대비 ${sgn(ap.avg_ex, 1)}</small>` : ""}</div></div>`; };
+      ${ap ? `<small>비교: 추천을 전부 다음 날 사서 기간 끝까지 들고 있었다면 ${nf(ap.n)}건, 지수 대비 이긴 비율 ${nf(ap.win_rate, 0)}%${SEP}평균 ${sgn(ap.avg_ex, 1)}</small>` : ""}
+      ${v.skipped_final ? `<small>보류한 추천을 그래도 샀다면 ${nf(v.skipped_final.n)}건, 지수 대비 이긴 비율 ${nf(v.skipped_final.win_rate, 0)}%${SEP}평균 ${sgn(v.skipped_final.avg_ex, 1)}${v.taken_final ? ` (산 추천은 ${nf(v.taken_final.win_rate, 0)}%${SEP}${sgn(v.taken_final.avg_ex, 1)})` : ""}</small>` : ""}</div></div>`; };
   const rows = (tr.items || []).filter((i) => i.plan && i.trade && ["closed", "open", "unfilled"].includes(i.trade.status)).slice(-15).reverse();
   return `<h2 style="font-size:15px;margin:16px 0 8px">내가 사고팔았다면 <small style="font-weight:400;color:var(--muted)">보류한 추천은 빼고, 계획대로 매수·손절·목표가·기간 청산</small></h2>
     <div class="kpis">${["daily", "weekly", "monthly"].map(tile).join("")}</div>
-    <div class="panel lab-list" style="margin-top:8px">${["daily", "weekly", "monthly"].map(line).join("")}</div>
+    <div class="panel lab-list tr-list" style="margin-top:8px">${["daily", "weekly", "monthly"].map(line).join("")}</div>
     <div class="panel" style="margin-top:8px">${rows.map((i) => { const t = i.trade, ok = t.status === "closed" ? (t.win ? "✓" : "✗") : t.status === "open" ? "…" : "–";
       return `<button class="row" data-t="${esc(i.ticker)}"><div><div class="t1">${ok} ${esc(i.name)}</div>
       <div class="t2">${esc(i.date.slice(5).replace("-", "/"))} ${HN[i.horizon]}${SEP}${ACT_KO[i.plan.action]}${t.fill ? `${SEP}${esc((t.fill_date || "").slice(5).replace("-", "/"))} ${price(t.fill, i.ticker)} 매수` : ""}${SEP}${t.status === "closed" ? esc(t.why) + ` ${nf(t.days)}일` : TST_KO[t.status]}</div></div><span></span>
@@ -142,7 +143,7 @@ function tradeRulesLab(bt) {
   if (!R || !Object.keys(R).length) return "";
   const st = (x) => (x ? `${nf(x.n)}건${SEP}승률 ${nf(x.win, 0)}%${SEP}평균 ${sgn(x.avg, 2)}${SEP}t ${nf(x.t, 1)} ${sigBadge(x.t)}` : "표본 부족");
   return `<div class="sec"><h2>매매 판단 규칙 백테스트 <small>같은 시점 차트만으로 지금 매수·기다림·보류를 정하고 사고팔았을 때</small></h2>
-    <div class="panel lab-list">${["daily", "weekly", "monthly"].filter((h) => R[h]).map((h) => { const r = R[h];
+    <div class="panel lab-list tr-list">${["daily", "weekly", "monthly"].filter((h) => R[h]).map((h) => { const r = R[h];
       return `<div class="lrow"><div class="ln"><b>${HN[h]} (${{ daily: 5, weekly: 20, monthly: 60 }[h]}거래일)</b>
         <small>판단 비율: 지금 매수 ${nf(r.share.buy, 0)}%${SEP}기다림 ${nf(r.share.wait, 0)}%${r.fill_rate != null ? `(체결 ${nf(r.fill_rate, 0)}%)` : ""}${SEP}보류 ${nf(r.share.skip, 0)}%</small>
         <small>규칙대로 매매: ${st(r.trades)}</small>

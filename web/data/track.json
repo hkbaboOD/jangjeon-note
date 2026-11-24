@@ -7352,6 +7352,16 @@
     "n": 90,
     "win_rate": 40.0,
     "avg_ex": -1.85
+   },
+   "skipped_final": {
+    "n": 32,
+    "win_rate": 25.0,
+    "avg_ex": -4.47
+   },
+   "taken_final": {
+    "n": 58,
+    "win_rate": 48.3,
+    "avg_ex": -0.4
    }
   },
   "weekly": {
@@ -7390,6 +7400,16 @@
     "n": 19,
     "win_rate": 36.8,
     "avg_ex": -4.11
+   },
+   "skipped_final": {
+    "n": 5,
+    "win_rate": 20.0,
+    "avg_ex": -0.73
+   },
+   "taken_final": {
+    "n": 14,
+    "win_rate": 42.9,
+    "avg_ex": -5.32
    }
   },
   "monthly": {

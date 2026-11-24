@@ -575,3 +575,5 @@ ol.steps li { margin: 4px 0; }
 .plan p { margin: 4px 0 0; font-size: 13.5px; color: var(--ink-2); }
 .plan .plan-d { font-size: 12.5px; color: var(--muted); }
 .lrow .ln small + small { display: block; margin-top: 2px; }
+.tr-list .lrow { display: block; }
+.tr-list .lrow .ln { display: block; }

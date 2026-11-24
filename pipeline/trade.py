@@ -267,6 +267,14 @@ def summarize(items: list[dict]) -> dict:
                 bex = [f["ex"] for f in base if f.get("ex") is not None]
                 blk["all_picks"] = {"n": len(base), "win_rate": round(float(np.mean([f["win"] for f in base]) * 100), 1),
                                     "avg_ex": round(float(np.mean(bex)), 2) if bex else None}
+        # 보류한 추천을 그래도 샀다면(전부 샀을 때 기준 확정 결과) — 보류 판단이 맞았는지 확인용
+        sk = [i["final"] for i in its if i["plan"]["action"] == "skip" and i.get("final")]
+        tk = [i["final"] for i in its if i["plan"]["action"] != "skip" and i.get("final")]
+        for key, fs in (("skipped_final", sk), ("taken_final", tk)):
+            if fs:
+                fex = [f["ex"] for f in fs if f.get("ex") is not None]
+                blk[key] = {"n": len(fs), "win_rate": round(float(np.mean([f["win"] for f in fs]) * 100), 1),
+                            "avg_ex": round(float(np.mean(fex)), 2) if fex else None}
         out[hz] = blk
     return out
 
