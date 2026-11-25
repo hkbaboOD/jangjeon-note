@@ -1181,5 +1181,31 @@
   "promise": 56.6,
   "vol_ratio": 0.44,
   "slope": -1.74
+ },
+ {
+  "date": "2026-11-25",
+  "ticker": "326030.KS",
+  "name": "SK바이오팜",
+  "market": "kr",
+  "kind": "up",
+  "week": "2026-11-25",
+  "entry": 89000.0,
+  "bench_entry": 4718.740234375,
+  "promise": 63.7,
+  "vol_ratio": 1.0,
+  "slope": -2.61
+ },
+ {
+  "date": "2026-11-25",
+  "ticker": "207940.KS",
+  "name": "삼성바이오로직스",
+  "market": "kr",
+  "kind": "down",
+  "week": "2026-11-13",
+  "entry": 1344000.0,
+  "bench_entry": 4718.740234375,
+  "promise": 55.6,
+  "vol_ratio": 1.21,
+  "slope": -2.07
  }
 ]

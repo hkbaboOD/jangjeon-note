@@ -3,8 +3,8 @@
   {
    "ticker": "^DJI",
    "name": "다우",
-   "last": 49971.19140625,
-   "chg": 0.757899936824602,
+   "last": 50018.69921875,
+   "chg": 0.8536908772321938,
    "date": "2026-11-24",
    "spark": [
     51621.4805,
@@ -36,14 +36,14 @@
     49097.0586,
     48147.3281,
     49595.3086,
-    49971.1914
+    50018.6992
    ]
   },
   {
    "ticker": "^GSPC",
    "name": "S&P500",
-   "last": 7192.8701171875,
-   "chg": -0.6121150279144283,
+   "last": 7201.08984375,
+   "chg": -0.49853849660134175,
    "date": "2026-11-24",
    "spark": [
     7718.9399,
@@ -75,14 +75,14 @@
     7175.8301,
     6910.3901,
     7237.1699,
-    7192.8701
+    7201.0898
    ]
   },
   {
    "ticker": "^IXIC",
    "name": "나스닥",
-   "last": 23692.845703125,
-   "chg": -1.6468330461157477,
+   "last": 23733.53515625,
+   "chg": -1.4779239742967576,
    "date": "2026-11-24",
    "spark": [
     26692.8691,
@@ -114,14 +114,14 @@
     23879.1992,
     22617.7305,
     24089.5605,
-    23692.8457
+    23733.5352
    ]
   },
   {
    "ticker": "^SOX",
    "name": "필라델피아반도체",
-   "last": 8872.0732421875,
-   "chg": -7.467384682857681,
+   "last": 8832.5009765625,
+   "chg": -7.880109547987746,
    "date": "2026-11-24",
    "spark": [
     11684.3799,
@@ -153,17 +153,16 @@
     9419.7197,
     8408.5898,
     9588.0498,
-    8872.0732
+    8832.501
    ]
   },
   {
    "ticker": "^KS11",
    "name": "코스피",
-   "last": 5038.81005859375,
-   "chg": 7.014276544136777,
-   "date": "2026-11-24",
+   "last": 4718.740234375,
+   "chg": -5.738870184774236,
+   "date": "2026-11-25",
    "spark": [
-    6008.8101,
     5554.2202,
     5668.0498,
     5768.0098,
@@ -192,17 +191,17 @@
     5137.8901,
     4869.96,
     4708.54,
-    5038.8101
+    5006.0298,
+    4718.7402
    ]
   },
   {
    "ticker": "^KQ11",
    "name": "코스닥",
-   "last": 668.5700073242188,
-   "chg": 5.212053581076481,
-   "date": "2026-11-24",
+   "last": 651.2999877929688,
+   "chg": -2.18958625922544,
+   "date": "2026-11-25",
    "spark": [
-    823.88,
     760.82,
     794.78,
     808.89,
@@ -231,7 +230,8 @@
     684.81,
     645.68,
     635.45,
-    668.57
+    665.88,
+    651.3
    ]
   }
  ],
@@ -239,8 +239,8 @@
   {
    "ticker": "^TNX",
    "name": "미 10년물(%)",
-   "last": 4.906000137329102,
-   "chg": -0.24400332215284148,
+   "last": 4.904000282287598,
+   "chg": -0.28466731059394457,
    "date": "2026-11-24",
    "spark": [
     5.19,
@@ -272,15 +272,15 @@
     5.052,
     4.912,
     4.918,
-    4.906
+    4.904
    ],
-   "chg_bp": -1.2000083923339844
+   "chg_bp": -1.399993896484375
   },
   {
    "ticker": "^VIX",
    "name": "VIX",
-   "last": 26.610000610351562,
-   "chg": -0.03756659867228951,
+   "last": 26.360000610351562,
+   "chg": -0.9767100701914333,
    "date": "2026-11-24",
    "spark": [
     16.87,
@@ -312,14 +312,14 @@
     28.44,
     35.89,
     26.62,
-    26.61
+    26.36
    ]
   },
   {
    "ticker": "CL=F",
    "name": "WTI",
-   "last": 81.9000015258789,
-   "chg": 2.157918668387504,
+   "last": 80.76000213623047,
+   "chg": 0.7359411011109485,
    "date": "2026-11-24",
    "spark": [
     95.09,
@@ -351,14 +351,14 @@
     83.21,
     83.98,
     80.17,
-    81.9
+    80.76
    ]
   },
   {
    "ticker": "BZ=F",
    "name": "브렌트",
-   "last": 88.43000030517578,
-   "chg": -1.0518097935743875,
+   "last": 87.55999755859375,
+   "chg": -2.0252938708312906,
    "date": "2026-11-24",
    "spark": [
     106.06,
@@ -390,14 +390,14 @@
     91.98,
     92.57,
     89.37,
-    88.43
+    87.56
    ]
   },
   {
    "ticker": "DX-Y.NYB",
    "name": "달러인덱스",
-   "last": 103.8270034790039,
-   "chg": -0.47258072973783705,
+   "last": 103.9729995727539,
+   "chg": -0.3326304860864826,
    "date": "2026-11-24",
    "spark": [
     102.55,
@@ -429,17 +429,16 @@
     103.9,
     103.81,
     104.32,
-    103.827
+    103.973
    ]
   },
   {
    "ticker": "KRW=X",
    "name": "원달러",
-   "last": 1342.93994140625,
-   "chg": -0.10191973040306612,
-   "date": "2026-11-24",
+   "last": 1343.199951171875,
+   "chg": 0.1625577253788535,
+   "date": "2026-11-25",
    "spark": [
-    1340.3101,
     1339.35,
     1340.95,
     1333.4301,
@@ -468,7 +467,8 @@
     1330.4,
     1334.79,
     1344.3101,
-    1342.9399
+    1341.02,
+    1343.2
    ]
   },
   {
@@ -518,8 +518,8 @@
    "total": 66
   },
   "kr": {
-   "up": 40,
-   "down": 0,
+   "up": 10,
+   "down": 30,
    "total": 40
   }
  },
@@ -529,126 +529,150 @@
     {
      "ticker": "NKE",
      "name": "나이키",
-     "chg": 6.057470631857864
+     "chg": 5.89455502785825
     },
     {
      "ticker": "AMGN",
      "name": "암젠",
-     "chg": 5.320235096260784
+     "chg": 5.545161549673661
     },
     {
      "ticker": "MRK",
      "name": "머크",
-     "chg": 4.6467838726078625
+     "chg": 4.502846422491502
+    },
+    {
+     "ticker": "CRM",
+     "name": "세일즈포스",
+     "chg": 4.205751919874978
     },
     {
      "ticker": "ABBV",
      "name": "애브비",
-     "chg": 4.264166154425597
-    },
-    {
-     "ticker": "PFE",
-     "name": "화이자",
-     "chg": 4.197078958178313
+     "chg": 4.101225887199766
     }
    ],
    "bottom": [
     {
-     "ticker": "MU",
-     "name": "마이크론",
-     "chg": -11.001136097356811
-    },
-    {
      "ticker": "TXN",
      "name": "텍사스 인스트루먼트",
-     "chg": -9.504099577916502
+     "chg": -11.24695206752162
+    },
+    {
+     "ticker": "MU",
+     "name": "마이크론",
+     "chg": -11.008906716945999
     },
     {
      "ticker": "AMD",
      "name": "AMD",
-     "chg": -8.499138265036688
+     "chg": -8.862965465253769
     },
     {
      "ticker": "KLAC",
      "name": "KLA",
-     "chg": -8.30648267821501
+     "chg": -8.364766332866935
     },
     {
-     "ticker": "NVDA",
-     "name": "엔비디아",
-     "chg": -7.439198048724027
+     "ticker": "INTC",
+     "name": "인텔",
+     "chg": -8.146162626184417
     }
    ]
   },
   "kr": {
    "top": [
     {
-     "ticker": "066570.KS",
-     "name": "LG전자",
-     "chg": 16.18122977346279
+     "ticker": "207940.KS",
+     "name": "삼성바이오로직스",
+     "chg": 4.1860465116279055
     },
     {
-     "ticker": "012330.KS",
-     "name": "현대모비스",
-     "chg": 14.832535885167463
+     "ticker": "068270.KS",
+     "name": "셀트리온",
+     "chg": 3.229665071770338
     },
     {
-     "ticker": "006400.KS",
-     "name": "삼성SDI",
-     "chg": 14.393939393939403
+     "ticker": "018260.KS",
+     "name": "삼성에스디에스",
+     "chg": 3.2030401737242142
     },
     {
-     "ticker": "005380.KS",
-     "name": "현대차",
-     "chg": 11.717171717171727
+     "ticker": "035720.KS",
+     "name": "카카오",
+     "chg": 2.1416803953871577
     },
     {
-     "ticker": "247540.KQ",
-     "name": "에코프로비엠",
-     "chg": 11.712846347607053
+     "ticker": "035420.KS",
+     "name": "NAVER",
+     "chg": 2.1140294682895577
     }
    ],
    "bottom": [
     {
-     "ticker": "207940.KS",
-     "name": "삼성바이오로직스",
-     "chg": 0.15527950310558758
+     "ticker": "032830.KS",
+     "name": "삼성생명",
+     "chg": -11.133603238866396
     },
     {
-     "ticker": "010950.KS",
-     "name": "S-Oil",
-     "chg": 1.1789924973204746
+     "ticker": "009150.KS",
+     "name": "삼성전기",
+     "chg": -10.664335664335667
     },
     {
-     "ticker": "096770.KS",
-     "name": "SK이노베이션",
-     "chg": 1.541850220264318
+     "ticker": "005930.KS",
+     "name": "삼성전자",
+     "chg": -9.503695881731788
     },
     {
-     "ticker": "138040.KS",
-     "name": "메리츠금융지주",
-     "chg": 1.650165016501659
+     "ticker": "000660.KS",
+     "name": "SK하이닉스",
+     "chg": -9.49913644214162
     },
     {
-     "ticker": "030200.KS",
-     "name": "KT",
-     "chg": 2.277904328018221
+     "ticker": "028260.KS",
+     "name": "삼성물산",
+     "chg": -9.227871939736342
     }
    ]
   }
  },
  "points": [
-  "미 증시 약세: S&P500 -0.61%, 나스닥 -1.65%",
-  "반도체 약세(SOX -7.47%)"
+  "미 증시 약세: S&P500 -0.50%, 나스닥 -1.48%",
+  "반도체 약세(SOX -7.88%)"
  ],
  "outlook": [
   "삼성전자·SK하이닉스 약세 출발 가능성. 코스피에서 반도체 비중이 커서 지수도 영향을 받음"
  ],
  "diagnosis": [
   {
+   "ticker": "005930.KS",
+   "name": "삼성전자",
+   "chg_1d": -9.503695881731788,
+   "type": "수급·심리성",
+   "evidence": [
+    "평균 목표가 -0.5%",
+    "선행 EPS 추정치 -0.0%",
+    "투자의견 평균 1.33→1.33 (낮을수록 매수)",
+    "이익 추정치·목표가는 그대로인데 가격만 하락(밸류에이션 저평가 구간)"
+   ]
+  },
+  {
+   "ticker": "000660.KS",
+   "name": "SK하이닉스",
+   "chg_1d": -9.49913644214162,
+   "type": "수급·심리성",
+   "evidence": [
+    "평균 목표가 -0.5%",
+    "선행 EPS 추정치 +0.2%",
+    "투자의견 평균 1.34→1.34 (낮을수록 매수)",
+    "이익 추정치·목표가는 그대로인데 가격만 하락(밸류에이션 저평가 구간)"
+   ]
+  },
+  {
    "ticker": "MU",
    "name": "마이크론",
-   "chg_1d": -11.001136097356811,
+   "chg_1d": -11.008906716945999,
    "type": "수급·심리성",
    "evidence": [
     "평균 목표가 -1.3%",
@@ -660,7 +684,7 @@
   {
    "ticker": "NVDA",
    "name": "엔비디아",
-   "chg_1d": -7.439198048724027,
+   "chg_1d": -5.858829439653457,
    "type": "수급·심리성",
    "evidence": [
     "평균 목표가 +0.1%",
@@ -668,21 +692,39 @@
     "투자의견 평균 1.81→1.68 (낮을수록 매수)",
     "이익 추정치·목표가는 그대로인데 가격만 하락(밸류에이션 저평가 구간)"
    ]
-  },
-  {
-   "ticker": "TSM",
-   "name": "TSMC",
-   "chg_1d": -4.216176246564574,
-   "type": "수급·심리성",
-   "evidence": [
-    "평균 목표가 +0.0%",
-    "선행 EPS 추정치 -0.0%",
-    "투자의견 평균 1.38→1.38 (낮을수록 매수)",
-    "이익 추정치·목표가는 그대로인데 가격만 하락(밸류에이션 저평가 구간)"
-   ]
   }
  ],
  "news": [
+  {
+   "title": "S&P 500, Nasdaq End Lower As AI Jitters Resurface With Nvidia’s Governance Issues And Talks Of Fresh Import Tariffs  — NVDA, DELL, TSLA, TGTX In Focus",
+   "link": "https://stocktwits.com/news-articles/markets/equity/s-and-p-500-nasdaq-end-lower-as-ai-jitters-resurface-with-nvidia-s-governance-issues-and-talks-of-fresh-import-tariffs-nvda-dell-tsla-tgtx-in-focus/cNbuDhyR9lT",
+   "publisher": "Stocktwits",
+   "time": "2026-11-25T00:12:12Z"
+  },
+  {
+   "title": "She Retires at 65 With a $900,000 All-Stock 401(k) as the S&P 500 Swings From Its Worst Week to Its Best Day Since April 2025. The 8.6% Drop Erases $77,400, and the Rebound Still Leaves Her $38,409 Short",
+   "link": "https://247wallst.com/personal-finance/2026/11/24/she-retires-at-65-with-a-900000-all-stock-401k-right-after-the-sp-500s-worst-week-since-april-2025-the-8-6-drop-erases-77400-and-mondays-best-day-since-april-2025-still-leaves-her-38409/",
+   "publisher": "24/7 Wall St.",
+   "time": "2026-11-24T21:15:09Z"
+  },
+  {
+   "title": "Is Apple (AAPL) Above Fair Value As ETF Buying Returns?",
+   "link": "https://finance.yahoo.com/markets/stocks/articles/apple-aapl-above-fair-value-211324050.html",
+   "publisher": "Simply Wall St.",
+   "time": "2026-11-24T21:13:24Z"
+  },
+  {
+   "title": "5 Dividend Growth ETFs to Buy",
+   "link": "https://www.kiplinger.com/investing/etfs/dividend-growth-etfs",
+   "publisher": "Kiplinger",
+   "time": "2026-11-24T20:40:56Z"
+  },
+  {
+   "title": "Harbor Arena Structured Income ETF (YLDS): Autocallable Income in an ETF Wrapper",
+   "link": "http://www.etf.com/sections/news/harbor-arena-structured-income-etf-ylds-autocallable-income-etf-wrapper?utm_source=yahoo-finance&utm_medium=rss&utm_campaign=yahoo-finance-rss",
+   "publisher": "etf.com",
+   "time": "2026-11-24T19:09:58Z"
+  },
   {
    "title": "Here’s How Quickly NVIDIA Could Reach $200 Following Jensen Huang’s Reinstatement as CEO",
    "link": "https://247wallst.com/investing/2026/11/24/heres-how-quickly-nvidia-could-reach-200-following-jensen-huangs-reinstatement-as-ceo/",
@@ -702,36 +744,6 @@
    "time": "2026-11-24T16:50:01Z"
   },
   {
-   "title": "Bessent Warns the Fed Could Be Making a “Policy Mistake” if It Over-Tightens",
-   "link": "https://247wallst.com/investing/2026/11/24/bessent-warns-the-fed-could-be-making-a-policy-mistake-if-it-over-tightens/",
-   "publisher": "24/7 Wall St.",
-   "time": "2026-11-24T16:07:12Z"
-  },
-  {
-   "title": "If Anthropic Does This It Could Reach $130 By Year End",
-   "link": "https://247wallst.com/investing/2026/11/24/if-anthropic-does-this-it-could-reach-130-by-year-end/",
-   "publisher": "24/7 Wall St.",
-   "time": "2026-11-24T15:45:48Z"
-  },
-  {
-   "title": "Bill Ackman Says the Fed Is “About to Make Another Mistake” on Dec. 9",
-   "link": "https://247wallst.com/investing/2026/11/24/bill-ackman-says-the-fed-is-about-to-make-another-mistake-on-dec-9/",
-   "publisher": "24/7 Wall St.",
-   "time": "2026-11-24T15:28:05Z"
-  },
-  {
-   "title": "Did Nvidia's Rebound Make VOO Owners Whole?",
-   "link": "https://www.trefis.com/stock/voo/articles/628257/did-nvidia-s-rebound-make-voo-owners-whole/2026-11-24",
-   "publisher": "Trefis",
-   "time": "2026-11-24T15:22:57Z"
-  },
-  {
-   "title": "The New York Fed’s John Williams Won’t Rule Out Back-to-Back Rate Hikes",
-   "link": "https://247wallst.com/investing/2026/11/24/the-new-york-feds-john-williams-wont-rule-out-back-to-back-rate-hikes/",
-   "publisher": "24/7 Wall St.",
-   "time": "2026-11-24T14:52:22Z"
-  },
-  {
    "title": "Exchange-Traded Funds, US Equities Mixed After Midday",
    "link": "https://finance.yahoo.com/markets/stocks/articles/exchange-traded-funds-us-equities-181033633.html",
    "publisher": "MT Newswires",
@@ -744,67 +756,67 @@
    "time": "2026-11-24T16:47:24Z"
   },
   {
+   "title": "Did Nvidia's Rebound Make VOO Owners Whole?",
+   "link": "https://www.trefis.com/stock/voo/articles/628257/did-nvidia-s-rebound-make-voo-owners-whole/2026-11-24",
+   "publisher": "Trefis",
+   "time": "2026-11-24T15:22:57Z"
+  },
+  {
    "title": "Pre-Markets Seeking Post-NVIDIA Equilibrium",
    "link": "https://finance.yahoo.com/markets/stocks/articles/pre-markets-seeking-post-nvidia-142600860.html",
    "publisher": "Zacks",
    "time": "2026-11-24T14:26:00Z"
-  },
-  {
-   "title": "Exchange-Traded Funds, Equity Futures Lower Pre-Bell Tuesday as Investors Pull Back From AI-Related Stocks",
-   "link": "https://finance.yahoo.com/markets/stocks/articles/exchange-traded-funds-equity-futures-141922343.html",
-   "publisher": "MT Newswires",
-   "time": "2026-11-24T14:19:22Z"
   }
  ],
  "ai_summary": null,
  "news_kr": [
   {
+   "title": "하루 만에 뒤집힌 증시...코스피 5%대 급락, 매도 사이드카 발동",
+   "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBmcmxTdEJDbU0yOVE5NVNldTBDc3hRd214aVBTd1pXOHNkeWJzVG15TWk5SDlzQ2xWY3k1YmxxbmRabG5aZ3dtV0EwTjZuRFVDNUhhalAxQl9oTENWb2Fabw?oc=5",
+   "publisher": "KBC광주방송",
+   "time": "2026-11-25T01:05:01+00:00"
+  },
+  {
+   "title": "iM증권 \"美 반도체 급락·관세 우려…코스피, 하방압력 불가피\"",
+   "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5SRnF0YnlWOGp5eVVScnk4TVJEel8tUWF0ZTUya09wa3JwQkpkd1VYbzg2Q0twVWc2UmstTmplazFxN2tkdEc1cVhfdXo3d0ZHMnZrMUxZSkZVamdKNU1kakI5Y2dEcERLaFQtNk8zY2M?oc=5",
+   "publisher": "연합인포맥스",
+   "time": "2026-11-24T23:27:52+00:00"
+  },
+  {
+   "title": "젠슨 황 복귀 '반짝 호재'?...국내 증시, 어떻게 움직일까 [뉴스UP]",
+   "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5xcUJGS0w2T2h1NnEtb1FPZFZZTkhmN3U0NXM2QWRmMVVNSzFWalFuNFZvM3JDRHhPYjVJM0dlaUFBM1EzeHpwSEhYaFJrN1ZIWlNTUjBnQTkybzdQRTNLZmZnTUJ1RnZ5UEtjNEtHQml1YldfMUE?oc=5",
+   "publisher": "YTN",
+   "time": "2026-11-24T23:58:00+00:00"
+  },
+  {
+   "title": "[이슈] 증시 하락 막을 정부 대책 ··· 개인투자자 손실 방어할까",
+   "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1IU1hUdmlhMlp2b3VFYmozVWE1bUQ5VE1IWjFnSGY0cWtncWJhSzYtOUVudlYxLWJCUFhUMXNlVkItTTVJWFVOdUx0eWpTd04wdWVrUzdmdHZyc1JqVWVnbzFQWVZBTmRIT2V6XzlhbELSAXBBVV95cUxNSFNYVHZpYTJadm91RWJqM1VhNW1EOVRNSFoxZ0hmNHFrZ3FiYUs2LTlFbnZWMS1iQlBYVDFzZVZCLU01SVhVTnVMdHlqU3dOMHVla1M3ZnR2cnNSalVlZ28xUFlWQU5kSE9lel85YWxC?oc=5",
+   "publisher": "데이터솜",
+   "time": "2026-11-25T00:58:24+00:00"
+  },
+  {
    "title": "\"주식앱 지웠다\" 손 놓은 개미, 손 쓰는 정부…10조 증안펀드 통할까 - 머니투데이",
    "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9fZVdvRHotdUh6OW5aM1pOR1p5cGY3MG9ybmRpZ2hRalV3RFhueG9US3NSSXNzYW10U283UDVPb0xaUEVGTjhqbktaRkM1RkJjYUNacVhpbGl4WmtSbFBVQ1ZlMHZSUUd10gFuQVVfeXFMUFpCSWlqRW5kd0p1WHhVZDQtcERkX2pJLWh6cnZKTjdCZ1M2TTdRSC03TVpDZVgxSVdIUUNfZlRTRGdWLUVTSzdkZ2FHZ3oyMThyY1ZWSDhldkJIVDJYWTMyVzdHRHRhYU0yd2ZKb2c?oc=5",
    "publisher": "머니투데이",
-   "time": "2026-11-24T16:16:11+00:00"
+   "time": "2026-11-25T01:36:24+00:00"
   },
   {
-   "title": "증안 펀드보다 강력했던 ‘젠슨 황 효과’",
-   "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQeVVPMkx0Y0N0bjQwOGRPY2ZLbTJZSnF2WDg5OGtfaHlhc1IwUmtXWjBBQXByTzlrcDZfUUhRX2Z0TmlYQXhQUjhSbFBfUUwzVC1UU0c1RnFkSFhibklmcHJfR2RmOE9XejNpNlhEWlBuRndIb3ROM0w2Y3hTcWtTdQ?oc=5",
+   "title": "냉온탕 오가는 美 증시…코스피 하루 만에 다시 5000선 시험대",
+   "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1WOWlrQndVUG5Ba0Z1ekVuUnAxS3dMQ1gtMXY2MDJHSnFRZWZqVTdHSGU1S0tQWnNrV2RuSEFkYktzem9lX21aZWZyZHV6ZVNqSEJhWHRtVFNVSHNRbXdWeU12T2dSWVI5VHc?oc=5",
+   "publisher": "비즈워치",
+   "time": "2026-11-24T23:20:03+00:00"
+  },
+  {
+   "title": "[오전시황] 반도체주 충격에 코스피 5.65% 급락...바이오·화장품株는 급등",
+   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBsZjEzN2h0N0wyUG1TajZhbTVTdG1DNHNPX3VqQzhiZ0hxaU52QXpsNW1ZbUlYN2MtbEpEUS1WTTVzdXRXRnhPbDRGaFNGVWxvanViSm5ETUk4Zw?oc=5",
+   "publisher": "한국경제",
+   "time": "2026-11-25T02:30:42+00:00"
+  },
+  {
+   "title": "코스피 5% 급락에 ‘매도 사이드카’...하루만에 5000선 반납",
+   "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQUFc1U2c2ZXpLbFJEVzlhNDJmSFRueWY3SkJWV1ludFloQU1pdUFCMFFtM0RzT1U5SklPSUlvaXJ6UDN4eE5CNmN4TnFnajRxSmt5X0xNRG04ZHR4RlUtOVIyNlNieTZtZmx6SElQX3hqMElJLUVVLU8zWUhRV0hBTA?oc=5",
    "publisher": "조선일보",
-   "time": "2026-11-24T15:43:00+00:00"
-  },
-  {
-   "title": "사흘 만에 코스피 5000선 탈환…불안 요인 해소는 아직",
-   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9pTkpWdUloTWFUc1ZIcUxBdXNxVWNvZ2ZJRl9NYzVwOFBZcjdXN3NneGxkWmhVTlhDNTlKWDZtREhPWVd2UWM0aWtxVFc1dkVNOVA2akt3RjM5UdIBX0FVX3lxTE5qRkxUQndfSUxnTkI4VXdZLW8waXRuMVZMSjZ4RFF4eFcyR2ZhWTZIck9DU2lfNzZacDdEWHpaRmp2bWZTNVFPZzY2RUVoT1JIcTBCeVFRd0hudTNoY3RV?oc=5",
-   "publisher": "경향신문",
-   "time": "2026-11-24T12:45:00+00:00"
-  },
-  {
-   "title": "5,000선 되찾은 코스피, 6% 넘게 급등한 이유는?",
-   "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE52b1ZQajJrdE01ZXUtbk1HTGh2ZlVNUFVqRnkxcDdyUjlIUW5qSmJNcHRCWnVSR2VNUzB6cEtPeG90bDg0bTJtN212aTkwYnJZc1dKV1pCMWo?oc=5",
-   "publisher": "네이버페이 머니스토리",
-   "time": "2026-11-24T08:42:19+00:00"
-  },
-  {
-   "title": "[증시-마감] 젠슨 황 깜짝 복귀에 코스피 5천선 회복…3영업일 만에 반등",
-   "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9nWlpiTkNHYnFTOEFPeGMySF9rNnIyNzJNU3gxZk8yVTN1OFpIeGNqTTBGR3RQSDhFMC1xRTRfeHY1cnFXTjJTMUs1QzdlTUVlYTJHdHI0Nk5nSTdEZGczbDhfNzNQVHM4SXdGWWZvb00?oc=5",
-   "publisher": "연합인포맥스",
-   "time": "2026-11-24T06:48:09+00:00"
-  },
-  {
-   "title": "6% 급등한 코스피 5000선 턱걸이…“젠슨 황 복귀는 단기 호재”",
-   "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE0zTHl0WU42UDJoSncycGg1Rm93OTdldkpHZXRIUGFHOFo5dmhhWVZHYmg3Rjd4bnltMXFJNm9JeFdjR0g4NmhfUmRVSzVGeFptVkJsX1FGSDBxM2hNcEpaWlFhQlllcGc?oc=5",
-   "publisher": "한겨레",
-   "time": "2026-11-24T15:39:00+00:00"
-  },
-  {
-   "title": "'젠슨 황 엔비디아 복귀'에 5천피 회복...추세 반등?",
-   "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE90SkR3MEtpS2VsMUU0LTFBUmk3M1RSeHhwcG5ZMUcxeW9qZzhzVnNBb2FPU05lbUplWUN2LTlpMmxidVNLUXpRV01wXzg3Mi1WWjh1cy1JWXFGQ1NVQlE?oc=5",
-   "publisher": "YTN",
-   "time": "2026-11-24T12:58:00+00:00"
-  },
-  {
-   "title": "젠슨 황 복귀에 국내 증시 급등‥5천 선 회복",
-   "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1TbEdQalo2WE9xc1ZDclIza0VyUFBtTk9qYUYyOW1YUFhvMU1oVzh0WTlQYW9ObXBXZFVMSlVFVjhLLVVDRjlSaDJHcU9tNVFwaVozRkdzdElkRGF4RFVKYTNOdndBR2h2M3RDTV9HQWotT3hyeEhySNIBeEFVX3lxTFBEUm81R2RySWVXQ0dadElwOE85eW5Qc1g5eHlCZjQwdjhXZlhzcld4dlNoTDc0b2NfRWs5aDlCTmthbVJzRW5JaTUxRHV2Tzd2U1pmZVNRcFlOSGMxdnl5ZVZReXlyWUxVQzdxMDFaeG1oV1RmbE9wLQ?oc=5",
-   "publisher": "MBC 뉴스",
-   "time": "2026-11-24T03:07:35+00:00"
+   "time": "2026-11-25T00:02:00+00:00"
   }
  ],
  "earnings": [
@@ -816,11 +828,11 @@
   }
  ],
  "geo": [
-  "관세·무역분쟁: 48시간 기사 49건(평소 24건의 2.0배), 무역 긴장. 5일 가격 변화 S&P500 -2.0%, 원달러 +0.5%. 경기 방어에 유리, 관세 민감·수출주·중국 노출에 부담",
-  "북한·한반도: 48시간 기사 37건(평소 26건의 1.4배), 도발. 5일 가격 변화 원달러 +0.5%. 방산에 유리, 국내 상장주에 부담",
-  "미중 갈등·수출규제: 48시간 기사 17건(평소 6건의 2.6배), 방향 혼재. 5일 가격 변화 반도체지수 -8.0%",
-  "연준·금리: 48시간 기사 96건(평소 60건의 1.6배), 방향 혼재. 5일 가격 변화 미 10년물 금리 -3.9%"
+  "미중 갈등·수출규제: 48시간 기사 18건(평소 6건의 2.8배), 방향 혼재. 5일 가격 변화 반도체지수 -8.4%",
+  "관세·무역분쟁: 48시간 기사 49건(평소 24건의 2.0배), 방향 혼재. 5일 가격 변화 S&P500 -1.9%, 원달러 +0.8%",
+  "대만 해협: 48시간 기사 8건(평소 7건의 1.1배), 긴장 고조. 5일 가격 변화 반도체지수 -8.4%, VIX +3.5%. 방산에 유리, 반도체·중국 노출·AI 인프라에 부담",
+  "환율(원화): 48시간 기사 100건(평소 98건의 1.0배), 원화 약세. 5일 가격 변화 원달러 +0.8%. 수출주에 유리, 유가 원가 부담주·국내 상장주에 부담"
  ],
  "date": "2026-11-25",
- "generated": "2026-11-25T04:09+09:00"
+ "generated": "2026-11-25T13:32+09:00"
 }
