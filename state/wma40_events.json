@@ -1207,5 +1207,83 @@
   "promise": 55.6,
   "vol_ratio": 1.21,
   "slope": -2.07
+ },
+ {
+  "date": "2026-11-26",
+  "ticker": "326030.KS",
+  "name": "SK바이오팜",
+  "market": "kr",
+  "kind": "up",
+  "week": "2026-11-26",
+  "entry": 90800.0,
+  "bench_entry": 4745.830078125,
+  "promise": 63.6,
+  "vol_ratio": 1.1,
+  "slope": -2.56
+ },
+ {
+  "date": "2026-11-26",
+  "ticker": "PLTR",
+  "name": "팔란티어",
+  "market": "us",
+  "kind": "up",
+  "week": "2026-11-25",
+  "entry": 163.58999633789062,
+  "bench_entry": 7182.77978515625,
+  "promise": 62.4,
+  "vol_ratio": 1.02,
+  "slope": 1.42
+ },
+ {
+  "date": "2026-11-26",
+  "ticker": "TXN",
+  "name": "텍사스 인스트루먼트",
+  "market": "us",
+  "kind": "up",
+  "week": "2026-11-25",
+  "entry": 270.19000244140625,
+  "bench_entry": 7182.77978515625,
+  "promise": 59.9,
+  "vol_ratio": 1.63,
+  "slope": 2.21
+ },
+ {
+  "date": "2026-11-26",
+  "ticker": "GM",
+  "name": "제너럴 모터스",
+  "market": "us",
+  "kind": "up",
+  "week": "2026-11-25",
+  "entry": 83.98999786376953,
+  "bench_entry": 7182.77978515625,
+  "promise": 59.7,
+  "vol_ratio": 0.66,
+  "slope": 0.13
+ },
+ {
+  "date": "2026-11-26",
+  "ticker": "MCD",
+  "name": "맥도날드",
+  "market": "us",
+  "kind": "up",
+  "week": "2026-11-25",
+  "entry": 283.5,
+  "bench_entry": 7182.77978515625,
+  "promise": 56.1,
+  "vol_ratio": 0.83,
+  "slope": -1.71
+ },
+ {
+  "date": "2026-11-26",
+  "ticker": "USB",
+  "name": "US 뱅코프",
+  "market": "us",
+  "kind": "up",
+  "week": "2026-11-25",
+  "entry": 58.54999923706055,
+  "bench_entry": 7182.77978515625,
+  "promise": 55.2,
+  "vol_ratio": 0.89,
+  "slope": 0.08
  }
 ]
