@@ -1,7 +1,6 @@
 {
- "000660.KS|price_below": "2026-11-25",
+ "000660.KS|price_below": "2026-11-27",
  "MU|setup_pullback": "2026-11-24",
- "TSM|setup_pullback": "2026-11-16",
  "005930.KS|move": "2026-11-26",
  "000660.KS|move": "2026-11-26",
  "MU|move": "2026-11-25",
@@ -14,7 +13,6 @@
  "SCHD|verdict": "2026-11-18",
  "000660.KS|setup_reversal": "2026-11-24",
  "NVDA|bb_reclaim": "2026-11-24",
- "000660.KS|verdict": "2026-11-16",
  "NVDA|cross_50_120": "2026-11-19",
  "NVDA|verdict": "2026-11-19",
  "TSM|cross_50_120": "2026-11-21",
