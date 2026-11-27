@@ -1285,5 +1285,18 @@
   "promise": 55.2,
   "vol_ratio": 0.89,
   "slope": 0.08
+ },
+ {
+  "date": "2026-11-27",
+  "ticker": "326030.KS",
+  "name": "SK바이오팜",
+  "market": "kr",
+  "kind": "up",
+  "week": "2026-11-27",
+  "entry": 97500.0,
+  "bench_entry": 4870.22021484375,
+  "promise": 61.4,
+  "vol_ratio": 1.51,
+  "slope": -2.37
  }
 ]
