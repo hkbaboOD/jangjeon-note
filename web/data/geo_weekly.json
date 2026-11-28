@@ -1,78 +1,51 @@
 {
- "week": "2026-11-21",
+ "week": "2026-11-28",
  "items": [
   {
-   "title": "AI주 급락으로 미 증시 조정 진입, 나스닥 올해 상승분 반납",
-   "text": "11/20(현지) 나스닥은 5.3% 내린 22,617.73, 다우는 1.9% 내린 48,147.33으로 마감했고 S&P500은 3.59% 내린 6,918.45로 7거래일 연속 하락하며 10월 6일 고점 대비 10% 넘게 빠졌습니다. 마이크론·브로드컴·엔비디아·AMD가 12~14% 떨어지고 VIX가 3월 이후 처음 30을 넘었으며, 주간으로 나스닥 −10%·S&P500 −8.6%였습니다.",
-   "impact": "마이크론·엔비디아·TSMC 등 AI 반도체 관심종목과 AI 인프라 노출 종목에 직접 부담",
+   "title": "미국, 과잉생산 이유로 14개국에 새 관세 제안 — 한국·대만·일본 포함",
+   "text": "11/25 미국이 중국(기존 약 25%에 20% 추가)·EU·한국·일본·대만 등 14개 무역 상대국에 과잉생산 대응 관세를 제안했고, 한 관계자는 EU·일본·한국·대만은 15%가 상한이라고 밝혔습니다. 발표 당일 나스닥은 장 초반 4% 넘게 빠졌다가 0.6% 하락으로 마감, S&P500은 0.25% 하락했고 의견 수렴·청문 절차로 시행은 1월로 밀릴 수 있습니다.",
+   "impact": "수출 비중 큰 반도체·자동차·중국 노출 종목 부담(관세 테마 '매우 높음' 자동 판정과 일치)",
    "sources": [
     {
-     "name": "Fortune",
-     "url": "https://fortune.com/2026/11/20/sp-500-correction-panic-selling-ai-selloff-nasdaq-2026-gains-bnp-paribas/"
+     "name": "Reuters(Investing.com)",
+     "url": "https://www.investing.com/news/world-news/us-proposes-new-tariffs-on-14-trading-partners-to-fight-excess-factory-capacity-5050714"
     },
     {
-     "name": "FINChannel(AP 인용)",
-     "url": "https://finchannel.com/nasdaq-falls-5-3-as-sp-500-and-dow-enter-corrections/142573/american-business-trends/stock-prices/2026/11/"
-    },
-    {
-     "name": "StockTitan",
-     "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-20-2026"
+     "name": "Al Jazeera",
+     "url": "https://www.aljazeera.com/economy/2026/11/25/world-reacts-to-trumps-new-tariffs-as-us-stocks-tumble"
     }
    ]
   },
   {
-   "title": "코스피 5.21% 폭락, 10개월 만의 최저·양 시장 매도 사이드카",
-   "text": "11/20 코스피는 267.93포인트(−5.21%) 내린 4,869.96, 코스닥은 5.72% 내린 645.66으로 마감했고 두 시장 모두 매도 사이드카가 발동됐습니다. 외국인은 6거래일 연속 순매도했고 삼성전자 −7.01%, SK하이닉스 −5.92%, 원·달러 환율은 1,336.2원(+6.2원)이었습니다.",
-   "impact": "삼성전자·SK하이닉스 등 반도체 대형주와 외국인 수급 민감 종목에 부담",
+   "title": "연준 의사록: 12월 0.25%p 인상 거의 기정사실",
+   "text": "11/18 공개된 10/27~28 회의록에서 거의 모든 위원이 12월 0.25%p 인상을 예상했고 두 명은 0.5%p 인상도 거론했습니다. 연준은 9월 인상 뒤 10월 기준금리를 3.9%로 동결했으며 CME FedWatch의 12월 인상 확률은 약 95%였습니다.",
+   "impact": "금리 민감 성장주·리츠 부담, 은행·보험은 상대적으로 덜 민감(연준 테마 '높음' 판정과 일치)",
+   "sources": [
+    {
+     "name": "ABC News(AP)",
+     "url": "https://abcnews.com/US/wireStory/fed-minutes-higher-interest-rates-needed-december-inflation-138258781"
+    }
+   ]
+  },
+  {
+   "title": "추수감사절 주간 미 증시 급반등 — S&P500 주간 +5.6%",
+   "text": "11/27(금) S&P500은 1.6% 오른 7,297.49, 나스닥은 2.3% 오른 24,129.50으로 거래됐고(AP, 장중 기준) 주간으로 S&P500 +5.6%·나스닥 +6.7%·러셀2000 +6.5%였습니다. S&P500은 2025년 4월 이후 가장 큰 주간 상승을 기록했습니다.",
+   "impact": "직전 주 급락한 AI·반도체주 반등(마이크론·엔비디아 등 관심종목 변동성 큼)",
+   "sources": [
+    {
+     "name": "Yahoo Finance(AP)",
+     "url": "https://finance.yahoo.com/markets/world-indices/articles/major-us-stock-indexes-fared-184551517.html"
+    }
+   ]
+  },
+  {
+   "title": "코스피 4.34% 급등 4,915.68 — 외국인·기관 순매수, 원/달러 1,337.9원",
+   "text": "11/27 코스피는 4.34% 오른 4,915.68, 코스닥은 8.13% 오른 708.99로 마감했고 외국인이 코스피에서 1조1,300억원, 기관이 2,400억원을 순매수했습니다. 원/달러 환율은 주간 4.8원 내린 1,337.9원으로 마감했습니다.",
+   "impact": "반도체 대형주(삼성전자·SK하이닉스) 반등, 원화 강세는 수출주 환산 이익엔 부담",
    "sources": [
     {
      "name": "한국경제",
-     "url": "https://www.hankyung.com/article/202611200429i"
-    },
-    {
-     "name": "BusinessKorea",
-     "url": "https://www.businesskorea.co.kr/news/articleView.html?idxno=281841"
-    }
-   ]
-  },
-  {
-   "title": "미국, AI 칩 수출 통제 확대(우회 접근 차단)… 중국 '경제적 강압' 반발",
-   "text": "미 상무부 산업안보국(BIS)이 11/16 중국 기업에 연산 능력을 제공하는 데이터센터에도 허가를 요구하고 싱가포르·말레이시아·태국·인도네시아·브라질로의 첨단 칩 수출에 사전 허가를 요구하는 규정을 발표했습니다(11/19 발효). 중국 외교부는 '경제적 강압'이라며 필요한 조치를 하겠다고 밝혔고, 엔비디아는 중국향 허가 호퍼 제품 출하를 더 이상 하지 않는다고 밝혔습니다.",
-   "impact": "엔비디아 등 중국 매출 비중이 있는 반도체 종목·중국 노출 종목에 부담",
-   "sources": [
-    {
-     "name": "Seoul Economic Daily",
-     "url": "https://en.sedaily.com/society/2026/11/18/us-tightens-ai-chip-export-controls-blocks-chinas"
-    },
-    {
-     "name": "Tech Times",
-     "url": "https://www.techtimes.com/articles/330982/20261118/beijing-calls-us-chip-export-rule-economic-coercion-malaysia-tells-data-centers-comply.htm"
-    }
-   ]
-  },
-  {
-   "title": "트럼프, APEC 계기 선전에서 시진핑과 회담",
-   "text": "트럼프 대통령이 11/18 선전에 도착해 휴전 이후 세 번째 시진핑 주석 대면 회담에 나섰고, 분석가들은 구체적 성과 기대가 낮다고 봤습니다. 미중 무역 휴전은 2027년 1월 10일까지 연장된 상태입니다.",
-   "impact": "관세 민감·중국 노출 종목(휴전 유지 여부에 따라 변동성)",
-   "sources": [
-    {
-     "name": "Al Jazeera",
-     "url": "https://www.aljazeera.com/economy/2026/11/18/as-trump-arrives-in-china-low-expectations-for-breakthroughs-in-rivalry"
-    }
-   ]
-  },
-  {
-   "title": "연준 12월 금리 인상 확률 95%대, 미 10년물 5% 부근",
-   "text": "11/19 CME FedWatch 기준 12월 FOMC 0.25%p 인상 확률은 95.7%였고, 10월 근원 CPI는 전월 대비 0.4% 올랐습니다. 11/20에도 선물 시장의 12월 인상 확률은 약 95%, 미 10년물 금리는 5% 부근이었습니다(FOMC 12/9).",
-   "impact": "금리 민감·고평가 성장주에 부담, 금융(금리 수혜)에는 상대적 우호",
-   "sources": [
-    {
-     "name": "Seoul Economic Daily",
-     "url": "https://en.sedaily.com/society/2026/11/19/us-dec-rate-hike-odds-at-957-percent-as-fed-resists-bigger"
-    },
-    {
-     "name": "Fortune",
-     "url": "https://fortune.com/2026/11/20/sp-500-correction-panic-selling-ai-selloff-nasdaq-2026-gains-bnp-paribas/"
+     "url": "https://www.hankyung.com/article/2026112751366"
     }
    ]
   }
