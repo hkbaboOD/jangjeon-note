@@ -143,3 +143,23 @@ def test_score_items_trims_unfinished_session_and_mismatch():
     bad = {**item, "entry": 50.0, "trade": None}
     trade.score_items([bad], {"005930.KS": df}, datetime(2026, 3, 5, 16, 0, tzinfo=ZoneInfo("Asia/Seoul")), mk)
     assert bad["trade"]["status"] == "data_mismatch"
+
+
+def test_entry_pos_never_before_recommendation_date():
+    # 추천일(3/6) 이전 3/3 종가가 우연히 추천가와 같아도, 추천 전 봉(3/4)에 산 것으로 채점하지 않음
+    df = bars([(1, 1, 1, 10), (1, 1, 1, 11), (1, 1, 1, 12), (1, 1, 1, 13), (1, 1, 1, 14)], start="2026-03-02")
+    assert trade.entry_pos(df, None, "2026-03-05", 11.0) == 3
+    # 추천일 당일 봉의 종가(추천 시점엔 모름)와 같다고 그다음 봉으로 미루지 않음 → 추천일 봉
+    assert trade.entry_pos(df, None, "2026-03-04", 12.0) == 2
+    # asof가 오래된 자료여도 추천일 전 봉으로 당겨지지 않음
+    assert trade.entry_pos(df, "2026-03-02", "2026-03-05") == 3
+
+
+def test_gap_exit_bench_compared_to_previous_close():
+    pl = trade.plan(tx(), 100.0, "daily")  # 손절 93
+    df = bars([(90, 91, 88, 89)], start="2026-03-03")  # 진입 당일 시가부터 손절가 아래 → 시가에 사고 시가에 손절
+    bench = pd.Series([100.0, 94.0], index=pd.bdate_range("2026-03-02", periods=2))  # 당일 지수 −6%(장중)
+    r = trade.simulate(pl, df, 0, "kr", bench)
+    assert r["why"] == "손절(갭 하락)" and r["days"] == 1
+    # 시가에 사고 판 거래에 그날 지수 하락분이 초과수익으로 붙지 않아야 함
+    assert abs(r["ex"] - r["ret"]) < 1e-9

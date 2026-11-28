@@ -111,20 +111,22 @@ def plan(tx: dict | None, price, horizon: str, relaxed: bool = False, stage40=No
 
 def entry_pos(df: pd.DataFrame, asof: str | None, date: str, ref_price=None) -> int | None:
     """진입 기준 봉 위치: 분석에 쓴 마지막 봉(asof) 다음 봉. asof가 없으면 추천일 이전에서 종가가 추천가와 같은 봉 다음,
-    그것도 없으면 추천일 이후 첫 봉."""
+    그것도 없으면 추천일 이후 첫 봉. 어느 경우든 추천일보다 앞선 봉에서는 사지 않음(추천이 나오기 전에 산 것으로
+    채점되는 오류 방지 — 국장·미장 모두 추천일 날짜의 봉부터가 추천 뒤에 열리는 장)."""
     idx = df.index
-    if asof:
-        p = int(idx.searchsorted(pd.Timestamp(asof), side="right"))
-        return p if p < len(idx) else None
     d = pd.Timestamp(date)
+    first = int(idx.searchsorted(d, side="left"))  # 추천일 또는 그 뒤 첫 봉
+    if asof:
+        p = max(int(idx.searchsorted(pd.Timestamp(asof), side="right")), first)
+        return p if p < len(idx) else None
     ref = _num(ref_price)
     if ref:
         c = df["Close"].astype(float).values
-        for i in range(int(idx.searchsorted(d, side="right")) - 1, max(-1, int(idx.searchsorted(d, side="right")) - 6), -1):
+        for i in range(first - 1, max(-1, first - 6), -1):  # 추천일 전 봉만(추천 시점에 알 수 있던 종가)
             if i >= 0 and abs(c[i] / ref - 1) < 0.003:
-                return i + 1 if i + 1 < len(idx) else None
-    p = int(idx.searchsorted(d, side="left"))
-    return p if p < len(idx) else None
+                p = max(i + 1, first)
+                return p if p < len(idx) else None
+    return first if first < len(idx) else None
 
 
 def simulate(pl: dict, df: pd.DataFrame, start: int | None, market: str, bench: pd.Series | None = None) -> dict:
@@ -184,7 +186,8 @@ def simulate(pl: dict, df: pd.DataFrame, start: int | None, market: str, bench: 
     if bench is not None and len(bench):
         b = bench.astype(float)
         b0 = b.asof(df.index[fi] - pd.Timedelta(days=1)) if pl["action"] == "buy" else b.asof(df.index[fi])
-        b1 = b.asof(df.index[ex_i])
+        # 갭 청산은 그날 시가에 판 것이므로 지수도 전날 종가까지만 비교(그날 장중 지수 변동이 초과수익에 섞이지 않게)
+        b1 = b.asof(df.index[ex_i] - pd.Timedelta(days=1)) if "갭" in why else b.asof(df.index[ex_i])
         if _num(b0) and _num(b1):
             out["ex"] = round(float(ret - (b1 / b0 - 1) * 100), 2)
     return out
