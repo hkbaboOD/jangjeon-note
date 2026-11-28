@@ -1,292 +1,295 @@
 {
- "week": "2026-11-21",
+ "week": "2026-11-28",
  "plan": {
-  "version": 5,
+  "version": 6,
   "weights": {
    "daily": {
-    "timing": 0.189,
-    "value": 0.271,
-    "trend": 0.094,
-    "target": 0.163,
     "wma40": 0.12,
-    "quality": 0.163
+    "timing": 0.189,
+    "quality": 0.163,
+    "target": 0.163,
+    "trend": 0.094,
+    "value": 0.271
    },
    "weekly": {
-    "value": 0.263,
-    "trend": 0.084,
-    "target": 0.131,
-    "momentum": 0.084,
     "wma40": 0.219,
-    "quality": 0.219
+    "quality": 0.219,
+    "target": 0.131,
+    "trend": 0.084,
+    "value": 0.263,
+    "momentum": 0.084
    },
    "monthly": {
-    "growth": 0.123,
-    "value": 0.246,
-    "trend": 0.056,
-    "target": 0.123,
     "wma40": 0.205,
-    "quality": 0.246
+    "quality": 0.246,
+    "growth": 0.123,
+    "target": 0.123,
+    "trend": 0.056,
+    "value": 0.246
    }
   },
   "basis": {
    "daily": [
-    "백테스트 차트 종합 IC -0.009(t -1.1) 약해 차트 비중 축소"
+    "백테스트 차트 종합 IC -0.006(t -0.7) 약해 차트 비중 축소"
    ],
    "weekly": [
-    "백테스트 차트 종합 IC -0.011(t -0.7) 약해 차트 비중 축소"
+    "백테스트 차트 종합 IC -0.006(t -0.4) 약해 차트 비중 축소"
    ],
    "monthly": [
-    "백테스트 차트 종합 IC -0.004(t -0.1) 약해 차트 비중 축소"
+    "백테스트 차트 종합 IC -0.000(t -0.0) 약해 차트 비중 축소"
    ]
   },
-  "changed": false
+  "changed": true
  },
  "do": {
-  "days_recorded": 30,
-  "new_picks": 15,
-  "open_picks": 75
+  "days_recorded": 36,
+  "new_picks": 34,
+  "open_picks": 77
  },
  "check": {
   "matured": {
    "daily": {
-    "count": 79,
-    "win_rate": 39.24050632911392,
-    "avg_ex": -1.5722784810126584,
-    "recent_win": 55.00000000000001,
+    "count": 99,
+    "win_rate": 39.39393939393939,
+    "avg_ex": -1.9880808080808081,
+    "recent_win": 40.0,
     "recent_n": 20
    },
    "weekly": {
-    "count": 13,
-    "win_rate": 38.46153846153847,
-    "avg_ex": -3.9161538461538465,
-    "recent_win": 38.46153846153847,
-    "recent_n": 13
+    "count": 25,
+    "win_rate": 36.0,
+    "avg_ex": -3.4076,
+    "recent_win": 35.0,
+    "recent_n": 20
    }
   },
   "ic": {
    "daily": {
-    "ic": -0.0909,
-    "t": -1.14,
-    "dates": 24,
-    "n_eff": 4.8
+    "ic": -0.0962,
+    "t": -1.33,
+    "dates": 29,
+    "n_eff": 5.8
    },
    "weekly": {
-    "ic": -0.1824,
-    "t": -1.72,
-    "dates": 7,
+    "ic": -0.1584,
+    "t": -1.59,
+    "dates": 11,
     "n_eff": 1.0
    }
   },
   "top3": {
    "daily": {
-    "avg_ex": -2.68,
-    "dates": 25,
-    "t": -1.15,
-    "win": 28.0
+    "avg_ex": -2.43,
+    "dates": 30,
+    "t": -1.21,
+    "win": 26.7
    },
    "weekly": {
-    "avg_ex": -8.56,
-    "dates": 8,
-    "t": -1.71,
+    "avg_ex": -10.27,
+    "dates": 12,
+    "t": -1.97,
     "win": 0.0
    }
   },
   "closed_this_week": [
    {
-    "name": "코노코필립스",
-    "horizon": "weekly",
-    "date": "2026-10-20",
-    "score": 67.6,
-    "setup": "정배열 추세 지속",
-    "ret": -3.25,
-    "ex": 0.31,
-    "days": 20,
-    "win": true,
-    "closed": "2026-11-17"
-   },
-   {
-    "name": "신한지주",
-    "horizon": "weekly",
-    "date": "2026-10-20",
-    "score": 61.9,
-    "setup": "중립",
-    "ret": -3.09,
-    "ex": 5.8,
-    "days": 20,
-    "win": true,
-    "closed": "2026-11-17"
-   },
-   {
     "name": "마이크론",
     "horizon": "daily",
-    "date": "2026-11-10",
-    "score": 90.3,
+    "date": "2026-11-17",
+    "score": 80.9,
     "setup": "상승추세 속 눌림목",
-    "ret": -1.93,
-    "ex": -0.16,
+    "ret": -1.57,
+    "ex": 0.84,
+    "days": 5,
+    "win": true,
+    "closed": "2026-11-24"
+   },
+   {
+    "name": "S-Oil",
+    "horizon": "daily",
+    "date": "2026-11-17",
+    "score": 66.4,
+    "setup": "하락 후 반등 시도",
+    "ret": -8.77,
+    "ex": -9.19,
     "days": 5,
     "win": false,
-    "closed": "2026-11-17"
+    "closed": "2026-11-24"
    },
    {
-    "name": "S-Oil",
+    "name": "화이자",
     "horizon": "daily",
-    "date": "2026-11-10",
-    "score": 66.7,
-    "setup": "중립",
-    "ret": -1.05,
-    "ex": 2.67,
+    "date": "2026-11-17",
+    "score": 61.0,
+    "setup": "상승추세 속 눌림목",
+    "ret": -5.06,
+    "ex": -2.64,
     "days": 5,
-    "win": true,
-    "closed": "2026-11-17"
-   },
-   {
-    "name": "신한지주",
-    "horizon": "daily",
-    "date": "2026-11-10",
-    "score": 64.5,
-    "setup": "하락 후 반등 시도",
-    "ret": 2.45,
-    "ex": 6.16,
-    "days": 5,
-    "win": true,
-    "closed": "2026-11-17"
+    "win": false,
+    "closed": "2026-11-24"
    },
    {
     "name": "마이크론",
     "horizon": "daily",
-    "date": "2026-11-11",
-    "score": 86.2,
+    "date": "2026-11-18",
+    "score": 84.5,
     "setup": "상승추세 속 눌림목",
-    "ret": -0.19,
-    "ex": 1.84,
+    "ret": -10.93,
+    "ex": -9.06,
     "days": 5,
-    "win": true,
-    "closed": "2026-11-18"
+    "win": false,
+    "closed": "2026-11-25"
    },
    {
     "name": "S-Oil",
     "horizon": "daily",
-    "date": "2026-11-11",
-    "score": 66.7,
-    "setup": "중립",
-    "ret": -0.95,
-    "ex": 4.66,
-    "days": 5,
-    "win": true,
-    "closed": "2026-11-18"
-   },
-   {
-    "name": "신한지주",
-    "horizon": "daily",
-    "date": "2026-11-11",
-    "score": 64.6,
+    "date": "2026-11-18",
+    "score": 63.6,
     "setup": "하락 후 반등 시도",
-    "ret": 1.28,
-    "ex": 6.89,
+    "ret": -9.49,
+    "ex": -11.17,
     "days": 5,
-    "win": true,
-    "closed": "2026-11-18"
+    "win": false,
+    "closed": "2026-11-25"
    },
    {
-    "name": "CVS 헬스",
+    "name": "화이자",
     "horizon": "daily",
-    "date": "2026-11-11",
+    "date": "2026-11-18",
+    "score": 61.4,
+    "setup": "상승추세 속 눌림목",
+    "ret": 0.16,
+    "ex": 2.04,
+    "days": 5,
+    "win": true,
+    "closed": "2026-11-25"
+   },
+   {
+    "name": "마이크론",
+    "horizon": "daily",
+    "date": "2026-11-19",
+    "score": 82.9,
+    "setup": "상승추세 속 눌림목",
+    "ret": -14.75,
+    "ex": -12.83,
+    "days": 5,
+    "win": false,
+    "closed": "2026-11-26"
+   },
+   {
+    "name": "S-Oil",
+    "horizon": "daily",
+    "date": "2026-11-19",
+    "score": 64.4,
+    "setup": "하락 후 반등 시도",
+    "ret": -4.84,
+    "ex": 0.5,
+    "days": 5,
+    "win": true,
+    "closed": "2026-11-26"
+   },
+   {
+    "name": "아마존",
+    "horizon": "daily",
+    "date": "2026-11-19",
+    "score": 62.5,
+    "setup": "상승추세 속 눌림목",
+    "ret": -8.71,
+    "ex": -6.78,
+    "days": 5,
+    "win": false,
+    "closed": "2026-11-26"
+   },
+   {
+    "name": "마이크론",
+    "horizon": "daily",
+    "date": "2026-11-20",
+    "score": 82.7,
+    "setup": "상승추세 속 눌림목",
+    "ret": -12.92,
+    "ex": -13.01,
+    "days": 5,
+    "win": false,
+    "closed": "2026-11-27"
+   },
+   {
+    "name": "애브비",
+    "horizon": "daily",
+    "date": "2026-11-20",
     "score": 66.5,
     "setup": "상승추세 속 눌림목",
-    "ret": -3.6,
-    "ex": -1.2,
+    "ret": 3.87,
+    "ex": 3.77,
+    "days": 5,
+    "win": true,
+    "closed": "2026-11-27"
+   },
+   {
+    "name": "S-Oil",
+    "horizon": "daily",
+    "date": "2026-11-20",
+    "score": 65.9,
+    "setup": "하락 후 반등 시도",
+    "ret": -1.2,
+    "ex": -0.17,
     "days": 5,
     "win": false,
-    "closed": "2026-11-18"
+    "closed": "2026-11-27"
    },
    {
     "name": "마이크론",
     "horizon": "daily",
-    "date": "2026-11-12",
-    "score": 85.4,
-    "setup": "상승추세 속 눌림목",
-    "ret": -13.14,
-    "ex": -9.26,
-    "days": 5,
-    "win": false,
-    "closed": "2026-11-19"
-   },
-   {
-    "name": "코노코필립스",
-    "horizon": "daily",
-    "date": "2026-11-12",
-    "score": 68.5,
-    "setup": "상승추세 속 눌림목",
-    "ret": -2.46,
-    "ex": 1.42,
+    "date": "2026-11-23",
+    "score": 79.8,
+    "setup": "중립",
+    "ret": 8.55,
+    "ex": 2.95,
     "days": 5,
     "win": true,
-    "closed": "2026-11-19"
+    "closed": "2026-11-28"
    },
    {
-    "name": "CVS 헬스",
+    "name": "화이자",
     "horizon": "daily",
-    "date": "2026-11-12",
-    "score": 66.2,
+    "date": "2026-11-23",
+    "score": 64.0,
     "setup": "상승추세 속 눌림목",
-    "ret": -9.08,
-    "ex": -5.19,
+    "ret": 4.0,
+    "ex": -1.61,
     "days": 5,
     "win": false,
-    "closed": "2026-11-19"
+    "closed": "2026-11-28"
    },
    {
-    "name": "마이크론",
+    "name": "셰브론",
     "horizon": "daily",
-    "date": "2026-11-13",
-    "score": 82.0,
+    "date": "2026-11-23",
+    "score": 62.1,
     "setup": "상승추세 속 눌림목",
-    "ret": -13.58,
-    "ex": -8.09,
+    "ret": 2.27,
+    "ex": -3.33,
     "days": 5,
     "win": false,
-    "closed": "2026-11-20"
-   },
-   {
-    "name": "코노코필립스",
-    "horizon": "daily",
-    "date": "2026-11-13",
-    "score": 67.9,
-    "setup": "상승추세 속 눌림목",
-    "ret": -3.65,
-    "ex": 1.84,
-    "days": 5,
-    "win": true,
-    "closed": "2026-11-20"
-   },
-   {
-    "name": "유나이티드헬스",
-    "horizon": "daily",
-    "date": "2026-11-13",
-    "score": 59.6,
-    "setup": "상승추세 속 눌림목",
-    "ret": -18.43,
-    "ex": -12.94,
-    "days": 5,
-    "win": false,
-    "closed": "2026-11-20"
+    "closed": "2026-11-28"
    }
   ],
   "win_delta": {
-   "daily": 2.9,
-   "weekly": 8.5
+   "daily": 0.2,
+   "weekly": -2.5
   }
  },
  "act": {
-  "changes": [],
+  "changes": [
+   "[이번 주] '변동성 수축(방향 대기)' 가감점 +0.0→-1.4 (백테스트 20일 초과수익 -0.71%, t -2.1)"
+  ],
   "contest": {}
  },
  "next": [
-  "오늘 추천: 실전 기록 30일째, 실전 채점으로 보정하기까지 약 3주",
-  "이번 주 추천: 실전 기록 30일째, 실전 채점으로 보정하기까지 약 6주",
-  "이번 달 추천: 실전 기록 30일째, 실전 채점으로 보정하기까지 약 30주",
-  "이번 주 근거가 유의하지 않아 가중치 유지(억지로 바꾸지 않음)"
+  "오늘 추천: 실전 기록 36일째, 실전 채점으로 보정하기까지 약 2주",
+  "이번 주 추천: 실전 기록 36일째, 실전 채점으로 보정하기까지 약 5주",
+  "이번 달 추천: 실전 기록 36일째, 실전 채점으로 보정하기까지 약 29주",
+  "오늘 추천 최근 승률 40%로 낮음. 다음 보정에서 새 후보·기본 모델 비교 결과를 우선 반영",
+  "이번 주 추천 최근 승률 35%로 낮음. 다음 보정에서 새 후보·기본 모델 비교 결과를 우선 반영"
  ],
  "history": [
   {
@@ -328,6 +331,278 @@
    "win_weekly": 38.5,
    "ic_daily": -0.0909,
    "ic_weekly": -0.1824
+  },
+  {
+   "week": "2026-11-28",
+   "version": 6,
+   "win_daily": 39.4,
+   "win_weekly": 36.0,
+   "ic_daily": -0.0962,
+   "ic_weekly": -0.1584
   }
- ]
+ ],
+ "div": {
+  "weights": {
+   "yield": 0.4,
+   "growth": 0.3,
+   "stability": 0.1
+  },
+  "changed": false,
+  "contest": {
+   "chosen": "현재",
+   "why": "어느 후보도 학습·검증 두 구간에서 확실히 낫지 않아 유지",
+   "cut": "2023-02",
+   "scores": {
+    "현재": {
+     "train": {
+      "months": 65,
+      "excess": -0.14,
+      "win_rate": 47.7,
+      "t": -0.03,
+      "from": "2017-09",
+      "to": "2023-01"
+     },
+     "hold": {
+      "months": 33,
+      "excess": 17.28,
+      "win_rate": 93.9,
+      "t": 1.76,
+      "from": "2023-02",
+      "to": "2025-10"
+     },
+     "all": {
+      "months": 98,
+      "excess": 5.73,
+      "win_rate": 63.3,
+      "t": 1.07,
+      "from": "2017-09",
+      "to": "2025-10"
+     },
+     "weights": {
+      "yield": 0.4,
+      "growth": 0.3,
+      "stability": 0.1
+     }
+    },
+    "기본": {
+     "train": {
+      "months": 65,
+      "excess": -0.14,
+      "win_rate": 47.7,
+      "t": -0.03,
+      "from": "2017-09",
+      "to": "2023-01"
+     },
+     "hold": {
+      "months": 33,
+      "excess": 17.28,
+      "win_rate": 93.9,
+      "t": 1.76,
+      "from": "2023-02",
+      "to": "2025-10"
+     },
+     "all": {
+      "months": 98,
+      "excess": 5.73,
+      "win_rate": 63.3,
+      "t": 1.07,
+      "from": "2017-09",
+      "to": "2025-10"
+     },
+     "weights": {
+      "yield": 0.4,
+      "growth": 0.3,
+      "stability": 0.1
+     }
+    },
+    "후보1": {
+     "train": {
+      "months": 65,
+      "excess": 2.53,
+      "win_rate": 60.0,
+      "t": 0.51,
+      "from": "2017-09",
+      "to": "2023-01"
+     },
+     "hold": {
+      "months": 33,
+      "excess": 12.57,
+      "win_rate": 84.8,
+      "t": 1.3,
+      "from": "2023-02",
+      "to": "2025-10"
+     },
+     "all": {
+      "months": 98,
+      "excess": 5.91,
+      "win_rate": 68.4,
+      "t": 1.21,
+      "from": "2017-09",
+      "to": "2025-10"
+     },
+     "weights": {
+      "yield": 0.55,
+      "growth": 0.15,
+      "stability": 0.1
+     }
+    },
+    "후보2": {
+     "train": {
+      "months": 65,
+      "excess": 0.75,
+      "win_rate": 47.7,
+      "t": 0.16,
+      "from": "2017-09",
+      "to": "2023-01"
+     },
+     "hold": {
+      "months": 33,
+      "excess": 18.96,
+      "win_rate": 93.9,
+      "t": 2.03,
+      "from": "2023-02",
+      "to": "2025-10"
+     },
+     "all": {
+      "months": 98,
+      "excess": 6.88,
+      "win_rate": 63.3,
+      "t": 1.29,
+      "from": "2017-09",
+      "to": "2025-10"
+     },
+     "weights": {
+      "yield": 0.45,
+      "growth": 0.3,
+      "stability": 0.05
+     }
+    },
+    "후보3": {
+     "train": {
+      "months": 65,
+      "excess": -2.82,
+      "win_rate": 41.5,
+      "t": -0.57,
+      "from": "2017-09",
+      "to": "2023-01"
+     },
+     "hold": {
+      "months": 33,
+      "excess": 14.02,
+      "win_rate": 90.9,
+      "t": 1.54,
+      "from": "2023-02",
+      "to": "2025-10"
+     },
+     "all": {
+      "months": 98,
+      "excess": 2.86,
+      "win_rate": 58.2,
+      "t": 0.54,
+      "from": "2017-09",
+      "to": "2025-10"
+     },
+     "weights": {
+      "yield": 0.25,
+      "growth": 0.45,
+      "stability": 0.1
+     }
+    },
+    "후보4": {
+     "train": {
+      "months": 65,
+      "excess": -1.07,
+      "win_rate": 46.2,
+      "t": -0.25,
+      "from": "2017-09",
+      "to": "2023-01"
+     },
+     "hold": {
+      "months": 33,
+      "excess": 19.8,
+      "win_rate": 93.9,
+      "t": 1.9,
+      "from": "2023-02",
+      "to": "2025-10"
+     },
+     "all": {
+      "months": 98,
+      "excess": 5.96,
+      "win_rate": 62.2,
+      "t": 1.05,
+      "from": "2017-09",
+      "to": "2025-10"
+     },
+     "weights": {
+      "yield": 0.4,
+      "growth": 0.35,
+      "stability": 0.05
+     }
+    },
+    "후보5": {
+     "train": {
+      "months": 65,
+      "excess": -3.71,
+      "win_rate": 41.5,
+      "t": -0.76,
+      "from": "2017-09",
+      "to": "2023-01"
+     },
+     "hold": {
+      "months": 33,
+      "excess": -0.16,
+      "win_rate": 63.6,
+      "t": -0.03,
+      "from": "2023-02",
+      "to": "2025-10"
+     },
+     "all": {
+      "months": 98,
+      "excess": -2.51,
+      "win_rate": 49.0,
+      "t": -0.65,
+      "from": "2017-09",
+      "to": "2025-10"
+     },
+     "weights": {
+      "yield": 0.25,
+      "growth": 0.3,
+      "stability": 0.25
+     }
+    },
+    "후보6": {
+     "train": {
+      "months": 65,
+      "excess": -0.26,
+      "win_rate": 46.2,
+      "t": -0.05,
+      "from": "2017-09",
+      "to": "2023-01"
+     },
+     "hold": {
+      "months": 33,
+      "excess": 5.21,
+      "win_rate": 75.8,
+      "t": 0.74,
+      "from": "2023-02",
+      "to": "2025-10"
+     },
+     "all": {
+      "months": 98,
+      "excess": 1.59,
+      "win_rate": 56.1,
+      "t": 0.38,
+      "from": "2017-09",
+      "to": "2025-10"
+     },
+     "weights": {
+      "yield": 0.4,
+      "growth": 0.15,
+      "stability": 0.25
+     }
+    }
+   }
+  },
+  "log": []
+ }
 }

@@ -44,6 +44,15 @@
    "top3_daily": -2.68,
    "ic_weekly": -0.1824,
    "top3_weekly": -8.56
+  },
+  {
+   "date": "2026-11-28",
+   "version": 6,
+   "days": 36,
+   "ic_daily": -0.0962,
+   "top3_daily": -2.43,
+   "ic_weekly": -0.1584,
+   "top3_weekly": -10.27
   }
  ],
  "window": 60
